@@ -1,0 +1,75 @@
+= To Configure Client Management by OpenAM
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+. Log into the master Organization in Anypoint Platform as Administrator.
+. In Anypoint Platform, click Access Management > External Identity.
++
+image::select-openid-client-mgmt.png[height=310,width=452]
+. From Client Management, select OpenAM.
++
+The Client Management OpenAM form appears.
++
+. Fill in the following required fields:
++
+* Version
++
+OpenAM version 11, 12 or 13.
++
+* Admin Token Provider
++
+** Create URL
++
+The endpoint that creates an access token for OAuth authentication.
++
+** Username
++
+The name of the user requesting access.
++
+** Password
++
+The password of the user requesting access.
++
+* OAuth2 Authorization Provider, Authorize URL
++
+`/oauth2/authorize`, relative to the base path of the OpenAM application. Provide the absolute URL (base URI and path).
++
+* OAuth2 Token Provider, Create URL
++
+`/oauth2/access_token`, relative to the base path of the OpenAM application. Provide the absolute URL (base URI and path).
++
+* OAuth2 Token Validation Provider
+** Validate URL
++
+The token validation endpoint is `/oauth2/tokeninfo` relative to the base path of the OpenAM application.
++
+** Username Token Mapping
++
+Name of user with privileges for creating new clients within the target OpenAM system.
++
+* OAuth2 Client Provider
+** Create URL
++
+The URL at which the OpenAM client management API resources are served. Normally the endpoint is located at `/frrest/oauth2/client`. Confirm with your OpenAM administrator.
++
+** Delete URL
++
+URL destination for sending a DELETE request to delete a test client.
++
+** Scopes
++
+Supported OAuth capabilities, such as READ and WRITE.
++
+** Default Scopes
++
+Default OAuth capabilities to use in the event the client app does not specify any.
++
+. Save your configuration.
+
+Now, you can apply the OpenAM OAuth Token Enforcement policy to your APIs.
+
+== See Also
+
+* link:/api-manager/aes-oauth-faq[About OAuth 2.0]
+* link:/api-manager/openam-oauth-token-enforcement-policy[OpenAM and PingFederate OAuth Token Enforcement Policies]

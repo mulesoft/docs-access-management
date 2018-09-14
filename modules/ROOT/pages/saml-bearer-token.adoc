@@ -1,0 +1,45 @@
+= To Obtain an API Bearer Token Using a SAML Assertion
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+This topic describes how to obtain the bearer token from Anypoint Platform. If you are using an identity provider configured to use SAML 2.0, federated users within your orgnization can access platform APIs using the bearer token.
+
+The bearer token provides access to the platform APIs a user has permission to access. Each bearer token is associated with a specific user who is granted roles and permissions for an API. If a user attempts to access an API that they do not have permissions to access the API returns a `401 Unauthorized` error.
+
+The validity of the bearer token is determined by the value defined for the Default Session Timeout property. This is configured in the Master organization properties. See xref:organization.adoc#organization-settings[Organization Settings] for more information.
+
+To obtain an API bearer token using a SAML assertion:
+
+. Obtain a SAML response for your identity provider as described in xref:troubleshoot-saml-assertions-task.adoc[To View a SAML Response in Your Browser].
++
+Record this response to use in the following step.
+
+. Obtain the bearer token by running the following `curl` command. Replace `<SAML_RESPONSE>` in this example with the SAML response you obtained in the previous step.
++
+----
+curl -X POST \
+  https://anypoint.mulesoft.com/accounts/login/receive-id \
+  -H 'Content-Type: application/json' \
+  -H 'X-Requested-With: XMLHttpRequest' \
+  -d '{
+    "SAMLResponse": "<SAML_RESPONSE>"
+}'
+----
+
+After obtaining the bearer token federated users within your organization can use it to access an API. For example, you can access the API using one of the following methods:
+
+* *Anypoint CLI*: A user can access a platform API by supplying the `-bearer` option to the `anypoint-cli` command. See xref:runtime-manager::anypoint-platform-cli.adoc#logging-in[Anypoint CLI] for more information.
+* *curl*: A user can access a platform API by passing the bearer token when accessing an API endpoint as shown in the following:
++
+----
+curl -X GET \
+  https://anypoint.mulesoft.com/accounts/api/me \
+  -H 'Authorization: Bearer <BEARER_TOKEN>'
+----
+
+== See Also
+
+* xref:organization.adoc#organization-settings[Organization Settings]
+* xref:runtime-manager::anypoint-platform-cli.adoc#logging-in[Anypoint CLI]
+* xref:troubleshoot-saml-assertions-task.adoc[To view a SAML response in your Browser]

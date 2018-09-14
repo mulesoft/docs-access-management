@@ -1,0 +1,136 @@
+= To Configure OpenID Connect
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+This task topic covers two identity management procedures for client registration in OpenID Connect:
+
+* Dynamic registration
+* Manual registration
+
+MuleSoft verifies support in Anypoint Platform for the following registrations:
+
+* Clients created dynamically in Okta and OpenAM
+* Clients created manually in Salesforce, Okta, OpenAM, and PingFederate
+
+Please note, that although integration with the aforementioned Identity providers have been officialy tested, Anypoint platform supports the OpenID Connect Protocol. This means that, any Identity Provider that supports the protocol should be able to integrate unless they diverge from the http://openid.net/specs/openid-connect-core-1_0.html[specification].
+
+If you already configured Anypoint Platform as a client application in your identity provider, perform manual registration. Otherwise, if your identity provider supports dynamic client registration, perform dynamic registration. During registration, you need to provide several URLs. The following table contains examples of the URLs you need to provide, depending on your provider, during registration.
+
+[%autowidth.spread]
+|===
+| URL Name | Okta Example URL | Salesforce Example URL | OpenAM Example URL | PingFederate Example URL
+| Base | `+https://example.okta.com/oauth2/v1+` | `+https://domain.my.salesforce.com/services/oauth2+` | `+https://example.com/openam/oauth2+` | `+https://example.com:9031+`
+| Client Registration | {BASE URL}/clients | {BASE URL}/clients | {BASE URL}/connect/register | N/A
+| Authorize | {BASE URL}/authorize | {BASE URL}/authorize | {BASE URL}/authorize | {BASE URL}/as/authorization.oauth2
+| Token | {BASE URL}/token | {BASE URL}/token | {BASE URL}/access_token | {BASE URL}/as/token.oauth2
+| User Info | {BASE URL}/userinfo | {BASE URL}/userinfo | {BASE URL}/userinfo | {BASE URL}/idp/userinfo.openid
+|===
+
+== To Configure OpenID Connect Dynamically
+
+. Log into the master Organization in Anypoint Platform as Administrator.
+. In Anypoint Platform, click Access Management > External Identity.
+. From Identity Management, select OpenID Connect.
++
+The External Identity - Identity Management OpenID Connect form appears.
++
+. Fill in the following required fields after obtaining values from your identity provider’s configuration:
++
+* Client Registration URL
++
+The URL to dynamically register Anypoint as a client application for your identity provider.
++
+* Authorize Header
++
+The authorization header for dynamic client registration request. This is an optional field under the Advanced Settings link. This header is required if the provider restricts registration requests to authorized clients.
++
+** Okta: This value is `SSWS ${api_token}`, where `api_token` is an API token created through Okta.
++
+** OpenAM: This value is `Bearer ${api_token}`, where `api_token` is an API token created through OpenAM.
++
+* Authorize URL
++
+The URL where the user authenticates and grants OpenID Connect client applications access to the user's identity.
++
+* Token URL
++
+The URL that provides the user’s identity encoded in a secure JSON Web Token.
++
+* User Info URL
++
+The URL that returns user profile information to Anypoint.
++
+. Save your configuration.
++
+. Sign out and navigate to your organization’s SSO URL, for example:
++
+`+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
++
+. Sign in through your identity provider to test the configuration.
+
+== To Configure OpenID Connect Manually
+
+. Log into the master Organization in Anypoint Platform as Administrator.
+. In Anypoint Platform, click Access Management > External Identity.
+. From Identity Management, select OpenId Connect.
++
+The External Identity - Identity Management OpenID Connect form appears.
++
+. Click `Use manual registration` under Client Registration URL.
+. Create a client application for the Anypoint Platform inside your Identity Provider.
+** Your Identity Provider requires a redirect URI for redirecting authenticated users. Use the automatically generated redirect URI above the Client ID field.
+** Inside your Identity Provider, ensure that your client's supported scopes include `openid`, `profile`, and `email`.
+** Inside your Identity Provider, ensure that your client uses the `authorization_code` grant type.
+** Store your Client ID and Client Secret values in a secure place and enter these values in the next step.
+. Fill in the following required fields after obtaining them from your identity provider’s configuration:
++
+* Client ID
++
+The unique identifier that you provided for your manually created client application.
++
+* Client Secret
++
+The password, or secret, for authenticating your Anypoint Platform client application with your Identity Provider.
++
+* Authorize URL
++
+The URL where the user authenticates and grants OpenID Connect client applications access to the user's identity.
++
+* Token URL
++
+The URL that provides the user’s identity encoded in a secure JSON Web Token.
++
+* User Info URL
++
+The URL that returns user profile information to the client app.
++
+* OpenID Connect Issuer
++
+The location of the OpenID Provider. For most providers, `/.well-known/openid-configuration` is appended to the issuer to generate the metadata URL for openID Connect specifications. For Salesforce, you must provide the value for `issuer`.
++
+. Save your configuration.
++
+. Sign out and navigate to your organization’s SSO URL, for example:
++
+`+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
++
+. Sign in through your identity provider to test the configuration.
+
+== See Also
+
+* https://developer.okta.com/docs/api/resources/oidc.html#authentication-request[Okta OpenID Connect, Authentication Request]
+* https://developer.okta.com/docs/api/resources/oauth-clients.html#register-new-client[Okta OpenID Connect, Dynamic Client Registration]
+* https://developer.okta.com/docs/api/resources/oidc.html#token-request[Okta OpenID Connect, Token Request]
+* https://developer.okta.com/docs/api/getting_started/getting_a_token.html[Okta Getting a Token]
+* https://developer.okta.com/docs/api/resources/oidc.html#get-user-information[Okta OpenID Connect, Get User Information]
+* https://help.salesforce.com/articleView?id=remoteaccess_oauth_web_server_flow.htm[Salesforce OAuth 2.0 Web Server Authentication Flow]
+* https://help.salesforce.com/articleView?id=sso_provider_openid_connect.htm[Salesforce OpenID Connect, Authentication Request]
+* https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_refresh_token_oauth.htm[Salesforce OAuth Refresh Token Process]
+* https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_username_password_oauth_flow.htm[Salesforce Understanding Username-Password OAuth]
+* https://backstage.forgerock.com/docs/openam/13.5/dev-guide#rest-api-oauth2-client-endpoints[OpenAM 13.5 Developer's Guide, Section 2.1.14.1.1 OAuth 2.0 Client and Resource Server Endpoints]
+* https://backstage.forgerock.com/docs/openam/13.5/admin-guide#register-openid-connect-client-dynamic[OpenAM 13.5 Developer's Guide, Procedure 14.4 To Register a Relying Party Dynamically]
+* https://backstage.forgerock.com/docs/openam/13.5/dev-guide#rest-api-openid-connect-authorization[OpenAM 13.5 Developer's Guide, Section 2.1.14.2.3 Endpoints for Performing OpenID Connect 1.0 Authorization]
+* https://documentation.pingidentity.com/pingfederate/pf84/index.shtml#concept_authorizationEndpoint.html#concept_authorizationEndpoint[PingFederate Authorization Endpoint]
+* https://documentation.pingidentity.com/pingfederate/pf84/index.shtml#adminGuide/concept/tokenEndpoint.html[PingFederate Token Endpoint]
+* https://developer.pingidentity.com/en/resources/openid-connect-developers-guide.html#userinfo_endpoint[Ping Identity, The UserInfo Endpoint]

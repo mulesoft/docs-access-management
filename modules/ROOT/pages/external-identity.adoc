@@ -1,0 +1,57 @@
+= About Identity Management
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: anypoint platform, permissions, configuring, pingfederate, saml
+
+This topic provides an overview of identity management on Anypoint Platform. As the Anypoint Platform organization administrator, you set up users for single sign-on (SSO) by configuring identity management in Anypoint Platform using one of the following single sign-on standards:
+
+* OpenID Connect: End-User identity verification by an authorization server including SSO
++
+* SAML 2.0: Web-based authorization including cross-domain SSO
+
+[NOTE]
+Service initiated-SSO is not supported.
+
+The following diagram shows the SAML identity management process:
+
+image::external-identity-decbd.png[]
+
+Before configuring OpenID Connect or SAML 2.0, select an identity management provider (IdP). To use OpenID Connect, select an OpenID Connect-compliant provider, such as PingFederate, OpenAM, or Okta. If you are not using OpenID Connect, select any SAML 2.0-compliant provider.
+
+The following SAML providers are fully supported:
+
+* Salesforce
+* PingFederate (versions: 6, 7, 8)
+* OpenAM (versions : 11, 12, 14)
+* Okta
+
+The following SAML providers are known to work, but aren't actively tested:
+
+* Active Directory Federation Services (AD FS)
+* Shibboleth
+* onelogin
+* CA Single Sign-On
+* SecureAuth
+
+
+The following providers are fully supported to work with OpenID Connect:
+
+* Salesforce
+* PingFederate (versions: 6, 7, 8)
+* OpenAM (versions : 11, 12, 14)
+* Okta
+
+For more information, see the documentation for your identity provider. After selecting an identity provider, set up your Anypoint Platform organization as your audience in your identity provider configuration. Configure identity management in the Anypoint Platform master organization. The IdP you select is effective for the entire organization and all business groups. Configure attribute names on the IdP and Anypoint Platform to match.
+
+After configuring identity management, you cannot add users to your organization in Anypoint Platform. In Access Management, Invite User is disabled to prevent this operation. To add new users your organization, include them in your external identity management solution according to your normal internal provisioning process.
+
+Users that signin via SSO are new users to the system. Even if the user has the same username as an existing user, a new user is created and will exist side-by-side the existing user with the same username and are managed independently.
+
+Follow the procedures to configure OpenID Connect or SAML 2.0 in this documentation.
+
+== See Also
+
+* xref:conf-openid-connect-task.adoc[To Configure OpenID Connect]
+* xref:managing-users.adoc[To Configure SAML]
+* xref:conf-ldap-private-cloud-task.adoc[To Configure LDAP in Anypoint Platform Private Cloud]

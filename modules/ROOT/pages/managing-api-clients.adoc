@@ -1,0 +1,21 @@
+= About Client Management
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+This topic provides an overview of client management on Anypoint Platform. As an API owner, you can apply an OAuth 2.0 policy to authenticate client applications that try to access your API. You need an OAuth provider to use an OAuth 2.0 policy. One of the following OAuth providers is recommended:
+
+* OpenAM versions 11 - 13
+* PingFederate versions 6 - 8
+* Dynamic Client Registration-compliant identity providers
++
+This provider needs to conform to the OpenID Connect Client Registration 1.0 incorporating errata set 1.
+
+To configure client management on Anypoint Platform for these providers, you need to first have an IdP account. On all versions of Anypoint Platform, except Private Cloud edition, set client management as instructed in this documentation.
+
+== See Also
+
+* https://openid.net/specs/openid-connect-registration-1_0.html[OpenID Connect Client Registration 1.0 incorporating errata set 1]
+* xref:conf-client-mgmt-openam-task.adoc[To Configure Client Management By OpenAM]
+* xref:conf-client-mgmt-pf-task.adoc[To Configure Client Management By PingFederate]
+* xref:configure-client-management-openid-task.adoc[To Configure OpenID Connect Client Management]

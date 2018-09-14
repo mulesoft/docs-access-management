@@ -1,0 +1,79 @@
+= Users
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+This topic describes how to manage users within an Anypoint Platform organization. It assumes that you have an Organization Administrator role in your organization, or that you have API Version Owner permissions and want to manage user permissions for your API version.
+
+As an administrator of your organization, or of one of its business groups, you can enable, disable, or delete users. Access this menu by first making sure that the correct business group is selected in the top-right of the screen next to your user name, then clicking the gear icon next to it, and then picking the *Users* link in the left menu.
+
+By ticking the checkbox next to a user, additional options related to that user are displayed:
+
+* *Enable*: Enables the user in the selected Organization / Business Group.
+* *Disable*: Disables the user in the selected Organization / Business Group. They will no longer be able to login.
+* *Delete*: When deleting from the top level Organization, all of the user's roles/permissions are removed and the user becomes unattached. When deleting from a business group, all of the user's roles/permissions for only the selected business group are removed.
+
+== Inviting a User to Anypoint Platform
+
+[NOTE]
+--
+This feature is not available in Anypoint Platform Private Cloud Edition.
++
+When running Anypoint Platform Private Cloud Edition, you need to configure user management methods such as SSO through a third-party IdP or LDAP.
+--
+
+As an Organization Administrator, or of one of its business groups, you can invite new users and manage existing users for your organization on the _Access Management_ Administration page, which you can reach by selecting the *Users* option in your *Access Management* section.
+
+In order to invite new users to your organization:
+
+. Click *Users* in the left navigation bar.
+. Click *Invite user*.
+. Enter the email addresses of who you want to invite in your organization as a comma-separated list.
+. Optionally, select one or more xref:roles.adoc[roles] to which to assign these users.
+. Click *Send Invitation*.
+
+The users who you invite receive email invitations to sign up to your organization.
+
+Invited users have access to the same set of resources as you (although they may have different roles that can restrict what they can view or do). They will receive an email inviting them, and if they click through the link they will be presented a sign-up form that already has the *Company* field completed, matching your organization.
+
+== Resending or Canceling a Sent Invitation
+
+Click *Pending Invites* to view all invitations that have not yet been accepted. Select the ones you need to manage, and click *Re-send Invite* or *Cancel Invite*.
+
+
+== Granting Permissions and Roles to Users
+
+By clicking on a username you can access more information about that user, add roles and permissions to it, or reset its password.
+
+image::users-a3f39.png[]
+
+By default in every new organization and business group when first created, you get three options:
+
+* Assign API Permissions: write the name of the API you want to give access to, then pick a version and permission.
+* Assign Runtime Manager Permissions: write the name of the Runtime Manager environment to want to give access to, then pick a permission
+* Assign Roles: write the name of the role you want to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
+
+[NOTE]
+--
+Roles and permissions are grouped under organizations (and optionally under business groups too). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
+--
+
+If necessary, you can also remove user permissions, but keep in mind that if users have been granted their permission via a role, you cannot view or remove those role-based permissions here, you must do it via the xref:roles.adoc[Roles] section.
+
+== Managing External Users of Your Public APIs
+
+When you make an API portal public, users from any other anypoint organization can register client application to call your API. When these users login to your public developer portal, they are considered external users because they are outside of your organization.
+
+When a user logs into Anypoint Platform for the first time they are automatically added to the External Users tab.
+From the External Users tab in Access management, you can view a list of all these external users. You can enable or disable each of these external users from this screen. When you disable an external user, they can no longer login to your public portal.
+
+You cannot search for external users in other part of the platform because users do not belong to your organization and do not have additional permissions. To grant users permission to perform tasks like deploying an application, you must invite the user to join your organization.
+
+
+
+== See Also
+
+* xref:exchange::to-share-an-asset-with-a-user.adoc[To Share an Asset or Publish to a Portal]
+* xref:external-identity.adoc#managing-users[user management]
+* xref:external-identity.adoc#instructions-for-saml-configuration[SSO through a Third-party IdP]
+* xref:external-identity.adoc#configure-ldap[LDAP]

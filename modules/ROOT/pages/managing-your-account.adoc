@@ -1,0 +1,152 @@
+= Managing your Anypoint Platform Account
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+:keywords: anypoint platform, permissions, configuring, accounts
+
+This topic describes how to create and manage your Anypoint Platform account.
+
+== To Create an Anypoint Platform Account
+
+[NOTE]
+If you already have a Mule Community account you can use that account to access Anypoint Platform.
+
+. Go to https://anypoint.mulesoft.com/#/signup[Signup page].
++
+A form appears for providing your contact information and creating a user name and password.
++
+. Enter the following:
++
+* Username: must be at least 3 characters and may contain only the following: alphanumeric characters, dashes, or underscores.
+* Password: must be 6 characters minimum in length and may contain only the following: upper and lower case characters, numbers, and non-alphanumeric symbols.
+* Company: can be any name unless you were invited to join an existing organization.
++
+Anypoint Platform creates a new organization using the Company name you entered and makes you the administrator of that organization. An Anypoint Platform account can only be associated with one organization.
+
+* Agree to the https://cloudhub.io/legal.html[terms of service].
+. Click the *I'm not a Robot* Captcha's checkmark and wait for validation.
++
+[NOTE]
+You might be prompted to perform a small test before proceeding.
++
+[TIP]
+--
+Google's reCaptcha verification service auto-detects your browser's language.
+--
++
+. Click *Create account*.
+
+== Accepting an Invitation to an Existing Organization
+
+If someone else has already created an Anypoint Platform organization that you want to join, ask them for an invitation to that organization. When an administrator invites you to the organization, you receive an email with a link to accept the invitation.
+
+You must use the email address to which the invitation email was sent to sign up for an account with that organization.
+
+You can use the same email address for multiple Anypoint Platform accounts, but each account needs a unique username. This enables you to manage all of your Anypoint Platform accounts under a single email address.
+
+If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation choose one of the following:
+
+. <<Using an Existing Account>>
+. <<Creating a New Account>>
+
+== Updating User Information
+
+. Log in to Anypoint Platform.
+. Click the circle icon in the upper right-hand corner.
+. Select Profile
+
+image::managing-accounts-roles-and-permissions-98132.png[]
+
+You can modify your name, email, change your password and see a list of the roles assigned to your account.
+
+== Using an Existing Account
+
+image::creating-an-account-24401.png[]
+
+Assume that you are invited to join *MuleSoft* Organization, and that you have three different accounts:
+
+* Member: an account not associated with any Organization.
+* Admin: an account with the organization administrator role associated to  a different organization.
+* Owner: an organization owner account for a different organization.
+
+After clicking the link in the invitation, you can choose the account you want to use.
+
+[NOTE]
+If the account you want to use is already associated to another organization, an exclamation mark is shown next to it. This means that additional steps are needed before migrating the account to a new organization.
+
+== Using an Unassociated Account
+
+When an organization administrator *deletes* an account from the organization, this account is left _unattached_.
+
+image::creating-an-account-ed2fb.png[]
+
+In the example, this would be the case of the `Member` account. You can use this account to join *MuleSoft* organization with no further configurations needed. +
+Select the account, type in its correspondent password and click the *Sign in* button.
+
+== Using an Administrator Account
+
+If your account is an organization administrator for another organization (or business group within that organization), your username shows up with an exclamation mark icon next to it. +
+In the example, the `Admin` account meets this requirement.
+
+image::creating-an-account-5a397.png[]
+
+You can use this account to join *MuleSoft*, however all existing references from this account to the existing organization are lost. +
+After selecting this account and entering the password associated with it, you are asked to confirm your decision:
+
+image::creating-an-account-b433a.png[]
+
+If there were other members in the business group you are leaving behind, the organization administrator of the parent organization is automatically assigned as organization administrator for the business group, and if there were no other members, the business group is deleted.
+
+== Account Associated as an Organization Owner
+
+An usual scenario, is to create an account and not associate it to any existing organization. This automatically assigns your account to a new organization and sets your account as an xref:roles.adoc#organization-owner[organization owner]. +
+This is the case of the `Owner` account in this example:
+
+image::creating-an-account-8fecd.png[]
+
+After selecting this account, entering its correspondent password, and clicking the *Sign In* button, if there are no other members in the organization you own, you are presented with a warning that all associations to the existing organization will be lost, and the organization left behind is deleted. +
+
+image::creating-an-account-eca25.png[]
+
+However, if the organization your account owns has other members, Anypoint Platform won't allow you to migrate to *MuleSoft*.
+
+image::creating-an-account-b82a7.png[]
+
+In order to _free_ your account from the organization you own, raise a support ticket at https://support.mulesoft.com[https://support.mulesoft.com] providing a `userId` and `userName` of another user within your existing organization to promote to owner, and the `Organization Name` and `Organization Id` of said organization. +
+After support confirms that the migration is done, you can use this account to join MuleSoft.
+
+[NOTE]
+This method is not valid for free and trial accounts. +
+If you have one of these accounts and would like to migrate your username to a new organization you need for another organization administrator in your current organization to delete your organization owner account from the organization.
+
+
+== Creating a New Account
+
+To create a new account, click the *Sign Up* button next to your log in options:
+
+image::creating-an-account-5152d.png[]
+
+A sign up window is displayed:
+
+image::creating-an-account-936c0.png[]
+
+. Enter your Name as you wish other members to see you. +
+. The email address shown in the _Email_ field is the same in which you received the invitation. Note that you cannot edit it at this time. After creating a new account, you can navigate to your profile and edit it.
+. Set a phone number.
+. A custom Username is suggested by the platform, but you can change it.
+. Set a password for this account.
+
+
+[NOTE]
+You cannot create an account yourself within an existing organization.
+
+
+== Resetting Your Password
+
+You can reset your password by using the http://www.mulesoft.org/request-password[Reset Password] link on the login page. Enter your user name. A link to create a new password is emailed to you. Click the reset password link in the email, enter a new password in the form, and submit the form.
+
+If you do not remember your user name, enter your email in the reset password form and an email containing the user names associated with your email is sent to you. Knowing your user name, you can reset the password as previously described.
+
+== Upgrading Your Account
+
+To upgrade your trial account to an enterprise subscription, mailto:info@mulesoft.com[contact us] for an Anypoint Platform enterprise license. +

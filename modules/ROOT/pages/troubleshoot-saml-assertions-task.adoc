@@ -1,0 +1,50 @@
+= To view a SAML response in your Browser
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Follow this procedure to help the MuleSoft Support team to assist you in troubleshooting your SAML 2.0 compliant SSO setup or to just view your SAML response.
+
+. Open a new tab in your browser and use Chrome Developer Tools, Firebug for Firefox, or a SAML tracer to be prepared to capture the SAML response. Ensure that you are prevserving logs.
+
+. Go to anypoint.mulesoft.com/accounts/login/<domainname>.
+This will redirect you to your IDP's Sigle sign on page.
+Note: You can view your anypoint organization's domain name by clicking Access Management -> Organizations -> <Master org>
+
+. Enter IDP account credentials and authenticate yourself.
+
+. Open a new tab in your browser and use Chrome Developer Tools, Firebug for Firefox, or a SAML tracer to be prepared to capture the SAML response. Ensure that you are preserving logs.
+
+. Select Access Management -> Organizations -> <Master org> to determine your organizations's domain name.
+
+. Go to the following URL, replacing `domain_name` with your organization's domain name:
++
+----
+anypoint.mulesoft.com/accounts/login/<domain_name>
+----
++
+
+Click on the specific row that has the above mentioned URL. In the Form data window on the right select the Params tab and copy the SAML response element.
+
+. Log in to the MuleSoft Support Portal at the following URL:
++
+----
+https://anypoint.mulesoft.com/accounts/login/receive-id
+----
+
+. Click on the specific row that contains the URL mentioned above.
+
+. In the Form data window on the right select the Params tab.
+
+. Record the SAML response element.
+
+After recording the SAML response element, you can use it to obtain a bearer token to access platform APIs. It is also useful to provide the SAML response for troubleshooting when contacting MuleSoft support.
+
+. Log in to the MuleSoft Support Portal at the following URL:
++
+----
+https://www.mulesoft.com/support-login
+----
+
+. Provide a screen shot of your SAML configuration in Anypoint Platform.
+. Include an XML SAML assertion.

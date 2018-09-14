@@ -1,0 +1,8 @@
+= To Update Your User Profile
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+When you log into the configured IdP for the first time, an Anypoint user is created using the your IdP information. Your user profile includes a username, your name, and email address. Typically, the OpenID Connect `userinfo` endpoint provides a `preferred_username` claim that contains the authenticated user’s username. However, some IdPs such as OpenAM and PingFederate do not support the `preferred_username` claim. Therefore, when Anypoint Platform creates a user, the email and subclaims values comprise the username if the `preferred_username` claim isn't present.
+
+To update user profile information from your configured IdP, log into Anypoint Platform through the IdP. Your user profile information is updated within Anypoint Platform using the updates from the IdP.

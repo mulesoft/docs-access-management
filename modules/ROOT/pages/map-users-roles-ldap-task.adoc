@@ -1,0 +1,55 @@
+= To Map Users to Roles in an LDAP Group
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+You can map users in a federated organization's LDAP group to an Anypoint role. Your Anypoint Platform organization needs to use an external identity provider, such as PingFederate.
+
+After you perform this mapping, users in an organization can sign into Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using LDAP. +
+This ensures security of credentials and maintains organizational roles for accessing privileged information.
+
+Choose an external identity provider and then configure roles.
+
+To configure a role:
+
+. In Anypoint Platform, click Roles. Click Add Role to create a role for each group of users in your organization.
++
+image::external-identity-34af9.png[]
+
+. Specify a role name and description. Click Add Role to add the role:
++
+image::external-identity-c731b.png[]
++
+
+. In Roles, click the name of the new role:
++
+image::external-identity-35f9a.png[]
++
+
+. Click Set external group mapping:
++
+image::external-identity-251b8.png[]
++
+
+. Copy the string from your SAML assertion AttributeValue to the External Group Name, for example:
++
+SAML AttributeValue:
++
+[source,xml,linenums]
+----
+<saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:type="xs:string">cn=jira-users,ou=groups,dc=muleforge,dc=org</saml:AttributeValue>
+----
+
++
+Mapping:
++
+image::external-identity-cfb1e.png[]
+
+. Click Set names.
+.. To map more than one attribute name to the selected role, click Add More and add another attribute.
+. Repeat this process for each role that you want to map to an external group.
+
+== See Also
+
+xref:roles.adoc[Role]

@@ -1,0 +1,60 @@
+= Environments
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Anypoint Platform enables you to create and manage separate deployment environments.  These environments are independent from each other and enable you to test your applications under the same conditions as your production environment.
+
+Anypoint Platform supports the following types of environments:
+
+* **Production environments**: provides a production environment where you can deploy applications and APIs publicly. When you create a new Anypoint Platform account, by default it contains one production environment.
+* **Sandbox environment**: provide useful environments for development and testing. By default, Anypoint Platform accounts are created with one sandbox environment with one vCore assigned to it.
++
+Sandbox environments enable you to safely test an application without affecting the production environment. For example, you can create a sandbox environment for a QA team where they can test new releases of applications before deploying in production. You can add users to a sandbox environment without permitting them to access the production environment. This helps to secure your production environment and eliminate the risk of a developer accidentally changing an application in production. After you are sure an application is safe to expose to users, you can easily promote the application from a sandbox environment to a production environment.
+
+* **Design environment**: enables you to test and run applications at design time. This environment is used by the Design Center application. By default, a new Anypoint Platform account contains one design environment with one vCore assigned to it.
+
+== Adding Users to an Environment
+
+You cannot grant users access to an environment directly. To grant a user access to an environment use role permissions. See xref:roles.adoc#assigning-permissions-to-roles[Assigning Permissions to Roles] for more information.
+
+== To Create a New Environment
+
+_Admin Only_
+
+To create a new environment or manage an existing environment:
+
+. Go to Access Management.
+. From the left-hand menu, select Environments.
+. Click Add Environment.
+. Enter a name for the environment.
+. Select the environment type, then click Create.
+
+image::environments-85dc3.png[]
+
+[NOTE]
+Depending on your CloudHub subscription, you may have restrictions on the number and type of environment you can create.
+
+== To Modify or Delete an Existing Environment
+
+. Go to Access Management.
+. From the left-hand menu, select Environments.
+. Click the name of the environment. You can perform one of the following actions:
++
+* Enter a new name for the environment, then click Update.
+* Click Delete to delete the environment.
+
+== To View the Client ID and Client Secret for an Environment
+
+Each environment has a client ID and a client secret used for authentication. You must use these values to  configure a customer-hosted Mule Runtime or legacy API Gateway to be able to deploy proxies or APIs to CloudHub.
+
+To view the client ID and secret for your environment:
+
+. Log in to the Anypoint Platform as an administrator.
+. Click Environments.
+. Click the name of the environment whose client ID/secret you want to view.
+
+[NOTE]
+--
+To change the client ID or client secret of an environment, you must contact your customer support representative.
+--

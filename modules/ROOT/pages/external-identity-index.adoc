@@ -1,0 +1,14 @@
+= External Identity
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+**** xref:managing-users.adoc[To Configure SAML]
+***** xref:verify-saml-info-task.adoc[To Verify SAML Information]
+***** xref:troubleshoot-saml-assertions-task.adoc[To Troubleshoot SAML Assertions]
+***** xref:update-user-profile-task.adoc[To Update Your User Profile]
+***** xref:single-log-out-task.adoc[To Configure Single Log Out]
+
+**** xref:conf-openid-connect-task.adoc[To Configure OpenID Connect]
+**** xref:test-external-identity-task.adoc[To Test External Identity Configuration]
+**** xref:change-id-mgmt-conf-about.adoc[To Change an Identity Management Configuration]

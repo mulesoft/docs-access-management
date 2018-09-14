@@ -1,0 +1,82 @@
+= Private Cloud Edition Features
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+== Overview
+
+This section describes the Access Management features available in Anypoint Platform Private Cloud Edition.
+
+Users running Anypoint Platform Private Cloud Edition can:
+
+. Configure xref:external-identity.adoc#user-management[User Management] using xref:external-identity.adoc#configure-ldap[LDAP].
+. Configure an <<SMTP,SMTP server>> to send API Manager alerts from your Anypoint Platform Private Cloud Edition installation
+. Set your <<Security,certificates and private key>> to handle SSL encryption for Anypotnt Platform
+. Add customized <<Disclaimer,disclaimer>> to the Anypoint Platform Log-in message
+
+== SMTP
+
+The Anypoint Platform Private Cloud Edition requires that you set up your own SMTP email server to deliver email alerts for both *API Manager* and *Runtime manager*. The SMTP section on the Access Management menu lets you reference the server that you set up.
+
+[NOTE]
+--
+This service does not create an SMTP server for you. It is intended to configure with the settings of an existing SMTP server within your environment
+--
+
+In the left navigation bar, click the *SMTP* option and configure the details for your SMTP server:
+
+image::on-premises-features-2c60a.png[]
+
+[%header,cols="20a,50a,30a"]
+|===
+|Field | Description | Example
+|Host | The host name of your SMTP server | `smtp.gmail.com`
+|Port | The port used to communicate to your SMTP server | `587`
+|Username | The username to authenticate to your SMTP server | `mulesoft.onprem.smtp@gmail.com`
+|Password | Your SMTP password | `examplepassphrase`
+|===
+
+After you set your configuration, click the *Save* button below.
+
+== DNS or IP
+
+You need to provide the DNS or IP with which your instance of the Anypoint Platform is exposed to the local network, this is necessary for Mule runtimes to be able to communicate with it.
+
+. Enter *Access Management*
+. Select the *DNS/IP tab
+. fill in the *Platform DNS/IP* field with the address where you are hosting the platform
+. Click *Save*.
+
+
+image::on-premises-features-2f348.png[]
+
+
+== Security
+
+You can configure Anypoint Platform to use your own certificate. +
+Additionally you can choose the cipher and DH groups for the key exchange method.
+
+In the left navigation bar, click the *Security* link.
+
+image::on-prem-features-5f98d.png[]
+
+. In the *Certificate* field, click the *Browse* button and search the certificate in your hard drive
+. In the *Key* field, click the *Browse* button and search for the private key of the certificate you provided
+. Click the Save button
+. Optionally you can choose to disregard the default configuration and choose your own cipher and Diffie-Hellman group file.
++
+image::on-premises-features-3120e.png[]
+
+. Uncheck the `Use default ciphers and DH Group` mark
+.. Define the cipher you want to use (e.g. `ECDHE-RSA-AES128-SHA256`)
+.. Upload a DH Group
+
+
+== Disclaimer
+
+By clicking the *Disclaimer* section you can set up a disclaimer message that your users see when they access the Anypoint Platform's log-in page.
+
+image::on-prem-features-d22af.png[]
+
+
+You can set up a custom HTML message as well.

@@ -1,0 +1,108 @@
+= To Configure LDAP in Anypoint Platform Private Cloud
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The following procedure describes how to configure user management using LDAP version 3 for the Private Cloud Edition of Anypoint Platform. User management through LDAP is only available for the Private Cloud Edition.
+
+. From Anypoint Platform, click Access Management > External Identity.
++
+A form for configuring LDAP appears.
++
+. In the LDAP configuration form, set the connection settings for your LDAP service.
++
+* Host
++
+The host name of your LDAP server. If you are using TLS in your ldap server, use `ldaps://mulesoft.com` use this host name: `ldap://mulesoft.com`
++
+* Port
++
+The port used to communicate to your LDAP server. The default ldap port is `389`. The default ldaps port is `636`.
++
+* Self-Signed Cert
++
+Mark this check box if you are using a self-signed certificate on your LDAP server. Use a Self-Signed certificate for testing your connection to the LDAP server.
++
+* Bind DN
++
+The distinguished names for the user making the LDAP queries. For example, `uid=admin,ou=people,dc=mulesoft,dc=com`.
++
+* Password
++
+The password for the LDAP server. For example,`examplepassphrase`.
++
+* Connection Timeout
++
+The timeout frame (in seconds) for a connection. For example, `10`.
++
+* Operation Timeout
++
+The timeout frame (in milliseconds) for an operation. For example, `30000`.
++
+. Set up search bases and filters
++
+* User
++
+The base level for your user search base object. For example, `uid=admin,dc=mulesoft,dc=com`.
++
+Group
++
+The base level for your groups search base object. For example, `ou=groups,dc=mulesoft,dc=com`.
++
+. Set the distinguished names for your user and group
++
+* User
++
+The distinguished name for your user search base object. For example,`uid={{username}},ou=people.dc=mulesoft,dc=com`.
+* Group
++
+The distinguished name for your groups search base object. For example, `ou=groups,dc=mulesoft,dc=com`.
++
+* Search filters
++
+** User by Username
++
+The search filter to find users by user name. For example, `(&(objectClass=inetOrgPerson)(uid={{username}}))`.
++
+** User by Email
++
+The search filter to find users by email. For example, `(&(objectClass=inetOrgPerson)(mail={{email}}))`.
++
+** Group by GroupName
++
+The search filter to find groups by groupName. For example, `(&(objectClass=groupOfNames)(cn={{groupName}}))`.
++
+** User's Groups by Username
++
+The search filter to find user groups by userName. For example, `(&objectClass=GroupOfNames)(member=uid={{username}},ou=people,dc=mulesoft,dc=com))`.
++
+. Map the User fields
+* Username
++
+Field that represents the user name. For example, `johndoe`.
++
+* Email
++
+Field that represents the email. For example, `jdoe@gmail.com`.
++
+* First Name
++
+Field that represents the First name. For example, `john.
++
+Last Name
++
+Field that represents the Last name. For example, `doe`.
++
+* ID
++
+Id for your user. For example, `2EH`.
++
+. Map the group fields
+* Group Name
++
+Field that represents your Group name. For example,`cn`.
+* ID
++
+Field that represents your groups Id. For example, `bcd6b4c4-aec5-4493-be1b-8e2e8eecf662`.
++
+. Save the configuration.

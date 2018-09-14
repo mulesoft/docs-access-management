@@ -1,0 +1,30 @@
+= To Verify SAML Information
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+During verification of SAML information, if you determine that information needs to be changed, log into the MuleSoft Support Portal and submit a request.
+
+. In Anypoint Platform, click Access Management > External Identity.
+. From Identity Management, select SAML 2.0.
++
+Your SAML 2.0 configuration appears.
++
+. Verify that the group_attribute value is set to the correct attribute name.
++
+In the following example of a SAML assertion, the group_attribute is "memberOf":
++
+[source,xml,linenums]
+----
+<saml:Attribute NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:basic" Name="memberOf">
+  <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">cn=jira-users,ou=groups,dc=muleforge,dc=org</saml:AttributeValue>
+  <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">cn=confluence-users,ou=groups,dc=muleforge,dc=org</saml:AttributeValue>
+  <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">cn=mule-community,ou=groups,dc=muleforge,dc=org</saml:AttributeValue>
+  <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xs:string">cn=SR-User,ou=Groups,dc=muleforge,dc=org</saml:AttributeValue>
+</saml:Attribute>
+----
+
+
+== See Also
+
+https://www.mulesoft.com/support-login[MuleSoft Support Portal]
