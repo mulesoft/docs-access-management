@@ -1,5 +1,5 @@
 .xref:index.adoc[Access Management]
-* xref:index.adoc[Anypoint Access Management Overview]
+* xref:index.adoc[About Access Management]
 * xref:managing-your-account.adoc[Managing Your Account]
 * xref:organization.adoc[Organization]
 * xref:users.adoc[Users]
