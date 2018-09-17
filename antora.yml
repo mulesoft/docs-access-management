@@ -1,5 +1,5 @@
 name: access-management
 title: Access Management
-version: 'latest'
+version: 'master'
 nav:
 - modules/ROOT/nav.adoc
