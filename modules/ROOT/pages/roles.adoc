@@ -127,6 +127,9 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 +
 ** View API Portal
 
+* *CloudHub Network Administrator*
+* *CloudHub Network Viewer*
+
 == Custom Roles
 
 As an organization administrator, you can create custom roles by combining API or applications, permissions, and users. Depending on the product to which the role is associated, these options may vary. For example, API roles cannot be removed and their permissions cannot be modified, however you can add a description and add users to that role.
