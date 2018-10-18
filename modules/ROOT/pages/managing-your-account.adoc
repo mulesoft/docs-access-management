@@ -89,26 +89,25 @@ When an organization administrator *deletes* an account from the organization, t
 
 image::creating-an-account-ed2fb.png[]
 
-In the example, this would be the case of the `Member` account. You can use this account to join the *MuleSoft* organization with no further configurations needed. +
+In the example, the `Member` account is unattached. You can use this account to join the *MuleSoft* organization with no further configurations needed. +
 Select the account, enter its correspondent password, and click the *Sign in* button.
 
 == Using an Administrator Account
 
-If your account is an organization administrator for another organization (or business group within that organization), your username is displayed with an exclamation mark icon next to it. +
+If your account is an organization administrator for a different organization (or business group within that organization), your username is displayed with an exclamation mark next to it. +
 In the example, the `Admin` account meets this requirement.
 
 image::creating-an-account-5a397.png[]
 
 You can use this account to join *MuleSoft*, however all existing references from this account to the existing organization are lost. +
-After selecting this account and entering the password associated with it, you are asked to confirm your decision:
+After selecting this account and entering the password associated with it, you are asked to confirm your decision. If you proceed:
 
-image::creating-an-account-b433a.png[]
-
-If there are other members in the business group you are leaving behind, the organization administrator of the parent organization is automatically assigned as organization administrator for the business group. If there are no other members, the business group is deleted.
+* If there are other members in the business group you are leaving behind, the organization administrator of the parent organization is automatically assigned as organization administrator for the business group.
+* If there are no other members, the business group is deleted.
 
 == Account Associated as an Organization Owner
 
-A usual scenario, is to create an account and not associate it with any existing organization. This automatically assigns your account to a new organization and sets your account as an xref:roles.adoc#organization-owner[organization owner]. +
+A common scenario, is to create an account and not associate it with any existing organization. This automatically assigns your account to a _new_ organization and sets your account as an xref:roles.adoc#organization-owner[organization owner]. +
 This is the case of the `Owner` account in this example:
 
 image::creating-an-account-8fecd.png[]
@@ -121,32 +120,34 @@ However, if the organization your account owns has other members, Anypoint Platf
 
 image::creating-an-account-b82a7.png[]
 
-To _free_ your account from the organization you own, raise a support ticket at https://support.mulesoft.com[https://support.mulesoft.com]. Provide a `userId` and `userName` of another user within your existing organization to promote to owner, and the `Organization Name` and `Organization Id` of said organization. +
-After support confirms that the migration is done, you can use this account to join MuleSoft.
+To _free_ your account from the organization you own, open a support ticket at https://support.mulesoft.com[https://support.mulesoft.com]. Provide the following information:
+
+* The `userId` and `userName` of another user within the organization you own to promote to owner.
+* The `Organization Name` and `Organization Id` of said organization. +
+
+After support confirms that the migration is done, you can use your account to join MuleSoft.
 
 [NOTE]
 This method is not valid for free and trial accounts. +
-If you have one of these accounts and want to migrate your username to a new organization you need another organization administrator in your current organization to delete your organization owner account from the organization.
-
-
+If you have one of these accounts and want to migrate your user name to a new organization you need another organization administrator in your current organization to delete your organization owner account from the organization.
 
 
 == Updating User Information
 
-. Log in to Anypoint Platform.
+. Log into Anypoint Platform.
 . Click the circle icon in the upper right-hand corner.
-. Select Profile
+. Select Profile.
 
 image::managing-accounts-roles-and-permissions-98132.png[]
 
-You can modify your contact information, change your password and see a list of the roles assigned to your account.
+You can modify your contact information, change your password, and see a list of the roles assigned to your account.
 
 
 == Resetting Your Password
 
 You can reset your password by using the http://www.mulesoft.org/request-password[Reset Password] link on the login page. Enter your user name. A link to create a new password is emailed to you. Click the reset password link in the email, enter a new password in the form, and submit the form.
 
-If you do not remember your user name, enter your email in the reset password form and an email containing the user names associated with your email is sent to you. Knowing your user name, you can reset the password as previously described.
+If you do not remember your user name, enter your email in the reset password form and an email containing the user names associated with your email is sent to you. When you know your user name, you can reset the password as previously described.
 
 == Upgrading Your Account
 
