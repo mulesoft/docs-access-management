@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, permissions, configuring
 
-The *Anypoint Access Management* section shows you how to xref:managing-your-account.adoc#how-to-create-your-account[create your Anypoint Platform account] or configure federated xref:external-identity.adoc[External Identity].
+Use *Anypoint Access Management* to xref:managing-your-account.adoc#how-to-create-your-account[create your Anypoint Platform account] or configure federated xref:external-identity.adoc[External Identity].
 
 [TIP]
 --
@@ -12,17 +12,17 @@ Account creation and user invitation from the platform is not available for Anyp
 Users running Anypoint Platform Private Cloud Edition need to define a method to xref:external-identity.adoc#managing-users[manage users]. +
 --
 
-Additionally you can learn how to configure access and permissions within your xref:organization.adoc[Organization] and, based on your access level, how to manage the xref:users.adoc[Users] and xref:roles.adoc[Roles].
+Additionally, you can configure access and permissions within your xref:organization.adoc[Organization] and, based on your access level, manage the xref:users.adoc[Users] and xref:roles.adoc[Roles].
 
 To access the Organization Administration page:
 
 . Log into an Organization Administrator account.
-. Select the *Access Management* option from the main page, or select it from the left side bar by clicking the _menu_ button on your top right corner.
+. Select the *Access Management* option from the main page, or select it from the left side bar by clicking the _menu_ button in the top left corner.
 
 [NOTE]
 As of November 2014, accounts in both the Anypoint Platform for APIs and CloudHub have been merged. For more information about what this merging of accounts implies and how it's being handled, read Upcoming Changes to Anypoint Platform Accounts.
 
-If you have any questions about your account, please contact your MuleSoft Account Team for assistance.
+If you have any questions about your account, contact your MuleSoft Account Team for assistance.
 
 Anypoint Access Management also provides a REST API for you to programmatically access the resources related to user and client management, organizations and business groups, and roles and permissions.
 Check the https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/apis/11270/versions/11646/pages/11244[Access Management API Portal].
