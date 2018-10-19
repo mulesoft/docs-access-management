@@ -9,7 +9,7 @@ endif::[]
 [NOTE]
 If you already have a Mule Community account you can use that account to access Anypoint Platform.
 
-. Go to https://anypoint.mulesoft.com/#/signup[page].
+. Go to https://anypoint.mulesoft.com/#/signup[the signup page].
 +
 A form appears, where you can provide your contact information and create a user name and password.
 +
@@ -17,9 +17,9 @@ A form appears, where you can provide your contact information and create a user
 +
 * Username: Must be at least 3 characters and contain only the following: alphanumeric characters, dashes, or underscores.
 * Password: Must be at least 6 characters in length and contain only the following: upper and lower case characters, numbers, and non-alphanumeric symbols.
-* Company: Can be any name unless you were invited to join an existing organization, in which case the company name already set.
+* Company: Can be any name unless you were invited to join an existing organization, in which case the company name is already set.
 +
-Anypoint Platform creates a new organization using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account can only be associated with one organization.
+Anypoint Platform creates a new organization using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account can be associated with only one organization.
 
 * Agree to the https://cloudhub.io/legal.html[terms of service].
 . Click the *I'm not a Robot* Captcha's checkmark and wait for validation.
