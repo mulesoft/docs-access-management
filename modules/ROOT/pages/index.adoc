@@ -12,7 +12,7 @@ Account creation and user invitation from the platform is not available for Anyp
 Users running Anypoint Platform Private Cloud Edition need to define a method to xref:external-identity.adoc#managing-users[manage users]. +
 --
 
-Additionally, you can configure access and permissions within your xref:organization.adoc[Organization] and, based on your access level, how to manage the xref:users.adoc[Users] and xref:roles.adoc[Roles].
+Additionally, you can configure access and permissions within your xref:organization.adoc[Organization] and, based on your access level, manage the xref:users.adoc[Users] and xref:roles.adoc[Roles].
 
 To access the Organization Administration page:
 
