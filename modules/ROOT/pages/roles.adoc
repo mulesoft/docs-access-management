@@ -56,10 +56,6 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Deprecate any API Version in the organization
 ** Edit the Portal of any API version in the organization
 
-* **Portals Viewer**: Enables a user to view a list of the Private API Portals to which they have Portal Viewer permissions from the Developer Portal. They can also click to view those API Portals. The ability to view an API Portal does not automatically give a user access to the API. You cannot grant Portal Viewer permissions unless the API has an API Portal. This role has the following permission scopes:
-+
-** View API Portal
-
 * **Audit Log Viewers**: Enables a user to access to the UI for the Audit Log under Access Management. This role has the following permission scopes:
 +
 ** Visualize logs in the xref:audit-logging.adoc[Audit Logs] section.
@@ -77,6 +73,10 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Manage Settings
 ** Read Applications
 ** Read Servers
+
+* *CloudHub Network Administrator*
+
+* *CloudHub Network Viewer*
 
 * **Cloudhub Developer**: *(Deprecated)* Provides access to all Runtime Manager functionality, except organization and billing settings. This role has the following permission scopes:
 +
@@ -123,12 +123,9 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** View and consume Exchange assets
 ** Manage own reviews - Add/Edit/Delete
 
-* **Portals Viewer**: Enable a user to view a list of the Private API Portals to which they have Portal Viewer permissions from the Developer Portal. They can also click to view those API Portals. The ability to view an API Portal does not automatically give a user access to the API. You cannot grant Portal Viewer permissions unless the API has an API Portal. This role has the following permission scopes:
+* **Portals Viewer**: Enables a user to view a list of the Private API Portals to which they have Portal Viewer permissions from the Developer Portal. They can also click to view those API Portals. The ability to view an API Portal does not automatically give a user access to the API. You cannot grant Portal Viewer permissions unless the API has an API Portal. This role has the following permission scopes:
 +
 ** View API Portal
-
-* *CloudHub Network Administrator*
-* *CloudHub Network Viewer*
 
 == Custom Roles
 
