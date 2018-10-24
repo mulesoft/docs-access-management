@@ -14,11 +14,6 @@ Users running Anypoint Platform Private Cloud Edition need to define a method to
 
 Additionally, you can configure access and permissions within your xref:organization.adoc[Organization] and, based on your access level, manage the xref:users.adoc[Users] and xref:roles.adoc[Roles].
 
-To access the Organization Administration page:
-
-. Log into an Organization Administrator account.
-. Select the *Access Management* option from the main page, or select it from the left side bar by clicking the _menu_ button in the top left corner.
-
 [NOTE]
 As of November 2014, accounts in both the Anypoint Platform for APIs and CloudHub have been merged. For more information about what this merging of accounts implies and how it's being handled, read Upcoming Changes to Anypoint Platform Accounts.
 
