@@ -21,7 +21,7 @@ Other users can be assigned the Organization Administrators role, but there is o
 
 When the organization owner creates a business group, an owner must be assigned to it. This assigned user holds an Organization Administrators role within that business group by default.
 
-Because the organization owner always has the Organization Administrators role in the master organization, that user always has that same role in all business groups within the organization, so this user is visible in all business groups. The Organization Administrators role cannot be removed from the organization owner in the master organization or any business group.
+Because the organization owner always has the Organization Administrators role in the master organization, that user always has that same role in all business groups within the organization, so this user is visible in all business groups. See <<creatingroles,Creating Roles and Handling Membership to Business Groups>>. The Organization Administrators role cannot be removed from the organization owner in the master organization or any business group.
 
 An Anypoint Platform user who has been granted organization administrator privileges can perform the following types of tasks:
 
@@ -164,6 +164,7 @@ image::switch-suborg.png[switch+suborg]
 
 If you are not an organization administrator, you can view only the business groups that you have permissions to view. In the organization tab, the tree of your organization displays only the business groups you are a member of.
 
+[[creatingroles]]
 === Creating Roles and Handling Membership to Business Groups
 
 Roles can be applied at the master organization level as well as at the business group level. However, each controls different resources. Roles and permissions assigned to a user in one particular business group (or the master org) are independent of the roles and permissions assigned to that same user in other business groups.
