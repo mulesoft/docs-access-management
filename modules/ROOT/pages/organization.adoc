@@ -4,7 +4,24 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, permissions, configuring, business groups
 
-Organziation Administrators can view and configure properties for an organization.
+When you create an Anypoint Platform account, a master (or root) organization is created, and you are assigned as the owner of the organization and automatically inherit the Organization Administrators role. The organization name is whatever name you entered in the Company field in the initial Anypoint Platform signup form. This can be changed in the organization settings.
+
+The organization is an account where multiple users can share resources, including applications and environments. The level of access users have to various resources depends on their assigned roles and permissions. For example, one user might have permission to manage API alerts, while another user has permission only to view API alerts.
+
+When you sign into Anypoint Platform, the organization icon and name are displayed on the top right of the page. You can click on the organization icon to navigate between business groups. The master organization can contain multiple business groups. You can think of business groups as sub organizations, or children of the master organization.
+
+[NOTE]
+Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative.
+
+== Organization Owner
+
+The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a role but an identifier for this single user, who is assigned the Organization Administrators role by default. Organization Administrators can view and configure properties for an organization.
+
+Other users can be assigned the Organization Administrators role, but there is only one organization owner per Anypoint Platform account (master organization). The owner can transfer ownership of the account to another user, but there cannot be more than one owner at once.
+
+When the organization owner creates a business group, an owner must be assigned to it. This assigned user holds an Organization Administrators role within that business group by default.
+
+Because the organization owner always has the Organization Administrators role in the master organization, that user always has that same role in all business groups within the organization, so this user is visible in all business groups. See <<creatingroles,Creating Roles and Handling Membership to Business Groups>>. The Organization Administrators role cannot be removed from the organization owner in the master organization or any business group.
 
 An Anypoint Platform user who has been granted organization administrator privileges can perform the following types of tasks:
 
@@ -16,50 +33,58 @@ An Anypoint Platform user who has been granted organization administrator privil
 * Access analytics for the APIs in your organization
 * Create business groups to delegate management of the resources and define the scopes of roles and permissions. A business group owner can configure additional properties at the business group level.
 
+== Organization Page
+
+On the *Organization* page, you can:
+
+* View a hierarchical tree of all of the organizations you have permissions to view. You can view and edit properties of an organization by clicking the name.
+* Click the name of a group to view and edit information about it. What you can view and edit depends on your role. +
 [NOTE]
-Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative.
+--
+*Changing the name or domain name of an organization changes the deep links to any existing API Portals in your organization.
+* Add and delete business groups (if enabled).
+--
 
-== The Organization Owner
+=== Access the Organization page:
 
-The user who first signs up for the Anypoint Platform organization is known as the *Organization Owner*. This is not a role but an identifier for this single user, who inherits the Organization Administrator role by default.
-
-When the Organization Owner creates a business-group, an owner must be assigned to it. This assigned user holds an Administrator role within that business group by default.
-
-== Organization Settings
-
-The Organization tab displays a hierarchical tree of all of the organizations you have permissions to view. You can view and edit properties of an organization by clicking the name.
-
-[NOTE]
-Changing the name or domain name of an organization changes the deep links to any existing API Portals in your organization.
+. Sign into your Anypoint Platform account as a user with the Organization Administrators role.
+. Select the *Access Management* option from the main page, or select it from the left side bar by clicking the _menu_ button in the top left corner. +
+The *Organization* page is displayed, where you can view organizations and business groups and add new business groups (if enabled). +
+You can also click *Organization* in the left menu to view the Organization page.
 
 === Client ID and Client Secret
 
-Each environment in an organization has a unique client ID and a client secret used for authentication. To deploy proxies or APIs to CloudHub, you must use these values to configure a customer-hosted Mule Runtime or legacy API Gateway.
+Each environment and business group in an organization has a unique client ID and client secret that are used for authentication. You can use these to access assets within an organization if you are not an organization administrator. The client ID and password are generated by Anypoint Platform for each environment that you create, and they are globally unique.
+
+To deploy proxies or APIs to CloudHub, you must use these values to configure a customer-hosted Mule Runtime or legacy API Gateway.
 
 [NOTE]
 --
-Organization-level client IDs and client secrets are supported only for backward compatibility. In newer Anypoint Platform accounts, you must use the client ID and client secret for an _environment_. See xref:environments.adoc[Environments].
+Organization-level client IDs and client secrets are supported only for backward compatibility. In newer Anypoint Platform accounts, you must instead use the client ID and client secret for an _environment_. See xref:environments.adoc[Environments].
 --
 
-To view the client ID and secret for your organization:
+=== View the Client ID and Secret for Organizations and Environments
 
-. Sign into Anypoint Platform as an administrator.
-. Click *Organization*.
-. Click the name of the organization whose client ID/secret you want to view.
+. Sign into your Anypoint Platform account as a user with the Organization Administrators role.
+. Select the *Access Management* option from the main page, or select it from the left side bar by clicking the _menu_ button in the top left corner.
+. Click *Organization*, or *Environments* in the left menu.
+. Click the name of the organization or environment for which to view the client ID and secret.
 
 [NOTE]
 --
-This procedure does not apply to newer Anypoint Platform accounts, where the client ID and secret apply to environments rather than organizations.+
-To change the client ID or client secret of an organization, you must contact your customer support representative.
+* Remember that for newer Anypoint Platform accounts, the client ID and secret apply to environments rather than organizations. See xref:environments.adoc[Environments].
+* To change the client ID or client secret of an organization, you must contact your customer support representative.
 --
 
 === Manage Master Organization Settings
 
-_Organization Admin Only_
+Only users with the Organization Administrators role can manage these settings.
 
-An organization administrator can modify the organization's name, domain name, and session timeout for its users. To access these settings:
+An organization administrator can modify the organization's name, domain name, and session timeout for its users.
 
-. In Access Management, click *Organization* in the left menu, then click the organization name to modify.
+To access these settings:
+
+. In Access Management, click *Organization* in the left menu, then click the organization name.
 . Modify any of the following settings, then click *Save changes*.
   * *Organization name*: This can be anything, for example, the name of the company.
   * *Domain name*: Although multiple organizations can be created by different users using the same company name, each organization must have a unique domain name.
@@ -70,36 +95,38 @@ image::organization-11dbd.png[]
 
 You can also view the organization ID, client ID, and client secret. These values apply to the master organization and grant permissions for all of the business groups contained within.
 
-[NOTE]
-Business groups have their own client ID and client secret. You can use these to access assets within an organization if you are not an organization administrator.
 
 == Sharing Resources in an Organization
 
-The administrator of an organization is also the administrator of any business groups in the organization. All API versions and CloudHub environments that you create from your account are associated with this organization and are only accessible to people within the organization.
+The administrator of an organization is also the administrator of any business groups within the organization. All API versions and CloudHub environments that you create from your account are associated with this organization and are accessible only to people within the organization. So if you want to share resources with a user, you have to invite the user to join your organization, and the user must create a new account under the organization you sent the invitation from. See xref:users.adoc#inviting-users[Inviting Users] for more information.
 
-The organization name does not need to be unique because a unique domain name distinguishes your organization from other organizations with the same name. To share resources with another user, it not sufficient for the other user to only register under the same company name. You must invite the user to join your organization and the user must create a new account under this organization. See xref:users.adoc#inviting-users[Inviting Users] for more information.
+[NOTE]
+--
+It is not sufficient for the invited user to create a new account and use the company name associated with the master organization because the organization name (often the company name) is not necessarily unique. The domain name you set in the organization information is what distinguishes your organization from other organizations that may have the same name as yours.
 
-If your organization is configured to use an external federated identity system, you do not need to invite users. They are authenticated by the external identity provider.
+Invited users must use the link they receive in the invitation email to join your organization.
+--
 
-After a user joins your organization, you can assign roles to grant them access to different resources within the organization. A best practice is to assign these roles as you invite new users. This ensures that the roles are in effect when users log in for the first time. See xref:managing-permissions.adoc[Roles] for more information.
+If your organization is configured to use an external federated identity system, you do not need to invite users, as they are authenticated by the external identity provider.
+
+After a user joins your organization, you can assign roles to grant them access to different resources within the organization. A best practice is to assign these roles at the time you invite new users so the roles are in effect when users sign in for the first time. See xref:managing-permissions.adoc[Roles] for more information.
 
 If your organization contains business groups, you can give users access to multiple business groups by granting them roles within each group.
 
 
 == Exchange Settings
 
-_Organization Admin Only_
-
-To configure the settings of your organization's private branch of Exchange, edit the Exchange owner's information and manage the number of items that your organization is able to expose on it. The URL path is based on the domain name you provide in the organization's settings.
+You must have the Organization Administrators role to configure the settings of your organization's private branch of Exchange. You can edit the Exchange owner's information and manage the number of items that your organization is able to expose on it. The URL path is based on the domain name you provide in the organization's settings.
 
 == Business Groups
 
+Business groups are also referred to as organizations (or sub organizations). They reside within the master organization and can contain their own business groups. The master organization and its business groups are organized in a hierarchical tree, where the master organization is the root. Each business group has one direct parent and can have multiple children.
+
+If you are an organization administrator and your organization is enabled for business group support, you can create business groups within your organization.
 
 === Create a Business Group
 
-If you are an organization administrator and your organization is enabled for business group support, you can create business groups within your organization. To create a business group:
-
-. In the left menu, click *Organization*.
+. In Anypoint Platform Access Management, in the left menu, click *Organization*.
 . Click the blue plus sign next to the organization name or any of the business groups in the tree diagram.
 . In the dialog box, enter:
   * *Business Group name*: Name for the new business group.
@@ -116,7 +143,7 @@ image::organization-9fa5f.png[]
 
 [NOTE]
 --
-Allocating vCores to a business group makes those vCores available only to the business group, and unavailable to the parent organization.
+Allocating vCores to a business group makes those vCores available only to that business group, which makes them unavailable to the parent organization.
 --
 
 ==== Child Business Groups
@@ -125,7 +152,7 @@ You can create hierarchical levels of business groups to provide more control ov
 
 image::organization-2b25c.png[]
 
-The owner of a business group can create child business groups and can assign another user as the owner of a child business group. The owner of a parent business group always retains administrator permissions for any child business group. Owners of child business groups cannot access or modify the parent business group or master organization. This includes accessing the parent business group's client ID and client secret.
+The owner of a business group can create child business groups and can assign another user as the owner of a child business group. The owner of a parent business group always retains administrator permissions for any child business group. Owners of child business groups cannot access or modify the parent business group or master organization settings, and cannot view the parent business group's client ID and client secret.
 
 When creating a child business group within a parent, only the vCores that were assigned to the parent business group can be allocated to the child.
 
@@ -137,14 +164,21 @@ image::switch-suborg.png[switch+suborg]
 
 If you are not an organization administrator, you can view only the business groups that you have permissions to view. In the organization tab, the tree of your organization displays only the business groups you are a member of.
 
+[[creatingroles]]
 === Creating Roles and Handling Membership to Business Groups
 
-To obtain the membership for a business group, you must be granted a role within that business group. Members that are added to a business group can view and access the business group.
+Roles can be applied at the master organization level as well as at the business group level. However, each controls different resources. Roles and permissions assigned to a user in one particular business group (or the master org) are independent of the roles and permissions assigned to that same user in other business groups.
 
-Roles can be applied at the master organization level as well as at the business group level. However, each controls different resources. APIs and CloudHub deployments that belong to a business group can be accessed only by being granted roles that belong to that business group. Resources that belong to the master organization require roles specified at the master organization level. Additionally, roles that belong to a business group can only grant access to APIs and CloudHub deployments within that business group.
+To obtain the membership for a business group, you must be granted a role within that business group. Once you are visible in a business group, you can be granted individual permissions in that business group. All users, regardless of which business groups they are in, belong to the master organization and can be assigned individual permissions in the master organization.
 
-When adding users to a role that belongs to a business group, all users in the master organization are granted access.
+Members that are added to a business group can view and access the business group, but to access certain resources, you must have the appropriate roles assigned to you. For example, to access APIs and CloudHub deployments in the business group, you must be assigned roles that belong to that business group. Additionally, roles that belong to a business group can only grant access to APIs and CloudHub deployments within that same business group.
+
+For example, if you have the Organization Administrators role in BusinessGroupA, you can grant users access to APIs and CloudHub deployments in BusinessGroupA. If you also have the Organization Administrators role in BusinessGroupB, this does not mean that you can grant access to APIs and CloudHub deployments in BusinessGroupA to users in BusinessGroupB and vice versa.
+
+Resources that belong to the master organization require roles specified at the master organization level.
+
+Users who are assigned the Organization Administrators role in the master organization, or any business group, are automatically assigned that same role in any child business group created within that business group, so are automatically visible in the child business group. This does not apply to users who are assigned the Organization Administrators role _after_ a child business group has been created.
 
 === Deleting Business Groups
 
-Only an organization administrator can delete business group. The root organization cannot be deleted, even by an organization administrator.
+Only an organization administrator can delete business group. The master (root) organization cannot be deleted, even by an organization administrator.
