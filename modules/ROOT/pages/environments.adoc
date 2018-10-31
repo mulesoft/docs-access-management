@@ -3,9 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Platform enables you to create and manage separate deployment environments.  These environments are independent from each other and enable you to test your applications under the same conditions as your production environment.
+Anypoint Platform enables you to create and manage separate deployment environments for APIs and applications.  These environments are independent from each other and enable you to test your applications under the same conditions as your production environment.
 
-Anypoint Platform supports the following types of environments:
+== Types of Environments
+
+The platform supports creation of the following types of environments.
 
 * **Production environments**: provides a production environment where you can deploy applications and APIs publicly. When you create a new Anypoint Platform account, by default it contains one production environment.
 * **Sandbox environment**: provide useful environments for development and testing. By default, Anypoint Platform accounts are created with one sandbox environment with one vCore assigned to it.
