@@ -113,11 +113,6 @@ After a user joins your organization, you can assign roles to grant them access 
 
 If your organization contains business groups, you can give users access to multiple business groups by granting them roles within each group.
 
-
-== Exchange Settings
-
-You must have the Organization Administrators role to configure the settings of your organization's private branch of Exchange. You can edit the Exchange owner's information and manage the number of items that your organization is able to expose on it. The URL path is based on the domain name you provide in the organization's settings.
-
 == Business Groups
 
 Business groups are also referred to as organizations (or sub organizations). They reside within the master organization and can contain their own business groups. The master organization and its business groups are organized in a hierarchical tree, where the master organization is the root. Each business group has one direct parent and can have multiple children.
