@@ -149,4 +149,4 @@ If you do not remember your user name, enter your email in the reset password fo
 
 == Upgrading Your Account
 
-To upgrade your trial account to an enterprise subscription, mailto:info@mulesoft.com[contact us] for an Anypoint Platform enterprise license. +
+To upgrade your Anypoint Platform trial account to an enterprise license, contact your account representative or https://www.mulesoft.com/contact[the MuleSoft sales team].

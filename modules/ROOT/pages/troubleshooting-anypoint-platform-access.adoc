@@ -4,65 +4,85 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, permissions, configuring
 
-== Frequently Asked Questions For Troubleshooting Anypoint Platform Access
+== Accounts
 
-=== Can I have multiple accounts with the same email address?
+=== Can I create multiple accounts with one email address?
 
-Yes, you can have multiple accounts, either for the same organization or for multiple different organizations, using the same email address. Your username must be unique for each account.
+You can create multiple accounts using the same email address, whether the accounts belong in one organization or in different organizations. Your username must be unique for each account.
 
-=== I created an account, but I need to join an existing organization.
+=== How do I join an existing organization?
 
-To join an existing organization, please contact an Organization Administrator for the organization that you need to join and ask them to send you an invitation to that organization. Once you receive your invitation, you can create a new account to accept the invitation and associate your account with the organization. Any data that you entered into the organization that you created yourself remains associated with your old organization.
+To join an existing organization, contact an Organization Administrator for the organization that you need to join and ask them to send you an invitation to that organization.
+Once you receive your invitation, you can create a new account to accept the invitation and associate your account with the organization.
+[NOTE]
+Any data that you entered into an organization from an account that you created yourself remains associated with the old organization.
 
-=== I have been sent an invitation, but it says I should use an existing account to log in – what account am I supposed to use?
+=== Why doesn't Anypoint Platform recognize my login credentials?
 
-If you have one or more existing MuleSoft community accounts tied to the email address at which you received your invitation, MuleSoft prompts you to use your existing account to sign in and accept the invitation. You can also choose to create a new account by following the Sign Up link at the bottom of the form.
+Check that you are using the correct URL to log in to your organization, and the correct username and password for the account.
+If your organization uses an external identity management system, your login URL is *anypoint.mulesoft.com/accounts/login/_yourOrganizationName_*.
 
-=== I received an invitation to an organization, but I want to use a different email address for my account.
+If your organization isn't using an external identity management system and your login credentials aren't working, reset your password or ask your Organization Administrator if your account is still active.
 
-Account invitations are tied to the email address to which the invitation was sent. If you need to use a different email address, accept the invite, then visit your profile to change your email address.
+=== How do I find billing information for my account?
 
-=== I received an invitation to an organization, but when I follow the link in the email I receive an error.
+Talk your account representative, or use https://www.mulesoft.com/contact[the MuleSoft contact form] to obtain billing information.
 
-Your invitation may have expired or been rescinded. Please contact your Organization Administrator for a new invitation.
+=== What can I do if my trial is about to expire?
 
-=== I have an account, but the platform does not recognize my login.
+Talk to your account representative or use https://www.mulesoft.com/contact[the MuleSoft contact form] to request an Enterprise license for your on-premises Mule Runtime instances or to create a subscription account on CloudHub.
 
-Please check that you are using the correct URL to log in to your organization. If your organization uses an external identity management system, your login URL uses this pattern: *anypoint.mulesoft.com/accounts/login/yourorganizationname*
+=== Where do I log in with external identity management?
 
-If your organization is not using an external identity management system and your login credentials are not working, reset your password or consult your Organization Administrator to ensure that your account is still active.
-
-=== I accepted an invitation and logged in, but I cannot see anything in the platform.
-
-If you are logged in and cannot see anything on your organization's Developer Portal, this means that either:
-
-* no one in your organization has added any APIs yet, and thus there are no API Portals to display
-* you have not been granted Portal Viewer access to any private API Portals (and there are no public API Portals to display)
-
-=== I am an API Version Owner, and I want to give other people access to my API version. What do I do?
-
-Navigate to your API Version Details page and click the *Permissions* tab. You can invite other users to access your API here. Note that the user you want to invite must already be a member of the same organization as you. Once you have added users, you can  manage the nature of the permissions (Portal Viewer access or API Version Owner access) that you assign using the drop down in the Permission column. This tab also allows you to view all users who currently have been granted direct permissions to your API. Note that this tab does not display any users that have permissions based on a custom role, because roles cannot be managed from API Version Details pages. Contact your Organization Administrator for information about role-based permissions to your API version.
-
-=== I cannot access billing information for my account.
-
-Please contact us directly for billing information.
-
-=== I received a notice that my trial is expiring. Help!
-
-Please talk to your account representative or mailto:info@mulesoft.com[contact us] to request an Enterprise license for your on-premises Mule Runtime instances or to create a subscription account on CloudHub.
-
-=== My organization uses external identity management. How do I log in?
-
-Please log in at *anypoint.mulesoft.com/accounts/login/yourorganizationname* if your organization is using external identity management.
-
-=== How do I access the Developer Portal for another organization? +
-
-Log out of your account in order to browse Developer Portals of other organizations. While you are logged in to your own organization, you can only access your own organization's Developer Portal. Note that if you wish to request access to an API of another organization, you need to get an Anypoint Platform account for that organization.
-
-=== I have found an API that I would like to use, but I'm not a member of the organization to which that API belongs. How can I request access to this API?
-
-To request access to an API, you must be logged in with an account in the organization to which the API belongs. If you do not have an account with the organization, please review the documentation in the API Portal for information about how to request an account.
+If your organization uses external identity management, log into your account at *anypoint.mulesoft.com/accounts/login/_yourorganizationname_*.
 
 === How do I delete my account?
 
-Please file a https://support.mulesoft.com[support ticket] for account deletion or migration.
+Please create a https://support.mulesoft.com[MuleSoft support case] for account deletion or migration.
+
+== Account Invitations
+
+=== What account should I use?
+
+If you have one or more existing MuleSoft community accounts tied to the email address at which you received your invitation, MuleSoft prompts you to use your existing account to sign in and accept the invitation. You can also choose to create a new account by following the Sign Up link at the bottom of the form.
+
+=== How can I use a different email address?
+
+Accept the invitation using the email where it was sent. After you've accepted the invitation, visit your profile to change your email address.
+
+=== Why does the invitation link cause an error?
+
+If you click the link in your invitation and an error is returned, your invitation may have expired or been rescinded. Please contact your Organization Administrator for a new invitation.
+
+=== Why can't I see anything?
+
+If you accept an invitation, log in, and can't see anything on your organization's Developer Portal, one of the following may be affecting your view:
+
+* No one in your organization has added any APIs yet, and thus there are no API Portals to display.
+* You haven't been granted Portal Viewer access to any private API Portals, and there are no public API Portals to display.
+
+== API Access
+
+=== How do I grant access to my API Version?
+
+To give others access to your API Version, you must be the API Version Owner, and they must be a member of your organization.
+
+. Navigate to your API Version Details page.
+. Click the *Permissions* tab. 
+. Invite a user to access your API, if that user is a member of the same organization as you.
+. Once you have added a user, you can manage Portal Viewer access or API Version Owner access, using the drop down in the Permission column. This tab also allows you to view all users who currently have been granted direct permissions to your API. 
+[NOTE]
+The *Permissions* tab doesn't display any users with permissions based on a custom role, because roles can't be managed from API Version Details pages. Contact your Organization Administrator for information about role-based permissions to your API version.
+
+=== How do I browse Developer Portals?
+
+Log out of your account to browse Developer Portals for other organizations. While you are logged in to your own organization, you can only access your own organization's Developer Portal. 
+[NOTE]
+To request access to an API of another organization, you need to have an Anypoint Platform account for that organization.
+
+=== How can I request access to an API?
+
+If you're not a member of the organization that owns an API that you want to use:
+
+* Log in with an account in the organization that owns the API.
+* If you don't have an account with the organization, review the documentation in the API Portal for information about how to request an account.
