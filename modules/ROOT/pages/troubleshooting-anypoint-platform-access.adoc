@@ -34,7 +34,7 @@ Talk to your account representative or use https://www.mulesoft.com/contact[the 
 
 === Where do I log in with external identity management?
 
-If your organization uses external identity management, log into account at *anypoint.mulesoft.com/accounts/login/_yourorganizationname_*.
+If your organization uses external identity management, log into your account at *anypoint.mulesoft.com/accounts/login/_yourorganizationname_*.
 
 === How do I delete my account?
 
@@ -76,9 +76,9 @@ The *Permissions* tab doesn't display any users with permissions based on a cust
 
 === How do I browse Developer Portals?
 
-Log out of your account in order to browse Developer Portals for other organizations. While you are logged in to your own organization, you can only access your own organization's Developer Portal. 
+Log out of your account to browse Developer Portals for other organizations. While you are logged in to your own organization, you can only access your own organization's Developer Portal. 
 [NOTE]
-If you wish to request access to an API of another organization, you need to have an Anypoint Platform account for that organization.
+To request access to an API of another organization, you need to have an Anypoint Platform account for that organization.
 
 === How can I request access to an API?
 
