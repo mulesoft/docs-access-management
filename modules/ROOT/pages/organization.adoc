@@ -8,10 +8,12 @@ When you create an Anypoint Platform account, a master (or root) organization is
 
 The organization is an account where multiple users can share resources, including applications and environments. The level of access users have to various resources depends on their assigned roles and permissions. For example, one user might have permission to manage API alerts, while another user has permission only to view API alerts.
 
-When you sign into Anypoint Platform, the organization icon and name are displayed on the top right of the page. You can click on the organization icon to navigate between business groups. The master organization can contain multiple business groups. You can think of business groups as sub organizations, or children of the master organization.
+When you sign into Anypoint Platform, the organization icon and name are displayed on the top right of the page. You can click the organization icon to navigate between business groups. The master organization can contain multiple business groups. You can think of business groups as sub organizations, or children of the master organization.
 
 [NOTE]
-Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative.
+--
+When you sign into Anypoint Platform, you are signed back into whichever organization, or business group, you were in when you last signed out.
+--
 
 == Organization Owner
 
@@ -108,7 +110,7 @@ If you want to share resources with a user, you have to invite the user to join 
 
 [NOTE]
 --
-It is not sufficient for the invited user to create a new account and use the company name associated with the master organization because the organization name (often the company name) is not necessarily unique. The domain name you set in the organization information is what distinguishes your organization from other organizations that may have the same name as yours.
+Because the organization name (often the company name) is not necessarily unique, it is not sufficient for the invited user to create a new account and use the company name associated with the master organization. The domain name you set in the organization information is what distinguishes your organization from other organizations.
 
 Invited users must use the link they receive in the invitation email to join your organization.
 --
@@ -123,11 +125,14 @@ If your organization contains business groups, you can give users access to mult
 
 Business groups are also referred to as organizations (or sub organizations). Business groups reside within the master organization and can contain their own business groups. The master organization and its business groups are organized in a hierarchical tree, where the master organization is the root. Each business group has one direct parent and can have multiple children.
 
+[NOTE]
+Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative.
+
 If you are an organization administrator and your organization is enabled for business group support, you can create business groups within your organization. The organization administrator is also the administrator of any business groups (sub organizations) within the parent organization.
 
 === Create a Business Group
 
-. In Anypoint Platform Access Management, in the left menu, click *Organization*.
+. In the Anypoint Platform *Access Management* page, in the left menu, click *Organization*.
 . Click the blue plus sign next to the organization name or any of the business groups in the tree diagram.
 +
 image::organization-20885.png[]
@@ -154,7 +159,7 @@ You can create hierarchical levels of business groups to provide more control ov
 
 image::organization-2b25c.png[]
 
-Since business groups are hierarchical, the owner of a parent business group always retains administrator permissions for any child business group within that parent. This means that the owner of a business group can create child business groups and assign another user as the owner (owners automatically have the Organization Administators role) of those child business groups, but the owner of the parent group remains an organization administrator. Conversely, owners of child business groups cannot access or modify the parent business group or master organization settings, and cannot view the parent business group's client ID and client secret.
+Since business groups are hierarchical, the owner of a parent business group always retains administrator permissions for any child business group within that parent. This means that the owner of a business group can create child business groups and assign another user as the owner (owners automatically have the Organization Administrators role) of those child business groups, but the owner of the parent group remains an organization administrator. Conversely, owners of child business groups cannot access or modify the parent business group or master organization settings, and cannot view the parent business group's client ID and client secret.
 
 When creating a child business group within a parent, only the vCores that were assigned to the parent business group can be allocated to the child.
 
@@ -163,6 +168,11 @@ When creating a child business group within a parent, only the vCores that were 
 When your organization has multiple business groups, you can navigate between them using the menu at the top-right corner. Switching between business groups changes the list of available CloudHub deployments, APIs, users, and roles settings.
 
 image::switch-suborg.png[switch+suborg]
+
+NOTE]
+--
+When you sign into Anypoint Platform, you are signed back into whichever organization, or business group, you were in when you last signed out.
+--
 
 If you are not an organization administrator, you can view only the business groups that you have permissions to view. In the Organization tab, the tree of your organization displays only the business groups you are a member of.
 
