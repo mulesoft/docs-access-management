@@ -23,10 +23,9 @@ You cannot grant users access to an environment directly. To grant a user access
 
 == To Create a New Environment
 
-_Admin Only_
-
 To create a new environment or manage an existing environment:
 
+. Sign into Anypoint Platform with an Organization Administrators role.
 . Go to Access Management.
 . From the left-hand menu, click *Environments*.
 . Click *Add Environment*.
