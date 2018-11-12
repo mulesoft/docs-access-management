@@ -7,14 +7,15 @@ Anypoint Platform enables you to create and manage separate deployment environme
 
 == Types of Environments
 
-The platform supports creation of the following types of environments.
+Anypoint Platform supports the following types of environments:
 
-* **Production environments**: provides a production environment where you can deploy applications and APIs publicly. When you create a new Anypoint Platform account, by default it contains one production environment.
-* **Sandbox environment**: provide useful environments for development and testing. By default, Anypoint Platform accounts are created with one sandbox environment with one vCore assigned to it.
+* **Production environment**: Provides a production environment where you can deploy applications and APIs publicly. When you create a new Anypoint Platform account, by default it contains one production environment.
+
+* **Sandbox environment**: Provides useful environments for development and testing. By default, Anypoint Platform accounts are created with one sandbox environment with one vCore assigned to it.
 +
-Sandbox environments enable you to safely test an application without affecting the production environment. For example, you can create a sandbox environment for a QA team where they can test new releases of applications before deploying in production. You can add users to a sandbox environment without permitting them to access the production environment. This helps to secure your production environment and eliminate the risk of a developer accidentally changing an application in production. After you are sure an application is safe to expose to users, you can easily promote the application from a sandbox environment to a production environment.
+Sandbox environments enable you to safely test an application without affecting the production environment. For example, you can create a sandbox environment for a QA team where they can test new releases of applications before deploying in production. You can add users to a sandbox environment without permitting them to access the production environment. This helps to secure your production environment and eliminate the risk of a developer accidentally changing an application in production. Once you are sure an application is safe to expose to users, you can easily promote the application from a sandbox environment to a production environment.
 
-* **Design environment**: enables you to test and run applications at design time. This environment is used by the Design Center application. By default, a new Anypoint Platform account contains one design environment with one vCore assigned to it.
+* **Design environment**: Enables you to test and run applications at design time. This environment is used by the Design Center application. By default, a new Anypoint Platform account contains one design environment with one vCore assigned to it.
 
 == Adding Users to an Environment
 
@@ -27,24 +28,24 @@ _Admin Only_
 To create a new environment or manage an existing environment:
 
 . Go to Access Management.
-. From the left-hand menu, select Environments.
-. Click Add Environment.
+. From the left-hand menu, click *Environments*.
+. Click *Add Environment*.
 . Enter a name for the environment.
-. Select the environment type, then click Create.
+. Select the environment type, then click *Create*.
 
 image::environments-85dc3.png[]
 
 [NOTE]
-Depending on your CloudHub subscription, you may have restrictions on the number and type of environment you can create.
+Depending on your CloudHub subscription, you may have restrictions on the number and type of environments you can create.
 
 == To Modify or Delete an Existing Environment
 
 . Go to Access Management.
-. From the left-hand menu, select Environments.
+. From the left-hand menu, click *Environments*.
 . Click the name of the environment. You can perform one of the following actions:
 +
-* Enter a new name for the environment, then click Update.
-* Click Delete to delete the environment.
+* Enter a new name for the environment, then click *Update*.
+* Click *Delete* to delete the environment.
 
 == To View the Client ID and Client Secret for an Environment
 
@@ -53,7 +54,8 @@ Each environment has a client ID and a client secret used for authentication. Yo
 To view the client ID and secret for your environment:
 
 . Log in to the Anypoint Platform as an administrator.
-. Click Environments.
+. Go to Access Management.
+. From the left-hand menu, click *Environments*.
 . Click the name of the environment whose client ID/secret you want to view.
 
 [NOTE]
