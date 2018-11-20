@@ -258,6 +258,7 @@ You can set up your Anypoint Platform organization so that when a SAML user belo
 
 == See Also
 
+* xref:organization.adoc[Organization]
 * xref:managing-permissions.adoc[Managing Permissions]
 * xref:design-center::user-access-to-design-center.adoc[About Accessing Design Center]
 * xref:map-users-roles-ldap-task.adoc[To Map Users to Roles in an LDAP Group]
