@@ -45,7 +45,7 @@ Default roles do not have a radial button next to them.
 . To change the role's description:
 .. Click the description. +
 The description changes to an editable field.
-. Enter the new description for the role, then press `Enter`.
+.. Enter the new description for the role, then press `Enter`.
 
 [NOTE]
 When editing role names and descriptions, use the 'Enter' key to save changes. Clicking outside the text box cancels the edit without saving it.
