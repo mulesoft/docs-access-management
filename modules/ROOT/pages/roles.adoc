@@ -5,56 +5,35 @@ endif::[]
 
 To manage roles and permissions within Anypoint Platform, you must have the Organization Administrators role. To manage user permissions for an API version, you must have the API Versions Owner role.
 
-A role is a set of pre-defined permissions for each product component within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role. You can assign individuals to a role, or you can assign a role to another role.
+A role is a set of pre-defined permissions for each product, or feature, within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role.
 
 Anypoint Platform provides two types of roles:
 
-* *Default roles*: Roles that are created automatically when an organization or business group is created. These roles provide permissions and access to core functionality of Anypoint Platform. You can assign users or other roles to default roles, but you can't delete default roles.
+* *Default roles*: Roles that are created automatically when an organization or business group is created. These roles provide permissions and access to core functionality of Anypoint Platform. You can assign users to default roles, but you can't delete default roles.
 
-* *Custom roles*: You can create and delete custom roles. You can assign users or roles to a custom role and also associate a custom role to a specific application. For example, you can create a custom role called "Application Designer" and assign that role to the Design Center application. This enables users assigned the Application Designer role to access the Design Center application.
+* *Custom roles*: You can create and delete custom roles. You can assign users and add permissions to a custom role, as well as associate a custom role with specific Anypoint Platform products. For example, you can create a custom role called "Application Designer" and then grant Design Center permissions to the role so users assigned the Application Designer role can access Design Center.
 
 Roles are business group specific, so ensure that you are in the correct business group for which to manage roles by clicking the menu next to your username on the top-right of the screen.
+
+image::switch-suborg.png[]
 
 To access the *Roles* menu in Access Management:
 
 . Sign into your Anypoint Platform account as a user with the Organization Administrators role.
-. Select the *Access Management* option from the main page, or select it from the left side bar by clicking the _menu_ button in the top left corner.
+. Select the *Access Management* option from the main page, or click the _menu_ button in the top-left corner.
 +
 image::anypoint-platform-nav-menu.png[]
-. In the menu on the left, click *Roles*.
+. In the Access Management page, click *Roles*.
 +
 image::roles-a3471.png[]
 
-[NOTE]
-When a new business group is created, all the users with the Organization Administrators role in the parent business group are also added as organization administrators in the newly created business group (the child business group). However, when creating a new user as an organization administrator in the parent business group, this role is not propagated to all the sub business groups.
-
 == Default Roles
-
-Default roles are roles that are created by default within an Organization.
-
-=== Add Users to a Default Role
-
-To add a user to the role, the user must belong to the same business group as the role.
-
-. Sign in to Access Management, then click *Roles*.
-. Click the name of the default role.
-+
-Default roles do not have a radial button next to them.
-. Enter the user's name in the search box.
-. Select the user from the drop-down list of results, then click the blue plus sign on the right of the search box.
-. To change the role's description:
-.. Click the description. +
-The description changes to an editable field.
-.. Enter the new description for the role, then press `Enter`.
-
-[NOTE]
-When editing role names and descriptions, use the 'Enter' key to save changes. Clicking outside the text box cancels the edit without saving it.
-
-=== List of Default Roles and Permission Scopes
 
 Default roles are automatically created as part of an organization. Each default role in Anypoint Platform contains a set of pre-defined permissions and scope of actions that enable the user to perform specific actions within the platform.
 
 For more information on permissions in Anypoint Platform, see xref:managing-permissions.adoc[Managing Permissions].
+
+=== Default Roles and Permission Scopes
 
 * **API Creators**: Enables a user to create and manage an API in Anypoint Platform. Members of the API Creator role can add new APIs to the platform on the API administration page. This role does not grant privileges for Runtime Manager. This role has the following permission scopes:
 +
@@ -89,7 +68,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 
 * *CloudHub Network Viewer*
 
-* **Cloudhub Developer**: *(Deprecated)* Provides access to all Runtime Manager functionality, except organization and billing settings. This role has the following permission scopes:
+* **CloudHub Developer**: *(Deprecated)* Provides access to all Runtime Manager functionality, except organization and billing settings. This role has the following permission scopes:
 +
 ** Create Applications
 ** Download Applications
@@ -101,7 +80,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Read Applications
 ** Read Servers
 
-* **Cloudhub Support**: *(Deprecated)* Provides read-only access to dashboards, notifications, alerts, logs, and their user settings. This role has the following permission scopes:
+* **CloudHub Support**: *(Deprecated)* Provides read-only access to dashboards, notifications, alerts, logs, and their user settings. This role has the following permission scopes:
 +
 ** Read Applications
 
@@ -115,7 +94,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Edit users' email addresses
 ** Grant VPC and CloudHub dedicated load balancer permissions
 
-* **Exchange Administrators**: Manage Exchange Portal Enables a user to manage Exchange Portals, including customization, manage assets, manage reviews. This role has the following permission scopes:
+* **Exchange Administrators**: Enables a user to manage Exchange Portals, including customization, manage assets, manage reviews. This role has the following permission scopes:
 +
 ** Create content
 ** Manage assets
@@ -140,7 +119,25 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 
 [NOTE]
 If you are using API Manager 2.0, users with the Portals Viewer role are not able to view private APIs. For API Manager 2.0, assign the user at least the Exchange Viewers role to allow the user access to all Exchange assets within the business group in which you have assigned the permission. +
-To control access for a single private API, don't assign the Exchange Viewers role to the user for the business group where the private API resides. Instead, use the share asset feature in Exchange. See xref:exchange::to-share-an-asset-with-a-user[To Share an Asset]. Only users with the Exchange Administrators role can share an asset with another user.
+To control access for a single private API, don't assign the Exchange Viewers role to the user for the business group where the private API resides. Instead, use the share asset feature in Exchange. See xref:exchange::to-share-an-asset-with-a-user[Share an Asset]. Only users with the Exchange Administrators role can share an asset with another user.
+
+=== Add Users to a Default Role
+
+To add a user to a role, the user must belong to the same business group as the role.
+
+. Sign in to Access Management, then click *Roles*.
+. Click the name of the default role.
++
+Default roles do not have a radial button next to them.
+. Enter the user's name in the search box.
+. Select the user from the drop-down list of results, then click the blue plus sign on the right of the search box.
+. To change the role's description:
+.. Click the description. +
+The description changes to an editable field.
+.. Enter the new description for the role, then press `Enter`.
+
+[NOTE]
+When editing role names and descriptions, use the 'Enter' key to save changes. Clicking outside the text box cancels the edit without saving it.
 
 == Custom Roles
 
@@ -174,7 +171,7 @@ After creating a custom role, you can assign users to the role.
 . Click the *Users* tab, then enter a username or email in the search field.
 . Select the user, then click the *+* icon.
 
-=== Assign Permission Scopes for an Application to a Custom Role
+=== Assign Permission Scopes to a Custom Role
 
 After creating a custom role, you can assign permissions to the role. If these environments belong to a business group, they are available only when creating a role in that same business group.
 
@@ -182,9 +179,14 @@ After creating a custom role, you can assign permissions to the role. If these e
 . Click the name of the custom role to which to add permission scopes.
 . Click the *Permissions* tab, then select one of the following tabs:
 +
+* API Manager
 * Runtime Manager
-* MQ
+* Design Center
 * Data Gateway
+* MQ
+* Anypoint Monitoring
+* Secrets Manger
+* Tokenization
 +
 Depending on your permissions you may not see all of these options.
 
@@ -194,9 +196,9 @@ The list of available permissions is different for each application.
 
 . Click the *+* icon to add the permissions to the role.
 
-=== Enable Access to the Design Center Application
+=== Enable Access to Design Center
 
-After creating a custom role, you can enable access to the Design Center application by granting the Design Center Developer permission scope to the custom role.
+After creating a custom role, grant the Design Center Developer permission scope to the custom role to enable access to Design Center.
 
 . Click the *Roles* tab in the left navigation of the Access Management page for your organization.
 . Click the name of the custom role to which to add users.
@@ -261,4 +263,5 @@ You can set up your Anypoint Platform organization so that when a SAML user belo
 * xref:organization.adoc[Organization]
 * xref:managing-permissions.adoc[Managing Permissions]
 * xref:design-center::user-access-to-design-center.adoc[About Accessing Design Center]
-* xref:map-users-roles-ldap-task.adoc[To Map Users to Roles in an LDAP Group]
+* xref:map-users-roles-ldap-task.adoc[Map Users to Roles in an LDAP Group]
+* xref:environments.adoc[Environments]

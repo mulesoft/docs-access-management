@@ -104,7 +104,7 @@ You can also view the organization ID, client ID, and client secret. These value
 
 == Sharing Resources in an Organization
 
-All API versions and CloudHub environments that you create in an organization are accessible only to people within the organization.
+All API versions and CloudHub environments that you create in an organization are accessible only to users within the organization.
 
 If you want to share resources with a user, you have to invite the user to join your organization, and the user must create a new account under the organization you sent the invitation from. See xref:users.adoc#inviting-users[Inviting Users] for more information.
 
@@ -129,6 +129,9 @@ Business groups are also referred to as organizations (or sub organizations). Bu
 Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative.
 
 If you are an organization administrator and your organization is enabled for business group support, you can create business groups within your organization. The organization administrator is also the administrator of any business groups (sub organizations) within the parent organization.
+
+[NOTE]
+When you create a new business group, all the users with the Organization Administrators role in the parent business group are also added as organization administrators in the newly created business group (the child business group). However, when you create a new user as an organization administrator in the parent business group, the user is not added to all the sub business groups.
 
 === Create a Business Group
 
@@ -199,3 +202,9 @@ Only an organization administrator can delete business groups. The master (root)
 . Click the name of the group to delete.
 . In the *Business Group Info* dialog, click *Delete Business Group*.
 . In the confirmation dialog, enter the name of the business, then click *Delete*.
+
+== See Also
+
+* xref:roles.adoc[Roles]
+* xref:managing-permissions.adoc[Managing Permissions]
+* xref:environments.adoc[Environments]
