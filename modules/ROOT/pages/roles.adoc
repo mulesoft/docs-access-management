@@ -3,21 +3,27 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-This topic describes how use roles to manage permissions within Anypoint Platform. This topic assumes that you have an Organization Administrator role in your organization or that you have API Versions Owner permissions and want to manage user permissions for an API version.
+To manage roles and permissions within Anypoint Platform, you must have the Organization Administrators role. To manage user permissions for an API version, you must have the API Versions Owner role.
 
 A role is a set of pre-defined permissions for each product component within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role. You can assign individuals to a role, or you can assign a role to another role.
 
 Anypoint Platform provides two types of roles:
 
-* *Default roles*: roles that are created automatically when an organization or business group is created. These roles provide permissions and access to core functionality of Anypoint Platform. You can modify default roles by assigning users or other roles. However, you cannot delete a default role.
+* *Default roles*: Roles that are created automatically when an organization or business group is created. These roles provide permissions and access to core functionality of Anypoint Platform. You can assign users or other roles to default roles, but you can't delete default roles.
 
-* *Custom roles*: roles that a user can create, customize, and delete. You can assign users or roles to a custom role. You can also associate a custom role to a specific application. For example, you can create a custom role called Application Designer and assign that role to the Design Center application. This enables users assigned the Application Designer role to access the Design Center application.
+* *Custom roles*: You can create and delete custom roles. You can assign users or roles to a custom role and also associate a custom role to a specific application. For example, you can create a custom role called "Application Designer" and assign that role to the Design Center application. This enables users assigned the Application Designer role to access the Design Center application.
 
-To access the Roles menu in Access Management, ensure that you are in the correct business group by clicking the menu next to your username on the top-right of the screen.
+Roles are business group specific, so ensure that you are in the correct business group for which to manage roles by clicking the menu next to your username on the top-right of the screen.
 
+To access the *Roles* menu in Access Management:
+
+. Sign into your Anypoint Platform account as a user with the Organization Administrators role.
+. Select the *Access Management* option from the main page, or select it from the left side bar by clicking the _menu_ button in the top left corner.
++
+image::anypoint-platform-nav-menu.png[]
+. In the menu on the left, click *Roles*.
++
 image::roles-a3471.png[]
-
-Please be aware that roles are assigned per Business Group (Business Group specific).
 
 [NOTE]
 When a new business group is created, all the users with the Organization Administrators role in the parent business group are also added as organization administrators in the newly created business group (the child business group). However, when creating a new user as an organization administrator in the parent business group, this role is not propagated to all the sub business groups.
@@ -26,22 +32,27 @@ When a new business group is created, all the users with the Organization Admini
 
 Default roles are roles that are created by default within an Organization.
 
-=== To Edit a Default Role
+=== Add Users to a Default Role
 
-You can edit a role by changing its name, description, or by adding users to the role.
+To add a user to the role, the user must belong to the same business group as the role.
 
-. Login to Access Management, then click Roles.
-. Click the name of the default role you want to edit.
+. Sign in to Access Management, then click *Roles*.
+. Click the name of the default role.
 +
 Default roles do not have a radial button next to them.
-. To add a user to the role, enter their name in the search box.
+. Enter the user's name in the search box.
+. Select the user from the drop-down list of results, then click the blue plus sign on the right of the search box.
+. To change the role's description:
+.. Click the description. +
+The description changes to an editable field.
+.. Enter the new description for the role, then press `Enter`.
 
 [NOTE]
-When editing Role names and/or descriptions, use the 'Enter' key to save changes. Clicking outside the text box cancels the edit without saving it.
+When editing role names and descriptions, use the 'Enter' key to save changes. Clicking outside the text box cancels the edit without saving it.
 
 === List of Default Roles and Permission Scopes
 
-The following are the default roles that are automatically created as part of an organization. Each default Role in Anypoint Platform contains a set of pre-defined permissions and scope of actions that enable the user to perform specific actions within the platform.
+Default roles are automatically created as part of an organization. Each default role in Anypoint Platform contains a set of pre-defined permissions and scope of actions that enable the user to perform specific actions within the platform.
 
 For more information on permissions in Anypoint Platform, see xref:managing-permissions.adoc[Managing Permissions].
 
@@ -94,77 +105,82 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 +
 ** Read Applications
 
-* **Organization Administrators**: Enables a user to edit to all versions of all APIs, all registered applications, and all API Portals in the Anypoint Platform. Access to the Organization Administration page, where they can add and manage users and roles, view and edit organization details, access API Manager > Client Applications, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. Members of the Organization Administrator role also inherit the role of *API Creator* by default. This role has the following permission scopes:
+* **Organization Administrators**: Enables a user to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. Access to the Organization Administration page, where the user can add and manage users and roles, view and edit organization details, access *API Manager > Client Applications*, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. Members of the Organization Administrators role also inherit the role of *API Creator* by default. This role has the following permission scopes:
 +
-** Edit Developer portal theme settings
-** Request API access terms & conditions
-** Edit Portal Terms and Conditions
-** Set Custom Policies
-** Manage access of third party applications to an API (Specific to the Organization Administrator of the Master Business Group)
-** Edit users email address
-** Grant VPC and CloudHub dedicated Load Balancer permissions
+** Edit developer portal theme settings
+** Request API access terms and conditions
+** Edit portal terms and conditions
+** Set custom policies
+** Manage access of third party applications to an API (Specific to the organization administrator of the Master Business Group)
+** Edit users' email addresses
+** Grant VPC and CloudHub dedicated load balancer permissions
 
 * **Exchange Administrators**: Manage Exchange Portal Enables a user to manage Exchange Portals, including customization, manage assets, manage reviews. This role has the following permission scopes:
 +
 ** Create content
 ** Manage assets
-** Publish/Delete/Deprecate content
-** Manage asset public visibility
+** Publish, delete, and deprecate content
+** Manage public visibility of assets
 ** Customize Exchange portal
 
 * **Exchange Contributors**: Enables a user to contribute Exchange assets and This role has the following permission scopes:manage versions. This role has the following permission scopes:
 +
 ** Create content
-** Manage own content/versions
-** Manage own reviews - Add/Edit/Delete
+** Manage own content and versions
+** Manage own reviews, including  the ability to add, edit, and delete
 
 * **Exchange Viewers**: Enables a user to view and consume Exchange assets. This role has the following permission scopes:
 +
 ** View and consume Exchange assets
-** Manage own reviews - Add/Edit/Delete
+** Manage own reviews, including the ability to add, edit, and delete
 
-* **Portals Viewer**: Enables a user to view a list of the Private API Portals to which they have Portal Viewer permissions from the Developer Portal. They can also click to view those API Portals. The ability to view an API Portal does not automatically give a user access to the API. You cannot grant Portal Viewer permissions unless the API has an API Portal. This role has the following permission scopes:
+* **Portals Viewer**: (Deprecated in API Manager 2.0) The ability to view an API Portal does not automatically give a user access to the API. You cannot grant Portal Viewer permissions unless the API has an API Portal. This role has the following permission scopes:
 +
-** View API Portal
+** From the Developer Portal, view API Portals, including private API portals for which they have Portal Viewer permissions
+
+[NOTE]
+If you are using API Manager 2.0, users with the Portals Viewer role are not able to view private APIs. For API Manager 2.0, assign the user at least the Exchange Viewers role to allow the user access to all Exchange assets within the business group in which you have assigned the permission. +
+To control access for a single private API, don't assign the Exchange Viewers role to the user for the business group where the private API resides. Instead, use the share asset feature in Exchange. See xref:exchange::to-share-an-asset-with-a-user[To Share an Asset]. Only users with the Exchange Administrators role can share an asset with another user.
 
 == Custom Roles
 
 As an organization administrator, you can create custom roles by combining API or applications, permissions, and users. Depending on the product to which the role is associated, these options may vary. For example, API roles cannot be removed and their permissions cannot be modified, however you can add a description and add users to that role.
 
-If the only permissions associated with your role are Portal Viewer​, *Exchange Viewer​ and/or ​Application Owner​, then users belonging to this role won't have access to the organization's support portal.
+If the only permissions associated with your role are Portal Viewer​, Exchange Viewer​, or ​Application Owner​, then users belonging to this role won't have access to the organization's support portal.
 
 
 [NOTE]
-Product permissions are specific to a single environment. If you have multiple environments and want to give a role the same permissions on all, you must add these permissions multiple times, one for each environment.
+Product permissions are specific to a single environment. If you have multiple environments and want to give a role the same permissions on all, you must add these permissions multiple times--one for each environment.
 
-=== To Create a Custom Role
+=== Create a Custom Role
 
-. Click the *Roles* tab in the left navigation of your Organization Administration page.
+. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
 . Click *Add role*.
-. Enter a *Name* and *Description* for your custom role.
-. Your custom role now appears in your list of roles. Click the name of your new role to assign permissions to it.
+. Enter a *Name* and *Description* for your custom role. +
+Your custom role now appears in your list of roles.
+. Click the name of your new role to assign permissions to it.
 
 After creating a custom role, you can access more information about that role, change its name and description, add permissions to it, or assign this role to specific users.
 
 [NOTE]
-When editing Role names and/or descriptions, use the 'Enter' key to save changes. Clicking outside the text box cancels the edit without saving it.
+When editing role names and descriptions, use the 'Enter' key to save changes. Clicking outside the text box cancels the edit without saving it.
 
-=== To Add a User to a Custom Role
+=== Add a User to a Custom Role
 
-After creating a custom role, you assign users to the role.
+After creating a custom role, you can assign users to the role.
 
-. From Access Management, select Roles.
-. Click the name of the custom role where you want to add users.
-. Click the Users tab, then enter a username or email in the search field.
-. Select the user, then click the + icon.
+. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+. Click the name of the custom role to which to add users.
+. Click the *Users* tab, then enter a username or email in the search field.
+. Select the user, then click the *+* icon.
 
-=== To Assign Permission Scopes for an Application to a Custom Role
+=== Assign Permission Scopes for an Application to a Custom Role
 
-After creating a custom role, you can assign permissions to the role. If these environments belong to a business group, they are only available when creating a role in that same business group
+After creating a custom role, you can assign permissions to the role. If these environments belong to a business group, they are available only when creating a role in that same business group.
 
-. From Access Management, select Roles.
-. Click the name of the custom role where you want to add permission scopes.
-. Click the Permissions tab, then select one of the following tabs:
+. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+. Click the name of the custom role to which to add permission scopes.
+. Click the *Permissions* tab, then select one of the following tabs:
 +
 * Runtime Manager
 * MQ
@@ -172,40 +188,41 @@ After creating a custom role, you can assign permissions to the role. If these e
 +
 Depending on your permissions you may not see all of these options.
 
-. Click the Permissions drop-down menu, then select the permissions you want to assign to the custom role.
+. Click the *Permissions* drop-down menu, then select the permissions you want to assign to the custom role.
 +
 The list of available permissions is different for each application.
 
-. Click the + icon to add the permissions to the role.
+. Click the *+* icon to add the permissions to the role.
 
-=== To Enable Access to the Design Center Application
+=== Enable Access to the Design Center Application
 
 After creating a custom role, you can enable access to the Design Center application by granting the Design Center Developer permission scope to the custom role.
 
-. From Access Management, select Roles.
-. Click the name of the custom role where you want to add users.
-. Click Permissions, then click Design Center.
+. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+. Click the name of the custom role to which to add users.
+. Click *Permissions*, then click *Design Center*.
 +
 image::design-center-permissions.png[Adding permissions to Design Center]
 
-. Click the Select Access drop-down, then click the check box next to Design Center Developer.
-. Click the + icon to add the Design Center Developer permission scope.
+. Click the *Select Access* drop-down, then click the check box next to *Design Center Developer*.
+. Click the *+* icon to add the Design Center Developer permission scope.
 
 
-=== To Assign API Permissions to a Custom Role
+=== Assign API Permissions to a Custom Role
 
 ==== API Manager 1.x
 
 You can associate an API to a custom role. This enables you to create roles that give users access to a specific API.
 
-. From Access Management, select Roles.
-. Click the name of the custom role you want to grant access to an API.
+. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+. Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
 +
-. Click Permissions, then click APIs.
+. Click *Permissions*, then click *APIs*.
 . Select an API from the drop-down list.
-. Select the API version. Select All to enable access to all versions of this API.
+. Select the API version. +
+Select *All* to enable access to all versions of this API.
 . Select the permission from the drop-down list. You can add the following permissions to an API:
 +
 * API Version Owner
@@ -215,12 +232,12 @@ Custom roles have a radial button next to them.
 
 You can associate environment permissions to the custom role. This enables you to create roles that give users different permissions over environments.
 
-. From Access Management, select Roles.
-. Click the name of the custom role you want to grant access to an API.
+. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+. Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
 +
-. Click Permissions, then click API Manager.
+. Click *Permissions*, then click *API Manager*.
 . Select an environment from the drop-down list.
 . Select the permission from the drop-down list. You can add the following permissions to an environment:
 +
@@ -241,6 +258,7 @@ You can set up your Anypoint Platform organization so that when a SAML user belo
 
 == See Also
 
+* xref:organization.adoc[Organization]
 * xref:managing-permissions.adoc[Managing Permissions]
 * xref:design-center::user-access-to-design-center.adoc[About Accessing Design Center]
 * xref:map-users-roles-ldap-task.adoc[To Map Users to Roles in an LDAP Group]
