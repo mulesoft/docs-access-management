@@ -107,32 +107,32 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 
 * **Organization Administrators**: Enables a user to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. Access to the Organization Administration page, where the user can add and manage users and roles, view and edit organization details, access *API Manager > Client Applications*, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. Members of the Organization Administrators role also inherit the role of *API Creator* by default. This role has the following permission scopes:
 +
-** Edit Developer portal theme settings
-** Request API access terms & conditions
-** Edit Portal Terms and Conditions
-** Set Custom Policies
-** Manage access of third party applications to an API (Specific to the Organization Administrator of the Master Business Group)
-** Edit users' email address
-** Grant VPC and CloudHub dedicated Load Balancer permissions
+** Edit developer portal theme settings
+** Request API access terms and conditions
+** Edit portal terms and conditions
+** Set custom policies
+** Manage access of third party applications to an API (Specific to the organization administrator of the Master Business Group)
+** Edit users' email addresses
+** Grant VPC and CloudHub dedicated load balancer permissions
 
 * **Exchange Administrators**: Manage Exchange Portal Enables a user to manage Exchange Portals, including customization, manage assets, manage reviews. This role has the following permission scopes:
 +
 ** Create content
 ** Manage assets
-** Publish/Delete/Deprecate content
-** Manage asset public visibility
+** Publish, delete, and deprecate content
+** Manage public visibility of assets
 ** Customize Exchange portal
 
 * **Exchange Contributors**: Enables a user to contribute Exchange assets and This role has the following permission scopes:manage versions. This role has the following permission scopes:
 +
 ** Create content
-** Manage own content/versions
-** Manage own reviews - Add/Edit/Delete
+** Manage own content and versions
+** Manage own reviews, including  the ability to add, edit, and delete
 
 * **Exchange Viewers**: Enables a user to view and consume Exchange assets. This role has the following permission scopes:
 +
 ** View and consume Exchange assets
-** Manage own reviews - Add/Edit/Delete
+** Manage own reviews, including the ability to add, edit, and delete
 
 * **Portals Viewer**: (Deprecated in API Manager 2.0) The ability to view an API Portal does not automatically give a user access to the API. You cannot grant Portal Viewer permissions unless the API has an API Portal. This role has the following permission scopes:
 +
