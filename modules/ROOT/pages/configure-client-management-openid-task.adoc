@@ -93,7 +93,7 @@ In addition to these scopes, if you have configured the Issuer field while setti
 == See Also
 
 * xref:api-manager::openam-oauth-token-enforcement-policy.adoc[About OpenAM, OpenID Connect, or PingFederate OAuth Token Enforcement Policies]
-* xref:api-manager::aes-oauth-faq.adoc[About OAuth 2.0]
+* xref:api-manager::mule-oauth-provider-landing-page.adoc[About OAuth 2.0]
 * https://backstage.forgerock.com/docs/openam/13.5/admin-guide#register-openid-connect-client-dynamic[OpenAM 13.5 Developer's Guide, Procedure 14.4 To Register a Relying Party Dynamically]
 * https://developer.okta.com/docs/api/resources/oauth-clients.html#register-new-client[Okta OpenID Connect, Dynamic Client Registration]
 * https://developer.okta.com/docs/api/resources/oidc.html#authentication-request[Okta OpenID Connect, Authentication Request]
