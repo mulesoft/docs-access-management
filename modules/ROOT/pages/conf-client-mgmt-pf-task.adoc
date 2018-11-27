@@ -76,5 +76,5 @@ Now, you can apply the PingFederate OAuth Token Enforcement policy to your APIs.
 
 == See Also
 
-* xref:api-manager::aes-oauth-faq.adoc[About OAuth 2.0]
+* xref:api-manager::mule-oauth-provider-landing-page.adoc[About OAuth 2.0]
 * xref:api-manager::openam-oauth-token-enforcement-policy.adoc[OpenAM and PingFederate OAuth Token Enforcement Policies]
