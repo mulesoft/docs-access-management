@@ -9,7 +9,7 @@ MuleSoft verifies support in Anypoint Platform for Salesforce, Okta and OpenAM v
 
 *Note:*
 
-. Update of clients created through this integration are not currently supported.
+Updating clients created through an OpenID Connect integration isn't supported.
 . Deletion of clients created through this integration is supported with a limitation.
 * Client is only removed from the Anypoint Platform but will still exist in the OpenID Connect Authorization Server and API policies will still consider them valid.
 * To enable this functionality you need to opt-in by selecting the checkbox `Enable client deletion in Anypoint` under the Advanced settings link.
