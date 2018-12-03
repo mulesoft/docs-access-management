@@ -9,8 +9,8 @@ MuleSoft verifies support in Anypoint Platform for Salesforce, Okta, and OpenAM 
 
 [NOTE]
 * Updates of clients created through this integration are not currently supported.
-* Deletion of clients created through this integration are supported with the limitation that the client is removed from Anypoint Platform but will still exist in the OpenID Connect Authorization Server, and API policies will still consider them valid.
-* To enable this functionality you must opt-in by selecting the checkbox *Enable client deletion in Anypoint* under the *Advanced* settings link.
+* Deletion of clients created through this integration are supported with the limitation that the client is removed from Anypoint Platform but will still exist in the OpenID Connect Authorization Server, and API policies will still consider them valid. +
+  To enable this functionality you must opt-in by selecting the checkbox *Enable client deletion in Anypoint* under the *Advanced* settings link.
 
 If you attempt to update a client application under OpenID Connect management, the following error message appears with an error code: `There was an error while talking to CoreServices`.
 
