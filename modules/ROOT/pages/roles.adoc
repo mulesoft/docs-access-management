@@ -112,7 +112,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Manage asset public visibility
 ** Customize Exchange portal
 
-* **Exchange Contributors**: Enables a user to contribute Exchange assets and This role has the following permission scopes:manage versions. This role has the following permission scopes:
+* **Exchange Contributors**: This role has the following permission scopes:
 +
 ** Create content
 ** Manage own content/versions
