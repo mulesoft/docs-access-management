@@ -102,7 +102,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Manage public visibility of assets
 ** Customize Exchange portal
 
-* **Exchange Contributors**: Enables a user to contribute Exchange assets and This role has the following permission scopes:manage versions. This role has the following permission scopes:
+* **Exchange Contributors**: This role has the following permission scopes:
 +
 ** Create content
 ** Manage own content and versions
@@ -265,3 +265,4 @@ You can set up your Anypoint Platform organization so that when a SAML user belo
 * xref:design-center::user-access-to-design-center.adoc[About Accessing Design Center]
 * xref:map-users-roles-ldap-task.adoc[Map Users to Roles in an LDAP Group]
 * xref:environments.adoc[Environments]
+
