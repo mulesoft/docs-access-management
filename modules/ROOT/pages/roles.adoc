@@ -139,6 +139,7 @@ The description changes to an editable field.
 [NOTE]
 When editing role names and descriptions, use the 'Enter' key to save changes. Clicking outside the text box cancels the edit without saving it.
 
+[[custom-roles]]
 == Custom Roles
 
 As an organization administrator, you can create custom roles by combining API or applications, permissions, and users. Depending on the product to which the role is associated, these options may vary. For example, API roles cannot be removed and their permissions cannot be modified, however you can add a description and add users to that role.

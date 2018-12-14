@@ -133,4 +133,3 @@ The location of the OpenID Provider. For most providers, `/.well-known/openid-co
 * https://backstage.forgerock.com/docs/openam/13.5/dev-guide#rest-api-openid-connect-authorization[OpenAM 13.5 Developer's Guide, Section 2.1.14.2.3 Endpoints for Performing OpenID Connect 1.0 Authorization]
 * https://documentation.pingidentity.com/pingfederate/pf84/index.shtml#concept_authorizationEndpoint.html#concept_authorizationEndpoint[PingFederate Authorization Endpoint]
 * https://documentation.pingidentity.com/pingfederate/pf84/index.shtml#adminGuide/concept/tokenEndpoint.html[PingFederate Token Endpoint]
-* https://developer.pingidentity.com/en/resources/openid-connect-developers-guide.html#userinfo_endpoint[Ping Identity, The UserInfo Endpoint]

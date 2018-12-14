@@ -15,9 +15,9 @@ A form appears, where you can provide your contact information and create a user
 +
 . Enter the following:
 +
-* Username: Must be at least 3 characters and contain only the following: alphanumeric characters, dashes, or underscores.
-* Password: Must be at least 6 characters in length and contain only the following: upper and lower case characters, numbers, and non-alphanumeric symbols.
-* Company: Can be any name unless you were invited to join an existing organization, in which case the company name is already set.
+* Username - Must be at least 3 characters and contain only the following: alphanumeric characters, dashes, or underscores.
+* Password - Must be at least 6 characters in length and contain only the following: upper and lower case characters, numbers, and non-alphanumeric symbols.
+* Company - Can be any name unless you were invited to join an existing organization, in which case the company name is already set.
 +
 Anypoint Platform creates a new organization using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account can be associated with only one organization.
 
@@ -38,19 +38,21 @@ Google's reCaptcha verification service auto-detects your browser's language.
 
 If someone else has already created an Anypoint Platform organization that you want to join, ask them for an invitation to that organization. When an administrator invites you to the organization, you receive an email with a link to accept the invitation.
 
+. Click the link you received in the Anypoint invitation email. +
 You must use the email address to which the invitation email was sent to sign up for an account with that organization.
-
-You can use the same email address for multiple Anypoint Platform accounts, but each account needs a unique username. This enables you to manage all of your Anypoint Platform accounts under a single email address.
-
-If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation choose one of the following:
-
-. <<Using an Existing Account>>
-. <<Creating a New Account Within an Existing Organization>>
-
+The Anypoint Platform signup screen appears.
+. Enter the following information in the form: +
+* Full name - First and last name.
+* Email address - If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation choose one of the following: +
+** <<Using an Existing Account>>
+** <<Creating a New Account Within an Existing Organization>>
+* Phone number - Phone number with area code.
+* Username - You can use the same email address for multiple Anypoint Platform accounts, but each account needs a unique username. This enables you to manage all of your Anypoint Platform accounts under a single email address. +
+Must be at least 3 characters and contain only the following: alphanumeric characters, dashes, or underscores.
+* Password - Must be at least 6 characters in length and contain only the following: upper and lower case characters, numbers, and non-alphanumeric symbols.
+. Agree to the terms of service and privacy policy, then click *Accept and create account in <org>*.
 
 == Using an Existing Account
-
-image::creating-an-account-24401.png[]
 
 You can use an existing account to join an existing organization once you receive an invitation. For example, assume that you are invited to join the *MuleSoft* Organization, and that you have three different accounts:
 
@@ -58,25 +60,28 @@ You can use an existing account to join an existing organization once you receiv
 * Admin: An account with the organization administrator role associated to a different organization.
 * Owner: An organization owner account for a different organization.
 
-After clicking the link in the invitation, you can choose the account to use.
+After clicking the link in the invitation, you can choose the account to use to join the organization.
 
 [NOTE]
 If the account you want to use is already associated with another organization, an exclamation mark is displayed next to it. This means that additional steps are needed before migrating the account to a new organization.
 
 == Creating a New Account Within an Existing Organization
 
-To create a new account, click the *Sign Up* button next to your login options:
+You can create a new account within an existing organization only if you receive an email invitation to join the organization.
 
-image::creating-an-account-5152d.png[]
-
+. Click the link in the invitation email.
+. Click the *Sign Up* button. +
 A sign up window is displayed.
-
-. Enter your full name. +
-. The email address shown in the _Email_ field is the same one where you received the invitation. Note that you cannot edit it at this time. After creating a new account, you can navigate to your profile and edit it.
-. Enter your phone number.
-. Enter a Username (or keep the pre-populated suggestion). The user name is the one other members of the organization see for you.
-. Set a password for this account.
-
+. Enter the following information in the form: +
+* Full name - First and last name.
+* Email address - If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation choose one of the following: +
+** <<Using an Existing Account>>
+** <<Creating a New Account Within an Existing Organization>>
+* Phone number - Phone number with area code.
+* Username - You can use the same email address for multiple Anypoint Platform accounts, but each account needs a unique username. This enables you to manage all of your Anypoint Platform accounts under a single email address. +
+Must be at least 3 characters and contain only the following: alphanumeric characters, dashes, or underscores.
+* Password - Must be at least 6 characters in length and contain only the following: upper and lower case characters, numbers, and non-alphanumeric symbols.
+. Agree to the terms of service and privacy policy, then click *Accept and create account in <org>*.
 
 [NOTE]
 You cannot create a new account within an existing organization without an email invitation.
@@ -85,17 +90,12 @@ You cannot create a new account within an existing organization without an email
 
 When an organization administrator *deletes* an account from the organization, this account is left _unattached_.
 
-image::creating-an-account-ed2fb.png[]
-
-In the example, the `Member` account is unattached. You can use this account to join the *MuleSoft* organization with no further configurations needed. +
-Select the account, enter its correspondent password, and click the *Sign in* button.
+You can use an unattached account to join the *MuleSoft* organization with no further configurations needed. +
+Select the account, enter its corresponding password, and click *Sign in*.
 
 == Using an Administrator Account
 
 If your account is an organization administrator for a different organization (or business group within that organization), your username is displayed with an exclamation mark next to it. +
-In the example, the `Admin` account meets this requirement.
-
-image::creating-an-account-5a397.png[]
 
 You can use this account to join *MuleSoft*, however all existing references from this account to the existing organization are lost. +
 After selecting this account and entering the password associated with it, you are asked to confirm your decision. If you proceed:
@@ -106,17 +106,10 @@ After selecting this account and entering the password associated with it, you a
 == Account Associated as an Organization Owner
 
 A common scenario, is to create an account and not associate it with any existing organization. This automatically assigns your account to a _new_ organization and sets your account as an xref:roles.adoc#organization-owner[organization owner]. +
-This is the case of the `Owner` account in this example:
 
-image::creating-an-account-8fecd.png[]
-
-After selecting this account, entering its correspondent password, and clicking the *Sign In* button, if there are no other members in the organization you own, you are presented with a warning that all associations to the existing organization will be lost, and the organization left behind is deleted. +
-
-image::creating-an-account-eca25.png[]
+After selecting this account, entering its corresponding password, and clicking the *Sign In* button, if there are no other members in the organization you own, you are presented with a warning that all associations to the existing organization will be lost, and the organization left behind is deleted. +
 
 However, if the organization your account owns has other members, Anypoint Platform won't allow you to migrate to *MuleSoft*.
-
-image::creating-an-account-b82a7.png[]
 
 To _free_ your account from the organization you own, open a support ticket at https://support.mulesoft.com[https://support.mulesoft.com]. Provide the following information:
 
@@ -145,7 +138,7 @@ You can modify your contact information, change your password, and see a list of
 
 You can reset your password by using the http://www.mulesoft.org/request-password[Reset Password] link on the login page. Enter your user name. A link to create a new password is emailed to you. Click the reset password link in the email, enter a new password in the form, and submit the form.
 
-If you do not remember your user name, enter your email in the reset password form and an email containing the user names associated with your email is sent to you. When you know your user name, you can reset the password as previously described.
+If you don't remember your user name, enter your email in the reset password form and an email containing the user names associated with your email is sent to you. When you know your user name, you can reset the password as previously described.
 
 == Upgrading Your Account
 
