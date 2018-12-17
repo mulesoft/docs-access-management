@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, permissions, configuring, accounts, roles
 
-This section explains how permissions work across different products and APIs managed from the Anypoint Plaform.
+This section explains how permissions work across different products and APIs managed from the Anypoint Platform.
 
 == Assumptions
 
