@@ -15,13 +15,19 @@ A form appears, where you can provide your contact information and create a user
 +
 . Enter the following:
 +
-* Username - Must be at least 3 characters and contain only the following: alphanumeric characters, dashes, or underscores.
-* Password - Must be at least 6 characters in length and contain only the following: upper and lower case characters, numbers, and non-alphanumeric symbols.
+* Username - Must be at least three characters and can contain only the following: +
+** Alphanumeric characters
+** Dashes
+** Underscores
+* Password - Must be at least six characters in length and can contain only the following: +
+** Upper and lower case characters 
+** Numbers
+** Non-alphanumeric symbols
 * Company - Can be any name unless you were invited to join an existing organization, in which case the company name is already set.
 +
-Anypoint Platform creates a new organization using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account can be associated with only one organization.
+Anypoint Platform creates a new master organization using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account can be associated with only one organization.
 
-* Agree to the https://cloudhub.io/legal.html[terms of service].
+* Click the terms of service link to read the Anypoint Platform Trial License agreement, then check the box to agree to the terms of service. 
 . Click the *I'm not a Robot* Captcha's checkmark and wait for validation.
 +
 [NOTE]
@@ -32,29 +38,36 @@ You might be prompted to perform a small test before proceeding.
 Google's reCaptcha verification service auto-detects your browser's language.
 --
 +
-. Click *Create account*.
+. Click *Accept and create account*.
 
-== Accepting an Invitation to an Existing Organization
+== Join an Existing Organization
 
-If someone else has already created an Anypoint Platform organization that you want to join, ask them for an invitation to that organization. When an administrator invites you to the organization, you receive an email with a link to accept the invitation.
+If there is an existing Anypoint Platform organization that you want to join, ask the organization administrator for an invitation. When an administrator invites you to the organization, you receive an email with a link to accept the invitation.
 
 . Click the link you received in the Anypoint invitation email. +
 You must use the email address to which the invitation email was sent to sign up for an account with that organization.
 The Anypoint Platform signup screen appears.
 . Enter the following information in the form: +
 * Full name - First and last name.
-* Email address - If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation choose one of the following: +
-** <<Using an Existing Account>>
-** <<Creating a New Account Within an Existing Organization>>
+* Email - If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation choose one of the following: +
+** <<use_existing_account,Use an Existing Account>>
+** <<create_new_account,Create a New Account Within an Existing Organization>>
 * Phone number - Phone number with area code.
 * Username - You can use the same email address for multiple Anypoint Platform accounts, but each account needs a unique username. This enables you to manage all of your Anypoint Platform accounts under a single email address. +
-Must be at least 3 characters and contain only the following: alphanumeric characters, dashes, or underscores.
-* Password - Must be at least 6 characters in length and contain only the following: upper and lower case characters, numbers, and non-alphanumeric symbols.
+Your username must be at least three characters and contain only the following: +
+** Alphanumeric characters
+** Dashes
+** Underscores
+* Password - Must be at least 6 characters in length and can contain only the following: +
+** Upper and lower case characters
+** Numbers
+** Non-alphanumeric symbols
 . Agree to the terms of service and privacy policy, then click *Accept and create account in <org>*.
 
-== Using an Existing Account
+[[use_existing_account]]
+== Use an Existing Account
 
-You can use an existing account to join an existing organization once you receive an invitation. For example, assume that you are invited to join the *MuleSoft* Organization, and that you have three different accounts:
+You can use an existing account to join an existing organization once you receive an invitation. For example, assume that you are invited to join the *MuleSoft* Organization, and that you have three different Anypoint Platform accounts:
 
 * Member: An account not associated with any organization.
 * Admin: An account with the organization administrator role associated to a different organization.
@@ -63,9 +76,10 @@ You can use an existing account to join an existing organization once you receiv
 After clicking the link in the invitation, you can choose the account to use to join the organization.
 
 [NOTE]
-If the account you want to use is already associated with another organization, an exclamation mark is displayed next to it. This means that additional steps are needed before migrating the account to a new organization.
+If the account you want to use is already associated with another master organization, an exclamation mark is displayed next to it. This means that additional steps are needed before migrating the account to a new organization.
 
-== Creating a New Account Within an Existing Organization
+[[create_new_account]]
+== Create a New Account Within an Existing Organization
 
 You can create a new account within an existing organization only if you receive an email invitation to join the organization.
 
@@ -74,26 +88,32 @@ You can create a new account within an existing organization only if you receive
 A sign up window is displayed.
 . Enter the following information in the form: +
 * Full name - First and last name.
-* Email address - If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation choose one of the following: +
-** <<Using an Existing Account>>
-** <<Creating a New Account Within an Existing Organization>>
+* Email - If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation choose one of the following: +
+** <<use_existing_account,Use an Existing Account>>
+** <<create_new_account,Create a New Account Within an Existing Organization>>
 * Phone number - Phone number with area code.
 * Username - You can use the same email address for multiple Anypoint Platform accounts, but each account needs a unique username. This enables you to manage all of your Anypoint Platform accounts under a single email address. +
-Must be at least 3 characters and contain only the following: alphanumeric characters, dashes, or underscores.
-* Password - Must be at least 6 characters in length and contain only the following: upper and lower case characters, numbers, and non-alphanumeric symbols.
+Your username must be at least three characters and contain only the following: +
+** Alphanumeric characters
+** Dashes
+** Underscores
+* Password - Must be at least 6 characters in length and can contain only the following: +
+** Upper and lower case characters
+** Numbers
+** Non-alphanumeric symbols
 . Agree to the terms of service and privacy policy, then click *Accept and create account in <org>*.
 
 [NOTE]
 You cannot create a new account within an existing organization without an email invitation.
 
-== Using an Unassociated Account
+== Use an Unassociated Account
 
-When an organization administrator *deletes* an account from the organization, this account is left _unattached_.
+When an organization administrator deletes an account from the organization, the deleted account is left _unattached_.
 
 You can use an unattached account to join the *MuleSoft* organization with no further configurations needed. +
 Select the account, enter its corresponding password, and click *Sign in*.
 
-== Using an Administrator Account
+== Use an Administrator Account
 
 If your account is an organization administrator for a different organization (or business group within that organization), your username is displayed with an exclamation mark next to it. +
 
@@ -107,7 +127,9 @@ After selecting this account and entering the password associated with it, you a
 
 A common scenario, is to create an account and not associate it with any existing organization. This automatically assigns your account to a _new_ organization and sets your account as an xref:roles.adoc#organization-owner[organization owner]. +
 
-After selecting this account, entering its corresponding password, and clicking the *Sign In* button, if there are no other members in the organization you own, you are presented with a warning that all associations to the existing organization will be lost, and the organization left behind is deleted. +
+After selecting this account, entering its corresponding password, and clicking the *Sign In* button, if there are no other members in the organization you own:
+* You are presented with a warning that all associations to the existing organization will be lost.
+* The organization left behind is deleted. +
 
 However, if the organization your account owns has other members, Anypoint Platform won't allow you to migrate to *MuleSoft*.
 
@@ -119,27 +141,37 @@ To _free_ your account from the organization you own, open a support ticket at h
 After support confirms that the migration is done, you can use your account to join MuleSoft.
 
 [NOTE]
-This method is not valid for free and trial accounts. +
-If you have one of these accounts and want to migrate your user name to a new organization you need another organization administrator in your current organization to delete your organization owner account from the organization.
+If you have a free trial account and want to migrate your user name to a new organization you need another organization administrator in your current organization to delete your organization owner account from the organization associated with your trial account.
 
 
-== Updating User Information
+== Update User Information
 
 . Log into Anypoint Platform.
 . Click the circle icon in the upper right-hand corner.
-. Select Profile.
+. Click *Profile*.
 
 image::managing-accounts-roles-and-permissions-98132.png[]
 
 You can modify your contact information, change your password, and see a list of the roles assigned to your account.
 
 
-== Resetting Your Password
+== Reset Your Password
 
-You can reset your password by using the http://www.mulesoft.org/request-password[Reset Password] link on the login page. Enter your user name. A link to create a new password is emailed to you. Click the reset password link in the email, enter a new password in the form, and submit the form.
+. Go to the Anypoint Platform sign in screen. 
+. Click the *Forgot your username or password* link. 
+. In the *Forgot your credentials* form, enter your username. +
+A link to create a new password is emailed to you. 
+. Click the reset password link in the email. 
+. In the *Reset your password* form, enter a new password and click *Reset Password*.
 
-If you don't remember your user name, enter your email in the reset password form and an email containing the user names associated with your email is sent to you. When you know your user name, you can reset the password as previously described.
+== Forgot User Name
 
-== Upgrading Your Account
+Go to the Anypoint Platform sign in screen.
+ 
+. Click the *Forgot your username or password* link. 
+. In the *Forgot your credentials* form, enter the email address you used for your Anypoint Platform account, then click *Request credentials*. +
+You receive an email from Anypoint Platform with a list of user names associated with your email address. 
+
+== Upgrade Your Account
 
 To upgrade your Anypoint Platform trial account to an enterprise license, contact your account representative or https://www.mulesoft.com/contact[the MuleSoft sales team].
