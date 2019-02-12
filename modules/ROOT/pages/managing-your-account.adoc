@@ -15,7 +15,7 @@ A form appears, where you can provide your contact information and create a user
 +
 . Enter the following:
 +
-* Username - Must be at least three characters and can contain only the following: +
+* Username - Must be at least four characters and can contain only the following: +
 ** Alphanumeric characters
 ** Dashes
 ** Underscores
@@ -54,7 +54,7 @@ The Anypoint Platform signup screen appears.
 ** <<create_new_account,Create a New Account Within an Existing Organization>>
 * Phone number - Phone number with area code.
 * Username - You can use the same email address for multiple Anypoint Platform accounts, but each account needs a unique username. This enables you to manage all of your Anypoint Platform accounts under a single email address. +
-Your username must be at least three characters and contain only the following: +
+Your username must be at least four characters and contain only the following: +
 ** Alphanumeric characters
 ** Dashes
 ** Underscores
@@ -93,7 +93,7 @@ A sign up window is displayed.
 ** <<create_new_account,Create a New Account Within an Existing Organization>>
 * Phone number - Phone number with area code.
 * Username - You can use the same email address for multiple Anypoint Platform accounts, but each account needs a unique username. This enables you to manage all of your Anypoint Platform accounts under a single email address. +
-Your username must be at least three characters and contain only the following: +
+Your username must be at least four characters and contain only the following: +
 ** Alphanumeric characters
 ** Dashes
 ** Underscores
