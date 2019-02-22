@@ -15,7 +15,7 @@ The Client Management OpenAM form appears.
 +
 * Version
 +
-OpenAM version 11, 12 or 13.
+OpenAM version 14.
 +
 * Admin Token Provider
 +
