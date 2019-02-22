@@ -23,7 +23,7 @@ The following SAML providers are fully supported:
 
 * Salesforce
 * PingFederate (versions: 6, 7, 8)
-* OpenAM (versions : 11, 12, 14)
+* OpenAM (versions : 14)
 * Okta
 
 The following SAML providers are known to work, but aren't actively tested:
@@ -39,7 +39,7 @@ The following providers are fully supported to work with OpenID Connect:
 
 * Salesforce
 * PingFederate (versions: 6, 7, 8)
-* OpenAM (versions : 11, 12, 14)
+* OpenAM (versions : 14)
 * Okta
 
 For more information, see the documentation for your identity provider. After selecting an identity provider, set up your Anypoint Platform organization as your audience in your identity provider configuration. Configure identity management in the Anypoint Platform master organization. The IdP you select is effective for the entire organization and all business groups. Configure attribute names on the IdP and Anypoint Platform to match.
