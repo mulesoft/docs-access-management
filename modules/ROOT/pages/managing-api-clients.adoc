@@ -5,8 +5,8 @@ endif::[]
 
 This topic provides an overview of client management on Anypoint Platform. As an API owner, you can apply an OAuth 2.0 policy to authenticate client applications that try to access your API. You need an OAuth provider to use an OAuth 2.0 policy. One of the following OAuth providers is recommended:
 
-* OpenAM versions 14
-* PingFederate versions 6 - 8
+* OpenAM version: 14
+* PingFederate versions: 6 - 8
 * Dynamic Client Registration-compliant identity providers
 +
 This provider needs to conform to the OpenID Connect Client Registration 1.0 incorporating errata set 1.
