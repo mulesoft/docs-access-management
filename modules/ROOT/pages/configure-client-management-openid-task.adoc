@@ -104,4 +104,4 @@ In addition to these scopes, if you have configured the Issuer field while setti
 * https://developer.okta.com/docs/api/resources/oidc.html#authentication-request[Okta OpenID Connect, Authentication Request]
 * https://developer.okta.com/docs/api/resources/oidc.html#token-request[Okta OpenID Connect, Token Request]
 * https://developer.okta.com/docs/api/resources/oidc.html#introspection-request[Okta Introspection Request]
-* https://backstage.forgerock.com/docs/openam/13.5/dev-guide#rest-api-oauth2-client-endpoints[OpenAM 13.5 Developer's Guide, Section 2.1.14.1.1 OAuth 2.0 Client and Resource Server Endpoints]
+* https://backstage.forgerock.com/docs/am/5/oauth2-guide/#rest-api-oauth2-client-endpoints[AM 5 OAuth 2.0 Guide, 3.1. OAuth 2.0 Client and Resource Server Endpoints]
