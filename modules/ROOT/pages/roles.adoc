@@ -64,10 +64,6 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Read Applications
 ** Read Servers
 
-* *CloudHub Network Administrator*
-
-* *CloudHub Network Viewer*
-
 * **CloudHub Developer**: *(Deprecated)* Provides access to all Runtime Manager functionality, except organization and billing settings. This role has the following permission scopes:
 +
 ** Create Applications
