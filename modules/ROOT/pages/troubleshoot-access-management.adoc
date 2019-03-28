@@ -1,0 +1,41 @@
+= Troubleshoot Access Management
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+These are some tips about what to do if you encounter these issues. 
+
+== Problems with Accessing Anypoint Platform
+
+=== Sign in Credentials are not recognized
+
+If your credentials aren't recognized when you try to sign into Anypoint Platform, try the following:
+
+* Check that you are using the correct URL to sign into your organization. +
+If your organization uses an external identity management system, your login URL is *anypoint.mulesoft.com/accounts/login/_yourOrganizationDomain_*.
+* Verify that you are using the correct username and password for the account.
+* If your organization isn't using an external identity management system and your sign in credentials aren't working, reset your password or ask your Organization Administrator if your account is still active.
+
+=== Access Management invitation link returns an error
+
+If you click the link in your invitation and an error is returned, your invitation may have expired or been rescinded. Please contact your Organization Administrator for a new invitation.
+
+== OpenID Connect Client Management
+
+=== Error received when you try to update a client application
+
+If you receive an `There was an error while talking to CoreServices` when you try to update a client application under OpenID Connect management, this is because updates of clients created through this integration are not currently supported.
+
+See xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management]
+
+=== Error received when doing a redirect 
+
+When a redirect to the OpenID Connect Provider occurs, you receive an `Invalid Scopes error`. 
+
+Cause: This can happen if the `openid`, `profile`, and `email` scopes aren't supported by the auto-registered client. 
+
+Solution: Add the `openid`, `profile`, and `email` scopes to the client manually. 
+
+
+
+

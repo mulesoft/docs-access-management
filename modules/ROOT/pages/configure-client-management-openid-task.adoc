@@ -8,11 +8,11 @@ endif::[]
 MuleSoft verifies support in Anypoint Platform for Salesforce, Okta, and OpenAM v14 Dynamic Client Registration.
 
 [NOTE]
+====
 * Updates of clients created through this integration are not currently supported.
 * Deletion of clients created through this integration are supported with the limitation that the client is removed from Anypoint Platform but will still exist in the OpenID Connect Authorization Server, and API policies will still consider them valid. +
-  To enable this functionality you must opt-in by selecting the checkbox *Enable client deletion in Anypoint* under the *Advanced* settings link.
-
-If you attempt to update a client application under OpenID Connect management, the following error message appears with an error code: `There was an error while talking to CoreServices`.
+To enable this functionality you must opt-in by selecting the checkbox *Enable client deletion in Anypoint* under the *Advanced* settings link.
+====
 
 The following table contains examples of the URLs you need to supply, depending on your provider, during registration.
 
@@ -26,57 +26,44 @@ The following table contains examples of the URLs you need to supply, depending 
 | Token Introspection | {BASE URL}/introspect | {BASE URL}/introspect | {BASE URL}/introspect
 |===
 
-. Log into the master organization in Anypoint Platform as Administrator.
-. In Anypoint Platform, click *Access Management > External Identity*.
+. Sign into the master organization in Anypoint Platform with the *Organization Administrator* role.
+. In Anypoint Platform, click *Access Management*. 
+. In the menu on the left, click *External Identity*.
+. In the drop-down, select *Client Management > OpenID Connect Dynamic Client Registration*.
 +
 image::select-openid-client-mgmt.png[height=310,width=452]
-. From *Client Management*, select *OpenID Connect Dynamic Client Registration*.
 +
-The External Identity - Client Management OpenID Connect Dynamic Client Registration form appears.
+The *External Identity* page appears.
 +
-. Fill in the following required fields after obtaining values from your identity provider’s configuration:
+. In *Client Management*, after obtaining values from your identity provider’s configuration, fill in the following required fields in each section:
 +
-* Client Registration URL
-+
-The URL to dynamically register client applications as a client application for your identity provider.
-+
-* Authorize Header
-+
-The authorization header for dynamic client registration requests. This is an optional field under the *Advanced Settings* link. This header is required if the provider restricts registration requests to authorized clients.
-+
-** Okta: This value is `SSWS ${api_token}`, where `api_token` is an API token created through Okta.
-+
-** ForgeRock: This value is `Bearer ${api_token}`, where `api_token` is an API token created through ForgeRock.
-+
-** Salesforce: This value is `Bearer ${api_token}`, where `api_token` is an API token created through Salesforce.
-+
-* Token Introspection Client: Client ID &amp; Client Secret
-+
-The client ID and client secret for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
-+
-** Okta: This value should be a "Confidential" client.
-+
-** ForgeRock: This value should be a "Confidential" client.
-+
-** Salesforce: This value should be a "Confidential" client.
-+
-* Authorize URL
-+
-The URL where the user authenticates and grants OpenID Connect client applications access to the user's identity.
-+
-* Token URL
-+
-The URL that provides the user’s identity, encoded in a secure JSON Web Token.
-+
-. Save your configuration.
-+
+* *Dynamic Client Registration*
+ ** *Issuer*: URL that the OpenID provider asserts is its trusted issuer.
+ ** *Client Registration URL*: The URL to dynamically register client applications as a client application for your identity provider. 
+ ** (Optional) Click *Advanced settings* to add an *Authorization Header* for dynamic client registration requests. This header is required if the provider restricts registration requests to authorized clients. +
+  *** For Okta, this value is `SSWS ${api_token}`, where `api_token` is an API token created through Okta.
+  *** For ForgeRock, this value is `Bearer ${api_token}`, where `api_token` is an API token created through ForgeRock.
+  *** For Salesforce, this value is `Bearer ${api_token}`, where `api_token` is an API token created through Salesforce.
+ In *Advanced Settings* you can also select:
+  *** *Disable server certificate validation*: Disables server certificate validation if your OpenID client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
+  *** *Enable client deletion in Anypoint*: Enables deletion of clients created with this integration.
+* *Token Inspection Client*
+ ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
+  *** For Okta, this value should be a "Confidential" client.
+  *** For ForgeRock, this value should be a "Confidential" client.
+  *** For Salesforce, this value should be a "Confidential" client.
+ ** *Client Secret*: The client secret that corresponds to the client ID. 
+* *OpenID Connect Authorization URLs*
+ ** *Authorize URL*: The URL where the user authenticates and grants OpenID Connect client applications access to the user's identity.
+ ** *Token URL*: The URL that provides the user’s identity, encoded in a secure JSON Web Token.
+. Click *Save*.
 . Sign out and navigate to your organization’s SSO URL, for example:
 +
 `+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
 +
 . Sign in through your identity provider to test the configuration.
 
-Once this has been successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IDP that acts as a token provider.
+Once this is successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IDP that acts as a token provider.
 
 [NOTE]
 For Okta, the Okta admin needs to assign the dynamically generated clients to a user or a group of users in order for them to receive access tokens by sending over the Client ID and Client Secret.
@@ -100,8 +87,6 @@ In addition to these scopes, if you have configured the Issuer field while setti
 * xref:api-manager::openam-oauth-token-enforcement-policy.adoc[About OpenAM, OpenID Connect, or PingFederate OAuth Token Enforcement Policies]
 * xref:api-manager::mule-oauth-provider-landing-page.adoc[About OAuth 2.0]
 * https://backstage.forgerock.com/docs/openam/13.5/admin-guide#register-openid-connect-client-dynamic[OpenAM 13.5 Developer's Guide, Procedure 14.4 To Register a Relying Party Dynamically]
-* https://developer.okta.com/docs/api/resources/oauth-clients.html#register-new-client[Okta OpenID Connect, Dynamic Client Registration]
-* https://developer.okta.com/docs/api/resources/oidc.html#authentication-request[Okta OpenID Connect, Authentication Request]
-* https://developer.okta.com/docs/api/resources/oidc.html#token-request[Okta OpenID Connect, Token Request]
-* https://developer.okta.com/docs/api/resources/oidc.html#introspection-request[Okta Introspection Request]
+* https://developer.okta.com/docs/api/resources/oauth-clients[Okta OpenID Connect, Dynamic Client Registration]
+* https://developer.okta.com/docs/api/resources/oidc/[Okta OpenID Connect & OAuth 2.0 API]
 * https://backstage.forgerock.com/docs/am/5/oauth2-guide/#rest-api-oauth2-client-endpoints[AM 5 OAuth 2.0 Guide, 3.1. OAuth 2.0 Client and Resource Server Endpoints]
