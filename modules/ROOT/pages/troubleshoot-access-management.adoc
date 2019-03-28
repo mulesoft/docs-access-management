@@ -13,7 +13,7 @@ If your credentials aren't recognized when you try to sign into Anypoint Platfor
 
 * Check that you are using the correct URL to sign into your organization. +
 If your organization uses an external identity management system, your login URL is *anypoint.mulesoft.com/accounts/login/_yourOrganizationDomain_*.
-* Verify that you are using the correct username and password for the account
+* Verify that you are using the correct username and password for the account.
 * If your organization isn't using an external identity management system and your sign in credentials aren't working, reset your password or ask your Organization Administrator if your account is still active.
 
 === Access Management invitation link returns an error
