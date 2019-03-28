@@ -39,20 +39,20 @@ The *External Identity* page appears.
 +
 * *Dynamic Client Registration*
  ** *Issuer*: URL that the OpenID provider asserts is its trusted issuer.
- ** *Client Registration URL*: The URL to dynamically register client applications as a client application for your identity provider. +
+ ** *Client Registration URL*: The URL to dynamically register client applications as a client application for your identity provider. 
+ ** (Optional) Click *Advanced settings* to add an *Authorization Header* for dynamic client registration requests. This header is required if the provider restricts registration requests to authorized clients. +
   *** For Okta, this value is `SSWS ${api_token}`, where `api_token` is an API token created through Okta.
   *** For ForgeRock, this value is `Bearer ${api_token}`, where `api_token` is an API token created through ForgeRock.
   *** For Salesforce, this value is `Bearer ${api_token}`, where `api_token` is an API token created through Salesforce.
- ** (Optional) Click *Advanced settings* to add an *Authorization Header* for dynamic client registration requests. This header is required if the provider restricts registration requests to authorized clients. +
  In *Advanced Settings* you can also select:
   *** *Disable server certificate validation*: Disables server certificate validation if your OpenID client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
-  *** *Enable client detection in Anypoint*: Enables deletions of clients created with this integration.
+  *** *Enable client detection in Anypoint*: Enables detection of clients created with this integration.
 * *Token Inspection Client*
  ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
- ** *Client Secret*: The client secret that corresponds to the client ID. +
   *** For Okta, this value should be a "Confidential" client.
   *** For ForgeRock, this value should be a "Confidential" client.
   *** For Salesforce, this value should be a "Confidential" client.
+ ** *Client Secret*: The client secret that corresponds to the client ID. 
 * *OpenID Connect Authorization URLs*
  ** *Authorize URL*: The URL where the user authenticates and grants OpenID Connect client applications access to the user's identity.
  ** *Token URL*: The URL that provides the user’s identity, encoded in a secure JSON Web Token.

@@ -9,7 +9,7 @@
  ** xref:sso-prerequisites-about.adoc[About SSO Prerequisites and Limitations]
  ** xref:external-identity-index.adoc[External Identity Configurations]
   *** xref:managing-users.adoc[Configure SAML]
-   **** xref:verify-saml-info-task.adoc[To Verify SAML Information]
+   **** xref:verify-saml-info-task.adoc[Verify SAML Information]
    **** xref:saml-bearer-token.adoc[Obtain the Bearer Token Using SAML]
    **** xref:troubleshoot-saml-assertions-task.adoc[Troubleshoot SAML Assertions]
    **** xref:update-user-profile-task.adoc[Update Your User Profile]
