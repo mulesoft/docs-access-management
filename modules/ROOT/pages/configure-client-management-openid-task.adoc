@@ -46,7 +46,7 @@ The *External Identity* page appears.
   *** For Salesforce, this value is `Bearer ${api_token}`, where `api_token` is an API token created through Salesforce.
  In *Advanced Settings* you can also select:
   *** *Disable server certificate validation*: Disables server certificate validation if your OpenID client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
-  *** *Enable client detection in Anypoint*: Enables detection of clients created with this integration.
+  *** *Enable client deletion in Anypoint*: Enables deletion of clients created with this integration.
 * *Token Inspection Client*
  ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
