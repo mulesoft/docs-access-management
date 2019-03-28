@@ -22,10 +22,20 @@ If you click the link in your invitation and an error is returned, your invitati
 
 == OpenID Connect Client Management
 
-== Error received when you try to update a client application
+=== Error received when you try to update a client application
 
 If you receive an `There was an error while talking to CoreServices` when you try to update a client application under OpenID Connect management, this is because updates of clients created through this integration are not currently supported.
 
 See xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management]
+
+=== Error received when doing a redirect 
+
+When a redirect to the OpenID Connect Provider occurs, you receive an `Invalid Scopes error`. 
+
+Cause: This can happen if scopes that aren't supported by the auto-registered client are requested. 
+
+Solution: Add the scopes to the client manually. 
+
+
 
 
