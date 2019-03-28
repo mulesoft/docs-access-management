@@ -32,9 +32,9 @@ See xref:configure-client-management-openid-task.adoc[Configure OpenID Connect C
 
 When a redirect to the OpenID Connect Provider occurs, you receive an `Invalid Scopes error`. 
 
-Cause: This can happen if scopes that aren't supported by the auto-registered client are requested. 
+Cause: This can happen if the `openid`, `profile`, and `email` scopes are requested but aren't supported by the auto-registered client. 
 
-Solution: Add the scopes to the client manually. 
+Solution: Add the `openid`, `profile`, and `email` scopes to the client manually. 
 
 
 
