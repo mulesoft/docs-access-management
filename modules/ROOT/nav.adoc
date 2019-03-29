@@ -16,7 +16,6 @@
    **** xref:single-log-out-task.adoc[Configure Single Log Out]
   *** xref:conf-openid-connect-task.adoc[Configure OpenID Connect]
   *** xref:test-external-identity-task.adoc[Test External Identity Configuration]
-  *** xref:change-id-mgmt-conf-about.adoc[Change an Identity Management Configuration]
  ** xref:ldap-configuration-index.adoc[LDAP Configuration]
   *** xref:map-users-roles-ldap-task.adoc[Map Users to Roles in an LDAP Group]
   *** xref:conf-ldap-private-cloud-task.adoc[Configure LDAP in Anypoint Platform Private Cloud]
