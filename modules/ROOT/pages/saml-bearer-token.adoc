@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-This topic describes how to obtain the bearer token from Anypoint Platform. If you are using an identity provider configured to use SAML 2.0, federated users within your orgnization can access platform APIs using the bearer token.
+This topic describes how to obtain the bearer token from Anypoint Platform. If you are using an identity provider configured to use SAML 2.0, federated users within your organization can access platform APIs using the bearer token.
 
 The bearer token provides access to the platform APIs a user has permission to access. Each bearer token is associated with a specific user who is granted roles and permissions for an API. If a user attempts to access an API that they do not have permissions to access the API returns a `401 Unauthorized` error.
 

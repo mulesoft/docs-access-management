@@ -11,7 +11,7 @@ Users running Anypoint Platform Private Cloud Edition can:
 
 . Configure xref:external-identity.adoc#user-management[User Management] using xref:external-identity.adoc#configure-ldap[LDAP].
 . Configure an <<SMTP,SMTP server>> to send API Manager alerts from your Anypoint Platform Private Cloud Edition installation
-. Set your <<Security,certificates and private key>> to handle SSL encryption for Anypotnt Platform
+. Set your <<Security,certificates and private key>> to handle SSL encryption for Anypoint Platform
 . Add customized <<Disclaimer,disclaimer>> to the Anypoint Platform Log-in message
 
 == SMTP
