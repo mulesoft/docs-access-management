@@ -50,7 +50,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 +
 ** Visualize logs in the xref:audit-logging.adoc[Audit Logs] section.
 
-* **Cloudhub Admin**: Provides access to all Runtime Manager functionality. This role has the following permission scopes:
+* **CloudHub Admin**: Provides access to all Runtime Manager functionality. This role has the following permission scopes:
 +
 ** Create Applications
 ** Delete Applications

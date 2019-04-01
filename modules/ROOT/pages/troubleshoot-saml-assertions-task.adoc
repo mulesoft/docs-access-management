@@ -5,11 +5,11 @@ endif::[]
 
 Follow this procedure to help the MuleSoft Support team to assist you in troubleshooting your SAML 2.0 compliant SSO setup or to just view your SAML response.
 
-. Open a new tab in your browser and use Chrome Developer Tools, Firebug for Firefox, or a SAML tracer to be prepared to capture the SAML response. Ensure that you are prevserving logs.
+. Open a new tab in your browser and use Chrome Developer Tools, Firebug for Firefox, or a SAML tracer to be prepared to capture the SAML response. Ensure that you are preserving logs.
 
 . Go to anypoint.mulesoft.com/accounts/login/<domainname>.
-This will redirect you to your IDP's Sigle sign on page.
-Note: You can view your anypoint organization's domain name by clicking Access Management -> Organizations -> <Master org>
+This will redirect you to your IDP's Single sign on page.
+Note: You can view your Anypoint organization's domain name by clicking Access Management -> Organizations -> <Master org>
 
 . Enter IDP account credentials and authenticate yourself.
 

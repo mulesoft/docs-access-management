@@ -1,8 +1,0 @@
-= To Change an Identity Management Configuration
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-If any information needs to be changed after submitting the External Identity - Identity Management configuration form for OpenID Connect or SAML 2.0, log into the MuleSoft Support Portal and submit a request.
-
-The `email` `firstname` and `lastname` fields of the SAML configuration are updated automatically every time a user signs into the IdP using the value in the `username` field.

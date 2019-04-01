@@ -11,4 +11,3 @@ endif::[]
 
 **** xref:conf-openid-connect-task.adoc[To Configure OpenID Connect]
 **** xref:test-external-identity-task.adoc[To Test External Identity Configuration]
-**** xref:change-id-mgmt-conf-about.adoc[To Change an Identity Management Configuration]
