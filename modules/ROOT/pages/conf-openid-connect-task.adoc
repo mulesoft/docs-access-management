@@ -119,11 +119,10 @@ The location of the OpenID Provider. For most providers, `/.well-known/openid-co
 
 == See Also
 
-* https://developer.okta.com/docs/api/resources/oidc.html#authentication-request[Okta OpenID Connect, Authentication Request]
-* https://developer.okta.com/docs/api/resources/oauth-clients.html#register-new-client[Okta OpenID Connect, Dynamic Client Registration]
-* https://developer.okta.com/docs/api/resources/oidc.html#token-request[Okta OpenID Connect, Token Request]
-* https://developer.okta.com/docs/api/getting_started/getting_a_token.html[Okta Getting a Token]
-* https://developer.okta.com/docs/api/resources/oidc.html#get-user-information[Okta OpenID Connect, Get User Information]
+* https://developer.okta.com/docs/api/resources/oidc/[Okta OpenID Connect]
+* https://developer.okta.com/docs/api/resources/oauth-clients/[Dynamic Client Registration]
+* https://developer.okta.com/docs/api/getting_started/getting_a_token/[Getting a Token]
+* https://developer.okta.com/docs/api/resources/users/#get-user[Get a User]
 * https://help.salesforce.com/articleView?id=remoteaccess_oauth_web_server_flow.htm[Salesforce OAuth 2.0 Web Server Authentication Flow]
 * https://help.salesforce.com/articleView?id=sso_provider_openid_connect.htm[Salesforce OpenID Connect, Authentication Request]
 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_understanding_refresh_token_oauth.htm[Salesforce OAuth Refresh Token Process]
