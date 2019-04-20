@@ -2,42 +2,39 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-:keywords: anypoint platform, configuring, logs, auditing
 
-Changes made by users within an Anypoint Platform organization are logged through an audit logging service. You can access the data logs through the Audit Logging Query API or through the Audit Logging UI.
+Changes made by users within Anypoint Platform organizations are logged through an audit logging service. You can access the data logs through the audit logging query API or through the audit logging UI.
 
-The audit logging service provides a queryable history of actions performed within the Anypoint platform. It keeps track of all users who have interacted with objects in the system, timestamping these actions. It also provides mechanisms for querying the set of users who have performed actions, the set of objects that have had actions performed on them, and other endpoints that enable the querying of log entries.
+The audit logging service provides a queryable history of actions performed within the Anypoint Platform. It keeps track of all users who have interacted with objects in the system, and timestamps those actions. It also provides mechanisms for querying the set of users who have performed actions, the set of objects that had actions performed on them, and other endpoints that enable the querying of log entries.
 
-Audit logs have a retention period of six years. To maintain your log files longer, you should download them periodically.
+Audit logs have a retention period of six years. Download your logs periodically if you want to maintain your log files for longer than six years.
 
-== To Access Audit Logging
+== Access Audit Logging
 
-Users belonging to the *Organization Administration* role or the *Audit Log Viewer* role on the Anypoint Platform have access to both the UI and the Query API. The audit log service is business group aware, meaning, you will see only logs that are relevant to your own business group. The audit log UI is embedded in Access Manager, if you are not an Organization Administrator, but you have the Audit Log Viewer role, then you can only see the audit log user interface under Access Manager.
+Users belonging to the *Organization Administration* role or the *Audit Log Viewer* role on the Anypoint Platform have access to both the UI and the Query API. The audit log service is business group aware, meaning, you will see only logs that are relevant to your own business group. The audit log UI is embedded in Access Manager. If you are not an *Organization Administrator*, but you have the *Audit Log Viewer* role, then you can see only the audit log user interface under Access Manager.
 
-To view the audit logs, log into Anypoint Platform and click *Access Management*. You can also press the Escape key on your keyboard to view the Anypoint Platform navigation menu.
+. Sign into Anypoint Platform and click *Access Management*. +
+You can also press the `Escape` key on your keyboard to view the Anypoint Platform navigation menu.
+. From the Access Management menu on the left, select *Audit Log*. +
+The Audit logs page displays the logs.
 
-From the Access Management menu, select *Audit Log*
-
-image::audit-logs.png[]
-
-image::audit-logs-screenshot.png[]
-
-== About Log Contents
+== Audit Log Contents
 
 Activities represented in the log are actions that occur at a particular time, involve one or more objects, have an action type (such as 'delete' or 'approve') associated with the objects, and optionally a payload which can store application-specific information such as changed fields, environment information, etc.
 
 Each log entry has a set of properties that provides information about the activity:
 
 * *Time*: The timestamp when the activity occurred.
-* *Product*: The product where the object resides. Example: "Access Management"
-* *Type*: The type of the object on which the action is performed. Example: "Organization"
-* *Action*: The Action associated with the object. Example: “Create”
-* *Object*: The name of the Object. Example: “foo”
-* *User*: The User who performed the action. Example: “johndoe”
+* *Product*: The product where the object resides, for example, `Access Management`
+* *Type*: The type of the object on which the action is performed, for example, `Organization`
+* *Action*: The action associated with the object, for example, `Create`
+* *Object*: The name of the Object, for example, `foo`
+* *User*: The User who performed the action, for example, `johndoe`
+* *Environment*: Environment names for events from API Manager, Runtime Manager, CloudHub, Partner Manager, and MQ.
 * *Parent*: (Optional) The parent of the object (if any) on which the action is performed. Mainly relevant to APIs.
-* *Payload*: (Optional) More information about the log properties. Example: If an Organization was created, then the payload would contain information about organization and the owner such as IDs.
+* *Payload*: (Optional) More information about the log properties. For example, if an Organization was created, then the payload would contain information about the organization and the owner, such as IDs.
 
-The following is a list of actions per Product and Object type that Anypoint Platform audits:
+The following is a list of actions per product and object type that Anypoint Platform audits:
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
