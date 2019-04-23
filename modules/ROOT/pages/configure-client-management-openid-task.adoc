@@ -47,7 +47,21 @@ The *External Identity* page appears.
  In *Advanced Settings* you can also select:
   *** *Disable server certificate validation*: Disables server certificate validation if your OpenID client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
   *** *Enable client deletion in Anypoint Platform*: Enables deletion of clients created with this integration.
-  *** *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`.
+  *** *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`, for example: `https://example.salesforce.com/services/oauth2/6779ef20e75817b79602`. 
+  +
+  This is an example of the payload for a `PUT` (update) request:
+  ----
+  {
+            client_id: 'client-id',
+            client_secret: 'some-secret',
+            redirect_uris: ['test-redirect-uri'],
+            grant_types: [ ],
+            token_endpoint_auth_method: 'client_secret_basic',
+            response_types: [ ],
+            client_name: 'test-client-name'
+         };
+  ----
+  +
 * *Token Inspection Client*
  ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
