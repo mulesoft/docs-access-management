@@ -49,11 +49,11 @@ The *External Identity* page appears.
   *** *Enable client deletion in Anypoint Platform*: Enables deletion of clients created with this integration.
   *** *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`. +
   
-   **** The defined `Client Registration URL` is the UI through which both `PUT` and `DELETE` requests are made.  
    **** The `Authorization:` header is included as part of the request only if the `Authorization Header` under *Advanced settings* is configured.
    **** The `client_id` request parameter that is passed is the same as the `client_id` passed in the `PUT` request payload.
    **** The `token_endpoint_auth_method` passed in the payload is always `client_secret_basic`.
-   **** Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client management*. +
+   **** Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client management*. 
+   +
 This is an example of the payload for a `PUT` (update) request: 
 +
 ----
@@ -87,7 +87,7 @@ Authorization: Bearer access-token
 ----
 +
 [IMPORTANT]
-The call is not expected to work if it used directly against an IDP. It's intended for interception by pointing to an application under the user's control, so they can implement the correct deletion and update APIs for their particular provider.
+Neither the `PUT` nor the `DELETE` are expected to work if the call is used directly against an IDP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
 * *Token Inspection Client*
  ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
