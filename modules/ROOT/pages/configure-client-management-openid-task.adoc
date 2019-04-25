@@ -68,7 +68,7 @@ Authorization: Bearer access-token
       ],
      "grant_types": [ "authorization_code" ],
      "token_endpoint_auth_method": "client_secret_basic",
-     "response_types": [ ],
+     "response_types": [ "code" ],
      "client_name": "test-client-name"
 }
 ----
