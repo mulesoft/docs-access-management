@@ -58,7 +58,7 @@ This is an example of the payload for a `PUT` (update) request:
 ----
 PUT /oauth2/connect/register/{{client_id}}
 Accept: application/json
-Host: https://identity.example.com
+Host: identity.example.com
 Authorization: Bearer access-token
  {
      "client_id": "client_id",
