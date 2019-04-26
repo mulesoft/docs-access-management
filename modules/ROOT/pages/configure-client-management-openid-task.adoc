@@ -47,7 +47,47 @@ The *External Identity* page appears.
  In *Advanced Settings* you can also select:
   *** *Disable server certificate validation*: Disables server certificate validation if your OpenID client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
   *** *Enable client deletion in Anypoint Platform*: Enables deletion of clients created with this integration.
-  *** *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform. 
+  *** *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`. +
+  
+   **** The `Authorization:` header is included as part of the request only if the `Authorization Header` under *Advanced settings* is configured.
+   **** The `client_id` request parameter that is passed is the same as the `client_id` passed in the `PUT` request payload.
+   **** The `token_endpoint_auth_method` passed in the payload is always `client_secret_basic`.
+   **** Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client management*. 
+   +
+This is an example of the payload for a `PUT` (update) request: 
++
+----
+PUT /oauth2/connect/register/{{client_id}}
+Accept: application/json
+Host: identity.example.com
+Authorization: Bearer access-token
+ {
+     "client_id": "client_id",
+     "client_secret": "some-secret",
+     "redirect_uris": [
+          "https://example.com/"
+      ],
+     "grant_types": [ "authorization_code" ],
+     "token_endpoint_auth_method": "client_secret_basic",
+     "response_types": [ "code" ],
+     "client_name": "test-client-name"
+}
+----
++
+[NOTE]
+`client_name` in the request maps to `name` on the inbound side. +
+The authorization method depends on the grant type. For example, if the grant type is `implicit`, the `id_token` and `token` are returned.
++
+This is an example of the `DELETE` request header: 
++
+----
+DELETE /oauth2/connect/register/{{client_id}}
+Host: identity.example.com
+Authorization: Bearer access-token
+----
++
+[IMPORTANT]
+Neither the `PUT` nor the `DELETE` are expected to work if the call is used directly against an IDP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
 * *Token Inspection Client*
  ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
