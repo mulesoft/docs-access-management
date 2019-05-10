@@ -36,7 +36,7 @@ Each log entry has a set of properties that provides information about the activ
 [NOTE]
 --
 You may occasionally see an *Anypoint Staff* log entry. This log entry is made when the audit action was performed by a user who does not belong to your master organization. +
-These actions include: 
+These actions include when: 
 
 * An internal or system processes is performed
 * The SalesOps staff changes entitlements for your organization 
