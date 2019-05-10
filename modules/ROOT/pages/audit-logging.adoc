@@ -11,7 +11,9 @@ Audit logs have a retention period of six years. Download your logs periodically
 
 == Access Audit Logging
 
-Users belonging to the *Organization Administration* role or the *Audit Log Viewer* role on the Anypoint Platform have access to both the UI and the Query API. The audit log service is business group aware, meaning, you will see only logs that are relevant to your own business group. The audit log UI is embedded in Access Manager. If you are not an *Organization Administrator*, but you have the *Audit Log Viewer* role, then you can see only the audit log user interface under Access Manager.
+Users belonging to the *Organization Administration* role or the *Audit Log Viewer* role on the Anypoint Platform have access to both the UI and the Query API. The audit log service is business group aware, which means you see only logs that are relevant to your own business group. 
+
+The audit log UI is embedded in Access Manager. If you are not an *Organization Administrator*, but you have the *Audit Log Viewer* role, you can see only the audit log user interface under Access Manager.
 
 . Sign into Anypoint Platform and click *Access Management*. +
 You can also press the `Escape` key on your keyboard to view the Anypoint Platform navigation menu.
@@ -29,7 +31,18 @@ Each log entry has a set of properties that provides information about the activ
 * *Type*: The type of the object on which the action is performed, for example, `Organization`
 * *Action*: The action associated with the object, for example, `Create`
 * *Object*: The name of the Object, for example, `foo`
-* *User*: The User who performed the action, for example, `johndoe`
+* *User*: The User who performed the action, for example, `johndoe` 
++
+[NOTE]
+--
+You may occasionally see an *Anypoint Staff* log entry. This log entry is made when the audit action was performed by a user who does not belong to your master organization. +
+These actions include: 
+
+* An internal or system processes is performed
+* The SalesOps staff changes entitlements for your organization 
+* An action is taken using a bearer token associated with a MuleSoft employee account (for example, during troubleshooting)
+--
+
 * *Environment*: Environment names for events from API Manager, Runtime Manager, CloudHub, Partner Manager, and MQ.
 * *Parent*: (Optional) The parent of the object (if any) on which the action is performed. Mainly relevant to APIs.
 * *Payload*: (Optional) More information about the log properties. For example, if an Organization was created, then the payload would contain information about the organization and the owner, such as IDs.
