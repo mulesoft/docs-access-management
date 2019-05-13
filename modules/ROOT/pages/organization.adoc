@@ -10,10 +10,10 @@ The organization name is the name you entered in the *Company* field in the init
 
 An organization is an account where multiple users can share resources, including applications and environments. The level of access users have to various resources depends on their assigned roles and permissions. For example, one user might have permission to manage API alerts, while another user has permission only to view API alerts.
 
-When you sign into Anypoint Platform, the organization icon and name are displayed on the top right of the page. The master organization can contain multiple business groups. You can think of business groups as sub organizations, or children of the master organization. Click the organization icon to navigate between business groups. 
+When you sign into Anypoint Platform, the organization icon and name are displayed on the top right of the page. The master organization can contain multiple business groups. You can think of business groups as sub-organizations, or children of the master organization. Click the organization icon to navigate between business groups. 
 
 [NOTE]
-When you sign into Anypoint Platform, you are signed back into the organization or business group you were in when you last signed out. When you are working, always verify you are in the correct organization or business group.
+When you sign into Anypoint Platform, you are signed back into the organization or business group you were in when you last signed out. Always verify you are in the correct organization or business group.
 
 == Organization Owner
 

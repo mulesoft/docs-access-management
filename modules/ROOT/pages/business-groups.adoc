@@ -3,47 +3,21 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Business groups are also referred to as organizations (or sub organizations). Business groups reside within the master organization and can contain their own business groups. The master organization and its business groups are organized in a hierarchical tree, where the master organization is the root. Each business group has one direct parent and can have multiple children.
+Business groups provide a way to separate and control access to Anypoint Platform resources such as APIs and applications. Users have access only to the business groups to which they are added.  
+
+Business groups reside within the master organization and can contain their own child business groups. The master organization and its business groups are organized in a hierarchical tree, where the master organization is the root. Each business group has one direct parent and can have multiple children.
 
 [NOTE]
 Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative. There is a limit of 100 business groups per organization.
 
-If you are an organization administrator and your organization is enabled for business group support, you can create business groups within your organization. The organization administrator is also the administrator of any business groups (sub organizations) within the parent organization.
-
-[NOTE]
-When you create a new business group, all the users with the *Organization Administrators* role in the parent business group are also added as organization administrators in the newly created business group (the child business group). However, when you create a new user as an *Organization Administrator* in the parent business group, the user is not added to all the sub business groups.
-
-=== Create a Business Group
-
-Create business groups within your organization. 
+If you are an organization administrator and your organization is enabled for business group support, you can create business groups within your organization. The organization administrator is also the administrator of any business groups (sub-organizations) within the parent organization.
 
 [NOTE]
 There is a limit of 100 business groups per organization. 
 
-. In the Anypoint Platform *Access Management* page, in the left menu, click *Organization*.
-. Click the blue plus sign next to the organization name or any of the business groups in the tree diagram.
-+
-image::organization-20885.png[]
-+
-. In the dialog box, enter:
-  * *Business Group name*: Name for the new business group.
-  * *Owner*: Assign an existing user in the organization to be the business group owner.
-  * Select *Owner can create Business Groups* to allow the owner to create business groups that branch under this business group.
-  * Select *Owner can create environments* to allow the owner to create environments within this business group.
-  * You can assign some or all of the vCores that your organization owns to an individual business group. This ensures that these are used by the CloudHub deployments within the business group. You can assign these when creating the business group or edit these settings later.
-  * *Static IPs*: Enable the use of static IPs.
-. Click *Add Business Group*.
-
-image::organization-9fa5f.png[]
-
-[NOTE]
---
-Allocating vCores to a business group makes those vCores available only to that business group, which makes them unavailable to the parent organization.
---
-
 ==== Child Business Groups
 
-You can create hierarchical levels of business groups to provide more control over access. To create a child business group click the blue *+* icon next to any business group.
+Child business groups provide more fine grained control over access. 
 
 image::organization-2b25c.png[]
 
@@ -54,9 +28,49 @@ Conversely, owners of child business groups cannot:
 * Access or modify the parent business group or master organization settings
 * View the parent business group's client ID and client secret
 
-When you create a child business group within a parent, only the vCores that were assigned to the parent business group can be allocated to the child.
+When you create a child business group within a parent, only the vCores that were assigned to the parent business group can be allocated to the child business group.
 
-=== Navigating Between Business Groups
+=== Create a Business Group
+
+Create business groups within your organization. When you create a new business group, all the users with the *Organization Administrators* role in the parent business group are also added as organization administrators in the newly created business group. However, when you create a new user as an *Organization Administrator* in the parent business group, the user is not added to child business groups.
+
+. In the Anypoint Platform *Access Management* page, in the left menu, click *Organization*.
+. Click the blue plus sign next to the organization name or any of the business groups in the tree diagram.
++
+image::organization-20885.png[]
++
+. In the dialog box, enter:
+  * *Business Group name*: Name for the new business group.
+  * *Owner*: Assign an existing user in the organization to be the business group owner.
+  * Select *Owner can create Business Groups* to allow the owner to create child business groups under this business group.
+  * Select *Owner can create environments* to allow the owner to create environments within this business group.
+  * You can assign some or all of the vCores that your organization owns to an individual business group. This ensures that the vCores are used by the CloudHub deployments that belong to the business group. You can assign vCores when you create the business group, or edit these settings later.
+  * *Enable CloudHub global deployment*: This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the default region you specified.  
+* *Static IPs*: This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses. 
+. Click *Add Business Group*. +
+The business group appears in the hierarchy, under the master organization.
+
+image::organization-9fa5f.png[]
+
+[NOTE]
+--
+Allocating vCores to a business group makes those vCores available only to that business group, which makes them unavailable to the parent organization.
+--
+
+=== Create a Child Business Group
+
+You can create hierarchical levels of business groups to provide more control over access. 
+
+. Click the blue *+* icon on the left of the business group in which to create the child. 
+. In the *Add Business Group* dialog, enter a *Business Group name* and *Owner*, then select from these options: +
+* *Owner can create Business Groups*: The owner you assign to the business group can create child business groups within the business group for which they are the owner. 
+* *Owner can create environments*: The owner you assign can create environments within the business group. 
+* *Enable CloudHub global deployment*: This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the default region you specified.  
+* *Static IPs*: This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses. 
+. Click *Add Business Group*. +
+The business group appears in the hierarchy under the parent business group. 
+
+=== Navigate Between Business Groups
 
 When your organization has multiple business groups, you can navigate between them using the menu at the top-right corner. Switching between business groups changes the list of available CloudHub deployments, APIs, users, and roles settings.
 
@@ -70,7 +84,7 @@ When you sign into Anypoint Platform, you are signed back into the organization 
 If you are not an organization administrator, you can view only the business groups that you have permissions to view. In the Organization tab, the tree of your organization displays only the business groups you are a member of.
 
 [[creatingroles]]
-=== Creating Roles and Handling Membership to Business Groups
+=== Roles and Membership in Business Groups
 
 Roles can be applied at the master organization level as well as at the business group level. However, each controls different resources. Roles and permissions assigned to a user in one particular business group (or the master org) are independent of the roles and permissions assigned to that same user in other business groups.
 
@@ -86,7 +100,7 @@ Resources that belong to the master organization require roles specified at the 
 
 Users who are assigned the *Organization Administrators* role in the master organization, or any business group, are automatically assigned that same role in any child business group created within that business group, so are automatically visible in the child business group. This does not apply to users who are assigned the *Organization Administrators* role after a child business group has been created.
 
-=== Deleting Business Groups
+=== Delete a Business Groups
 
 Only an organization administrator can delete business groups. The master (root) organization can't be deleted, even by an organization administrator.
 
