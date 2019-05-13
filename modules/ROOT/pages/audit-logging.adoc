@@ -13,7 +13,7 @@ Audit logs have a retention period of six years. Download your logs periodically
 
 Users belonging to the *Organization Administration* role or the *Audit Log Viewer* role on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group. 
 
-The audit log UI is embedded in Access Manager. If you are not an *Organization Administrator*, but you have the *Audit Log Viewer* role, you can see only the audit log UI under Access Manager.
+The audit log UI is embedded in Access Management. If you are not an *Organization Administrator*, but you have the *Audit Log Viewer* role, you can see only the audit log UI under Access Management.
 
 . Sign into Anypoint Platform and click *Access Management*. +
 You can also press the `Escape` key on your keyboard to view the Anypoint Platform navigation menu.
@@ -35,12 +35,12 @@ Each log entry has a set of properties that provides information about the activ
 +
 [NOTE]
 --
-Occasionally, there are `Anypoint Staff` log entries. This log entry is made when the audit action was performed by a user who does not belong to your master organization. +
+Occasionally, there are `Anypoint Staff` log entries. This log entry is made when the audit action was performed by a user who does not belong to your organization. +
 `Anypoint Staff` entries are created for when these events occur:
 
-* An internal or system processes is performed
-* The SalesOps staff changes entitlements for your organization 
-* An action is taken using a bearer token associated with a MuleSoft employee account (for example, during troubleshooting)
+* An internal or system process that is a routine part of Anypoint Platform operations is performed
+* The MuleSoft procurement staff changes entitlements for your organization as a result of license grants or something similar
+* An action is performed by a MuleSoft employee on your behalf for other purposes, such as troubleshooting
 --
 
 * *Environment*: Environment names for events from API Manager, Runtime Manager, CloudHub, Partner Manager, and MQ.

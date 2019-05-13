@@ -3,21 +3,16 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Business groups provide a way to separate and control access to Anypoint Platform resources such as APIs and applications. Users have access only to the business groups to which they are added.  
+Business groups are self-contained resource groups that contain Anypoint Platform resources such as APIs and applications. Business groups provide a way to separate and control access to Anypoint Platform resources, as users have access only to the business groups in which they have a role. 
 
-Business groups reside within the master organization and can contain their own child business groups. The master organization and its business groups are organized in a hierarchical tree, where the master organization is the root. Each business group has one direct parent and can have multiple children.
+Business groups reside within the master organization and are organized in a hierarchical tree where the top-level business group is the root. You can add up to 100 business groups per organization. Each business group you create has one direct parent and can have multiple children.
 
 [NOTE]
 Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative. There is a limit of 100 business groups per organization.
 
-If you are an organization administrator and your organization is enabled for business group support, you can create business groups within your organization. The organization administrator is also the administrator of any business groups (sub-organizations) within the parent organization.
+If you are an organization administrator and your organization is enabled for business group support, you can create business groups within your organization. The organization administrator is also the administrator of any business groups within the organization.
 
-[NOTE]
-There is a limit of 100 business groups per organization. 
-
-==== Child Business Groups
-
-Child business groups provide more fine grained control over access. 
+Business groups provide more fine grained control over access to resources. 
 
 image::organization-2b25c.png[]
 
@@ -28,11 +23,11 @@ Conversely, owners of child business groups cannot:
 * Access or modify the parent business group or master organization settings
 * View the parent business group's client ID and client secret
 
-When you create a child business group within a parent, only the vCores that were assigned to the parent business group can be allocated to the child business group.
+When you create a business group within a parent, only the redistributable entitlements, such as VPCs and load balancers, that were assigned to the parent business group can be allocated to the child business group.
 
 === Create a Business Group
 
-Create business groups within your organization. When you create a new business group, all the users with the *Organization Administrators* role in the parent business group are also added as organization administrators in the newly created business group. However, when you create a new user as an *Organization Administrator* in the parent business group, the user is not added to child business groups.
+When you create a new business group under the top-level business group, all the current users with the *Organization Administrators* role in the top-level business group appear in the list of users as *Organization Administrators* in the newly created business group. 
 
 . In the Anypoint Platform *Access Management* page, in the left menu, click *Organization*.
 . Click the blue plus sign next to the organization name or any of the business groups in the tree diagram.
@@ -78,10 +73,10 @@ image::switch-suborg.png[switch+suborg]
 
 [NOTE]
 --
-When you sign into Anypoint Platform, you are signed back into the organization or business group you were in when you last signed out.
+When you sign into Anypoint Platform, you are returned to the business group you were active in when you last signed out of Anypoint Platform.
 --
 
-If you are not an organization administrator, you can view only the business groups that you have permissions to view. In the Organization tab, the tree of your organization displays only the business groups you are a member of.
+If you are not an organization administrator, you can view only the business groups that you have permissions to view. In the *Organization* tab, the tree of your organization displays only the business groups you are a member of.
 
 [[creatingroles]]
 === Roles and Membership in Business Groups

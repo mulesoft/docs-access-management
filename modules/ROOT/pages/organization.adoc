@@ -12,28 +12,23 @@ An organization is an account where multiple users can share resources, includin
 
 When you sign into Anypoint Platform, the organization icon and name are displayed on the top right of the page. The master organization can contain multiple business groups. You can think of business groups as sub-organizations, or children of the master organization. Click the organization icon to navigate between business groups. 
 
-[NOTE]
-When you sign into Anypoint Platform, you are signed back into the organization or business group you were in when you last signed out. Always verify you are in the correct organization or business group.
-
 == Organization Owner
 
-The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a role that can be assigned, rather it is an identifier for this single user, who is assigned the *Organization Administrators* role by default. 
+The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a role that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The owner is assigned the *Organization Administrators* role by default. 
 
-Other users can be assigned the *Organization Administrators* role, but there is only one organization owner per Anypoint Platform account (master organization). The owner can transfer ownership of the account to another user, but there cannot be more than one owner at once. The *Organization Administrators* role cannot be removed from the organization owner in the master organization or any business group that belongs to the master organization.
+Every business group created within the organization hierarchy thereafter must have an owner assigned. Only users with the *Organization Administrators* role can be assigned as owners of business groups. Any organization administrator can assign and change owners of business groups. There cannot be more than one owner at once for a business group. The *Organization Administrators* role cannot be removed from organization owners. 
 
 An Anypoint Platform user who has *Organization Administrator* privileges can perform the following types of tasks:
 
 * Invite users to an organization
 * Assign users to roles that define their permissions in the platform
 * Edit and remove users from an organization
+* Assign or change owners of business groups
 * Configure organization settings
 * View a client ID and client secret
 * Access analytics for the APIs in your organization
-* Create business groups to delegate management of the resources and define the scopes of roles and permissions. A business group owner can configure additional properties at the business group level.
-
-When the organization owner creates a business group, an owner must be assigned to it. This assigned user holds an *Organization Administrators* role within that business group by default.
-
-Because the organization owner always has the *Organization Administrators* role in the master organization, they also have the same role in all business groups within the organization, which means the organization owner user is visible in all business groups. 
+* Create business groups to delegate management of the resources and define the scopes of roles and permissions
+* Configure additional properties at the business group level.
 
 == Organization Page
 
@@ -64,7 +59,7 @@ Each master organization, environment, and business group within the master orga
 To deploy proxies or APIs to CloudHub, you must use these values to configure a customer-hosted Mule Runtime or legacy API Gateway.
 
 [NOTE]
-Organization-level client IDs and client secrets are supported only for backward compatibility. In newer Anypoint Platform accounts, you must instead use the client ID and client secret for an environment. See xref:environments.adoc[Environments].
+Organization-level client IDs and client secrets are supported only for backward compatibility. In newer Anypoint Platform accounts, use the client ID and client secret for an environment instead. See xref:environments.adoc[Environments].
 
 === View the Client ID and Secret for Organizations and Environments
 
@@ -75,8 +70,8 @@ Organization-level client IDs and client secrets are supported only for backward
 
 [NOTE]
 --
-* Remember that for newer Anypoint Platform accounts, the client ID and secret apply to environments rather than organizations. See xref:environments.adoc[Environments].
-* To change the client ID or client secret of an organization, you must contact your customer support representative.
+* For newer Anypoint Platform accounts, the client ID and secret apply to environments rather than organizations. See xref:environments.adoc[Environments].
+* To change the client ID or client secret of an organization, please contact your MuleSoft customer support representative.
 --
 
 === Manage Master Organization Settings
