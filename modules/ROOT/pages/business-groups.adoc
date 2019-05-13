@@ -16,18 +16,18 @@ Business groups provide more fine grained control over access to resources.
 
 image::organization-2b25c.png[]
 
-Since business groups are hierarchical, the owner of a parent business group always retains administrator permissions for any child business group within that parent. This means that the owner of a business group can create child business groups and assign another user as the owner (owners automatically have the *Organization Administrators* role) of those child business groups. The owner of the parent group remains an *Organization Administrator* within the child business group. 
+Since business groups are hierarchical, the owner of a parent business group always retains administrator permissions for any child business group within that parent. The owner of a business group can create child business groups and assign another user (who has the *Organization Administrators* role) as an owner of those child business groups. The owner of the parent group remains an *Organization Administrator* within the child business group. 
 
 Conversely, owners of child business groups cannot:
 
 * Access or modify the parent business group or master organization settings
 * View the parent business group's client ID and client secret
 
-When you create a business group within a parent, only the redistributable entitlements, such as VPCs and load balancers, that were assigned to the parent business group can be allocated to the child business group.
+When you create a business group under another business group, only the redistributable entitlements, such as VPCs and load balancers, that were assigned to the parent business group can be allocated to the child business group.
 
 === Create a Business Group
 
-When you create a new business group under the top-level business group, all the current users with the *Organization Administrators* role in the top-level business group appear in the list of users as *Organization Administrators* in the newly created business group. 
+When you create a new business group under the top-level business group, all the current users with the *Organization Administrators* role in the top-level business group appear in the list of users in the newly created business group. 
 
 . In the Anypoint Platform *Access Management* page, in the left menu, click *Organization*.
 . Click the blue plus sign next to the organization name or any of the business groups in the tree diagram.
@@ -36,10 +36,10 @@ image::organization-20885.png[]
 +
 . In the dialog box, enter:
   * *Business Group name*: Name for the new business group.
-  * *Owner*: Assign an existing user in the organization to be the business group owner.
+  * *Owner*: Assign an existing user, with the *Organization Administrators* role, as the business group owner.
   * Select *Owner can create Business Groups* to allow the owner to create child business groups under this business group.
   * Select *Owner can create environments* to allow the owner to create environments within this business group.
-  * You can assign some or all of the vCores that your organization owns to an individual business group. This ensures that the vCores are used by the CloudHub deployments that belong to the business group. You can assign vCores when you create the business group, or edit these settings later.
+  * You can assign some or all of the redistributable resources (vCores, VPCs, and so on) that your organization owns to an individual business group. This ensures that the resources are used by the CloudHub deployments that belong to the business group. You can assign the resources when you create the business group, or edit these settings later.
   * *Enable CloudHub global deployment*: This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the default region you specified.  
 * *Static IPs*: This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses. 
 . Click *Add Business Group*. +
@@ -49,7 +49,7 @@ image::organization-9fa5f.png[]
 
 [NOTE]
 --
-Allocating vCores to a business group makes those vCores available only to that business group, which makes them unavailable to the parent organization.
+Allocating redistributable resources to a business group makes those resources available only to that business group, which makes them unavailable to the parent organization.
 --
 
 === Create a Child Business Group
@@ -73,7 +73,7 @@ image::switch-suborg.png[switch+suborg]
 
 [NOTE]
 --
-When you sign into Anypoint Platform, you are returned to the business group you were active in when you last signed out of Anypoint Platform.
+When you sign into Anypoint Platform, you are returned to the business group where you were last active when you signed out of Anypoint Platform.
 --
 
 If you are not an organization administrator, you can view only the business groups that you have permissions to view. In the *Organization* tab, the tree of your organization displays only the business groups you are a member of.
@@ -81,11 +81,11 @@ If you are not an organization administrator, you can view only the business gro
 [[creatingroles]]
 === Roles and Membership in Business Groups
 
-Roles can be applied at the master organization level as well as at the business group level. However, each controls different resources. Roles and permissions assigned to a user in one particular business group (or the master org) are independent of the roles and permissions assigned to that same user in other business groups.
+Roles can be applied at the master organization level as well as at the business group level. However, each controls different resources. Roles and permissions assigned to a user in one particular business group are independent of the roles and permissions assigned to that same user in other business groups.
 
-To obtain the membership for a business group, you must be granted a role within that business group. Once you are visible in a business group, you can be granted individual permissions in that business group. All users, regardless of which business groups they are in, belong to the master organization and can be assigned individual permissions in the master organization.
+To belong to a business group, you must be granted a role within that business group. Once you are visible in a business group, you can be granted individual permissions in that business group. All users, regardless of which business groups they are in, belong to the master organization and can be assigned individual permissions in the master organization.
 
-Members that are added to a business group can view and access the business group, but to access certain resources, you must have the appropriate roles assigned to you. For example, to access APIs and CloudHub deployments in the business group, you must be assigned roles that belong to that business group. Additionally, roles that belong to a business group can only grant access to APIs and CloudHub deployments within that same business group.
+Members that are added to a business group can view and access the business group, but to access certain resources, you must have the appropriate roles assigned to you. For example, to access APIs and CloudHub deployments in the business group, you must be assigned roles that belong to that business group. 
 
 For example, if you have the *Organization Administrators* role in BusinessGroupA, you can grant users access to APIs and CloudHub deployments in BusinessGroupA. 
 
@@ -97,7 +97,7 @@ Users who are assigned the *Organization Administrators* role in the master orga
 
 === Delete a Business Groups
 
-Only an organization administrator can delete business groups. The master (root) organization can't be deleted, even by an organization administrator.
+Only an organization administrator can delete business groups. The top-level (root) business group can't be deleted, even by an organization administrator.
 
 . In Anypoint Platform Access Management, in the left menu, click *Organization*.
 . Click the name of the group to delete.
