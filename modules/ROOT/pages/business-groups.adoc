@@ -5,7 +5,7 @@ endif::[]
 
 Business groups are self-contained resource groups that contain Anypoint Platform resources such as APIs and applications. Business groups provide a way to separate and control access to Anypoint Platform resources, as users have access only to the business groups in which they have a role. 
 
-Business groups reside within the master organization and are organized in a hierarchical tree where the top-level business group is the root. You can add up to 100 business groups per organization. Each business group you create has one direct parent and can have multiple children.
+Business groups reside within the master organization and are organized in a hierarchical tree where the top-level business group is the root. Each business group you create has one direct parent and can have multiple children.
 
 [NOTE]
 Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative. There is a limit of 100 business groups per organization.
@@ -58,8 +58,8 @@ You can create hierarchical levels of business groups to provide more control ov
 
 . Click the blue *+* icon on the left of the business group in which to create the child. 
 . In the *Add Business Group* dialog, enter a *Business Group name* and *Owner*, then select from these options: +
-* *Owner can create Business Groups*: The owner you assign to the business group can create child business groups within the business group for which they are the owner. 
-* *Owner can create environments*: The owner you assign can create environments within the business group. 
+* *Owner can create Business Groups*: Organization administrators can create child business groups within the business group for which they are the owner. 
+* *Owner can create environments*: Organization administrators can create environments within the business group. 
 * *Enable CloudHub global deployment*: This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the default region you specified.  
 * *Static IPs*: This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses. 
 . Click *Add Business Group*. +
