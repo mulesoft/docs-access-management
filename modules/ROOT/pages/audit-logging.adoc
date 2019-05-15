@@ -333,7 +333,7 @@ properties : policy settings
 === Application
 
 
-[%header,cols="25a,15a,15a,15a,15a,30a"]
+[%header,cols="25a,15a,20a,15a,15a,30a"]
 |===
 |User action
 |Obj Type
@@ -365,7 +365,7 @@ properties : none
 |Request tier change
 |Application
 |Obj 1: app ID
-|Obj 2: API version ID
+Obj 2: API version ID
 |n/a
 |Edit
 |subaction : Request tier change
@@ -373,7 +373,7 @@ properties : New tier
 |Approve application
 |Application
 |Obj 1: app ID
-|Obj 2: API version ID
+Obj 2: API version ID
 |n/a
 |Contract change
 |subaction : Contract approval
@@ -381,7 +381,7 @@ properties : SLA tier
 |Revoke application
 |Application
 |Obj 1: app ID
-|Obj 2: API version ID
+Obj 2: API version ID
 |n/a
 |Contract change
 |subaction : Contract revoked
@@ -389,7 +389,7 @@ properties : SLA tier
 |Restore application
 |Application
 |Obj 1: app ID
-|Obj 2: API version ID
+Obj 2: API version ID
 |n/a
 |Contract change
 |subaction : Contract restored
@@ -397,7 +397,7 @@ properties : SLA tier
 |Modify application tier
 |Application
 |Obj 1: app ID
-|Obj 2: API version ID
+Obj 2: API version ID
 |n/a
 |Contract change
 |subaction : Contract changed
@@ -405,7 +405,7 @@ properties : new SLA tier
 
 |===
 
-==== Portals
+=== Portals
 
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
