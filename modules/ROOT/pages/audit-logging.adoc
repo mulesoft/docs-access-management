@@ -405,7 +405,7 @@ properties : new SLA tier
 
 |===
 
-==== API Designer APIs
+=== API Designer APIs
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -656,7 +656,7 @@ Properties:
 * branchName
 |===
 
-==== Mocking Service
+=== Mocking Service
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -694,7 +694,7 @@ Properties:
 Link metadata
 |===
 
-==== Portals
+=== Portals
 
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
