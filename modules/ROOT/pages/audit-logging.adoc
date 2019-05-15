@@ -421,7 +421,9 @@ properties : new SLA tier
 |Project ID
 |N/A
 |Create Project
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -433,7 +435,9 @@ Properties:
 |Project ID
 |N/A
 |Delete Project
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -445,7 +449,9 @@ Properties:
 |Project ID
 |N/A
 |Delete Files
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -457,7 +463,9 @@ Properties:
 |Project ID
 |N/A
 |Rename Project
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -469,7 +477,9 @@ Properties:
 |Project ID
 |N/A
 |Clean Branch
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -481,7 +491,9 @@ Properties:
 |Project ID
 |N/A
 |Create Branch
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -493,7 +505,9 @@ Properties:
 |Project ID
 |N/A
 |Delete Branch
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -505,7 +519,9 @@ Properties:
 |Project ID
 |N/A
 |Save Branch
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -517,7 +533,9 @@ Properties:
 |Project ID
 |N/A
 |Delete file
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -529,7 +547,9 @@ Properties:
 |Project ID
 |N/A
 |Move file
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -541,7 +561,9 @@ Properties:
 |Project ID
 |N/A
 |Import Project
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -553,29 +575,37 @@ Properties:
 |Project ID
 |N/A
 |Publish to Exchange
-|Subaction: none
+|Subaction:
+
+None
 Properties:
-orgID
-userID
-projectName
+
+* orgID
+* userID
+* projectName
 
 |Publish to API Platform
 |Project
 |Project ID
 |N/A
 |Publish to API Platform
-|Subaction: none
+|Subaction:
+
+None
 Properties:
-orgID
-userID
-projectName
+
+* orgID
+* userID
+* projectName
 
 |Add Dependencies
 |Project
 |Project ID
 |N/A
 |Add dependencies
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -587,7 +617,9 @@ Properties:
 |Project ID
 |N/A
 |Remove Dependencies
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -599,7 +631,9 @@ Properties:
 |Project ID
 |N/A
 |Change Dependencies
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -612,7 +646,9 @@ Properties:
 |Project ID
 |N/A
 |Reload Dependencies
-|Subaction: none
+|Subaction:
+
+None
 Properties:
 
 * orgID
@@ -620,6 +656,43 @@ Properties:
 * branchName
 |===
 
+==== Mocking Service
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create Link
+|Link
+|Link ID
+|N/A
+|Create
+|Subaction:
+
+Create Link
+
+Properties:
+
+Link metadata
+
+|Delete Link
+|Link
+|Link ID
+|N/A
+|Delete
+|Subaction:
+
+Delete Link
+
+Properties:
+
+Link metadata
+|===
 
 ==== Portals
 
