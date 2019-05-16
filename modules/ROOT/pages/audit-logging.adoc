@@ -11,7 +11,7 @@ Audit logs have a retention period of six years. Download your logs periodically
 
 == Access Audit Logging
 
-Users belonging to the *Organization Administration* role or the *Audit Log Viewer* role on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group. 
+Users belonging to the *Organization Administration* role or the *Audit Log Viewer* role on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
 
 The audit log UI is embedded in Access Management. If you are not an *Organization Administrator*, but you have the *Audit Log Viewer* role, you can only see the audit log UI under Access Management.
 
@@ -31,7 +31,7 @@ Each log entry has a set of properties that provides information about the activ
 * *Type*: The type of the object on which the action is performed, for example, `Organization`
 * *Action*: The action associated with the object, for example, `Create`
 * *Object*: The name of the Object, for example, `foo`
-* *User*: The User who performed the action, for example, `johndoe` 
+* *User*: The User who performed the action, for example, `johndoe`
 +
 [NOTE]
 --
@@ -403,6 +403,295 @@ Obj 2: API version ID
 |subaction : Contract changed
 properties : new SLA tier
 
+|===
+
+=== API Designer APIs
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create Project
+|Project
+|Project ID
+|N/A
+|Create Project
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Delete Project
+|Project
+|Project ID
+|N/A
+|Delete Project
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Delete Files
+|Files
+|Project ID
+|N/A
+|Delete Files
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Rename Project
+|Project
+|Project ID
+|N/A
+|Rename Project
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* newProjectName
+
+|Clean Branch
+|Project
+|Project ID
+|N/A
+|Clean Branch
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Create Branch
+|Project
+|Project ID
+|N/A
+|Create Branch
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Delete Branch
+|Project
+|Project ID
+|N/A
+|Delete Branch
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Save Branch
+|Project
+|Project ID
+|N/A
+|Save Branch
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Delete File
+|Project
+|Project ID
+|N/A
+|Delete file
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* File Path
+
+|Move File
+|Project
+|Project ID
+|N/A
+|Move file
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* targetFile
+
+|Import Project
+|Project
+|Project ID
+|N/A
+|Import Project
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Publish to Exchange
+|Project
+|Project ID
+|N/A
+|Publish to Exchange
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Publish to API Platform
+|Project
+|Project ID
+|N/A
+|Publish to API Platform
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Add Dependencies
+|Project
+|Project ID
+|N/A
+|Add dependencies
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* dependencies
+
+|Remove Dependencies
+|Project
+|Project ID
+|N/A
+|Remove Dependencies
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* dependencies
+
+|Change Dependencies
+|Project
+|Project ID
+|N/A
+|Change Dependencies
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* addDependencies
+* removeDependencies
+
+|Reload Dependencies
+|Project
+|Project ID
+|N/A
+|Reload Dependencies
+|Subaction:
+
+None
+Properties:
+
+* orgID
+* userID
+* branchName
+|===
+
+=== Mocking Service
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create Link
+|Link
+|Link ID
+|N/A
+|Create
+|Subaction:
+
+Create Link
+
+Properties:
+
+Link metadata
+
+|Delete Link
+|Link
+|Link ID
+|N/A
+|Delete
+|Subaction:
+
+Delete Link
+
+Properties:
+
+Link metadata
 |===
 
 === Portals
