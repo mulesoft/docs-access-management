@@ -1,4 +1,4 @@
-= Configure SAML for Single Sign-on
+= Configure SAML for SSO
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
