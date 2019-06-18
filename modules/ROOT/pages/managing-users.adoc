@@ -8,6 +8,7 @@ Configure SAML to provide external authentication of users and Single Sign-on (S
 == Prerequisites
 
 Configure your SAML provider:
+
 * Set up your Anypoint Platform organization as your audience.
 * Set the assertion consumer service to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/receive-id+`.
 
