@@ -41,3 +41,7 @@ https://anypoint.mulesoft.com/accounts/logout/receive-id?redirect_uri=https%3A%2
 `+http://docs.mulesoft.com/downloads/access-management/anypoint-platform-slo.pem+`
 +
 . Make this certificate the active certificate.
+
+== See Also
+
+* xref:managing-users.adoc[Configure SAML for SSO]

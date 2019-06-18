@@ -1,60 +1,73 @@
-= To Configure SAML
+= Configure SAML for Single Sign-on
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-. Make sure to configure your SAML provider setting up your Anypoint Platform organization as your audience.
-. Set the assertion consumer service to send a POST request to +https://anypoint.mulesoft.com/accounts/login/receive-id+.
-. Log into the master Organization in Anypoint Platform as Administrator.
-. In Anypoint Platform, click Access Management > External Identity.
-. From Identity Management, select SAML 2.0.
+Configure SAML to provide external authentication of users and Single Sign-on (SSO) capability.
+
+== Prerequisites
+
+Configure your SAML provider:
+* Set up your Anypoint Platform organization as your audience.
+* Set the assertion consumer service to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/receive-id+`.
+
+== Configure SAML
+
+. In Anypoint Platform, sign into the master organization as an organization administrator.
+. In *Management Center*, click *Access Management*.
+. In the menu on the left, click *External Identity*.
+. Select *Identity Management > SAML 2.0*.
 +
 The External Identity - Identity Management SAML 2.0 form appears.
 +
-. Fill in the following required fields:
+. Fill in the required fields:
 +
-* Sign On URL
+* *Sign On URL* 
 +
 This redirect URL provided by the IdP for sign in. For example, `+https://example.com/sso/saml+`.
 +
-* Sign Off URL
+* *Sign Off URL*
 +
 URL to redirect sign out requests, so users both sign out of the Anypoint Platform and have their SAML user's status set to signed out.
 +
-* Issuer
+* *Issuer*
 +
 ID of the identity provider instance that sends SAML assertions.
 +
-* Public Key
+* *Public Key*
 +
 Public key provided by the identity provider, used to sign the SAML assertion.
 +
-* Audience
+* *Audience*
 +
 An arbitrary string value that identifies your Anypoint Platform organization. The typical value for this string is `<organizationDomain>.anypoint.mulesoft.com`.
 +
-. Expand Advanced Settings, and optionally fill in the following fields.
+. Optionally, expand *Advanced settings*, and provide the following values: 
 +
-* Username Attribute
+* *Username Attribute*
 +
-Field name in the SAML AttributeStatements that maps to username. By default, the 'NameID' attribute of the SAML 'Subject' in the SAML assertion is used.
+Field name in the SAML `AttributeStatements` that maps to username. By default, the `NameID` attribute of the SAML `Subject` in the SAML assertion is used.
 +
-* First Name Attribute
+* *First Name Attribute*
 +
-Field name in the SAML AttributeStatements that maps to First Name.
+Field name in the SAML `AttributeStatements` that maps to `First Name`.
 +
-* Last Name Attribute
+* *Last Name Attribute*
 +
-Field name in the SAML AttributeStatements that maps to Last Name.
+Field name in the SAML `AttributeStatements` that maps to `Last Name`.
 +
-* Email Attribute
+* *Email Attribute*
 +
-Field name in the SAML AttributeStatements that maps to Email.
+Field name in the SAML `AttributeStatements` that maps to `Email`.
 +
-* Group Attribute
+* *Group Attribute*
 +
-Field name in the SAML AttributeStatements that maps to Group.
+Field name in the SAML `AttributeStatements` that maps to `Group`.
 +
-. Save your configuration.
+. Click *Save*.
 +
-. Sign out and then navigate to the Sign On Url entered above and sign in via your identity provider to test the configuration.
+. Sign out of Anypoint Platform, navigate to the Sign On Url you entered in the *Identity Management SAML 2.0* form, then sign in via your identity provider to test the configuration.
+
+== See Also
+
+* xref:single-log-out-task.adoc[Configure Single Logout]
