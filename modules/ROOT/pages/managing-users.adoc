@@ -67,7 +67,7 @@ Field name in the SAML `AttributeStatements` that maps to `Group`.
 +
 . Click *Save*.
 +
-. Sign out of Anypoint Platform, navigate to the Sign On Url you entered in the *Identity Management SAML 2.0* form, then sign in via your identity provider to test the configuration.
+. Sign out of Anypoint Platform, navigate to the sign-on URL you entered in the *Identity Management SAML 2.0* form, then sign in through your identity provider to test the configuration.
 
 == See Also
 
