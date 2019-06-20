@@ -1,4 +1,4 @@
-= To Update Your User Profile
+= Update Your User Profile
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
