@@ -3,33 +3,34 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Configure SAML to provide external authentication of users and Single Sign-on (SSO) capability.
+Configure SAML to provide external authentication of users and Single Sign-on (SSO) capability so users don't need to provide additional credentials when they access Anypoint Platform.
+
+Configuring SAML for SSO involves:
+
+* Beginning with a configured SAML identity provider (IdP)
+* Navigating to and completing the *External Identity - Identity Management SAML 2.0* form in Anypoint Platform, and optionally configuring some advanced settings
+* Saving and testing your new configuration
 
 == Prerequisites
 
-Configure your SAML provider:
+* Your Anypoint Platform organization must be set up as your audience.
+* The assertion consumer service must be set to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/receive-id+`.
 
-* Set up your Anypoint Platform organization as your audience.
-* Set the assertion consumer service to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/receive-id+`.
+== Configure SAML in Identity Management
 
-== Configure SAML
-
-. In Anypoint Platform, sign into the master organization as an organization administrator.
+. In Anypoint Platform, sign into the master organization as a user with the *Organization Administrators*.
 . In *Management Center*, click *Access Management*.
-. In the menu on the left, click *External Identity*.
+. In the navigation menu on the left, click *External Identity*.
 . Select *Identity Management > SAML 2.0*.
-+
-The External Identity - Identity Management SAML 2.0 form appears.
-+
-. Fill in the required fields:
+. Complete the required fields of the *External Identity - Identity Management SAML 2.0* form:
 +
 * *Sign On URL* 
 +
-This redirect URL provided by the IdP for sign in. For example, `+https://example.com/sso/saml+`.
+Redirect URL provided by the IdP for signin, for example: `+https://example.com/sso/saml+`.
 +
 * *Sign Off URL*
 +
-URL to redirect sign out requests, so users both sign out of the Anypoint Platform and have their SAML user's status set to signed out.
+URL to redirect signout requests, so users both sign out of the Anypoint Platform and have their SAML user's status set to signed out.
 +
 * *Issuer*
 +
@@ -37,7 +38,7 @@ ID of the identity provider instance that sends SAML assertions.
 +
 * *Public Key*
 +
-Public key provided by the identity provider, used to sign the SAML assertion.
+Public key provided by the identity provider, which is used to sign the SAML assertion.
 +
 * *Audience*
 +
