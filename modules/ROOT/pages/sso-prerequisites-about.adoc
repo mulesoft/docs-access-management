@@ -36,4 +36,4 @@ https://anypoint.mulesoft.com/accounts/login/{your_org_domain}
 * If a SAML user belongs to certain groups, Anypoint Platform does not automatically grant equivalent roles in the organization.
 * Anypoint Platform does not generate the SAML assertion for single sign on. Your IdP generates the Sign On URL that you configure.
 * Only the SHA-1 algorithm is supported for SAML digital signatures. SHA-256 is not supported.
-* External Identity configuration is only available at the Organization level. You cannot configure an external identity provider for a Business Unit.
+* External Identity configuration is available only at the organization level. You cannot configure an external identity provider for a business group.
