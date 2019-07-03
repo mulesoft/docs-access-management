@@ -9,8 +9,8 @@ This topic describes the prerequisites and limitations for using SSO within Anyp
 
 Before using SSO, ensure that you have performed the following:
 
-* Configure your identity provide to send the user name and email in your assertion.
-* Configure Anypoint Platform to map the user name and email to the expected attribute name. If you do not configure this setting, login fails with a 403 unauthorized error message.
+* Configure your identity provide to send the username and email in your assertion.
+* Configure Anypoint Platform to map the username and email to the expected attribute name. If you do not configure this setting, login fails with a 403 unauthorized error message.
 * Configure the SAML assertion of the identity provider as signed, but unencrypted. The identity provider issues the SAML assertion as an XML file which is sent through HTTP as a POST request.
 
 == Client Considerations
@@ -19,7 +19,7 @@ Be aware of the following considerations related to client behavior:
 
 * User accounts created before configuring your federated organization remain within the organization. However, users can only login through the Anypoint Platform sign in page. They cannot login from the redirected login page of the identity provider.
 
-* When external identity is enabled, the invite button is disabled within Access Management. You cannot add new non-federated users. Existing non-federated users can continue to work as normally, but with the following exceptions:
+* Existing non-federated users can continue to work as normally with the following exceptions:
 +
 ** If a user session times out, the user is redirected to the federated identity login page instead of the generic one. Links and bookmarks that identify the organization redirect the user to the federated login page, which fails for non-federated users.
 +
