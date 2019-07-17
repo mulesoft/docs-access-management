@@ -1236,9 +1236,9 @@ properties : application metadata
 |Modify
 |subaction : none
 properties : application metadata
-|Lodbalancer Create/modify/delete
+|Loadbalancer Create/modify/delete
 |LoadBalancer
-|LoadBalancecerID
+|LoadBalancerID
 |n/a
 |Create/modify/delete
 |subaction : none
