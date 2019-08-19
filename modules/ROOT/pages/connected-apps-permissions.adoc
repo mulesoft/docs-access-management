@@ -1,0 +1,69 @@
+= Connected Apps Permissions by User
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Connected Apps can be used by Organization Administrators, developers, and end-users; each of these roles has different privileges when connecting applications,
+and there are some restrictions to ensure sensitive data remains secure.
+
+== Organization Administrator
+
+An Organization Administrator is the only role that can view and manage Connected Apps in Access Management.
+
+To manage your connected apps, navigate to Access Management and select the *Applications* tab.
+
+// screenshot of Connected Apps page
+
+The *Connected Apps* page shows a list of applications that you have connected to Anypoint Platform.
+To add an application, select *Add Application*.
+
+=== Create Application
+
+When you create an application as an Organization Administrator, consider the following:
+
+* An organization can own up to 200 connected apps.
+* You can disable or whitelist connected apps.
+* An application is assigned a clientID upon creation; the clientID cannot be modified. However, client secrets can be modified in the *Application Settings* page.
+* When you create an application with the client grant type, the application will continue to work if the application owner's credentials are disabled for any reason. A team or company can assume control of the application's access.
+* An application's actions are logged with an application ID and user ID (for user grant type applications only) in the Audit Log. This empowers administrators to monitor and audit data use.
+
+// screenshot of Create Application interface
+
+When creating an application, you must enter the following information:
+
+* *Application Name*: A descriptive name for your application.
+* *Redirect URIs*: Uniform Resource Identifier that specifies the location of the application. You can specify one per line.
+* *User Grant Types* or *Client Grant Types*: A grant type that aligns with OAuth 2.0 specifications.
+It is important to specify the correct grant type when connecting an application since it will dictate who can access the application. Note that client grant types are only available for first-party applications.
+
+==== User Grants
+
+User grants require authentication from a user, and they are primarily useful for third-party applications. Connected Apps currently supports two types of user grant authentication:
+
+* Authorization: requires the application to produce an authorization code that is accepted by OAuth 2.0.
+If the code should not work indefinitely, you can select the *Refresh Tokens* option, requiring new codes as often as specified in the application.
+* JTW Bearer: grants access using an Application Public Key in a Privacy Enhanced Mail (PEM) that validates the JWT Authorization.
+
+After you select one or more user grant types, you can specify the scope of permissions.
+
+==== Client Grants
+
+Client grants are only permitted for first-party applications; they give users access based on their organizational affiliations.
+You can also create more granular access restrictions by specifying which environments have access.
+
+After you select an organization or organization and environment, you can specify the scope of permissions.
+
+== Developer
+
+Developers who have websites or web apps can allow users to log in using the *Log in with Anypoint Platform* option.
+For this feature to work, the connected application must be configured with user grant authentication.
+
+// code/chunk of steps for websites/web apps
+
+== End-user
+
+An end-user can log into a connected application using their Single Sign-On credentials. End-users can authorize access when the following message appears:
+
+// screenshot of authorize user page https://qax.anypoint.mulesoft.com/login/authorize?state=eyJjbGllbnQiOnsiY2xpZW50X2lkIjoiZWEzYzJiODFkMDEyNGI0Mjk1NDYyM2RhMWM0MzQ5ZWIifSwidXNlciI6eyJ1c2VybmFtZSI6Im9yZ2FuaXphdGlvbl9vd25lciJ9LCJvcmlnaW4iOiIvYXBpL3YyL29hdXRoMi9hdXRob3JpemU%2FY2xpZW50X2lkPWVhM2MyYjgxZDAxMjRiNDI5NTQ2MjNkYTFjNDM0OWViJnJlZGlyZWN0X3VyaT1odHRwczovL2V4YW1wbGUuY29tJnJlc3BvbnNlX3R5cGU9dG9rZW4mc2NvcGU9ZnVsbCIsInRyYW5zYWN0aW9uX2lkIjoiSXlNVGVJSHciLCJzY29wZSI6WyJmdWxsIl19
+
+End-users can manage third-party applications to which they have granted access in their profile settings.
