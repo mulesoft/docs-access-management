@@ -13,7 +13,7 @@ Using OAuth 2.0 and OpenID, you can authorize applications to access resources u
 Additionally, you can share account data with third-party applications.
 For more information on which users can grant access to applications using Anypoint Platform, see Connected Apps Permissions by User.
 
-== First-party and Third-party applications
+== First-party and Third-party Applications
 
 Depending on the ownership of the application you want to connect, applications may have different authentication requirements and procedures.
 To determine whether the application you want to connect is a first-party or third party application, consider the following:
