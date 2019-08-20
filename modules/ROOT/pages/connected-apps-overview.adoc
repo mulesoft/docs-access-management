@@ -17,12 +17,20 @@ For more information on which users can grant access to applications using Anypo
 
 To determine whether the app you want to connect is a first- or third-party application, consider the below:
 
-* First-party:: 
-an app that is controlled by organization to which you belong.
-* Third-party application:: 
-An app that is controlled by another organization.
+* First-party: 
+
+  An app that is controlled by organization to which you belong.
+
+* Third-party application: 
+
+  An app that is controlled by another organization.
 
 Applications can also be public or private.
 
-* Public applications can be accessed by anyone.
-* Private applications can only be accessed by users in the same organization.
+* Public app: 
+
+  An app that can be accessed by anyone.
+
+* Private app:
+
+  An app that can only be accessed by users in the same organization.
