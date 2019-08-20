@@ -3,20 +3,26 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can connect applications to Anypoint Platform without granting them unrestricted access to data or having to share sensitive credentials.
-When you grant an application access, you have direct control over its data access, usage, and credentials.
+You can connect apps to Anypoint Platform without granting them unrestricted access to data or having to share sensitive credentials.
+When you grant an app access, you have direct control over its data access, usage, and credentials.
 You can audit the use of data by connected apps, and you can also revoke access at any time.
 
 == Authentication
 
-Using OAuth 2.0 and OpenID, you can authorize applications to access resources using tokens or Single Sign-On.
+Use OAuth 2.0 and OpenID to authorize apps to access resources using tokens or Single Sign-On (SSO).
 Additionally, you can share account data with third-party applications.
 For more information on which users can grant access to applications using Anypoint Platform, see Connected Apps Permissions by User.
 
 == First-party and Third-party Applications
 
-Depending on the ownership of the application you want to connect, applications may have different authentication requirements and procedures.
-To determine whether the application you want to connect is a first-party or third party application, consider the following:
+To determine whether the app you want to connect is a first- or third-party application, consider the below:
 
-* First-party: an application that is created and controlled by the same entity as the domain owner.
-* Third-party application: an application that is controlled by a different entity than the domain owner.
+* First-party:: 
+an app that is controlled by organization to which you belong.
+* Third-party application:: 
+An app that is controlled by another organization.
+
+Applications can also be public or private.
+
+* Public applications can be accessed by anyone.
+* Private applications can only be accessed by users in the same organization.
