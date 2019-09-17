@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Connected Apps can be used by organization administrators, developers, and end users; each of these roles has different privileges when connecting applications,
+Connected Apps can be used by organization administrators, developers, and end users.
 and there are some restrictions to ensure sensitive data remains secure.
 
 == Organization Administrator
@@ -23,7 +23,7 @@ When you create an app as an organization administrator, consider the below:
 
 * An organization can own up to 200 connected apps.
 * You can disable or whitelist connected apps.
-* When you create an app, a clientID is assigned, which can't be modified. However, you can modify client secrets in the *Application Settings* page.
+* When you create an app, a unique clientID is assigned; the clientID can't be modified. However, you can modify client secrets in the *Application Settings* page.
 * When you create an application with the OAuth client credential grant type, the app is owned by the organization; any organization administrator can control the app.
 * For apps that use the user grant type, actions taken by the app are logged with an application ID and user ID in the audit log so administrators can monitor and audit data use.
 
@@ -51,7 +51,7 @@ Clients making use of user grant types require authorization from a user. Connec
 
  The app directs the user's browser (commonly called a User-Agent) to Anypoint, where the user authorizes the app before being redirected back. If the code should not work indefinitely, you can select the *Refresh Tokens* option, requiring new codes as often as specified in the application.
 
-* JTW Bearer:
+* JWT Bearer:
 
  A private app that the organization administrator registers with a public key. The app uses the corresponding private key to sign JWTs that may then be exchanged for an access token. 
 
