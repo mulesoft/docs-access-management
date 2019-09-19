@@ -3,34 +3,22 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can connect apps to Anypoint Platform without granting them unrestricted access to data or having to share sensitive credentials.
-When you grant an app access, you have direct control over its data access, usage, and credentials.
-You can audit the use of data by connected apps, and you can also revoke access at any time.
+You can delegate user access to a client app without granting it unrestricted access to data or having to share sensitive credentials.
+When you grant an app access, you have direct control over its data access and usage.
+You can audit the use of data and actions taken by connected apps, and you can also revoke access at any time.
 
 == Authentication
 
-Use OAuth 2.0 and OpenID to authorize apps to access resources using tokens or Single Sign-On (SSO).
-Additionally, you can share account data with third-party applications.
-For more information on which users can grant access to applications using Anypoint Platform, see Connected Apps Permissions by User.
+You can use OAuth 2.0 and OpenID Connect to authorize apps to access resources.
 
-== First-party and Third-party Apps
+For more information on using OAuth 2.0 and OpenID Connect, see https://openid.net/connect/[OpenID Connect].
 
-To determine whether the app you want to connect is a first- or third-party application, consider the below:
+== Access and Authorization
 
-* First-party: 
+Different types of users can interact can connect apps or manage authorization in various ways:
 
-  An app that is controlled by your organization.
+* An Organization Administrator can control how their organization's data is used by connected apps.
+* A developer can register and administrate an app that they have created.
+* An end user can authorize an app to use their credentials.
 
-* Third-party application: 
-
-  An app that is controlled by another organization.
-
-Applications can also be public or private.
-
-* Public app: 
-
-  An app that can be accessed by anyone.
-
-* Private app:
-
-  An app that can only be accessed by users in the same organization.
+// will add links to the persona pages for each of those lines.

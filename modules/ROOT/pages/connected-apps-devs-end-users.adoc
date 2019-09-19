@@ -1,0 +1,21 @@
+= Connected Apps for Developers and End Users
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+== Developers
+
+Developers who have websites or web apps can allow users to log in using the *Log in with Anypoint Platform* option.
+They can also enable or disable the client, and they can view client usage.
+For example, they can see how many organizations are using the app and how many users have access.
+
+// code/chunk of steps for websites/web apps
+
+== End Users
+
+End users can log into a connected app using their Anypoint credentials.
+They can can authorize access to their credentials when the following message appears:
+
+// screenshot of authorize user page https://qax.anypoint.mulesoft.com/login/authorize?state=eyJjbGllbnQiOnsiY2xpZW50X2lkIjoiZWEzYzJiODFkMDEyNGI0Mjk1NDYyM2RhMWM0MzQ5ZWIifSwidXNlciI6eyJ1c2VybmFtZSI6Im9yZ2FuaXphdGlvbl9vd25lciJ9LCJvcmlnaW4iOiIvYXBpL3YyL29hdXRoMi9hdXRob3JpemU%2FY2xpZW50X2lkPWVhM2MyYjgxZDAxMjRiNDI5NTQ2MjNkYTFjNDM0OWViJnJlZGlyZWN0X3VyaT1odHRwczovL2V4YW1wbGUuY29tJnJlc3BvbnNlX3R5cGU9dG9rZW4mc2NvcGU9ZnVsbCIsInRyYW5zYWN0aW9uX2lkIjoiSXlNVGVJSHciLCJzY29wZSI6WyJmdWxsIl19
+
+End users can manage third-party apps that they have authorized in their profile settings.

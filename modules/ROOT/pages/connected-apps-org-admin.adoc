@@ -1,0 +1,63 @@
+= Connected Apps for Organization Administrators
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Organization administrators are the only users that can view and manage connected apps in Access Management.
+
+To manage your connected apps, navigate to Access Management and select the *Connected Apps* tab.
+You can add apps in the *Owned Apps* section and manage app access in the *Authorized Apps* section.
+
+=== Create an App
+
+When you create an app as an organization administrator, consider the below:
+
+* An organization can own up to 200 connected apps.
+* A unique clientID is assigned; the clientID can't be modified. However, you can modify client secrets in the *Application Settings* page.
+* The app is owned by the organization; any organization administrator can control the app.
+* Actions taken by the app are logged with an application ID and user ID in the audit log so administrators can monitor and audit data use.
+
+// screenshot of Create Application interface
+
+When creating an application, you must enter the below information:
+
+* *Name*:
+
+  A descriptive name for your application.
+
+* *Type*
+
+  *User App* or *Client App*. User Apps request access to selected scopes.
+  They may be used by multiple organizations and must be authorized by a user to act on their behalf.
+  Client Apps are given selected permissions for this organization only. They operate on their own without impersonating a user.
+
+* *Redirect URIs*:
+
+  Uniform Resource Identifier that specifies the location of the application's callback. You can specify one per line.
+
+* *Who can use this application?*
+
+  *Members of this org only* or *All Anypoint Platform users*.
+
+* *Grant Types*:
+
+  *Authorization Code* or *JWT* Bearer.
+// I formerly had some information on what these meant - should I add it back, or is that something the user already understands?
+
+* *Scopes*
+
+  Permissions granted to the connected app that dictate how can be used.
+
+=== Authorized Apps
+
+Organization Administrators can configure the authorization policy for their users:
+
+* *Unrestricted*
+
+  Organization members may authorize any connected app to act on their behalf.
+
+* *Restricted*
+
+  Only connected apps that are approved by an administrator can be authorized by organization members to act on their behalf.
+
+Organization Administrators can also manage which apps are authorized to access users' data.
