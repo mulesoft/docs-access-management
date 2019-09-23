@@ -3,22 +3,20 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can delegate user access to a client app without granting it unrestricted access to data or having to share sensitive credentials.
-When you grant an app access, you have direct control over its data access and usage.
-You can audit the use of data and actions taken by connected apps, and you can also revoke access at any time.
+Connected Apps provide a framework that enables an external application to integrate with MuleSoft using APIs via standard protocols, such as SAML, OAuth, and OpenID Connect. Connected apps help user delegate their access without sharing sensitive credentials or giving a full control of their account to third-parties. Actions taken by connected apps are auditable, and you can also revoke access at any time.
 
 == Authentication
 
-You can use OAuth 2.0 and OpenID Connect to authorize apps to access resources.
+Anypoint Platform supports OAuth 2.0 and OpenID Connect to authorize apps to access data within Anypoint Platform.
 
-For more information on using OAuth 2.0 and OpenID Connect, see https://openid.net/connect/[OpenID Connect].
+For more information on using OAuth 2.0 and OpenID Connect, see https://oauth.net/2/[OAuth 2.0] and https://openid.net/connect/[OpenID Connect].
 
 == Access and Authorization
 
-Different types of users can interact can connect apps or manage authorization in various ways:
+Connected apps address use-cases for the following types of users:
 
-* An Organization Administrator can control how their organization's data is used by connected apps.
-* A developer can register and administrate an app that they have created.
-* An end user can authorize an app to use their credentials.
+* An Organization Administrator can control how their organization's data is used by whitelisting apps, revoking access and disabling this feature for the entire organization. 
+* A developer can register new and manage eixting apps within her organization. 
+* An end user can authorize apps to access a particular information e.g. view assets in Exchange. 
 
 // will add links to the persona pages for each of those lines.
