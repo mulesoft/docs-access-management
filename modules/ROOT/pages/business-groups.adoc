@@ -97,7 +97,7 @@ Users who are assigned the *Organization Administrators* role in the master orga
 
 === Delete a Business Groups
 
-Only an organization administrator can delete business groups. The top-level (root) business group can't be deleted, even by an organization administrator.
+Only an organization administrator that belongs to a business group can delete it. The top-level (root) business group can't be deleted, even by an organization administrator.
 
 . In Anypoint Platform Access Management, in the left menu, click *Organization*.
 . Click the name of the group to delete.
