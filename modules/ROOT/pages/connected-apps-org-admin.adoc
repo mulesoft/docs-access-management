@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Organization administrators are the only users that can view and manage connected apps in Access Management.
+Organization administrators are the only users who can view and manage connected apps in Access Management.
 
 To manage your connected apps, navigate to Access Management and select the *Connected Apps* tab.
 You can add apps in the *Owned Apps* section and manage app access in the *Authorized Apps* section.
@@ -42,11 +42,10 @@ When creating an application, you must enter the below information:
 * *Grant Types*:
 
   *Authorization Code* or *JWT* Bearer.
-// I formerly had some information on what these meant - should I add it back, or is that something the user already understands?
 
 * *Scopes*
 
-  Permissions granted to the connected app that dictate how can be used.
+  Permissions granted to the connected app that dictate how data can be used.
 
 === Authorized Apps
 
