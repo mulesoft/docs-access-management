@@ -5,12 +5,10 @@ endif::[]
 
 == Developers
 
-Third-party developers with their own websites or web apps can allow users to log in using the *Log in with Anypoint Platform* option. To make things easy, we crated a standard button that can be integrated to your application front end with via pre-built template and set of components. For more information about how to embed the button, refer to https://github.com/anypoint-web-components/anypoint-signin/tree/master[developer tutorial] and http://anypoint-signin-test.surge.sh/[developer playground]. 
+Third-party developers who have their own websites or web apps can allow users to log in using the *Log in with Anypoint Platform* option. For seamless implementation, there is a standard button that can be integrated into the front end of your application with a pre-built template and set of components. For more information about how to embed the button, refer to the  https://github.com/anypoint-web-components/anypoint-signin/tree/master[developer tutorial] and the http://anypoint-signin-test.surge.sh/[developer playground]. 
 
-In addition to enabling new flows to authenticate users, developers can enable or disable the clients, and view client usage.
-For example, they can see how many organizations are using the app and how many users have access.
-
-// code/chunk of steps for websites/web apps
+In addition to enabling new flows to authenticate users, developers can enable or disable the clients and view client usage.
+For example, developers can see how many organizations are using the app and how many users have access.
 
 == End Users
 
@@ -19,4 +17,4 @@ They can can authorize access to their account when the following message appear
 
 // screenshot of authorize user page https://qax.anypoint.mulesoft.com/login/authorize?state=eyJjbGllbnQiOnsiY2xpZW50X2lkIjoiZWEzYzJiODFkMDEyNGI0Mjk1NDYyM2RhMWM0MzQ5ZWIifSwidXNlciI6eyJ1c2VybmFtZSI6Im9yZ2FuaXphdGlvbl9vd25lciJ9LCJvcmlnaW4iOiIvYXBpL3YyL29hdXRoMi9hdXRob3JpemU%2FY2xpZW50X2lkPWVhM2MyYjgxZDAxMjRiNDI5NTQ2MjNkYTFjNDM0OWViJnJlZGlyZWN0X3VyaT1odHRwczovL2V4YW1wbGUuY29tJnJlc3BvbnNlX3R5cGU9dG9rZW4mc2NvcGU9ZnVsbCIsInRyYW5zYWN0aW9uX2lkIjoiSXlNVGVJSHciLCJzY29wZSI6WyJmdWxsIl19
 
-End users can manage third-party apps that they have authorized in their profile settings. To view autorized applications, click on the user's icon on the top right and navigate to profile. 
+End users can manage third-party apps that they have authorized in their profile settings. The user can view authorized applications in their profile.
