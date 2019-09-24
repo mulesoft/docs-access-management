@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Connected Apps provide a framework that enables an external application to integrate with MuleSoft using APIs via standard protocols, such as SAML, OAuth, and OpenID Connect. Connected apps help user delegate their access without sharing sensitive credentials or giving a full control of their account to third-parties. Actions taken by connected apps are auditable, and you can also revoke access at any time.
+Connected Apps provide a framework that enables an external application to integrate with MuleSoft using APIs via standard protocols, such as SAML, OAuth, and OpenID Connect. Connected apps help user delegate their access without sharing sensitive credentials or giving full control of their account to third parties. Actions taken by connected apps are auditable, and you can also revoke access at any time.
 
 == Authentication
 
@@ -15,8 +15,8 @@ For more information see https://oauth.net/2/[OAuth 2.0] and https://openid.net/
 
 Connected apps address use-cases for the following types of users:
 
-* An Organization Administrator can control how their organization's data is used by whitelisting apps, revoking access and disabling this feature for the entire organization. 
-* A developer can register new and manage eixting apps within her organization. 
-* An end user can authorize apps to access a particular information e.g. view assets in Exchange. 
+* An Organization Administrator can control how their organization's data is used by whitelisting apps, revoking access, and disabling this feature for the entire organization. 
+* A developer can register new and manage existing apps within their organization. 
+* An end user can authorize apps to access particular information, such as viewing assets in Exchange. 
 
 // will add links to the persona pages for each of those lines.
