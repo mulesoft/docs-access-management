@@ -59,5 +59,13 @@ Organization Administrators can configure the authorization policy for their use
 * *Restricted*
 
   Only connected apps that are approved by an administrator can be authorized by organization members to act on their behalf.
+  
+* *Disabled*
+
+  Use of connected apps is disabled for the entire organization. Owned apps can be created and used by other organizations. 
 
 Organization Administrators can also manage which apps are authorized to access users' data.
+
+=== Whitelist applications 
+
+//@Sara, can you add this section?
