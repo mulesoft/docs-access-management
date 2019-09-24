@@ -9,7 +9,7 @@ Connected Apps provide a framework that enables an external application to integ
 
 Anypoint Platform supports OAuth 2.0 and OpenID Connect to authorize apps to access data within Anypoint Platform.
 
-For more information on using OAuth 2.0 and OpenID Connect, see https://oauth.net/2/[OAuth 2.0] and https://openid.net/connect/[OpenID Connect].
+For more information see https://oauth.net/2/[OAuth 2.0] and https://openid.net/connect/[OpenID Connect].
 
 == Access and Authorization
 
