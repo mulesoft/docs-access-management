@@ -58,13 +58,19 @@ Organization Administrators can configure the authorization policy for their use
 * *Restricted*
 
   Only connected apps that are approved by an administrator can be authorized by organization members to act on their behalf.
-  
+
 * *Disabled*
 
-  Use of connected apps is disabled for the entire organization. Owned apps can be created and used by other organizations. 
+  Use of connected apps is disabled for the entire organization. Owned apps can be created and used by other organizations.
 
 Organization Administrators can also manage which apps are authorized to access users' data.
 
-=== Whitelist applications 
+=== Whitelist applications
 
-//@Sara, can you add this section?
+Using Connected Apps, Organization Administrators can also view which users have granted access to different apps in addition to the access scope.
+Organization Administrators can revoke or reinstate access to the app at any time.
+
+When an Organization Administrator revokes access, the app's OAuth access token is revoked, and the app can no longer access user data.
+If the Organization Administrator decides to grant access back to the app, they can whitelist the app.
+
+Organization Administrators can manage apps in the *Authorizations* tab in Connected Apps.
