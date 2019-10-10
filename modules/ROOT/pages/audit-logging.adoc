@@ -1513,8 +1513,8 @@ A few of the reasons you may want to use Audit Logs:
 === About Audit Log REST API Access
 
 You can access the
-https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/apis/24562/versions/26089/pages/39846[Audit Log REST API] from the Audit Logging Query API and its
-https://anypoint.mulesoft.com/apiplatform/repository/v2/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/public/apis/24562/versions/26089/files/root[RAML].
+https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API and its
+https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.5/files/fat-raml/zip[RAML].
 
 The following are example `curl` commands for accessing the API (Windows users need to download `curl` before using these commands).
 
