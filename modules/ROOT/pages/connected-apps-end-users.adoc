@@ -1,0 +1,19 @@
+= Connected Apps for End Users
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+End users can delegate API access and log into a third-party applications using their Anypoint credentials.
+They can can authorize access to their account when the following message appears:
+
+.The *Authorize App* interface allows end users to see which organization is requesting access to data and how the data is used. After the end user clicks *Grant Access*, the app is authorized to access the data indicated in the *Authorize App* interface.
+image::connected-apps-authorize.png[The interface the user sees before authorizing an app to use their data.]
+
+End users can manage third-party apps that they have authorized in their profile settings.
+They can view authorized apps in their profiles by clicking on their profile icon in the top right corner and selecting *Profile*.
+The following screenshot illustrates how authorized connected apps are displayed within a user’s profile page:
+
+.The *Application Name* column lists the name of the app with which the user is sharing their data. The *Scopes* column lists the token granted to the app in addition to the permissions the connected app has.
+image::connected-apps-authorize.png[A user's profile that contains authorized connected apps and their scopes.]
+
+If an Organization Administrator blacklists an app, end users cannot authorize the app to access their information.
