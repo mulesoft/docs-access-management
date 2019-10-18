@@ -12,7 +12,7 @@ For example, developers can see how many organizations are using the app and how
 
 The Connected Apps feature supports OAuth 2.0 and OpenID Connect. As such, developers must ensure their app can use tokens to request access to user data.
 To find out what specific OpenID Connect capabilities are supported, refer to the information provided in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint].
-Many of the scopes in the endpoint map directly to permissions available in Anypoint Platform.
+All scopes in the endpoint map directly to permissions available in Anypoint Platform, with some exceptions noted in the *Endpoint Scopes* section.
 
 To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to sign in using the *Sign in with Anypoint Platform* option.
 
@@ -20,7 +20,7 @@ Developers who have the organization administrator role can create apps and spec
 
 == Token Flow
 
-When a developer creates an app, the app includes a client that requests access to user data.
+When a developer creates an app, the app requests access to user data.
 When an end user receives such a request and authorizes the app to access their data, the app receives an access token, which allows the app to call Anypoint Platform on the user’s behalf.
 The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials.
 
@@ -38,16 +38,16 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 == OIDC Endpoints and Tokens
 
 To work with OpenID Connect, apps that require access to user data when the user isn’t logged in have to exchange refresh tokens for new access tokens.
-Tokens that are not refreshed expire after 90 days. If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after original access tokens expire.
+Refresh tokens expire after 90 days. Access tokens expire after the user's session expires. If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after original access tokens expire.
 To request a new access token, you must send a request to the token endpoint using the `refresh_token` grant type and the `offline_access` scope.
 When authentication is successful, a refresh token is exchanged for an access token.
 
-The following example shows the structure of a token request:
+The following example shows the structure of a token request given a pre-existing refresh_token:
 
 ----
 POST /api/v2/oauth2/token
 Content-Type: application/x-www-form-urlencoded
-grant_type=refresh_token&client_id=<your_client_id>&client_secret=<your_client_secret>
+grant_type=refresh_token&client_id=<your_client_id>&client_secret=<your_client_secret>&refresh_token=<your_refresh_token>
 ----
 
 Assuming the token request is fulfilled, the refresh token received in the endpoint response is similar to a regular token response, but it might not contain an `id_token`.
@@ -73,11 +73,9 @@ Before you create an app as an organization administrator, consider the followin
 * A unique `clientID` is automatically assigned and can’t be modified.
 However, you can modify client secrets in the *Application Settings* page.
 * Your app is owned by your organization; any organization administrator can control it.
-* Actions taken by the app are logged with an application ID and user ID in the audit log so that you can monitor and audit data use.
 
-You must have the organization administrator role to build an application with Connected Apps.
 
-You should also determine the use-case (for example, CI/CD pipeline) and whether the app is internal to your company or is a third-party application that can be distributed outside of your organization.
+You should also determine the use-case and whether the app is internal to your company or is a third-party application that can be distributed outside of your organization.
 To create your app, follow these steps:
 
 . From the *Access Management* home page, click the *Connected Apps* tab.
