@@ -5,7 +5,8 @@ endif::[]
 
 The Connected Apps feature provides a framework that enables an external application to integrate with Anypoint Platform using https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[APIs] through standard protocols, such as SAML, OAuth 2.0, and OpenID Connect.
 Connected apps help users delegate their access without sharing sensitive credentials or giving full control of their accounts to third parties.
-Actions taken by connected apps are auditable, and users can also revoke access at any time.
+Actions taken by connected apps are audited, and users can also revoke access at any time.
+Note that some products do not currently include client IDs in this release of the Connected Apps feature.
 The Connected Apps feature enables you to use secure authentication protocols and control an app's access to user data. Additionally, end users can authorize the app to access their Anypoint Platform data.
 
 == Authentication
