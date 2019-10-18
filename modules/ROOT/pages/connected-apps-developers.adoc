@@ -16,7 +16,7 @@ Many of the scopes in the endpoint map directly to permissions available in Anyp
 
 To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to log in using the *Sign in with Anypoint Platform* option.
 
-Developers who have the organization administrator role can create apps and specify access scopes in Anypoint Platform.  
+Developers who have the organization administrator role can create apps and specify access scopes in Anypoint Platform.
 
 == Token Flow
 
@@ -52,7 +52,7 @@ grant_type=refresh_token&client_id=<your_client_id>&client_secret=<your_client_s
 
 Assuming the token request is fulfilled, the refresh token received in the endpoint response is similar to a regular token response, but it might not contain an `id_token`.
 
-== Sign in with Anypoint Platform
+== Sign in with Anypoint Platform Widget
 
 For seamless implementation, developers can integrate a button into the front end of their apps with a pre-built template and set of components. They can add this widget using the following code:
 
@@ -61,7 +61,7 @@ For seamless implementation, developers can integrate a button into the front en
 </anypoint-signin>
 ----
 
-For more information about how to embed the button, refer to the https://github.com/anypoint-web-components/anypoint-signin[developer tutorial] and the https://anypoint.mulesoft.com/signin-with-anypoint-platform-demo/[developer playground].
+For more information about how to embed the button, refer to the https://github.com/anypoint-web-components/anypoint-signin[developer tutorial] and the https://anypoint-web-components.github.io/anypoint-signin/[developer playground].
 
 // == Example
 
