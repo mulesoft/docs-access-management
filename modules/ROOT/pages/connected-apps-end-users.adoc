@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 End users can delegate API access and log in to third-party applications using their Anypoint Platform credentials.
-They can can authorize access to their account when the following message appears:
+They can authorize access to their account when the following message appears:
 
 .The *Authorize App* interface enables end users to see which organization is requesting access to data and how the data is used. After the end user clicks *Grant Access*, the app is authorized to access the data indicated in the *Authorize App* interface.
 image::connected-apps-authorize.png[The interface the user sees before authorizing an app to use their data, 60%,60%]

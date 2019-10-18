@@ -12,7 +12,7 @@ You can configure one of two types of authorization policies for your users:
 
 * Unrestricted
 
-  Organization members may authorize any connected app to act on their behalf.
+  Organization members can authorize any connected app to act on their behalf.
 
 * Restricted
 
@@ -20,8 +20,8 @@ You can configure one of two types of authorization policies for your users:
 
 You can also manage which apps are authorized to access users' data.
 
-== Whitelist applications
+== Whitelist Applications
 
 Using the Connected Apps feature, you can view which users have granted access to apps as well as the specified access scopes. You can revoke or reinstate access to the apps at any time.
 
-When you revoke an app’s access, the app’s OAuth 2.0 access token is revoked, and the app can no longer access user data. If you decide to return access to the app, they can whitelist the app.
+When you revoke an app’s access, the app’s OAuth 2.0 access token is revoked, and the app can no longer access user data. If you decide to return access to the app, you can whitelist the app.

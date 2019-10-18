@@ -3,25 +3,25 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] that that enables developers to extend its functionality.
-With the Connected Apps feature, developers can delegate access to applications that interact with Anypoint Platform programmatically using APIs.
+Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] that developers can use to extend functionality.
+With the Connected Apps feature, developers can delegate access to applications that use APIs to interact with Anypoint Platform programmatically.
 While some might use the Connected Apps feature to build CI/CD pipelines, others can productize additional third-party use-cases on top of Anypoint Platform.
 
 In addition to enabling new flows to authenticate users, developers can enable or disable clients and view client usage.
 For example, developers can see how many organizations are using the app and how many users have access.
 
-The Connected Apps feature supports OAuth 2.0 and OpenID Connect. As such, developers must ensure their app can request access to user data using tokens.
+The Connected Apps feature supports OAuth 2.0 and OpenID Connect. As such, developers must ensure their app can use tokens to request access to user data.
 To find out what specific OpenID Connect capabilities are supported, refer to the information provided in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint].
 Many of the scopes in the endpoint map directly to permissions available in Anypoint Platform.
 
-To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to log in using the *Sign in with Anypoint Platform* option.
+To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to sign in using the *Sign in with Anypoint Platform* option.
 
 Developers who have the organization administrator role can create apps and specify access scopes in Anypoint Platform.
 
 == Token Flow
 
 When a developer creates an app, the app includes a client that requests access to user data.
-When an end user receives such a request and authorizes the app to access their data, the app receives an _access token_, allowing the app to call Anypoint Platform on the user’s behalf.
+When an end user receives such a request and authorizes the app to access their data, the app receives an access token, which allows the app to call Anypoint Platform on the user’s behalf.
 The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials.
 
 == Endpoint Scopes
