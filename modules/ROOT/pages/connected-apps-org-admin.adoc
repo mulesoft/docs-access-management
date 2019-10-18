@@ -22,8 +22,6 @@ You can also manage which apps are authorized to access users' data.
 
 == Whitelist applications
 
-Using the Connected Apps feature, organization administrators can also view which users have granted access to apps as well as the specified access scopes.
-Organization administrators can revoke or reinstate access to the apps at any time.
-
 Using the Connected Apps feature, you can view which users have granted access to apps as well as the specified access scopes. You can revoke or reinstate access to the apps at any time.
+
 When you revoke an app’s access, the app’s OAuth 2.0 access token is revoked, and the app can no longer access user data. If you decide to return access to the app, they can whitelist the app.
