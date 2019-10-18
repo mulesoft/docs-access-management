@@ -57,11 +57,13 @@ Assuming the token request is fulfilled, the refresh token received in the endpo
 For seamless implementation, developers can integrate a button into the front end of their apps with a pre-built template and set of components. They can add this widget using the following code:
 
 ----
-<anypoint-signin scopes="full" redirecturi="https://auth.advancedrestclient.com/oauth-popup.html" clientid="2e38d46b60c5476584cdecba8b516711">
+<anypoint-signin scopes="full" 
+redirecturi="...." 
+clientid="….">
 </anypoint-signin>
 ----
 
-For more information about how to embed the button, refer to the https://github.com/anypoint-web-components/anypoint-signin[developer tutorial] and the https://anypoint-web-components.github.io/anypoint-signin/[developer playground].
+For more information about how to embed the button, refer to the https://anypoint-web-components.github.io/anypoint-signin/[developer playground].
 
 // == Example
 
