@@ -3,30 +3,26 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] that enables developers to extend its functionality.
-With Connected Apps, developers can delegate access to applications that interact with Anypoint Platform programmatically using APIs.
-While some might use Connected Apps to build CI/CD pipelines, others can productize additional third-party use-cases on the top of Anypoint Platform.
-
-Third-party developers with their own websites or web apps can allow users to log in using the *Log in with Mulesoft* option.
-For seamless implementation, there is a standard button that can be integrated into the front end of your application with a pre-built template and set of components.
-For more information about how to embed the button, refer to the https://github.com/anypoint-web-components/anypoint-signin[developer tutorial] and the https://anypoint.mulesoft.com/signin-with-anypoint-platform-demo/[developer playground].
+Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] that that enables developers to extend its functionality.
+With the Connected Apps feature, developers can delegate access to applications that interact with Anypoint Platform programmatically using APIs.
+While some might use the Connected Apps feature to build CI/CD pipelines, others can productize additional third-party use-cases on top of Anypoint Platform.
 
 In addition to enabling new flows to authenticate users, developers can enable or disable clients and view client usage.
 For example, developers can see how many organizations are using the app and how many users have access.
 
-Connected Apps supports OAuth 2.0 and OpenID Connect.
+The Connected Apps feature supports OAuth 2.0 and OpenID Connect. As such, developers must ensure their app can request access to user data using tokens.
 To find out what specific OpenID Connect capabilities are supported, refer to the information provided in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint].
 Many of the scopes in the endpoint map directly to permissions available in Anypoint Platform.
 
-== Workflow
+To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to log in using the *Sign in with Anypoint Platform* option.
 
-When a developer creates an app, the app has a client that requests access to user data.
-When an end user authorizes the app to access their data, the app receives an access token, allowing the app to call Anypoint Platform on the user’s behalf.
-The access token allows the app to see who the user is using their Anypoint Platform credentials.
-Depending on the levels of access, the app can change user data if it is permitted.
+Developers who have the organization administrator role can create apps and specify access scopes in Anypoint Platform.  
 
-If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after original access tokens expire.
-When authentication is successful, a refresh token is exchanged for an access token.
+== Token Flow
+
+When a developer creates an app, the app includes a client that requests access to user data.
+When an end user receives such a request and authorizes the app to access their data, the app receives an _access token_, allowing the app to call Anypoint Platform on the user’s behalf.
+The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials.
 
 == Endpoint Scopes
 
@@ -41,9 +37,10 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 
 == OIDC Endpoints and Tokens
 
-Apps that require access to data when the user isn’t logged in have to exchange the refresh tokens for new access tokens.
-Tokens that are not refreshed expire after 90 days.
+To work with OpenID Connect, apps that require access to user data when the user isn’t logged in have to exchange refresh tokens for new access tokens.
+Tokens that are not refreshed expire after 90 days. If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after original access tokens expire.
 To request a new access token, you must send a request to the token endpoint using the `refresh_token` grant type and the `offline_access` scope.
+When authentication is successful, a refresh token is exchanged for an access token.
 
 The following example shows the structure of a token request:
 
@@ -53,68 +50,37 @@ Content-Type: application/x-www-form-urlencoded
 grant_type=refresh_token&client_id=<your_client_id>&client_secret=<your_client_secret>
 ----
 
-The endpoint’s response is similar to a regular token response, but it may not contain an `id_token`.
-The refresh token received in the endpoint response may be different than the token used in the initial request.
+Assuming the token request is fulfilled, the refresh token received in the endpoint response is similar to a regular token response, but it might not contain an `id_token`.
 
 == Sign in with Anypoint Platform
 
-Developers can add a widget to their websites or apps that allow users to authenticate using their Anypoint Platform credentials. They can add this widget using the following code:
+For seamless implementation, developers can integrate a button into the front end of their apps with a pre-built template and set of components. They can add this widget using the following code:
 
-[source, html]
 ----
 <anypoint-signin scopes="full" redirecturi="https://auth.advancedrestclient.com/oauth-popup.html" clientid="2e38d46b60c5476584cdecba8b516711">
 </anypoint-signin>
 ----
 
+For more information about how to embed the button, refer to the https://github.com/anypoint-web-components/anypoint-signin[developer tutorial] and the https://anypoint.mulesoft.com/signin-with-anypoint-platform-demo/[developer playground].
+
 // == Example
 
 == Create an App
 
-When you create an app as an organization administrator, consider the below:
+Before you create an app as an organization administrator, consider the following requirements and restrictions:
 
-* An organization can own up to 200 connected apps.
-* A unique clientID is assigned; the clientID can’t be modified. However, you can modify client secrets in the *Application Settings* page.
-* The app is owned by the organization; any organization administrator can control the app.
-* Actions taken by the app are logged with an application ID and user ID in the audit log so administrators can monitor and audit data use.
+* Your organization can own up to 200 connected apps.
+* A unique `clientID` is automatically assigned and can’t be modified.
+However, you can modify client secrets in the *Application Settings* page.
+* Your app is owned by your organization; any organization administrator can control it.
+* Actions taken by the app are logged with an application ID and user ID in the audit log so that you can monitor and audit data use.
 
-You must have the Organization Administrator role to build an application with Connected Apps.
+You must have the organization administrator role to build an application with Connected Apps.
 
-. Determine the use-case e.g. CI/CD pipeline that is internal to your company or a third-party application that can be distributed outside of your organization, etc.
-. Navigate to the *Connected Apps* tab in *Access Management*.
-. Create an application by adding the following information:
+You should also determine the use-case (for example, CI/CD pipeline) and whether the app is internal to your company or is a third-party application that can be distributed outside of your organization.
+To create your app, follow these steps:
 
-* Name:
-
-  A descriptive name for your application.
-
-* Type
-
-  App acts on behalf of a user.
-
-* Authorized by a user to act on their behalf.
-
-  App acts on its own behalf (client credentials)
-
-  Acts on its own behalf without impersonating a user. The app can only be used in this organization.
-
-* Grant Types
-
-  Authorization Code or JWT Bearer. Refresh token allows clients to retain access by exchanging a refresh token for a new access token when their access token expires.
-
-* Website URL
-
-  The website belonging to the app that you are connecting. Users can visit this website to learn more about your app.
-
-* Redirect URIs
-
-  Uniform Resource Identifier that specifies the location of the application's callback. You can specify one per line.
-
-* Who can use this application?
-
-  Members of this org only or All Anypoint Platform users.
-
-* Scopes
-
-  Permissions granted to the connected app that dictate how data can be used.
-
+. From the *Access Management* home page, click the *Connected Apps* tab.
+. Click *Create App*.
+. Create your app by completing the fields in the *Create App* page.
 . Click *Save*.

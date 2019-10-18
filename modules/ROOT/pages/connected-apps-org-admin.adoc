@@ -3,14 +3,12 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-As an organization administrator, you are the only user who can view and manage connected apps in access management.
-You can use authorization policies to dictate which apps can be authorized to access user data, and you can whitelist or blacklist apps that users have previously authorized.
-
+As an organization administrator, you are the only user who can view and manage connected apps in Access Management. You can use authorization policies to dictate which apps can be authorized to access user data, and you can whitelist or blacklist apps that users have previously authorized.
 To manage your connected apps, navigate to *Access Management* and select the *Connected Apps* tab. You can add apps in the *Owned Apps* section and manage app access in the *Authorization* section.
 
 == Authorized Apps
 
-Organization Administrators can configure the authorization policy for their users:
+You can configure one of two types of authorization policies for your users:
 
 * Unrestricted
 
@@ -20,12 +18,12 @@ Organization Administrators can configure the authorization policy for their use
 
   Only connected apps that are approved by an administrator can be authorized by organization members to act on their behalf.
 
-Organization Administrators can also manage which apps are authorized to access users' data.
+You can also manage which apps are authorized to access users' data.
 
 == Whitelist applications
 
 Using the Connected Apps feature, organization administrators can also view which users have granted access to apps as well as the specified access scopes.
 Organization administrators can revoke or reinstate access to the apps at any time.
 
-When an organization administrator revokes access, the app’s OAuth 2.0 access token is revoked, and the app can no longer access user data.
-If the organization administrator decides to return access to the app, they can whitelist the app.
+Using the Connected Apps feature, you can view which users have granted access to apps as well as the specified access scopes. You can revoke or reinstate access to the apps at any time.
+When you revoke an app’s access, the app’s OAuth 2.0 access token is revoked, and the app can no longer access user data. If you decide to return access to the app, they can whitelist the app.
