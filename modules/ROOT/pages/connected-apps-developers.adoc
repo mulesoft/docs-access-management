@@ -39,7 +39,7 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 
 To work with OpenID Connect, apps that require access to user data when the user isn’t logged in have to exchange refresh tokens for new access tokens.
 Refresh tokens expire after 90 days. Access tokens expire after the user's session expires. If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after original access tokens expire.
-To request a new access token, you must send a request to the token endpoint using the `refresh_token` grant type and the `offline_access` scope.
+To request a new access token, you must send a request to the token endpoint using the `refresh_token` grant type.
 When authentication is successful, a refresh token is exchanged for an access token.
 
 The following example shows the structure of a token request given a pre-existing refresh_token:
