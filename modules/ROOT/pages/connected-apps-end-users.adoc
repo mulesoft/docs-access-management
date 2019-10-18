@@ -17,3 +17,5 @@ image::connected-apps-in-profile.png[A user's profile that contains authorized c
 
 
 If an organization administrator blacklists an app, end users cannot authorize the app to access their information.
+
+Because most applications are developed by a third-party, MuleSoft is not liable for how an app uses the data it's requesting access to. You can navigate to the developer information link and contact the application admin if you have questions or concerns about their application.
