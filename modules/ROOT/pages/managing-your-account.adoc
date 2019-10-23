@@ -42,7 +42,7 @@ Google's reCaptcha verification service auto-detects your browser's language.
 
 == Join an Existing Organization
 
-If there is an existing Anypoint Platform organization that you want to join, ask the organization administrator for an invitation. When an administrator invites you to the organization, you receive an email with a link to accept the invitation. The link in one week.
+If there is an existing Anypoint Platform organization that you want to join, ask the organization administrator for an invitation. When the administrator responds with an email invitation, you must click the included link within one week.
 
 . Click the link you received in the Anypoint invitation email. +
 You must use the email address to which the invitation email was sent to sign up for an account with that organization.
@@ -73,7 +73,7 @@ You can use an existing account to join an existing organization once you receiv
 * Admin: An account with the organization administrator role associated to a different organization.
 * Owner: An organization owner account for a different organization.
 
-After clicking the link in the invitation, you can choose the account to use to join the organization. The link expires in one week.
+After clicking the link in the invitation, you have one week to choose the account to use to join the organization. 
 
 [NOTE]
 If the account you want to use is already associated with another master organization, an exclamation mark is displayed next to it. This means that additional steps are needed before migrating the account to a new organization.
@@ -81,7 +81,7 @@ If the account you want to use is already associated with another master organiz
 [[create_new_account]]
 == Create a New Account Within an Existing Organization
 
-You can create a new account within an existing organization only if you receive an email invitation to join the organization. The link expires in one week.
+You can create a new account within an existing organization only if you receive an email invitation with a link to join the organization. The link expires in one week.
 
 . Click the link in the invitation email.
 . Click the *Sign Up* button. +
@@ -178,6 +178,6 @@ To upgrade your Anypoint Platform trial account to an enterprise license, contac
 
 == Known Issue: Account Creation
 
-When you attempt to create an account from an email invitation, an error appears, erroneously stating your credentials are invalid.
+When you attempt to create an account from an email invitation to join an organization, and you use a username that already exists (even in a different organization), an error appears, erroneously stating your credentials are invalid.
 This error occurs when a username already exists, even if it is under a different organization.
 If the username already belongs to you, you can move the username from your previous organization to the organization that sent you the email invitation.
