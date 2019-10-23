@@ -34,6 +34,8 @@ To invite new users to your organization:
 
 The users who you invite receive email invitations to sign up to your organization. Invited users must use the link they receive in the invitation email to join your organization. When they click through the link they are presented with a sign-up form that already has the *Company* field completed, matching your organization.
 
+Note that the email link expires in one week.
+
 Invited users have access to the same set of resources as you (although they may have different roles that can restrict what they can view or do).
 
 == Resending or Canceling a Sent Invitation
