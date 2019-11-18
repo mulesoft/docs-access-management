@@ -95,7 +95,7 @@ Resources that belong to the master organization require roles specified at the 
 
 Users who are assigned the *Organization Administrators* role in the master organization, or any business group, are automatically assigned that same role in any child business group created within that business group, so are automatically visible in the child business group. This does not apply to users who are assigned the *Organization Administrators* role after a child business group has been created.
 
-=== Delete a Business Groups
+=== Delete a Business Group
 
 Only an organization administrator that belongs to a business group can delete it. The top-level (root) business group can't be deleted, even by an organization administrator.
 
