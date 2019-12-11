@@ -27,33 +27,22 @@ Using the Teams feature, you can structure your users and permissions in the fol
 The user teams shown here are defined as follows:
 
 * Acme
-
 This team is your organization and parent team, and every user in your organization is a member. All Acme users are responsible for creating new projects in Anypoint Design Center and are able to view assets in Anypoint Exchange. As members of the Acme organization, all Acme users have the following permissions:
-
 ** Design Center Developer
 ** Exchange Viewer
-
 * Engineering
-
 This team is the first child team of the Acme team. This team includes all of Acme’s engineers, but it excludes Acme’s other members. The members of the Engineering team can deploy code to preproduction environments such as Dev and QA. The Engineering team inherits permissions from the Acme team, but it also has additional permissions afforded to its members. As members of the Engineering team, all engineers have the following permissions:
-
 ** (insert deployment permission here)
 ** Design Center Developer
 ** Exchange Viewer
-
 * DevOps
-
 This team is one of two child teams under the Engineering team. The DevOps team is a group of specialized engineers who manage production code across all engineering teams. As members of the DevOps team, all DevOps users have the following permissions:
-
 ** (specific DevOps permission)
 ** (deployment permission from Engineering)
 ** Design Center Developer
 ** Exchange Viewer
-
 * Identity
-
 This team is one of two child teams under the Engineering team. The Identity team has access to its designated business group where it manages projects, assets, and other materials to facilitate collaboration within the business group. As members of the Identity team, all Identity users have the following permissions:
-
 ** (specific identity permission)
 ** (deployment permission from Engineering)
 ** Design Center Developer
