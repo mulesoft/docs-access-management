@@ -11,7 +11,7 @@ This topic provides an overview of client management on Anypoint Platform. As an
 +
 This provider needs to conform to the OpenID Connect Client Registration 1.0 incorporating errata set 1.
 
-To configure client management on Anypoint Platform for these providers, you need to first have an IdP account. On all versions of Anypoint Platform, except Private Cloud edition, set client management as instructed in this documentation.
+To configure client management on Anypoint Platform for these providers, you must have an IdP account.
 
 == See Also
 
