@@ -1,0 +1,29 @@
+= Switch from Roles to Teams
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The Roles feature was deprecated in December 2019. You must transition your legacy roles to the new Teams feature to ensure your users have correct permissions.
+
+To switch from Roles to Teams:
+
+. In *Access Management*, select <page>.
+. In the banner on the <page> page, select *Learn More*.
+. Select *Get Started*.
+. ...etc
+
+== Switch from Teams to Roles
+
+Before the Roles feature reaches end of life, you can switch your organization’s permissions structure from the Teams structure back to the Roles structure.
+
+[WARNING]
+Using the Roles feature should be a temporary measure as you finalize the optimal team structure for your organization. When the Roles feature is no longer available, your organization is adopts the Teams structure automatically. To ensure there are no lapses in user permissions, we recommend keeping the Teams feature as your primary permissions structure.
+
+To switch from Teams to Roles:
+
+. tbd
+
+== See also
+
+* xref:teams-structure.adoc[Manage User Access Using Teams]
+* xref:permissions-by-product.adoc[Available Permissions by Product]

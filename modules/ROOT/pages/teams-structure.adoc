@@ -1,0 +1,126 @@
+= Manage User Access Using Teams
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The Teams feature enables you to create groups that have certain permissions and then assign users to them accordingly. Teams have a cascading permissions structure that helps you manage users and permissions with scalability in mind.
+
+If you have the Administrator permission over your master business group, you can achieve the following using the Teams feature:
+
+* Manage your organization from a simple, global view
+* Group users into teams to easily manage permissions and share assets
+* Manage user and team permissions across multiple business groups in one place
+
+Starting with a _parent_ team, which contains all users who join your organization either via an invitation or SSO, you can create specialized _child_ teams that have more specific permissions based on the responsibilities of their members. The Teams feature enables you to mimic the structure of your organization and seamlessly manage permissions and team membership as your organization grows. After your child teams are created, you can invite new users directly to the appropriate team using email invitations or using the Teams feature interface. When you add a user to a team, you can also specify whether they should be a team _maintainer_ (a user who can manage team membership) or a _member_ (a user who receives the permissions outlined in the team structure). Outside of teams, you can still xref:user-permissions.adoc#grant-permissions-to-an-individual-user.[assign specific permissions to individual users] if they require permissions that should not extend to an entire team.
+
+[NOTE]
+To manage teams, you must have the Administrator permission over the business group that contains the team that you want to modify. You can modify permissions for all teams in your organization only if you have the Administrator permission over the whole organization.
+
+== Example Teams Access Management Structure
+
+Imagine that your organization, Acme, includes a team called Engineering that contains smaller teams that focus on building specific components. The Identity and DevOps teams are smaller parts of Engineering that each specialize in different activities that benefit Engineering as a whole.
+
+Using the Teams feature, you can structure your users and permissions in the following way:
+
+
+
+The user teams shown here are defined as follows:
+
+* Acme
+
+This team is your organization and parent team, and every user in your organization is a member. All Acme users are responsible for creating new projects in Anypoint Design Center and are able to view assets in Anypoint Exchange. As members of the Acme organization, all Acme users have the following permissions:
+
+** Design Center Developer
+** Exchange Viewer
+
+* Engineering
+
+This team is the first child team of the Acme team. This team includes all of Acme’s engineers, but it excludes Acme’s other members. The members of the Engineering team can deploy code to preproduction environments such as Dev and QA. The Engineering team inherits permissions from the Acme team, but it also has additional permissions afforded to its members. As members of the Engineering team, all engineers have the following permissions:
+
+** (insert deployment permission here)
+** Design Center Developer
+** Exchange Viewer
+
+* DevOps
+
+This team is one of two child teams under the Engineering team. The DevOps team is a group of specialized engineers who manage production code across all engineering teams. As members of the DevOps team, all DevOps users have the following permissions:
+
+** (specific DevOps permission)
+** (deployment permission from Engineering)
+** Design Center Developer
+** Exchange Viewer
+
+* Identity
+
+This team is one of two child teams under the Engineering team. The Identity team has access to its designated business group where it manages projects, assets, and other materials to facilitate collaboration within the business group. As members of the Identity team, all Identity users have the following permissions:
+
+** (specific identity permission)
+** (deployment permission from Engineering)
+** Design Center Developer
+** Exchange Viewer
+
+== Permissions Structure
+
+In the Acme organization, Acme is the parent team. Engineering is its child team; as such, its members inherit Acme’s permissions but can also have their own, adminstrator-assigned, specific permissions. Within Engineering, the DevOps and Identity teams inherit permissions from both Acme and Engineering in addition to their own specific permissions, based on the needs of their team members.
+
+Each team has a team maintainer who can add new users to their own team. If you have the Administrator permission over your master organization, you can add users to any team and select whether they are members or maintainers. A team maintainer can only assign members to their specific team. If you add a user to a child team, the user is also added to any teams that are parents of their team. Team maintainers can also designate new maintainers for teams they manage.
+
+=== Create a Child Team
+
+If you have the Administrator permission or are a team maintainer, you can create child teams within your team. The child team inherits permissions from its parent team, but you configure additional, specific permissions to it.
+
+To create a child team in the Teams feature interface:
+
+. In *Access Management*, select *Teams*.
+. Select *Create Team*.
+. Enter a unique and intuitive name for your child team.
+. Select a parent team.
+. Select *Save*.
+
+The child team appears under its parent team in the list of teams.
+
+=== Configure Permissions for Your Team
+
+If you have the Administrator permission in a specific business group but not your entire organization, you can modify permissions only for the teams within your business group. You can modify permissions for all teams in your organization only if you have the Administrator permission over the whole organization.
+
+To configure permissions for teams  in the Teams feature interface:
+
+. In *Access Management*, select *Teams*.
+. Select the team for which you want to configure permissions.
+. Select the *Permissions* tab.
+. Select the permissions that you want to add, and then select *Next*.
+. Select the business groups and environments to which you want to apply the permissions, and then select *Review*.
+. Select *Add Permissions*.
+
+=== Add Users to a Team
+
+If you have the Administrator permission or are a team maintainer, you can add members to existing teams using three methods:
+
+* The Teams feature interface
+* Sending an invitation to a new user via email
+* External group mapping (for customers with SSO configured via SAML only)
+
+To add a user in the Teams feature interface:
+
+. In *Access Management*, select the *Teams* tab.
+. In the *Teams* page, select the team to which you want to add a user.
+. Select *Add members*.
+. Select the name of each user you want to add to the team.
+. Select the role that you want to assign to each user: member or maintainer.
+. Select *Add member*.
+
+The user is added to the team and receives the team’s permissions.
+
+For more information about inviting a user to an existing team via email, see xref:<topic that talks about email invites>.adoc[insert title of that section here].
+
+For more information about external group mappings, see xref:<topic that talks about external group mappings>.adoc[insert title of that section here].
+
+== Grant Permissions to Individual Users
+
+If you have the Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:user-permissions.adoc#grant-permissions-to-an-individual-user[Grant Permissions to Individual Users].
+
+== See Also
+
+xref:permissions-by-product.adoc[Available Permissions by Product]
+
+xref:user-permissions.adoc#grant-permissions-to-an-individual-user[Assigning Permissions to Individual Users]
