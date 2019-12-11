@@ -22,7 +22,7 @@ Imagine that your organization, Acme, includes a team called Engineering that co
 
 Using the Teams feature, you can structure your users and permissions in the following way:
 
-
+image::access-management-teams-hierarchy.png[]
 
 The user teams shown here are defined as follows:
 
