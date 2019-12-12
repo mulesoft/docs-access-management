@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 [WARNING]
-The Roles feature in Access Management was deprecated in December 2019. Using the Teams feature, users are now assigned permissions instead of roles. For more information, see the xref:access-management::roles-to-teams-transition.adoc[Roles to Teams Transition] documentation or contact your Customer Success Manager to determine how you can migrate to the Teams feature in Access Management.
+The Roles feature in Access Management was deprecated in December 2019. Using the xref:teams.adoc[Teams] feature, users are now assigned permissions instead of roles. For more information, see the xref:access-management::roles-to-teams-transition.adoc[Roles to Teams Transition] documentation or contact your Customer Success Manager to determine how you can migrate to the Teams feature in Access Management.
 
 To manage roles and permissions within Anypoint Platform, you must have the Organization Administrators role. To manage user permissions for an API version, you must have the API Versions Owner role.
 

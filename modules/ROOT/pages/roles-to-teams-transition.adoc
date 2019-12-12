@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The Roles feature was deprecated in December 2019. You must transition your legacy roles to the new Teams feature to ensure your users have correct permissions.
+The Roles feature was deprecated in December 2019. You must transition your legacy roles to the new xref:teams.adoc[Teams] feature to ensure your users have correct permissions.
 
 To switch from Roles to Teams:
 
@@ -25,5 +25,5 @@ To switch from Teams to Roles:
 
 == See also
 
-* xref:teams-structure.adoc[Manage User Access Using Teams]
+* xref:teams.adoc[Manage User Access Using Teams]
 * xref:permissions-by-product.adoc[Available Permissions by Product]
