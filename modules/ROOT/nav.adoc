@@ -7,7 +7,7 @@
 * xref:environments.adoc[Environments]
 * xref:user-permissions.adoc[User Permissions]
  ** xref:roles-to-teams-transition.adoc[Switch from Roles to Teams]
- ** xref:teams-structure.adoc[Teams]
+ ** xref:teams.adoc[Teams]
  ** xref:roles.adoc[Roles]
  ** xref:permissions-by-product.adoc[Available Permissions by Product]
 * xref:connected-apps-overview.adoc[About Connected Apps]
