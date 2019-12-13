@@ -34,7 +34,6 @@ This team is one of two child teams under the Engineering team. The Identity tea
 
 == See Also
 
- xref:permissions-by-product.adoc[Available Permissions by Product]
-
+* xref:permissions-by-product.adoc[Available Permissions by Product]
 * xref:user-permissions.adoc#grant-permissions-to-an-individual-user[Assigning Permissions to Individual Users]
 * xref:teams.adoc[Teams]
