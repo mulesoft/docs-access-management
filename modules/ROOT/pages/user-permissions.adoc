@@ -4,23 +4,27 @@ include::_attributes.adoc[]
 endif::[]
 
 [WARNING]
-The Roles feature in Access Management was deprecated in December 2019. Using the Teams feature, users are now assigned permissions instead of roles. For more information, see the xref:access-management::roles-to-teams-transition.adoc[Roles to Teams Transition] documentation or contact your Customer Success Manager to determine how you can migrate to the Teams feature in Access Management.
+The Roles feature in Access Management will be deprecated 6 months after GA. Using the Teams feature, users are now assigned permissions instead of roles. For more information, see the xref:access-management::roles-to-teams-transition.adoc[Roles to Teams Transition] documentation or contact your Customer Success Manager to determine how you can migrate to the Teams feature in Access Management.
 
-Access Management currently provides two ways of managing permissions for users: teams and roles. The xref:teams.adoc[Teams] feature enables you to manage user permissions by assigning them to groups that mimic the structure of your organization. The xref:roles.adoc[Roles] feature allows you to assign pre-defined sets of permissions to users.
+Access Management currently provides three ways of managing permissions for users: teams, roles, and individual permissions. The xref:teams.adoc[Teams] feature enables you to manage user permissions by assigning them to groups that mimic the structure of your organization. The xref:roles.adoc[Roles] feature allows you to assign pre-defined sets of permissions to users.
+
+For more information on transitioning your organization from roles to teams, see xref:roles-to-teams-transition.adoc[Switch to Teams from Roles].
+
+You can still grant individual permissions to users outside of both teams and roles.
 
 == Grant Permissions to an Individual User
 
-If you have the Administrator permission over your master organization, you can grant permissions to individual users outside of the Teams structure.
+If you have the Organization Administrator role or the Administrator permission over your master organization, you can grant permissions to individual users outside of the Teams or Roles structures.
 
 To grant permissions to an individual user:
 
 . In *Access Management*, select *Users*.
 . Select the user whose permissions you want to modify.
-. Select the product that contains the permission you want to add. // For more information about the permissions that are available across Anypoint Platform, see xref:permissions-by-product.adoc[Permissions by Product].
-. If you want to grant the user permissions that apply across the current business group:
+. Select the product that contains the permission you want to add. For more information about the permissions that are available across Anypoint Platform, see xref:permissions-by-product.adoc[Permissions by Product].
+* If you want to grant the user permissions that apply across the current business group:
 .. Select the permissions from the top *Permission(s)* drop-down.
 .. Select the + button.
-. If you want to apply a permission only across a specific environment:
+* If you want to apply a permission only across a specific environment:
 .. Select the environments using the *Environments* drop-down.
 .. Select the permissions from the *Permission(s)* drop-down that is located next to the *Environment(s)* drop-down.
 .. Select the + button.

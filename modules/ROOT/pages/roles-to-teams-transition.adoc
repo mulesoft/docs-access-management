@@ -3,27 +3,24 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The Roles feature was deprecated in December 2019. You must transition your legacy roles to the new xref:teams.adoc[Teams] feature to ensure your users have correct permissions.
+The Roles feature will be replaced by Teams after 6 months after general availability (GA). You must transition your legacy roles to the new Teams feature to get all of the benefits of the Teams feature.  Legacy roles are available within the business group view.
 
-To switch from Roles to Teams:
+For every role that is defined by Anypoint Platform, a corresponding permission is available. If you use custom roles, you may need to assign multiple permissions to recreate the custom role. For more information on available permissions in Anypoint Platform, see xref:permissions-by-product.adoc[Permissions by Product].
 
-. In *Access Management*, select <page>.
-. In the banner on the <page> page, select *Learn More*.
-. Select *Get Started*.
-. ...etc
+// To switch from Roles to Teams:
+
+// . In *Access Management*, select <page>.
+// . In the banner on the <page> page, select *Learn More*.
+// . Select *Get Started*.
+// . ...etc
 
 == Switch from Teams to Roles
 
 Before the Roles feature reaches end of life, you can switch your organization’s permissions structure from the Teams structure back to the Roles structure.
 
 [WARNING]
-Using the Roles feature should be a temporary measure as you finalize the optimal team structure for your organization. When the Roles feature is no longer available, your organization is adopts the Teams structure automatically. To ensure there are no lapses in user permissions, we recommend keeping the Teams feature as your primary permissions structure.
+Using the Roles feature should be a temporary measure as you finalize the optimal team structure for your organization. The Roles feature will be unavailable 6 months after the Teams feature is introducted. When the Roles feature is no longer available, your organization is adopts the Teams structure automatically. To ensure there are no lapses in user permissions, we recommend keeping the Teams feature as your primary permissions structure.
 
-To switch from Teams to Roles:
+// To switch from Teams to Roles:
 
-. tbd
-
-== See also
-
-* xref:teams.adoc[Manage User Access Using Teams]
-* xref:permissions-by-product.adoc[Available Permissions by Product]
+// . tbd
