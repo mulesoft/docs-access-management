@@ -1,0 +1,40 @@
+= Example Teams Structure
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Imagine that your organization, Acme, includes a team called Engineering that contains smaller teams that focus on building specific components. The Identity and DevOps teams are specialized  teams within Engineering.
+
+Using the Teams feature, you can structure your users and permissions in the following way:
+
+image::access-management-teams-hierarchy.png[]
+
+The user teams shown here are defined as follows:
+
+* Acme +
+This team is your organization and parent team, and every user in your organization is a member. By default, the team’s name is Everyone at Acme. You can set your permissions such that all Acme users can easily collaborate within your organization by creating new projects in Anypoint Design Center and viewing assets in Anypoint Exchange. To do this, you must configure the following permissions for the Everyone at Acme team:
+** Design Center Developer
+** Exchange Viewer
+* Engineering +
+This team is the first child team of the Acme team. This team includes all of Acme’s engineers, but it excludes Acme’s other members such as Marketing and Partner teams. The Engineering team inherits permissions from the Everyone at Acme team, but you can give it additional permissions as needed. You can set permissions that allow the members of the Engineering team to deploy code to pre-production environments such as Sandbox and Design, but you can exclude permissions to deploy to production. To do this, you must configure the following permissions for the Engineering team:
+** Deploy API Proxies (applicable to Sandbox and Design environments)
+** Design Center Developer
+** Exchange Viewer
+* DevOps +
+This team is one of two child teams under the Engineering team. The DevOps team is a group of specialized engineers who manage production code across all engineering teams. Unlike the parent Engineering team, you can give the DevOps team permission to manage code in the production environment in addition to pre-production branches. To do this, you must configure the following permissions for the DevOps team:
+** Deploy API Proxies (applicable to Sandbox, Design, and Production environments)
+** Design Center Developer
+** Exchange Viewer
+* Identity +
+This team is one of two child teams under the Engineering team. The Identity team is responsible for managing projects, assets, and other materials in its designated business groups. As a child of the Engineering team, the Identity team can still deploy code to pre-production environments, but unlike the DevOps team, members do not need to deploy to production. You can give this team permission to manage Audit Log and Authentication service business groups but not the entire organization. To do this, you must configure the following permissions for the Identity team:
+** Administrator (applicable to Audit Log and Authorization Service business groups)
+** Deploy API Proxies (applicable to Sandbox and Design environments)
+** Design Center Developer
+** Exchange Viewer
+
+== See Also
+
+ xref:permissions-by-product.adoc[Available Permissions by Product]
+
+* xref:user-permissions.adoc#grant-permissions-to-an-individual-user[Assigning Permissions to Individual Users]
+* xref:teams.adoc[Teams]
