@@ -19,7 +19,7 @@ For every role that is defined by Anypoint Platform, a corresponding permission 
 Before the Roles feature reaches end of life, you can switch your organization’s permissions structure from the Teams structure back to the Roles structure.
 
 [WARNING]
-Using the Roles feature should be a temporary measure as you finalize the optimal team structure for your organization. The Roles feature will be unavailable 6 months after the Teams feature is introducted. When the Roles feature is no longer available, your organization is adopts the Teams structure automatically. To ensure there are no lapses in user permissions, we recommend keeping the Teams feature as your primary permissions structure.
+Using the Roles feature should be a temporary measure as you finalize the optimal team structure for your organization. The Roles feature will be unavailable 6 months after the Teams feature is introduced. When the Roles feature is no longer available, your organization is adopts the Teams structure automatically. To ensure there are no lapses in user permissions, we recommend keeping the Teams feature as your primary permissions structure.
 
 // To switch from Teams to Roles:
 

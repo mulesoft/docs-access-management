@@ -6,5 +6,3 @@ endif::[]
 The master permissions list will be available when the Teams feature is available for beta testing.
 
 For more information on permissions, you can view a description of each available permission in the Teams user interface by hovering over the information icon next to each available permission.
-
-Note that some permissions are only available for specific products, APIs, and environments.
