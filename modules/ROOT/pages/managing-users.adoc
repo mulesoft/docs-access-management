@@ -17,8 +17,10 @@ Configuring SAML for SSO involves:
 * The assertion consumer service must be set to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/receive-id+`.
 
 [NOTE]
-If you are using the Anypoint Platform EU Control Plane, the endpoint is `+https://eu1.anypoint.mulesoft.com/accounts/login/receive-id+`.
-If you are using the Anypoint Platform Gov Cloud, the endpoint is  `+https://gov.anypoint.mulesoft.com/accounts/login/receive-id+`
+====
+* If you are using the Anypoint Platform EU Control Plane, the endpoint is `+https://eu1.anypoint.mulesoft.com/accounts/login/receive-id+`. +
+* If you are using the Anypoint Platform Gov Cloud, the endpoint is  `+https://gov.anypoint.mulesoft.com/accounts/login/receive-id+`
+====
 
 == Configure SAML in Identity Management
 
