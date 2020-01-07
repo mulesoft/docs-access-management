@@ -10,6 +10,7 @@
  ** xref:connected-apps-org-admin.adoc[Connected Apps for Organization Administrators]
  ** xref:connected-apps-developers.adoc[Connected Apps for Developers]
  ** xref:connected-apps-end-users.adoc[Connected Apps for End Users]
+* xref:external-org-access.adoc[External Access]
 * xref:external-identity.adoc[About Identity Management]
  ** xref:sso-prerequisites-about.adoc[About SSO Prerequisites and Limitations]
  ** xref:external-identity-index.adoc[External Identity Configurations]

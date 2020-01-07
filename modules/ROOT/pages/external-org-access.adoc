@@ -1,0 +1,41 @@
+= External Organization Access
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Organizations that have their own, separate domains in Anypoint Platform can share resources with one another using external access lists of trusted organizations.
+This enables your organization to maintain an independent Anypoint Platform organization without keeping resources isolated from external organizations that have partnerships or shared projects.
+
+As an organization administrator, you can specify which external organizations can share resources with your organization.
+In turn, an external organization that has your organization's unique domain name can add your organization to its list of trusted organizations so that your organization can share assets with it.
+
+When an external organization elects to share resources with your organization, the external organization does not receive any information about your organization.
+Additionally, external organizations must have your organization's unique domain name to share resources.
+
+You can view your organization's unique domain name in the *External Access* page in *Access Management*.
+You should share your organization's unique domain name with another organization only if you trust that organization.
+
+== Add an Organization as a Trusted Organization
+
+When you add an organization to your list of trusted organizations, that organization can share resources with your organization.
+The external organization can revoke your organization's access to its resources anytime.
+You should add an organization to your list of trusted organizations only if you trust the external organization.
+
+To add an external organization to your list of trusted organizations:
+
+. From the *Access Management* home page, click the *External Access* tab.
+. In the *External Access* page, click *Add organization*.
+. Enter the unique domain name of the organization from which you want to receive resources. If you do not know the domain name, contact the organization administrator for that organization.
+. Click *Add*.
+
+== Delete an Organization from your Trusted Organizations
+
+When you remove an organization from your list of trusted organizations, that organization can no longer share resources with your organization.
+Also, your organization can no longer access resources that were previously shared by that organization.
+
+To remove an external organization from your list of trusted organizations:
+
+. From the *Access Management* home page, click the *External Access* tab.
+. In the *External Access* page, select *...* next to the name of the organization you want to remove.
+. Click *Remove organization*.
+. Click *Yes, remove*.
