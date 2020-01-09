@@ -10,10 +10,8 @@ As an organization administrator, you can specify which external organizations c
 In turn, an external organization that has your organization's unique domain name can add your organization to its list of trusted organizations so that your organization can share assets with it.
 
 When an external organization elects to share resources with your organization, the external organization does not receive any information about your organization.
-Additionally, external organizations must have your organization's unique domain name to share resources.
 
 You can view your organization's unique domain name in the *External Access* page in *Access Management*.
-You should share your organization's unique domain name with another organization only if you trust that organization.
 
 == Add an Organization as a Trusted Organization
 
@@ -25,7 +23,7 @@ To add an external organization to your list of trusted organizations:
 
 . From the *Access Management* home page, click the *External Access* tab.
 . In the *External Access* page, click *Add organization*.
-. Enter the unique domain name of the organization from which you want to receive resources. If you do not know the domain name, contact the organization administrator for that organization.
+. Enter the unique domain name of the organization whose resources you want to view. If you do not know the domain name, contact the organization administrator for that organization.
 . Click *Add*.
 
 == Delete an Organization from your Trusted Organizations
