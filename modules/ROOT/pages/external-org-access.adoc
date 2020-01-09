@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 Organizations that have their own, separate domains in Anypoint Platform can share resources with one another using external access lists of trusted organizations.
-This enables your organization to maintain an independent Anypoint Platform organization without keeping resources isolated from external organizations that have partnerships or shared projects.
+This enables your organization to maintain an independent Anypoint Platform organization without keeping resources isolated from external organizations that have partnerships or shared projects. For example, when you add an external organization to your external access list, that organization can share resources with your organization through Anypoint Exchange. 
 
 As an organization administrator, you can specify which external organizations can share resources with your organization.
 In turn, an external organization that has your organization's unique domain name can add your organization to its list of trusted organizations so that your organization can share assets with it.
