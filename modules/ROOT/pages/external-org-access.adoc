@@ -26,7 +26,7 @@ To add an external organization to your list of trusted organizations:
 . Enter the unique domain name of the organization whose resources you want to view. If you do not know the domain name, contact the organization administrator for that organization.
 . Click *Add*.
 
-== Delete an Organization from your Trusted Organizations
+== Remove an Organization from your Trusted Organizations
 
 When you remove an organization from your list of trusted organizations, that organization can no longer share resources with your organization.
 Also, your organization can no longer access resources that were previously shared by that organization.
