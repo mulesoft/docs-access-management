@@ -11,9 +11,9 @@ Audit logs have a retention period of six years. Download your logs periodically
 
 == Access Audit Logging
 
-Users belonging to the *Organization Administration* role or the *Audit Log Viewer* role on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
+Users belonging to the Organization Administrator role or the Audit Log Viewer role on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
 
-The audit log UI is embedded in Access Management. If you are not an *Organization Administrator*, but you have the *Audit Log Viewer* role, you can only see the audit log UI under Access Management.
+The audit log UI is embedded in Access Management.
 
 . Sign into Anypoint Platform and click *Access Management*. +
 You can also press the `Escape` key on your keyboard to view the Anypoint Platform navigation menu.
