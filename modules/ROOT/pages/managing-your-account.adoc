@@ -20,14 +20,14 @@ A form appears, where you can provide your contact information and create a user
 ** Dashes
 ** Underscores
 * Password - Must be at least six characters in length and can contain only the following: +
-** Upper and lower case characters 
+** Upper and lower case characters
 ** Numbers
 ** Non-alphanumeric symbols
 * Company - Can be any name unless you were invited to join an existing organization, in which case the company name is already set.
 +
 Anypoint Platform creates a new master organization using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account can be associated with only one organization.
 
-* Click the terms of service link to read the Anypoint Platform Trial License agreement, then check the box to agree to the terms of service. 
+* Click the terms of service link to read the Anypoint Platform Trial License agreement, then check the box to agree to the terms of service.
 . Click the *I'm not a Robot* Captcha's checkmark and wait for validation.
 +
 [NOTE]
@@ -73,7 +73,7 @@ You can use an existing account to join an existing organization once you receiv
 * Admin: An account with the organization administrator role associated to a different organization.
 * Owner: An organization owner account for a different organization.
 
-After clicking the link in the invitation, you have one week to choose the account to use to join the organization. 
+After clicking the link in the invitation, you have one week to choose the account to use to join the organization.
 
 [NOTE]
 If the account you want to use is already associated with another master organization, an exclamation mark is displayed next to it. This means that additional steps are needed before migrating the account to a new organization.
@@ -133,7 +133,7 @@ After selecting this account, entering its corresponding password, and clicking 
 
 However, if the organization your account owns has other members, Anypoint Platform won't allow you to migrate to *MuleSoft*.
 
-To _free_ your account from the organization you own, open a support ticket at https://support.mulesoft.com[https://support.mulesoft.com]. Provide the following information:
+To _free_ your account from the organization you own, open a support ticket at https://help.mulesoft.com[https://help.mulesoft.com]. Provide the following information:
 
 * The `userId` and `userName` of another user within the organization you own to promote to owner.
 * The `Organization Name` and `Organization Id` of said organization. +
@@ -157,20 +157,20 @@ You can modify your contact information, change your password, and see a list of
 
 == Reset Your Password
 
-. Go to the Anypoint Platform sign in screen. 
-. Click the *Forgot your username or password* link. 
+. Go to the Anypoint Platform sign in screen.
+. Click the *Forgot your username or password* link.
 . In the *Forgot your credentials* form, enter your username. +
-A link to create a new password is emailed to you. 
-. Click the reset password link in the email. 
+A link to create a new password is emailed to you.
+. Click the reset password link in the email.
 . In the *Reset your password* form, enter a new password and click *Reset Password*.
 
 == Forgot User Name
 
 Go to the Anypoint Platform sign in screen.
- 
-. Click the *Forgot your username or password* link. 
+
+. Click the *Forgot your username or password* link.
 . In the *Forgot your credentials* form, enter the email address you used for your Anypoint Platform account, then click *Request credentials*. +
-You receive an email from Anypoint Platform with a list of user names associated with your email address. 
+You receive an email from Anypoint Platform with a list of user names associated with your email address.
 
 == Upgrade Your Account
 
