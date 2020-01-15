@@ -31,7 +31,7 @@ If your organization uses external identity management, log into your account at
 
 === How do I delete my account?
 
-Please create a https://support.mulesoft.com[MuleSoft support case] for account deletion or migration.
+Please create a https://help.mulesoft.com[MuleSoft support case] for account deletion or migration.
 
 == Account Invitations
 
