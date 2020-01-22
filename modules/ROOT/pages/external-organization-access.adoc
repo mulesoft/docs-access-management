@@ -23,7 +23,7 @@ To add an external organization to your list of trusted organizations:
 
 . From the *Access Management* home page, click the *External Access* tab.
 . In the *External Access* page, click *Add organization*.
-. Enter the unique domain name of the organization whose resources you want to view. If you do not know the domain name, contact the organization administrator for that organization.
+. Enter the unique domain name of the organization whose resources you want to access. If you do not know the domain name, contact the organization administrator for that organization.
 . Click *Add*.
 
 Note that the external organization must add your organization to its external access list before you can share resources.
