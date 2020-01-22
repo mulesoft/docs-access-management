@@ -30,11 +30,11 @@ Note that the external organization must add your organization to its external a
 
 == Remove an Organization from your Trusted Organizations
 
-When you remove an organization from your list of trusted organizations: 
+When you remove an organization from your list of trusted organizations:
 
 * Your organization and the external organization can no longer share resources with each other.
-* Your organization can no longer access resources that were previously shared by that organization. 
-* The external organization also loses access to resources that your organization shared. 
+* Your organization can no longer access resources that were previously shared by that organization.
+* The external organization also loses access to resources that your organization shared.
 
 To remove an external organization from your external access list:
 
