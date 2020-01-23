@@ -3,42 +3,37 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Organizations that have their own, separate domains in Anypoint Platform can share resources with one another using external access lists.
-This enables your organization to maintain an independent Anypoint Platform organization without keeping resources isolated from external organizations that have partnerships or shared projects. For example, if your organization and another organization add each other to their external access lists, both organizations can share resources with each other through Anypoint Exchange.
+The External Access feature allows separate organizations to collaborate in the Anypoint Platform. For example, organizations can share API specifications, connectors, and other assets in the Anypoint Exchange with each other, without making them public.
 
-As an organization administrator, you can specify which external organizations can share resources with your organization.
-In turn, an external organization that has your organization's unique domain name can add your organization to its external access list so that your organization can share assets with it. Both organizations must have one another on their external access lists to share resources.
+Administrators control which organizations their users can collaborate with by maintaining a list of trusted organizations in Access Management. Adding an entry to this list means that you trust the other organization and its users, and you acknowledge that you are enabling your users to grant permission to and be granted permissions by the other organization.
 
-When an external organization elects to share resources with your organization, the external organization does not receive any information about your organization. When resources are shared, they are shared between organizations and not individual users. The user permissions required to use shared resources cannot be modified by external organizations.
+Trust must be established both ways before permissions can be granted. For the users of Organization A to share with the users of Organization B, Organization A must list Organization B as a trusted organization, and Organization B must also list Organization A. If either Organization A or Organization B removes the other, all shared permissions are revoked.
 
-You can view your organization's unique domain name in the *External Access* page in *Access Management*.
+Permissions shared between organizations are granted at the organization level. For example, if Organization A grants Organization B permission to view an asset, it grants that permission to every user in Organization B. Organization A does not receive any information about Organization B's users, sub-organizations, or internal layout.
 
-== Add an Organization as a Trusted Organization
+== Add a New Trusted Organization
 
-When you add an organization to your list of trusted organizations, that organization can share resources with your organization.
-The external organization can revoke your organization's access to its resources anytime.
-You should add an organization to your list of trusted organizations only if you trust the external organization.
+When you add a new organization to your external access configuration, you establish one half of a trust relationship. After the other organization adds you to its configuration, both organizations are able to share permissions with each other.
+
+To add an organization, you must know its Anypoint xref:access-management::organization.adoc#manage-master-organization-settings[domain]. Domains are human-readable names that uniquely identify an Anypoint Platform organization. Ask the administrators of the other organization what theirs is, and be prepared to share your domain with them so they can add your organization to their list.
+You can view your organization's unique domain name in the *External Access* page in *Access Management*.
+
 
 To add an external organization to your list of trusted organizations:
 
-. From the *Access Management* home page, click the *External Access* tab.
-. In the *External Access* page, click *Add organization*.
-. Enter the unique domain name of the organization whose resources you want to access. If you do not know the domain name, contact the organization administrator for that organization.
-. Click *Add*.
+. From the *Access Management* home page, click the *External Access* tab.
+. In the *External Access* page, click *Add organization*.
+. Enter the unique domain name of the organization you want to share permissions with.
+. Click Add.
 
-Note that the external organization must add your organization to its external access list before you can share resources. 
 
-== Remove an Organization from your Trusted Organizations
+== Remove a Trusted Organization
 
-When you remove an organization from your list of trusted organizations:
+When you remove a trusted organization from your external access configuration, both organizations will lose all existing shared permissions. In addition, no new permissions can be granted until a trust relationship is established again.
 
-* Your organization and the external organization can no longer share resources with each other.
-* Your organization can no longer access resources that were previously shared by that organization.
-* The external organization also loses access to resources that your organization shared.
+To remove a trusted organization from your external access list:
 
-To remove an external organization from your external access list:
-
-. From the *Access Management* home page, click the *External Access* tab.
-. In the *External Access* page, select *...* next to the name of the organization you want to remove.
-. Click *Remove organization*.
-. Click *Yes, remove*.
+. From the *Access Management* home page, click the *External Access* tab.
+. In the *External Access* page, select *…* next to the name of the organization you want to remove.
+. Click *Remove organization*.
+. Click *Yes, remove*.
