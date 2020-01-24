@@ -9,7 +9,7 @@ This topic describes the prerequisites and limitations for using SSO within Anyp
 
 Before using SSO, ensure that you have performed the following:
 
-* Configure your identity provide to send the username and email in your assertion.
+* Configure your identity provider to send the username and email in your assertion.
 * Configure Anypoint Platform to map the username and email to the expected attribute name. If you do not configure this setting, login fails with a 403 unauthorized error message.
 * Configure the SAML assertion of the identity provider as signed, but unencrypted. The identity provider issues the SAML assertion as an XML file which is sent through HTTP as a POST request.
 
