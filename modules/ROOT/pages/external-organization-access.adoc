@@ -3,20 +3,20 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The External Access feature allows separate organizations to collaborate in the Anypoint Platform. For example, organizations can share API specifications, connectors, and other assets in the Anypoint Exchange with each other, without making them public.
+The External Access feature enables separate organizations to collaborate in Anypoint Platform. For example, organizations can share API specifications, connectors, and other assets in Anypoint Exchange with each other, without making them public.
 
 Administrators control which organizations their users can collaborate with by maintaining a list of trusted organizations in Access Management. Adding an entry to this list means that you trust the other organization and its users, and you acknowledge that you are enabling your users to grant permission to and be granted permissions by the other organization.
 
-Trust must be established both ways before permissions can be granted. For the users of Organization A to share with the users of Organization B, Organization A must list Organization B as a trusted organization, and Organization B must also list Organization A. If either Organization A or Organization B removes the other, all shared permissions are revoked.
+Trust must be established both ways before permissions can be granted. For the users of Organization A to share with the users of Organization B, Organization A must list Organization B as a trusted organization, and Organization B must likewise list Organization A. If either Organization A or Organization B removes the other, all shared permissions are revoked.
 
 Permissions shared between organizations are granted at the organization level. For example, if Organization A grants Organization B permission to view an asset, it grants that permission to every user in Organization B. Organization A does not receive any information about Organization B's users, sub-organizations, or internal layout.
 
 == Add a New Trusted Organization
 
-When you add a new organization to your external access configuration, you establish one half of a trust relationship. After the other organization adds you to its configuration, both organizations are able to share permissions with each other.
+When you add a new organization to your external access configuration, you establish one half of a trust relationship. After the other organization adds yours to its configuration, both organizations can share permissions with each other.
 
-To add an organization, you must know its Anypoint xref:access-management::organization.adoc#manage-master-organization-settings[domain]. Domains are human-readable names that uniquely identify an Anypoint Platform organization. Ask the administrators of the other organization what theirs is, and be prepared to share your domain with them so they can add your organization to their list.
-You can view your organization's unique domain name in the *External Access* page in *Access Management*.
+To add an organization to your configuration, you must know its Anypoint xref:access-management::organization.adoc#manage-master-organization-settings[domain]. Domains are human-readable names that uniquely identify an Anypoint Platform organization. Ask the administrators of the other organization what their domain is, and be prepared to share your domain with them so they can add your organization to their list in return.
+You can view your organization's unique domain name in the *External Access* page in Access Management.
 
 
 To add an external organization to your list of trusted organizations:
@@ -29,9 +29,9 @@ To add an external organization to your list of trusted organizations:
 
 == Remove a Trusted Organization
 
-When you remove a trusted organization from your external access configuration, both organizations will lose all existing shared permissions. In addition, no new permissions can be granted until a trust relationship is established again.
+When you remove a trusted organization from your external access configuration, both organizations lose all existing shared permissions. In addition, no new permissions can be granted until a trust relationship is reestablished.
 
-To remove a trusted organization from your external access list:
+To remove a trusted organization from your list of trusted organizations:
 
 . From the *Access Management* home page, click the *External Access* tab.
 . In the *External Access* page, select *…* next to the name of the organization you want to remove.
