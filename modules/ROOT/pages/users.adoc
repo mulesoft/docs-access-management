@@ -74,7 +74,7 @@ You cannot search for external users in other parts of Anypoint Platform because
 
 == See Also
 
-* xref:exchange::to-share-an-asset-with-a-user.adoc[To Share an Asset or Publish to a Portal]
+* xref:exchange::to-share-an-asset.adoc[To Share an Asset or Publish to a Portal]
 * xref:external-identity.adoc#managing-users[user management]
 * xref:external-identity.adoc#instructions-for-saml-configuration[SSO through a Third-party IdP]
 * xref:external-identity.adoc#configure-ldap[LDAP]
