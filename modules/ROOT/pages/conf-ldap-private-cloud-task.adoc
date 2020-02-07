@@ -87,7 +87,7 @@ Field that represents the email. For example, `jdoe@gmail.com`.
 +
 * First Name
 +
-Field that represents the First name. For example, `john.
+Field that represents the First name. For example, `john`.
 +
 Last Name
 +
