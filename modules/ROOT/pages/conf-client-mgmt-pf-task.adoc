@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-. Sign in to the master organization in Anypoint Platform with the *Organization Administrator* role.
+. Sign in to the master organization in Anypoint Platform with the organization administrator role.
 . In Anypoint Platform, click *Access Management*.
 . In the menu on the left, click *Client Providers*.
 . Click *Add Client Provider*, and then select PingFederate.
