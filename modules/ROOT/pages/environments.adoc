@@ -70,7 +70,7 @@ To change the client ID or client secret of an environment, you must contact you
 
 == Add an IdP to an Existing Environment
 
-If your organization administrator provides multiple identity providers, or IdPs, for your master organization, you can add them to existing environments as client providers.
+If your organization administrator provides multiple xref:managing-api-clients.adoc[identity providers], or IdPs, for your master organization, you can add them to existing environments as client providers. When you create a new API in an environment that has an IdP, the API receives the default client provider.
 
 To add an IdP to an existing environment:
 
@@ -81,6 +81,8 @@ To add an IdP to an existing environment:
 . Click *Update*.
 
 == Remove an IdP from an Environment
+
+When you remove a client provider from an environment, APIs that use that client provider still use the assigned client provider. However, you can no longer assign new APIs to that client provider.
 
 . Go to Access Management.
 . In the menu on the left, click *Environments*.
