@@ -3,7 +3,13 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-This topic provides an overview of client management on Anypoint Platform. As an API owner, you can apply an OAuth 2.0 policy to authenticate client applications that try to access your API. You need an OAuth provider to use an OAuth 2.0 policy. One of the following OAuth providers is recommended:
+This topic provides an overview of client management on Anypoint Platform. As an API owner, you can apply an OAuth 2.0 policy to authenticate client applications that try to access your API. You need an OAuth provider to use an OAuth 2.0 policy.
+
+Using the client management, you can configure several identity providers, or IdPs, to manage client credentials.
+Any IdPs you configure are available in the master organization.
+You can make them available to business group administrators to xref:environments.adoc#add-an-idp-to-an-existing-environment[associate the IdPs with different environments] depending on your organization's policies. 
+
+You can configure the following OAuth providers:
 
 * OpenAM version: 14
 * PingFederate versions: 6 - 8

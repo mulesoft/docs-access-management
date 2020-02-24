@@ -3,13 +3,12 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-. Log into the master Organization in Anypoint Platform as Administrator.
-. In Anypoint Platform, click Access Management > External Identity.
+. Sign in to the master organization in Anypoint Platform with the *Organization Administrator* role.
+. In Anypoint Platform, click *Access Management*.
+. In the menu on the left, click *Client Providers*.
+. Click *Add Client Provider*, and then select PingFederate.
 +
-image::select-openid-client-mgmt.png[height=310,width=452]
-. From Client Management, select PingFederate.
-+
-The Client Management PingFederate form appears.
+The *Add PingFederate client provider* page appears.
 +
 . Fill in the following required fields:
 +

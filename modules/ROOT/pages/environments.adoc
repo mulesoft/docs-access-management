@@ -30,7 +30,9 @@ To create a new environment or manage an existing environment:
 . From the left-hand menu, click *Environments*.
 . Click *Add Environment*.
 . Enter a name for the environment.
-. Select the environment type, then click *Create*.
+. Select the environment type.
+. Optionally, select at least one xref:managing-api-clients.adoc[client provider] for your environment.
+. Click *Create*.
 
 image::environments-85dc3.png[]
 
@@ -43,7 +45,11 @@ Depending on your CloudHub subscription, you may have restrictions on the number
 . From the left-hand menu, click *Environments*.
 . Click the name of the environment. You can perform one of the following actions:
 +
-* Enter a new name for the environment, then click *Update*.
+* Modify the environment:
+** Enter a new name for the environment.
+** Add at least one client provider.
++
+Click *Update* to save your changes.
 * Click *Delete* to delete the environment.
 
 == To View the Client ID and Client Secret for an Environment
@@ -61,3 +67,15 @@ To view the client ID and secret for your environment:
 --
 To change the client ID or client secret of an environment, you must contact your customer support representative.
 --
+
+== Add an IdP to an Existing Environment
+
+If your organization administrator provides multiple identity providers, or IdPs, for your master organization, you can add them to existing environments as client providers.
+
+To add an IdP to an existing environment:
+
+. Go to Access Management.
+. From the left-hand menu, click *Environments*.
+. Click the name of the environment.
+. In the Client Provider field, select at least one client provider.
+. Click *Update*.
