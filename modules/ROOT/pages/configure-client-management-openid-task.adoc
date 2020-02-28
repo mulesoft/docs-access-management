@@ -26,7 +26,7 @@ The following table contains examples of the URLs you need to supply, depending 
 | Token Introspection | {BASE URL}/introspect | {BASE URL}/introspect | {BASE URL}/introspect
 |===
 
-. Sign in to the master organization in Anypoint Platform with the organization administrator role.
+. Sign in to Anypoint Platform using an account that has the organization administrator role.
 . In Anypoint Platform, click *Access Management*.
 . In the menu on the left, click *Client Providers*.
 . Click *Add Client Provider*, and then select OpenID Connect Dynamic Client Registration.
