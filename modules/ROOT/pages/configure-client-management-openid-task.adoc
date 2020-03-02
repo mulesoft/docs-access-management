@@ -120,7 +120,7 @@ If you have configured an OpenID Connect provider for client management, Anypoin
 [NOTE]
 The Refresh token can be selected only if the authorization grant type is also selected.
 
-In addition to these scopes, if you have configured the Issuer field while setting up the OIDC Dynamic Client registration provider, Anypoint platform auto-populates the Anypoint Platform UI with all grant types supported by the provider. This includes grant types such as client credentials, password, etc.
+In addition to these scopes, if you configure the Issuer field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all grant types supported by the provider. This includes grant types such as client credentials, password, and so on. To verify the grant types your provider supports, check their discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. 
 
 
 == See Also
