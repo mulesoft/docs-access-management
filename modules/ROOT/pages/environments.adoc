@@ -32,6 +32,7 @@ To create a new environment or manage an existing environment:
 . Enter a name for the environment.
 . Select the environment type.
 . Optionally, select at least one xref:managing-api-clients.adoc[client provider] for your environment.
+. Optionally, if you added more than one client provider, click *Set as default* to designate a default client provider.
 . Click *Create*.
 
 image::environments-85dc3.png[]
@@ -48,6 +49,7 @@ Depending on your CloudHub subscription, you may have restrictions on the number
 * Modify the environment:
 ** Enter a new name for the environment.
 ** Add at least one client provider.
+** Designate a default client provider if the environment uses more than one client provider.
 +
 Click *Update* to save your changes.
 * Click *Delete* to delete the environment.
@@ -75,16 +77,20 @@ If your organization administrator provides multiple xref:managing-api-clients.a
 
 To add a client provider to an existing environment:
 
+. Log in to the Anypoint Platform as an administrator.
 . Go to Access Management.
 . In the menu on the left, click *Environments*.
 . Click the name of the environment.
-. In the Client Provider field, select at least one client provider.
+. In the *Client Provider* field, select at least one client provider.
+. If you added more than one client provider, click *Set as default* to designate a default client provider.
 . Click *Update*.
 
 [[remove-an-idp-from-an-environment]]
 == Remove a Client Provider from an Environment
 
-You can remove a client provider from an environment at any time. However, this may affect your APIs and other assets. For more information on how the removal of client providers affects APIs, see (topic on that).
+You can remove a client provider from an environment at any time.
+When you remove your default client provider from an environment that has more than one client provider, the next client provider is automatically named as your new default client provider.
+When you remove all external client providers from an environment, the Anypoint Platform client provider becomes the default client provider for that environment.
 
 . Go to Access Management.
 . In the menu on the left, click *Environments*.
