@@ -15,7 +15,7 @@ To obtain an API bearer token using a SAML assertion:
 +
 Record this response to use in the following step.
 
-. Obtain the bearer token by running the following `curl` command. Replace `<SAML_RESPONSE>` in this example with the SAML response you obtained in the previous step.
+. Obtain the bearer token by running the following `curl` command. Replace `<SAML_RESPONSE>` in this example with the SAML response you obtained in the previous step.SAML response needs to be base 64 encoded. 
 +
 ----
 curl -X POST \
