@@ -85,6 +85,8 @@ To add a client provider to an existing environment:
 . If you added more than one client provider, click *Set as default* to designate a default client provider.
 . Click *Update*.
 
+You can now configure client providers for APIs. 
+
 [[remove-an-idp-from-an-environment]]
 == Remove a Client Provider from an Environment
 
