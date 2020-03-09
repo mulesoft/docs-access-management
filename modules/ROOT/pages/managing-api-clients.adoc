@@ -21,7 +21,7 @@ To configure client management on Anypoint Platform for these providers, you mus
 == Delete a Client Provider
 
 [WARNING]
-Prior to deleting a client provider, ensure that you do not have assets or environments that depend on the client provider. For example, any APIs that depend on the client provider no longer have a way to authenticate user access.
+Prior to deleting a client provider, ensure that you do not have assets or environments that depend on the client provider. For example, any APIs that depend on the client provider can no longer authenticate user access.
 
 . Sign in to Anypoint Platform using an account that has the organization administrator role.
 . In Anypoint Platform, click *Access Management*.
