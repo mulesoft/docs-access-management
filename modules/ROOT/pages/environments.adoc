@@ -71,13 +71,13 @@ To change the client ID or client secret of an environment, you must contact you
 --
 
 [[add-an-idp-to-an-existing-environment]]
-== Add a Client Provider to an Existing Environment
+== Associate a Client Provider with an Existing Environment
 
 If your organization administrator provides multiple xref:managing-api-clients.adoc[client providers] for your organization, you can add them to existing environments.
 
-To add a client provider to an existing environment:
+To associate a client provider with an existing environment:
 
-. Log in to the Anypoint Platform as an administrator.
+. Sign in to Anypoint Platform using an account that has the organization administrator role.
 . Go to Access Management.
 . In the menu on the left, click *Environments*.
 . Click the name of the environment.
@@ -92,7 +92,7 @@ You can now configure client providers for APIs.
 
 You can remove a client provider from an environment at any time.
 When you remove your default client provider from an environment that has more than one client provider, the next client provider is automatically named as your new default client provider.
-When you remove all external client providers from an environment, the Anypoint Platform client provider becomes the default client provider for that environment.
+When you remove all external client providers from an environment, the built-in Anypoint Platform client provider becomes the default client provider for that environment.
 
 . Go to Access Management.
 . In the menu on the left, click *Environments*.
