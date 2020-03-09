@@ -50,7 +50,7 @@ The *Add OIDC client provider* page appears.
    **** The `Authorization:` header is included as part of the request only if the `Authorization Header` under *Advanced settings* is configured.
    **** The `client_id` request parameter that is passed is the same as the `client_id` passed in the `PUT` request payload.
    **** The `token_endpoint_auth_method` passed in the payload is always `client_secret_basic`.
-   **** Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client management*.
+   **** Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client Provider*.
    +
 This is an example of the payload for a `PUT` (update) request:
 +
