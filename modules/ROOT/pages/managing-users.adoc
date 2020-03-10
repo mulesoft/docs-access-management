@@ -74,7 +74,7 @@ Field name in the SAML `AttributeStatements` that maps to `Group`.
 +
 * *Require encrypted SAML assertions*
 +
-If enabled, we require that the SAML assertions sent from the IdP is encrypted following the guidelines mentioned in the xref:sso-prerequisites-about.adoc[Prerequisites].
+If enabled, the SAML assertions sent from the IdP must be encrypted and follow the guidelines mentioned in the xref:sso-prerequisites-about.adoc[Prerequisites].
 +
 . Click *Save*.
 +
