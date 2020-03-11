@@ -10,7 +10,7 @@ MuleSoft verifies support in Anypoint Platform for Salesforce, Okta, and OpenAM 
 [NOTE]
 ====
 * Updates of clients created through this integration are not currently supported.
-* Deletion of clients created through this integration is supported with the limitation that the client is removed from Anypoint Platform but will still exist in the OpenID Connect Authorization Server and API policies will still consider them valid until the cached token expires.
+* Deletion of clients created through this integration is supported with the limitation that the client is removed from Anypoint Platform but still exists in the OpenID Connect authorization server and API policies still consider them valid until the cached token expires.
 * To enable this functionality you must opt-in by selecting the checkbox *Enable client deletion in Anypoint* under the *Advanced* settings link.
 ====
 
@@ -26,14 +26,14 @@ The following table contains examples of the URLs you need to supply, depending 
 | Token Introspection | {BASE URL}/introspect | {BASE URL}/introspect | {BASE URL}/introspect
 |===
 
-. Sign in to Anypoint Platform using an account that has the organization administrator role.
+. Log in to Anypoint Platform using an account that has the organization administrator role.
 . In Anypoint Platform, click *Access Management*.
 . In the menu on the left, click *Client Providers*.
-. Click *Add Client Provider*, and then select OpenID Connect Dynamic Client Registration.
+. Click *Add Client Provider*, and then select *OpenID Connect Dynamic Client Registration*.
 +
 The *Add OIDC client provider* page appears.
 +
-. After obtaining values from your identity provider’s configuration, fill in the following required fields in each section:
+. After obtaining values from your identity provider’s configuration, complete the following required fields in each section:
 +
 * *Dynamic Client Registration*
  ** *Issuer*: URL that the OpenID provider asserts is its trusted issuer.
@@ -52,7 +52,7 @@ The *Add OIDC client provider* page appears.
    **** The `token_endpoint_auth_method` passed in the payload is always `client_secret_basic`.
    **** Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client Provider*.
    +
-This is an example of the payload for a `PUT` (update) request:
+This is an example of the payload for a PUT (update) request:
 +
 ----
 PUT /oauth2/connect/register/{{client_id}}
@@ -76,7 +76,7 @@ Authorization: Bearer access-token
 `client_name` in the request maps to `name` on the inbound side. +
 The authorization method depends on the grant type. For example, if the grant type is `implicit`, the `id_token` and `token` are returned.
 +
-This is an example of the `DELETE` request header:
+This is an example of the DELETE request header:
 +
 ----
 DELETE /oauth2/connect/register/{{client_id}}

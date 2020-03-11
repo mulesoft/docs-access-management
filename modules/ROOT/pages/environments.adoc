@@ -25,8 +25,8 @@ You cannot grant users access to an environment directly. To grant a user access
 
 To create a new environment or manage an existing environment:
 
-. Sign into Anypoint Platform with an Organization Administrators role.
-. Go to Access Management.
+. Log in to Anypoint Platform using an account that has the organization administrator role.
+. Navigate to Access Management.
 . In the menu on the left, click *Environments*.
 . Click *Add Environment*.
 . Enter a name for the environment.
@@ -42,7 +42,7 @@ Depending on your CloudHub subscription, you may have restrictions on the number
 
 == To Modify or Delete an Existing Environment
 
-. Go to Access Management.
+. Navigate to Access Management.
 . In the menu on the left, click *Environments*.
 . Click the name of the environment. You can perform one of the following actions:
 +
@@ -61,7 +61,7 @@ Each environment has a client ID and a client secret used for authentication. Yo
 To view the client ID and secret for your environment:
 
 . Log in to the Anypoint Platform as an administrator.
-. Go to Access Management.
+. Navigate to Access Management.
 . In the menu on the left, click *Environments*.
 . Click the name of the environment whose client ID/secret you want to view.
 
@@ -77,8 +77,8 @@ If your organization administrator provides multiple xref:managing-api-clients.a
 
 To associate a client provider with an existing environment:
 
-. Sign in to Anypoint Platform using an account that has the organization administrator role.
-. Go to Access Management.
+. Log in to Anypoint Platform using an account that has the organization administrator role.
+. Navigate to *Access Management*.
 . In the menu on the left, click *Environments*.
 . Click the name of the environment.
 . In the *Client Provider* field, select at least one client provider.
@@ -94,8 +94,8 @@ You can remove a client provider from an environment at any time.
 When you remove your default client provider from an environment that has more than one client provider, the next client provider is automatically named as your new default client provider.
 When you remove all external client providers from an environment, the built-in Anypoint Platform client provider becomes the default client provider for that environment.
 
-. Go to Access Management.
+. Navigate to *Access Management*.
 . In the menu on the left, click *Environments*.
 . Click the name of the environment.
-. Click the *x* next to the client provider that you want to remove.
+. Click the *x* next to the name of the client provider that you want to remove.
 . Click *Update*.
