@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-This topic provides an overview of client management on Anypoint Platform. As an API owner, you can apply an OAuth 2.0 policy to authenticate client applications that try to access your API. You need an OAuth 2.0 provider to use an OAuth 2.0 policy.
+Anypoint Platform acts as a client provider by default, but you can also configure other client providers to authorize client applications. As an API owner, you can apply an OAuth 2.0 policy to authorize client applications that try to access your API. You need an OAuth 2.0 provider to use an OAuth 2.0 policy.
 
 You can configure more than one client provider and xref:environments.adoc#add-an-idp-to-an-existing-environment[associate the client providers with different environments].
 When you delete a client provider from your master organization, the client provider is no longer available in environments that used it. Also, assets that used the client provider can no longer authorize users who want to access them.
