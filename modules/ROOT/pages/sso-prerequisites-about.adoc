@@ -11,7 +11,12 @@ Before using SSO, ensure that you have performed the following:
 
 * Configure your identity provider to send the username and email in your assertion.
 * Configure Anypoint Platform to map the username and email to the expected attribute name. If you do not configure this setting, login fails with a 403 unauthorized error message.
-* Configure the SAML assertion of the identity provider as signed, but unencrypted. The identity provider issues the SAML assertion as an XML file which is sent through HTTP as a POST request.
+* Configure the SAML assertion of the identity provider as signed and optionally encrypted using
+** either *AES128* or *AES256* block encryption algorithm,
+** *RSA-OAEP (including MGF1 with SHA1)* key transport algorithm, and
+** *Anypoint Platform Signing Certificate* which can be downloaded from the *SAML 2.0* SSO page.
+
+* The identity provider issues the SAML assertion as an XML file which is sent through HTTP as a POST request.
 
 == Client Considerations
 
@@ -34,7 +39,7 @@ https://anypoint.mulesoft.com/accounts/login/{your_org_domain}
 * OpenID Connect does not support single logout.
 * OpenID Connect does not support role mapping.
 * If a SAML user belongs to certain groups, Anypoint Platform does not automatically grant equivalent roles in the organization.
-* Anypoint Platform does not generate the SAML assertion for single sign on. 
+* Anypoint Platform does not generate the SAML assertion for single sign on.
 Your IdP generates the sign-on URL that you configure.
 * External identity configuration is available only at the organization level.
 You cannot configure an external identity provider for a business group.
