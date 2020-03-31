@@ -31,7 +31,7 @@ To create a new environment or manage an existing environment:
 . Click *Add Environment*.
 . Enter a name for the environment.
 . Select the environment type.
-. Optionally, select at least one xref:managing-api-clients.adoc[client provider] for your environment.
+. Optionally, select at least one xref:managing-api-clients.adoc[client provider] for your environment. If you do not select a client provider, Anypoint is the default client provider.
 . Optionally, if you added more than one client provider, click *Set as default* to designate a default client provider.
 . Click *Create*.
 
@@ -73,7 +73,7 @@ To change the client ID or client secret of an environment, you must contact you
 [[add-an-idp-to-an-existing-environment]]
 == Associate a Client Provider with an Existing Environment
 
-If your organization administrator provides multiple xref:managing-api-clients.adoc[client providers] for your organization, you can add them to existing environments.
+If your organization administrator provides multiple xref:managing-api-clients.adoc[client providers] for your organization, you can add them to existing environments. If you did not associate a client provider with the environment when you created it, the default client provider is the Anypoint client provider.
 
 To associate a client provider with an existing environment:
 
@@ -85,7 +85,7 @@ To associate a client provider with an existing environment:
 . If you added more than one client provider, click *Set as default* to designate a default client provider.
 . Click *Update*.
 
-You can now configure client providers for APIs. 
+You can now configure client providers for APIs.
 
 [[remove-an-idp-from-an-environment]]
 == Remove a Client Provider from an Environment
