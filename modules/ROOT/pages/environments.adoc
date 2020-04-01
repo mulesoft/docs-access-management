@@ -31,8 +31,8 @@ To create a new environment or manage an existing environment:
 . Click *Add Environment*.
 . Enter a name for the environment.
 . Select the environment type.
-. Optionally, select at least one xref:managing-api-clients.adoc[client provider] for your environment. If you do not select a client provider, Anypoint is the default client provider.
-. Optionally, if you added more than one client provider, click *Set as default* to designate a default client provider.
+. Select at least one xref:managing-api-clients.adoc[client provider] for your environment.
+. Optionally, if you added more than one client provider, click *Set as default* to designate a default client provider. If you do not select a default client provider, the first client provider that you added is the default.
 . Click *Create*.
 
 image::environments-85dc3.png[]
