@@ -99,3 +99,5 @@ When you remove all external client providers from an environment, the built-in 
 . Click the name of the environment.
 . Click the *x* next to the name of the client provider that you want to remove.
 . Click *Update*.
+
+The client provider is removed. Any assets or APIs that were associated with the client provider continue to use it until you associate them with a new client provider.

@@ -3,11 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Platform acts as a client provider by default, but you can also configure other client providers to authorize client applications. As an API owner, you can apply an OAuth 2.0 policy to authorize client applications that try to access your API. You need an OAuth 2.0 provider to use an OAuth 2.0 policy.
+Anypoint Platform acts as a client provider by default, but you can also configure external client providers to authorize client applications. As an API owner, you can apply an OAuth 2.0 policy to authorize client applications that try to access your API. You need an OAuth 2.0 provider to use an OAuth 2.0 policy.
 
 You can configure more than one client provider and xref:environments.adoc#add-an-idp-to-an-existing-environment[associate the client providers with different environments].
-If you configure multiple client providers after you have already created environments, you can associate the new client providers with the environment. You should review the existing client configuration before reassigning client providers to avoid any downtime with existing assets. 
-When you delete a client provider from your master organization, the client provider is no longer available in environments that used it. Also, assets that used the client provider can no longer authorize users who want to access them.
+If you configure multiple client providers after you have already created environments, you can associate the new client providers with the environment. You should review the existing client configuration before reassigning client providers to avoid any downtime with existing assets or APIs.
+When you delete a client provider from your master organization, the client provider is no longer available in environments that used it. Also, assets or APIs that used the client provider can no longer authorize users who want to access them.
 
 You can configure the following OAuth providers:
 
@@ -19,12 +19,10 @@ Dynamic Client Registration-compliant identity providers must conform to the htt
 
 To configure client management on Anypoint Platform for these providers, you must have an IdP account.
 
-
-
 == Delete a Client Provider
 
 [WARNING]
-Before you delete a client provider, ensure that you do not have assets or environments that depend on the client provider or you will lose functionality. For example, any APIs that depend on the client provider can no longer authenticate user access.
+Before you delete a client provider, ensure that you do not have APIs, assets, or environments that depend on the client provider or you will lose functionality. For example, any APIs that depend on the client provider can no longer authenticate user access.
 
 . Log in to Anypoint Platform using an account that has the organization administrator role.
 . In Anypoint Platform, click *Access Management*.
