@@ -24,10 +24,10 @@ Configuring SAML for SSO involves:
 
 == Configure SAML in Identity Management
 
-. In Anypoint Platform, sign into the master organization as a user with the *Organization Administrators*.
+. In Anypoint Platform, sign into the master organization as a user with the *Organization Administrator* permission.
 . In *Management Center*, click *Access Management*.
-. In the navigation menu on the left, click *External Identity*.
-. Select *Identity Management > SAML 2.0*.
+. In the navigation menu on the left, click *Identity Providers*.
+. Select *Identity Providers* > *SAML 2.0*.
 . Complete the required fields of the *External Identity - Identity Management SAML 2.0* form:
 +
 * *Sign On URL*
@@ -49,6 +49,10 @@ Public key provided by the identity provider, which is used to sign the SAML ass
 * *Audience*
 +
 An arbitrary string value that identifies your Anypoint Platform organization. The typical value for this string is `<organizationDomain>.anypoint.mulesoft.com`.
++
+* *Single Sign-On Initiation*
++
+Specifies which identity provider you use to initiate single sign-on (SSO). The *Service Provider Only* option allows Anypoint Platform to initiate SSO. The *Identity Provider Only* option allows your external identity provider to initiate SSO. The *Both* option means either Anypoint Platform or your external identity provider can initiate SSO. The default value for this setting is *Both* for newly configured identity provider configurations. For existing identity provider configurations, the default setting is *Identity Provider Only*.
 +
 . Optionally, expand *Advanced settings*, and provide the following values:
 +
