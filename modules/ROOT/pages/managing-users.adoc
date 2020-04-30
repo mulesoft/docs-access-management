@@ -28,7 +28,7 @@ Configuring SAML for SSO involves:
 . In *Management Center*, click *Access Management*.
 . In the navigation menu on the left, click *Identity Providers*.
 . Select *Identity Providers* > *SAML 2.0*.
-. Complete the required fields of the *External Identity - Identity Management SAML 2.0* form:
+. Complete the required fields of the *Identity Management SAML 2.0* form:
 +
 * *Sign On URL*
 +
