@@ -106,6 +106,27 @@ Your username must be at least three characters and contain only the following: 
 [NOTE]
 You cannot create a new account within an existing organization without an email invitation.
 
+== Sign in to Anypoint Platform
+
+. Navigate to the Anypoint Platform signin screen.
+. Enter your username and password.
+. Click *Sign in*.
+
+[NOTE]
+If you try to sign in and Anypoint Platform says your username and password are incorrect when you have entered the correct credentials, your organization may use an xref:access-management::external-identity.adoc[external identity provider] to initiate the sign in process. You can either use your external identity provider to sign you in, or you can xref:access-management::managing-your-account.adoc#use-SPISSO[enter your organization's custom domain name] prior to entering your credentials. 
+
+[[use-SPISSO]]
+== Sign in to Anypoint Platform using Service Provider-Initiated Single Sign-on
+
+If your organization uses xref:access-management::external-identity.adoc[service-provider initiated single sign-on], you must provide your organization's custom domain name as part of the signin process.
+
+. Navigate to the Anypoint Platform signin screen.
+. Click *Use custom domain*.
+. Enter your organization's custom domain name.
+. Click *Continue*.
+. Enter your username and password.
+. Click *Sign in*.
+
 == Use an Unassociated Account
 
 When an organization administrator deletes an account from the organization, the deleted account is left _unattached_.
