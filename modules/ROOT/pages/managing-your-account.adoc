@@ -118,7 +118,7 @@ If you try to sign in and Anypoint Platform says your username and password are 
 [[use-CustomDomainLogin]]
 == Sign in to Anypoint Platform using Single Sign-on
 
-If your organization uses xref:access-management::external-identity.adoc[service-provider initiated single sign-on], you must provide your organization's domain name as part of the signin process.
+If your organization uses xref:access-management::external-identity.adoc[service-provider initiated Single Sign-on], you must provide your organization's domain name as part of the signin process.
 
 . Navigate to the Anypoint Platform signin screen.
 . Click *Use custom domain*.
