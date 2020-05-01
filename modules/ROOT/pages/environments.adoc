@@ -9,7 +9,7 @@ Anypoint Platform enables you to create and manage separate deployment environme
 
 Anypoint Platform supports the following types of environments:
 
-* **Production environment**: Provides a production environment where you can deploy applications and APIs publicly. When you create a new Anypoint Platform account, by default it contains one production environment.
+* **Production environment**: Provides a production environment where you can deploy applications and APIs publicly.
 
 * **Sandbox environment**: Provides useful environments for development and testing. By default, Anypoint Platform accounts are created with one sandbox environment with one vCore assigned to it.
 +
