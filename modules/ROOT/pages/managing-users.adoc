@@ -57,7 +57,7 @@ Specify whether SSO can be initiated by the Anypoint Platform, your identity pro
 - The *Service Provider Only* option allows only the Anypoint Platform to initiate SSO. 
 - The *Identity Provider Only* option allows only your external identity provider to initiate SSO. 
 - The *Both* option means either Anypoint Platform or your external identity provider can initiate SSO. 
-
++
 The default value for this setting is *Both (recommended)* for newly configured identity provider configurations. For existing identity provider configurations, the default setting is *Identity Provider Only*.
 +
 . Optionally, expand *Advanced settings*, and provide the following values:
