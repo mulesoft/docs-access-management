@@ -122,7 +122,9 @@ If your organization uses xref:access-management::external-identity.adoc[Single 
 
 . Navigate to the Anypoint Platform signin screen.
 . Click *Use custom domain*.
-. Enter your organization's domain name. If you do not know your organization's domain name, a member of your organization can provide the organization domain name, which is accessible in their user profile.
+. Enter your organization's domain name.
++
++ If you do not know your organization's domain name, a member of your organization can provide the organization domain name, which is accessible in their user profile.
 . Click *Continue*.
 . Under *Sign in with <organization name> SSO*, click *Continue*. + 
 You are redirected to your identity provider.
