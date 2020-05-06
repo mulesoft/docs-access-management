@@ -24,7 +24,7 @@ Configuring SAML for SSO involves:
 
 == Configure SAML in Identity Management
 
-. In Anypoint Platform, sign into the master organization as a user with the *Organization Administrator* permission.
+. In Anypoint Platform, sign in to the master organization as a user with the Organization Administrator permission.
 . In *Management Center*, click *Access Management*.
 . In the navigation menu on the left, click *Identity Providers*.
 . Select *Identity Providers* > *SAML 2.0*.
@@ -52,13 +52,13 @@ An arbitrary string value that identifies your Anypoint Platform organization. T
 +
 * *Single Sign-On Initiation*
 +
-Specify whether SSO can be initiated by the Anypoint Platform, your identity provider (e.g., Okta), or both. 
+Specify whether SSO can be initiated by the Anypoint Platform, your identity provider (for example, Okta), or both. 
 
-- The *Service Provider Only* option allows only the Anypoint Platform to initiate SSO. 
-- The *Identity Provider Only* option allows only your external identity provider to initiate SSO. 
-- The *Both* option means either Anypoint Platform or your external identity provider can initiate SSO. 
+** The *Service Provider Only* option allows only the Anypoint Platform to initiate SSO. 
+** The *Identity Provider Only* option allows only your external identity provider to initiate SSO. 
+** The *Both* option allows either Anypoint Platform or your external identity provider to initiate SSO. 
 +
-The default value for this setting is *Both (recommended)* for newly configured identity provider configurations. For existing identity provider configurations, the default setting is *Identity Provider Only*.
+The default value for this setting for newly configured identity provider configurations is *Both (recommended)*. For existing identity provider configurations, the default setting is *Identity Provider Only*.
 +
 . Optionally, expand *Advanced settings*, and provide the following values:
 +
