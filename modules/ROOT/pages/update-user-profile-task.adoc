@@ -6,6 +6,6 @@ endif::[]
 When you log into the configured IdP for the first time, an Anypoint user is created using your IdP information. 
 
 Your user profile includes a username, your name, and email address. Typically, the OpenID Connect `userinfo` endpoint provides a `preferred_username` claim that contains the authenticated user’s username. However, some IdPs such as OpenAM and PingFederate do not support the `preferred_username` claim. Therefore, when Anypoint Platform creates a user, the `email` and `subclaims` values comprise the username if the `preferred_username` claim isn't present.
-If a username is created as a single string of random characters and does not have an email address defined, the string may be returning the `sub` claim that the id token and userinfo endpoint shows for the user. Note that claims are made in the following order: `preferred_username`, `email`, `sub`.
+Claims are made in the following order: `preferred_username`, `email`, `sub`. If a username is created as a single string of random characters and does not have an email address defined, the string may be returning the `sub` claim that the id token and userinfo endpoint shows for the user. 
 
 To update user profile information from your configured IdP, log into Anypoint Platform through the IdP. Your user profile information is updated within Anypoint Platform using the updates from the IdP.
