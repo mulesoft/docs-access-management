@@ -29,7 +29,7 @@ By default, the **Unrestricted** policy is enabled. If you change the policy to 
 
 When the whitelist is enabled, organization users can use only whitelisted applications. If a user attempts to authorize a non-whitelisted app, they are prompted to contact their organization administrator.
 
-image::connected-apps-whitelist-blocked.png[The interface the user sees when an app is not on the whitelist, 40%,40%]
+image::connected-apps-whitelist-blocked.png[The interface the user sees when an app is not on the whitelist, 50%,50%]
 
 Organization administrators are able to add the app to the whitelist by following the link given to them by the end user.
 
