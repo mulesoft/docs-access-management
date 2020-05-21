@@ -3,10 +3,14 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-As an organization administrator, you are the only user who can view and manage connected apps in Access Management. You can use authorization policies to dictate which apps can be authorized to access user data, and you can whitelist or blacklist apps that users have previously authorized.
-To manage your connected apps, navigate to *Access Management* and select the *Connected Apps* tab. You can add apps in the *Owned Apps* section and manage app access in the *Authorization* section.
+As an organization administrator, you are the only user who can view and manage connected apps in Access Management. You can use authorization policies to dictate which apps can be authorized to access user data, and you can whitelist apps that users would like to use.
+To manage your connected apps, navigate to *Access Management* and select the *Connected Apps* tab. You can add apps in the *Owned Apps* section and manage app access in the *Authorizations* section.
+More information about the *Owned Apps* section can be found in the documentation for xref:connected-apps-developers.adoc[app developers].
 
-== Authorized Apps
+== Authorizations
+
+You can use this tab to manage which apps are authorized to access your users' data. Click the *...* icon next to an application to view more details, or to remove the app from your organization.
+When you revoke an app’s access, the app’s OAuth 2.0 access tokens and refresh tokens are revoked, and the app can no longer access user data.
 
 You can configure one of two types of authorization policies for your users:
 
@@ -16,12 +20,30 @@ You can configure one of two types of authorization policies for your users:
 
 * Restricted
 
-  Only connected apps that are approved by an administrator can be authorized by organization members to act on their behalf.
+  Only connected apps that are whitelisted by an administrator can be authorized by organization members to act on their behalf.
 
-You can also manage which apps are authorized to access users' data.
+By default, the **Unrestricted** policy is enabled. If you change the policy to **Restricted**, the application whitelist will be enabled and all existing application authorizations will be added automatically.
 
-== Whitelist Applications
+== Application Whitelist
 
-Using the Connected Apps feature, you can view which users have granted access to apps as well as the specified access scopes. You can revoke or reinstate access to the apps at any time.
+When the whitelist is enabled, only whitelisted applications can be used by organization users. If a user attempts to authorize a non-whitelisted app, they will be prompted to contact their organization administrator.
 
-When you revoke an app’s access, the app’s OAuth 2.0 access token is revoked, and the app can no longer access user data. If you decide to return access to the app, you can whitelist the app.
+image::connected-apps-whitelist-blocked.png[The interface the user sees when an app is not on the whitelist, 40%,40%]
+
+Organization administrators will be able to add the app to the whitelist by following the link given to them by the end user.
+
+image::connected-apps-add-to-whitelist.png[The interface the admin sees when they whitelist an app, 40%,40%]
+
+Sometimes, apps will start to ask for additional scopes. This happens when app developers add new features to their products, and need to access more data in your organization.
+Previously whitelisted apps _must_ be whitelisted again with the new set of scopes before your users may grant those additional scopes to the user.
+
+image::connected-apps-add-to-whitelist-again.png[The interface the admin sees when they whitelist an app again, 40%,40%]
+
+Existing authorizations will continue to work if the app is not whitelisted again. New authorizations using the already-whitelisted set of scopes will also be allowed.
+Apps that remove scopes will not need to be whitelisted again.
+
+[NOTE]
+--
+Applications created by users in the same organization are marked as *internal apps*, and do not need to be whitelisted manually.
+--
+

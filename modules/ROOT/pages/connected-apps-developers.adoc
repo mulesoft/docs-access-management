@@ -36,7 +36,7 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 * `offline_access`: Access to the user's data when they are not logged in.
 
 [NOTE]
-Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app. 
+Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app.
 
 == OIDC Endpoints and Tokens
 
@@ -60,8 +60,8 @@ Assuming the token request is fulfilled, the refresh token received in the endpo
 For seamless implementation, developers can integrate a button into the front end of their apps with a pre-built template and set of components. They can add this widget using the following code:
 
 ----
-<anypoint-signin scopes="full" 
-redirecturi="...." 
+<anypoint-signin scopes="full"
+redirecturi="...."
 clientid="….">
 </anypoint-signin>
 ----
@@ -87,3 +87,11 @@ To create your app, follow these steps:
 . Click *Create App*.
 . Create your app by completing the fields in the *Create App* page.
 . Click *Save*.
+
+== Application Whitelisting
+
+Organization Administrators may enable a whitelist to control which apps can access their users' data.
+When your app is whitelisted, only the set of scopes associated with the app are reviewed and approved by the administrator.
+If you add new scopes to your app at a later date, you will not be able to request those scopes from users until the admin re-approves your app.
+Existing authorizations and new authorizations using the already-whitelisted set of scopes will continue to work.
+For more info, see xref:connected-apps-org-admin.adoc#Application-Whitelist[connected apps for admins].
