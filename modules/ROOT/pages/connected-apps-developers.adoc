@@ -89,7 +89,7 @@ To create your app, follow these steps:
 . Click *Save*.
 
 [[application-whitelist-dev]]
-== Application Whitelisting
+== Application Whitelist
 
 Organization Administrators may enable a whitelist to control which apps can access their users' data.
 When your app is whitelisted, only the set of scopes associated with the app are reviewed and approved by the administrator.
