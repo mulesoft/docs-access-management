@@ -88,10 +88,11 @@ To create your app, follow these steps:
 . Create your app by completing the fields in the *Create App* page.
 . Click *Save*.
 
+[[application-whitelist-dev]]
 == Application Whitelisting
 
 Organization Administrators may enable a whitelist to control which apps can access their users' data.
 When your app is whitelisted, only the set of scopes associated with the app are reviewed and approved by the administrator.
-If you add new scopes to your app at a later date, you will not be able to request those scopes from users until the admin re-approves your app.
-Existing authorizations and new authorizations using the already-whitelisted set of scopes will continue to work.
-For more info, see xref:connected-apps-org-admin.adoc#Application-Whitelist[connected apps for admins].
+If you add new scopes to your app at a later date, you are unable to request those scopes from users until the admin re-approves your app.
+Existing authorizations and new authorizations using the already-whitelisted set of scopes continue to work.
+For more information, see xref:connected-apps-org-admin.adoc#application-whitelist-admin[connected apps for administrators].
