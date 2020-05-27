@@ -18,6 +18,8 @@ You can configure one of two types of authorization policies for your users:
 
   Only connected apps that are approved by an administrator can be authorized by organization members to act on their behalf.
 
+When using the Restricted policy, you may disable auto-approval of all internal apps, in which case each internal app must be added to the whitelist like any other connected app.
+
 You can also manage which apps are authorized to access users' data.
 
 == Whitelist Applications
