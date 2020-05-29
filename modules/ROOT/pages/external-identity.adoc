@@ -9,9 +9,6 @@ As the Anypoint Platform organization administrator, you can configure identity 
 +
 * SAML 2.0: Web-based authorization including cross-domain SSO
 
-[NOTE]
-Service initiated SSO is not supported.
-
 The following diagram shows the SAML identity management process:
 
 image::external-identity-decbd.png[]
