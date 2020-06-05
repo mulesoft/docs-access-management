@@ -7,6 +7,8 @@ Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anyp
 With the Connected Apps feature, developers can delegate access to applications that use APIs to interact with Anypoint Platform programmatically.
 While some might use the Connected Apps feature to build CI/CD pipelines, others can productize additional third-party use-cases on top of Anypoint Platform.
 
+// hey sara, add formatting here.
+
 In addition to enabling new flows to authenticate users, developers can enable or disable clients and view client usage.
 For example, developers can see how many organizations are using the app and how many users have access.
 
