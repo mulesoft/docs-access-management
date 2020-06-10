@@ -13,7 +13,7 @@ The Connected Apps feature enables you to use secure authentication protocols an
 
 Anypoint Platform supports OAuth 2.0 and OpenID Connect to authorize apps to access data within Anypoint Platform.
 OAuth (Open Authorization) is an open protocol that provides secure API authorization from applications in a simple and standardized way.
-OAuth can authorize access to resources without revealing user credentials to apps.
+OAuth 2.0 can authorize access to resources without revealing user credentials to apps.
 OpenID Connect identifies the end user and obtains information to pass to OAuth 2.0 connected apps.
 
 
