@@ -92,7 +92,7 @@ If enabled, the SAML assertions sent from the IdP must be encrypted and follow t
 
 == Export SAML Metadata
 
-If your identity provider supports uploading service provider metadata, you can click the *Anypoint service provider metadata* link to download an XML file of your SAML configuration settings to send to your identity provider. The identity provider can then upload these configuration settings to connect to your Anypoint Platform community.
+If your identity provider supports uploading service provider metadata, you can click the *Anypoint service provider metadata* link to download an XML file of your SAML configuration settings. You can then upload this file to your identity provider to configure Anypoint Platform.
 
 == See Also
 
