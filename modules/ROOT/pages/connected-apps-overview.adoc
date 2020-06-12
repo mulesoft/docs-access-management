@@ -31,7 +31,8 @@ The first is the authorization_code flow. In this flow, the client goes to the a
 The second flow is the client_credentials flow. In this flow, each piece is very similar but instead of a user authorizing the application, the application can authorize on its own behalf. This is also called a service-to-service use case.
 
 
-OpenID Connect (OICD)
+=== OpenID Connect (OIDC)
+
 OICD is an authentication protocol that authenticates users. This identity layer sits on top of the OAuth 2.0 protocol and provides authentication as opposed to the authorization OAuth 2.0 provides.
 
 
