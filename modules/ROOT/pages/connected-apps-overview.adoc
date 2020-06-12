@@ -19,7 +19,7 @@ OpenID Connect identifies the end user and obtains information to pass to OAuth 
 
 // Sara add some indentation or mark up here please
 
-In order to understand the purpose of Connected Apps, there are several technical concepts and terms to be familiar with, beginning with OAuth 2.0 (commonly referred to as just OAuth) and OpenID Connect (commonly referred to as OICD). Before breaking down these terms, it’s important to understand that these flows are completed in order to give access to Anypoint APIs to only those services and users with the proper permissions. 
+The Connected Apps feature uses OAuth 2.0 and OpenID Connect, or _OIDC_, as part of its authentication process. OAuth 2.0 and OpenID Connect flows must be completed in order to grant access to Anypoint APIs only to services and users that have the proper permissions. 
 
 OAuth 2.0
 When understanding OAuth 2.0, an authorization protocol, we must first define several key terms to ground our understanding. The first is the client, which refers to the resource that wants the data and could be a computer or server. Next, the authorization server refers to the server that can authorize, and the resource server refers to the system with the data. The access token is the key to get into data in the resource server and the redirect URI is where you go if the user or service authorizes the other service.
