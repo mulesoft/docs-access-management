@@ -28,7 +28,8 @@ There are two types of flows for OAuth 2.0.
 
 The first is the authorization_code flow. In this flow, the client goes to the authorization server and and the server pops up a window asking for authorization for specific scopes from the user. If the user authorizes the client to have this information, an authorization code is sent the redirect URI. The redirect URI then exchanges the authorization code for an access token from the authorization server which is then taken to the resource server to obtain the data by talking to a specific API. This is called an application acting on behalf of the user.
 
-The second flow is the client_credentials flow. In this flow, each piece is very similar but instead of a user authorizing the application, the application can authorize on its own behalf. This is also called a service-to-service use case.
+`client_credentials`::
+In the client_credentials flow, the client navigates to the authorization server. The server then requests authorization for specific scopes, or _permissions_, from the application. If the application authorizes the client to have this information, an authorization code is sent the redirect URI. The redirect URI then exchanges the authorization code for an access token from the authorization server. The access token is then sent to the resource server to obtain the data by talking to a specific API. This flow demonstrates a _service-to-service_ use case.
 
 
 === OpenID Connect (OIDC)
