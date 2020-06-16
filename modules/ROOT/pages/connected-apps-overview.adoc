@@ -51,7 +51,7 @@ In the client_credentials flow, the client navigates to the authorization server
 
 === OpenID Connect (OIDC)
 
-OICD is an authentication protocol that authenticates users. This identity layer sits on top of the OAuth 2.0 protocol and provides authentication as opposed to the authorization OAuth 2.0 provides.
+OICD is an authentication protocol that authenticates users. This identity layer complements OAuth 2.0 protocol and provides authentication at a layer above it.
 
 
 For more information, see https://oauth.net/2/[OAuth 2.0] and https://openid.net/connect/[OpenID Connect].
