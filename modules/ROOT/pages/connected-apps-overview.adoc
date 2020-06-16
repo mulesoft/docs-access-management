@@ -23,7 +23,22 @@ The Connected Apps feature uses OAuth 2.0 and OpenID Connect, or _OIDC_, as part
 
 === OAuth 2.0
 
-When understanding OAuth 2.0, an authorization protocol, we must first define several key terms to ground our understanding. The first is the client, which refers to the resource that wants the data and could be a computer or server. Next, the authorization server refers to the server that can authorize, and the resource server refers to the system with the data. The access token is the key to get into data in the resource server and the redirect URI is where you go if the user or service authorizes the other service.
+The OAuth 2.0 authorization protocol depends on several elements to function. 
+
+Client::
+The resource that requests data on behalf of a user or service.
+
+Authorization server::
+The server that gives access tokens to the client once it does authorization.
+
+Resource server::
+The system that contains the requested data.
+
+Access token:: 
+A "key" needed to access data in the resource server. 
+
+Redirect URI::
+The destination the authorization server sends the user or server once the application is authorized.
 
 There are two types of flows for OAuth 2.0. 
 
