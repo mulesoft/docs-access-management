@@ -25,7 +25,7 @@ The Connected Apps feature implements OAuth 2.0 and OpenID Connect, or _OIDC_, f
 The OAuth 2.0 authorization protocol depends on several elements to function. 
 
 Client::
-The resource that requests data on behalf of a user or service.
+An application that makes requests for data on behalf of a user or service with authorization.
 
 Authorization server::
 The server that gives access tokens to the client once it does authorization.
