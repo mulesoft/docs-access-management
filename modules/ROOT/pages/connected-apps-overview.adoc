@@ -28,18 +28,18 @@ Client::
 An application that makes requests for data on behalf of a user or service with authorization.
 
 Authorization server::
-The server that gives access tokens to the client once it does authorization.
+The server that gives access tokens to the client once the server does authorization.
 
 Resource server::
 The system that contains the requested data.
 
 Access token:: 
-A "key" needed to access data in the resource server. 
+A token needed to access data from the resource server. 
 
 Redirect URI::
 The destination the authorization server sends the user or server once the application is authorized.
 
-There are many types of OAuth 2.0 flows; the Connected Apps feature uses the following:
+There are many types of OAuth 2.0 flows; the Connected Apps feature most commonly uses the following:
 
 `authorization_code`:: 
 In the authorization_code flow, the client navigates to the authorization server. The server then requests authorization for specific scopes, or _permissions_, from the user. If the user authorizes the client to have this information, an authorization code is sent the redirect URI. The redirect URI then exchanges the authorization code for an access token from the authorization server. The access token is then sent to the resource server to obtain the data by means of a specific API. This flow demonstrates _an application acting on behalf of the user_.
