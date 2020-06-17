@@ -107,20 +107,6 @@ Once this is successfully configured, you can apply the OpenID Connect OAuth Tok
 [NOTE]
 For Okta, the Okta admin needs to assign the dynamically generated clients to a user or a group of users in order for them to receive access tokens by sending over the Client ID and Client Secret.
 
-== Grant types
-
-If you have configured an OpenID Connect provider for client management, Anypoint Platform supports the following OAuth grant types by default when registering an API client application in the API portal:
-
-- Implicit
-- Authorization
-- Refresh Token
-
-[NOTE]
-The Refresh token can be selected only if the authorization grant type is also selected.
-
-In addition to these scopes, if you configure the Issuer field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all grant types supported by the provider. This includes grant types such as client credentials, password, and so on. To verify the grant types your provider supports, check their discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. 
-
-
 == See Also
 
 * xref:api-manager::openam-oauth-token-enforcement-policy.adoc[About OpenAM, OpenID Connect, or PingFederate OAuth Token Enforcement Policies]
