@@ -17,9 +17,8 @@ OAuth 2.0 can authorize access to resources without revealing user credentials t
 OpenID Connect identifies the end user and obtains information to pass to OAuth 2.0 connected apps.
 
 
-// Sara add some indentation or mark up here please
 
-The Connected Apps feature uses OAuth 2.0 and OpenID Connect, or _OIDC_, as part of its authentication process. OAuth 2.0 and OpenID Connect flows must be completed in order to grant access to Anypoint APIs only to services and users that have the proper permissions. 
+The Connected Apps feature implements OAuth 2.0 and OpenID Connect, or _OIDC_, for authorizing access to data. OAuth 2.0 and OpenID Connect flows grant permission to services and users to access the Anypoint APIs.
 
 === OAuth 2.0
 
@@ -40,7 +39,7 @@ A "key" needed to access data in the resource server.
 Redirect URI::
 The destination the authorization server sends the user or server once the application is authorized.
 
-There are two types of flows for OAuth 2.0. 
+There are many types of OAuth 2.0 flows; Connected Apps uses the following:
 
 `authorization_code`:: 
 In the authorization_code flow, the client navigates to the authorization server. The server then requests authorization for specific scopes, or _permissions_, from the user. If the user authorizes the client to have this information, an authorization code is sent the redirect URI. The redirect URI then exchanges the authorization code for an access token from the authorization server. The access token is then sent to the resource server to obtain the data by means of a specific API. This flow demonstrates _an application acting on behalf of the user_.
