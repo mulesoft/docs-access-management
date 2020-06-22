@@ -107,11 +107,11 @@ Once this is successfully configured, you can apply the OpenID Connect OAuth Tok
 [NOTE]
 For Okta, the Okta admin needs to assign the dynamically generated clients to a user or a group of users in order for them to receive access tokens by sending over the Client ID and Client Secret.
 
-== Displaying grant types in API portal
+== Displaying Grant Types in the API Portal
 
-If you configure the optional "Issuer" field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all grant types supported by the provider; such as, "client credentials", "password", and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider.
+If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider; such as, `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider.
 
-If the "Issuer" field isn't configured, or the provider's discovery endpoint is unavailable, by default the Anypoint Platfrom UI will list the following grant types when registering an API client application in the API portal: 
+If the *Issuer* field isn't configured, or the provider's discovery endpoint is unavailable, by default the Anypoint Platfrom UI will list the following grant types when registering an API client application in an xref:exchange::index.adoc[Anypoint Exchange API portal]: 
 
 - Implicit
 - Authorization
