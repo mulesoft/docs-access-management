@@ -86,7 +86,7 @@ Field name in the SAML `AttributeStatements` that maps to `Group`.
 +
 If enabled, the SAML assertions sent from the IdP must be encrypted and follow the guidelines mentioned in the xref:sso-prerequisites-about.adoc[Prerequisites].
 +
-. Click *Save*.
+. Click *Create*.
 +
 . Sign out of Anypoint Platform, navigate to the sign-on URL you entered in the *Identity Management SAML 2.0* form, then sign in through your identity provider to test the configuration.
 
