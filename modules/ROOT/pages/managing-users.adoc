@@ -92,7 +92,7 @@ If enabled, the SAML assertions sent from the IdP must be encrypted and follow t
 
 == Import SAML Metadata
 
-You can import your identity provider's SAML 2.0 metadata to Anypoint Platform using the *Import IdP Metadata* link. Once uploaded, the XML file's values automatically populate the *Identity Management SAML 2.0* form.
+You can import your identity provider's SAML 2.0 metadata to Anypoint Platform using the *Import IdP Metadata* link. Once uploaded, the XML file's values automatically populate the *Identity Management SAML 2.0* form. Note that you can import the SAML 2.0 metadata only when you are creating a new SAML 2.0 configuration.
 
 When you upload an XML file to import your metadata:
 
