@@ -90,9 +90,20 @@ If enabled, the SAML assertions sent from the IdP must be encrypted and follow t
 +
 . Sign out of Anypoint Platform, navigate to the sign-on URL you entered in the *Identity Management SAML 2.0* form, then sign in through your identity provider to test the configuration.
 
+== Import SAML Metadata
+
+When creating a new SAML 2.0 configuration, you can upload an XML file containing your identity provider's SAML 2.0 metadata to Anypoint Platform using the *Import IdP Metadata* link. Once uploaded, the XML file's values automatically populate the *Identity Management SAML 2.0* form.
+
+When you upload an XML file to import your metadata:
+
+* The file must be smaller than 16 KB.
+* If you upload an XML file that contains more than one entry, Anypoint Platform uses the first identity provider configuration.
+* Anypoint Platform does not check the validity of the values in the XML that you upload. +
+Verify that your identity configuration is correct before creating the identity provider configuration.
+
 == Export SAML Metadata
 
-If your identity provider supports uploading service-provider metadata, you can click the *Anypoint service provider metadata* link to download your SAML configuration settings in an XML file. You can then upload this file to your identity provider to configure Anypoint Platform.
+If your identity provider supports uploading service-provider metadata, you can click the *Anypoint service provider metadata* link to download your SAML configuration settings in an XML file. You can then upload this file to your identity provider to configure Anypoint Platform. Note that you must have a SAML 2.0 identity configuration to export this data.
 
 == See Also
 
