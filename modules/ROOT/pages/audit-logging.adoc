@@ -422,8 +422,7 @@ properties : new SLA tier
 |N/A
 |Create Project
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -436,8 +435,7 @@ Properties:
 |N/A
 |Delete Project
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -450,8 +448,7 @@ Properties:
 |N/A
 |Delete Files
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -464,8 +461,7 @@ Properties:
 |N/A
 |Rename Project
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -478,8 +474,7 @@ Properties:
 |N/A
 |Clean Branch
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -492,8 +487,7 @@ Properties:
 |N/A
 |Create Branch
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -506,8 +500,7 @@ Properties:
 |N/A
 |Delete Branch
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -520,8 +513,7 @@ Properties:
 |N/A
 |Save Branch
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -534,8 +526,7 @@ Properties:
 |N/A
 |Delete file
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -548,8 +539,7 @@ Properties:
 |N/A
 |Move file
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -562,8 +552,7 @@ Properties:
 |N/A
 |Import Project
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -576,8 +565,7 @@ Properties:
 |N/A
 |Publish to Exchange
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -590,8 +578,7 @@ Properties:
 |N/A
 |Publish to API Platform
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -604,8 +591,7 @@ Properties:
 |N/A
 |Add dependencies
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -618,8 +604,7 @@ Properties:
 |N/A
 |Remove Dependencies
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -632,8 +617,7 @@ Properties:
 |N/A
 |Change Dependencies
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -647,8 +631,7 @@ Properties:
 |N/A
 |Reload Dependencies
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -673,9 +656,7 @@ Properties:
 |N/A
 |Create
 |Subaction:
-
-Create Link
-
+Create Link +
 Properties:
 
 Link metadata
@@ -686,9 +667,7 @@ Link metadata
 |N/A
 |Delete
 |Subaction:
-
-Delete Link
-
+Delete Link +
 Properties:
 
 Link metadata
