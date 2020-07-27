@@ -833,8 +833,8 @@ properties: none
 |UserID
 |n/a
 |Login
-|subaction: Failure +
-properties: error message
+|subaction: none +
+properties: none
 |Logout
 |User
 |UserID
