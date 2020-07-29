@@ -86,7 +86,7 @@ Authorization: Bearer access-token
 +
 [IMPORTANT]
 Neither the `PUT` nor the `DELETE` are expected to work if the call is used directly against an IDP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
-* *Token Inspection Client*
+* *Token Introspection Client*
  ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
   *** For ForgeRock, this value should be a "Confidential" client.
@@ -96,11 +96,6 @@ Neither the `PUT` nor the `DELETE` are expected to work if the call is used dire
  ** *Authorize URL*: The URL where the user authenticates and grants OpenID Connect client applications access to the user's identity.
  ** *Token URL*: The URL that provides the user’s identity, encoded in a secure JSON Web Token.
 . Click *Save*.
-. Sign out and navigate to your organization’s SSO URL, for example:
-+
-`+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
-+
-. Sign in through your identity provider to test the configuration.
 
 Once this is successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IDP that acts as a token provider.
 
