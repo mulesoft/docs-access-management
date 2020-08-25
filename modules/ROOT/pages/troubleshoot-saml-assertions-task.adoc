@@ -15,7 +15,7 @@ Complete this task before calling the MuleSoft Support team to assist you in tro
 . In the Chrome developer tool *Form data* window, select the *Params* tab. Other tools or tracers may have different labels.
 . Record the SAML response element.
 
-After recording the SAML response element, use it to obtain a bearer token to access platform APIs. It is also useful to provide the SAML response for troubleshooting when contacting MuleSoft support.
+After recording the SAML response element, use it to xref:access-management::saml-bearer-token.adoc[obtain a bearer token] to access platform APIs. It is also useful to provide the SAML response for troubleshooting when contacting MuleSoft support.
 
 . Log in to the MuleSoft Support Portal at the following URL:
 +
@@ -25,3 +25,14 @@ https://www.mulesoft.com/support-login
 
 . Provide a screen shot of your SAML configuration in Anypoint Platform.
 . Include an XML SAML assertion.
+
+== Example: Chrome Developer Tools SAML Response Element
+
+The following image shows an instance of Chrome Developer Tools that contains a SAML response element after logging in to Anypoint Platform.
+
+.SAML response element after logging in to Anypoint Platform in Google Chrome version 79
+image::iam-chromedevtools.png[]
+
+Google Chrome version 79 stores the SAML response in the *Network* tab.
+In the *Network* tab, a line indicating you logged in to Anypoint Platform is shown.
+You can expand the line that notes your login and access form data that is relevant to your SAML response element.
