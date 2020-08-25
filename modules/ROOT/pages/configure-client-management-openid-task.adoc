@@ -5,7 +5,7 @@ endif::[]
 
 // Includes oidc-dynamic-registration.patch
 
-MuleSoft verifies support in Anypoint Platform for Salesforce, Okta, and OpenAM v14 Dynamic Client Registration.
+MuleSoft supports client management by identity providers that implement the OpenID Connect Dynamic Client Registration open standard.  MuleSoft explicitly verifies support in Anypoint Platform for Salesforce, Okta, and OpenAM v14 Dynamic Client Registration.
 
 [NOTE]
 ====
