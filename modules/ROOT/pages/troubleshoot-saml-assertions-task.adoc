@@ -28,11 +28,10 @@ https://www.mulesoft.com/support-login
 
 == Example: Chrome Developer Tools SAML Response Element
 
-The following image shows an instance of Chrome Developer Tools that contains a SAML response element after logging in to Anypoint Platform.
+The following image shows an instance of Chrome developer tools that contains a SAML response element after logging in to Anypoint Platform using SSO.
 
-.SAML response element after logging in to Anypoint Platform in Google Chrome version 79
+.SAML response element after logging in to Anypoint Platform in Google Chrome.
 image::iam-chromedevtools.png[]
 
-Google Chrome version 79 stores the SAML response in the *Network* tab.
-In the *Network* tab, a line indicating you logged in to Anypoint Platform is shown.
-You can expand the line that notes your login and access form data that is relevant to your SAML response element.
+In the *Network* tab, the `receive-id` line indicates that you logged in to Anypoint Platform using your SSO is shown.
+When you expand `receive-id`, you can access form data that contains your SAML response element.  
