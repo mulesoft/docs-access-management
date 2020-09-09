@@ -30,7 +30,7 @@ https://www.mulesoft.com/support-login
 
 == Example: Chrome Developer Tools SAML Response Element
 
-The following image shows a SAML response element [in Chrome developer tools/] as a result of logging in to Anypoint Platform using SSO.
+The following image shows a SAML response element in Chrome developer tools as a result of logging in to Anypoint Platform using SSO.
 
 .SAML response element after logging in to Anypoint Platform in Google Chrome.
 image::iam-chromedevtools.png[]
