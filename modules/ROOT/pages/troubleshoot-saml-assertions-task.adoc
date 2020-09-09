@@ -33,5 +33,5 @@ The following image shows an instance of Chrome developer tools that contains a 
 .SAML response element after logging in to Anypoint Platform in Google Chrome.
 image::iam-chromedevtools.png[]
 
-In the *Network* tab, the `receive-id` line indicates that you logged in to Anypoint Platform using your SSO.
-When you expand `receive-id`, you can access form data that contains your SAML response element.  
+In the *Network* tab, the `receive-id` line indicates that you attempted to log in to Anypoint Platform using your SSO.
+If the login is successful, you can expand `receive-id` and access form data that contains your SAML response element.  
