@@ -34,4 +34,4 @@ The following image shows an instance of Chrome developer tools that contains a 
 image::iam-chromedevtools.png[]
 
 In the *Network* tab (1), the `receive-id` line (2) indicates that you attempted to log in to Anypoint Platform using your SSO.
-The login is successful, and you can expand `receive-id` and access form data that contains your SAML response element (3).  
+The login is successful, and you can expand `receive-id` and access form data that contains your SAML response element (3). Note that unsuccessful login attempts still generate SAML response elements.  
