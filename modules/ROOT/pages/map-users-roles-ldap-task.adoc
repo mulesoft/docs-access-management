@@ -12,21 +12,24 @@ Choose an external identity provider and then configure roles.
 
 To configure a role:
 
-. In Anypoint Platform, click Roles. Click Add Role to create a role for each group of users in your organization.
+. In Anypoint Platform, navigate to Access Management.
+. Click *Roles*.
+. Click *Add Role* to create a role for each group of users in your organization.
 +
 image::external-identity-34af9.png[]
 
-. Specify a role name and description. Click Add Role to add the role:
+. Specify a role name and description.
+. Click *Add Role* to add the role:
 +
 image::external-identity-c731b.png[]
 +
 
-. In Roles, click the name of the new role:
+. In the *Roles* section, click the name of the new role:
 +
 image::external-identity-35f9a.png[]
 +
 
-. Click Set external group mapping:
+. Click *Set external group mapping*:
 +
 image::external-identity-251b8.png[]
 +
@@ -46,9 +49,35 @@ Mapping:
 +
 image::external-identity-cfb1e.png[]
 
-. Click Set names.
-.. To map more than one attribute name to the selected role, click Add More and add another attribute.
+. Click *Set names*.
++
+To map more than one attribute name to the selected role, click *Add More* and add another attribute.
+
 . Repeat this process for each role that you want to map to an external group.
+
+== Configure Multiple Group Mappings for Single Sign-On
+
+If your organization uses single sign-on and requires its users to obtain permissions from multiple groups, you can configure a group attribute that contains all the groups you want to use. In many cases, you can create an array of groups.
+
+For example, your IDP may provide your groups in the following format:
+
+----
+<ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
+  <ns2:AttributeValue>Mule_Org_Admin_XXX</ns2:AttributeValue>
+</ns2:Attribute>
+<ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
+  <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
+</ns2:Attribute>
+----
+
+To prevent security vulnerabilities, Anypoint Platform requires you to create a single group that encompasses multiple group mappings:
+
+----
+<ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
+  <ns2:AttributeValue>Mule_Org_Admin_XXX</ns2:AttributeValue>
+  <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
+</ns2:Attribute>
+----
 
 == See Also
 
