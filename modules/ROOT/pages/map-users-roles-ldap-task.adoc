@@ -51,13 +51,13 @@ image::external-identity-cfb1e.png[]
 
 . Click *Set names*.
 +
-To map more than one attribute name to the selected role, click *Add More*, and add another attribute.
+To map more than one attribute name to the selected role, click *Add More* and add another attribute.
 
 . Repeat this process for each role that you want to map to an external group.
 
 == Configure Multiple Group Mappings for Single Sign-On
 
-Organizations that use single sign-on and require their users to obtain permissions from multiple groups can configure group mappings using their identity provider. If your IDP provides each group separately, you can create a group attribute that contains multiple groups you want to use. In many cases, you can create an array of groups.
+If your organization uses single sign-on and requires its users to obtain permissions from multiple groups, you can configure a group attribute that contains all the groups you want to use. In many cases, you can create an array of groups.
 
 For example, your IDP may provide your groups in the following format:
 
@@ -70,7 +70,7 @@ For example, your IDP may provide your groups in the following format:
 </ns2:Attribute>
 ----
 
-To prevent security vulnerabilities, Anypoint Platform requires you to create a single group that encompasses multiple group mappings. For example:
+To prevent security vulnerabilities, Anypoint Platform requires you to create a single group that encompasses multiple group mappings:
 
 ----
 <ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
