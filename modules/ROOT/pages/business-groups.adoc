@@ -25,7 +25,7 @@ Conversely, owners of child business groups cannot:
 
 When you create a business group under another business group, only the redistributable entitlements, such as VPCs and load balancers, that were assigned to the parent business group can be allocated to the child business group.
 
-=== Create a Business Group
+== Create a Business Group
 
 When you create a new business group under the top-level business group, all the current users with the *Organization Administrators* role in the top-level business group appear in the list of users in the newly created business group. 
 
@@ -104,7 +104,22 @@ Only an organization administrator that belongs to a business group can delete i
 . In the *Business Group Info* dialog, click *Delete Business Group*.
 . In the confirmation dialog, enter the name of the business, then click *Delete*.
 
-=== See Also 
+== Redistribute Resources between Existing Business Groups
+
+You may need to redistribute your production, sandbox, and design vCores based on deployment of apps in your business groups.
+You can distribute vCores from your master organizations to business groups and their child business groups.
+Note that a child business group can only receive resources that are available in the parent business group. For example, a child business group cannot receive sandbox vCores if the parent business group does not have any sandbox vCores available. 
+When modifying the business group's resources, if a resource is unavailable, it does not appear in the *Business Group Info* window.
+
+You must have the Organization Administrator permission to redistribute resources.
+
+. In the Anypoint Platform *Access Management* page, click *Organization*.
+. Click the name of existing business group.
++ The *Business Group Info* window appears, showing the business group settings.
+. Enter the number of vCores you want the business group to have.
+. Click *Save changes*.
+
+=== See Also
 
 * xref:organization.adoc[Organization]
 * xref:roles.adoc[Roles]
