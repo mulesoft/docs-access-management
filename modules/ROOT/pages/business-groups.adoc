@@ -114,7 +114,7 @@ When modifying the business group's resources, if a resource is unavailable, it 
 You must have the Organization Administrator permission to redistribute resources.
 
 . In the Anypoint Platform *Access Management* page, click *Organization*.
-. Click the name of existing business group.
+. Click the name of existing business group. +
 The *Business Group Info* window appears, showing the business group settings.
 . Enter the number of vCores you want the business group to have.
 . Click *Save changes*.
