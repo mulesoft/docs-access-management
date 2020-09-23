@@ -114,7 +114,7 @@ When a user logs in to Anypoint Platform, a cookie is created for the login sess
 The cookie contains the location, such as a public portal, from which the user initiated the login.
 The cookie is passed to the user's browser.
 The user is directed to their SSO provider for authentication.
-After the user is authenticated using SSO, the provider directs the user back to Anypoint Platform with the `receive-id` SAML Response.
+After the user is authenticated using SSO, the provider directs the user back to Anypoint Platform with the authorization decision SAML response.
 The session cookie, `mulesoft.sess=xxxxx`, is passed from the browser, which re-directs the user back to the location from which they initiated the login process.
 
 After the user successfully logs in to Anypoint Platform, the `mulesoft.sess` cookie is reset to default based on the OWASP standard.
