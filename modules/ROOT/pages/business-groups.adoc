@@ -106,19 +106,25 @@ Only an organization administrator that belongs to a business group can delete i
 
 == Redistribute Resources between Existing Business Groups
 
-You may need to redistribute your production, sandbox, and design vCores based on deployment of apps in your business groups.
-You can distribute vCores from your master organizations to business groups and their child business groups.
-Note that a child business group can only receive resources that are available in the parent business group. For example, a child business group cannot receive sandbox vCores if the parent business group does not have any sandbox vCores available. 
-When modifying the business group's resources, if a resource is unavailable, it does not appear in the *Business Group Info* window.
+You may need to redistribute resources (such as vCores, VPCs, load balancers, and so on) based on deployment of apps in your business groups.
+The business group structure creates a hierarchical distribution of resources that prevents child business groups from consuming resources that the master organization needs to distribute elsewhere or use itself.
+As such, you can distribute resources from your master organization to business groups and then to their child business groups.
+The business group that receives resources can either consume them or distribute them to child business groups for consumption or further delegation.
+
+A child business group can only receive resources that are available in the parent business group that is directly above it in the hierarchy.
+For example, a child business group cannot receive sandbox vCores if the parent business group does not have any sandbox vCores available, even if the master organization has sandbox vCores available.
+Additionally, the master organization or parent business group cannot reclaim resources that are currently allocated to a business group that is lower in the hierarchy.
 
 You must have the Organization Administrator permission to redistribute resources.
 
 . In the Anypoint Platform *Access Management* page, click *Organization*.
 . Click the name of existing business group.
 +The *Business Group Info* window appears, showing the business group settings.
-. Enter the number of vCores you want the business group to have.
+. Enter the number of resources you want the business group to have.
 . Click *Save changes*.
 
+The minimum value for a resource's slider equals the amount of the resource that is reassigned to child business groups plus the amount of the resource currently in use by the business group.
+If a resource is unavailable to a business group, the resource does not appear as a slider in the *Business Group Info* window for the selected business group. 
 === See Also
 
 * xref:organization.adoc[Organization]
