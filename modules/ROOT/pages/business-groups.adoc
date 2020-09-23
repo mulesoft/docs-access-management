@@ -125,6 +125,7 @@ The *Business Group Info* window appears, showing the business group settings.
 
 The minimum value for a resource's slider equals the amount of the resource that is reassigned to child business groups plus the amount of the resource currently in use by the business group.
 If a resource is unavailable to a business group, the resource does not appear as a slider in the *Business Group Info* window for the selected business group.
+
 === See Also
 
 * xref:organization.adoc[Organization]
