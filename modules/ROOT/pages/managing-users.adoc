@@ -109,7 +109,7 @@ If your identity provider supports uploading service-provider metadata, you can 
 
 == SSO Redirects using Cookies
 
-Anypoint Platform uses cookies to ensure SSO users are redirected to the same location from which they initiated their log in.
+Anypoint Platform uses cookies to ensure SSO users are redirected to the same location from which they initiated their login.
 When a user logs in to Anypoint Platform, a cookie is created for the login session: `mulesoft.sess=xxxxx`.
 The cookie contains the location, such as a public portal, from which the user initiated the login.
 The cookie is passed to the user's browser.
@@ -119,7 +119,7 @@ The session cookie, `mulesoft.sess=xxxxx`, is passed from the browser, which re-
 
 After the user successfully logs in to Anypoint Platform, the `mulesoft.sess` cookie is reset to default based on the OWASP standard.
 
-In some instances, users are redirected based on their account's permissions:
+Users can also be redirected based on their permissions. This occurs when:
 
 * The browser does not pass a cookie.
 * The cookie has expired.
