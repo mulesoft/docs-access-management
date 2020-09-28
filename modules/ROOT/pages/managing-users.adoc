@@ -22,6 +22,7 @@ Configuring SAML for SSO involves:
 * If you are using the Anypoint Platform Gov Cloud, the endpoint is  `+https://gov.anypoint.mulesoft.com/accounts/login/receive-id+`
 ====
 
+[[configure-saml]]
 == Configure SAML in Identity Management
 
 . In Anypoint Platform, sign in as a user with the Organization Administrator permission.
@@ -104,6 +105,28 @@ Verify that your identity configuration is correct before creating the identity 
 == Export SAML Metadata
 
 If your identity provider supports uploading service-provider metadata, you can click the *Anypoint service provider metadata* link to download your SAML configuration settings in an XML file. You can then upload this file to your identity provider to configure Anypoint Platform. Note that you must have a SAML 2.0 identity configuration to export this data.
+
+
+== SSO Redirect Process Using Cookies
+
+Anypoint Platform uses cookies to ensure that SSO users are redirected to the same location from which they initiated their login.
+
+. When a user logs in to Anypoint Platform, a cookie is created for the login session: `mulesoft.sess=xxxxx`. +
+The cookie contains the location, such as a public portal, from which the user initiated the login.
+. The cookie is passed to the user's browser.
+. The user is directed to their SSO provider for authentication.
+. After the user is authenticated using SSO, the provider directs the user back to Anypoint Platform with the authorization decision SAML response.
+. The session cookie, `mulesoft.sess=xxxxx`, is passed from the browser, which redirects the user back to the location from which they initiated the login process.
+. After the user successfully logs in to Anypoint Platform, the `mulesoft.sess` cookie returns to its default value, based on the OWASP standard.
+
+Users can also be redirected based on their permissions. This occurs when:
+
+* The browser does not pass a cookie.
+* The cookie has expired.
+* The cookie is set to the default value.
+
+In these cases, a user with the Organization Administrator permission is redirected to the Anypoint Platform landing page. 
+Users who do not have the Organization Administrator permission are directed to Anypoint Exchange.
 
 == See Also
 
