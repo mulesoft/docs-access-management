@@ -6,7 +6,9 @@ endif::[]
 Multi-factor authentication provides an additional layer of verification for individual Anypoint Platform users.
 You can require all users in your organization to use multi-factor authentication and exempt specific accounts, or users can manually enable multi-factor authentication in their profile settings.
 
-When multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using one of the following authentication methods:
+Users who use single sign-on (SSO) cannot configure multi-factor authentication for their accounts. Instead, SSO users should configure multi-factor authentication through their identity provider.
+
+When multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using at least one of the following authentication methods:
 
 * One-time password generator
 * Built-in authenticator
@@ -52,8 +54,9 @@ Accounts that make programmatic calls to Anypoint Platform, or _service users_, 
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
-. In the navigation menu, click *Multi-factor auth*.
-. In the *Exempt Accounts* section, add accounts that you want to exempt.
+. In the navigation menu, click *Multi-factor Auth*.
+. In the *Exempt Accounts* section, add accounts that you want to exempt. +
+Only users that do not use single sign-on (SSO) appear in this list.
 . Click *Save*. +
 The exempt user accounts appear in the *Exempt Accounts* section.
 
