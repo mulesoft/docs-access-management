@@ -13,7 +13,6 @@ When multi-factor authentication is enabled, users must verify their Anypoint Pl
 * Security key
 * Salesforce Authenticator
 
-// will we let orgs require users to configure only certain methods? Or multiple methods?
 
 == Multi-factor Authentication Configurations
 
