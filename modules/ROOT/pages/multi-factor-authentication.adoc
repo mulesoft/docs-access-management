@@ -110,7 +110,7 @@ If your organization requires multi-factor authentication and you have removed a
 
 == Disable Multi-factor Authentication Requirement for All User Accounts
 
-When you disable the multi-factor authentication requirement, users are no longer required to use multi-factor authentication to log in to Anypoint Platform. Additionally, new users who log in do are not prompted to configure multi-factor authentication.
+When you disable the multi-factor authentication requirement, users are no longer required to use multi-factor authentication to log in to Anypoint Platform. Additionally, new users who log in are not prompted to configure multi-factor authentication.
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
