@@ -21,7 +21,9 @@ You can configure the following verification methods to comply with multi-factor
 
 One-time password generator:: Registers an authenticator app to create verification codes that you provide when logging in to Anypoint Platform.
 
-Built-in authenticator:: Registers a physical authentication device, such as Touch ID, to verify your account. // what happens if they lose this device, and it's their only MFA method?...
+Built-in authenticator:: Registers a physical authentication device, such as Touch ID, to verify your account.
+
+// what happens if they lose this device, and it's their only MFA method?...
 
 Security key:: Registers a USB security key to your account. The device is then authorized to create verification codes that you provide when logging in to Anypoint Platform.
 
@@ -40,7 +42,7 @@ If a user already has multi-factor authentication configured for their account, 
 
 === Exempt Users from Multi-factor Authentication
 
-Accounts that make programmatic calls to Anypoint Platform, or _service users_, should be exempt from multi-factor authentication since they cannot provide verification aside from a username and password. 
+Accounts that make programmatic calls to Anypoint Platform, or _service users_, should be exempt from multi-factor authentication since they cannot provide verification aside from a username and password.
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
