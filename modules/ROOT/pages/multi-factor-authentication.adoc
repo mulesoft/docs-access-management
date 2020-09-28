@@ -21,7 +21,7 @@ You can configure the following verification methods to comply with multi-factor
 
 One-time password generator:: Registers an authenticator app to create verification codes that you provide when logging in to Anypoint Platform.
 
-Built-in authenticator:: Registers a physical authentication device, such as Touch ID, to verify your account.
+Built-in authenticator:: Registers a physical authentication device, such as Touch ID, to verify your identity when logging in to Anypoint Platform.
 
 // what happens if they lose this device, and it's their only MFA method?...
 
