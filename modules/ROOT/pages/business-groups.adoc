@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Business groups are self-contained resource groups that contain Anypoint Platform resources such as APIs and applications. Business groups provide a way to separate and control access to Anypoint Platform resources, as users have access only to the business groups in which they have a role.
+Business groups are self-contained resource groups that contain Anypoint Platform resources such as applications and APIs. Business groups provide a way to separate and control access to Anypoint Platform resources because users have access only to the business groups in which they have a role.
 
 Business groups reside within the master organization and are organized in a hierarchical tree where the top-level business group is the root. Each business group you create has one direct parent and can have multiple children.
 
@@ -12,11 +12,11 @@ Business groups are not enabled by default in a new Anypoint Platform account. T
 
 If you are an organization administrator and your organization is enabled for business group support, you can create business groups within your organization. The organization administrator is also the administrator of any business groups within the organization.
 
-Business groups provide more fine grained control over access to resources.
+Business groups provide more fine-grained control over access to resources.
 
 image::organization-2b25c.png[]
 
-Since business groups are hierarchical, the owner of a parent business group always retains administrator permissions for any child business group within that parent. The owner of a business group can create child business groups and assign another user (who has the *Organization Administrators* role) as an owner of those child business groups. The owner of the parent group remains an *Organization Administrator* within the child business group.
+Because business groups are hierarchical, the owner of a parent business group automatically has and retains administrator permissions for any child business group of that parent, even it they make another *Organization Administrators* user owner of a child business group.
 
 Conversely, owners of child business groups cannot:
 
@@ -40,8 +40,12 @@ image::organization-20885.png[]
   * Select *Owner can create Business Groups* to allow the owner to create child business groups under this business group.
   * Select *Owner can create environments* to allow the owner to create environments within this business group.
   * You can assign some or all of the redistributable resources (vCores, VPCs, and so on) that your organization owns to an individual business group. This ensures that the resources are used by the CloudHub deployments that belong to the business group. You can assign the resources when you create the business group, or edit these settings later.
-  * *Enable CloudHub global deployment*: This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the default region you specified.
-* *Static IPs*: This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses.
+  * *Enable CloudHub global deployment* 
+  +
+  This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the region you specified.
+* *Static IPs*
++
+This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses.
 . Click *Add Business Group*. +
 The business group appears in the hierarchy, under the master organization.
 
@@ -54,16 +58,22 @@ Allocating redistributable resources to a business group makes those resources a
 
 === Create a Child Business Group
 
-You can create hierarchical levels of business groups to provide more control over access.
+Create a business group hierarchy to help you better control user access to resources.
 
-. Click the blue *+* icon on the left of the business group in which to create the child.
+. Click the blue *+* icon to the left of the business group in which you want to create the child.
 . In the *Add Business Group* dialog, enter a *Business Group name* and *Owner*, then select from these options: +
-* *Owner can create Business Groups*: Organization administrators can create child business groups within the business group for which they are the owner.
-* *Owner can create environments*: Organization administrators can create environments within the business group.
-* *Enable CloudHub global deployment*: This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the default region you specified.
+* *Owner can create Business Groups*
++
+Organization administrators can create child business groups in a business group that they own.
+* *Owner can create environments*
++
+Organization administrators can create environments within their business groups.
+* *Enable CloudHub global deployment*
++
+This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the region you specified.
 * *Static IPs*: This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses.
 . Click *Add Business Group*. +
-The business group appears in the hierarchy under the parent business group.
+The new business group appears in the parent business group hierarchy.
 
 === Navigate Between Business Groups
 
@@ -104,7 +114,7 @@ Only an organization administrator that belongs to a business group can delete i
 . In the *Business Group Info* dialog, click *Delete Business Group*.
 . In the confirmation dialog, enter the name of the business, then click *Delete*.
 
-== Redistribute Resources between Existing Business Groups
+== Redistribute Resources Between Existing Business Groups
 
 You may need to redistribute resources (such as vCores, VPCs, load balancers, and so on) based on deployment of apps in your business groups.
 The business group structure creates a hierarchical distribution of resources that prevents child business groups from consuming resources that the master organization needs to distribute elsewhere or use itself.
@@ -117,14 +127,13 @@ Additionally, the master organization or parent business group cannot reclaim re
 
 You must have the Organization Administrator permission to redistribute resources.
 
-. In the Anypoint Platform *Access Management* page, click *Organization*.
-. Click the name of existing business group. +
+. In Anypoint Platform, navigate to the *Access Management* page and click *Organization*.
+. Click the name of a business group. +
 The *Business Group Info* window appears, showing the business group settings.
 . Enter the number of vCores you want the business group to have.
 . Click *Save changes*.
 
-The minimum value for a resource's slider equals the amount of the resource that is reassigned to child business groups plus the amount of the resource currently in use by the business group.
-If a resource is unavailable to a business group, the resource does not appear as a slider in the *Business Group Info* window for the selected business group.
+The *Business Group Info* window includes a resource slider showing a minimum value that equals the amount of the resource that is reassigned to child business groups plus the amount of the resource currently in use by the business group. Unavailable resources are not represented by a slider in the window.
 
 === See Also
 
