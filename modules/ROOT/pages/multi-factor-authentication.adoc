@@ -97,8 +97,8 @@ The *Manage Your Verification Methods* interface appears.
 === Modify the Name of an Existing Authentication Method
 
 . Click the pencil icon next to the authentication method you want to rename.
-.. Enter a new name for your authentication method.
-.. Click the checkmark.
+. Enter a new name for your authentication method.
+. Click the checkmark.
 . Click *Done*.
 
 === Remove an Authentication Method:
