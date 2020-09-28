@@ -6,7 +6,7 @@ endif::[]
 Multi-factor authentication provides an additional layer of verification for individual Anypoint Platform users.
 You can require all users in your organization to use multi-factor authentication and exempt specific accounts, or users can manually enable multi-factor authentication in their profile settings.
 
-When multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using one of the following methods:
+When multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using one of the following authentication methods:
 
 * One-time password generator
 * Built-in authenticator
@@ -30,6 +30,13 @@ Security key:: Registers a USB security key to your account. The device is then 
 Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to create verification codes that you provide when logging in to Anypoint Platform.
 
 == Enable Multi-factor Authentication for All User Accounts
+
+For enhanced security, you can require all users in your organization to use multi-factor authentication. Users can configure their authentication method when they log in to Anypoint Platform after you initially enable multi-factor authentication.
+
+[NOTE]
+--
+To prevent service disruptions, identify any accounts that are used to programmatically call Anypoint Platform, or _service accounts_. You must add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication requirements.
+--
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
