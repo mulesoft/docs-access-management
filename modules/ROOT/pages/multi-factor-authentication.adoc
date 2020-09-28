@@ -31,7 +31,7 @@ Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to 
 
 == Enable Multi-factor Authentication for All User Accounts
 
-For enhanced security, you can require all users in your organization to use multi-factor authentication. Users can configure their authentication method when they log in to Anypoint Platform after you initially enable multi-factor authentication.
+For enhanced security, you can require all users in your organization to use multi-factor authentication. Users must configure their authentication method when they log in to Anypoint Platform after you initially enable multi-factor authentication.
 
 [NOTE]
 --
@@ -66,7 +66,7 @@ You can enable multi-factor authentication even if your organization does not re
 
 . Log in to Anypoint Platform.
 . Navigate to your user profile.
-. Click *Configure MFA*. +
+. Click *Configure multi-factor authentication (MFA)*. +
 The *Manage Your Verification Methods* interface appears.
 . Next to the authentication method you want to configure, click *Add*.
 . Follow the instructions for your preferred verification method.
