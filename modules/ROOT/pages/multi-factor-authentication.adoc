@@ -49,7 +49,9 @@ If a user already has multi-factor authentication configured for their account, 
 
 === Exempt Users from Multi-factor Authentication
 
-Accounts that make programmatic calls to Anypoint Platform, or _service users_, should be exempt from multi-factor authentication since they cannot provide verification aside from a username and password.
+Accounts that make programmatic calls to Anypoint Platform, or service users, should be exempt from multi-factor authentication since they cannot provide verification aside from a username and password.
+
+As a best practice, MuleSoft recommends using the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using individual user accounts. Using the Connected Apps feature provides more security and control than using user accounts.
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
