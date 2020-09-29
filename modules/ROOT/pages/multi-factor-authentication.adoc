@@ -88,7 +88,7 @@ For enhanced security, you should use at least one verification method even if y
 . Click *Configure multi-factor authentication (MFA)*. +
 The *Manage Your Verification Methods* interface appears.
 
-=== Add an Additional Authentication Method:
+=== Add an Additional Authentication Method
 
 . Next to the authentication method you want to configure, click *Add*.
 . Follow the instructions to configure your preferred verification method.
@@ -101,7 +101,7 @@ The *Manage Your Verification Methods* interface appears.
 . Click the checkmark.
 . Click *Done*.
 
-=== Remove an Authentication Method:
+=== Remove an Authentication Method
 
 . Next to the authentication method you want to remove, click the bin icon.
 . Click *Yes*
