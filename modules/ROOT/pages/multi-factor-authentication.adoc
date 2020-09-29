@@ -35,7 +35,7 @@ For enhanced security, you can require all users in your organization to use mul
 
 [NOTE]
 --
-To prevent service disruptions, identify any accounts that are used to programmatically call Anypoint Platform, or _service accounts_. You must add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication requirements.
+To prevent service disruptions, identify any accounts that are used to programmatically call Anypoint Platform, or _service accounts_. You must either configure these calls using the xref:connected-apps-overview.adoc[Connected Apps] feature or add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication requirements. 
 --
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
@@ -54,8 +54,8 @@ Accounts that make programmatic calls to Anypoint Platform, or _service users_, 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
 . In the navigation menu, click *Multi-factor Auth*.
-. In the *Exempt Accounts* section, add accounts that you want to exempt. +
-Only users that do not use single sign-on (SSO) appear in this list.
+. In the *Exempt Accounts* section, add the accounts that you want to exempt. +
+Only users who do not use single sign-on (SSO) appear in this list.
 . Click *Save*. +
 The exempt user accounts appear in the *Exempt Accounts* section.
 
@@ -96,7 +96,7 @@ The *Manage Your Verification Methods* interface appears.
 
 === Modify the Name of an Existing Authentication Method
 
-. Click the pencil icon next to the authentication method you want to rename.
+. Click the pencil icon next to the authentication method that you want to rename.
 . Enter a new name for your authentication method.
 . Click the checkmark.
 . Click *Done*.
@@ -106,7 +106,7 @@ The *Manage Your Verification Methods* interface appears.
 . Next to the authentication method you want to remove, click the bin icon.
 . Click *Yes*
 . Click *Done*. +
-If your organization requires multi-factor authentication and you have removed all authentication methods, you must configure at least one authentication method to save your changes.
+If your organization requires multi-factor authentication and you have removed all authentication methods, you must configure at least one authentication method before you save your changes.
 
 == Disable Multi-factor Authentication Requirement for All User Accounts
 
