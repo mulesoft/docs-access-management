@@ -10,22 +10,21 @@ Users who use single sign-on (SSO) cannot configure multi-factor authentication 
 
 When multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using at least one of the following authentication methods:
 
-* One-time password generator
+* Third-party TOTP authenticator apps
 * Built-in authenticator
 * Security key
 * Salesforce Authenticator
 
-After a user has successfully verified their identity on a trusted device using multi-factor authentication, they are not required to reverify their identity for 90 days.
 
 == Multi-factor Authentication Configurations
 
 You can configure at least one of the following verification methods to comply with multi-factor authentication requirements:
 
-One-time password generator:: Registers an authenticator app to create verification codes that you provide when logging in to Anypoint Platform.
+Third-party TOTP authenticator apps:: Registers an authenticator app to create verification codes that you provide when logging in to Anypoint Platform.
 
-Built-in authenticator:: Registers a physical authentication device, such as Touch ID, to verify your identity when logging in to Anypoint Platform.
+Built-in authenticator:: Registers a physical authentication device, such as Touch ID or Windows Hello, to verify your identity when logging in to Anypoint Platform.
 
-Security key:: Registers a USB security key to your account. The device is then authorized to create verification codes that you provide when logging in to Anypoint Platform.
+Security key:: Registers a USB security key, such as Yubico YubiKey or Google Titan Security Key, to your account. The device is then authorized to create verification codes that you provide when logging in to Anypoint Platform.
 
 Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to create verification codes that you provide when logging in to Anypoint Platform.
 
@@ -63,7 +62,7 @@ The exempt user accounts appear in the *Exempt Accounts* section.
 
 You can remove user accounts from *Exempt Accounts* list by clicking *X* next to their account name.
 
-== Enable Multi-factor Authentication on Individual User Accounts
+== Enable Multi-factor Authentication on Your User Account
 
 You can enable multi-factor authentication even if your organization does not require it. You can enable multiple verification methods for your account.
 
