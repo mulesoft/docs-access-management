@@ -29,7 +29,7 @@ Configuring SAML for SSO involves:
 . In *Management Center*, click *Access Management*.
 . In the navigation menu on the left, click *Identity Providers*.
 . Select *Identity Providers* > *SAML 2.0*.
-. Complete the required fields of the *Identity Management SAML 2.0* form:
+. In the *Configurations* tab, complete the required fields of the *Identity Management SAML 2.0* form:
 +
 * *Sign On URL*
 +
@@ -90,6 +90,67 @@ If enabled, the SAML assertions sent from the IdP must be encrypted and follow t
 . Click *Create*.
 +
 . Sign out of Anypoint Platform, navigate to the sign-on URL you entered in the *Identity Management SAML 2.0* form, then sign in through your identity provider to test the configuration.
+
+== Rotate a SAML Key
+
+If your IdP supports multiple keys, you can rotate keys to seamlessly retire keys that have been in use for an extended period of time.
+Anypoint Platform can generate a key to use with your IdP, or you can provide a public and private key pair.
+You can store up to 3 keys, and you can set a primary key or revoke a key at any time.
+To prevent service disruptions, ensure your IdP has an active key when you change your key configurations.
+
+=== Generate a Key
+
+Anypoint Platform can create a key for you to use with your IdP.
+
+. In Anypoint Platform, sign in as a user with the Organization Administrator permission.
+. In *Management Center*, click *Access Management*.
+. In the navigation menu on the left, click *Identity Providers*.
+. Next to a SAML 2.0 IdP, click *Edit*.
+. Click the *Anypoint Keys* tab.
+. Click *+ New key*, and select *Generate*. +
+A newly generated key appears in the list of keys.
+
+=== Upload a Key
+
+You can upload an existing public and private key pair.
+
+. In Anypoint Platform, sign in as a user with the Organization Administrator permission.
+. In *Management Center*, click *Access Management*.
+. In the navigation menu on the left, click *Identity Providers*.
+. Next to a SAML 2.0 IdP, click *Edit*.
+. Click the *Anypoint Keys* tab.
+. Click *+ New key*, and select *Upload*.
+. In the *Private key* field, paste your private key.
+. In the *Public key* field, paste your certificate.
+. Click *Upload*. +
+The key you uploaded appears in the list of keys.
+
+=== Change the Primary Key
+
+Because you can use up to 3 keys with Anypoint Platform, you can designate a _primary key_ to be used for signature verification between the IdP and Anypoint Platform.
+Before reassigning the primary key, ensure your IdP can access the key that you intend to use.
+
+. In Anypoint Platform, sign in as a user with the Organization Administrator permission.
+. In *Management Center*, click *Access Management*.
+. In the navigation menu on the left, click *Identity Providers*.
+. Next to a SAML 2.0 IdP, click *Edit*.
+. Click the *Anypoint Keys* tab.
+. Next to the key that you want to revoke, click *...* and select *Use as primary key...*.
+. Click *Apply*.
+
+=== Revoke a Key
+
+When a key is compromised, you can revoke it and use another key.
+Before you revoke a key, ensure your IdP is not using the key.
+Note that when you revoke a public key, Anypoint Platform also revokes the corresponding private key. For security purposes, you cannot retrieve a key that has been revoked.
+
+. In Anypoint Platform, sign in as a user with the Organization Administrator permission.
+. In *Management Center*, click *Access Management*.
+. In the navigation menu on the left, click *Identity Providers*.
+. Next to a SAML 2.0 IdP, click *Edit*.
+. Click the *Anypoint Keys* tab.
+. Next to the key that you want to revoke, click *...* and select *Revoke*.
+. Click *Revoke*.
 
 == Import SAML Metadata
 
