@@ -116,7 +116,7 @@ Only an organization administrator that belongs to a business group can delete i
 
 == Redistribute Resources Between Existing Business Groups
 
-You may need to redistribute resources (such as vCores, VPCs, load balancers, and so on) based on deployment of apps in your business groups.
+Sometimes you need to redistribute resources (such as vCores, VPCs, load balancers, and so on) based on deployment of apps in your business groups.
 The business group structure creates a hierarchical distribution of resources that prevents child business groups from consuming resources that the master organization needs to distribute elsewhere or use itself.
 As such, you can distribute resources from your master organization to business groups and then to their child business groups.
 The business group that receives resources can either consume them or distribute them to child business groups for consumption or further delegation.
