@@ -136,7 +136,7 @@ Before reassigning the primary key, ensure your IdP can access the key that you 
 . In the navigation menu on the left, click *Identity Providers*.
 . Next to a SAML 2.0 IdP, click *Edit*.
 . Click the *Anypoint Keys* tab.
-. Next to the key that you want to revoke, click *...* and select *Use as primary key...*.
+. Next to the key that you want to make primary, click *...* and select *Use as primary key...*.
 . Click *Apply*.
 
 === Revoke a Key
