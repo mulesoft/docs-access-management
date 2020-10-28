@@ -16,7 +16,7 @@ After multi-factor authentication is enabled, users must verify their Anypoint P
 * Salesforce Authenticator
 
 
-== MFA Verification Methods
+== Multi-factor Authentication Verification Methods
 
 You can configure at least one of the following verification methods to comply with multi-factor authentication requirements:
 
