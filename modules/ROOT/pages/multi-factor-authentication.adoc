@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 Multi-factor authentication provides an additional layer of verification for individual Anypoint Platform users.
-You can require all users in your organization to use multi-factor authentication and exempt specific accounts, or users can manually enable multi-factor authentication in their profile settings.
+You can require all users in your organization to use multi-factor authentication and exempt specific accounts. Non-SSO users can also manually enable multi-factor authentication in their profile settings.
 
 SSO users configure multi-factor authentication through their identity provider.
 
