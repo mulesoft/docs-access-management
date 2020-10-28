@@ -141,7 +141,7 @@ Before reassigning the primary key, ensure your IdP can access the key that you 
 
 === Revoke a Key
 
-When a key is compromised, you can revoke it and use another key.
+As a best practice, revoke a key that you have already used as the primary key.
 Before you revoke a key, ensure your IdP is not using the key.
 Note that when you revoke a public key, Anypoint Platform also revokes the corresponding private key. For security purposes, you cannot retrieve a key that has been revoked.
 
