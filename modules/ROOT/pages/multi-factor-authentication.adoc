@@ -121,7 +121,9 @@ Multi-factor authentication configuration is no longer required for new users.
 
 == Reset Multi-Factor Authentication for Individual Users
 
-You can reset multi-factor authentication for individual users if a device is compromised or lost:
+You can reset multi-factor authentication for individual users if a device is compromised or lost. If you are the only organization member with Organization Administrator permission and have lost access to your verification methods, contact customer support.
+
+To reset multi-factor authentication for an individual user:
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
@@ -132,5 +134,3 @@ The user page appears.
 . Click *Confirm reset MFA*. +
 The user's verification methods are reset. +
 If your organization requires multi-factor authentication, the user is prompted to configure a new verification method the next time they log in to Anypoint Platform.
-
-If you are the only organization member with Organization Administrator permission and have lost access to your verification methods, contact customer support.
