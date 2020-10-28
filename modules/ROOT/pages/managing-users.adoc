@@ -128,7 +128,7 @@ The key you uploaded appears in the list of keys.
 
 === Change the Primary Key
 
-Because you can use up to 3 keys with Anypoint Platform, you can designate a _primary key_ to be used for signature verification between the IdP and Anypoint Platform.
+Because you can store up to 3 keys, you must designate a _primary key_ to be used for signing requests from Anypoint Platform.
 Before reassigning the primary key, ensure your IdP can access the key that you intend to use.
 
 . In Anypoint Platform, sign in as a user with the Organization Administrator permission.
