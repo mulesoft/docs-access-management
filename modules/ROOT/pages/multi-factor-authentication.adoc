@@ -6,9 +6,9 @@ endif::[]
 Multi-factor authentication provides an additional layer of verification for individual Anypoint Platform users.
 You can require all users in your organization to use multi-factor authentication and exempt specific accounts, or users can manually enable multi-factor authentication in their profile settings.
 
-Users who use single sign-on (SSO) cannot configure multi-factor authentication for their accounts. Instead, SSO users should configure multi-factor authentication through their identity provider.
+SSO users configure multi-factor authentication through their identity provider.
 
-When multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using at least one of the following authentication methods:
+After multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using at least one of four authentication methods.
 
 * Third-party TOTP authenticator apps
 * Built-in authenticator
@@ -16,7 +16,7 @@ When multi-factor authentication is enabled, users must verify their Anypoint Pl
 * Salesforce Authenticator
 
 
-== Multi-factor Authentication Configurations
+== Multi-factor Authentication Methods
 
 You can configure at least one of the following verification methods to comply with multi-factor authentication requirements:
 
@@ -41,16 +41,16 @@ To prevent service disruptions, identify any accounts that are used to programma
 . Navigate to *Access Management*.
 . In the navigation menu, click *Multi-factor auth*.
 . Select *Required*.
-. If you want to exclude users, such as service accounts, from multi-factor authentication, add users to the *Exempt Accounts* section.
+. If you want to exempt specific users or service accounts from multi-factor authentication, add them to the *Exempt Accounts* section.
 . Click *Save*. +
-All users in your organization are now required to configure a multi-factor authentication method when they log into Anypoint Platform. +
+All nonexempt users in your organization are now required to configure a multi-factor authentication method when they log in to Anypoint Platform. +
 If a user already has multi-factor authentication configured for their account, they are not prompted to configure another method.
 
 === Exempt Users from Multi-factor Authentication
 
-Accounts that make programmatic calls to Anypoint Platform, or service users, should be exempt from multi-factor authentication since they cannot provide verification aside from a username and password.
+Service users or accounts that make programmatic calls to Anypoint Platform should be exempt from multi-factor authentication because they cannot provide verification aside from a username and password.
 
-As a best practice, MuleSoft recommends using the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using individual user accounts. Using the Connected Apps feature provides more security and control than using user accounts.
+It is best to use the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using individual user accounts. Using the Connected Apps feature provides more security and control than using user accounts.
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
@@ -60,11 +60,11 @@ Only users who do not use single sign-on (SSO) appear in this list.
 . Click *Save*. +
 The exempt user accounts appear in the *Exempt Accounts* section.
 
-You can remove user accounts from *Exempt Accounts* list by clicking *X* next to their account name.
+You can later remove user accounts from the *Exempt Accounts* list by clicking *X* next to their account names.
 
 == Enable Multi-factor Authentication on Your User Account
 
-You can enable multi-factor authentication even if your organization does not require it. You can enable multiple verification methods for your account.
+You can enable multi-factor authentication on your user account even if your organization does not require it. You can configure more than one verification method for your account:
 
 . Log in to Anypoint Platform.
 . Navigate to your user profile.
@@ -81,7 +81,7 @@ If your organization has disabled its multi-factor authentication requirement, y
 
 [NOTE]
 --
-For enhanced security, you should use at least one verification method even if your organization does not require multi-factor authentication.
+If your organization has disabled its multifactor authentication requirement, you can remove all authentication methods. However, for enhanced security, it is best to use at least one verification method.
 --
 
 . Log in to Anypoint Platform.
@@ -111,12 +111,12 @@ If your organization requires multi-factor authentication and you have removed a
 
 == Disable Multi-factor Authentication Requirement for All User Accounts
 
-When you disable the multi-factor authentication requirement, users are no longer required to use multi-factor authentication to log in to Anypoint Platform. Additionally, new users who log in are not prompted to configure multi-factor authentication.
+When you disable the multi-factor authentication requirement, existing users no longer use it to log in to Anypoint Platform and new users log in without being prompted to configure it.
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
 . In the navigation menu, click *Multi-factor auth*.
-. Select *Required*.
+. Unselect *Required*.
 . Click *Save*. +
 Multi-factor authentication configuration is no longer required for new users.
 
@@ -127,7 +127,7 @@ Disabling multi-factor authentication requirements does not automatically remove
 
 == Reset Multi-Factor Authentication for Individual Users
 
-Organization Administrators can reset multi-factor authentication for individual users in the event of a lost or compromised device.
+You can reset multi-factor authentication for individual users if a device is compromised or lost.
 
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Navigate to *Access Management*.
@@ -139,4 +139,4 @@ The user page appears.
 The user's verification methods are reset. +
 If your organization requires multi-factor authentication, the user is prompted to configure a new authentication method the next time they log in to Anypoint Platform.
 
-If you are the sole Organization Administrator and have lost access to your verification methods, contact customer support.
+If you are the only organization member with Organization Administrator permission and have lost access to your verification methods, contact customer support.
