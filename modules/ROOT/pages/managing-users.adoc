@@ -89,11 +89,11 @@ If enabled, the SAML assertions sent from the IdP must be encrypted and follow t
 +
 . Click *Create*.
 +
-. Sign out of Anypoint Platform, navigate to the sign-on URL you entered in the *Identity Management SAML 2.0* form, then sign in through your identity provider to test the configuration.
+. Sign out of Anypoint Platform, navigate to the sign-on URL you entered in the *Identity Management SAML 2.0* form, and then sign in through your identity provider to test the configuration.
 
 == Rotate a SAML Key
 
-As a security best practice, many organizations rotate the key used to encrypt SAML 2.0 assertions. With the Key Rotation feature, Anypoint Platform can generate a new key, or you can upload a public and private key pair (up to 3).
+As a security best practice, many organizations rotate the key used to encrypt SAML 2.0 assertions. With the Key Rotation feature, Anypoint Platform can generate a new key, or you can upload a public and private key pair (up to three).
 
 After you've added a new key to Anypoint Platform, you must ensure the key also exists in your IdP. All keys present in Anypoint Platform are used to decrypt SAML 2.0 assertions sent by your IdP. However, only the primary key is used by Anypoint Platform to sign SAML 2.0 AuthnRequests and SLO requests; the primary key must be configured in your IdP to validate the signatures.
 
@@ -141,7 +141,7 @@ Before reassigning the primary key, ensure your IdP can access the key that you 
 
 === Revoke a Key
 
-As a best practice, revoke a key that you have already used as the primary key.
+To help ensure security, revoke a key that you have already used as the primary key.
 Before you revoke a key, ensure your IdP is not using the key.
 Note that when you revoke a public key, Anypoint Platform also revokes the corresponding private key. For security purposes, you cannot retrieve a key that has been revoked.
 
