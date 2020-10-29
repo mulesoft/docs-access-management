@@ -67,7 +67,7 @@ You can later remove user accounts from the *Exempt Accounts* list by clicking *
 
 == Enable Multi-Factor Authentication on Your User Account
 
-You can enable multi-factor authentication on your user account even if your organization does not require it. You can configure more than one verification method for your account:
+If you want to ensure you are the only person who can access your account, you can enable multi-factor authentication on your user account even if your organization does not require it. You can configure more than one verification method for your account:
 
 . Log in to Anypoint Platform.
 . Navigate to your user profile.
