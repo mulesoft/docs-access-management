@@ -14,12 +14,12 @@ Configuring SAML for SSO involves:
 == Prerequisites
 
 * Your Anypoint Platform organization must be set up as your audience.
-* The assertion consumer service must be set to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/receive-id+`.
+* The assertion consumer service must be set to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`.
 
 [NOTE]
 ====
-* If you are using the Anypoint Platform EU Control Plane, the endpoint is `+https://eu1.anypoint.mulesoft.com/accounts/login/receive-id+`. +
-* If you are using the Anypoint Platform Gov Cloud, the endpoint is  `+https://gov.anypoint.mulesoft.com/accounts/login/receive-id+`
+* If you are using the Anypoint Platform EU Control Plane, the endpoint is `+https://eu1.anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`. +
+* If you are using the Anypoint Platform Gov Cloud, the endpoint is  `+https://gov.anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`
 ====
 
 [[configure-saml]]
@@ -127,9 +127,9 @@ A newly generated key appears in the list of keys.
 . Click *Upload*. +
 The key you uploaded appears in the list of keys.
 
-=== Change the Primary Key
+=== Rotate the Primary Key
 
-Because you can store up to 3 keys, you must designate a _primary key_ to be used for signing requests from Anypoint Platform.
+Because you can store up to three keys, you must designate a _primary key_ to be used for signing requests from Anypoint Platform.
 Before reassigning the primary key, ensure your IdP can access the key that you intend to use.
 
 . In Anypoint Platform, sign in as a user with the Organization Administrator permission.
