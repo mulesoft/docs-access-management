@@ -14,7 +14,8 @@ Configuring SAML for SSO involves:
 == Prerequisites
 
 * Your Anypoint Platform organization must be set up as your audience.
-* The assertion consumer service must be set to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`.
+* The assertion consumer service must be set to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`. +
+Note that `:providerId` is available only after you create the provider configuration.
 
 [NOTE]
 ====
