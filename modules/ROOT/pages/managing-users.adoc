@@ -19,7 +19,7 @@ Configuring SAML for SSO involves:
 [NOTE]
 ====
 * If you are using the Anypoint Platform EU Control Plane, the endpoint is `+https://eu1.anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`. +
-* If you are using the Anypoint Platform Gov Cloud, the endpoint is  `+https://gov.anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`
+* If you are using the Anypoint Platform Gov Cloud, the endpoint is  `+https://gov.anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`.
 ====
 
 [[configure-saml]]
