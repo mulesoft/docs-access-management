@@ -22,7 +22,7 @@ The SAML response must be base64 encoded.
 +
 ----
 curl -X POST \
-  https://anypoint.mulesoft.com/accounts/login/receive-id \
+  https://anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id \
   -H 'Content-Type: application/json' \
   -H 'X-Requested-With: XMLHttpRequest' \
   -d '{
