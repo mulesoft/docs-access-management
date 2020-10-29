@@ -6,7 +6,7 @@
 * xref:users.adoc[Users]
 * xref:roles.adoc[Roles]
 * xref:environments.adoc[Environments]
-* xref:multi-factor-authentication.adoc[Multi-factor Authentication]
+* xref:multi-factor-authentication.adoc[Multi-Factor Authentication]
 * xref:external-identity.adoc[Identity Providers]
  ** xref:sso-prerequisites-about.adoc[About SSO Prerequisites and Limitations]
  ** xref:external-identity-index.adoc[External Identity Configurations]
