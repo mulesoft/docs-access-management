@@ -33,10 +33,9 @@ Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to 
 
 For enhanced security, you can require all users in your organization to use multi-factor authentication. Users without a verification method already configured are prompted to do so when they subsequently log in to Anypoint Platform. Users with a method already configured are not prompted to configure another verification method.
 
-[NOTE]
---
+=== Prerequisite
+
 To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform. You must either configure these service account calls by using the xref:connected-apps-overview.adoc[Connected Apps] feature or add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication requirements. 
---
 
 === Enable Multi-Factor Authentication for All User Accounts
 
