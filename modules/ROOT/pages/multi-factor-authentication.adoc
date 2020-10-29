@@ -20,7 +20,7 @@ After multi-factor authentication is enabled, users must verify their Anypoint P
 
 You can configure at least one of the following verification methods to comply with multi-factor authentication requirements:
 
-Third-party TOTP authenticator apps:: Registers an authenticator app to create verification codes that you provide when logging in to Anypoint Platform.
+Third-party TOTP authenticator app:: Registers an authenticator app to create verification codes that you provide when logging in to Anypoint Platform.
 
 Built-in authenticator:: Registers a physical authentication device, such as Touch ID or Windows Hello, to verify your identity when logging in to Anypoint Platform.
 
@@ -34,7 +34,7 @@ For enhanced security, you can require all users in your organization to use mul
 
 [NOTE]
 --
-To prevent service disruptions, identify any accounts that are used to programmatically call Anypoint Platform (known as _service accounts_). You must either configure these service account calls by using the xref:connected-apps-overview.adoc[Connected Apps] feature or add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication requirements. 
+To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform. You must either configure these service account calls by using the xref:connected-apps-overview.adoc[Connected Apps] feature or add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication requirements. 
 --
 
 To enable multi-factor authentication for all user accounts:
@@ -82,7 +82,7 @@ If you have previously configured multi-factor authentication, you can modify wh
 
 If your organization has disabled its multi-factor authentication requirement, you can also remove all verification methods. However, for enhanced security, it is best to use at least one verification method.
 
-To modify verification methods on an individual user account:
+To modify verification methods in your account:
 
 . Log in to Anypoint Platform.
 . Navigate to your user profile.
@@ -102,8 +102,10 @@ The name of the verification method is changed.
 . If you want to remove a verification method:
 .. Next to the verification method you want to remove, click the bin icon.
 .. Click *Yes*
-.. Click *Done*. +
-The verification method is removed. If your organization requires multi-factor authentication and you have removed all verification methods, you must configure at least one verification method before you save your changes.
+.. Click *Done*. 
+
+[NOTE]
+If your organization requires multi-factor authentication and you have removed all verification methods, you must configure at least one verification method before you save your changes.
 . Click *Save*.
 
 == Disable Multi-Factor Authentication Requirement for All Organization Users
