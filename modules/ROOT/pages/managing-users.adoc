@@ -93,7 +93,7 @@ If enabled, the SAML assertions sent from the IdP must be encrypted and follow t
 
 == Rotate a SAML Key
 
-As a security best practice, many organizations rotate the key used to encrypt SAML 2.0 assertions. With the Key Rotation feature, Anypoint Platform can generate a new key, or you can upload a public and private key pair (up to three).
+As a security best practice, many organizations rotate the key used to encrypt SAML 2.0 assertions. With the Key Rotation feature, Anypoint Platform can generate a new key, or you can upload a public and private key pair (up to three keys). When you want to rotate a key, you can designate a new _primary key_ in Anypoint Platform and your IdP, and you can revoke the obsolete key to remove it from the rotation. 
 
 After you've added a new key to Anypoint Platform, you must ensure the key also exists in your IdP. All keys present in Anypoint Platform are used to decrypt SAML 2.0 assertions sent by your IdP. However, only the primary key is used by Anypoint Platform to sign SAML 2.0 AuthnRequests and SLO requests; the primary key must be configured in your IdP to validate the signatures.
 
