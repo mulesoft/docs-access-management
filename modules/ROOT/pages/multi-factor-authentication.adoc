@@ -4,9 +4,10 @@ include::_attributes.adoc[]
 endif::[]
 
 Multi-factor authentication provides an additional layer of verification for individual Anypoint Platform users.
-You can require all users in your organization to use multi-factor authentication and exempt specific accounts. Non-SSO users can also manually enable multi-factor authentication in their profile settings.
 
-SSO users configure multi-factor authentication through their identity provider.
+* As an organization administrator, you can require all users in your organization to use multi-factor authentication and exempt specific accounts. 
+* Non-SSO users can manually enable multi-factor authentication in their profile settings.
+* SSO users can configure multi-factor authentication through their identity provider.
 
 After multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using at least one of four verification methods:
 
@@ -51,7 +52,7 @@ All nonexempt users in your organization are now required to configure a verific
 
 Service users or accounts that make programmatic calls to Anypoint Platform should be exempt from multi-factor authentication because they cannot provide verification aside from a username and password.
 
-It is best to use the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using individual user accounts. Using the Connected Apps feature provides more security and control than using user accounts.
+It is best to use the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using service accounts. Using the Connected Apps feature provides more security and control than using user accounts.
 
 To exempt individual accounts from multi-factor authentication:
 
@@ -101,7 +102,6 @@ The *Manage Your Verification Methods* interface appears.
 .. Next to the verification method you want to remove, click the bin icon.
 .. Click *Yes*
 .. Click *Done*.  +
-
 [NOTE]
 If your organization requires multi-factor authentication and you have removed all verification methods, you must configure at least one verification method before you save your changes.
 . Click *Save*.
