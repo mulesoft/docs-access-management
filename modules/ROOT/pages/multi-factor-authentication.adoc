@@ -92,13 +92,11 @@ The *Manage Your Verification Methods* interface appears.
 .. Next to the verification method you want to configure, click *Add*.
 .. Follow the instructions to configure your preferred verification method.
 .. Click *Done*. +
-You can now use the configured verification method to verify your identity when you log in to Anypoint Platform.
 . If you want to modify the name of an existing verification method:
 .. Click the pencil icon next to the verification method that you want to rename.
 .. Enter a new name for your verification method.
 .. Click the checkmark.
 .. Click *Done*. +
-The name of the verification method is changed.
 . If you want to remove a verification method:
 .. Next to the verification method you want to remove, click the bin icon.
 .. Click *Yes*
