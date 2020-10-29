@@ -100,7 +100,7 @@ The *Manage Your Verification Methods* interface appears.
 . If you want to remove a verification method:
 .. Next to the verification method you want to remove, click the bin icon.
 .. Click *Yes*
-.. Click *Done*. 
+.. Click *Done*.  +
 
 [NOTE]
 If your organization requires multi-factor authentication and you have removed all verification methods, you must configure at least one verification method before you save your changes.
