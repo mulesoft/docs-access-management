@@ -76,7 +76,7 @@ The *Manage Your Verification Methods* interface appears.
 . Next to the verification method you want to configure, click *Add*.
 . Follow the instructions for your preferred verification method.
 
-== Modify or Remove Multi-Factor Authentication on Your Account?
+== Modify or Remove Multi-Factor Authentication on Your Account
 
 If you have previously configured multi-factor authentication, you can modify which verification methods you use for your account. If your organization requires multi-factor authentication, you must have at least one verification method configured.
 
