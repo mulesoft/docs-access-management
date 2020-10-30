@@ -3,11 +3,13 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Multi-factor authentication provides an additional layer of verification for individual Anypoint Platform users.
+Multi-factor authentication provides an additional layer of verification for Anypoint Platform users.
 
-* As an organization administrator, you can require all users in your organization to use multi-factor authentication and exempt specific accounts. 
-* Non-SSO users can manually enable multi-factor authentication in their profile settings.
-* SSO users can configure multi-factor authentication through their identity provider.
+* As an organization administrator, you can require all non-SSO users in your organization to use multiple verification methods to successfully log in.
+* As an organization administrator, you can exempt specific user accounts from the multi-factor authentication requirement in order to allow existing integrations to continue operating without interruption. 
+* Non-SSO users can manually enable multi-factor authentication in their profile settings, even if their organization does not require it.
+
+The multi-factor authentication setting does not apply to SSO users.  SSO users should configure multi-factor authentication through their identity provider.
 
 After multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using at least one of four verification methods:
 
@@ -35,7 +37,7 @@ For enhanced security, you can require all users in your organization to use mul
 
 === Prerequisite
 
-To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform. You must either configure these service account calls by using the xref:connected-apps-overview.adoc[Connected Apps] feature or add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication requirements. 
+To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform. You must either configure these service account calls by using the xref:connected-apps-overview.adoc[Connected Apps] feature or add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication. 
 
 === Enable Multi-Factor Authentication for All User Accounts
 
