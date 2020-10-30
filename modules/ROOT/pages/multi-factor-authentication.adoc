@@ -6,7 +6,7 @@ endif::[]
 Multi-factor authentication provides an additional layer of verification for Anypoint Platform users.
 
 * As an organization administrator, you can require all non-SSO users in your organization to use multiple verification methods to successfully log in.
-* An an organization administrator, you have the option to exempt specific user accounts from the multi-factor authentication requirement, in order to allow existing integrations to continue operating without interruption. 
+* As an organization administrator, you can exempt specific user accounts from the multi-factor authentication requirement in order to allow existing integrations to continue operating without interruption. 
 * Non-SSO users can manually enable multi-factor authentication in their profile settings, even if their organization does not require it.
 
 The multi-factor authentication setting does not apply to SSO users.  SSO users should configure multi-factor authentication through their identity provider.
