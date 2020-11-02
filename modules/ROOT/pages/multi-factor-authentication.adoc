@@ -136,4 +136,4 @@ If your organization requires multi-factor authentication, the user is prompted 
 
 == Known Issues
 
-* If you enable MFA, your users may experience an issue logging in via Anypoint Studio.   As a temporary workaround, change the *Browser* setting from *Built-in* to *Native* in the Anypoint Studio *Preferences* section.  Once you've made the change, your users should be able to authenticate successfully with "One-Time Password Generator" and "Salesforce Authenticator" verification methods.  Anypoint Studio will resolve this issue in a future update. 
+* If you enable MFA, your users might experience an issue logging in via Anypoint Studio. As a temporary workaround, change the *Browser* setting from *Built-in* to *Native* in the Anypoint Studio *Preferences* section. Once you've made the change, your users should be able to authenticate successfully with "One-Time Password Generator" and "Salesforce Authenticator" verification methods. Anypoint Studio will resolve this issue in a future update. 
