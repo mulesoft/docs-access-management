@@ -133,3 +133,7 @@ To reset multi-factor authentication for an individual user:
 . Click *Reset multi-factor authentication*.
 . Click *Confirm reset MFA*. +
 If your organization requires multi-factor authentication, the user is prompted to configure a new verification method the next time they log in to Anypoint Platform.
+
+== Known Issues
+
+* If you enable MFA, your users might experience an issue logging in via Anypoint Studio. As a temporary workaround, change the *Browser* setting from *Built-in* to *Native* in the Anypoint Studio *Preferences* section. Once you've made the change, your users should be able to authenticate successfully with "One-Time Password Generator" and "Salesforce Authenticator" verification methods. Anypoint Studio will resolve this issue in a future update. 
