@@ -140,8 +140,6 @@ When editing role names and descriptions, use the 'Enter' key to save changes. C
 
 As an organization administrator, you can create custom roles by combining API or applications, permissions, and users. Depending on the product to which the role is associated, these options may vary. For example, API roles cannot be removed and their permissions cannot be modified, however you can add a description and add users to that role.
 
-If the only permissions associated with your role are Portal Viewer​, Exchange Viewer​, or ​Application Owner​, then users belonging to this role won't have access to the organization's support portal.
-
 
 [NOTE]
 Product permissions are specific to a single environment. If you have multiple environments and want to give a role the same permissions on all, you must add these permissions multiple times--one for each environment.
