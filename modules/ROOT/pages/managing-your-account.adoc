@@ -19,11 +19,12 @@ A form appears, where you can provide your contact information and create a user
 ** Alphanumeric characters
 ** Dashes
 ** Underscores
-* Password - Must be at least six characters in length and can contain only the following: +
+* Password - Must be at least eight characters in length with at least one uppercase and one lowercase letter. Your password can contain only the following: +
 ** Upper and lower case characters
 ** Numbers
 ** Non-alphanumeric symbols
-* Company - Can be any name unless you were invited to join an existing organization, in which case the company name is already set.
+* Company - Must be at least two characters in length. +
+If you were invited to join an existing organization, the company name is already set.
 +
 Anypoint Platform creates a new master organization using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account can be associated with only one organization.
 
@@ -58,7 +59,7 @@ Your username must be at least three characters and contain only the following: 
 ** Alphanumeric characters
 ** Dashes
 ** Underscores
-* Password - Must be at least 6 characters in length and can contain only the following: +
+* Password - Must be at least eight characters in length with at least one uppercase and one lowercase letter. Your password can contain only the following: +
 ** Upper and lower case characters
 ** Numbers
 ** Non-alphanumeric symbols
@@ -97,7 +98,7 @@ Your username must be at least three characters and contain only the following: 
 ** Alphanumeric characters
 ** Dashes
 ** Underscores
-* Password - Must be at least 6 characters in length and can contain only the following: +
+* Password - Must be at least eight characters in length with at least one uppercase and one lowercase letter. Your password can contain only the following: +
 ** Upper and lower case characters
 ** Numbers
 ** Non-alphanumeric symbols
