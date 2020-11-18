@@ -114,6 +114,7 @@ Only an organization administrator that belongs to a business group can delete i
 . In the *Business Group Info* dialog, click *Delete Business Group*.
 . In the confirmation dialog, enter the name of the business, then click *Delete*.
 
+[[redistribute-resources]]
 == Redistribute Resources Between Existing Business Groups
 
 Sometimes you need to redistribute resources (such as vCores, VPCs, load balancers, and so on) based on deployment of apps in your business groups.
