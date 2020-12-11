@@ -141,13 +141,27 @@ properties : API object
 |Create
 |subaction : Import API +
 properties : none
-|Change name of API
+|Update label of API
 |API
 |API ID
 |n/a
 |Edit
 |subaction : none +
-properties : New name
+properties : API object
+|Update consumer endpoint of API
+|API
+|API ID
+|n/a
+|Edit - update endpoint
+|subaction : none +
+properties : API object
+|Update endpoint URI of API
+|API
+|API ID
+|n/a
+|Edit - edit endpoint URI
+|subaction : none +
+properties : API object
 |===
 
 
@@ -175,7 +189,7 @@ properties : none
 |API ID
 |Delete
 |subaction : none +
-properties : API version object
+properties : none
 |Import API
 |API version
 |version ID
@@ -286,38 +300,45 @@ properties : new endpoint
 |subaction : none +
 properties : deploy location (app name & server name for hybrid)
 |Create SLA tier
-|SLA tier
+|Tier
 |SLA ID
 |version ID
 |Create
 |subaction : none +
 properties : SLA settings
 |Modify SLA tier
-|SLA tier
+|Tier
 |SLA ID
 |version ID
 |Edit
 |subaction : none +
 properties : SLA settings
 |Deprecate SLA tier
-|SLA tier
+|Tier
 |SLA ID
 |version ID
 |Edit
 |subaction : Deprecate SLA tier +
 properties : SLA settings
 |Delete SLA tier
-|SLA tier
+|Tier
 |SLA ID
 |version ID
 |Delete
 |subaction : none +
-properties : SLA settings
+properties : none
 |Apply policy
 |API Policy
 |Policy ID
 |version ID
 |Create
+|subaction : none +
+properties : policy settings
+|Edit policy
+|API Policy
+|Policy ID
+|version ID
+|Edit
 |subaction : none +
 properties : policy settings
 |Remove policy
@@ -359,49 +380,57 @@ properties : application object
 |Application
 |app ID
 |n/a
-|Edit
+|Edit - reset client secret
 |subaction : Reset client secret +
 properties : none
-|Request tier change
-|Application
+|Request Access
+|Contract
 |Obj 1: app ID
 Obj 2: API version ID
 |n/a
-|Edit
+|Create
+|subaction : none +
+properties : SLA tier
+|Request tier change
+|Contract
+|Obj 1: app ID
+Obj 2: API version ID
+|n/a
+|Edit - request tier change
 |subaction : Request tier change +
 properties : New tier
-|Approve application
-|Application
+|Request tier change approval
+|Contract
 |Obj 1: app ID
 Obj 2: API version ID
 |n/a
-|Contract change
+|Edit - request tier change approval
+|subaction : request tier change approval +
+properties : New tier
+|Approve application
+|Contract
+|Obj 1: app ID
+Obj 2: API version ID
+|n/a
+|Edit - contract approval
 |subaction : Contract approval +
 properties : SLA tier
 |Revoke application
-|Application
+|Contract
 |Obj 1: app ID
 Obj 2: API version ID
 |n/a
-|Contract change
+|Edit - contract revoke
 |subaction : Contract revoked +
 properties : SLA tier
 |Restore application
-|Application
+|Contract
 |Obj 1: app ID
 Obj 2: API version ID
 |n/a
-|Contract change
+|Edit - contract restore
 |subaction : Contract restored +
 properties : SLA tier
-|Modify application tier
-|Application
-|Obj 1: app ID
-Obj 2: API version ID
-|n/a
-|Contract change
-|subaction : Contract changed +
-properties : new SLA tier
 
 |===
 
