@@ -1,61 +1,16 @@
-= To Map Users to Roles in an LDAP Group
+= Map Single Sign-On Users to Roles
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can map users in a federated organization's LDAP group to an Anypoint role. Your Anypoint Platform organization needs to use an external identity provider, such as PingFederate.
+You can map users in a federated organization's group to an Anypoint role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
 
-After you perform this mapping, users in an organization can sign into Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using LDAP. +
+After you perform this mapping, users in an organization can sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using LDAP, SAML, or OpenID Connect (OIDC). +
 This ensures security of credentials and maintains organizational roles for accessing privileged information.
 
-Choose an external identity provider and then configure roles.
+Anypoint Platform requires different information from your identity provider based on whether you use OpenID Connect, SAML, or LDAP.
 
-To configure a role:
-
-. In Anypoint Platform, navigate to Access Management.
-. Click *Roles*.
-. Click *Add Role* to create a role for each group of users in your organization.
-+
-image::external-identity-34af9.png[]
-
-. Specify a role name and description.
-. Click *Add Role* to add the role:
-+
-image::external-identity-c731b.png[]
-+
-
-. In the *Roles* section, click the name of the new role:
-+
-image::external-identity-35f9a.png[]
-+
-
-. Click *Set external group mapping*:
-+
-image::external-identity-251b8.png[]
-+
-
-. Copy the string from your SAML assertion AttributeValue to the External Group Name, for example:
-+
-SAML AttributeValue:
-+
-[source,xml,linenums]
-----
-<saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:type="xs:string">cn=jira-users,ou=groups,dc=muleforge,dc=org</saml:AttributeValue>
-----
-
-+
-Mapping:
-+
-image::external-identity-cfb1e.png[]
-
-. Click *Set names*.
-+
-To map more than one attribute name to the selected role, click *Add More* and add another attribute.
-
-. Repeat this process for each role that you want to map to an external group.
-
-== Configure Multiple Group Mappings for Single Sign-On
+== Configure Multiple Group Mappings for Single Sign-On using SAML
 
 If your organization uses single sign-on and requires its users to obtain permissions from multiple groups, you can configure a group attribute that contains all the groups you want to use. In many cases, you can create an array of groups.
 
@@ -78,6 +33,141 @@ To prevent security vulnerabilities, Anypoint Platform requires you to create a 
   <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
 </ns2:Attribute>
 ----
+
+=== Map SAML Users to Roles
+
+. In Anypoint Platform, navigate to Access Management.
+. Click *Roles*.
+. Click *Add Role* to create a role for each group of users in your organization.
+. Specify a role name and description.
+. Click *Add Role* to add the role.
+. In the *Roles* section, click the name of the new role:
+. Click *Set external group mapping*.
+. Enter the your array of SAML groups.
+. Click *Set names*.
++
+To map more than one attribute name to the selected role, click *Add More* and add another attribute.
+
+. Repeat this process for each role that you want to map to an external group.
+
+== Configure Multiple Group Mappings for Single Sign-On using OpenID Connect (OIDC)
+
+External identity providers format group mappings in different ways.
+Anypoint Platform checks the `UserInfo` endpoint for user information. If no user information is found, it then checks the `IdToken` endpoint.
+
+Okta, Auth0, Salesforce, Google, and Microsoft ADFS return groups that can be used for OIDC group mappings.
+You can use other identity providers if they call the `UserInfo` or `IdToken` endpoints.
+
+=== Map OIDC Group Users to Roles
+
+. Obtain a response with a group claim from your external identity provider.
+. In Anypoint Platform, navigate to Access Management.
+. Click *External Identity*.
+. From *Identity Management*, select OIDC.
+. Verify that the value in the *Group Scope* field matches the value in your IDP group expression.
+. Verify that the value in the *Group Attribute JSONata Expression* field matches the value from your JSONata query of your IDP group expression.
+. Click *Roles*.
+. Click *Add Role* to create a role for each group of users in your organization.
+. Specify a role name and description.
+. Click *Add Role* to add the role.
+. In the *Roles* section, click the name of the new role:
+. Click *Set external group mapping*.
+. Enter the group to which you want to map.
+. Click *Set names*.
++
+To map more than one attribute name to the selected role, click *Add More* and add another attribute.
+
+=== Examples of OIDC Group Expressions
+
+The following examples show expressions from different external identity providers.
+
+==== Okta
+
+[source,xml
+----
+{
+ ...
+  "groups": [
+    "Everyone",
+    "groupOne"
+  ]
+}
+----
+
+==== Auth0
+
+Auth0 may provide your groups in the following format:
+
+[source,xml]
+----
+{
+  ...
+  "https://anypoint.mulesoft.com/groups": [
+    "MyGroup",
+    "groupOne"
+  ]
+}
+----
+
+==== Salesforce
+
+[source,xml]
+----
+{
+  ...
+  "custom_attributes": {
+    "PermissionSets": "[\"groupOne\"]",
+    "myGroups": "myGroup1,myGroup2",
+  }
+}
+----
+
+==== Google
+
+[source,xml]
+----
+{
+  ...
+  "groups": [
+    "group1",
+    "group2"
+  ],
+}
+----
+
+== Configure Multiple Group Mappings for Single Sign-On using LDAP
+
+You can obtain the information you need to map your LDAP group to a role using a SAML assertion. Note that user management through LDAP is available only for the Private Cloud Edition.
+
+=== Map LDAP Group Users to Roles
+
+. In Anypoint Platform, navigate to Access Management.
+. Click *Roles*.
+. Click *Add Role* to create a role for each group of users in your organization.
+. Specify a role name and description.
+. Click *Add Role* to add the role.
+. In the *Roles* section, click the name of the new role:
+. Click *Set external group mapping*:
+. Copy the string from your SAML assertion AttributeValue to the External Group Name, for example:
++
+SAML AttributeValue:
++
+[source,xml,linenums]
+----
+<saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:type="xs:string">cn=jira-users,ou=groups,dc=muleforge,dc=org</saml:AttributeValue>
+----
+
++
+Mapping:
++
+image::external-identity-cfb1e.png[]
+
+. Click *Set names*.
++
+To map more than one attribute name to the selected role, click *Add More* and add another attribute.
+
+. Repeat this process for each role that you want to map to an external group.
 
 == See Also
 
