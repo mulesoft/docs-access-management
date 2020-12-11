@@ -5,10 +5,10 @@ endif::[]
 
 You can map users in a federated organization's group to an Anypoint role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
 
-After you perform this mapping, users in an organization can sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using LDAP, SAML, or OpenID Connect (OIDC). +
+After you perform this mapping, users in an organization can sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. +
 This ensures security of credentials and maintains organizational roles for accessing privileged information.
 
-Anypoint Platform requires different information from your identity provider based on whether you use OpenID Connect, SAML, or LDAP.
+Anypoint Platform requires different information from your identity provider based on whether you use SAML, OpenID Connect, or LDAP.
 
 == Configure Multiple Group Mappings for Single Sign-On using SAML
 
@@ -60,7 +60,7 @@ You can use other identity providers if they call the `UserInfo` or `IdToken` en
 
 === Map OIDC Group Users to Roles
 
-. Obtain a response with a group claim from your external identity provider.
+. Obtain a response to the `UserInfo` or `IdToken` endpoints with a group claim from your external identity provider.
 . In Anypoint Platform, navigate to Access Management.
 . Click *External Identity*.
 . From *Identity Management*, select OIDC.
@@ -79,7 +79,7 @@ To map more than one attribute name to the selected role, click *Add More* and a
 
 === Examples of OIDC Group Expressions
 
-The following examples show expressions from different external identity providers.
+The following examples show responses `UserInfo` or `IdToken` endpoints that contain group claims from different external identity providers.
 
 ==== Okta
 
@@ -95,8 +95,6 @@ The following examples show expressions from different external identity provide
 ----
 
 ==== Auth0
-
-Auth0 may provide your groups in the following format:
 
 [source,xml]
 ----
