@@ -975,6 +975,48 @@ properties : new permissions
 
 |===
 
+==== Identity Management
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+|Create identity provider configuration
+|Identity Management
+|Provider Name
+|n/a
+|Create
+|subaction : none +
+|Edit identity provider configuration
+|Identity Management
+|Provider Name
+|n/a
+|Edit
+|subaction : none +
+|Delete identity provider configuration
+|Identity Management
+|Provider Name
+|n/a
+|Delete
+|subaction : none +
+|Warning
+|Obj1: Identity Management
+Obj2: User
+|Obj1: Provider Name
+Obj2: UserID
+|n/a
+|None
+|subaction : none
+properties : message +
+
+|===
+
+
 === Organization and Business Groups
 
 
