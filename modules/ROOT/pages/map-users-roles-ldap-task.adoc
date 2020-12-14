@@ -132,7 +132,7 @@ The following example shows a typical Salesforce groups claim.
 }
 ----
 
-Given that group claim, the JSONata expression is `$split(custom_attributes.PermissionSets, ',')`.
+Given that groups claim, the JSONata expression is `$split(custom_attributes.PermissionSets, ',')`.
 
 == Configure Multiple Group Mappings for Single Sign-On using LDAP
 
