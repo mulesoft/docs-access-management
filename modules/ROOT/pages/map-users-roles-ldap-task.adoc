@@ -33,7 +33,11 @@ To prevent security vulnerabilities, Anypoint Platform requires you to create a 
   <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
 </ns2:Attribute>
 ----
-
+. In Anypoint Platform, navigate to Access Management.
+. Click *Identity Providers*.
+. From *Identity Providers*, select OIDC.
+. Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names
+. In the above example of a SAML assertion, the *Group Attribute* is "Groups":
 === Map SAML Users to Roles
 
 . In Anypoint Platform, navigate to Access Management.
@@ -43,7 +47,7 @@ To prevent security vulnerabilities, Anypoint Platform requires you to create a 
 . Click *Add Role* to add the role.
 . In the *Roles* section, click the name of the new role:
 . Click *Set external group mapping*.
-. Enter the your array of SAML groups.
+. Enter the group to which you want to map.
 . Click *Set names*.
 +
 To map more than one attribute name to the selected role, click *Add More* and add another attribute.
@@ -52,20 +56,19 @@ To map more than one attribute name to the selected role, click *Add More* and a
 
 == Configure Multiple Group Mappings for Single Sign-On using OpenID Connect (OIDC)
 
-External identity providers format group mappings in different ways.
-Anypoint Platform checks the `UserInfo` endpoint for user information. If no user information is found, it then checks the `IdToken` endpoint.
+External identity providers format group claims in different ways.
+Anypoint Platform checks the `User Info` response for the groups claim. If it is not found, it then checks the `Token` response.
 
-Okta, Auth0, Salesforce, Google, and Microsoft ADFS return groups that can be used for OIDC group mappings.
-You can use other identity providers if they call the `UserInfo` or `IdToken` endpoints.
+You can use any identity providers that return group claims on the `User Info` or `Token` reponses.
 
 === Map OIDC Group Users to Roles
 
-. Obtain a response to the `UserInfo` or `IdToken` endpoints with a group claim from your external identity provider.
+. Obtain a response to the `UserInfo` or `IdToken` endpoints that contains a group claim from your external identity provider.
 . In Anypoint Platform, navigate to Access Management.
-. Click *External Identity*.
-. From *Identity Management*, select OIDC.
-. Verify that the value in the *Group Scope* field matches the value in your IDP group expression.
-. Verify that the value in the *Group Attribute JSONata Expression* field matches the value from your JSONata query of your IDP group expression.
+. Click *Identity Providers*.
+. From *Identity Providers*, select OIDC.
+. If your IdP requires an additional OIDC scope to authorize access to groups claims, it can be specified in the *Group Scope* field.
+. Verify that the JSONata query in the *Group Attribute JSONata Expression* yields an array of group names from either the User Info or Token response
 . Click *Roles*.
 . Click *Add Role* to create a role for each group of users in your organization.
 . Specify a role name and description.
@@ -79,7 +82,7 @@ To map more than one attribute name to the selected role, click *Add More* and a
 
 === Examples of OIDC Group Expressions
 
-The following examples show responses `UserInfo` or `IdToken` endpoints that contain group claims from different external identity providers.
+The following examples show responses from the `User Info` or `Token` endpoints that contain group claims from different external identity providers.
 
 ==== Okta
 
@@ -114,22 +117,8 @@ The following examples show responses `UserInfo` or `IdToken` endpoints that con
 {
   ...
   "custom_attributes": {
-    "PermissionSets": "[\"groupOne\"]",
-    "myGroups": "myGroup1,myGroup2",
+    "PermissionSets": "groupOne,groupTwo"
   }
-}
-----
-
-==== Google
-
-[source,xml]
-----
-{
-  ...
-  "groups": [
-    "group1",
-    "group2"
-  ],
 }
 ----
 
