@@ -67,7 +67,7 @@ You can use any identity providers that return group claims on the `User Info` o
 . In Anypoint Platform, navigate to Access Management.
 . Click *Identity Providers*.
 . From *Identity Providers*, select OIDC.
-. If your IdP requires an additional OIDC scope to authorize access to groups claims, it can be specified in the *Group Scope* field.
+. If your IdP requires an additional OIDC scope to authorize access to groups claims, enter it in the *Group Scope* field.
 . Verify that the JSONata query in the *Group Attribute JSONata Expression* yields an array of group names from either the User Info or Token response
 . Click *Roles*.
 . Click *Add Role* to create a role for each group of users in your organization.
