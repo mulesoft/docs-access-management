@@ -1013,6 +1013,25 @@ Obj2: UserID
 |None
 |subaction : none
 properties : message +
+|Create identity management key
+|Identity Management Key
+|KeyID
+|n/a
+|Create
+|subaction : none +
+|Set primary identity management key
+|Identity Management Key
+|KeyID
+|n/a
+|Edit
+|subaction : Set Primary Key
+properties : old_primary_provider_key_id, provider_key_id +
+|Delete identity management key
+|Identity Management Key
+|KeyID
+|n/a
+|Delete
+|subaction : none +
 
 |===
 
