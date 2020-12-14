@@ -86,7 +86,9 @@ The following examples show responses from the `UserInfo` or `Token` endpoints t
 
 ==== Okta
 
-[source,xml
+The following example shows a typical Okta groups claim.
+
+[source,xml]
 ----
 {
  ...
@@ -97,7 +99,11 @@ The following examples show responses from the `UserInfo` or `Token` endpoints t
 }
 ----
 
+Given that groups claim, the JSONata expression is `groups`.
+
 ==== Auth0
+
+The following example shows a typical Auth0 groups claim.
 
 [source,xml]
 ----
@@ -110,7 +116,11 @@ The following examples show responses from the `UserInfo` or `Token` endpoints t
 }
 ----
 
+Given that groups claim, the JSONata expression is `https://anypoint.mulesoft.com/groups`.
+
 ==== Salesforce
+
+The following example shows a typical Salesforce groups claim.
 
 [source,xml]
 ----
@@ -121,6 +131,8 @@ The following examples show responses from the `UserInfo` or `Token` endpoints t
   }
 }
 ----
+
+Given that group claim, the JSONata expression is `$split(custom_attributes.PermissionSets, ',')`.
 
 == Configure Multiple Group Mappings for Single Sign-On using LDAP
 
