@@ -1005,9 +1005,9 @@ properties : new permissions
 |Delete
 |subaction : none +
 |Warning
-|Obj1: Identity Management
+|Obj1: Identity Management +
 Obj2: User
-|Obj1: Provider Name
+|Obj1: Provider Name +
 Obj2: UserID
 |n/a
 |None
