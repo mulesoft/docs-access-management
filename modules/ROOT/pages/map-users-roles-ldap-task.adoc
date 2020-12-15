@@ -33,17 +33,19 @@ To prevent security vulnerabilities, Anypoint Platform requires you to create a 
   <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
 </ns2:Attribute>
 ----
-. In Anypoint Platform, navigate to *Access Management*.
-. Click *Identity Providers*.
-. From *Identity Providers*, select OIDC.
-. Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names.
 
 In the above example of a SAML assertion, the *Group Attribute* is `Groups`.
+
 === Map SAML Users to Roles
 
-. In Anypoint Platform, navigate to Access Management.
+After you have created an attribute that contains your groups, you can create a role to map to groups of users in your organization. 
+
+. In Anypoint Platform, navigate to *Access Management*.
+. Click *Identity Providers*.
+. From *Identity Providers*, select SAML.
+. Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names.
 . Click *Roles*.
-. Click *Add Role* to create a role for each group of users in your organization.
+. Click *Add Role*.
 . Specify a role name and description.
 . Click *Add Role*.
 . In the *Roles* section, click the name of the new role.
@@ -58,28 +60,31 @@ To map more than one attribute name to the selected role, click *Add More* and a
 == Configure Multiple Group Mappings for Single Sign-On Using OpenID Connect (OIDC)
 
 External identity providers format groups claims in different ways.
-Anypoint Platform checks the `UserInfo` response for the groups claim. If it is not found, it then checks the `Token` response.
+Anypoint Platform checks the `UserInfo` response for the groups claim. If it is not found, it then checks the `Token` endpoint response.
 
-You can use any identity providers that return groups claims on the `UserInfo` or `Token` response.
+You can use any identity providers that return groups claims on the `UserInfo` or `Token` endpoint response.
 
 === Map OIDC Group Users to Roles
+
+You can use groups claims values to create a role for each group of users in your organization. 
 
 . Obtain a response to the `UserInfo` or `Token` endpoint that contains a groups claim from your external identity provider.
 . In Anypoint Platform, navigate to *Access Management*.
 . Click *Identity Providers*.
 . From *Identity Providers*, select *OIDC*.
 . If your IdP requires an additional OIDC scope to authorize access to groups claims, enter it in the *Group Scope* field.
-. Verify that the JSONata query in *Group Attribute JSONata Expression* yields an array of group names from either the `UserInfo` or `Token` response.
+. Verify that the https://jsonata.org[JSONata] query in *Group Attribute JSONata Expression* yields an array of group names from either the `UserInfo` or `Token` endpoint response.
 . Click *Roles*.
-. Click *Add Role* to create a role for each group of users in your organization.
+. Click *Add Role*.
 . Specify a role name and description.
 . Click *Add Role*.
-. In the *Roles* section, click the name of the new role:
+. In the *Roles* section, click the name of the new role.
 . Click *Set external group mapping*.
-. Enter the group to which you want to map.
+. Name the group to which you want to map. The name of the group must be your groups claim.
 . Click *Set names*.
 +
-To map more than one attribute name to the selected role, click *Add More* and add another attribute.
+To map more than one groups claim to the selected role, click *Add More* and add another groups claim.
+. Repeat this process for each role that you want to map to an external group.
 
 === Examples of OIDC Group Expressions
 
@@ -141,12 +146,14 @@ You can obtain the information you need to map your LDAP group to a role using a
 
 === Map LDAP Group Users to Roles
 
+Using a SAML assertion, you can create a role to map to a group of users in your organization.
+
 . In Anypoint Platform, navigate to *Access Management*.
 . Click *Roles*.
-. Click *Add Role* to create a role for each group of users in your organization.
+. Click *Add Role*.
 . Specify a role name and description.
 . Click *Add Role* to add the role.
-. In the *Roles* section, click the name of the new role:
+. In the *Roles* section, click the name of the new role.
 . Click *Set external group mapping*.
 . Copy the string from your SAML assertion AttributeValue to the External Group Name, for example:
 +
