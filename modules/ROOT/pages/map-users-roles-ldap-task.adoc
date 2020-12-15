@@ -3,18 +3,18 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can map users in a federated organization's group to an Anypoint role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
+You can map users in a federated organization's group to a role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
 
-After you perform this mapping, users in an organization can sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. +
-This ensures security of credentials and maintains organizational roles for accessing privileged information.
+After you have mapped them, users in an organization can sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. +
+This helps to ensure secure credentials and to maintain organizational roles for accessing privileged information.
 
 Anypoint Platform requires different information from your identity provider based on whether you use SAML, OpenID Connect, or LDAP.
 
-== Configure Multiple Group Mappings for Single Sign-On using SAML
+== Configure Multiple Group Mappings for Single Sign-On Using SAML
 
-If your organization uses single sign-on and requires its users to obtain permissions from multiple groups, you can configure a group attribute that contains all the groups you want to use. In many cases, you can create an array of groups.
+If your organization uses single sign-on but also requires you to obtain permissions from multiple groups, you can configure an attribute that contains all of the groups from which you need to obtain individual access permission. In many cases, you can create an array of groups.
 
-For example, your IDP may provide your groups in the following format:
+For example, assume that your IDP provides your groups in the following format:
 
 ----
 <ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
@@ -33,28 +33,29 @@ To prevent security vulnerabilities, Anypoint Platform requires you to create a 
   <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
 </ns2:Attribute>
 ----
-. In Anypoint Platform, navigate to Access Management.
+. In Anypoint Platform, navigate to *Access Management*.
 . Click *Identity Providers*.
 . From *Identity Providers*, select OIDC.
-. Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names
-. In the above example of a SAML assertion, the *Group Attribute* is "Groups":
+. Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names.
+
+In the above example of a SAML assertion, the *Group Attribute* is `Groups`.
 === Map SAML Users to Roles
 
 . In Anypoint Platform, navigate to Access Management.
 . Click *Roles*.
 . Click *Add Role* to create a role for each group of users in your organization.
 . Specify a role name and description.
-. Click *Add Role* to add the role.
-. In the *Roles* section, click the name of the new role:
+. Click *Add Role*.
+. In the *Roles* section, click the name of the new role.
 . Click *Set external group mapping*.
-. Enter the group to which you want to map.
+. Name the group to which you want to map.
 . Click *Set names*.
 +
 To map more than one attribute name to the selected role, click *Add More* and add another attribute.
 
 . Repeat this process for each role that you want to map to an external group.
 
-== Configure Multiple Group Mappings for Single Sign-On using OpenID Connect (OIDC)
+== Configure Multiple Group Mappings for Single Sign-On Using OpenID Connect (OIDC)
 
 External identity providers format groups claims in different ways.
 Anypoint Platform checks the `UserInfo` response for the groups claim. If it is not found, it then checks the `Token` response.
@@ -64,15 +65,15 @@ You can use any identity providers that return groups claims on the `UserInfo` o
 === Map OIDC Group Users to Roles
 
 . Obtain a response to the `UserInfo` or `Token` endpoint that contains a groups claim from your external identity provider.
-. In Anypoint Platform, navigate to Access Management.
+. In Anypoint Platform, navigate to *Access Management*.
 . Click *Identity Providers*.
-. From *Identity Providers*, select OIDC.
+. From *Identity Providers*, select *OIDC*.
 . If your IdP requires an additional OIDC scope to authorize access to groups claims, enter it in the *Group Scope* field.
-. Verify that the JSONata query in the *Group Attribute JSONata Expression* yields an array of group names from either the `UserInfo` or `Token` response.
+. Verify that the JSONata query in *Group Attribute JSONata Expression* yields an array of group names from either the `UserInfo` or `Token` response.
 . Click *Roles*.
 . Click *Add Role* to create a role for each group of users in your organization.
 . Specify a role name and description.
-. Click *Add Role* to add the role.
+. Click *Add Role*.
 . In the *Roles* section, click the name of the new role:
 . Click *Set external group mapping*.
 . Enter the group to which you want to map.
@@ -86,7 +87,7 @@ The following examples show responses from the `UserInfo` or `Token` endpoints t
 
 ==== Okta
 
-The following example shows a typical Okta groups claim.
+The following example shows a typical Okta groups claim:
 
 [source,xml]
 ----
@@ -103,7 +104,7 @@ Given that groups claim, the JSONata expression is `groups`.
 
 ==== Auth0
 
-The following example shows a typical Auth0 groups claim.
+The following example shows a typical Auth0 groups claim:
 
 [source,xml]
 ----
@@ -120,7 +121,7 @@ Given that groups claim, the JSONata expression is `https://anypoint.mulesoft.co
 
 ==== Salesforce
 
-The following example shows a typical Salesforce groups claim.
+The following example shows a typical Salesforce groups claim:
 
 [source,xml]
 ----
@@ -134,19 +135,19 @@ The following example shows a typical Salesforce groups claim.
 
 Given that groups claim, the JSONata expression is `$split(custom_attributes.PermissionSets, ',')`.
 
-== Configure Multiple Group Mappings for Single Sign-On using LDAP
+== Configure Multiple Group Mappings for Single Sign-On Using LDAP
 
-You can obtain the information you need to map your LDAP group to a role using a SAML assertion. Note that user management through LDAP is available only for the Private Cloud Edition.
+You can obtain the information you need to map your LDAP group to a role using a SAML assertion. Note that user management through LDAP is available only for Anypoint Platform Private Cloud Edition.
 
 === Map LDAP Group Users to Roles
 
-. In Anypoint Platform, navigate to Access Management.
+. In Anypoint Platform, navigate to *Access Management*.
 . Click *Roles*.
 . Click *Add Role* to create a role for each group of users in your organization.
 . Specify a role name and description.
 . Click *Add Role* to add the role.
 . In the *Roles* section, click the name of the new role:
-. Click *Set external group mapping*:
+. Click *Set external group mapping*.
 . Copy the string from your SAML assertion AttributeValue to the External Group Name, for example:
 +
 SAML AttributeValue:
