@@ -888,7 +888,7 @@ properties : new role
 
 |===
 
-`Login` and `Logout` actions are logged only at the organization level. Additionally, `Login failure`s are logged only against existing user accounts. 
+`Login` and `Logout` actions are logged only at the organization level. Additionally, `Login failure` actions are logged only against existing user accounts. 
 
 ==== Roles
 
