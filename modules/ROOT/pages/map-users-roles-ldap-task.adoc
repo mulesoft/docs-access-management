@@ -52,9 +52,7 @@ After you have created an attribute that contains your groups, you can create a 
 . Click *Set external group mapping*.
 . Name the group to which you want to map.
 . Click *Set names*.
-+
-To map more than one attribute name to the selected role, click *Add More* and add another attribute.
-
+. Optionally, to map more than one groups claim to the selected role, click *Add More* and add another groups claim.
 . Repeat this process for each role that you want to map to an external group.
 
 == Configure Multiple Group Mappings for Single Sign-On Using OpenID Connect (OIDC)
@@ -82,8 +80,7 @@ You can use groups claims values to create a role for each group of users in you
 . Click *Set external group mapping*.
 . Name the group to which you want to map. The name of the group must be your groups claim.
 . Click *Set names*.
-+
-To map more than one groups claim to the selected role, click *Add More* and add another groups claim.
+. Optionally, to map more than one groups claim to the selected role, click *Add More* and add another groups claim.
 . Repeat this process for each role that you want to map to an external group.
 
 === Examples of OIDC Group Expressions
@@ -152,7 +149,7 @@ Using a SAML assertion, you can create a role to map to a group of users in your
 . Click *Roles*.
 . Click *Add Role*.
 . Specify a role name and description.
-. Click *Add Role* to add the role.
+. Click *Add Role*.
 . In the *Roles* section, click the name of the new role.
 . Click *Set external group mapping*.
 . Copy the string from your SAML assertion AttributeValue to the External Group Name, for example:
@@ -171,9 +168,7 @@ Mapping:
 image::external-identity-cfb1e.png[]
 
 . Click *Set names*.
-+
-To map more than one attribute name to the selected role, click *Add More* and add another attribute.
-
+. Optionally, to map more than one attribute name to the selected role, click *Add More* and add another attribute.
 . Repeat this process for each role that you want to map to an external group.
 
 == See Also
