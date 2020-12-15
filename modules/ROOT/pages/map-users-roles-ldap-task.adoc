@@ -25,7 +25,7 @@ For example, assume that your IDP provides your groups in the following format:
 </ns2:Attribute>
 ----
 
-To prevent security vulnerabilities, Anypoint Platform requires you to create a single group that encompasses multiple group mappings:
+To prevent security vulnerabilities, Anypoint Platform requires you to create an attribute that encompasses multiple group mappings:
 
 ----
 <ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
