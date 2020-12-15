@@ -870,7 +870,7 @@ properties: error message
 |n/a
 |Logout
 |subaction : none +
-properties: User object
+properties: none
 |Add role
 |User
 |UserID
@@ -887,6 +887,8 @@ properties : new role
 properties : new role
 
 |===
+
+`Login` and `Logout` actions are logged only at the organization level. Additionally, `Login failure` actions are logged only against existing user accounts. 
 
 ==== Roles
 
