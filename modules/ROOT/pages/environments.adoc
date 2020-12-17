@@ -90,14 +90,14 @@ You can now configure client providers for APIs.
 [[remove-an-idp-from-an-environment]]
 == Remove a Client Provider from an Environment
 
-You can remove a client provider from an environment at any time.
-When you remove your default client provider from an environment that has more than one client provider, the next client provider is automatically named as your new default client provider.
+You can remove a client provider from an environment at any time. However, prior to removing the default client provider, specify another client provider as default.
+
 When you remove all external client providers from an environment, the built-in Anypoint Platform client provider becomes the default client provider for that environment.
 
 . Navigate to *Access Management*.
 . In the menu on the left, click *Environments*.
 . Click the name of the environment.
-. Click the *x* next to the name of the client provider that you want to remove.
+. Click the *Remove* button next to the name of the client provider that you want to remove. If the client provider is default, first select another client provider and click *Set as default*.
 . Click *Update*.
 
 The client provider is removed. Any assets or APIs that were associated with the client provider continue to use it until you associate them with a new client provider.
