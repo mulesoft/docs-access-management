@@ -434,7 +434,7 @@ properties : SLA tier
 
 |===
 
-`Create Application` and `Delete Application` actions are logged at the master organization.
+The `Create Application` and `Delete Application` actions are logged at the master organization level.
 
 === API Designer APIs
 
