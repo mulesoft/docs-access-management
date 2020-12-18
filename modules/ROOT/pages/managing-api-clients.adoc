@@ -26,7 +26,7 @@ Before you delete a client provider, ensure that you do not have APIs, assets, o
 
 . Log in to Anypoint Platform using an account that has the organization administrator role.
 . In Anypoint Platform, click *Access Management*.
-. Under Business Groups, select your Master organization.
+. Under *Business Groups*, select your master organization.
 . In the menu on the left, click *Client Providers*.
 . Click the name of the client provider you want to delete.
 . In the client provider's page, click *Delete*.
