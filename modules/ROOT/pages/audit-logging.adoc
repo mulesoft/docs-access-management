@@ -1138,7 +1138,7 @@ properties : Environment name
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
+|User Action
 |Obj Type
 |Object
 |Parent
@@ -1260,13 +1260,63 @@ properties: none
 
 ==== Asset Portals
 
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create a Page
+|Asset Portal Page
+|Page ID
+|Asset Portal
+|Create
+|subaction: none +
+properties: Asset Object, Page
+
+|Update a Page
+|Asset Portal Page
+|Page ID
+|Asset Portal
+|Update
+|subaction: none +
+properties: Asset Object, Page
+
+|Deleted a Page
+|Asset Portal Page
+|Page ID
+|Asset Portal
+|Delete
+|subaction: none +
+properties: none
+
+|Create a Portal
+|Asset Portal
+|Portal ID
+|Asset
+|Create
+|subaction: none +
+properties: Asset Portal
+
+|Publish a Portal
+|Asset Portal
+|Portal ID
+|Asset
+|Publish
+|subaction: none +
+properties: Asset Portal
+|===
+
 ==== Public Portals
 
 ==== API Metadata
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
+|User Action
 |Obj Type
 |Object
 |Parent
@@ -1302,7 +1352,7 @@ properties: name, isPublic
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
+|User Action
 |Obj Type
 |Object
 |Parent
@@ -1362,7 +1412,7 @@ properties: review object
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
+|User Action
 |Obj Type
 |Object
 |Parent
