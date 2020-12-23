@@ -706,6 +706,7 @@ Link metadata
 
 === Portals
 
+Actions related API Manager v1.x Portals
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
