@@ -1264,6 +1264,40 @@ properties: none
 
 ==== API Metadata
 
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create an API instance
+|API instance
+|API instance ID
+|N/A
+|Create
+|subaction: none +
+properties: name, isPublic
+
+|Delete an API instance
+|API instance
+|API instance ID
+|N/A
+|Delete
+|subaction: none +
+properties: name, isPublic
+
+|Update an API instance
+|API instance
+|API instance ID
+|N/A
+|Update
+|subaction: none +
+properties: name, isPublic
+|===
+
 ==== Asset Reviews
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
