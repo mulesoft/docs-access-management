@@ -1150,7 +1150,7 @@ properties : Environment name
 |Asset ID
 |N/A
 |Create
-|subaction: none
+|subaction: none +
 properties: Asset Object
 
 |Update an Asset
@@ -1158,7 +1158,7 @@ properties: Asset Object
 |Asset ID
 |N/A
 |Update
-|subaction: none
+|subaction: none +
 properties: Asset Object
 
 |Delete an Asset
@@ -1166,7 +1166,7 @@ properties: Asset Object
 |Asset ID
 |N/A
 |Delete
-|subaction: none
+|subaction: none +
 properties: none
 
 |Share an Asset
@@ -1174,7 +1174,7 @@ properties: none
 |Asset ID
 |N/A
 |Granted or Revoked Permissions
-|subaction: none
+|subaction: none +
 properties: Asset Object, source, target, role
 
 |Request an Asset File
@@ -1182,7 +1182,7 @@ properties: Asset Object, source, target, role
 |Asset ID + Classifier
 |N/A
 |Download
-|subaction: none
+|subaction: none +
 properties: file metadata
 
 |Update an Asset Icon
@@ -1190,7 +1190,7 @@ properties: file metadata
 |Asset ID
 |Asset
 |Update
-|subaction: none
+|subaction: none +
 properties: Asset Object
 
 |Delete an Asset Icon
@@ -1198,7 +1198,7 @@ properties: Asset Object
 |Asset ID
 |Asset
 |Delete
-|subaction: none
+|subaction: none +
 properties: Asset Object
 
 |Create a Managed Tag
@@ -1206,7 +1206,7 @@ properties: Asset Object
 |Asset ID + Tag ID
 |Asset
 |Create
-|subaction: none
+|subaction: none +
 properties: none
 
 |Deleted a Managed Tag
@@ -1214,7 +1214,7 @@ properties: none
 |Asset ID + Tag ID
 |Asset
 |Delete
-|subaction: none
+|subaction: none +
 properties: none
 
 |Delete an Organization
@@ -1222,7 +1222,7 @@ properties: none
 |Organization ID
 |N/A
 |Delete
-|subaction: none
+|subaction: none +
 properties: none
 
 |Update Tags
@@ -1230,7 +1230,7 @@ properties: none
 |Asset ID
 |Asset
 |Update
-|subaction: none
+|subaction: none +
 properties: tags
 
 |Create a Tag Configuration
@@ -1238,7 +1238,7 @@ properties: tags
 |Tag Configuration ID
 |N/A
 |Create
-|subaction : none
+|subaction : none +
 properties : TagConfiguration
 
 |Update a Tag Configuration
@@ -1246,7 +1246,7 @@ properties : TagConfiguration
 |Tag Configuration ID
 |N/A
 |Update
-|subaction : none
+|subaction : none +
 properties : TagConfiguration
 
 |Delete a Tag Configuration
@@ -1254,7 +1254,7 @@ properties : TagConfiguration
 |Tag Configuration ID
 |N/A
 |Delete
-|subaction: none
+|subaction: none +
 properties: none
 |===
 
@@ -1265,6 +1265,64 @@ properties: none
 ==== API Metadata
 
 ==== Asset Reviews
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create a comment
+|Asset portal review comment
+|Comment ID
+|Asset portal review
+|Create
+|subaction: none +
+properties: comment
+
+|Delete a comment
+|Asset portal review comment
+|Comment ID
+|Asset portal review
+|Delete
+|subaction: none +
+properties: comment
+
+|Update a comment
+|Asset portal review comment
+|Comment ID
+|Asset
+|Update
+|subaction: none +
+properties: comment
+
+|Create a review
+|Asset portal review
+|Review ID
+|Asset
+|Create
+|subaction: none +
+properties: review object
+
+|Delete a review
+|Asset portal review
+|Review ID
+|Asset
+|Delete
+|subaction: none +
+properties: review object
+
+|Update a Comment
+|Asset portal review
+|Review ID
+|Asset
+|Update
+|subaction: none +
+properties: review object
+|===
 
 ==== File Upload
 
