@@ -1314,7 +1314,7 @@ properties: Asset Portal
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
+|User Action
 |Obj Type
 |Object
 |Parent
