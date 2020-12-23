@@ -1179,7 +1179,7 @@ properties: Asset Object, source, target, role
 
 |Request an Asset File
 |Asset File
-|Asset ID + Classifier
+|Asset ID and Classifier
 |N/A
 |Download
 |subaction: none +
@@ -1203,7 +1203,7 @@ properties: Asset Object
 
 |Create a Managed Tag
 |Asset Managed Tag
-|Asset ID + Tag ID
+|Asset ID and Tag ID
 |Asset
 |Create
 |subaction: none +
@@ -1211,7 +1211,7 @@ properties: none
 
 |Delete a Managed Tag
 |Asset Managed Tag
-|Asset ID + Tag ID
+|Asset ID and Tag ID
 |Asset
 |Delete
 |subaction: none +
@@ -1512,7 +1512,7 @@ properties: file key
 |Delete file
 |Exchange file
 |File ID
-|n/a
+|N/A
 |Delete
 |subaction: none +
 properties: file key
