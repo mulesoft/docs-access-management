@@ -1132,6 +1132,20 @@ properties : Environment name
 
 |===
 
+=== Exchange
+
+==== Asset Manager
+
+==== Asset Portals
+
+==== Public Portals
+
+==== API Metadata
+
+==== Asset Reviews
+
+==== File Upload
+
 === Runtime Manager
 
 
