@@ -1132,6 +1132,400 @@ properties : Environment name
 
 |===
 
+=== Exchange
+
+==== Assets
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create an Asset
+|Asset
+|Asset ID
+|N/A
+|Create
+|subaction: none +
+properties: Asset Object
+
+|Update an Asset
+|Asset
+|Asset ID
+|N/A
+|Update
+|subaction: none +
+properties: Asset Object
+
+|Delete an Asset
+|Asset
+|Asset ID
+|N/A
+|Delete
+|subaction: none +
+properties: none
+
+|Share an Asset
+|Asset
+|Asset ID
+|N/A
+|Granted or Revoked Permissions
+|subaction: none +
+properties: Asset Object, source, target, role
+
+|Request an Asset File
+|Asset File
+|Asset ID and Classifier
+|N/A
+|Download
+|subaction: none +
+properties: file metadata
+
+|Update an Asset Icon
+|Asset Icon
+|Asset ID
+|Asset
+|Update
+|subaction: none +
+properties: Asset Object
+
+|Delete an Asset Icon
+|Asset Icon
+|Asset ID
+|Asset
+|Delete
+|subaction: none +
+properties: Asset Object
+
+|Create a Managed Tag
+|Asset Managed Tag
+|Asset ID and Tag ID
+|Asset
+|Create
+|subaction: none +
+properties: none
+
+|Delete a Managed Tag
+|Asset Managed Tag
+|Asset ID and Tag ID
+|Asset
+|Delete
+|subaction: none +
+properties: none
+
+|Delete an Organization
+|Organization
+|Organization ID
+|N/A
+|Delete
+|subaction: none +
+properties: none
+
+|Update Tags
+|Asset Tags
+|Asset ID
+|Asset
+|Update
+|subaction: none +
+properties: tags
+
+|Create a Tag Configuration
+|Tag Configuration
+|Tag Configuration ID
+|N/A
+|Create
+|subaction : none +
+properties : TagConfiguration
+
+|Update a Tag Configuration
+|Tag Configuration
+|Tag Configuration ID
+|N/A
+|Update
+|subaction : none +
+properties : TagConfiguration
+
+|Delete a Tag Configuration
+|Tag Configuration
+|Tag Configuration ID
+|N/A
+|Delete
+|subaction: none +
+properties: none
+|===
+
+==== Asset Portals
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create a Page
+|Asset Portal Page
+|Page ID
+|Asset Portal
+|Create
+|subaction: none +
+properties: Asset Object, Page
+
+|Update a Page
+|Asset Portal Page
+|Page ID
+|Asset Portal
+|Update
+|subaction: none +
+properties: Asset Object, Page
+
+|Delete a Page
+|Asset Portal Page
+|Page ID
+|Asset Portal
+|Delete
+|subaction: none +
+properties: none
+
+|Create a Portal
+|Asset Portal
+|Portal ID
+|Asset
+|Create
+|subaction: none +
+properties: Asset Portal
+
+|Publish a Portal
+|Asset Portal
+|Portal ID
+|Asset
+|Publish
+|subaction: none +
+properties: Asset Portal
+|===
+
+==== API Metadata
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create an API instance
+|API instance
+|API instance ID
+|N/A
+|Create
+|subaction: none +
+properties: name, isPublic
+
+|Delete an API instance
+|API instance
+|API instance ID
+|N/A
+|Delete
+|subaction: none +
+properties: name, isPublic
+
+|Update an API instance
+|API instance
+|API instance ID
+|N/A
+|Update
+|subaction: none +
+properties: name, isPublic
+|===
+
+==== File Upload
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Upload file
+|Exchange file
+|File ID
+|N/A
+|Create
+|subaction: none +
+properties: file key
+
+|Delete file
+|Exchange file
+|File ID
+|N/A
+|Delete
+|subaction: none +
+properties: file key
+
+|Update file
+|Exchange file
+|File ID
+|N/A
+|Update
+|subaction: none +
+properties: file key
+|===
+
+==== Public Portals
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Update a domain
+|Public portal domain
+|Organization ID and domain 
+|Public portal
+|Update
+|subaction: none +
+properties: portal ID, domain
+
+|Delete a domain
+|Public portal domain
+|Organization ID and domain 
+|Public portal
+|Delete
+|subaction: none +
+properties: portal ID, domain
+
+|Create a page
+|Public portal page
+|Page path
+|Public portal
+|Create
+|subaction: none +
+properties: portal ID, page ID
+
+|Delete a page
+|Public portal page
+|Page path
+|Public portal
+|Delete
+|subaction: none +
+properties: portal ID, page ID
+
+|Update a page
+|Public portal page
+|Page path
+|Public portal
+|Update
+|subaction: none +
+properties: portal ID, page ID
+
+|Create a portal
+|Public portal
+|Organization ID
+|N/A
+|Create
+|subaction: none +
+properties: project ID, created by ID
+
+|Publish a portal
+|Public portal
+|Organization ID
+|N/A
+|Publish
+|subaction: none +
+properties: project ID, created by ID
+
+|Delete a portal
+|Public portal
+|Organization ID
+|N/A
+|Delete
+|subaction: none +
+properties: project ID, created by ID
+
+|Update a portal
+|Public portal
+|Organization ID
+|N/A
+|Update
+|subaction: none +
+properties: project ID, created by ID
+|===
+
+==== Asset Reviews
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create a comment
+|Asset portal review comment
+|Comment ID
+|Asset portal review
+|Create
+|subaction: none +
+properties: comment
+
+|Delete a comment
+|Asset portal review comment
+|Comment ID
+|Asset portal review
+|Delete
+|subaction: none +
+properties: comment
+
+|Update a comment
+|Asset portal review comment
+|Comment ID
+|Asset portal review
+|Update
+|subaction: none +
+properties: comment
+
+|Create a review
+|Asset portal review
+|Review ID
+|Asset
+|Create
+|subaction: none +
+properties: review object
+
+|Delete a review
+|Asset portal review
+|Review ID
+|Asset
+|Delete
+|subaction: none +
+properties: review object
+
+|Update a review
+|Asset portal review
+|Review ID
+|Asset
+|Update
+|subaction: none +
+properties: review object
+|===
+
 === Runtime Manager
 
 
