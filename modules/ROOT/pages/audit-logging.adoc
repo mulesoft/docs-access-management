@@ -1460,7 +1460,7 @@ properties: comment
 |Update a comment
 |Asset portal review comment
 |Comment ID
-|Asset
+|Asset portal review
 |Update
 |subaction: none +
 properties: comment
