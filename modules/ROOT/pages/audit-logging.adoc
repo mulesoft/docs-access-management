@@ -1481,7 +1481,7 @@ properties: review object
 |subaction: none +
 properties: review object
 
-|Update a Comment
+|Update a review
 |Asset portal review
 |Review ID
 |Asset
