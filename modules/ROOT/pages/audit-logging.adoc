@@ -1136,6 +1136,128 @@ properties : Environment name
 
 ==== Asset Manager
 
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create an Asset
+|Asset
+|Asset ID
+|N/A
+|Create
+|subaction: none
+properties: Asset Object
+
+|Update an Asset
+|Asset
+|Asset ID
+|N/A
+|Update
+|subaction: none
+properties: Asset Object
+
+|Delete an Asset
+|Asset
+|Asset ID
+|N/A
+|Delete
+|subaction: none
+properties: none
+
+|Share an Asset
+|Asset
+|Asset ID
+|N/A
+|Granted or Revoked Permissions
+|subaction: none
+properties: Asset Object, source, target, role
+
+|Request an Asset File
+|Asset File
+|Asset ID + Classifier
+|N/A
+|Download
+|subaction: none
+properties: file metadata
+
+|Update an Asset Icon
+|Asset Icon
+|Asset ID
+|Asset
+|Update
+|subaction: none
+properties: Asset Object
+
+|Delete an Asset Icon
+|Asset Icon
+|Asset ID
+|Asset
+|Delete
+|subaction: none
+properties: Asset Object
+
+|Create a Managed Tag
+|Asset Managed Tag
+|Asset ID + Tag ID
+|Asset
+|Create
+|subaction: none
+properties: none
+
+|Deleted a Managed Tag
+|Asset Managed Tag
+|Asset ID + Tag ID
+|Asset
+|Delete
+|subaction: none
+properties: none
+
+|Delete an Organization
+|Organization
+|Organization ID
+|N/A
+|Delete
+|subaction: none
+properties: none
+
+|Update Tags
+|Asset Tags
+|Asset ID
+|Asset
+|Update
+|subaction: none
+properties: tags
+
+|Create a Tag Configuration
+|Tag Configuration
+|Tag Configuration ID
+|N/A
+|Create
+|subaction : none
+properties : TagConfiguration
+
+|Update a Tag Configuration
+|Tag Configuration
+|Tag Configuration ID
+|N/A
+|Update
+|subaction : none
+properties : TagConfiguration
+
+|Delete a Tag Configuration
+|Tag Configuration
+|Tag Configuration ID
+|N/A
+|Delete
+|subaction: none
+properties: none
+|===
+
 ==== Asset Portals
 
 ==== Public Portals
