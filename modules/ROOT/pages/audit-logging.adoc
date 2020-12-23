@@ -1326,6 +1326,40 @@ properties: review object
 
 ==== File Upload
 
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User action
+|Obj Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Upload file
+|Exchange file
+|File ID
+|N/A
+|Create
+|subaction: none +
+properties: file key
+
+|Delete file
+|Exchange file
+|File ID
+|n/a
+|Delete
+|subaction: none +
+properties: file key
+
+|Update file
+|Exchange file
+|File ID
+|N/A
+|Update
+|subaction: none +
+properties: file key
+|===
+
 === Runtime Manager
 
 
