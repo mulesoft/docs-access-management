@@ -1209,7 +1209,7 @@ properties: Asset Object
 |subaction: none +
 properties: none
 
-|Deleted a Managed Tag
+|Delete a Managed Tag
 |Asset Managed Tag
 |Asset ID + Tag ID
 |Asset
@@ -1285,7 +1285,7 @@ properties: Asset Object, Page
 |subaction: none +
 properties: Asset Object, Page
 
-|Deleted a Page
+|Delete a Page
 |Asset Portal Page
 |Page ID
 |Asset Portal
