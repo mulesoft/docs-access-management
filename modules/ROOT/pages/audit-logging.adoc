@@ -30,8 +30,8 @@ Each log entry has a set of properties that provides information about the activ
 * *Product*: The product where the object resides, for example, `Access Management`
 * *Type*: The type of the object on which the action is performed, for example, `Organization`
 * *Action*: The action associated with the object, for example, `Create`
-* *Object*: The name of the Object, for example, `foo`
-* *User*: The User who performed the action, for example, `johndoe`
+* *Object*: The name of the object, for example, `foo`
+* *User*: The user who performed the action, for example, `johndoe`
 +
 [NOTE]
 --
@@ -333,14 +333,14 @@ Properties: None
 |Version ID
 |Create
 |Subaction: None +
-Properties: policy settings
+Properties: Policy settings
 |Edit policy
 |API policy
 |Policy ID
 |Version ID
 |Edit
 |Subaction: None +
-Properties: policy settings
+Properties: Policy settings
 |Remove policy
 |API policy
 |Policy ID
@@ -405,7 +405,7 @@ Properties: New tier
 Object 2: API version ID
 |N/A
 |Edit - request tier change approval
-|Subaction: request tier change approval +
+|Subaction: Request tier change approval +
 Properties: New tier
 |Approve application
 |Contract
@@ -1026,7 +1026,11 @@ Properties: Message
 |N/A
 |Edit
 |Subaction: Set primary key +
-Properties: old_primary_provider_key_id, provider_key_id +
+Properties:
+
+* old_primary_provider_key_id
+* provider_key_id
+
 |Delete identity management key
 |Identity management key
 |KeyID
@@ -1171,7 +1175,12 @@ Properties: None
 |N/A
 |Granted or revoked permissions
 |Subaction: None +
-Properties: Asset object, source, target, role
+Properties:
+
+* Asset object
+* Source
+* Target
+* Role
 
 |Request an asset file
 |Asset file
@@ -1271,7 +1280,10 @@ Properties: None
 |Asset portal
 |Create
 |Subaction: None +
-Properties: Asset object, page
+Properties:
+
+* Asset object
+* Page
 
 |Update a page
 |Asset portal page
@@ -1279,7 +1291,10 @@ Properties: Asset object, page
 |Asset portal
 |Update
 |Subaction: None +
-Properties: Asset object, page
+Properties:
+
+* Asset object
+* Page
 
 |Delete a page
 |Asset portal page
@@ -1323,7 +1338,10 @@ Properties: Asset portal
 |N/A
 |Create
 |Subaction: None +
-Properties: Name, isPublic
+Properties:
+
+* Name
+* isPublic
 
 |Delete an API instance
 |API instance
@@ -1331,7 +1349,10 @@ Properties: Name, isPublic
 |N/A
 |Delete
 |Subaction: None +
-Properties: Name, isPublic
+Properties:
+
+* Name
+* isPublic
 
 |Update an API instance
 |API instance
@@ -1339,7 +1360,11 @@ Properties: Name, isPublic
 |N/A
 |Update
 |Subaction: None +
-Properties: Name, isPublic
+Properties:
+
+* Name
+* isPublic
+
 |===
 
 === File Upload
@@ -1395,7 +1420,10 @@ Properties: File key
 |Public portal
 |Update
 |Subaction: None +
-Properties: Portal ID, domain
+Properties:
+
+* Portal ID
+* Domain
 
 |Delete a domain
 |Public portal domain
@@ -1403,7 +1431,10 @@ Properties: Portal ID, domain
 |Public portal
 |Delete
 |Subaction: None +
-Properties: Portal ID, domain
+Properties:
+
+* Portal ID
+* Domain
 
 |Create a page
 |Public portal page
@@ -1411,7 +1442,10 @@ Properties: Portal ID, domain
 |Public portal
 |Create
 |Subaction: None +
-Properties: Portal ID, page ID
+Properties:
+
+* Portal ID
+* Page ID
 
 |Delete a page
 |Public portal page
@@ -1419,7 +1453,10 @@ Properties: Portal ID, page ID
 |Public portal
 |Delete
 |Subaction: None +
-Properties: Portal ID, page ID
+Properties:
+
+* Portal ID
+* Page ID
 
 |Update a page
 |Public portal page
@@ -1427,7 +1464,10 @@ Properties: Portal ID, page ID
 |Public portal
 |Update
 |Subaction: None +
-Properties: Portal ID, page ID
+Properties:
+
+* Portal ID
+* Page ID
 
 |Create a portal
 |Public portal
@@ -1435,7 +1475,10 @@ Properties: Portal ID, page ID
 |N/A
 |Create
 |Subaction: None +
-Properties: Project ID, created by ID
+Properties:
+
+* Project ID
+* Created by ID
 
 |Publish a portal
 |Public portal
@@ -1443,7 +1486,10 @@ Properties: Project ID, created by ID
 |N/A
 |Publish
 |Subaction: None +
-Properties: Project ID, created by ID
+Properties:
+
+* Project ID
+* Created by ID
 
 |Delete a portal
 |Public portal
@@ -1451,7 +1497,10 @@ Properties: Project ID, created by ID
 |N/A
 |Delete
 |Subaction: None +
-Properties: Project ID, created by ID
+Properties:
+
+* Project ID
+* Created by ID
 
 |Update a portal
 |Public portal
@@ -1459,7 +1508,11 @@ Properties: Project ID, created by ID
 |N/A
 |Update
 |Subaction: None +
-Properties: Project ID, created by ID
+
+Properties:
+
+* Project ID
+* Created by ID
 |===
 
 === Asset Reviews
