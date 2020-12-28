@@ -51,8 +51,8 @@ The following is a list of actions per product and object type that Anypoint Pla
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -113,8 +113,8 @@ Properties: Policy data
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -170,8 +170,8 @@ Properties: API object
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -210,28 +210,28 @@ Properties: New name
 |API ID
 |Edit
 |Subaction: Edit description +
-Properties: new description
+Properties: New description
 |Edit API URL of API version
 |API version
 |Version ID
 |API ID
 |Edit
 |Subaction: Edit API URL +
-Properties: new API URL
+Properties: New API URL
 |Add tag
 |API Version
 |Version ID
 |API ID
 |Edit
 |Subaction: Add tag +
-Properties: new tag
+Properties: New tag
 |Remove tag
 |API Version
 |Version ID
 |API ID
 |Edit
 |Subaction: Remove tag +
-Properties: deleted tag
+Properties: Deleted tag
 |Deprecate API
 |API version
 |Version ID
@@ -356,8 +356,8 @@ Properties: None
 
 [%header,cols="25a,15a,20a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -385,48 +385,48 @@ Properties: None
 Properties: None
 |Request access
 |Contract
-|Obj 1: App ID
-Obj 2: API version ID
+|Object 1: App ID +
+Object 2: API version ID
 |N/A
 |Create
 |Subaction: None +
 Properties: SLA tier
 |Request tier change
 |Contract
-|Obj 1: App ID
-Obj 2: API version ID
+|Object 1: App ID +
+Object 2: API version ID
 |N/A
 |Edit - request tier change
 |Subaction: Request tier change +
 Properties: New tier
 |Request tier change approval
 |Contract
-|Obj 1: App ID
-Obj 2: API version ID
+|Object 1: App ID +
+Object 2: API version ID
 |N/A
 |Edit - request tier change approval
 |Subaction: request tier change approval +
 Properties: New tier
 |Approve application
 |Contract
-|Obj 1: App ID
-Obj 2: API version ID
+|Object 1: App ID +
+Object 2: API version ID
 |N/A
 |Edit - contract approval
 |Subaction: Contract approval +
 Properties: SLA tier
 |Revoke application
 |Contract
-|Obj 1: App ID
-Obj 2: API version ID
+|Object 1: App ID +
+Object 2: API version ID
 |N/A
 |Edit - contract revoke
 |Subaction: Contract revoked +
 Properties: SLA tier
 |Restore application
 |Contract
-|Obj 1: App ID
-Obj 2: API version ID
+|Object 1: App ID +
+Object 2: API version ID
 |N/A
 |Edit - contract restore
 |Subaction: Contract restored +
@@ -440,8 +440,8 @@ The `Create Application` and `Delete Application` actions are logged at the mast
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -674,34 +674,30 @@ Properties:
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
 
-|Create Link
+|Create link
 |Link
 |Link ID
 |N/A
 |Create
 |Subaction:
 Create Link +
-Properties:
+Properties: Link metadata
 
-Link metadata
-
-|Delete Link
+|Delete link
 |Link
 |Link ID
 |N/A
 |Delete
 |Subaction:
 Delete Link +
-Properties:
-
-Link metadata
+Properties: Link metadata
 |===
 
 === Portals
@@ -710,24 +706,24 @@ The following actions apply to API Manager v1.x portals.
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
 |Create portal
 |Portal
-|Obj 1: Portal ID
-Obj 2: API Version ID
+|Object 1: Portal ID +
+Object 2: API Version ID
 |N/A
 |Create
 |Subaction: None +
 Properties: None
 |Modify portal association
 |Portal
-|Obj 1: Portal ID
-Obj 2: API version ID
+|Object 1: Portal ID +
+Object 2: API version ID
 |N/A
 |Edit
 |Subaction: Change portal association +
@@ -805,8 +801,8 @@ Properties: Public / private state
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -893,13 +889,13 @@ Properties: New role
 
 `Login` and `Logout` actions are logged only at the organization level. Additionally, `Login failure` actions are logged only against existing user accounts.
 
-==== Roles
+=== Roles
 
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -942,31 +938,31 @@ Properties: New mapping
 
 |===
 
-==== Permissions
+=== Permissions
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
-|User Permission change
+|User permission change
 |Permission
-|O1: User
-O2: Resource
-|P1: N/A
-P2: resource parent if applicable
+|Object 1: User +
+Object 2: Resource
+|Parent 1: N/A +
+Parent 2: Resource parent if applicable
 |Permissions change
 |Subaction: None +
 Properties: New permission
 |Role permission change
 |Permission
-|O1: Role
-O2: Resource
-|P1: N/A
-P2: resource parent if applicable
+|Object 1: Role +
+Object 2: Resource
+|Parent 1: N/A +
+Parent 2: Resource parent if applicable
 |Permissions change
 |Subaction: None +
 Properties: New permission
@@ -980,13 +976,13 @@ Properties: New permissions
 
 |===
 
-==== Identity Management
+=== Identity Management
 
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -1010,14 +1006,14 @@ Properties: New permissions
 |Delete
 |Subaction: None +
 |Warning
-|Obj1: Identity management +
-Obj2: User
-|Obj1: Provider name +
-Obj2: UserID
+|Object 1: Identity management +
+Object 2: User
+|Object 1: Provider name +
+Object 2: UserID
 |N/A
 |None
-|Subaction: None
-Properties: Message +
+|Subaction: None +
+Properties: Message
 |Create identity management key
 |Identity management key
 |KeyID
@@ -1029,7 +1025,7 @@ Properties: Message +
 |KeyID
 |N/A
 |Edit
-|Subaction: Set primary key
+|Subaction: Set primary key +
 Properties: old_primary_provider_key_id, provider_key_id +
 |Delete identity management key
 |Identity management key
@@ -1046,8 +1042,8 @@ Properties: old_primary_provider_key_id, provider_key_id +
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -1102,8 +1098,8 @@ Properties: Org object
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -1139,7 +1135,7 @@ Properties: Environment name
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
 |User Action
-|Obj Type
+|Object Type
 |Object
 |Parent
 |Action
@@ -1151,7 +1147,7 @@ Properties: Environment name
 |N/A
 |Create
 |Subaction: None +
-Properties: Asset Object
+Properties: Asset object
 
 |Update an asset
 |Asset
@@ -1159,9 +1155,9 @@ Properties: Asset Object
 |N/A
 |Update
 |Subaction: None +
-Properties: Asset Object
+Properties: Asset object
 
-|Delete an Asset
+|Delete an asset
 |Asset
 |Asset ID
 |N/A
@@ -1169,55 +1165,55 @@ Properties: Asset Object
 |Subaction: None +
 Properties: None
 
-|Share an Asset
+|Share an asset
 |Asset
 |Asset ID
 |N/A
-|Granted or Revoked Permissions
+|Granted or revoked permissions
 |Subaction: None +
-Properties: Asset Object, source, target, role
+Properties: Asset object, source, target, role
 
-|Request an Asset File
-|Asset File
-|Asset ID and Classifier
+|Request an asset file
+|Asset file
+|Asset ID and classifier
 |N/A
 |Download
 |Subaction: None +
 Properties: file metadata
 
-|Update an Asset Icon
-|Asset Icon
+|Update an asset icon
+|Asset icon
 |Asset ID
 |Asset
 |Update
 |Subaction: None +
-Properties: Asset Object
+Properties: Asset object
 
-|Delete an Asset Icon
-|Asset Icon
+|Delete an asset icon
+|Asset icon
 |Asset ID
 |Asset
 |Delete
 |Subaction: None +
-Properties: Asset Object
+Properties: Asset object
 
-|Create a Managed Tag
-|Asset Managed Tag
-|Asset ID and Tag ID
+|Create a managed tag
+|Asset managed tag
+|Asset ID and tag ID
 |Asset
 |Create
 |Subaction: None +
 Properties: None
 
-|Delete a Managed Tag
-|Asset Managed Tag
-|Asset ID and Tag ID
+|Delete a managed tag
+|Asset managed tag
+|Asset ID and tag ID
 |Asset
 |Delete
 |Subaction: None +
 Properties: None
 
-|Delete an Organization
+|Delete an organization
 |Organization
 |Organization ID
 |N/A
@@ -1225,97 +1221,97 @@ Properties: None
 |Subaction: None +
 Properties: None
 
-|Update Tags
-|Asset Tags
+|Update tags
+|Asset tags
 |Asset ID
 |Asset
 |Update
 |Subaction: None +
 Properties: Tags
 
-|Create a Tag Configuration
-|Tag Configuration
-|Tag Configuration ID
+|Create a tag configuration
+|Tag configuration
+|Tag configuration ID
 |N/A
 |Create
 |Subaction: None +
 Properties: TagConfiguration
 
-|Update a Tag Configuration
-|Tag Configuration
-|Tag Configuration ID
+|Update a tag configuration
+|Tag configuration
+|Tag configuration ID
 |N/A
 |Update
 |Subaction: None +
 Properties: TagConfiguration
 
-|Delete a Tag Configuration
-|Tag Configuration
-|Tag Configuration ID
+|Delete a tag configuration
+|Tag configuration
+|Tag configuration ID
 |N/A
 |Delete
 |Subaction: None +
 Properties: None
 |===
 
-==== Asset Portals
+=== Asset Portals
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
 |User Action
-|Obj Type
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
 
-|Create a Page
-|Asset Portal Page
+|Create a page
+|Asset portal page
 |Page ID
-|Asset Portal
+|Asset portal
 |Create
 |Subaction: None +
-Properties: Asset Object, Page
+Properties: Asset object, page
 
-|Update a Page
-|Asset Portal Page
+|Update a page
+|Asset portal page
 |Page ID
-|Asset Portal
+|Asset portal
 |Update
 |Subaction: None +
-Properties: Asset Object, Page
+Properties: Asset object, page
 
-|Delete a Page
-|Asset Portal Page
+|Delete a page
+|Asset portal page
 |Page ID
-|Asset Portal
+|Asset portal
 |Delete
 |Subaction: None +
 Properties: None
 
-|Create a Portal
-|Asset Portal
+|Create a portal
+|Asset portal
 |Portal ID
 |Asset
 |Create
 |Subaction: None +
-Properties: Asset Portal
+Properties: Asset portal
 
-|Publish a Portal
-|Asset Portal
+|Publish a portal
+|Asset portal
 |Portal ID
 |Asset
 |Publish
 |Subaction: None +
-Properties: Asset Portal
+Properties: Asset portal
 |===
 
-==== API Metadata
+=== API Metadata
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
 |User Action
-|Obj Type
+|Object Type
 |Object
 |Parent
 |Action
@@ -1327,7 +1323,7 @@ Properties: Asset Portal
 |N/A
 |Create
 |Subaction: None +
-Properties: name, isPublic
+Properties: Name, isPublic
 
 |Delete an API instance
 |API instance
@@ -1335,7 +1331,7 @@ Properties: name, isPublic
 |N/A
 |Delete
 |Subaction: None +
-Properties: name, isPublic
+Properties: Name, isPublic
 
 |Update an API instance
 |API instance
@@ -1343,15 +1339,15 @@ Properties: name, isPublic
 |N/A
 |Update
 |Subaction: None +
-Properties: name, isPublic
+Properties: Name, isPublic
 |===
 
-==== File Upload
+=== File Upload
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
 |User Action
-|Obj Type
+|Object Type
 |Object
 |Parent
 |Action
@@ -1363,7 +1359,7 @@ Properties: name, isPublic
 |N/A
 |Create
 |Subaction: None +
-Properties: file key
+Properties: File key
 
 |Delete file
 |Exchange file
@@ -1371,7 +1367,7 @@ Properties: file key
 |N/A
 |Delete
 |Subaction: None +
-Properties: file key
+Properties: File key
 
 |Update file
 |Exchange file
@@ -1379,15 +1375,15 @@ Properties: file key
 |N/A
 |Update
 |Subaction: None +
-Properties: file key
+Properties: File key
 |===
 
-==== Public Portals
+=== Public Portals
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
 |User Action
-|Obj Type
+|Object Type
 |Object
 |Parent
 |Action
@@ -1399,7 +1395,7 @@ Properties: file key
 |Public portal
 |Update
 |Subaction: None +
-Properties: portal ID, domain
+Properties: Portal ID, domain
 
 |Delete a domain
 |Public portal domain
@@ -1407,7 +1403,7 @@ Properties: portal ID, domain
 |Public portal
 |Delete
 |Subaction: None +
-Properties: portal ID, domain
+Properties: Portal ID, domain
 
 |Create a page
 |Public portal page
@@ -1415,7 +1411,7 @@ Properties: portal ID, domain
 |Public portal
 |Create
 |Subaction: None +
-Properties: portal ID, page ID
+Properties: Portal ID, page ID
 
 |Delete a page
 |Public portal page
@@ -1423,7 +1419,7 @@ Properties: portal ID, page ID
 |Public portal
 |Delete
 |Subaction: None +
-Properties: portal ID, page ID
+Properties: Portal ID, page ID
 
 |Update a page
 |Public portal page
@@ -1431,7 +1427,7 @@ Properties: portal ID, page ID
 |Public portal
 |Update
 |Subaction: None +
-Properties: portal ID, page ID
+Properties: Portal ID, page ID
 
 |Create a portal
 |Public portal
@@ -1439,7 +1435,7 @@ Properties: portal ID, page ID
 |N/A
 |Create
 |Subaction: None +
-Properties: project ID, created by ID
+Properties: Project ID, created by ID
 
 |Publish a portal
 |Public portal
@@ -1447,7 +1443,7 @@ Properties: project ID, created by ID
 |N/A
 |Publish
 |Subaction: None +
-Properties: project ID, created by ID
+Properties: Project ID, created by ID
 
 |Delete a portal
 |Public portal
@@ -1455,7 +1451,7 @@ Properties: project ID, created by ID
 |N/A
 |Delete
 |Subaction: None +
-Properties: project ID, created by ID
+Properties: Project ID, created by ID
 
 |Update a portal
 |Public portal
@@ -1463,27 +1459,27 @@ Properties: project ID, created by ID
 |N/A
 |Update
 |Subaction: None +
-Properties: project ID, created by ID
+Properties: Project ID, created by ID
 |===
 
-==== Asset Reviews
+=== Asset Reviews
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
 |User Action
-|Obj Type
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
 
-|Create a comment
+|Create a Comment
 |Asset portal review comment
 |Comment ID
 |Asset portal review
 |Create
 |Subaction: None +
-Properties: comment
+Properties: Comment
 
 |Delete a comment
 |Asset portal review comment
@@ -1491,7 +1487,7 @@ Properties: comment
 |Asset portal review
 |Delete
 |Subaction: None +
-Properties: comment
+Properties: Comment
 
 |Update a comment
 |Asset portal review comment
@@ -1499,7 +1495,7 @@ Properties: comment
 |Asset portal review
 |Update
 |Subaction: None +
-Properties: comment
+Properties: Comment
 
 |Create a review
 |Asset portal review
@@ -1507,7 +1503,7 @@ Properties: comment
 |Asset
 |Create
 |Subaction: None +
-Properties: review object
+Properties: Review object
 
 |Delete a review
 |Asset portal review
@@ -1515,7 +1511,7 @@ Properties: review object
 |Asset
 |Delete
 |Subaction: None +
-Properties: review object
+Properties: Review object
 
 |Update a review
 |Asset portal review
@@ -1523,7 +1519,7 @@ Properties: review object
 |Asset
 |Update
 |Subaction: None +
-Properties: review object
+Properties: Review object
 |===
 
 == Runtime Manager
@@ -1531,8 +1527,8 @@ Properties: review object
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -1690,7 +1686,7 @@ Properties: Application metadata
 |Clear
 |Subaction: None +
 Properties: Application metadata
-|Enable/Disable static ip
+|Enable/Disable static IP
 |Application
 |AppID
 |N/A
@@ -1727,8 +1723,8 @@ Properties: Alert
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
