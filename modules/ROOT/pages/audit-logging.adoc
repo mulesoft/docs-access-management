@@ -820,7 +820,7 @@ Properties: Organization ID
 |N/A
 |Create
 |Subaction: None +
-Properties: User ID
+Properties: UserID
 |Password reset requested
 |User
 |UserID
