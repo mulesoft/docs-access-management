@@ -97,7 +97,9 @@ When you remove all external client providers from an environment, the built-in 
 . Navigate to *Access Management*.
 . In the menu on the left, click *Environments*.
 . Click the name of the environment.
-. Click the *Remove* button next to the name of the client provider that you want to remove. If the client provider is default, first specify another client provider as default by clicking *Set as default*.
+. Click the *Remove* button next to the name of the client provider that you want to remove.
++
+If the client provider is the default, first specify another client provider as default by clicking *Set as default*.
 . Click *Update*.
 
 The client provider is removed. Any assets or APIs that were associated with the client provider continue to use it until you associate them with a new client provider.
