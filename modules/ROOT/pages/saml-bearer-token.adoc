@@ -5,6 +5,9 @@ endif::[]
 
 This topic describes how to obtain the bearer token from Anypoint Platform. If you are using an identity provider configured to use SAML 2.0, federated users within your organization can access platform APIs using the bearer token.
 
+[NOTE]
+Obtaining an API bearer token using a SAML assertion works only for IdP-initiated single sign-on. Service provider-initiated SSO does not support unsolicited assertions. 
+
 The bearer token provides access to the platform APIs a user has permission to access. Each bearer token is associated with a specific user who is granted roles and permissions for an API. If a user attempts to access an API that they do not have permissions to access the API returns a `401 Unauthorized` error.
 
 The validity of the bearer token is determined by the value defined for the Default Session Timeout property. This is configured in the Master organization properties. See xref:organization.adoc#organization-settings[Organization Settings] for more information.
@@ -19,6 +22,7 @@ Record this response to use in the following step.
 +
 [NOTE]
 The SAML response must be base64 encoded. 
+If the SAML response string is URL encoded, you must decode the string before running the `curl` command.
 +
 ----
 curl -X POST \
