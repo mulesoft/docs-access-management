@@ -7,13 +7,6 @@ endif::[]
 
 MuleSoft supports client management by identity providers that implement the OpenID Connect Dynamic Client Registration open standard.  MuleSoft explicitly verifies support in Anypoint Platform for Salesforce, Okta, and OpenAM v14 Dynamic Client Registration.
 
-[NOTE]
-====
-* Updates of clients created through this integration are not currently supported.
-* Deletion of clients created through this integration is supported with the limitation that the client is removed from Anypoint Platform but still exists in the OpenID Connect authorization server and API policies still consider them valid until the cached token expires.
-* To enable this functionality you must opt-in by selecting the checkbox *Enable client deletion in Anypoint* under the *Advanced* settings link.
-====
-
 The following table contains examples of the URLs you need to supply, depending on your provider, during registration.
 
 [%autowidth.spread]
