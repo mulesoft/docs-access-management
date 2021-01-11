@@ -887,7 +887,14 @@ Properties: New role
 
 |===
 
-`Login` and `Logout` actions are logged only at the organization level. Additionally, `Login failure` actions are logged only against existing user accounts.
+[NOTE]
+====
+
+* `Login` and `Logout` actions are logged only at the organization level.
+* `Login failure` actions are logged only against existing user accounts.
+* `Login failure` actions are not logged if you are using Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+
+====
 
 === Roles
 
