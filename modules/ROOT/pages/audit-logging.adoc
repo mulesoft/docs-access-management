@@ -368,7 +368,7 @@ Properties: None
 |N/A
 |Create
 |Subaction: None +
-Properties: None
+Properties: Application
 |Delete application
 |Application
 |App ID
