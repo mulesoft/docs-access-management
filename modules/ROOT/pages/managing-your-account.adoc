@@ -180,7 +180,8 @@ You can modify your contact information, change your password, and see a list of
 
 == Reset Your Password
 
-When you reset your password, your new password must be between 8 and 64 characters in length with at least one uppercase letter, one lowercase letter, and one number. Your password can contain only the following: +
+When you reset your password, your new password must be between 8 and 64 characters in length with at least one uppercase letter, one lowercase letter, and one number. Your password can contain only the following: 
+
 ** Upper and lower case characters
 ** Numbers
 ** Non-alphanumeric symbols
