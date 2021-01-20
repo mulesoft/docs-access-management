@@ -191,7 +191,7 @@ Your new password must be between 8 and 64 characters in length with at least on
 ** Numbers
 ** Non-alphanumeric symbols
 
-Additionally, your new password must be unique and cannot match any of your previous three passwords.
+Additionally, you cannot reuse any of your previous three passwords.
 
 
 == Forgot User Name
