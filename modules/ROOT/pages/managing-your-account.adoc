@@ -180,12 +180,16 @@ You can modify your contact information, change your password, and see a list of
 
 == Reset Your Password
 
+When you reset your password, your new password must be between 8 and 64 characters in length with at least one uppercase letter, one lowercase letter, and one number. Your password must contain only ASCII-standard characters.
+Additionally, you cannot reuse any of your previous three passwords.
+
+
 . Go to the Anypoint Platform sign in screen.
 . Click the *Forgot your username or password* link.
 . In the *Forgot your credentials* form, enter your username. +
 A link to create a new password is emailed to you.
 . Click the reset password link in the email.
-. In the *Reset your password* form, enter a new password and click *Reset Password*.
+. In the *Reset your password* form, enter a new password and click *Reset Password*. 
 
 == Forgot User Name
 
