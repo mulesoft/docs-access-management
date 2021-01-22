@@ -901,19 +901,19 @@ Properties: None
 |Subaction: None +
 Properties: None
 |Edit role - add user
-|Obj1: Role +
-Obj2: User
-|Obj1: Role +
-Obj2: User
+|Object 1: Role +
+Object 2: User
+|Object 1: Role +
+Object 2: User
 |n/a
 |Edit
 |Subaction: Add user +
 Properties: Role, User
 |Edit role - remove user
-|Obj1: Role +
-Obj2: User
-|Obj1: Role +
-Obj2: User
+|Object 1: Role +
+Object 2: User
+|Object 1: Role +
+Object 2: User
 |n/a
 |Edit
 |Subaction: Remove user +
