@@ -870,20 +870,6 @@ Properties: Error message
 |Logout
 |Subaction: None +
 Properties: None
-|Add role
-|User
-|UserID
-|N/A
-|Edit
-|Subaction: Add role +
-Properties: New role
-|Remove role
-|User
-|UserID
-|N/A
-|Edit
-|Subaction: Remove role +
-Properties: New role
 
 |===
 
@@ -915,19 +901,23 @@ Properties: New role
 |Subaction: None +
 Properties: None
 |Edit role - add user
-|Role
-|Role
-|N/A
+|Object 1: Role +
+Object 2: User
+|Object 1: Role +
+Object 2: User
+|n/a
 |Edit
 |Subaction: Add user +
-Properties: New user
+Properties: Role, User
 |Edit role - remove user
-|Role
-|Role
-|N/A
+|Object 1: Role +
+Object 2: User
+|Object 1: Role +
+Object 2: User
+|n/a
 |Edit
 |Subaction: Remove user +
-Properties: New user
+Properties: Role, User
 |Edit role - change external group mapping
 |Role
 |Role
@@ -940,8 +930,8 @@ Properties: New mapping
 |Role
 |N/A
 |Delete
-|Subaction: None
-|propoerties : Role metadata
+|Subaction: None +
+Properties: Role metadata
 
 |===
 
