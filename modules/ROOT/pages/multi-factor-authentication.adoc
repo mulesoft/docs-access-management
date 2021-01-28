@@ -3,6 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+[NOTE]
+Beginning February 1, 2022, multi-factor authentication (MFA) or single sign-on (SSO) must be enabled for all of your Salesforce products. To learn more about this requirement, see the https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce Multi-Factor Authentication FAQ]. 
+
 Multi-factor authentication provides an additional layer of verification for Anypoint Platform users.
 
 * As an organization administrator, you can require all non-SSO users in your organization to use multiple verification methods to successfully log in.
