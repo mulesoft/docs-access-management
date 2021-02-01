@@ -1764,7 +1764,20 @@ Properties: LoadBalancer metadata
 |Create/modify/delete
 |Subaction: None +
 Properties: Alert
-
+|Create/modify/delete VPC
+|
+|
+|
+|Create/modify/delete
+|Subaction: ?? +
+Properties: 
+|Create/modify/delete VPN
+|
+|
+|
+|Create/modify/delete
+|Subaction: ?? +
+Properties: 
 |===
 
 
