@@ -37,7 +37,6 @@ https://anypoint.mulesoft.com/accounts/login/{your_org_domain}
 == Limitations
 
 * OpenID Connect does not support single logout.
-* OpenID Connect does not support role mapping.
 * If a SAML user belongs to certain groups, Anypoint Platform does not automatically grant equivalent roles in the organization.
 * Anypoint Platform does not generate the SAML assertion for single sign on.
 Your IdP generates the sign-on URL that you configure.
