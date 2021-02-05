@@ -1595,7 +1595,8 @@ Properties: Application metadata
 |AppID
 |N/A
 |Start
-|
+|Subaction: None +
+Properties: Application metadata
 |Restart application
 |Application
 |AppID
@@ -1765,19 +1766,19 @@ Properties: LoadBalancer metadata
 |Subaction: None +
 Properties: Alert
 |Create/modify/delete VPC
-|
-|
-|
+|VPC
+|vpcID
+|N/A
 |Create/modify/delete
-|Subaction: ?? +
-Properties: 
+|Subaction: None +
+Properties: VPC
 |Create/modify/delete VPN
-|
-|
-|
+|VPN
+|vpnId
+|N/A
 |Create/modify/delete
-|Subaction: ?? +
-Properties: 
+|Subaction: None +
+Properties: VPN
 |===
 
 
