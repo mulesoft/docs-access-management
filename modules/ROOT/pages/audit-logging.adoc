@@ -1771,14 +1771,14 @@ Properties: Alert
 |N/A
 |Create/modify/delete
 |Subaction: None +
-Properties: VPC
+Properties: VPC metadata
 |Create/modify/delete VPN
 |VPN
 |vpnId
 |N/A
 |Create/modify/delete
 |Subaction: None +
-Properties: VPN
+Properties: VPN metadata
 |===
 
 
