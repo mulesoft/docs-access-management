@@ -1941,27 +1941,21 @@ Properties: Application metadata
 |Parent
 |Action
 |Payload
-|Queue
-
-Create/modify/delete/purge
+|Create/modify/delete/purge queue
 |Queue
 |queueID
 |N/A
 |Create/modify/delete
 |Subaction: None +
 Properties: Queue metadata
-|Exchange
-
-Create/modify/delete
+|Create/modify/delete exchange
 |Exchange
 |exchangeID
 |N/A
 |Create/modify/delete
 |Subaction: None +
 Properties: Exchange metadata
-|Exchange
-
-Create/delete binding
+|Create/delete exchange binding
 |Binding
 |bindingID
 |N/A
@@ -1969,9 +1963,7 @@ Create/delete binding
 |Subaction: None +
 Properties: Exchange metadata
 
-|Applications
-
-Create/delete/regenerate client
+|Create/delete/regenerate client
 |Client
 |clientID
 |N/A
