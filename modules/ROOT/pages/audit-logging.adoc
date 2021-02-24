@@ -1195,6 +1195,22 @@ Properties: Asset object
 |Subaction: None +
 Properties: Asset object
 
+|Create a managed tag
+|Asset managed tag
+|Asset ID and tag ID
+|Asset
+|Create
+|Subaction: None +
+Properties: None
+
+|Delete a managed tag
+|Asset managed tag
+|Asset ID and tag ID
+|Asset
+|Delete
+|Subaction: None +
+Properties: None
+
 |Delete an organization
 |Organization
 |Organization ID
