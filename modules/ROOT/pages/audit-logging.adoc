@@ -1195,7 +1195,7 @@ Properties: Asset object
 |Subaction: None +
 Properties: Asset object
 
-|Create a managed tag
+|Create a managed tag (Category)
 |Asset managed tag
 |Asset ID and tag ID
 |Asset
@@ -1203,7 +1203,7 @@ Properties: Asset object
 |Subaction: None +
 Properties: None
 
-|Delete a managed tag
+|Delete a managed tag (Category)
 |Asset managed tag
 |Asset ID and tag ID
 |Asset
