@@ -25,7 +25,7 @@ Talk your account representative, or use https://www.mulesoft.com/contact[the Mu
 
 Talk to your account representative or use https://www.mulesoft.com/contact[the MuleSoft contact form] to request an Enterprise license for your on-premises Mule Runtime instances or to create a subscription account on CloudHub.
 
-=== Where do I sign in with external identity management?
+=== Where do I log in with external identity management?
 
 If your organization uses external identity management, log into your account at *anypoint.mulesoft.com/accounts/login/_yourorganizationname_*.
 
@@ -37,7 +37,7 @@ Please create a https://help.mulesoft.com[MuleSoft support case] for account del
 
 === What account should I use?
 
-If you have one or more existing MuleSoft community accounts tied to the email address at which you received your invitation, MuleSoft prompts you to use your existing account to sign in and accept the invitation. You can also choose to create a new account by following the Sign Up link at the bottom of the form.
+If you have one or more existing MuleSoft community accounts tied to the email address at which you received your invitation, MuleSoft prompts you to use your existing account to log in and accept the invitation. You can also choose to create a new account by following the *Sign Up* link at the bottom of the form.
 
 === How can I use a different email address?
 
@@ -45,7 +45,7 @@ Accept the invitation using the email where it was sent. After you've accepted t
 
 === Why can't I see anything?
 
-If you accept an invitation, sign in, and can't see anything on your organization's Developer Portal, one of the following may be affecting your view:
+If you accept an invitation, log in, and can't see anything on your organization's Developer Portal, one of the following may be affecting your view:
 
 * No one in your organization has added any APIs yet, and thus there are no API Portals to display.
 * You haven't been granted *Portal Viewer* access to any private API Portals, and there are no public API Portals to display.
@@ -57,15 +57,15 @@ If you accept an invitation, sign in, and can't see anything on your organizatio
 To give others access to your API Version, you must be the *API Version Owner*, and they must be a member of your organization.
 
 . Navigate to your API Version Details page.
-. Click the *Permissions* tab. 
+. Click the *Permissions* tab.
 . Invite a user to access your API, if that user is a member of the same organization as you.
-. Once you have added a user, you can manage *Portal Viewer* access or *API Version Owner* access, using the drop-down in the *Permission* column. This tab also allows you to view all users who have been granted direct permissions to your API. 
+. Once you have added a user, you can manage *Portal Viewer* access or *API Version Owner* access, using the drop-down in the *Permission* column. This tab also allows you to view all users who have been granted direct permissions to your API.
 [NOTE]
 The *Permissions* tab doesn't display any users with permissions based on a custom role because roles can't be managed from API Version Details pages. Contact your *Organization Administrator* for information about role-based permissions to your API version.
 
 === How do I browse Developer Portals?
 
-Sign out of your account to browse Developer Portals for other organizations. While you are logged into your own organization, you can access only your own organization's Developer Portal. 
+Sign out of your account to browse Developer Portals for other organizations. While you are logged into your own organization, you can access only your own organization's Developer Portal.
 [NOTE]
 To request access to an API that belongs to a different organization, you need to have an Anypoint Platform account for that organization.
 
@@ -73,7 +73,7 @@ To request access to an API that belongs to a different organization, you need t
 
 If you're not a member of the organization that owns an API that you want to use:
 
-* Log in with an account in the organization that owns the API.
+* Log in using an account in the organization that owns the API.
 * If you don't have an account with the organization, review the documentation in the API Portal for information about how to request an account.
 
 === See Also

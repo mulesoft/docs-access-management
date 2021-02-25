@@ -15,10 +15,15 @@ Users belonging to the Organization Administrator role or the Audit Log Viewer r
 
 The audit log UI is embedded in Access Management.
 
-. Sign into Anypoint Platform and click *Access Management*. +
-You can also press the `Escape` key on your keyboard to view the Anypoint Platform navigation menu.
-. From the Access Management menu on the left, select *Audit Log*. +
-The Audit logs page displays the logs.
+include::partial$include-nav-steps-org-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Audit Logs*. +
+The *Audit Logs* page displays the logs. You can:
+
+* Download audit logs
+* Set a time period for audit logs to display
+* Filter audit logs by product, type, and actions
+* Search audit logs by environment, object, and user
 
 == Audit Log Contents
 

@@ -22,7 +22,7 @@ Before using SSO, ensure that you have performed the following:
 
 Be aware of the following considerations related to client behavior:
 
-* User accounts created before configuring your federated organization remain within the organization. However, users can only login through the Anypoint Platform sign in page. They cannot login from the redirected login page of the identity provider.
+* User accounts created before configuring your federated organization remain within the organization. However, users can only login through the Anypoint Platform login page. They cannot login from the redirected login page of the identity provider.
 
 * Existing non-federated users can continue to work as normally with the following exceptions:
 +

@@ -40,18 +40,18 @@ The following providers are fully supported to work with OpenID Connect:
 
 After you select an identity provider:
 
-* Set up your Anypoint Platform organization as your audience in your identity provider configuration. 
+* Set up your Anypoint Platform organization as your audience in your identity provider configuration.
 +
 [NOTE]
-The IdP you select is effective for the entire organization and all business groups. 
+The IdP you select is effective for the entire organization and all business groups.
 * Configure identity management in the Anypoint Platform master organization.
 * Configure attribute names on the IdP and Anypoint Platform to match.
 
-For more information, see the documentation for your identity provider. 
+For more information, see the documentation for your identity provider.
 
 After configuring identity management, you can't add users to your organization in Anypoint Platform. In Access Management, *Invite User* is disabled to prevent this operation. To add new users your organization, include them in your external identity management solution according to your normal internal provisioning process.
 
-Users that sign in with SSO are new users to the system. If the new user has the same username as a user that already exists in your Anypoint Platform organization, the new user will co-exist with the original user with the same username. Users with the same username are managed independently from one another.
+Users that log in with SSO are new users to the system. If the new user has the same username as a user that already exists in your Anypoint Platform organization, the new user will co-exist with the original user with the same username. Users with the same username are managed independently from one another.
 
 == See Also
 
