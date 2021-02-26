@@ -905,7 +905,7 @@ Properties: None
 Object 2: User
 |Object 1: Role +
 Object 2: User
-|n/a
+|N/A
 |Edit
 |Subaction: Add user +
 Properties: Role, User
@@ -914,7 +914,7 @@ Properties: Role, User
 Object 2: User
 |Object 1: Role +
 Object 2: User
-|n/a
+|N/A
 |Edit
 |Subaction: Remove user +
 Properties: Role, User
@@ -1079,9 +1079,9 @@ Properties: New group name
 |Subaction: Edit owner +
 Properties: New owner userID
 |Edit business group entitlement
-|Organization
-|OrgID
-|Parent organization
+|Entitlement
+|EnvID
+|N/A
 |Edit
 |Subaction: Edit entitlement +
 Properties: Entitlement change
