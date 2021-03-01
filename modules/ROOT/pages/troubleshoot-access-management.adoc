@@ -7,7 +7,7 @@ These tips provide information on what to do if you encounter issues.
 
 == Problems with Accessing Anypoint Platform
 
-=== Sign in Credentials are not recognized
+=== Sign in Credentials are Not Recognized
 
 If your credentials aren't recognized when you try to log in to Anypoint Platform, try the following:
 
@@ -16,7 +16,7 @@ If your organization uses an external identity management system, your login URL
 * Verify that you are using the correct username and password for the account.
 * If your organization isn't using an external identity management system and your login credentials aren't working, reset your password or ask your Organization Administrator if your account is still active.
 
-=== Access Management invitation link returns an error
+=== Access Management Invitation Link Returns an Error
 
 If you click the link in your invitation and an error is returned, your invitation may have expired or been rescinded. Please contact your Organization Administrator for a new invitation.
 
