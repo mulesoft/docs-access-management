@@ -48,7 +48,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 +
 image::anypoint-platform-nav-menu.png[]
 +
-The *Organization* page is appears, where you can view organizations and business groups and add new business groups (if enabled).
+The *Organization* page appears, where you can view organizations and business groups and add new business groups (if enabled).
 
 You can also click *Organization* in the Access Management navigation menu to view the *Organization* page.
 

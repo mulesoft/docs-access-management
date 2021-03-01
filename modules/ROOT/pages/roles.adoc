@@ -190,7 +190,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 * Secrets Manger
 * Tokenization
 +
-Depending on your permissions, you may not see all of these options.
+Depending on your permissions, you might not see all of these options.
 
 . Click the *Permissions* drop-down menu, then select the permissions you want to assign to the custom role.
 +

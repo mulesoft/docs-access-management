@@ -45,7 +45,7 @@ Accept the invitation using the email where it was sent. After you've accepted t
 
 === Why can't I see anything?
 
-If you accept an invitation, log in, and can't see anything on your organization's Developer Portal, one of the following may be affecting your view:
+If you accept an invitation, log in, and can't see anything on your organization's Developer Portal, one of the following might be affecting your view:
 
 * No one in your organization has added any APIs yet, and thus there are no API Portals to display.
 * You haven't been granted *Portal Viewer* access to any private API Portals, and there are no public API Portals to display.
@@ -59,7 +59,7 @@ To give others access to your API Version, you must be the *API Version Owner*, 
 . Navigate to your API Version Details page.
 . Click the *Permissions* tab.
 . Invite a user to access your API, if that user is a member of the same organization as you.
-. Once you have added a user, you can manage *Portal Viewer* access or *API Version Owner* access, using the drop-down in the *Permission* column. This tab also allows you to view all users who have been granted direct permissions to your API.
+. Once you add a user, you can manage *Portal Viewer* access or *API Version Owner* access using the drop-down in the *Permission* column. This tab also enables you to view all users who have been granted direct permissions to your API.
 [NOTE]
 The *Permissions* tab doesn't display any users with permissions based on a custom role because roles can't be managed from API Version Details pages. Contact your *Organization Administrator* for information about role-based permissions to your API version.
 

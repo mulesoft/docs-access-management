@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-These are some tips about what to do if you encounter these issues.
+These tips provide information on what to do if you encounter issues.
 
 == Problems with Accessing Anypoint Platform
 
@@ -28,7 +28,7 @@ If you receive an `There was an error while talking to CoreServices` when you tr
 
 See xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management]
 
-=== Error received when doing a redirect
+=== Error Received When Doing a Redirect
 
 When a redirect to the OpenID Connect Provider occurs, you receive an `Invalid Scopes error`.
 

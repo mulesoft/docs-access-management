@@ -1,2 +1,2 @@
 . Log in to Anypoint Platform.
-. Navigate to your xref:managing-your-account.adoc#update-user-information[user profile].
+. Navigate to your user profile.

@@ -83,7 +83,7 @@ image::switch-suborg.png[switch+suborg]
 
 [NOTE]
 --
-When you log in to Anypoint Platform, you are returned to the business group where you were last active when you logged out of Anypoint Platform.
+When you log in to Anypoint Platform, you return to the business group where you were last active when you logged out of Anypoint Platform.
 --
 
 If you are not an organization administrator, you can view only the business groups that you have permissions to view. In the *Organization* tab, the tree of your organization displays only the business groups you are a member of.

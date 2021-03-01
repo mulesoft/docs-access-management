@@ -32,7 +32,7 @@ If you already configured Anypoint Platform as a client application in your iden
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
 . In the Access Management navigation menu, click *External Identity*.
-. In the *Identity Management* page, select OpenID Connect.
+. In the *Identity Management* page, select *OpenID Connect*.
 +
 The External Identity - Identity Management OpenID Connect form appears.
 +

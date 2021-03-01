@@ -20,10 +20,10 @@ include::partial$include-nav-steps-org-no-permissions.adoc[]
 . In the Access Management navigation menu, click *Audit Logs*. +
 The *Audit Logs* page displays the logs. You can:
 
-* Download audit logs
-* Set a time period for audit logs to display
-* Filter audit logs by product, type, and actions
-* Search audit logs by environment, object, and user
+* Download audit logs.
+* Set a time period for audit logs to display.
+* Filter audit logs by product, type, and actions.
+* Search audit logs by environment, object, and user.
 
 == Audit Log Contents
 

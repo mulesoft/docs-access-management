@@ -46,7 +46,7 @@ To prevent service disruptions, identify any accounts (_service accounts_) that 
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
-. In the Access Management navigation menu, click *Multi-factor auth*.
+. In the Access Management navigation menu, click *Multi-factor Auth*.
 . Select *Required*.
 . If you want to exempt specific users or service accounts from multi-factor authentication, add them to the *Exempt Accounts* section.
 . Click *Save*. +
