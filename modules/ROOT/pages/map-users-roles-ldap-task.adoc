@@ -5,7 +5,7 @@ endif::[]
 
 You can map users in a federated organization's group to a role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
 
-After you have mapped them, users in an organization can sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. +
+After you have mapped them, users in an organization can log in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. +
 This helps to ensure secure credentials and to maintain organizational roles for accessing privileged information.
 
 Anypoint Platform requires different information from your identity provider based on whether you use SAML, OpenID Connect, or LDAP.
@@ -38,7 +38,7 @@ In the above example of a SAML assertion, the *Group Attribute* is `Groups`.
 
 === Map SAML Users to Roles
 
-After you have created an attribute that contains your groups, you can create a role to map to groups of users in your organization. 
+After you have created an attribute that contains your groups, you can create a role to map to groups of users in your organization.
 
 . In Anypoint Platform, navigate to *Access Management*.
 . Click *Identity Providers*.
@@ -64,7 +64,7 @@ You can use any identity providers that return groups claims on the `UserInfo` o
 
 === Map OIDC Group Users to Roles
 
-You can use groups claims values to create a role for each group of users in your organization. 
+You can use groups claims values to create a role for each group of users in your organization.
 
 . Obtain a response to the `UserInfo` or `Token` endpoint that contains a groups claim from your external identity provider.
 . In Anypoint Platform, navigate to *Access Management*.

@@ -9,7 +9,7 @@ Beginning February 1, 2022, multi-factor authentication (MFA) must be enabled fo
 Multi-factor authentication provides an additional layer of verification for Anypoint Platform users.
 
 * As an organization administrator, you can require all non-SSO users in your organization to use multiple verification methods to successfully log in.
-* As an organization administrator, you can exempt specific user accounts from the multi-factor authentication requirement in order to allow existing integrations to continue operating without interruption. 
+* As an organization administrator, you can exempt specific user accounts from the multi-factor authentication requirement in order to allow existing integrations to continue operating without interruption.
 * Non-SSO users can manually enable multi-factor authentication in their profile settings, even if their organization does not require it.
 
 The multi-factor authentication setting does not apply to SSO users.  SSO users should configure multi-factor authentication through their identity provider.
@@ -40,13 +40,13 @@ For enhanced security, you can require all users in your organization to use mul
 
 === Prerequisite
 
-To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform. You must either configure these service account calls by using the xref:connected-apps-overview.adoc[Connected Apps] feature or add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication. 
+To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform. You must either configure these service account calls by using the xref:connected-apps-overview.adoc[Connected Apps] feature or add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication.
 
 === Enable Multi-Factor Authentication for All User Accounts
 
-. Log in to Anypoint Platform using an account that has the Organization Administrator permission.
-. Navigate to *Access Management*.
-. In the navigation menu, click *Multi-factor auth*.
+include::partial$include-nav-steps-org-admin-bg.adoc[]
+
+. In the Access Management navigation menu, click *Multi-factor Auth*.
 . Select *Required*.
 . If you want to exempt specific users or service accounts from multi-factor authentication, add them to the *Exempt Accounts* section.
 . Click *Save*. +
@@ -60,9 +60,9 @@ It is best to use the xref:connected-apps-overview.adoc[Connected Apps] feature 
 
 To exempt individual accounts from multi-factor authentication:
 
-. Log in to Anypoint Platform using an account that has the Organization Administrator permission.
-. Navigate to *Access Management*.
-. In the navigation menu, click *Multi-factor Auth*.
+include::partial$include-nav-steps-org-admin-bg.adoc[]
+
+. In the Access Management navigation menu, click *Multi-factor Auth*.
 . In the *Exempt Accounts* section, add the accounts that you want to exempt. +
 Only users who do not use single sign-on (SSO) appear in this list.
 . Click *Save*. +
@@ -74,8 +74,8 @@ You can later remove user accounts from the *Exempt Accounts* list by clicking *
 
 If you want to ensure you are the only person who can access your account, you can enable multi-factor authentication on your user account even if your organization does not require it. You can configure more than one verification method for your account:
 
-. Log in to Anypoint Platform.
-. Navigate to your user profile.
+include::partial$include-nav-steps-to-profile.adoc[]
+
 . Click *Configure multi-factor authentication (MFA)*. +
 The *Manage Your Verification Methods* interface appears.
 . Next to the verification method you want to configure, click *Add*.
@@ -89,8 +89,8 @@ If your organization has disabled its multi-factor authentication requirement, y
 
 To modify verification methods in your account:
 
-. Log in to Anypoint Platform.
-. Navigate to your user profile.
+include::partial$include-nav-steps-to-profile.adoc[]
+
 . Click *Configure multi-factor authentication (MFA)*. +
 The *Manage Your Verification Methods* interface appears.
 . If you want to add an additional verification method:
@@ -116,9 +116,9 @@ When you disable the multi-factor authentication requirement, existing users no 
 
 To disable multi-factor authentication for all users:
 
-. Log in to Anypoint Platform using an account that has the Organization Administrator permission.
-. Navigate to *Access Management*.
-. In the navigation menu, click *Multi-factor auth*.
+include::partial$include-nav-steps-org-admin-bg.adoc[]
+
+. In the Access Management navigation menu, click *Multi-factor auth*.
 . Unselect *Required*.
 . Click *Save*. +
 Multi-factor authentication configuration is no longer required for new users.
@@ -129,9 +129,9 @@ You can reset multi-factor authentication for individual users if a device is co
 
 To reset multi-factor authentication for an individual user:
 
-. Log in to Anypoint Platform using an account that has the Organization Administrator permission.
-. Navigate to *Access Management*.
-. In the navigation menu, click *Users*.
+include::partial$include-nav-steps-org-admin-bg.adoc[]
+
+. In the Access Management navigation menu, click *Users*.
 . Click the user whose multi-factor authentication configuration you want to reset. +
 . Click *Reset multi-factor authentication*.
 . Click *Confirm reset MFA*. +
@@ -139,4 +139,4 @@ If your organization requires multi-factor authentication, the user is prompted 
 
 == Known Issues
 
-* If you enable MFA, your users might experience an issue logging in via Anypoint Studio. As a temporary workaround, change the *Browser* setting from *Built-in* to *Native* in the Anypoint Studio *Preferences* section. Once you've made the change, your users should be able to authenticate successfully with "One-Time Password Generator" and "Salesforce Authenticator" verification methods. Anypoint Studio will resolve this issue in a future update. 
+* If you enable MFA, your users might experience an issue logging in via Anypoint Studio. As a temporary workaround, change the *Browser* setting from *Built-in* to *Native* in the Anypoint Studio *Preferences* section. Once you've made the change, your users should be able to authenticate successfully with "One-Time Password Generator" and "Salesforce Authenticator" verification methods. Anypoint Studio will resolve this issue in a future update.
