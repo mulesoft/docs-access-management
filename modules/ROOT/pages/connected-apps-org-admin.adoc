@@ -50,7 +50,7 @@ Applications created by users in the same organization are marked as *internal a
 
 == Master organization and business groups
 
-Connected Apps are at the Master Organization level, not at the Business Group(Sub Organization) levels.
+By default, connected apps are configured at the master organization level, not at the business group (sub-organization) levels.
 
 If a connected app is created to act on its own behalf(client credentials), after the scopes scopes are chosen, you could choose which master ogranization/Business Groups to enable it.
 
