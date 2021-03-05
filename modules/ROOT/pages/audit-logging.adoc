@@ -1969,6 +1969,24 @@ Properties: Exchange metadata
 Properties: Client metadata
 |===
 
+== Object Store v2
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create/modify/delete store
+|Store
+|storeID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Store metadata
+|===
 
 == About Audit Log REST API Access
 
