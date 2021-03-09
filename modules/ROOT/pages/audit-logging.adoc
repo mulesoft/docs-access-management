@@ -1132,6 +1132,10 @@ Properties: Environment metadata
 |Subaction: None +
 Properties: Environment name
 
+[NOTE]
+
+When an Organization or Business Group is created, some default environments are created automatically. As Anypoint has evolved, the default environments created have been changing. The current automatically created environments are Sandbox and Design. For the automatically created environments, no auid log entries are created.
+
 |===
 
 == Exchange
