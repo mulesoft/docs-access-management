@@ -5,7 +5,7 @@ endif::[]
 
 You must have the Organization Administrators role to manage users within an Anypoint Platform organization. To manage user permissions for your API version, you must have API Version Owner permissions.
 
-As an administrator of your organization, or of one of its business groups, you can enable, disable, or delete users. Access this menu by first making sure that the correct business group is selected in the top-right of the screen next to your user name, then clicking the gear icon next to it, and then picking the *Users* link in the left menu.
+As an administrator of your master organization, you can enable, disable, or delete users. Access this menu by first making sure that the correct business group is selected in the top-right of the screen next to your user name, then clicking the gear icon next to it, and then picking the *Users* link in the left menu.
 
 By ticking the checkbox next to a user, additional options related to that user are displayed:
 
