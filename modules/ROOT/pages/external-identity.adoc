@@ -49,9 +49,9 @@ The IdP you select is effective for the entire organization and all business gro
 
 For more information, see the documentation for your identity provider.
 
-After configuring identity management, you can't add users to your organization in Anypoint Platform. In Access Management, *Invite User* is disabled to prevent this operation. To add new users your organization, include them in your external identity management solution according to your normal internal provisioning process.
+After configuring identity management, you must add new SSO users using your external identity management solution according to your normal internal provisioning process. If you use Invite User feature to add users to your organization after you have configured an identity provider, the credentials for these users are stored locally in your organization rather than with the identity provider.
 
-Users that log in with SSO are new users to the system. If the new user has the same username as a user that already exists in your Anypoint Platform organization, the new user will co-exist with the original user with the same username. Users with the same username are managed independently from one another.
+Users that log in with SSO are new users to the system. If the new user has the same username as a user that already exists in your Anypoint Platform organization, the new user co-exists with the original user with the same username. Users with the same username are managed independently from one another.
 
 == See Also
 
