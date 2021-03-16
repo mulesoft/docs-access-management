@@ -36,7 +36,7 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 * `offline_access`: Access to the user's data when they are not logged in.
 
 [NOTE]
-Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app.
+Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app. The duration of the token is 90 minutes.
 
 == OIDC Endpoints and Tokens
 
