@@ -22,7 +22,7 @@ Developers who have the organization administrator role can create apps and spec
 
 When a developer creates an app, the app requests access to user data.
 When an end user receives such a request and authorizes the app to access their data, the app receives an access token, which allows the app to call Anypoint Platform on the user’s behalf.
-The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials.
+The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials. The duration of a token is 90 minutes.
 
 == Endpoint Scopes
 
