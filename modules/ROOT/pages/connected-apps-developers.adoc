@@ -22,7 +22,7 @@ Developers who have the organization administrator role can create apps and spec
 
 When a developer creates an app, the app requests access to user data.
 When an end user receives such a request and authorizes the app to access their data, the app receives an access token, which allows the app to call Anypoint Platform on the user’s behalf.
-The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials.
+The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials. A token is valid for up to 90 minutes.
 
 == Endpoint Scopes
 
@@ -36,7 +36,7 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 * `offline_access`: Access to the user's data when they are not logged in.
 
 [NOTE]
-Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app.
+Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app. 
 
 == OIDC Endpoints and Tokens
 
