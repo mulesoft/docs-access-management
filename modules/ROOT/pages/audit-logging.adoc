@@ -883,7 +883,7 @@ Properties: None
 
 * `Login` and `Logout` actions are logged only at the organization level.
 * `Login failure` actions are logged only against existing user accounts.
-* `Login failure` actions are not logged if you are using SSO configured with LDAP or OIDC, including Anypoint Platform Private Cloud Edition (Anypoint Platform PCE) users.
+* `Login failure` actions are not logged if you are using SSO configured with LDAP or OIDC, which includes login failures to Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
 
 ====
 
