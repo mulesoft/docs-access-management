@@ -48,10 +48,10 @@ Apps that remove scopes do not need to be whitelisted again.
 Applications created by users in the same organization are marked as *internal apps* and do not need to be whitelisted manually.
 --
 
-== Master organization and business groups
+== Master Organization and Business Groups
 
 By default, connected apps are configured at the master organization level, not at the business group (sub-organization) levels.
 
-If a connected app is created to act on its own behalf(client credentials), after the scopes scopes are chosen, you could choose which master ogranization/Business Groups to enable it.
+When you create a connected app to act on its own behalf using client credentials, you can choose which master organization or business groups to enable it in after you choose scopes.
 
 A connected app that acts on behalf of a user receives its own access and permissions based on the scopes, organizations, and business groups to which the user has access.
