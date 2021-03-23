@@ -19,9 +19,9 @@ The following table contains examples of the URLs you need to supply, depending 
 | Token Introspection | {BASE URL}/introspect | {BASE URL}/introspect | {BASE URL}/introspect
 |===
 
-. Log in to Anypoint Platform using an account that has the organization administrator role.
-. In Anypoint Platform, click *Access Management*.
-. In the menu on the left, click *Client Providers*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Client Providers*.
 . Click *Add Client Provider*, and then select *OpenID Connect Dynamic Client Registration*.
 +
 The *Add OIDC client provider* page appears.
@@ -95,11 +95,14 @@ Once this is successfully configured, you can apply the OpenID Connect OAuth Tok
 [NOTE]
 For Okta, the Okta admin needs to assign the dynamically generated clients to a user or a group of users in order for them to receive access tokens by sending over the Client ID and Client Secret.
 
+[NOTE]
+When Anypoint Platform makes an HTTP call to the configured OIDC endpoints, the HTTP call times out if no response after 5 seconds. 
+
 == Display Grant Types in the API Portal
 
 If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider.
 
-If the *Issuer* field isn't configured or the provider's discovery endpoint is unavailable, by default the Anypoint Platfrom UI lists the following grant types when registering an API client application in an xref:exchange::index.adoc[Anypoint Exchange API portal]: 
+If the *Issuer* field isn't configured or the provider's discovery endpoint is unavailable, by default the Anypoint Platfrom UI lists the following grant types when registering an API client application in an xref:exchange::index.adoc[Anypoint Exchange API portal]:
 
 - Implicit
 - Authorization

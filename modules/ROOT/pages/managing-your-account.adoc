@@ -107,21 +107,21 @@ Your username must be at least three characters and contain only the following: 
 [NOTE]
 You cannot create a new account within an existing organization without an email invitation.
 
-== Sign in to Anypoint Platform
+== Log in to Anypoint Platform
 
-. Navigate to the Anypoint Platform signin screen.
+. Navigate to the Anypoint Platform login screen.
 . Enter your username and password.
 . Click *Sign in*.
 
 [NOTE]
-If you try to sign in and Anypoint Platform rejects your valid credentials, your organization might use an xref:access-management::external-identity.adoc[external identity provider] to initiate the sign-in process. Either navigate to your external identity provider's interface to sign in, or xref:access-management::managing-your-account.adoc#use-CustomDomainLogin[enter your organization's domain name] before reentering your credentials. 
+If you try to log in and Anypoint Platform rejects your valid credentials, your organization might use an xref:access-management::external-identity.adoc[external identity provider] to initiate the sign-in process. Either navigate to your external identity provider's interface to sign in, or xref:access-management::managing-your-account.adoc#use-CustomDomainLogin[enter your organization's domain name] before reentering your credentials.
 
 [[use-CustomDomainLogin]]
-== Sign in to Anypoint Platform Using Single Sign-on
+== Log in to Anypoint Platform Using Single Sign-on
 
 If your organization uses xref:access-management::external-identity.adoc[Single Sign-on], you must provide your organization's domain name as part of the sign-in process.
 
-. Navigate to the Anypoint Platform signin screen.
+. Navigate to the Anypoint Platform login screen.
 . Click *Use custom domain*.
 . Enter your organization's domain name.
 +
@@ -169,7 +169,8 @@ If you have a free trial account and want to migrate your user name to a new org
 
 == Update User Information
 
-. Log into Anypoint Platform.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
 . Click the circle icon in the upper right-hand corner.
 . Click *Profile*.
 
@@ -180,7 +181,11 @@ You can modify your contact information, change your password, and see a list of
 
 == Reset Your Password
 
-. Go to the Anypoint Platform sign in screen.
+When you reset your password, your new password must be between 8 and 64 characters in length with at least one uppercase letter, one lowercase letter, and one number. Your password must contain only ASCII-standard characters.
+Additionally, you cannot reuse any of your previous three passwords.
+
+
+. Navigate to the Anypoint Platform login screen.
 . Click the *Forgot your username or password* link.
 . In the *Forgot your credentials* form, enter your username. +
 A link to create a new password is emailed to you.
@@ -189,8 +194,7 @@ A link to create a new password is emailed to you.
 
 == Forgot User Name
 
-Go to the Anypoint Platform sign in screen.
-
+. Navigate to the Anypoint Platform login screen.
 . Click the *Forgot your username or password* link.
 . In the *Forgot your credentials* form, enter the email address you used for your Anypoint Platform account, then click *Request credentials*. +
 You receive an email from Anypoint Platform with a list of user names associated with your email address.

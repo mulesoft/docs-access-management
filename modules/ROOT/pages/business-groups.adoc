@@ -40,7 +40,7 @@ image::organization-20885.png[]
   * Select *Owner can create Business Groups* to allow the owner to create child business groups under this business group.
   * Select *Owner can create environments* to allow the owner to create environments within this business group.
   * You can assign some or all of the redistributable resources (vCores, VPCs, and so on) that your organization owns to an individual business group. This ensures that the resources are used by the CloudHub deployments that belong to the business group. You can assign the resources when you create the business group, or edit these settings later.
-  * *Enable CloudHub global deployment* 
+  * *Enable CloudHub global deployment*
   +
   This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the region you specified.
 * *Static IPs*
@@ -83,7 +83,7 @@ image::switch-suborg.png[switch+suborg]
 
 [NOTE]
 --
-When you sign into Anypoint Platform, you are returned to the business group where you were last active when you signed out of Anypoint Platform.
+When you log in to Anypoint Platform, you return to the business group where you were last active when you logged out of Anypoint Platform.
 --
 
 If you are not an organization administrator, you can view only the business groups that you have permissions to view. In the *Organization* tab, the tree of your organization displays only the business groups you are a member of.

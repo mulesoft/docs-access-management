@@ -15,10 +15,15 @@ Users belonging to the Organization Administrator role or the Audit Log Viewer r
 
 The audit log UI is embedded in Access Management.
 
-. Sign into Anypoint Platform and click *Access Management*. +
-You can also press the `Escape` key on your keyboard to view the Anypoint Platform navigation menu.
-. From the Access Management menu on the left, select *Audit Log*. +
-The Audit logs page displays the logs.
+include::partial$include-nav-steps-org-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Audit Logs*. +
+The *Audit Logs* page displays the logs. You can:
+
+* Download audit logs.
+* Set a time period for audit logs to display.
+* Filter audit logs by product, type, and actions.
+* Search audit logs by environment, object, and user.
 
 == Audit Log Contents
 
@@ -368,7 +373,7 @@ Properties: None
 |N/A
 |Create
 |Subaction: None +
-Properties: None
+Properties: Application
 |Delete application
 |Application
 |App ID
@@ -870,24 +875,17 @@ Properties: Error message
 |Logout
 |Subaction: None +
 Properties: None
-|Add role
-|User
-|UserID
-|N/A
-|Edit
-|Subaction: Add role +
-Properties: New role
-|Remove role
-|User
-|UserID
-|N/A
-|Edit
-|Subaction: Remove role +
-Properties: New role
 
 |===
 
-`Login` and `Logout` actions are logged only at the organization level. Additionally, `Login failure` actions are logged only against existing user accounts.
+[NOTE]
+====
+
+* `Login` and `Logout` actions are logged only at the organization level.
+* `Login failure` actions are logged only against existing user accounts.
+* `Login failure` actions are not logged if you are using Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+
+====
 
 === Roles
 
@@ -908,19 +906,23 @@ Properties: New role
 |Subaction: None +
 Properties: None
 |Edit role - add user
-|Role
-|Role
+|Object 1: Role +
+Object 2: User
+|Object 1: Role +
+Object 2: User
 |N/A
 |Edit
 |Subaction: Add user +
-Properties: New user
+Properties: Role, User
 |Edit role - remove user
-|Role
-|Role
+|Object 1: Role +
+Object 2: User
+|Object 1: Role +
+Object 2: User
 |N/A
 |Edit
 |Subaction: Remove user +
-Properties: New user
+Properties: Role, User
 |Edit role - change external group mapping
 |Role
 |Role
@@ -933,8 +935,8 @@ Properties: New mapping
 |Role
 |N/A
 |Delete
-|Subaction: None
-|propoerties : Role metadata
+|Subaction: None +
+Properties: Role metadata
 
 |===
 
@@ -1082,9 +1084,9 @@ Properties: New group name
 |Subaction: Edit owner +
 Properties: New owner userID
 |Edit business group entitlement
-|Organization
-|OrgID
-|Parent organization
+|Entitlement
+|EnvID
+|N/A
 |Edit
 |Subaction: Edit entitlement +
 Properties: Entitlement change
@@ -1129,6 +1131,10 @@ Properties: Environment metadata
 |Edit
 |Subaction: None +
 Properties: Environment name
+
+[NOTE]
+
+Environments that are created automatically when you create an organization or business group do not have audit log entries. As Anypoint Platform has evolved, the default environments created have also changed over time. Currently, `Sandbox` and `Design` are created automatically and do not have audit log entries.
 
 |===
 
@@ -1182,14 +1188,6 @@ Properties:
 * Target
 * Role
 
-|Request an asset file
-|Asset file
-|Asset ID and classifier
-|N/A
-|Download
-|Subaction: None +
-Properties: file metadata
-
 |Update an asset icon
 |Asset icon
 |Asset ID
@@ -1206,7 +1204,7 @@ Properties: Asset object
 |Subaction: None +
 Properties: Asset object
 
-|Create a managed tag
+|Create a managed tag (category)
 |Asset managed tag
 |Asset ID and tag ID
 |Asset
@@ -1214,7 +1212,7 @@ Properties: Asset object
 |Subaction: None +
 Properties: None
 
-|Delete a managed tag
+|Delete a managed tag (category)
 |Asset managed tag
 |Asset ID and tag ID
 |Asset
@@ -1598,7 +1596,8 @@ Properties: Application metadata
 |AppID
 |N/A
 |Start
-|
+|Subaction: None +
+Properties: Application metadata
 |Restart application
 |Application
 |AppID
@@ -1767,7 +1766,20 @@ Properties: LoadBalancer metadata
 |Create/modify/delete
 |Subaction: None +
 Properties: Alert
-
+|Create/modify/delete VPC
+|VPC
+|vpcID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: VPC metadata
+|Create/modify/delete VPN
+|VPN
+|vpnId
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: VPN metadata
 |===
 
 
@@ -1918,116 +1930,69 @@ Properties: Application metadata
 
 |===
 
-== To Query Audit Logging for Anypoint MQ
 
-https://anypoint.mulesoft.com/#/signin[Anypoint Platform] logs
-Anypoint MQ actions for creating and maintaining queues,
-exchanges, and client applications. These actions appear in the
-*Access Management* > *Audit Logging* service.
+== Anypoint MQ
 
-=== About Anypoint MQ Audit Logs
 
-The Audit Log screen with Anypoint MQ actions appears as follows:
-
-image::mq-audit-logs.png[]
-
-*Note:* After setting the *Products*, *Types*, or *Actions* filters, click *Apply filters*.
-
-You can also search by object name or user.
-
-=== About Actions
-
-These actions are tracked:
-
-[%header%autowidth.spread]
+[%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|Queues: |Exchanges: |Applications:
-|`Create queue` +
-`Delete queue` +
-`Modify queue` +
-`Purge queue` +
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create/modify/delete/purge queue
+|Queue
+|queueID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Queue metadata
+|Create/modify/delete exchange
+|Exchange
+|exchangeID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Exchange metadata
+|Create/delete exchange binding
+|Binding
+|bindingID
+|N/A
+|Create/delete
+|Subaction: None +
+Properties: Exchange metadata
 
-|`Create exchange` +
-`Delete exchange` +
-`Modify exchange` +
-`Create binding` +
-`Delete binding`
-
-|`Create client` +
-`Delete client` +
-`Regenerate client`
-|===
-
-*Notes:*
-
-* Changing attributes of a queue causes the `Modify queue` action.
-* A queue is distinctly identified as a FIFO queue only when creating a FIFO queue.
-* Sending, receiving, or browsing messages do not count as auditable actions.
-* Audit logging does not record failed Anypoint MQ operations as failed in the audit logs.
-
-For each action, you can download a payload file (`payload.txt`) to your computer
-that provides JSON-formatted information describing all MQ settings.
-
-=== About Payloads
-
-A payload is JSON-formatted text that lists all MQ settings that occur when
-an action is audited. When you click the blue payload button, Anypoint
-Platform downloads the `payload.txt` to your computer.
-
-The following example shows a formatted version of the
-contents of `payload.txt` after creating a queue:
-
-[source,json,linenums]
-----
-{
-	"organizationId":"<organization_ID>",
-	"environmentId":"<environment_ID>",
-	"objectName":"MyQ",
-	"userName":"MyUserName",
-	"objectId":"MyQ",
-	"regionId":"us-west-2",
-	"defaultTtlMillis":604800000,
-	"defaultLockTtlMillis":120000,
-	"encrypted":false,
-	"deadLetterQueueId":"DLQ",
-	"maxDeliveries":10,
-	"fifo":true
-}
-----
-
-The possible fields in `payload.txt` are:
-
-[%header,cols="30s,70a"]
-|===
-|Field |Description
-|organizationId |Organization ID for the current Anypoint Platform account.
-You can use the organization ID to access xref:mq::mq-apis.adoc[Anypoint MQ REST APIs].
-|environmentId |Environment ID for the current Anypoint Platform account.
-You can use the environment ID to access xref:mq::mq-apis.adoc[Anypoint MQ REST APIs].
-|objectName |Name of the queue, exchange, or client application.
-|UserName |Username for the Anypoint Platform account.
-|objectId |Name of the queue, exchange, or client application. (Same value as objectName.)
-|regionId |Region location where you process your Anypoint MQ connections.
-|defaultTtlMillis |Default time to live in milliseconds how long unprocessed messages persist before being deleted.
-|defaultLockTtlMillis |Default lock time to live in milliseconds for the queue or exchange you create.
-The duration in milliseconds that a message is unavailable to other applications before being put back into the queue.
-|encrypted |If the queue or message exchange is encrypted. Anypoint MQ uses PBE
-with MD5 and triple DES to encrypt messages.
-|deadLetterQueueId |The name of the dead letter queue to which the current object is associated.
-|maxDeliveries |Indicates how many attempts Anypoint MQ tries to deliver messages in the queue before rerouting the message to the dead letter queue.
-|fifo |Indicates that this is a xref:mq::mq-queues.adoc#fifoqueues[FIFO] queue.
-*Note:* This field is only set to `true` when you create a FIFO queue.
-Any subsequent changes to the FIFO queue causes the `fifo` field to be set to `null`.
+|Create/delete/regenerate client
+|Client
+|clientID
+|N/A
+|Create/delete/regenerate
+|Subaction: None +
+Properties: Client metadata
 |===
 
-=== About Sample Use Cases
+== Object Store v2
 
-A few of the reasons you may want to use Audit Logs:
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create/modify/delete store
+|Store
+|storeID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Store metadata
+|===
 
-* Determine all MQ actions of a user.
-* Determine all MQ actions to an object and by whom.
-
-=== About Audit Log REST API Access
+== About Audit Log REST API Access
 
 You can access the
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API and its
@@ -2052,4 +2017,5 @@ curl 'https://anypoint.mulesoft.com/audit/v2/organizations/<organization_id>/que
 
 == See Also
 
-* You can also access Audit Logging data through the Anypoint Platform’s https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api[Audit Logging Query API].
+* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api[Audit Logging Query API]
+* xref:mq::mq-audit-logs.adoc[Anypoint MQ Audit Logs]

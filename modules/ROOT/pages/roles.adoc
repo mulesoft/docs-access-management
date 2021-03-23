@@ -19,11 +19,9 @@ image::switch-suborg.png[]
 
 To access the *Roles* menu in Access Management:
 
-. Sign into your Anypoint Platform account as a user with the Organization Administrators role.
-. Select the *Access Management* option from the main page, or click the _menu_ button in the top-left corner.
-+
-image::anypoint-platform-nav-menu.png[]
-. In the Access Management page, click *Roles*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 +
 image::roles-a3471.png[]
 
@@ -121,7 +119,9 @@ To control access for a single private API, don't assign the Exchange Viewers ro
 
 To add a user to a role, the user must belong to the same business group as the role.
 
-. Sign in to Access Management, then click *Roles*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the default role.
 +
 Default roles do not have a radial button next to them.
@@ -146,7 +146,9 @@ Product permissions are specific to a single environment. If you have multiple e
 
 === Create a Custom Role
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click *Add role*.
 . Enter a *Name* and *Description* for your custom role. +
 Your custom role now appears in your list of roles.
@@ -161,7 +163,9 @@ When editing role names and descriptions, use the 'Enter' key to save changes. C
 
 After creating a custom role, you can assign users to the role.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to add users.
 . Click the *Users* tab, then enter a username or email in the search field.
 . Select the user, then click the *+* icon.
@@ -170,7 +174,9 @@ After creating a custom role, you can assign users to the role.
 
 After creating a custom role, you can assign permissions to the role. If these environments belong to a business group, they are available only when creating a role in that same business group.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to add permission scopes.
 . Click the *Permissions* tab, then select one of the following tabs:
 +
@@ -184,7 +190,7 @@ After creating a custom role, you can assign permissions to the role. If these e
 * Secrets Manger
 * Tokenization
 +
-Depending on your permissions you may not see all of these options.
+Depending on your permissions, you might not see all of these options.
 
 . Click the *Permissions* drop-down menu, then select the permissions you want to assign to the custom role.
 +
@@ -196,7 +202,9 @@ The list of available permissions is different for each application.
 
 After creating a custom role, grant the Design Center Developer permission scope to the custom role to enable access to Design Center.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to add users.
 . Click *Permissions*, then click *Design Center*.
 +
@@ -212,7 +220,9 @@ image::design-center-permissions.png[Adding permissions to Design Center]
 
 You can associate an API to a custom role. This enables you to create roles that give users access to a specific API.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
@@ -230,7 +240,9 @@ Select *All* to enable access to all versions of this API.
 
 You can associate environment permissions to the custom role. This enables you to create roles that give users different permissions over environments.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
