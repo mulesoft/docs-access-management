@@ -39,7 +39,7 @@ image::environments-85dc3.png[]
 
 [NOTE]
 * Depending on your CloudHub subscription, you may have restrictions on the number and type of environments you can create.
-* If an existing name is used to create a new environment, the newly created evironment name will have a "-<n>" appended to it, where the <n> is an incremental number 
+* If you create a new environment using the name of an existing environment, the newly created environment name has `-<n>` appended to it, where `<n>` is an incremental number.
 
 == To Modify or Delete an Existing Environment
 
