@@ -15,7 +15,7 @@ Users belonging to the Organization Administrator role or the Audit Log Viewer r
 
 The audit log UI is embedded in Access Management.
 
-include::partial$include-nav-steps-org-no-permissions.adoc[]
+include::partial$include-nav-steps-no-permissions.adoc[]
 
 . In the Access Management navigation menu, click *Audit Logs*. +
 The *Audit Logs* page displays the logs. You can:
