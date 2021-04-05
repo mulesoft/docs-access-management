@@ -5,14 +5,7 @@ endif::[]
 
 // Includes oidc-dynamic-registration.patch
 
-MuleSoft verifies support in Anypoint Platform for Salesforce, Okta, and OpenAM v14 Dynamic Client Registration.
-
-[NOTE]
-====
-* Updates of clients created through this integration are not currently supported. 
-* Deletion of clients created through this integration is supported with the limitation that the client is removed from Anypoint Platform but will still exist in the OpenID Connect Authorization Server and API policies will still consider them valid until the cached token expires. 
-* To enable this functionality you must opt-in by selecting the checkbox *Enable client deletion in Anypoint* under the *Advanced* settings link.
-====
+MuleSoft supports client management by identity providers that implement the OpenID Connect Dynamic Client Registration open standard.  MuleSoft explicitly verifies support in Anypoint Platform for Salesforce, Okta, and OpenAM v14 Dynamic Client Registration.
 
 The following table contains examples of the URLs you need to supply, depending on your provider, during registration.
 
@@ -26,20 +19,18 @@ The following table contains examples of the URLs you need to supply, depending 
 | Token Introspection | {BASE URL}/introspect | {BASE URL}/introspect | {BASE URL}/introspect
 |===
 
-. Sign into the master organization in Anypoint Platform with the *Organization Administrator* role.
-. In Anypoint Platform, click *Access Management*. 
-. In the menu on the left, click *External Identity*.
-. In the drop-down, select *Client Management > OpenID Connect Dynamic Client Registration*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Client Providers*.
+. Click *Add Client Provider*, and then select *OpenID Connect Dynamic Client Registration*.
 +
-image::select-openid-client-mgmt.png[height=310,width=452]
+The *Add OIDC client provider* page appears.
 +
-The *External Identity* page appears.
-+
-. In *Client Management*, after obtaining values from your identity provider’s configuration, fill in the following required fields in each section:
+. After obtaining values from your identity provider’s configuration, complete the following required fields in each section:
 +
 * *Dynamic Client Registration*
  ** *Issuer*: URL that the OpenID provider asserts is its trusted issuer.
- ** *Client Registration URL*: The URL to dynamically register client applications as a client application for your identity provider. 
+ ** *Client Registration URL*: The URL to dynamically register client applications as a client application for your identity provider.
  ** (Optional) Click *Advanced settings* to add an *Authorization Header* for dynamic client registration requests. This header is required if the provider restricts registration requests to authorized clients. +
   *** For Okta, this value is `SSWS ${api_token}`, where `api_token` is an API token created through Okta.
   *** For ForgeRock, this value is `Bearer ${api_token}`, where `api_token` is an API token created through ForgeRock.
@@ -48,13 +39,13 @@ The *External Identity* page appears.
   *** *Disable server certificate validation*: Disables server certificate validation if your OpenID client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
   *** *Enable client deletion in Anypoint Platform*: Enables deletion of clients created with this integration.
   *** *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`. +
-  
+
    **** The `Authorization:` header is included as part of the request only if the `Authorization Header` under *Advanced settings* is configured.
    **** The `client_id` request parameter that is passed is the same as the `client_id` passed in the `PUT` request payload.
    **** The `token_endpoint_auth_method` passed in the payload is always `client_secret_basic`.
-   **** Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client management*. 
+   **** Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client Provider*.
    +
-This is an example of the payload for a `PUT` (update) request: 
+This is an example of the payload for a PUT (update) request:
 +
 ----
 PUT /oauth2/connect/register/{{client_id}}
@@ -78,7 +69,7 @@ Authorization: Bearer access-token
 `client_name` in the request maps to `name` on the inbound side. +
 The authorization method depends on the grant type. For example, if the grant type is `implicit`, the `id_token` and `token` are returned.
 +
-This is an example of the `DELETE` request header: 
+This is an example of the DELETE request header:
 +
 ----
 DELETE /oauth2/connect/register/{{client_id}}
@@ -88,30 +79,30 @@ Authorization: Bearer access-token
 +
 [IMPORTANT]
 Neither the `PUT` nor the `DELETE` are expected to work if the call is used directly against an IDP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
-* *Token Inspection Client*
+* *Token Introspection Client*
  ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
   *** For ForgeRock, this value should be a "Confidential" client.
   *** For Salesforce, this value should be a "Confidential" client.
- ** *Client Secret*: The client secret that corresponds to the client ID. 
+ ** *Client Secret*: The client secret that corresponds to the client ID.
 * *OpenID Connect Authorization URLs*
  ** *Authorize URL*: The URL where the user authenticates and grants OpenID Connect client applications access to the user's identity.
  ** *Token URL*: The URL that provides the user’s identity, encoded in a secure JSON Web Token.
 . Click *Save*.
-. Sign out and navigate to your organization’s SSO URL, for example:
-+
-`+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
-+
-. Sign in through your identity provider to test the configuration.
 
 Once this is successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IDP that acts as a token provider.
 
 [NOTE]
 For Okta, the Okta admin needs to assign the dynamically generated clients to a user or a group of users in order for them to receive access tokens by sending over the Client ID and Client Secret.
 
-== Grant types
+[NOTE]
+When Anypoint Platform makes an HTTP call to the configured OIDC endpoints, the HTTP call times out if no response after 5 seconds. 
 
-If you have configured an OpenID Connect provider for client management, Anypoint Platform supports the following OAuth grant types by default when registering an API client application in the API portal:
+== Display Grant Types in the API Portal
+
+If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider.
+
+If the *Issuer* field isn't configured or the provider's discovery endpoint is unavailable, by default the Anypoint Platfrom UI lists the following grant types when registering an API client application in an xref:exchange::index.adoc[Anypoint Exchange API portal]:
 
 - Implicit
 - Authorization
@@ -119,8 +110,6 @@ If you have configured an OpenID Connect provider for client management, Anypoin
 
 [NOTE]
 The Refresh token can be selected only if the authorization grant type is also selected.
-
-In addition to these scopes, if you have configured the Issuer field while setting up the OIDC Dynamic Client registration provider, Anypoint platform auto-populates the Anypoint Platform UI with all grant types supported by the provider. This includes grant types such as client credentials, password, etc.
 
 
 == See Also

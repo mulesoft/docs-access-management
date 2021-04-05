@@ -14,7 +14,7 @@ The Connected Apps feature supports OAuth 2.0 and OpenID Connect. As such, devel
 To find out what specific OpenID Connect capabilities are supported, refer to the information provided in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint].
 All scopes in the endpoint map directly to permissions available in Anypoint Platform, with some exceptions noted in the *Endpoint Scopes* section.
 
-To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to sign in using the *Sign in with Anypoint Platform* option.
+To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to log in using the *Sign in with Anypoint Platform* option.
 
 Developers who have the organization administrator role can create apps and specify access scopes in Anypoint Platform.
 
@@ -22,7 +22,7 @@ Developers who have the organization administrator role can create apps and spec
 
 When a developer creates an app, the app requests access to user data.
 When an end user receives such a request and authorizes the app to access their data, the app receives an access token, which allows the app to call Anypoint Platform on the user’s behalf.
-The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials.
+The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials. A token is valid for up to 90 minutes.
 
 == Endpoint Scopes
 
@@ -55,13 +55,13 @@ grant_type=refresh_token&client_id=<your_client_id>&client_secret=<your_client_s
 
 Assuming the token request is fulfilled, the refresh token received in the endpoint response is similar to a regular token response, but it might not contain an `id_token`.
 
-== Sign in with Anypoint Platform Widget
+== Log in with Anypoint Platform Widget
 
 For seamless implementation, developers can integrate a button into the front end of their apps with a pre-built template and set of components. They can add this widget using the following code:
 
 ----
-<anypoint-signin scopes="full" 
-redirecturi="...." 
+<anypoint-signin scopes="full"
+redirecturi="...."
 clientid="….">
 </anypoint-signin>
 ----
@@ -87,3 +87,12 @@ To create your app, follow these steps:
 . Click *Create App*.
 . Create your app by completing the fields in the *Create App* page.
 . Click *Save*.
+
+[[application-whitelist-dev]]
+== Application Whitelist
+
+Organization Administrators may enable a whitelist to control which apps can access their users' data.
+When your app is whitelisted, only the set of scopes associated with the app are reviewed and approved by the administrator.
+If you add new scopes to your app at a later date, you are unable to request those scopes from users until the admin re-approves your app.
+Existing authorizations and new authorizations using the already-whitelisted set of scopes continue to work.
+For more information, see xref:connected-apps-org-admin.adoc#application-whitelist-admin[connected apps for administrators].

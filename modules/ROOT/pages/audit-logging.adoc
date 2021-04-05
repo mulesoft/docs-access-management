@@ -11,14 +11,19 @@ Audit logs have a retention period of six years. Download your logs periodically
 
 == Access Audit Logging
 
-Users belonging to the *Organization Administration* role or the *Audit Log Viewer* role on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
+Users belonging to the Organization Administrator role or the Audit Log Viewer role on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
 
-The audit log UI is embedded in Access Management. If you are not an *Organization Administrator*, but you have the *Audit Log Viewer* role, you can only see the audit log UI under Access Management.
+The audit log UI is embedded in Access Management.
 
-. Sign into Anypoint Platform and click *Access Management*. +
-You can also press the `Escape` key on your keyboard to view the Anypoint Platform navigation menu.
-. From the Access Management menu on the left, select *Audit Log*. +
-The Audit logs page displays the logs.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Audit Logs*. +
+The *Audit Logs* page displays the logs. You can:
+
+* Download audit logs.
+* Set a time period for audit logs to display.
+* Filter audit logs by product, type, and actions.
+* Search audit logs by environment, object, and user.
 
 == Audit Log Contents
 
@@ -30,8 +35,8 @@ Each log entry has a set of properties that provides information about the activ
 * *Product*: The product where the object resides, for example, `Access Management`
 * *Type*: The type of the object on which the action is performed, for example, `Organization`
 * *Action*: The action associated with the object, for example, `Create`
-* *Object*: The name of the Object, for example, `foo`
-* *User*: The User who performed the action, for example, `johndoe`
+* *Object*: The name of the object, for example, `foo`
+* *User*: The user who performed the action, for example, `johndoe`
 +
 [NOTE]
 --
@@ -51,8 +56,8 @@ The following is a list of actions per product and object type that Anypoint Pla
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -61,50 +66,50 @@ The following is a list of actions per product and object type that Anypoint Pla
 |Set T&C
 |T&C
 |T&C
-|n/a
+|N/A
 |Create
-|subaction : none
-properties : New T&Cs
+|Subaction: None +
+Properties: New T&Cs
 
 |Modify T&C
 |T&C
 |T&C
-|n/a
+|N/A
 |Edit
-|subaction : none
-properties : New T&Cs
+|Subaction: None +
+Properties: New T&Cs
 
 |Set org custom theme
 |Portal theme
-|Org Name
-|n/a
+|Org name
+|N/A
 |Create
-|subaction : none
-properties : theme data
+|Subaction: None +
+Properties: Theme data
 
 |Edit org custom theme
 |Bus. Group
 |Org Name
-|n/a
+|N/A
 |Edit
-|subaction : none
-properties : theme data
+|Subaction: None +
+Properties: Theme data
 
 |Add custom policy
 |Policy
 |PolicyID
-|n/a
+|N/A
 |Create
-|subaction : none
-properties : none
+|Subaction: None +
+Properties: None
 
 |Delete custom policy
 |Policy
 |PolicyID
-|n/a
+|N/A
 |Delete
-|subaction : none
-properties : policy data
+|Subaction: None +
+Properties: Policy data
 |===
 
 === APIs
@@ -113,8 +118,8 @@ properties : policy data
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -123,31 +128,45 @@ properties : policy data
 |Create API
 |API
 |API ID
-|n/a
+|N/A
 |Create
-|subaction : none
-properties : none
+|Subaction: None +
+Properties: None
 |Delete API
 |API
 |API ID
-|n/a
+|N/A
 |Delete
-|subaction : none
-properties : API object
+|Subaction: None +
+Properties: None
 |Import API
 |API
 |API ID
-|n/a
+|N/A
 |Create
-|subaction : Import API
-properties : none
-|Change name of API
+|Subaction: Import API +
+Properties: None
+|Update label of API
 |API
 |API ID
-|n/a
+|N/A
 |Edit
-|subaction : none
-properties : New name
+|Subaction: None +
+Properties: API object
+|Update consumer endpoint of API
+|API
+|API ID
+|N/A
+|Edit - update endpoint
+|Subaction: None +
+Properties: API object
+|Update endpoint URI of API
+|API
+|API ID
+|N/A
+|Edit - edit endpoint URI
+|Subaction: None +
+Properties: API object
 |===
 
 
@@ -156,177 +175,184 @@ properties : New name
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
 |Create API version
 |API version
-|version ID
+|Version ID
 |API ID
 |Create
-|subaction : none
-properties : none
+|Subaction: None +
+Properties: None
 |Delete API version
 |API version
-|version ID
+|Version ID
 |API ID
 |Delete
-|subaction : none
-properties : API version object
+|Subaction: None +
+Properties: None
 |Import API
 |API version
-|version ID
+|Version ID
 |API ID
 |Create
-|subaction : Import API version
-properties : none
+|Subaction: Import API version +
+Properties: None
 |Edit name of API version
 |API version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Edit name
-properties : New name
+|Subaction: Edit name +
+Properties: New name
 |Edit description of API version
 |API version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Edit description
-properties : new description
+|Subaction: Edit description +
+Properties: New description
 |Edit API URL of API version
 |API version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Edit API URL
-properties : new API URL
+|Subaction: Edit API URL +
+Properties: New API URL
 |Add tag
 |API Version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Add tag
-properties : new tag
+|Subaction: Add tag +
+Properties: New tag
 |Remove tag
 |API Version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Remove tag
-properties : deleted tag
+|Subaction: Remove tag +
+Properties: Deleted tag
 |Deprecate API
 |API version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Deprecate API
-properties : none
+|Subaction: Deprecate API +
+Properties: None
 |Set T&Cs
 |API Version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Set terms & conditions
-properties : T&Cs
+|Subaction: Set terms & conditions +
+Properties: T&Cs
 |Create RAML
 |API Version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Create RAML
-properties : none
+|Subaction: Create RAML +
+Properties: None
 |Modify RAML
 |API Version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Edit RAML
-properties : updated RAML files
+|Subaction: Edit RAML +
+Properties: Updated RAML files
 |Create endpoint
 |API version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : create endpoint
-properties : new endpoint
+|Subaction: Create endpoint +
+Properties: New endpoint
 
 |Update existing endpoint
 |API version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Update endpoint
-properties : create endpoint
+|Subaction: Update endpoint +
+Properties: Create endpoint
 
 |Deploy proxy
 |API Version
-|version ID
+|Version ID
 |API ID
 |Deploy
-|subaction : none
-properties : deploy location (app name & server name for hybrid)
+|Subaction: None +
+Properties: Deploy location (app name & server name for hybrid)
 
 |Update deployed proxy
 |API version
-|version ID
+|Version ID
 |API ID
 |Edit
-|subaction : Configure endpoint
-properties : new endpoint
+|Subaction: Configure endpoint +
+Properties: New endpoint
 
 |Redeploy proxy
 |API Version
-|version ID
+|Version ID
 |API ID
 |Deploy
-|subaction : none
-properties : deploy location (app name & server name for hybrid)
+|Subaction: None +
+Properties: Deploy location (app name & server name for hybrid)
 |Create SLA tier
-|SLA tier
+|Tier
 |SLA ID
-|version ID
+|Version ID
 |Create
-|subaction : none
-properties : SLA settings
+|Subaction: None +
+Properties: SLA settings
 |Modify SLA tier
-|SLA tier
+|Tier
 |SLA ID
-|version ID
+|Version ID
 |Edit
-|subaction : none
-properties : SLA settings
+|Subaction: None +
+Properties: SLA settings
 |Deprecate SLA tier
-|SLA tier
+|Tier
 |SLA ID
-|version ID
+|Version ID
 |Edit
-|subaction : Deprecate SLA tier
-properties : SLA settings
+|Subaction: Deprecate SLA tier +
+Properties: SLA settings
 |Delete SLA tier
-|SLA tier
+|Tier
 |SLA ID
-|version ID
+|Version ID
 |Delete
-|subaction : none
-properties : SLA settings
+|Subaction: None +
+Properties: None
 |Apply policy
-|API Policy
+|API policy
 |Policy ID
-|version ID
+|Version ID
 |Create
-|subaction : none
-properties : policy settings
-|Remove policy
-|API Policy
+|Subaction: None +
+Properties: Policy settings
+|Edit policy
+|API policy
 |Policy ID
-|version ID
+|Version ID
+|Edit
+|Subaction: None +
+Properties: Policy settings
+|Remove policy
+|API policy
+|Policy ID
+|Version ID
 |Delete
-|subaction : none
-properties : policy settings
+|Subaction: None +
+Properties: None
 
 |===
 
@@ -335,235 +361,234 @@ properties : policy settings
 
 [%header,cols="25a,15a,20a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
-|Create Application
+|Create application
 |Application
-|app ID
-|n/a
+|App ID
+|N/A
 |Create
-|subaction : none
-properties : none
-|Delete Application
+|Subaction: None +
+Properties: Application
+|Delete application
 |Application
-|app ID
-|n/a
+|App ID
+|N/A
 |Delete
-|subaction : none
-properties : application object
+|Subaction: None +
+Properties: None
 |Reset client secret
 |Application
-|app ID
-|n/a
-|Edit
-|subaction : Reset client secret
-properties : none
+|App ID
+|N/A
+|Edit - reset client secret
+|Subaction: Reset client secret +
+Properties: None
+|Request access
+|Contract
+|Object 1: App ID +
+Object 2: API version ID
+|N/A
+|Create
+|Subaction: None +
+Properties: SLA tier
 |Request tier change
-|Application
-|Obj 1: app ID
-Obj 2: API version ID
-|n/a
-|Edit
-|subaction : Request tier change
-properties : New tier
+|Contract
+|Object 1: App ID +
+Object 2: API version ID
+|N/A
+|Edit - request tier change
+|Subaction: Request tier change +
+Properties: New tier
+|Request tier change approval
+|Contract
+|Object 1: App ID +
+Object 2: API version ID
+|N/A
+|Edit - request tier change approval
+|Subaction: Request tier change approval +
+Properties: New tier
 |Approve application
-|Application
-|Obj 1: app ID
-Obj 2: API version ID
-|n/a
-|Contract change
-|subaction : Contract approval
-properties : SLA tier
+|Contract
+|Object 1: App ID +
+Object 2: API version ID
+|N/A
+|Edit - contract approval
+|Subaction: Contract approval +
+Properties: SLA tier
 |Revoke application
-|Application
-|Obj 1: app ID
-Obj 2: API version ID
-|n/a
-|Contract change
-|subaction : Contract revoked
-properties : SLA tier
+|Contract
+|Object 1: App ID +
+Object 2: API version ID
+|N/A
+|Edit - contract revoke
+|Subaction: Contract revoked +
+Properties: SLA tier
 |Restore application
-|Application
-|Obj 1: app ID
-Obj 2: API version ID
-|n/a
-|Contract change
-|subaction : Contract restored
-properties : SLA tier
-|Modify application tier
-|Application
-|Obj 1: app ID
-Obj 2: API version ID
-|n/a
-|Contract change
-|subaction : Contract changed
-properties : new SLA tier
+|Contract
+|Object 1: App ID +
+Object 2: API version ID
+|N/A
+|Edit - contract restore
+|Subaction: Contract restored +
+Properties: SLA tier
 
 |===
 
-=== API Designer APIs
+The `Create Application` and `Delete Application` actions are logged at the master organization level.
+
+== API Designer APIs
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
 
-|Create Project
+|Create project
 |Project
 |Project ID
 |N/A
-|Create Project
+|Create project
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * projectName
 
-|Delete Project
+|Delete project
 |Project
 |Project ID
 |N/A
-|Delete Project
+|Delete project
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * projectName
 
-|Delete Files
+|Delete files
 |Files
 |Project ID
 |N/A
-|Delete Files
+|Delete files
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * projectName
 
-|Rename Project
+|Rename project
 |Project
 |Project ID
 |N/A
-|Rename Project
+|Rename project
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * newProjectName
 
-|Clean Branch
+|Clean branch
 |Project
 |Project ID
 |N/A
-|Clean Branch
+|Clean branch
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * branchName
 
-|Create Branch
+|Create branch
 |Project
 |Project ID
 |N/A
-|Create Branch
+|Create branch
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * branchName
 
-|Delete Branch
+|Delete branch
 |Project
 |Project ID
 |N/A
-|Delete Branch
+|Delete branch
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * branchName
 
-|Save Branch
+|Save branch
 |Project
 |Project ID
 |N/A
-|Save Branch
+|Save branch
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * branchName
 
-|Delete File
+|Delete file
 |Project
 |Project ID
 |N/A
 |Delete file
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * File Path
 
-|Move File
+|Move file
 |Project
 |Project ID
 |N/A
 |Move file
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * targetFile
 
-|Import Project
+|Import project
 |Project
 |Project ID
 |N/A
-|Import Project
+|Import project
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -576,8 +601,7 @@ Properties:
 |N/A
 |Publish to Exchange
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -590,50 +614,46 @@ Properties:
 |N/A
 |Publish to API Platform
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * projectName
 
-|Add Dependencies
+|Add dependencies
 |Project
 |Project ID
 |N/A
 |Add dependencies
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * dependencies
 
-|Remove Dependencies
+|Remove dependencies
 |Project
 |Project ID
 |N/A
-|Remove Dependencies
+|Remove dependencies
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
 * userID
 * dependencies
 
-|Change Dependencies
+|Change dependencies
 |Project
 |Project ID
 |N/A
-|Change Dependencies
+|Change dependencies
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -641,14 +661,13 @@ Properties:
 * addDependencies
 * removeDependencies
 
-|Reload Dependencies
+|Reload dependencies
 |Project
 |Project ID
 |N/A
-|Reload Dependencies
+|Reload dependencies
 |Subaction:
-
-None
+None +
 Properties:
 
 * orgID
@@ -660,142 +679,135 @@ Properties:
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
 
-|Create Link
+|Create link
 |Link
 |Link ID
 |N/A
 |Create
 |Subaction:
+Create Link +
+Properties: Link metadata
 
-Create Link
-
-Properties:
-
-Link metadata
-
-|Delete Link
+|Delete link
 |Link
 |Link ID
 |N/A
 |Delete
 |Subaction:
-
-Delete Link
-
-Properties:
-
-Link metadata
+Delete Link +
+Properties: Link metadata
 |===
 
 === Portals
 
+The following actions apply to API Manager v1.x portals.
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
 |Create portal
 |Portal
-|Obj 1: Portal ID
-Obj 2: Api Version ID
-|n/a
+|Object 1: Portal ID +
+Object 2: API Version ID
+|N/A
 |Create
-|subaction : none
-properties : none
+|Subaction: None +
+Properties: None
 |Modify portal association
 |Portal
-|Obj 1: Portal ID
-Obj 2: API version ID
-|n/a
+|Object 1: Portal ID +
+Object 2: API version ID
+|N/A
 |Edit
-|subaction : Change portal association
-properties : none
+|Subaction: Change portal association +
+Properties: None
 |Delete portal
 |Portal
 |Portal ID
-|n/a
+|N/A
 |Delete
-|subaction : none
-properties : none
+|Subaction: None +
+Properties: None
 |Add portal page
 |Portal
 |Page ID
 |Portal ID
 |Edit
-|subaction : Add portal page
-properties : page content
+|Subaction: Add portal page +
+Properties: Page content
 |Make portal page visible
 |Portal
 |Page ID
 |Portal ID
 |Edit
-|subaction : Make page visible
-properties : page content
+|Subaction: Make page visible +
+Properties: Page content
 |Delete portal page
 |Portal
 |Page ID
 |Portal ID
 |Delete
-|subaction : Delete portal page
-properties : page content
+|Subaction: Delete portal page +
+Properties: Page content
 |Edit portal page
 |Portal
 |Page ID
 |Portal ID
 |Edit
-|subaction : Edit portal page
-properties : page content
+|Subaction: Edit portal page +
+Properties: Page content
 |Hide portal page
 |Portal
 |Page ID
 |Portal ID
 |Edit
-|subaction : Hide portal page
-properties : page content
+|Subaction: Hide portal page +
+Properties: Page content
 |Set portal theme
 |Portal
 |Portal ID
-|n/a
+|N/A
 |Edit
-|subaction : Set portal theme
-properties : theme settings
+|Subaction: Set portal theme +
+Properties: Theme settings
 |Modify portal theme
 |Portal
 |Portal ID
-|n/a
+|N/A
 |Edit
-|subaction : Modify portal theme
-properties : theme settings
+|Subaction: Modify portal theme +
+Properties: Theme settings
 |Modify portal security
 |Portal
 |Portal ID
-|n/a
+|N/A
 |Edit
-|subaction : Set security
-properties : public / private state
+|Subaction: Set security +
+Properties: Public / private state
 
 |===
 
-=== Access Management
+== Access Management
 
-==== Users
+=== Users
 
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -803,90 +815,85 @@ properties : public / private state
 |Signup / Organization creation
 |User
 |UserID
-|n/a
+|N/A
 |Create
-|subaction : none
-properties : organization ID
+|Subaction: None +
+Properties: Organization ID
 |User creation (w/out creating an org)
 |User
 |UserID
-|n/a
+|N/A
 |Create
-|subaction: none
-properties: user id
+|Subaction: None +
+Properties: UserID
 |Password reset requested
 |User
 |UserID
-|n/a
+|N/A
 |Edit
-|subaction : password reset
-properties : none
+|Subaction: Password reset +
+Properties: None
 |Password changed
 |User
 |UserID
-|n/a
+|N/A
 |Edit
-|subaction : password changed
-properties : none
+|Subaction: Password changed +
+Properties: None
 |Delete user
 |User
 |UserID
-|n/a
+|N/A
 |Delete
-|subaction : none
-properties: User object
+|Subaction: None +
+Properties: User object
 |Disable user
 |User
 |UserID
-|n/a
+|N/A
 |Edit
-|subaction : disable user
-properties : none
+|Subaction: Disable user +
+Properties: None
 |Login success
 |User
 |UserID
-|n/a
+|N/A
 |Login
-|subaction: none
-properties: none
+|Subaction: None +
+Properties: None
 |Login failure
 |User
 |UserID
-|n/a
+|N/A
 |Login
-|subaction: none
-properties: none
+|Subaction: Failure +
+Properties: Error message
 |Logout
 |User
 |UserID
-|n/a
+|N/A
 |Logout
-|subaction : none
-properties: User object
-|Add role
-|User
-|UserID
-|n/a
-|Edit
-|subaction : Add role
-properties : new role
-|Remove role
-|User
-|UserID
-|n/a
-|Edit
-|subaction : Remove role
-properties : new role
+|Subaction: None +
+Properties: None
 
 |===
 
-==== Roles
+[NOTE]
+====
+
+* `Login` and `Logout` actions are logged only at the organization level.
+* `Login failure` actions are logged only against existing user accounts.
+* `Login failure` actions are not logged if you are using SSO configured with LDAP or OIDC, which includes login failures to Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+
+====
+
+=== Roles
 
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -894,86 +901,155 @@ properties : new role
 |Create role
 |Role
 |Role
-|n/a
+|N/A
 |Create
-|subaction: none
-properties: none
+|Subaction: None +
+Properties: None
 |Edit role - add user
-|Role
-|Role
-|n/a
+|Object 1: Role +
+Object 2: User
+|Object 1: Role +
+Object 2: User
+|N/A
 |Edit
-|subaction : Add user
-properties : new user
+|Subaction: Add user +
+Properties: Role, User
 |Edit role - remove user
-|Role
-|Role
-|n/a
+|Object 1: Role +
+Object 2: User
+|Object 1: Role +
+Object 2: User
+|N/A
 |Edit
-|subaction : Remove user
-properties : new user
+|Subaction: Remove user +
+Properties: Role, User
 |Edit role - change external group mapping
 |Role
 |Role
-|n/a
+|N/A
 |Edit
-|subaction : Edit role mapping
-properties : new mapping
+|Subaction: Edit role mapping +
+Properties: New mapping
 |Delete role
 |Role
 |Role
-|n/a
+|N/A
 |Delete
-|subaction : none
-|propoerties : Role metadata
+|Subaction: None +
+Properties: Role metadata
 
 |===
 
-==== Permissions
+=== Permissions
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
-|User Permission change
+|User permission change
 |Permission
-|O1: User
-O2: Resource
-|P1: n/a
-P2: resource parent if applicable
+|Object 1: User +
+Object 2: Resource
+|Parent 1: N/A +
+Parent 2: Resource parent if applicable
 |Permissions change
-|subaction : none
-properties : new permission
+|Subaction: None +
+Properties: New permission
 |Role permission change
 |Permission
-|O1: Role
-O2: Resource
-|P1: n/a
-P2: resource parent if applicable
+|Object 1: Role +
+Object 2: Resource
+|Parent 1: N/A +
+Parent 2: Resource parent if applicable
 |Permissions change
-|subaction : none
-properties : new permission
+|Subaction: None +
+Properties: New permission
 |Environment permissions change
 |Permission
 |EnvID
-|n/a
+|N/A
 |Permissions change
-|subaction : none
-properties : new permissions
+|Subaction: None +
+Properties: New permissions
 
 |===
+
+=== Identity Management
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create identity provider configuration
+|Identity management
+|Provider name
+|N/A
+|Create
+|Subaction: None +
+|Edit identity provider configuration
+|Identity management
+|Provider name
+|N/A
+|Edit
+|Subaction: None +
+|Delete identity provider configuration
+|Identity management
+|Provider name
+|N/A
+|Delete
+|Subaction: None +
+|Warning
+|Object 1: Identity management +
+Object 2: User
+|Object 1: Provider name +
+Object 2: UserID
+|N/A
+|None
+|Subaction: None +
+Properties: Message
+|Create identity management key
+|Identity management key
+|KeyID
+|N/A
+|Create
+|Subaction: None +
+|Set primary identity management key
+|Identity management key
+|KeyID
+|N/A
+|Edit
+|Subaction: Set primary key +
+Properties:
+
+* old_primary_provider_key_id
+* provider_key_id
+
+|Delete identity management key
+|Identity management key
+|KeyID
+|N/A
+|Delete
+|Subaction: None +
+
+|===
+
 
 === Organization and Business Groups
 
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
@@ -984,43 +1060,43 @@ properties : new permissions
 |OrgID
 |N/A
 |Edit
-|subaction : none
-properties : New name
-|Create Business Group
+|Subaction: None +
+Properties: New name
+|Create business group
 |Organization
 |OrgID
 |Parent organization
 |Create
-|subaction : none
-properties : Org object
-|Edit Business Group name
+|Subaction: None +
+Properties: Org object
+|Edit business group name
 |Organization
 |OrgID
 |Parent organization
 |Edit
-|subaction : Edit name
-properties : New group name
-|Edit Business Group owner
+|Subaction: Edit name +
+Properties: New group name
+|Edit business group owner
 |Organization
 |OrgID
 |Parent organization
 |Edit
-|subaction : Edit owner
-properties : New owner userID
-|Edit Business Group entitlement
+|Subaction: Edit owner +
+Properties: New owner userID
+|Edit business group entitlement
+|Entitlement
+|EnvID
+|N/A
+|Edit
+|Subaction: Edit entitlement +
+Properties: Entitlement change
+|Delete business group
 |Organization
 |OrgID
 |Parent organization
-|Edit
-|subaction : Edit entitlement
-properties : Entitlement change
-|Delete Business Group
-|Organization
-|OrgID
-|Parent Organization
 |Delete
-|subaction : none
-properties : Org object
+|Subaction: None +
+Properties: Org object
 |===
 
 === Environments
@@ -1028,489 +1104,895 @@ properties : Org object
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
-|Create Environment
+|Create environment
 |Environment
 |EnvID
-|n/a
+|N/A
 |Create
-|subaction : none
-properties : none
-|Delete Environment
+|Subaction: None +
+Properties: None
+|Delete environment
 |Environment
 |EnvID
-|n/a
+|N/A
 |Delete
-|subaction : none
-properties : Environment metadata
-|Rename Environment
+|Subaction: None +
+Properties: Environment metadata
+|Rename environment
 |Environment
 |EnvID
-|n/a
+|N/A
 |Edit
-|subaction : none
-properties : Environment name
+|Subaction: None +
+Properties: Environment name
+
+[NOTE]
+
+Environments that are created automatically when you create an organization or business group do not have audit log entries. As Anypoint Platform has evolved, the default environments created have also changed over time. Currently, `Sandbox` and `Design` are created automatically and do not have audit log entries.
 
 |===
 
-=== Runtime Manager
+== Exchange
+
+=== Assets
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create an asset
+|Asset
+|Asset ID
+|N/A
+|Create
+|Subaction: None +
+Properties: Asset object
+
+|Update an asset
+|Asset
+|Asset ID
+|N/A
+|Update
+|Subaction: None +
+Properties: Asset object
+
+|Delete an asset
+|Asset
+|Asset ID
+|N/A
+|Delete
+|Subaction: None +
+Properties: None
+
+|Share an asset
+|Asset
+|Asset ID
+|N/A
+|Granted or revoked permissions
+|Subaction: None +
+Properties:
+
+* Asset object
+* Source
+* Target
+* Role
+
+|Update an asset icon
+|Asset icon
+|Asset ID
+|Asset
+|Update
+|Subaction: None +
+Properties: Asset object
+
+|Delete an asset icon
+|Asset icon
+|Asset ID
+|Asset
+|Delete
+|Subaction: None +
+Properties: Asset object
+
+|Create a managed tag (category)
+|Asset managed tag
+|Asset ID and tag ID
+|Asset
+|Create
+|Subaction: None +
+Properties: None
+
+|Delete a managed tag (category)
+|Asset managed tag
+|Asset ID and tag ID
+|Asset
+|Delete
+|Subaction: None +
+Properties: None
+
+|Delete an organization
+|Organization
+|Organization ID
+|N/A
+|Delete
+|Subaction: None +
+Properties: None
+
+|Update tags
+|Asset tags
+|Asset ID
+|Asset
+|Update
+|Subaction: None +
+Properties: Tags
+
+|Create a tag configuration
+|Tag configuration
+|Tag configuration ID
+|N/A
+|Create
+|Subaction: None +
+Properties: TagConfiguration
+
+|Update a tag configuration
+|Tag configuration
+|Tag configuration ID
+|N/A
+|Update
+|Subaction: None +
+Properties: TagConfiguration
+
+|Delete a tag configuration
+|Tag configuration
+|Tag configuration ID
+|N/A
+|Delete
+|Subaction: None +
+Properties: None
+|===
+
+=== Asset Portals
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create a page
+|Asset portal page
+|Page ID
+|Asset portal
+|Create
+|Subaction: None +
+Properties:
+
+* Asset object
+* Page
+
+|Update a page
+|Asset portal page
+|Page ID
+|Asset portal
+|Update
+|Subaction: None +
+Properties:
+
+* Asset object
+* Page
+
+|Delete a page
+|Asset portal page
+|Page ID
+|Asset portal
+|Delete
+|Subaction: None +
+Properties: None
+
+|Create a portal
+|Asset portal
+|Portal ID
+|Asset
+|Create
+|Subaction: None +
+Properties: Asset portal
+
+|Publish a portal
+|Asset portal
+|Portal ID
+|Asset
+|Publish
+|Subaction: None +
+Properties: Asset portal
+|===
+
+=== API Metadata
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create an API instance
+|API instance
+|API instance ID
+|N/A
+|Create
+|Subaction: None +
+Properties:
+
+* Name
+* isPublic
+
+|Delete an API instance
+|API instance
+|API instance ID
+|N/A
+|Delete
+|Subaction: None +
+Properties:
+
+* Name
+* isPublic
+
+|Update an API instance
+|API instance
+|API instance ID
+|N/A
+|Update
+|Subaction: None +
+Properties:
+
+* Name
+* isPublic
+
+|===
+
+=== File Upload
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Upload file
+|Exchange file
+|File ID
+|N/A
+|Create
+|Subaction: None +
+Properties: File key
+
+|Delete file
+|Exchange file
+|File ID
+|N/A
+|Delete
+|Subaction: None +
+Properties: File key
+
+|Update file
+|Exchange file
+|File ID
+|N/A
+|Update
+|Subaction: None +
+Properties: File key
+|===
+
+=== Public Portals
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Update a domain
+|Public portal domain
+|Organization ID and domain
+|Public portal
+|Update
+|Subaction: None +
+Properties:
+
+* Portal ID
+* Domain
+
+|Delete a domain
+|Public portal domain
+|Organization ID and domain
+|Public portal
+|Delete
+|Subaction: None +
+Properties:
+
+* Portal ID
+* Domain
+
+|Create a page
+|Public portal page
+|Page path
+|Public portal
+|Create
+|Subaction: None +
+Properties:
+
+* Portal ID
+* Page ID
+
+|Delete a page
+|Public portal page
+|Page path
+|Public portal
+|Delete
+|Subaction: None +
+Properties:
+
+* Portal ID
+* Page ID
+
+|Update a page
+|Public portal page
+|Page path
+|Public portal
+|Update
+|Subaction: None +
+Properties:
+
+* Portal ID
+* Page ID
+
+|Create a portal
+|Public portal
+|Organization ID
+|N/A
+|Create
+|Subaction: None +
+Properties:
+
+* Project ID
+* Created by ID
+
+|Publish a portal
+|Public portal
+|Organization ID
+|N/A
+|Publish
+|Subaction: None +
+Properties:
+
+* Project ID
+* Created by ID
+
+|Delete a portal
+|Public portal
+|Organization ID
+|N/A
+|Delete
+|Subaction: None +
+Properties:
+
+* Project ID
+* Created by ID
+
+|Update a portal
+|Public portal
+|Organization ID
+|N/A
+|Update
+|Subaction: None +
+
+Properties:
+
+* Project ID
+* Created by ID
+|===
+
+=== Asset Reviews
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create a Comment
+|Asset portal review comment
+|Comment ID
+|Asset portal review
+|Create
+|Subaction: None +
+Properties: Comment
+
+|Delete a comment
+|Asset portal review comment
+|Comment ID
+|Asset portal review
+|Delete
+|Subaction: None +
+Properties: Comment
+
+|Update a comment
+|Asset portal review comment
+|Comment ID
+|Asset portal review
+|Update
+|Subaction: None +
+Properties: Comment
+
+|Create a review
+|Asset portal review
+|Review ID
+|Asset
+|Create
+|Subaction: None +
+Properties: Review object
+
+|Delete a review
+|Asset portal review
+|Review ID
+|Asset
+|Delete
+|Subaction: None +
+Properties: Review object
+
+|Update a review
+|Asset portal review
+|Review ID
+|Asset
+|Update
+|Subaction: None +
+Properties: Review object
+|===
+
+== Runtime Manager
 
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
-|Create Application
+|Create application
 |Application
 |AppID
-|n/a
+|N/A
 |Create
-|subaction : none
-properties : application metadata
-|Start Application
+|Subaction: None +
+Properties: Application metadata
+|Start application
 |Application
 |AppID
-|n/a
+|N/A
 |Start
-|
-|Restart Application
+|Subaction: None +
+Properties: Application metadata
+|Restart application
 |Application
 |AppID
-|n/a
+|N/A
 |Restart
-|subaction : none
-properties : application metadata
-|Stop Application
+|Subaction: None +
+Properties: Application metadata
+|Stop application
 |Application
 |AppID
-|n/a
+|N/A
 |Stop
-|subaction : none
-properties : application metadata
-|Delete Application
+|Subaction: None +
+Properties: Application metadata
+|Delete application
 |Application
 |AppID
-|n/a
+|N/A
 |Delete
-|subaction : none
-properties : application metadata
-|Change Application zip file
+|Subaction: None +
+Properties: Application metadata
+|Change application zip file
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
-|Promote Application from sandbox
+|Subaction: None +
+Properties: Application metadata
+|Promote application from sandbox
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
-|Change Application runtime
+|Subaction: None +
+Properties: Application metadata
+|Change application runtime
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Change application worker size
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Change application worker number
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Enable/disable persistent queues
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Enable/disable persistent queue encryption
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Modify application properties
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
-|Enable/disable Insight
+|Subaction: None +
+Properties: Application metadata
+|Enable/disable insight
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Modify log levels
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Create/modify/delete alerts
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Enable/disable alerts
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Create/modify/delete application data
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
-|Create/modify/ schedules
+|Subaction: None +
+Properties: Application metadata
+|Create/modify schedules
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
-|create/modify/delete tenants
+|Subaction: None +
+Properties: Application metadata
+|Create/modify/delete tenants
 |Application
 |AppID
-|n/a
+|N/A
 |
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Enable/disable schedules
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
+|Subaction: None +
+Properties: Application metadata
 |Clear queues
 |Application
 |AppID
-|n/a
+|N/A
 |Clear
-|subaction : none
-properties : application metadata
-|Enable/Disable static ip
+|Subaction: None +
+Properties: Application metadata
+|Enable/Disable static IP
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
-|Allocate/Release static IP
+|Subaction: None +
+Properties: Application metadata
+|Allocate/release static IP
 |Application
 |AppID
-|n/a
+|N/A
 |Modify
-|subaction : none
-properties : application metadata
-|Loadbalancer Create/modify/delete
+|Subaction: None +
+Properties: Application metadata
+|LoadBalancer Create/modify/delete
 |LoadBalancer
 |LoadBalancerID
-|n/a
+|N/A
 |Create/modify/delete
-|subaction : none
-properties : Loadbalancer metadata
+|Subaction: None +
+Properties: LoadBalancer metadata
 |Create/modify/delete alerts V2
 |Alert
 |AlertID
-|n/a
+|N/A
 |Create/modify/delete
-|subaction : none
-properties : Alert
-
+|Subaction: None +
+Properties: Alert
+|Create/modify/delete VPC
+|VPC
+|vpcID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: VPC metadata
+|Create/modify/delete VPN
+|VPN
+|vpnId
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: VPN metadata
 |===
 
 
-==== Servers
+=== Servers
 
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|User action
-|Obj Type
+|User Action
+|Object Type
 |Object
 |Parent
 |Action
 |Payload
-|Add Server
+|Add server
 |Server
 |ServerID
-|n/a
+|N/A
 |Create
-|subaction : none
-properties : server metadata
-|Delete Server
+|Subaction: None +
+Properties: Server metadata
+|Delete server
 |Server
 |ServerID
-|n/a
+|N/A
 |Delete
-|subaction : none
-properties : server metadata
-|Rename Server
+|Subaction: None +
+Properties: Server metadata
+|Rename server
 |Server
 |ServerID
-|n/a
+|N/A
 |Modify
-|subaction : Rename
-properties : server metadata
-|Create Server Group
-|Server Group
+|Subaction: Rename +
+Properties: Server metadata
+|Create server group
+|Server group
 |ServerGroupID
-|n/a
+|N/A
 |Create
-|subaction : none
-properties : server group metadata
-|Delete Server Group
-|Server Group
+|Subaction: None +
+Properties: Server group metadata
+|Delete server group
+|Server group
 |ServerGroupID
-|n/a
+|N/A
 |Delete
-|subaction : none
-properties : server group metadata
-|Rename Server Group
-|Server Group
+|Subaction: None +
+Properties: Server group metadata
+|Rename server group
+|Server group
 |ServerGroupID
-|n/a
+|N/A
 |Modify
-|subaction : Rename
-properties : server group metadata
-|Add Server to Server Group
-|Server Group
+|Subaction: Rename +
+Properties: Server group metadata
+|Add server to server group
+|Server group
 |ServerGroupID
-|n/a
+|N/A
 |Modify
-|subaction : Add Server
-properties : server group metadata
-|Remove Server from Server Group
-|Server Group
+|Subaction: Add server +
+Properties: Server group metadata
+|Remove server from server group
+|Server group
 |ServerGroupID
-|n/a
+|N/A
 |Modify
-|subaction : Remove Server
-properties : server group metadata
-|Create Cluster
+|Subaction: Remove server +
+Properties: Server group metadata
+|Create cluster
 |Cluster
 |ClusterID
-|n/a
+|N/A
 |Create
-|subaction : none
-properties : cluster metadata
+|Subaction: None +
+Properties: Cluster metadata
 |Delete Cluster
 |Cluster
 |ClusterID
-|n/a
+|N/A
 |Delete
-|subaction : none
-properties : cluster metadata
-|Rename Cluster
+|Subaction: None +
+Properties: Cluster metadata
+|Rename cluster
 |Cluster
 |ClusterID
-|n/a
+|N/A
 |Modify
-|subaction : Rename
-properties : cluster metadata
-|Add Server to Cluster
+|Subaction: Rename +
+Properties: Cluster metadata
+|Add server to cluster
 |Cluster
 |ClusterID
-|n/a
+|N/A
 |Modify
-|subaction : Add Server
-properties : cluster metadata
-|Remove Server from Cluster
+|Subaction: Add server +
+Properties: Cluster metadata
+|Remove server from cluster
 |Cluster
 |ClusterID
-|n/a
+|N/A
 |Modify
-|subaction : Remove Server
-properties : cluster metadata
-|Deploy Application
+|Subaction: Remove server +
+Properties: Cluster metadata
+|Deploy application
 |Application
 |ApplicationID
-|n/a
+|N/A
 |Deploy
-|subaction: none
-properties : application metadata
-|Delete Application
+|Subaction: None +
+Properties: Application metadata
+|Delete application
 |Application
 |ApplicationID
-|n/a
+|N/A
 |Delete
-|subaction: none
-properties : application metadata
-|Start Application
+|Subaction: None +
+Properties: Application metadata
+|Start application
 |Application
 |ApplicationID
-|n/a
+|N/A
 |Start
-|subaction: none
-properties : application metadata
-|Stop Application
+|Subaction: None +
+Properties: Application metadata
+|Stop application
 |Application
 |ApplicationID
-|n/a
+|N/A
 |Stop
-|subaction: none
-properties : application metadata
-|Redeploy Application with existing file
+|Subaction: None +
+Properties: Application metadata
+|Redeploy application with existing file
 |Application
 |ApplicationID
-|n/a
+|N/A
 |Redeploy
-|subaction: none
-properties : application metadata
-|Redeploy Application with new file
+|Subaction: None +
+Properties: Application metadata
+|Redeploy application with new file
 |Application
 |ApplicationID
-|n/a
+|N/A
 |Redeploy
-|subaction: Update Binary
-properties : application metadata
+|Subaction: Update binary +
+Properties: Application metadata
 
 |===
 
-== To Query Audit Logging for Anypoint MQ
 
-https://anypoint.mulesoft.com/#/signin[Anypoint Platform] logs
-Anypoint MQ actions for creating and maintaining queues,
-exchanges, and client applications. These actions appear in the
-*Access Management* > *Audit Logging* service.
+== Anypoint MQ
 
-=== About Anypoint MQ Audit Logs
 
-The Audit Log screen with Anypoint MQ actions appears as follows:
-
-image::mq-audit-logs.png[]
-
-*Note:* After setting the *Products*, *Types*, or *Actions* filters, click *Apply filters*.
-
-You can also search by object name or user.
-
-=== About Actions
-
-These actions are tracked:
-
-[%header%autowidth.spread]
+[%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
-|Queues: |Exchanges: |Applications:
-|`Create queue` +
-`Delete queue` +
-`Modify queue` +
-`Purge queue` +
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create/modify/delete/purge queue
+|Queue
+|queueID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Queue metadata
+|Create/modify/delete exchange
+|Exchange
+|exchangeID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Exchange metadata
+|Create/delete exchange binding
+|Binding
+|bindingID
+|N/A
+|Create/delete
+|Subaction: None +
+Properties: Exchange metadata
 
-|`Create exchange` +
-`Delete exchange` +
-`Modify exchange` +
-`Create binding` +
-`Delete binding`
-
-|`Create client` +
-`Delete client` +
-`Regenerate client`
-|===
-
-*Notes:*
-
-* Changing attributes of a queue causes the `Modify queue` action.
-* A queue is distinctly identified as a FIFO queue only when creating a FIFO queue.
-* Sending, receiving, or browsing messages do not count as auditable actions.
-* Audit logging does not record failed Anypoint MQ operations as failed in the audit logs.
-
-For each action, you can download a payload file (`payload.txt`) to your computer
-that provides JSON-formatted information describing all MQ settings.
-
-=== About Payloads
-
-A payload is JSON-formatted text that lists all MQ settings that occur when
-an action is audited. When you click the blue payload button, Anypoint
-Platform downloads the `payload.txt` to your computer.
-
-The following example shows a formatted version of the
-contents of `payload.txt` after creating a queue:
-
-[source,json,linenums]
-----
-{
-	"organizationId":"<organization_ID>",
-	"environmentId":"<environment_ID>",
-	"objectName":"MyQ",
-	"userName":"MyUserName",
-	"objectId":"MyQ",
-	"regionId":"us-west-2",
-	"defaultTtlMillis":604800000,
-	"defaultLockTtlMillis":120000,
-	"encrypted":false,
-	"deadLetterQueueId":"DLQ",
-	"maxDeliveries":10,
-	"fifo":true
-}
-----
-
-The possible fields in `payload.txt` are:
-
-[%header,cols="30s,70a"]
-|===
-|Field |Description
-|organizationId |Organization ID for the current Anypoint Platform account.
-You can use the organization ID to access xref:mq::mq-apis.adoc[Anypoint MQ REST APIs].
-|environmentId |Environment ID for the current Anypoint Platform account.
-You can use the environment ID to access xref:mq::mq-apis.adoc[Anypoint MQ REST APIs].
-|objectName |Name of the queue, exchange, or client application.
-|UserName |Username for the Anypoint Platform account.
-|objectId |Name of the queue, exchange, or client application. (Same value as objectName.)
-|regionId |Region location where you process your Anypoint MQ connections.
-|defaultTtlMillis |Default time to live in milliseconds how long unprocessed messages persist before being deleted.
-|defaultLockTtlMillis |Default lock time to live in milliseconds for the queue or exchange you create.
-The duration in milliseconds that a message is unavailable to other applications before being put back into the queue.
-|encrypted |If the queue or message exchange is encrypted. Anypoint MQ uses PBE
-with MD5 and triple DES to encrypt messages.
-|deadLetterQueueId |The name of the dead letter queue to which the current object is associated.
-|maxDeliveries |Indicates how many attempts Anypoint MQ tries to deliver messages in the queue before rerouting the message to the dead letter queue.
-|fifo |Indicates that this is a xref:mq::mq-queues.adoc#fifoqueues[FIFO] queue.
-*Note:* This field is only set to `true` when you create a FIFO queue.
-Any subsequent changes to the FIFO queue causes the `fifo` field to be set to `null`.
+|Create/delete/regenerate client
+|Client
+|clientID
+|N/A
+|Create/delete/regenerate
+|Subaction: None +
+Properties: Client metadata
 |===
 
-=== About Sample Use Cases
+== Object Store v2
 
-A few of the reasons you may want to use Audit Logs:
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create/modify/delete store
+|Store
+|storeID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Store metadata
+|===
 
-* Determine all MQ actions of a user.
-* Determine all MQ actions to an object and by whom.
-
-=== About Audit Log REST API Access
+== About Audit Log REST API Access
 
 You can access the
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API and its
@@ -1535,4 +2017,5 @@ curl 'https://anypoint.mulesoft.com/audit/v2/organizations/<organization_id>/que
 
 == See Also
 
-* You can also access Audit Logging data through the Anypoint Platform’s https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api[Audit Logging Query API].
+* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api[Audit Logging Query API]
+* xref:mq::mq-audit-logs.adoc[Anypoint MQ Audit Logs]

@@ -22,11 +22,9 @@ image::switch-suborg.png[]
 
 To access the *Roles* menu in Access Management:
 
-. Sign into your Anypoint Platform account as a user with the Organization Administrators role.
-. Select the *Access Management* option from the main page, or click the _menu_ button in the top-left corner.
-+
-image::anypoint-platform-nav-menu.png[]
-. In the Access Management page, click *Roles*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 +
 image::roles-a3471.png[]
 
@@ -65,7 +63,6 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Manage Servers
 ** Manage Settings
 ** Read Applications
-** Read Servers
 
 * **CloudHub Developer**: *(Deprecated)* Provides access to all Runtime Manager functionality, except organization and billing settings. This role has the following permission scopes:
 +
@@ -124,7 +121,9 @@ To control access for a single private API, don't assign the Exchange Viewers ro
 
 To add a user to a role, the user must belong to the same business group as the role.
 
-. Sign in to Access Management, then click *Roles*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the default role.
 +
 Default roles do not have a radial button next to them.
@@ -143,15 +142,15 @@ When editing role names and descriptions, use the 'Enter' key to save changes. C
 
 As an organization administrator, you can create custom roles by combining API or applications, permissions, and users. Depending on the product to which the role is associated, these options may vary. For example, API roles cannot be removed and their permissions cannot be modified, however you can add a description and add users to that role.
 
-If the only permissions associated with your role are Portal Viewer​, Exchange Viewer​, or ​Application Owner​, then users belonging to this role won't have access to the organization's support portal.
-
 
 [NOTE]
 Product permissions are specific to a single environment. If you have multiple environments and want to give a role the same permissions on all, you must add these permissions multiple times--one for each environment.
 
 === Create a Custom Role
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click *Add role*.
 . Enter a *Name* and *Description* for your custom role. +
 Your custom role now appears in your list of roles.
@@ -166,7 +165,9 @@ When editing role names and descriptions, use the 'Enter' key to save changes. C
 
 After creating a custom role, you can assign users to the role.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to add users.
 . Click the *Users* tab, then enter a username or email in the search field.
 . Select the user, then click the *+* icon.
@@ -175,7 +176,9 @@ After creating a custom role, you can assign users to the role.
 
 After creating a custom role, you can assign permissions to the role. If these environments belong to a business group, they are available only when creating a role in that same business group.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to add permission scopes.
 . Click the *Permissions* tab, then select one of the following tabs:
 +
@@ -189,7 +192,7 @@ After creating a custom role, you can assign permissions to the role. If these e
 * Secrets Manger
 * Tokenization
 +
-Depending on your permissions you may not see all of these options.
+Depending on your permissions, you might not see all of these options.
 
 . Click the *Permissions* drop-down menu, then select the permissions you want to assign to the custom role.
 +
@@ -201,7 +204,9 @@ The list of available permissions is different for each application.
 
 After creating a custom role, grant the Design Center Developer permission scope to the custom role to enable access to Design Center.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to add users.
 . Click *Permissions*, then click *Design Center*.
 +
@@ -217,7 +222,9 @@ image::design-center-permissions.png[Adding permissions to Design Center]
 
 You can associate an API to a custom role. This enables you to create roles that give users access to a specific API.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
@@ -235,7 +242,9 @@ Select *All* to enable access to all versions of this API.
 
 You can associate environment permissions to the custom role. This enables you to create roles that give users different permissions over environments.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
@@ -263,6 +272,6 @@ You can set up your Anypoint Platform organization so that when a SAML user belo
 
 * xref:organization.adoc[Organization]
 * xref:managing-permissions.adoc[Managing Permissions]
-* xref:design-center::user-access-to-design-center.adoc[About Accessing Design Center]
+* xref:design-center::index.adoc[Design Center]
 * xref:map-users-roles-ldap-task.adoc[Map Users to Roles in an LDAP Group]
 * xref:environments.adoc[Environments]

@@ -3,19 +3,38 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-This topic provides an overview of client management on Anypoint Platform. As an API owner, you can apply an OAuth 2.0 policy to authenticate client applications that try to access your API. You need an OAuth provider to use an OAuth 2.0 policy. One of the following OAuth providers is recommended:
+Anypoint Platform acts as a client provider by default, but you can also configure external client providers to authorize client applications. As an API owner, you can apply an OAuth 2.0 policy to authorize client applications that try to access your API. You need an OAuth 2.0 provider to use an OAuth 2.0 policy.
 
-* OpenAM version: 14
-* PingFederate versions: 6 - 8
-* Dynamic Client Registration-compliant identity providers
+You can configure more than one client provider and xref:environments.adoc#add-an-idp-to-an-existing-environment[associate the client providers with different environments].
+If you configure multiple client providers after you have already created environments, you can associate the new client providers with the environment. You should review the existing client configuration before reassigning client providers to avoid any downtime with existing assets or APIs.
+When you delete a client provider from your master organization, the client provider is no longer available in environments that used it. Also, assets or APIs that used the client provider can no longer authorize users who want to access them.
+
+You can configure the following OAuth providers:
+
+* xref:conf-client-mgmt-openam-task.adoc[OpenAM version: 14]
+* xref:conf-client-mgmt-pf-task.adoc[PingFederate versions: 6 through 8]
+* xref:configure-client-management-openid-task.adoc[Dynamic Client Registration-compliant identity providers]
 +
-This provider needs to conform to the OpenID Connect Client Registration 1.0 incorporating errata set 1.
+Dynamic Client Registration-compliant identity providers must conform to the https://openid.net/specs/openid-connect-registration-1_0.html[OpenID Connect Client Registration 1.0 incorporating errata set 1].
 
-To configure client management on Anypoint Platform for these providers, you need to first have an IdP account. On all versions of Anypoint Platform, except Private Cloud edition, set client management as instructed in this documentation.
+To configure client management on Anypoint Platform for these providers, you must have an IdP account.
+
+== Delete a Client Provider
+
+[WARNING]
+Before you delete a client provider, ensure that you do not have APIs, assets, or environments that depend on the client provider or you will lose functionality. For example, any APIs that depend on the client provider can no longer authenticate user access.
+
+include::partial$include-nav-steps-org-admin-bg.adoc[]
+
+. In the Access Management navigation menu, click *Client Providers*.
+. Click the name of the client provider you want to delete.
+. In the client provider's page, click *Delete*.
+. Enter the name of the client identity provider name.
+. Click *Delete*.
 
 == See Also
 
 * https://openid.net/specs/openid-connect-registration-1_0.html[OpenID Connect Client Registration 1.0 incorporating errata set 1]
-* xref:conf-client-mgmt-openam-task.adoc[To Configure Client Management By OpenAM]
-* xref:conf-client-mgmt-pf-task.adoc[To Configure Client Management By PingFederate]
-* xref:configure-client-management-openid-task.adoc[To Configure OpenID Connect Client Management]
+* xref:conf-client-mgmt-openam-task.adoc[Configure Client Management by OpenAM]
+* xref:conf-client-mgmt-pf-task.adoc[Configure Client Management by PingFederate]
+* xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management]

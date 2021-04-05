@@ -9,9 +9,6 @@ As the Anypoint Platform organization administrator, you can configure identity 
 +
 * SAML 2.0: Web-based authorization including cross-domain SSO
 
-[NOTE]
-Service initiated SSO is not supported.
-
 The following diagram shows the SAML identity management process:
 
 image::external-identity-decbd.png[]
@@ -43,18 +40,18 @@ The following providers are fully supported to work with OpenID Connect:
 
 After you select an identity provider:
 
-* Set up your Anypoint Platform organization as your audience in your identity provider configuration. 
+* Set up your Anypoint Platform organization as your audience in your identity provider configuration.
 +
 [NOTE]
-The IdP you select is effective for the entire organization and all business groups. 
+The IdP you select is effective for the entire organization and all business groups.
 * Configure identity management in the Anypoint Platform master organization.
 * Configure attribute names on the IdP and Anypoint Platform to match.
 
-For more information, see the documentation for your identity provider. 
+For more information, see the documentation for your identity provider.
 
-After configuring identity management, you can't add users to your organization in Anypoint Platform. In Access Management, *Invite User* is disabled to prevent this operation. To add new users your organization, include them in your external identity management solution according to your normal internal provisioning process.
+After configuring identity management, you must add new SSO users using your external identity management solution and internal provisioning process. If you use the Invite User feature to add users to your organization after you have configured an identity provider, the credentials for these users are stored locally in your organization rather than with the identity provider.
 
-Users that sign in with SSO are new users to the system. If the new user has the same username as a user that already exists in your Anypoint Platform organization, the new user will co-exist with the original user with the same username. Users with the same username are managed independently from one another.
+Users that log in with SSO are new users to the system. If the new user has the same username as a user that already exists in your Anypoint Platform organization, the new user co-exists with the original user with the same username. Users with the same username are managed independently from one another.
 
 == See Also
 

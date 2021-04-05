@@ -34,7 +34,7 @@ https://anypoint.mulesoft.com/accounts/logout/receive-id?redirect_uri=https%3A%2
 ----
 +
 . In *Allowable SAML Bindings*, click *Redirect*.
-. In *Encryption Policy*, make sure nothing is encrypted, then save and exit Protocol Settings and Browser SSO.
+. In *Encryption Policy*, choose either *none* or *the entire assertions*, then save and exit Protocol Settings and Browser SSO.
 . When viewing the SP Configuration for Anypoint Platform, go to *Credentials > Configure Credentials*.
 . Set *Signature Verification Settings > Manage Signature Verification Settings > Trust Model to Unanchored*, and import the certificate from the following location:
 +

@@ -79,23 +79,23 @@ The search filter to find user groups by userName. For example, `(&objectClass=G
 . Map the User fields
 * Username
 +
-Field that represents the user name. For example, `johndoe`.
+Field that represents the user name. For example, `uid`.
 +
 * Email
 +
-Field that represents the email. For example, `jdoe@gmail.com`.
+Field that represents the email. For example, `mail`.
 +
 * First Name
 +
-Field that represents the First name. For example, `john.
+Field that represents the first name. For example, `givenName`.
 +
 Last Name
 +
-Field that represents the Last name. For example, `doe`.
+Field that represents the last name. For example, `sn`.
 +
 * ID
 +
-Id for your user. For example, `2EH`.
+ID for your user. For example, `uid`.
 +
 . Map the group fields
 * Group Name

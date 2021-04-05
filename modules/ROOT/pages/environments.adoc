@@ -9,7 +9,7 @@ Anypoint Platform enables you to create and manage separate deployment environme
 
 Anypoint Platform supports the following types of environments:
 
-* **Production environment**: Provides a production environment where you can deploy applications and APIs publicly. When you create a new Anypoint Platform account, by default it contains one production environment.
+* **Production environment**: Provides a production environment where you can deploy applications and APIs publicly.
 
 * **Sandbox environment**: Provides useful environments for development and testing. By default, Anypoint Platform accounts are created with one sandbox environment with one vCore assigned to it.
 +
@@ -25,25 +25,35 @@ You cannot grant users access to an environment directly. To grant a user access
 
 To create a new environment or manage an existing environment:
 
-. Sign into Anypoint Platform with an Organization Administrators role.
-. Go to Access Management.
-. From the left-hand menu, click *Environments*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Environments*.
 . Click *Add Environment*.
 . Enter a name for the environment.
-. Select the environment type, then click *Create*.
+. Select the environment type.
+. Select at least one xref:managing-api-clients.adoc[client provider] for your environment.
+. Optionally, if you added more than one client provider, click *Set as default* to designate a default client provider. If you do not select a default client provider, the first client provider that you added is the default.
+. Click *Create*.
 
 image::environments-85dc3.png[]
 
 [NOTE]
-Depending on your CloudHub subscription, you may have restrictions on the number and type of environments you can create.
+* Depending on your CloudHub subscription, you might have restrictions on the number and type of environments you can create.
+* If you create a new environment using the name of an existing environment, `-<n>` is appended to the name of the new environment. `<n>` is an incremental number.
 
 == To Modify or Delete an Existing Environment
 
-. Go to Access Management.
-. From the left-hand menu, click *Environments*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Environments*.
 . Click the name of the environment. You can perform one of the following actions:
 +
-* Enter a new name for the environment, then click *Update*.
+* Modify the environment:
+** Enter a new name for the environment.
+** Add at least one client provider.
+** Designate a default client provider if the environment uses more than one client provider.
++
+Click *Update* to save your changes.
 * Click *Delete* to delete the environment.
 
 == To View the Client ID and Client Secret for an Environment
@@ -52,12 +62,47 @@ Each environment has a client ID and a client secret used for authentication. Yo
 
 To view the client ID and secret for your environment:
 
-. Log in to the Anypoint Platform as an administrator.
-. Go to Access Management.
-. From the left-hand menu, click *Environments*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Environments*.
 . Click the name of the environment whose client ID/secret you want to view.
 
 [NOTE]
 --
 To change the client ID or client secret of an environment, you must contact your customer support representative.
 --
+
+[[add-an-idp-to-an-existing-environment]]
+== Associate a Client Provider with an Existing Environment
+
+If your organization administrator provides multiple xref:managing-api-clients.adoc[client providers] for your organization, you can add them to existing environments. If you did not associate a client provider with the environment when you created it, the default client provider is the Anypoint Platform client provider.
+
+To associate a client provider with an existing environment:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Environments*.
+. Click the name of the environment.
+. In the *Client Provider* field, select at least one client provider.
+. If you added more than one client provider, click *Set as default* to designate a default client provider.
+. Click *Update*.
+
+You can now configure client providers for APIs.
+
+[[remove-an-idp-from-an-environment]]
+== Remove a Client Provider from an Environment
+
+You can remove a client provider from an environment at any time. However, prior to removing the default client provider, specify another client provider as default.
+
+When you remove all external client providers from an environment, the built-in Anypoint Platform client provider becomes the default client provider for that environment.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Environments*.
+. Click the name of the environment.
+. If the client provider that you want to remove is the default, click *Set as default* next to the name of a different client provider.
++
+. Click the *Remove* button next to the name of the client provider that you want to remove.
+. Click *Update*.
+
+The client provider is removed. Any assets or APIs that were associated with the client provider continue to use it until you associate them with a new client provider.
