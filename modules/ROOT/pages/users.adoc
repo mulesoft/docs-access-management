@@ -22,7 +22,7 @@ This feature is not available in Anypoint Platform Private Cloud Edition.
 When running Anypoint Platform Private Cloud Edition, you need to configure user management methods such as SSO through a third-party IdP or LDAP.
 --
 
-As an organization administrator, or of one of its business groups, you can invite new users and manage existing users for your organization on the _Access Management_ Administration page, which you can reach by selecting the *Users* option in your *Access Management* section.
+As an organization administrator of a master organization or of one of its business groups, you can invite new users and manage existing users for your organization on the _Access Management_ Administration page, which you can reach by selecting the *Users* option in your *Access Management* section.
 
 To invite new users to your organization:
 
