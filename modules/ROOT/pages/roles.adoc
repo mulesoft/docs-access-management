@@ -60,7 +60,6 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Manage Servers
 ** Manage Settings
 ** Read Applications
-** Read Servers
 
 * **CloudHub Developer**: *(Deprecated)* Provides access to all Runtime Manager functionality, except organization and billing settings. This role has the following permission scopes:
 +
