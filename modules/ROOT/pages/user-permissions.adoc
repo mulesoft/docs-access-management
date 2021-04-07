@@ -18,7 +18,9 @@ If you have the Organization Administrator role or the Administrator permission 
 
 To grant permissions to an individual user:
 
-. In *Access Management*, select *Users*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Users*.
 . Select the user whose permissions you want to modify.
 . Select the product that contains the permission you want to add. For more information about the permissions that are available across Anypoint Platform, see xref:permissions-by-product.adoc[Permissions by Product].
 * If you want to grant the user permissions that apply across the current business group:

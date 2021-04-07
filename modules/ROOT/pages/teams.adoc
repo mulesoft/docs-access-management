@@ -48,7 +48,9 @@ If you have the Administrator permission or are a team maintainer, you can creat
 
 To create a child team in the Teams feature interface:
 
-. In *Access Management*, select *Teams*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Teams*.
 . Select *Create Team*.
 . Enter a unique and intuitive name for your child team.
 . Select a parent team.
@@ -64,7 +66,9 @@ If you have the Administrator permission in a specific business group but not yo
 
 To configure permissions for teams in the Teams feature interface:
 
-. In *Access Management*, select *Teams*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Teams*.
 . Select the team for which you want to configure permissions.
 . Select the *Permissions* tab.
 . Select the permissions that you want to add, and then select *Next*.
@@ -83,7 +87,9 @@ If you have the Administrator permission in the master business group or are a t
 
 To add a user in the Teams feature interface:
 
-. In *Access Management*, select the *Teams* tab.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Teams*.
 . In the *Teams* page, select the team to which you want to add a user.
 . Select *Add members*.
 . Select the name of each user you want to add to the team.
@@ -106,7 +112,7 @@ This feature will be available in the beta release of Teams.
 
 == Grant Permissions to Individual Users
 
-If you have the Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:user-permissions.adoc#grant-permissions-to-an-individual-user[Grant Permissions to Individual Users].
+If you have the Organization Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:user-permissions.adoc#grant-permissions-to-an-individual-user[Grant Permissions to Individual Users].
 
 == See Also
 
