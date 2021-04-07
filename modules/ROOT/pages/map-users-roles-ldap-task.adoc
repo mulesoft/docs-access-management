@@ -40,7 +40,8 @@ In the above example of a SAML assertion, the *Group Attribute* is `Groups`.
 
 After you have created an attribute that contains your groups, you can create a role to map to groups of users in your organization.
 
-. In Anypoint Platform, navigate to *Access Management*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
 . Click *Identity Providers*.
 . From *Identity Providers*, select SAML.
 . Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names.
@@ -145,8 +146,9 @@ You can obtain the information you need to map your LDAP group to a role using a
 
 Using a SAML assertion, you can create a role to map to a group of users in your organization.
 
-. In Anypoint Platform, navigate to *Access Management*.
-. Click *Roles*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click *Add Role*.
 . Specify a role name and description.
 . Click *Add Role*.
