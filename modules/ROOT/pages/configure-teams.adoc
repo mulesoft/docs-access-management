@@ -111,6 +111,16 @@ include::partial$include-nav-steps-team-settings.adoc[]
 
 . In the *Parent Team* list, select the new parent team.
 . Click *Save Changes*. +
-Your team and its child teams now reside under the parent team you selected. 
+Your team and its child teams now reside under the parent team you selected.
 
 == Delete a Team
+
+You must have the Organization Administrator permission to delete a team. Once you delete a team, the team cannot be restored. You cannot delete the parent team that represents your entire root organization.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Click *...* next to the team that you want to delete.
+. Click *Delete...*.
+. Enter the name of the team that you want to delete.
+. Click *Delete*. +
+The team is deleted and no longer appears in the Teams page.
