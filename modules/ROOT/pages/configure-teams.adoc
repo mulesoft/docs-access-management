@@ -1,0 +1,116 @@
+= Configure Teams
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Every root organization has a main _parent team_ that appears by default. Every user in your organization is a member of the highest parent team and receives all permissions therein.
+You can create _child teams_ under the parent team and configure those teams to have different sets of permissions.
+After you create child teams and assign permissions, you can add users to each of your teams according to what permissions the users should have.
+Further, you can assign _team maintainers_ who can modify users and permissions within the teams they maintain.
+
+Users who have the Organization Administrator permission can also change the name of a team, move child teams under different parent teams, or delete teams.
+
+== Create a Child Team
+
+If you have the Organization Administrator permission or are a team maintainer, you can create child teams under a parent team.
+The child team inherits permissions from its parent team, but you configure additional permissions for its users.
+
+To create a child team in the Teams feature interface:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Teams*.
+. Select *Create Team*.
+. Enter a unique and intuitive name for your child team. +
+You can use only alphanumeric characters, hyphens, commas, periods, and spaces. The character limit is 255.
++
+. Select a parent team.
+. Select *Save*.
+
+The child team appears under its parent team in the list of teams. You can also select a parent team and navigate to the *Child teams* tab to see a list of all child teams under that parent team.
+
+== Manage Team Permissions
+
+When you begin using the Teams feature, your organization’s main team is named “Everyone at <Your Organization>” and does not have any permissions assigned.
+If you have the Organization Administrator permission, you can configure permissions for this team in addition to child teams.
+If you invite users to “Everyone at <Your Organization>” without assigning any permissions to that team, your users cannot perform execute tasks or view assets.
+
+If you have the Organization Administrator permission in a specific business group but not your entire organization, you can assign these permissions to any of existing teams or users within your organization.
+
+To configure permissions for teams in the Teams feature interface:
+
+include::partial$include-nav-steps-team-maintainer.adoc[]
+
+. Click the team for which you want to configure permissions.
+. Click the *Permissions* tab.
+. In the *Permissions* section, click *Add permissions*
+. In the *Select Permissions* window, select the permissions that you want to add, and then select *Select contexts*.
+. Select the business groups and environments to which you want to apply the permissions, and then select *Review*. +
+The permissions you selected appear alongside the business groups and environments to which they apply.
++
+. Select *Apply permissions*. +
+The permissions you selected appear in the *Permissions* section for your team.
+
+== Manage Team Users
+
+If you have the Organization Administrator permission in your root organization or are a team maintainer, you can add members to existing teams using three methods:
+
+* The Teams feature interface
+* Sending an invitation to a new user via email
+* External group mapping
+
+[[invite-users-with-teams]]
+=== Add Users using the Teams Interface
+
+include::partial$include-nav-steps-team-maintainer.adoc[]
+
+. In the *Teams* page, select the team to which you want to add a user.
+. Select *Add members*.
+. Select the name of each user you want to add to the team.
+. Select the membership status that you want to assign to each user: team member or team maintainer.
+. Select *Add member*. +
+The user is added to the team and receives the team’s permissions.
+
+=== Add Users using Email Invitations
+
+When you send an email to invite a new user to your organization, you can specify a team to which the user is added automatically when they accept your invitation. The user is also automatically added to your organization’s parent team, known as “Everyone at <Your Organization>” by default.
+
+For more information about inviting a user to an existing team via email, see xref:users.adoc#inviting-a-user-to-anypoint-platform[Inviting a User to Anypoint Platform].
+
+=== Add Users using External Group Mapping
+
+If you use single sign-on (SSO) using SAML, OIDC, or LDAP, you can map SSO users to teams. For more information, see xref:map-users-roles-teams.adoc[Map SSO Users to Teams].
+
+=== Manage Team Members and Maintainers
+
+When you add a user to a team, you can select whether that user is a team maintainer or a team member. You must have the Organization Administrator permission or be a team maintainer yourself to modify team members and team maintainers.
+
+You can designate a team maintainer to delegate team maintenance responsibilities to users without giving them additional permissions, or you can remove the team maintainer designation and convert users back to team members.
+
+include::partial$include-nav-steps-team-maintainer-admin.adoc[]
+
+. In the *Members* section, navigate to the user whom you want to designate as a team maintainer.
+. In the *Type* selector, select either *Maintainer* or *Member*. +
+The team membership for the user is updated.
+
+[[change-team-name]]
+== Change the Name of  a Team
+
+include::partial$include-nav-steps-team-settings.adoc[]
+
+. In the *Name* box, enter a new name for your team. +
+You can use only alphanumeric characters, hyphens, commas, periods, and spaces. The character limit is 255.
++
+. Click *Save changes*. +
+Your team is renamed.
+
+== Move a Team
+
+include::partial$include-nav-steps-team-settings.adoc[]
+
+. In the *Parent Team* list, select the new parent team.
+. Click *Save Changes*. +
+Your team and its child teams now reside under the parent team you selected. 
+
+== Delete a Team

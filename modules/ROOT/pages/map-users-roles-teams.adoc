@@ -1,7 +1,9 @@
-= Map Single Sign-On Users to Roles
+= Map Single Sign-On Users to Roles or Teams
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+
+:page-aliases: map-users-roles-ldap-task.adoc
 
 You can map users in a federated organization's group to a role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
 

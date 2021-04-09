@@ -3,12 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-[WARNING]
-The Roles feature in Access Management was deprecated in December 2019. Using the xref:teams.adoc[Teams] feature, users are now assigned permissions instead of roles. For more information, see the xref:access-management::roles-to-teams-transition.adoc[Roles to Teams Transition] documentation or contact your Customer Success Manager to determine how you can migrate to the Teams feature in Access Management.
+A role is a set of pre-defined permissions for each product, or feature, within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role. Roles can be set only for individual users. To assign the same permissions to multiple users at once, use the xref:access-management::teams.adoc[Teams feature].
 
-To manage roles and permissions within Anypoint Platform, you must have the Organization Administrators role. To manage user permissions for an API version, you must have the API Versions Owner role.
-
-A role is a set of pre-defined permissions for each product, or feature, within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role.
+To manage roles and permissions within Anypoint Platform, you must have the Organization Administrator permission. To manage user permissions for an API version, you must have the API Versions Owner role.
 
 Anypoint Platform provides two types of roles:
 
