@@ -4,23 +4,27 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The Teams feature enables you to create groups of users and then assign certain permissions. Teams have a cascading permissions structure that helps you manage users and permissions with scalability in mind.
+The Teams feature enables you to create groups of users and then assign certain permissions.
+Teams have a cascading permissions structure that helps you manage users and permissions with scalability in mind.
 
-If you have the Administrator permission over your master business group, you can achieve the following using the Teams feature:
+If you have the Organization Administrator permission over your root organization, you can achieve the following using the Teams feature:
 
 * Manage your organization from a simple, global view
 * Group users into teams to easily manage permissions and share assets
 * Assign team maintainers to delegate management of team members and child teams
 * Manage user and team permissions across multiple business groups in one place
 
-Starting with the “Everyone at <Your Organization>" team, which contains all users who join your organization either via an invitation or SSO, you can create specialized _child_ teams that have more specific permissions based on the responsibilities of their members. The Teams feature enables you to mimic the structure of your organization and seamlessly manage permissions and team membership as your organization grows. 
+Starting with the “Everyone at <Your Organization>" team, which contains all users who join your organization either via an invitation or SSO, you can create specialized _child teams_ that have more specific permissions based on the responsibilities of their members.
+The Teams feature enables you to mimic the structure of your organization and seamlessly manage permissions and team membership as your organization grows.
 
-After your child teams are created, you can invite new users directly to the appropriate team using email invitations or using the Teams feature interface. When you add a user to a team, you can also specify whether they should be a team _maintainer_ (a user who can manage team membership) or a _member_ (a user who receives the permissions outlined in the team structure). Outside of teams, you can still xref:user-permissions.adoc#grant-permissions-to-an-individual-user.[assign specific permissions to individual users] if they require permissions that should not extend to an entire team.
+After your child teams are created, you can invite new users directly to the appropriate team using email invitations or using the xref:configure-teams#invite-users-with-teams[Teams feature interface].
+When you add a user to a team, you can also specify whether they should be a _team maintainer_ (a user who can manage team membership) or a _member_ (a user who receives the permissions outlined in the team structure). Outside of teams, you can still xref:user-permissions.adoc#grant-permissions-to-an-individual-user.[assign specific permissions to individual users] if they require permissions that should not extend to an entire team.
 
 Adopting a team structure in your organization also enables you to share assets more easily. In Anypoint Exchange, you can share an asset with an entire team rather than having to select each user individually.
 
 [NOTE]
-To manage teams permissions, you must have the Administrator permission over the business group that contains resources that you want to give access over to a specific user or a team. You can modify any permissions for all teams in your organization only if you have the Administrator permission over the whole organization.
+To manage teams permissions, you must have the Organization Administrator permission over the business group that contains resources that you want to give access over to a specific user or a team.
+You can modify any permissions for all teams in your organization only if you have the Organization Administrator permission over the whole organization.
 
 == Permissions Structure
 
@@ -42,80 +46,14 @@ Any user can view their team’s hierarchy in the *Teams* section in Access Mana
 
 For an example of a teams structure applied across an organization, see xref:teams-example.adoc[Example Teams Structure].
 
-=== Create a Child Team
-
-If you have the Administrator permission or are a team maintainer, you can create child teams under your team. The child team inherits permissions from its parent team, but you configure additional, specific permissions for it.
-
-To create a child team in the Teams feature interface:
-
-include::partial$include-nav-steps-no-permissions.adoc[]
-
-. In the Access Management navigation menu, click *Teams*.
-. Select *Create Team*.
-. Enter a unique and intuitive name for your child team.
-. Select a parent team.
-. Select *Save*.
-
-The child team appears under its parent team in the list of teams.
-
-=== Configure Permissions for Your Team
-
-When you begin using the Teams feature, your organization’s main team is named “Everyone at <Your Organization>” and does not have any permissions assigned. If you have the Administrator permission, you can configure permissions for this team in addition to child teams. If you invite users to “Everyone at <Your Organization>” without assigning any permissions to that team, your users cannot perform execute tasks or view assets.
-
-If you have the Administrator permission in a specific business group but not your entire organization, you can assign these permissions to any of existing teams or users within your organization.
-
-To configure permissions for teams in the Teams feature interface:
-
-include::partial$include-nav-steps-no-permissions.adoc[]
-
-. In the Access Management navigation menu, click *Teams*.
-. Select the team for which you want to configure permissions.
-. Select the *Permissions* tab.
-. Select the permissions that you want to add, and then select *Next*.
-. Select the business groups and environments to which you want to apply the permissions, and then select *Review*.
-. Select *Add Permissions*.
-
-== Add Users to a Team
-
-If you have the Administrator permission in the master business group or are a team maintainer, you can add members to existing teams using three methods:
-
-* The Teams feature interface
-* Sending an invitation to a new user via email
-* External group mapping (for customers with SSO configured via SAML only)
-
-=== Add Users using the Teams Interface
-
-To add a user in the Teams feature interface:
-
-include::partial$include-nav-steps-no-permissions.adoc[]
-
-. In the Access Management navigation menu, click *Teams*.
-. In the *Teams* page, select the team to which you want to add a user.
-. Select *Add members*.
-. Select the name of each user you want to add to the team.
-. Select the role that you want to assign to each user: member or maintainer.
-. Select *Add member*.
-
-The user is added to the team and receives the team’s permissions.
-
-=== Add Users using Email Invitations
-
-When you send an email to invite a new user to your organization, you can specify a team to which the user is added automatically when they accept your invitation. The user is also automatically added to your organization’s parent team, known as “Everyone at <Your Organization>” by default.
-
-For more information about inviting a user to an existing team via email, see xref:users.adoc#inviting-a-user-to-anypoint-platform[Inviting a User to Anypoint Platform].
-
-=== Add Users using External Group Mapping
-
-This feature will be available in the beta release of Teams.
-
-// For more information about external group mappings, see xref:<topic that talks about external group mappings>.adoc[insert title of that section here].
-
 == Grant Permissions to Individual Users
 
-If you have the Organization Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:user-permissions.adoc#grant-permissions-to-an-individual-user[Grant Permissions to Individual Users].
+If you have the Organization Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:users.adoc#granting-permissions-and-roles-to-users[Grant Permissions and Roles to Users].
 
 == See Also
 
-// xref:permissions-by-product.adoc[Available Permissions by Product]
-
-xref:user-permissions.adoc#grant-permissions-to-an-individual-user[Assigning Permissions to Individual Users]
+* xref:configure-teams.adoc[Configure Teams]
+* xref:teams-example.adoc[Example Teams Structure]
+* xref:users.adoc#inviting-a-user-to-anypoint-platform[Inviting a User to Anypoint Platform]
+* xref:users.adoc#granting-permissions-and-roles-to-users[Grant Permissions and Roles to Users]
+* xref:map-users-roles-teams.adoc[Map SSO Users to Teams]

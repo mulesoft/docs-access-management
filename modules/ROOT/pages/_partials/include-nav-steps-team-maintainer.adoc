@@ -1,0 +1,3 @@
+. Log in to Anypoint Platform using an account that is a team maintainer of the team you want to modify.
+. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
+. In the Access Management navigation menu, click *Teams*.
