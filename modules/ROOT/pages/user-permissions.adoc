@@ -14,7 +14,7 @@ If you have the Organization Administrator permission over your root organizatio
 
 To grant permissions to an individual user:
 
-include::partial$include-nav-steps-no-permissions.adoc[]
+include::partial$include-nav-steps-org-admin.adoc[]
 
 . In the Access Management navigation menu, click *Users*.
 . Select the user whose permissions you want to modify.
