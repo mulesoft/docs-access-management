@@ -1,8 +1,0 @@
-== Available Permissions by product
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
-A complete permissions list will be available when the Teams feature is available for beta testing.
-
-For more information on permissions, you can view a description of each available permission in the Teams user interface by hovering over the information icon next to each available permission.
