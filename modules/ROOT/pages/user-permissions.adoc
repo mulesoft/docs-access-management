@@ -3,18 +3,14 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-[WARNING]
-The Roles feature in Access Management will be deprecated 6 months after GA. Using the Teams feature, users are now assigned permissions instead of roles. For more information, see the xref:access-management::roles-to-teams-transition.adoc[Roles to Teams Transition] documentation or contact your Customer Success Manager to determine how you can migrate to the Teams feature in Access Management.
-
 Access Management currently provides three ways of managing permissions for users: teams, roles, and individual permissions. The xref:teams.adoc[Teams] feature enables you to manage user permissions by assigning them to groups that mimic the structure of your organization. The xref:roles.adoc[Roles] feature allows you to assign pre-defined sets of permissions to users.
 
-For more information on transitioning your organization from roles to teams, see xref:roles-to-teams-transition.adoc[Switch to Teams from Roles].
 
 You can still grant individual permissions to users outside of both teams and roles.
 
 == Grant Permissions to an Individual User
 
-If you have the Organization Administrator role or the Administrator permission over your master organization, you can grant permissions to individual users outside of the Teams or Roles structures.
+If you have the Organization Administrator permission over your root organization, you can grant permissions to individual users outside of the Teams or Roles structures.
 
 To grant permissions to an individual user:
 
