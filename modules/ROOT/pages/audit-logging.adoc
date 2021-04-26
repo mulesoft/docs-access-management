@@ -1138,6 +1138,41 @@ Environments that are created automatically when you create an organization or b
 
 |===
 
+== Anypoint DataGraph
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Add API
+| User
+| data-graph-{api-name}-{env-name}
+| N/A
+| Create
+| N/A
+
+| Update API
+| User
+| data-graph-{api-name}-{env-name}
+| N/A
+| Update
+| N/A
+
+| Remove API
+| User
+| data-graph-{api-name}-{env-name}
+| N/A
+| Delete
+| N/A
+
+|===
+
+
 == Exchange
 
 === Assets
