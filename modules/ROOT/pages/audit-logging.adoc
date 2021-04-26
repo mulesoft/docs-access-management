@@ -1153,21 +1153,21 @@ Environments that are created automatically when you create an organization or b
 | User
 | data-graph-{api-name}-{env-name}
 | N/A
-| Create
+| Add API
 | N/A
 
 | Update API
 | User
 | data-graph-{api-name}-{env-name}
 | N/A
-| Update
+| Update API
 | N/A
 
 | Remove API
 | User
 | data-graph-{api-name}-{env-name}
 | N/A
-| Delete
+| Remove API
 | N/A
 
 |===
