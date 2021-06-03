@@ -42,7 +42,7 @@ Invited users have access to the same set of resources as you (although they may
 
 Click *Pending Invites* to view all invitations that have not yet been accepted. Select the ones you need to manage, and click *Re-send Invite* or *Cancel Invite*.
 
-
+[[granting-permissions-and-roles-to-users]]
 == Granting Permissions and Roles to Users
 
 Click a user name to access more information about that user, add roles and permissions to it, or reset its password.
