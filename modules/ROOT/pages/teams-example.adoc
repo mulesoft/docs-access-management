@@ -12,7 +12,7 @@ image::access-management-teams-hierarchy.png[]
 The user teams shown here are defined as follows:
 
 * Acme +
-This team is your organization and parent team, and every user in your organization is a member. By default, the team’s name is Everyone at Acme. You can set your permissions such that all Acme users can easily collaborate within your organization by creating new projects in Anypoint Design Center and viewing assets in Anypoint Exchange. To do this, you must configure the following permissions for the Everyone at Acme team:
+This team represents your organization and root team, and every user in your organization is a member. By default, the team’s name is Everyone at Acme. You can set your permissions such that all Acme users can easily collaborate within your organization by creating new projects in Anypoint Design Center and viewing assets in Anypoint Exchange. To do this, you must configure the following permissions for the Everyone at Acme team:
 ** Design Center Developer
 ** Exchange Viewer
 * Engineering +
@@ -26,7 +26,7 @@ This team is one of two child teams under the Engineering team. The DevOps team 
 ** Design Center Developer
 ** Exchange Viewer
 * Identity +
-This team is one of two child teams under the Engineering team. The Identity team is responsible for managing projects, assets, and other materials in its designated business groups. As a child of the Engineering team, the Identity team can still deploy code to pre-production environments, but unlike the DevOps team, members do not need to deploy to production. You can give this team permission to manage Audit Log and Authentication service business groups but not the entire organization. To do this, you must configure the following permissions for the Identity team:
+This team is one of two child teams under the Engineering team. The Identity team is responsible for managing projects, assets, and other materials in its designated business groups. As a child of the Engineering team, the Identity team can still deploy code to pre-production environments, but unlike the DevOps team, members do not need to deploy to production. You can give this team permission to manage Audit Log and Authentication service business groups but not the entire organization. To do this, you must configure the Administrator permission within the scope of the Audit Log and Authorization Service business groups. Combined with the inherited permissions from the Engineering team, the Identity team has the following permissions:
 ** Administrator (applicable to Audit Log and Authorization Service business groups)
 ** Deploy API Proxies (applicable to Sandbox and Design environments)
 ** Design Center Developer

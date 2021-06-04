@@ -31,7 +31,7 @@ You can modify any permissions for all teams in your organization only if you ha
 When you are planning your organization’s team structure, consider the following:
 
 * Each member of your organization is a member of the “Everyone at <Your Organization> team, or the _root_ team.
-* Your team structure should reflect the structure of your organization so that you can plan your teams and configure permissions according to member needs.
+* Your team structure should reflect the structure of your organization so that you can plan your teams and configure permissions according to member needs. However, you can move teams as the needs of your organization change.
 * Teams names must be unique across your organization.
 * Your organization can have up to 2000 teams.
 * Your teams can be nested up to 10 levels, including the “Everyone at <Your Organization> team.
