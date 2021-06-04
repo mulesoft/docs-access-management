@@ -36,7 +36,7 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 * `offline_access`: Access to the user's data when they are not logged in.
 
 [NOTE]
-Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app. 
+Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app.
 
 == OIDC Endpoints and Tokens
 
@@ -83,7 +83,8 @@ However, you can modify client secrets in the *Application Settings* page.
 You should also determine the use-case and whether the app is internal to your company or is a third-party application that can be distributed outside of your organization.
 To create your app, follow these steps:
 
-. From the *Access Management* home page, click the *Connected Apps* tab.
+. include::partial$include-nav-connected-apps.adoc[]
+
 . Click *Create App*.
 . Create your app by completing the fields in the *Create App* page.
 . Click *Save*.
@@ -91,7 +92,7 @@ To create your app, follow these steps:
 [[application-whitelist-dev]]
 == Application Whitelist
 
-Organization Administrators may enable a whitelist to control which apps can access their users' data.
+Users with the Organization Administrator permission can enable a whitelist to control which apps can access their users' data.
 When your app is whitelisted, only the set of scopes associated with the app are reviewed and approved by the administrator.
 If you add new scopes to your app at a later date, you are unable to request those scopes from users until the admin re-approves your app.
 Existing authorizations and new authorizations using the already-whitelisted set of scopes continue to work.

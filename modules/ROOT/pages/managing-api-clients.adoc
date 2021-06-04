@@ -7,7 +7,7 @@ Anypoint Platform acts as a client provider by default, but you can also configu
 
 You can configure more than one client provider and xref:environments.adoc#add-an-idp-to-an-existing-environment[associate the client providers with different environments].
 If you configure multiple client providers after you have already created environments, you can associate the new client providers with the environment. You should review the existing client configuration before reassigning client providers to avoid any downtime with existing assets or APIs.
-When you delete a client provider from your master organization, the client provider is no longer available in environments that used it. Also, assets or APIs that used the client provider can no longer authorize users who want to access them.
+When you delete a client provider from your root organization, the client provider is no longer available in environments that used it. Also, assets or APIs that used the client provider can no longer authorize users who want to access them.
 
 You can configure the following OAuth providers:
 
@@ -26,7 +26,8 @@ Before you delete a client provider, ensure that you do not have APIs, assets, o
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
-. In the Access Management navigation menu, click *Client Providers*.
+include::partial$include-nav-client-providers.adoc[]
+
 . Click the name of the client provider you want to delete.
 . In the client provider's page, click *Delete*.
 . Enter the name of the client identity provider name.

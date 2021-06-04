@@ -28,7 +28,8 @@ Note that `:providerId` is available only after you create the provider configur
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Identity Providers*.
+include::partial$include-nav-identity-providers.adoc[]
+
 . Select *Identity Providers* > *SAML 2.0*.
 . In the *Configurations* tab, complete the required fields of the *Identity Management SAML 2.0* form:
 +
@@ -109,7 +110,8 @@ When you use the key rotation feature, you must have keys available in Anypoint 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Identity Providers*.
+include::partial$include-nav-identity-providers.adoc[]
+
 . Next to a SAML 2.0 IdP, click *Edit*.
 . Click the *Anypoint Keys* tab.
 . Click *+ New key* and select *Generate*. +
@@ -119,7 +121,8 @@ A newly generated key appears in the list of keys.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Identity Providers*.
+include::partial$include-nav-identity-providers.adoc[]
+
 . Next to a SAML 2.0 IdP, click *Edit*.
 . Click the *Anypoint Keys* tab.
 . Click *+ New key*, and select *Upload*.
@@ -135,7 +138,8 @@ Before reassigning the primary key, ensure your IdP can access the key that you 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Identity Providers*.
+include::partial$include-nav-identity-providers.adoc[]
+
 . Next to a SAML 2.0 IdP, click *Edit*.
 . Click the *Anypoint Keys* tab.
 . Next to the key that you want to make primary, click *...* and select *Use as primary key...*.
@@ -149,7 +153,8 @@ Note that when you revoke a public key, Anypoint Platform also revokes the corre
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Identity Providers*.
+include::partial$include-nav-identity-providers.adoc[]
+
 . Next to a SAML 2.0 IdP, click *Edit*.
 . Click the *Anypoint Keys* tab.
 . Next to the key that you want to revoke, click *...* and select *Revoke*.

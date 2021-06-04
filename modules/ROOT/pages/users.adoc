@@ -5,7 +5,7 @@ endif::[]
 
 You must have the Organization Administrators role to manage users within an Anypoint Platform organization. To manage user permissions for your API version, you must have API Version Owner permissions.
 
-As an administrator of your master organization, you can enable, disable, or delete users. Access this menu by first making sure that the correct business group is selected in the top-right of the screen next to your user name, then clicking the gear icon next to it, and then picking the *Users* link in the left menu.
+As an administrator of your root organization, you can enable, disable, or delete users. Access this menu by first making sure that the correct business group is selected in the top-right of the screen next to your user name, then clicking the gear icon next to it, and then picking the *Users* link in the left menu.
 
 By ticking the checkbox next to a user, additional options related to that user are displayed:
 
@@ -22,11 +22,12 @@ This feature is not available in Anypoint Platform Private Cloud Edition.
 When running Anypoint Platform Private Cloud Edition, you need to configure user management methods such as SSO through a third-party IdP or LDAP.
 --
 
-As an organization administrator of a master organization or of one of its business groups, you can invite new users and manage existing users for your organization on the _Access Management_ Administration page, which you can reach by selecting the *Users* option in your *Access Management* section.
+As an organization administrator of a root organization or of one of its business groups, you can invite new users and manage existing users for your organization on the _Access Management_ Administration page, which you can reach by selecting the *Users* option in your *Access Management* section.
 
 To invite new users to your organization:
 
-. Click *Users* in the left navigation bar.
+include::partial$include-nav-users.adoc[]
+
 . Click *Invite user*.
 . Enter the email addresses of who you want to invite in your organization as a comma-separated list.
 . Optionally, select one or more xref:roles.adoc[roles] to which to assign these users.

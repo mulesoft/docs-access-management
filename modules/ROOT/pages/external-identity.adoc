@@ -44,7 +44,7 @@ After you select an identity provider:
 +
 [NOTE]
 The IdP you select is effective for the entire organization and all business groups.
-* Configure identity management in the Anypoint Platform master organization.
+* Configure identity management in the Anypoint Platform root organization.
 * Configure attribute names on the IdP and Anypoint Platform to match.
 
 For more information, see the documentation for your identity provider.

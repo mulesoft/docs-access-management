@@ -5,7 +5,8 @@ endif::[]
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
-. In the Access Management navigation menu, click *Client Providers*.
+include::partial$include-nav-client-providers.adoc[]
+
 . Click *Add Client Provider*, and then select *OpenAM*.
 +
 The *Add OpenAM client provider* page appears.
