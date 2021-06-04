@@ -20,7 +20,8 @@ To create a child team in the Teams feature interface:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Teams*.
+include::partial$include-nav-teams.adoc[]
+
 . Select *Create Team*.
 . Enter a unique and intuitive name for your child team. +
 You can use only alphanumeric characters, hyphens, commas, periods, and spaces. The character limit is 255.

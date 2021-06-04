@@ -50,7 +50,7 @@ Learn about these specific scopes in the xref:roles.adoc#permission-scopes-for-d
 
 Since _API versions_ and _Products deployment environments_ are grouped under organizations (and optionally under business groups too), to access them you need to have an account that owns the necessary permissions and that belongs to its corresponding organization or business group (if such resource exists).
 
-Roles that are assigned at the master organization level can only reference resources that are at the master organization level, roles that belong to a business group can only reference resources within that business group.
+Roles that are assigned at the root organization level can only reference resources that are at the root organization level, roles that belong to a business group can only reference resources within that business group.
 
 [NOTE]
 --

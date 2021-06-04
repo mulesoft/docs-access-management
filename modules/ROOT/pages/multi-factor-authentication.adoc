@@ -46,7 +46,8 @@ To prevent service disruptions, identify any accounts (_service accounts_) that 
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
-. In the Access Management navigation menu, click *Multi-factor Auth*.
+include::partial$include-nav-mfa.adoc[]
+
 . Select *Required*.
 . If you want to exempt specific users or service accounts from multi-factor authentication, add them to the *Exempt Accounts* section.
 . Click *Save*. +
@@ -62,7 +63,8 @@ To exempt individual accounts from multi-factor authentication:
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
-. In the Access Management navigation menu, click *Multi-factor Auth*.
+include::partial$include-nav-mfa.adoc[]
+
 . In the *Exempt Accounts* section, add the accounts that you want to exempt. +
 Only users who do not use single sign-on (SSO) appear in this list.
 . Click *Save*. +
@@ -118,7 +120,8 @@ To disable multi-factor authentication for all users:
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
-. In the Access Management navigation menu, click *Multi-factor auth*.
+include::partial$include-nav-mfa.adoc[]
+
 . Unselect *Required*.
 . Click *Save*. +
 Multi-factor authentication configuration is no longer required for new users.
@@ -131,7 +134,8 @@ To reset multi-factor authentication for an individual user:
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
-. In the Access Management navigation menu, click *Users*.
+include::partial$include-nav-users.adoc[]
+
 . Click the user whose multi-factor authentication configuration you want to reset. +
 . Click *Reset multi-factor authentication*.
 . Click *Confirm reset MFA*. +

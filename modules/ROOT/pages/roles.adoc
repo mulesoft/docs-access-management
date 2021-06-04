@@ -3,6 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
+[NOTE]
+Roles are now deprecated in favor of the xref:teams.adoc[Teams] feature, but you can still manage roles using business groups. You can now grant most roles can as permissions instead.
+
 A role is a set of pre-defined permissions for each product, or feature, within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role. Roles can be set only for individual users. To assign the same permissions to multiple users at once, use the xref:access-management::teams.adoc[Teams feature].
 
 To manage roles and permissions within Anypoint Platform, you must have the Organization Administrator permission. To manage user permissions for an API version, you must have the API Versions Owner role.
@@ -15,15 +18,11 @@ Anypoint Platform provides two types of roles:
 
 Roles are business group specific, so ensure that you are in the correct business group for which to manage roles by clicking the menu next to your username on the top-right of the screen.
 
-image::switch-suborg.png[]
-
-To access the *Roles* menu in Access Management:
+== Access Roles
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Roles*.
-+
-image::roles-a3471.png[]
+include::partial$include-nav-roles.adoc[]
 
 == Default Roles
 
@@ -83,7 +82,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Request API access terms and conditions
 ** Edit portal terms and conditions
 ** Set custom policies
-** Manage access of third party applications to an API (Specific to the organization administrator of the Master Business Group)
+** Manage access of third party applications to an API (Specific to the organization administrator of the root business group)
 ** Edit users' email addresses
 ** Grant VPC and CloudHub dedicated load balancer permissions
 
@@ -120,7 +119,8 @@ To add a user to a role, the user must belong to the same business group as the 
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-. In the Access Management navigation menu, click *Roles*.
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the default role.
 +
 Default roles do not have a radial button next to them.
@@ -147,7 +147,8 @@ Product permissions are specific to a single environment. If you have multiple e
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Roles*.
+include::partial$include-nav-roles.adoc[]
+
 . Click *Add role*.
 . Enter a *Name* and *Description* for your custom role. +
 Your custom role now appears in your list of roles.
@@ -164,7 +165,8 @@ After creating a custom role, you can assign users to the role.
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-. In the Access Management navigation menu, click *Roles*.
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to add users.
 . Click the *Users* tab, then enter a username or email in the search field.
 . Select the user, then click the *+* icon.
@@ -175,7 +177,8 @@ After creating a custom role, you can assign permissions to the role. If these e
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Roles*.
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to add permission scopes.
 . Click the *Permissions* tab, then select one of the following tabs:
 +
@@ -203,7 +206,8 @@ After creating a custom role, grant the Design Center Developer permission scope
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-. In the Access Management navigation menu, click *Roles*.
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to add users.
 . Click *Permissions*, then click *Design Center*.
 +
@@ -221,7 +225,8 @@ You can associate an API to a custom role. This enables you to create roles that
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-. In the Access Management navigation menu, click *Roles*.
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
@@ -241,7 +246,8 @@ You can associate environment permissions to the custom role. This enables you t
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-. In the Access Management navigation menu, click *Roles*.
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
@@ -267,8 +273,9 @@ You can set up your Anypoint Platform organization so that when a SAML user belo
 
 == See Also
 
+* xref:teams.adoc[Teams]
 * xref:organization.adoc[Organization]
-* xref:managing-permissions.adoc[Managing Permissions]
+* xref:managing-permissions.adoc[Manage Permissions]
 * xref:design-center::index.adoc[Design Center]
 * xref:map-users-roles-ldap-task.adoc[Map Users to Roles in an LDAP Group]
 * xref:environments.adoc[Environments]

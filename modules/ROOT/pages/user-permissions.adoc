@@ -3,8 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Access Management currently provides three ways of managing permissions for users: teams, roles, and individual permissions. The xref:teams.adoc[Teams] feature enables you to manage user permissions by assigning them to groups that mimic the structure of your organization. The xref:roles.adoc[Roles] feature allows you to assign pre-defined sets of permissions to users.
-
+Anypoint Platform currently provides three ways of managing permissions for users: teams, roles (deprecated), and individual permissions. The xref:teams.adoc[Teams] feature enables you to manage user permissions by assigning them to groups that mimic the structure of your organization. The xref:roles.adoc[Roles] feature allows you to assign pre-defined sets of permissions to users.
 
 You can still grant individual permissions to users outside of both teams and roles.
 
@@ -16,7 +15,8 @@ To grant permissions to an individual user:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Users*.
+include::partial$include-nav-users.adoc[]
+
 . Select the user whose permissions you want to modify.
 . Select the product that contains the permission you want to add. For more information about the permissions that are available across Anypoint Platform, see xref:permissions-by-product.adoc[Permissions by Product].
 * If you want to grant the user permissions that apply across the current business group:
