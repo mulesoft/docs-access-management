@@ -40,8 +40,9 @@ In the above example of a SAML assertion, the *Group Attribute* is `Groups`.
 
 After you have created an attribute that contains your groups, you can create a role to map to groups of users in your organization.
 
-. In Anypoint Platform, navigate to *Access Management*.
-. Click *Identity Providers*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Identity Providers*.
 . From *Identity Providers*, select SAML.
 . Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names.
 . Click *Roles*.
@@ -67,8 +68,10 @@ You can use any identity providers that return groups claims on the `UserInfo` o
 You can use groups claims values to create a role for each group of users in your organization.
 
 . Obtain a response to the `UserInfo` or `Token` endpoint that contains a groups claim from your external identity provider.
-. In Anypoint Platform, navigate to *Access Management*.
-. Click *Identity Providers*.
+
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Identity Providers*.
 . From *Identity Providers*, select *OIDC*.
 . If your IdP requires an additional OIDC scope to authorize access to groups claims, enter it in the *Group Scope* field.
 . Verify that the https://jsonata.org[JSONata] query in *Group Attribute JSONata Expression* yields an array of group names from either the `UserInfo` or `Token` endpoint response.
@@ -145,8 +148,9 @@ You can obtain the information you need to map your LDAP group to a role using a
 
 Using a SAML assertion, you can create a role to map to a group of users in your organization.
 
-. In Anypoint Platform, navigate to *Access Management*.
-. Click *Roles*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Roles*.
 . Click *Add Role*.
 . Specify a role name and description.
 . Click *Add Role*.
