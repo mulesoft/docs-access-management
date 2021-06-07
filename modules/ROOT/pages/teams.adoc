@@ -18,13 +18,13 @@ Starting with the “Everyone at <Your Organization>" team, which contains all u
 The Teams feature enables you to mimic the structure of your organization and seamlessly manage permissions and team membership as your organization grows.
 
 After your child teams are created, you can invite new users directly to the appropriate team using email invitations or using the xref:configure-teams#invite-users-with-teams[Teams feature interface].
-When you add a user to a team, you can also specify whether they should be a _team maintainer_ (a user who can manage team membership) or a _member_ (a user who receives the permissions outlined in the team structure). Outside of teams, you can still xref:user-permissions.adoc#grant-permissions-to-an-individual-user.[assign specific permissions to individual users] if they require permissions that should not extend to an entire team.
+When you add a user to a team, you can also specify whether they should be a _team maintainer_ (a user who can manage team membership) or a _member_ (a user who receives the permissions outlined in the team structure). Outside of teams, you can still xref:users.adoc#grant-user-permissions[assign specific permissions to individual users] if they require permissions that should not extend to an entire team.
 
 Adopting a team structure in your organization also enables you to share assets more easily. In Anypoint Exchange, you can share an asset with an entire team rather than having to select each user individually.
 
 [NOTE]
 To manage teams permissions, you must have the Organization Administrator permission over the business group that contains resources that you want to give access over to a specific user or a team.
-You can modify any permissions for all teams in your organization only if you have the Organization Administrator permission over the whole organization.
+You can modify any permissions for all teams in your organization only if you have the Organization Administrator permission over the root organization.
 
 == Permissions Structure
 
@@ -48,12 +48,12 @@ For an example of a teams structure applied across an organization, see xref:tea
 
 == Grant Permissions to Individual Users
 
-If you have the Organization Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:users.adoc#granting-permissions-and-roles-to-users[Grant Permissions and Roles to Users].
+If you have the Organization Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:users.adoc#grant-user-permissions[Grant Permissions and Roles to Users].
 
 == See Also
 
 * xref:configure-teams.adoc[Configure Teams]
 * xref:teams-example.adoc[Example Teams Structure]
 * xref:users.adoc#inviting-a-user-to-anypoint-platform[Inviting a User to Anypoint Platform]
-* xref:users.adoc#granting-permissions-and-roles-to-users[Grant Permissions and Roles to Users]
+* xref:users.adoc#grant-user-permissions[Grant Permissions and Roles to Users]
 * xref:map-users-roles-teams.adoc[Map SSO Users to Teams]

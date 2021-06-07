@@ -14,8 +14,6 @@ If you are have the Organization Administrator permission and your organization 
 
 Business groups provide more fine-grained control over access to resources.
 
-image::organization-2b25c.png[]
-
 Because business groups are hierarchical, the owner of a parent business group automatically has and retains administrator permissions for any child business group of that parent, even it they make another Organization Administrator user owner of a child business group.
 
 Conversely, owners of child business groups cannot:
@@ -34,11 +32,8 @@ include::partial$include-nav-steps-org-admin.adoc[]
 include::partial$include-nav-business-groups.adoc[]
 
 . To create the first business group for your organization, click *Create business group*.
-. To create a child business group, next to the business group under which you want to create a new business group, click the `...` menu.
+. To create a child business group, next to the business group under which you want to create a new business group, click the *...* menu.
 . Click *Create child group*.
-+
-image::organization-20885.png[]
-+
 . In the dialog box, enter:
   * *Business Group name*: Name for the new business group.
   * *Owner*: Assign an existing user, with the Organization Administrator permission, as the business group owner.
@@ -53,8 +48,6 @@ image::organization-20885.png[]
 This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses.
 . Click *Add Business Group*. +
 The business group appears in the hierarchy, under the root organization.
-
-image::organization-9fa5f.png[]
 
 [NOTE]
 --
@@ -135,7 +128,7 @@ include::partial$include-nav-business-groups.adoc[]
 . Enter the number of vCores you want the business group to have.
 . Click *Save changes*.
 
-The *Business Group Info* window includes a resource slider showing a minimum value that equals the amount of the resource that is reassigned to child business groups plus the amount of the resource currently in use by the business group. Unavailable resources are not represented by a slider in the window.
+The *Business Group Info* window includes a resource counter showing a minimum value that equals the amount of the resource that is reassigned to child business groups plus the amount of the resource currently in use by the business group. Unavailable resources are not represented by a slider in the window.
 
 === See Also
 

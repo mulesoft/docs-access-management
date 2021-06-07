@@ -3,9 +3,10 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You must have the Organization Administrators role to manage users within an Anypoint Platform organization. To manage user permissions for your API version, you must have API Version Owner permissions.
+You must have the Organization Administrator permission to manage users within an Anypoint Platform organization.
+To manage user permissions for your API version, you must have the API Version Owner permission.
 
-As an administrator of your root organization, you can enable, disable, or delete users. Access this menu by first making sure that the correct business group is selected in the top-right of the screen next to your user name, then clicking the gear icon next to it, and then picking the *Users* link in the left menu.
+As an administrator of your root organization, you can enable, disable, or delete users.
 
 By ticking the checkbox next to a user, additional options related to that user are displayed:
 
@@ -22,7 +23,7 @@ This feature is not available in Anypoint Platform Private Cloud Edition.
 When running Anypoint Platform Private Cloud Edition, you need to configure user management methods such as SSO through a third-party IdP or LDAP.
 --
 
-As an organization administrator of a root organization or of one of its business groups, you can invite new users and manage existing users for your organization on the _Access Management_ Administration page, which you can reach by selecting the *Users* option in your *Access Management* section.
+As an organization administrator of a root organization or of one of its business groups, you can invite new users and manage existing users for your organization.
 
 To invite new users to your organization:
 
@@ -43,12 +44,12 @@ Invited users have access to the same set of resources as you (although they may
 
 Click *Pending Invites* to view all invitations that have not yet been accepted. Select the ones you need to manage, and click *Re-send Invite* or *Cancel Invite*.
 
+[[grant-user-permissions]]
+== Grant Permissions and Roles to Users
 
-== Granting Permissions and Roles to Users
+Organization administrators can manage user access using xref:teams.adoc[teams], xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually.
 
-Click a user name to access more information about that user, add roles and permissions to it, or reset its password.
-
-image::users-a3f39.png[]
+In the *Users* page, click a user name to access more information about that user, grant roles and permissions, or reset their password.
 
 By default, in every new organization and business group, you get three options:
 
@@ -61,7 +62,23 @@ By default, in every new organization and business group, you get three options:
 Roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
 --
 
-If necessary, you can also remove user permissions, but keep in mind that if users have been granted their permission through an assigned role, you cannot view or remove those role-based permissions here--you must do it using the xref:roles.adoc[Roles] section.
+If necessary, you can also remove user permissions, but note that if users have been granted their permissions through an assigned role, you can remove role-based permissions using only the xref:roles.adoc[Roles] functionality. You cannot view or remove role-based permissions in the *Users* page.
+
+To grant permissions to an individual user:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-users.adoc[]
+
+. Select the user whose permissions you want to modify.
+. Select the product that contains the permission you want to add. For more information about the permissions that are available across Anypoint Platform, see xref:permissions-by-product.adoc[Permissions by Product].
+* If you want to grant the user permissions that apply across the current business group:
+.. Select the permissions from the top *Permission(s)* drop-down.
+.. Select the + button.
+* If you want to apply a permission only across a specific environment:
+.. Select the environments using the *Environments* drop-down.
+.. Select the permissions from the *Permission(s)* drop-down that is located next to the *Environment(s)* drop-down.
+.. Select the + button.
 
 == Managing External Users of Your Public APIs
 
