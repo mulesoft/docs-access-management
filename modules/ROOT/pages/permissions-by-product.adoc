@@ -39,17 +39,12 @@ Or:
 * API Versions Owner
 * Portals Viewer
 
-== Monitoring
-
-* Anypoint Monitoring Viewer
-* Anypoint Monitoring User
-
-== Data Gateway
+== Anypoint Data Gateway
 
 * Data Gateway Administrator
 * Data Gateway Viewer
 
-== DataGraph
+== Anypoint DataGraph
 
 * Contribute
 * Consume
@@ -65,7 +60,12 @@ Or:
 * Exchange Contributor
 * Exchange Viewer
 
-== MQ
+== Anypoint Monitoring
+
+* Anypoint Monitoring Viewer
+* Anypoint Monitoring User
+
+== Anypoint MQ
 
 * Clear destinations
 * Manage clients
@@ -73,9 +73,9 @@ Or:
 * View clients
 * View destinations
 
-== Partner Manager
+== Anypoint Partner Manager
 
-Depending on your organization, you might see one of the following sets of permissions available for Partner Manager.
+Depending on your organization, you might see one of the following sets of permissions available for Anypoint Partner Manager.
 
 * Partner Manager Administrator
 * View Host, Partners and Message Flows
@@ -130,6 +130,6 @@ Or:
 * Manage Tokenization Services
 * Manage Tokenization Formats
 
-== Visualizer
+== Anypoint Visualizer
 
 * Visualizer Editor
