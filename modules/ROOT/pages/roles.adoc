@@ -281,6 +281,9 @@ When you convert or merge a role, the role is deleted.
 
 When you convert roles to permissions, users keep the same permissions that they previously received with roles.
 
+[WARNING]
+When you convert a role to permissions, the users that belonged to the role are no longer grouped according to their permissions and must be managed individually. Additionally, roles that can now be applied as (or converted to) permissions, such as the Exchange Contributors permission, can be managed only while you are using the Teams feature. 
+
 include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-roles.adoc[]
