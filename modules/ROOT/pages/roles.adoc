@@ -6,9 +6,9 @@ endif::[]
 [NOTE]
 Roles are now deprecated in favor of the xref:teams.adoc[Teams] feature, but you can still manage roles using business groups. You can now grant most roles can as permissions instead.
 
-A role is a set of pre-defined permissions for each product, or feature, within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role. Roles can be set only for individual users. To assign the same permissions to multiple users at once, use the xref:access-management::teams.adoc[Teams feature].
+A role is a set of pre-defined permissions for each product, or feature, within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role. Roles can be set only for individual users. Use the xref:access-management::teams.adoc[Teams feature] for an access solution that works across business groups.
 
-To manage roles and permissions within Anypoint Platform, you must have the Organization Administrator permission. To manage user permissions for an API version, you must have the API Versions Owner role.
+To manage roles and permissions within Anypoint Platform, you must have the Organization Administrator permission. To manage user permissions for an API version, you must have the API Versions Owner permission.
 
 Anypoint Platform provides two types of roles:
 

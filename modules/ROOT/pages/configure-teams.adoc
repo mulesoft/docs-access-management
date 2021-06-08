@@ -41,7 +41,7 @@ The child team appears under its parent team in the list of teams. You can also 
 
 When you begin using the Teams feature, your organization’s main team is named “Everyone at <Your Organization>” and does not have any permissions assigned.
 If you have the Organization Administrator permission, you can configure permissions for this team in addition to child teams.
-If you invite users to “Everyone at <Your Organization>” without assigning any permissions to that team, your users cannot perform execute tasks or view assets.
+If you invite users to “Everyone at <Your Organization>” without assigning any permissions to that team, your users cannot execute tasks or view assets in your organization.
 
 If you have the Organization Administrator permission in a specific business group but not your entire organization, you can assign these permissions to any of existing teams or users within your organization.
 
