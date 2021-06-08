@@ -48,7 +48,7 @@ For an example of a teams structure applied across an organization, see xref:tea
 
 == Opt in to Teams
 
-include::partial$include-nav-no-permissions.adoc[]
+include::partial$include-nav-steps-no-permissions.adoc[]
 
 . In the Access Management navigation menu, click *Try New Features*.
 . Click *Start Using These Features*. +
