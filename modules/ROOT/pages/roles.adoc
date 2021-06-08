@@ -273,6 +273,58 @@ You can set up your Anypoint Platform organization so that when a SAML user belo
 
 == Migrate Roles to Teams
 
+After you opt in to the Teams feature, you can convert existing roles into permissions, convert roles to teams, or merge roles with teams.
+
+When you convert or merge a role, the role is deleted.
+
+=== Convert a Role to Permissions
+
+When you convert roles to permissions, users keep the same permissions that they previously received with roles.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
+. Next to the role that you want to convert, click the *...* menu.
+. Click *Convert to permissions...*.
+. Click *Convert to Permissions*.
++
+The users who previously had the role are granted the same permissions as the role, and the role is deleted.
+
+=== Convert a Role to a Team
+
+When you convert a role to a team, you create a new team that contains the users who previously held the converted role. The team you create also inherits permissions from the parent team under which you create the new team.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
+. Next to the role that you want to convert, click the *...* menu.
+. Click *Convert to team...*.
+. Enter a name for your new team. +
+You can use alphanumeric characters, hyphens, and spaces in your team name.
++
+. Select a parent team. +
+Note that the team you are creating also inherits permissions from the parent team that you select.
++
+. Click *Convert to Team*.
++
+The users who previously had the role are added to a new team that has the same permissions as the role, and the role is deleted.
+
+=== Merge a Role with a Team
+
+When you merge a role with a team, the users that previously had the role keep those permissions and also obtain permissions from the team they have joined.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
+. Next to the role that you want to convert, click the *...* menu.
+. Click *Merge with team...*.
+. Select the team with which you want to merge the members who have the role.
+. Click *Merge with Team*.
++
+The users who previously had the role are added to the selected team along with the respective permissions, and the role is deleted.
 
 
 == See Also
