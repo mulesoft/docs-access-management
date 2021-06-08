@@ -31,6 +31,7 @@
  * xref:teams.adoc[Teams]
   ** xref:configure-teams.adoc[Configure Teams]
   ** xref:teams-example.adoc[Example Teams Structure]
+  ** xref:permissions-by-product.adoc[Permissions in Anypoint Platform]
 * xref:external-organization-access.adoc[External Access]
 * xref:audit-logging.adoc[Audit Logs]
 * xref:managing-permissions.adoc[Manage Permissions]
