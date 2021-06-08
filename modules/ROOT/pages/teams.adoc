@@ -42,7 +42,6 @@ When you configure permissions in your organization, you should give your organi
 
 Each team has a team maintainer who can add new users to their own team. If you have the Administrator permission over your root organization, you can add users to any team and select whether they are members or maintainers. A team maintainer can only assign members to their specific team or child teams. Team maintainers can also designate new maintainers for teams they manage.
 
-Any user can view their team’s hierarchy in the *Teams* section in Access Management.
 
 For an example of a teams structure applied across an organization, see xref:teams-example.adoc[Example Teams Structure].
 
