@@ -309,7 +309,7 @@ Note that the team you are creating also inherits permissions from the parent te
 +
 . Click *Convert to Team*.
 +
-The users who previously had the role are added to a new team that has the same permissions as the role, and the role is deleted.
+The users who previously had the role are added to a new team that has the same permissions as the role, and the role is deleted. Any external names that were associated with the role will be associated with the new team. 
 
 === Merge a Role with a Team
 
@@ -324,7 +324,7 @@ include::partial$include-nav-roles.adoc[]
 . Select the team with which you want to merge the members who have the role.
 . Click *Merge with Team*.
 +
-The users who previously had the role are added to the selected team along with the respective permissions, and the role is deleted.
+The users who previously had the role are added to the selected team along with the respective permissions, and the role is deleted. Any external names that were associated with the role will be associated with the selected team.
 
 
 == See Also
