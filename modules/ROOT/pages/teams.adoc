@@ -18,7 +18,8 @@ Starting with the “Everyone at <Your Organization>" team, which contains all u
 The Teams feature enables you to mimic the structure of your organization and seamlessly manage permissions and team membership as your organization grows.
 
 After your child teams are created, you can invite new users directly to the appropriate team using email invitations or using the xref:configure-teams#invite-users-with-teams[Teams feature interface].
-When you add a user to a team, you can also specify whether they should be a _team maintainer_ (a user who can manage team membership) or a _member_ (a user who receives the permissions outlined in the team structure). Outside of teams, you can still xref:users.adoc#grant-user-permissions[assign specific permissions to individual users] if they require permissions that should not extend to an entire team.
+
+When you add a user to a team, you can also specify whether they should be a _team maintainer_ (a user who receives the permissions outlined in the team structure and manages team membership) or a _member_ (a user who receives the permissions outlined in the team structure). Outside of teams, you can still xref:users.adoc#grant-user-permissions[assign specific permissions to individual users] if they require permissions that should not extend to an entire team.
 
 Adopting a team structure in your organization also enables you to share assets more easily. In Anypoint Exchange, you can share an asset with an entire team rather than having to select each user individually.
 
@@ -30,8 +31,8 @@ You can modify any permissions for all teams in your organization only if you ha
 
 When you are planning your organization’s team structure, consider the following:
 
-* Each member of your organization is a member of the “Everyone at <Your Organization> team.
-* Your team structure should reflect the structure of your organization so that you can plan your teams and configure permissions according to member needs.
+* Each member of your organization is a member of the “Everyone at <Your Organization> team, or the _root_ team.
+* Your team structure should reflect the structure of your organization so that you can plan your teams and configure permissions according to member needs. However, you can move teams as the needs of your organization change.
 * Teams names must be unique across your organization.
 * Your organization can have up to 2000 teams.
 * Your teams can be nested up to 10 levels, including the “Everyone at <Your Organization> team.
@@ -42,7 +43,6 @@ When you configure permissions in your organization, you should give your organi
 
 Each team has a team maintainer who can add new users to their own team. If you have the Administrator permission over your root organization, you can add users to any team and select whether they are members or maintainers. A team maintainer can only assign members to their specific team or child teams. Team maintainers can also designate new maintainers for teams they manage.
 
-Any user can view their team’s hierarchy in the *Teams* section in Access Management.
 
 For an example of a teams structure applied across an organization, see xref:teams-example.adoc[Example Teams Structure].
 
