@@ -4,12 +4,12 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Every root organization has a _root team_ that appears by default. Every user in your organization is automatically a member of this root team and receives all permissions therein.
-You can create _child teams_ under the parent team and configure those teams to have different sets of permissions.
+Because every user in your organization team is automatically a member of the root organization team, each inherits all permissions of the root org team.
+You can create _child teams_ under the parent team and configure those teams to have different sets of permissions based on the needs of the respective team members.
 After you create child teams and assign permissions, you can add users to each of your teams according to what permissions the users should have.
 Further, you can assign _team maintainers_ who can modify users and permissions within the teams they maintain.
 
-Team maintainers can do the following operations on their teams: 
+Team maintainers can manage their teams in the following ways: 
 
 * Change the team name
 * Add or remove members from the team
@@ -19,10 +19,13 @@ Team maintainers can do the following operations on their teams:
 
 == Create a Child Team
 
-If you have the Organization Administrator permission in your root organization, you can create child teams under any existing parent teams, including the root team. Users who have the Organization Administrator permission in business groups can create child teams under the root team and then become team maintainers for that team. Additionally, team maintainers can create child teams under teams that they maintain.
-The child team inherits permissions from its parent team, but you configure additional permissions for its users.
+You can create child teams under the following circumstances:
+- If you are the Organization Administrator for root, you can create child teams at any org level.
+- If you are the Organization Administrator for a business group, you can create child teams at the root level and become the maintainer for that team.
+- If you are a team maintainer, you can create child teams for that team.
+All child teams inherit user permissions from their parents, but you configure additional permissions.
 
-To create a child team in the Teams feature interface:
+To create a child team in the *Teams* page:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -35,15 +38,15 @@ You can use only alphanumeric characters, hyphens, commas, periods, and spaces. 
 . Select a parent team.
 . Select *Save*.
 
-The child team appears under its parent team in the list of teams. You can also select a parent team and navigate to the *Child teams* tab to see a list of all child teams under that parent team.
+Your new child team appears under its parent team in the list of teams. You can select any parent team in that list and navigate to its *Child teams* tab to see a list of all that parent team's child teams.
 
 == Manage Team Permissions
 
-When you begin using the Teams feature, your organization’s main team is named “Everyone at <Your Organization>” and does not have any permissions assigned.
-If you have the Organization Administrator permission, you can configure permissions for this team in addition to child teams.
-If you invite users to “Everyone at <Your Organization>” without assigning any permissions to that team, your users cannot execute tasks or view assets in your organization.
+When you begin using the Teams feature, your organization’s root team is named “Everyone at <Root Organization>” and does not have any permissions assigned. 
+If you invite users to “Everyone at <Root Organization>” without assigning any permissions to that team, your users cannot execute tasks or view assets in your organization.
+If you have the Organization Administrator permission, you can configure permissions for this team, in addition to those for child teams.
 
-If you have the Organization Administrator permission in a specific business group but not your entire organization, you can assign these permissions to any of existing teams or users within your organization.
+If you have the Organization Administrator permission in a specific business group but not your entire organization, you can assign permissions to any existing teams or users within your organization.
 
 To configure permissions for teams in the Teams feature interface:
 
@@ -61,14 +64,14 @@ The permissions you selected appear in the *Permissions* section for your team.
 
 == Manage Team Users
 
-If you have the Organization Administrator permission in your root organization, you can add members to existing teams using three methods:
+If you have the Organization Administrator permission in your root organization, you can add users to existing teams using three methods:
 
 * The Teams feature interface
 * Sending an invitation to a new user via email
 * External group mapping
 
 [[invite-users-with-teams]]
-=== Add Users using the Teams Interface
+=== Add Users Via the Teams Interface
 
 include::partial$include-nav-steps-team-maintainer.adoc[]
 
@@ -81,13 +84,13 @@ A user who is added as a team maintainer receives team maintainer permissions as
 . Select *Add member*. +
 The user is added to the team and receives the team’s permissions.
 
-=== Add Users using Email Invitations
+=== Add Users Via Email Invitations
 
-When you send an email to invite a new user to your organization, you can specify teams to which the user is added automatically when they accept your invitation. The user is also automatically added to your organization’s root team, known as “Everyone at <Your Organization>” by default.
+When you send an email to invite a new user to your organization, you can specify teams to which the user is added automatically when they accept your invitation. The user is also automatically added to your organization’s root team, known as “Everyone at <Root Organization>” by default.
 
 For more information about inviting a user to an existing team via email, see xref:users.adoc#inviting-a-user-to-anypoint-platform[Inviting a User to Anypoint Platform].
 
-=== Add Users using External Group Mapping
+=== Add Users Via External Group Mapping
 
 If you use single sign-on (SSO) using SAML, OIDC, or LDAP, you can map SSO users to teams. For more information, see xref:map-users-roles-teams.adoc[Map SSO Users to Teams].
 
@@ -99,12 +102,12 @@ You can designate a team maintainer to delegate team maintenance responsibilitie
 
 include::partial$include-nav-steps-team-maintainer-admin.adoc[]
 
-. In the *Members* section, navigate to the user whom you want to designate as a team maintainer.
-. In the *Type* selector, select either *Maintainer* or *Member*. +
-The team membership for the user is updated.
+. In the *Members* section, navigate to the user you want to designate as a team maintainer.
+. In the *Type* drop-down, select either *Maintainer* or *Member*. +
+The team membership status for the user is updated.
 
 [[change-team-name]]
-== Change the Name of  a Team
+== Change the Name of Your Team
 
 include::partial$include-nav-steps-team-settings.adoc[]
 
@@ -114,7 +117,7 @@ You can use only alphanumeric characters, hyphens, commas, periods, and spaces. 
 . Click *Save changes*. +
 Your team is renamed.
 
-== Move a Team
+== Move Your Team
 
 include::partial$include-nav-steps-team-settings.adoc[]
 
@@ -124,7 +127,7 @@ Your team and its child teams now reside under the parent team you selected.
 
 == Delete a Team
 
-You must have the Organization Administrator permission to delete a team. Once you delete a team, the team cannot be restored. You cannot delete the root team that represents your entire root organization.
+You must have the Organization Administrator permission to delete a team. After you delete a team, the team cannot be restored. You cannot delete the root team that represents your entire root organization.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -132,4 +135,4 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . Click *Delete...*.
 . Enter the name of the team that you want to delete.
 . Click *Delete*. +
-The team is deleted and no longer appears in the Teams page.
+The team is deleted and no longer appears in the *Teams* page.
