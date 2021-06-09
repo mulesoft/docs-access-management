@@ -95,7 +95,7 @@ To interact with a business group, you must be granted a permission within that 
 
 Members granted permissions in a business group can view and access the business group, but to access certain resources, you must have the appropriate permissions or roles assigned to you. For example, to access APIs and CloudHub deployments in the business group, you must be assigned roles that belong to that business group.
 
-For example, if you have the Organization Administrator permission in BusinessGroupA, you can grant users access to APIs and CloudHub deployments in BusinessGroupA.
+For example, if you have the Organization Administrator permission in BusinessGroupA, you can grant users and teams access to APIs and CloudHub deployments in BusinessGroupA.
 
 If you also have the Organization Administrator permission in BusinessGroupB, this does not mean that you can grant access to APIs and CloudHub deployments in BusinessGroupA to users in BusinessGroupB and vice versa.
 
