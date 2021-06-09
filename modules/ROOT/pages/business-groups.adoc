@@ -91,7 +91,7 @@ If you do not have the Organization Administrator permission, you can view only 
 
 Roles can be applied at the root organization level as well as at the business group level. However, each controls different resources. Roles and permissions assigned to a user in one particular business group are independent of the roles and permissions assigned to that same user in other business groups.
 
-To belong to a business group, you must be granted a role within that business group. Once you are visible in a business group, you can be granted individual permissions in that business group. All users, regardless of which business groups they are in, belong to the root organization and can be assigned individual permissions in the root organization.
+To interact with a business group, you must be granted a permission within that business group, or be a member of a team that is granted permission within that business group. All users, regardless of which business groups they are in, belong to the root organization.
 
 Members that are added to a business group can view and access the business group, but to access certain resources, you must have the appropriate roles assigned to you. For example, to access APIs and CloudHub deployments in the business group, you must be assigned roles that belong to that business group.
 
@@ -99,7 +99,7 @@ For example, if you have the Organization Administrator permission in BusinessGr
 
 If you also have the Organization Administrator permission in BusinessGroupB, this does not mean that you can grant access to APIs and CloudHub deployments in BusinessGroupA to users in BusinessGroupB and vice versa.
 
-Resources that belong to the root organization require roles specified at the root organization level.
+Resources that belong to the root organization require permissions specified at the root organization level.
 
 Users who are assigned the Organization Administrator permission in the root organization, or any business group, are automatically assigned that same role in any child business group created within that business group, so are automatically visible in the child business group. This does not apply to users who are assigned the Organization Administrator permission after a child business group has been created.
 
@@ -128,7 +128,7 @@ include::partial$include-nav-business-groups.adoc[]
 . Enter the number of vCores you want the business group to have.
 . Click *Save changes*.
 
-The *Business Group Info* window includes a resource counter showing a minimum value that equals the amount of the resource that is reassigned to child business groups plus the amount of the resource currently in use by the business group. Unavailable resources are not represented by a slider in the window.
+The *Business Group Info* window includes a resource counter showing a minimum value that equals the amount of the resource that is reassigned to child business groups plus the amount of the resource currently in use by the business group. Unavailable resources are not represented in the window.
 
 === See Also
 
