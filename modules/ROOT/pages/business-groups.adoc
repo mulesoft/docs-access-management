@@ -93,7 +93,7 @@ Roles can be applied at the root organization level as well as at the business g
 
 To interact with a business group, you must be granted a permission within that business group, or be a member of a team that is granted permission within that business group. All users, regardless of which business groups they are in, belong to the root organization.
 
-Members that are added to a business group can view and access the business group, but to access certain resources, you must have the appropriate roles assigned to you. For example, to access APIs and CloudHub deployments in the business group, you must be assigned roles that belong to that business group.
+Members granted permissions in a business group can view and access the business group, but to access certain resources, you must have the appropriate permissions or roles assigned to you. For example, to access APIs and CloudHub deployments in the business group, you must be assigned roles that belong to that business group.
 
 For example, if you have the Organization Administrator permission in BusinessGroupA, you can grant users access to APIs and CloudHub deployments in BusinessGroupA.
 
