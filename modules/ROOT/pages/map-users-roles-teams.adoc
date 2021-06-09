@@ -108,9 +108,7 @@ Given that groups claim, the JSONata expression is `$split(custom_attributes.Per
 You can obtain the information you need to map your LDAP group to a team or role using a SAML assertion. Note that user management through LDAP is available only for Anypoint Platform Private Cloud Edition.
 
 Example string from your SAML assertion AttributeValue to the External Group Name:
-+
-SAML AttributeValue:
-+
+
 [source,xml,linenums]
 ----
 <saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -118,7 +116,7 @@ SAML AttributeValue:
 ----
 
 Mapping:
-+
+
 image::external-identity-cfb1e.png[]
 
 == Map SSO Users to Teams
@@ -179,5 +177,5 @@ The SSO users associated with the groups you designated are assigned the role.
 
 == See Also
 
-xref:teams.adoc[Teams]
-xref:roles.adoc[Role]
+* xref:teams.adoc[Teams]
+* xref:roles.adoc[Role]
