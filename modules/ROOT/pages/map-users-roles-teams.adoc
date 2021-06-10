@@ -8,7 +8,7 @@ endif::[]
 You can map users in a federated organization's group to a team or role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
 
 After you have mapped them, users in an organization can log in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. +
-This helps to ensure secure credentials and to maintain organizational teams or roles for accessing privileged information.
+This helps to ensure secure credentials and to maintain organizational structure for accessing privileged information.
 
 Anypoint Platform requires different information from your identity provider based on whether you use SAML, OpenID Connect, or LDAP.
 
@@ -37,6 +37,8 @@ To prevent security vulnerabilities, Anypoint Platform requires you to create an
 ----
 
 In the above example of a SAML assertion, the *Group Attribute* is `Groups`.
+
+Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names.
 
 == Configure Multiple Group Mappings for Single Sign-On Using OpenID Connect (OIDC)
 
@@ -121,7 +123,7 @@ image::external-identity-cfb1e.png[]
 
 == Map SSO Users to Teams
 
-You can map SSO users to teams by including the group names or SAML assertions.
+You can map SSO users to teams by including their group names.
 
 If a user has multiple group names that map to a single team, the group name that grants the most permissions is used. For example, if the Acme team has a Member group of `engineering-all` and a Maintainer group of `engineering-managers`, a user with both `engineering-all` and `engineering-managers` group names becomes a maintainer. If a user is explicitly designated as a maintainer of a team and has a group name that gives them member status, the group name is ignored, and the user remains a maintainer.
 
@@ -164,11 +166,8 @@ include::partial$include-nav-roles.adoc[]
 . Click *Set external group mapping*.
 . Under *External group names*, enter one of the following: +
 
-* SAML: The group attribute that comes from your array of SAML groups +
-Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names.
-+
-* OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses +
-If your IdP requires an additional OIDC scope to authorize access to groups claims, enter it in the *Group Scope* field, and verify that the https://jsonata.org[JSONata] query in *Group Attribute JSONata Expression* yields an array of group names from either the `UserInfo` or `Token` endpoint response.
+* SAML: The group attribute that comes from your array of SAML groups 
+* OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
 +
 * LDAP: The string from your SAML assertion AttributeValue
 
