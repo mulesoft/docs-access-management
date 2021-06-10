@@ -48,7 +48,7 @@ If you have the Organization Administrator permission, you can configure permiss
 
 If you have the Organization Administrator permission in a specific business group but not your entire organization, you can assign permissions to any existing teams or users within your organization.
 
-To configure permissions for teams in the Teams feature interface:
+To configure permissions for teams in the *Teams* page:
 
 include::partial$include-nav-steps-team-maintainer.adoc[]
 
@@ -60,7 +60,7 @@ include::partial$include-nav-steps-team-maintainer.adoc[]
 The permissions you selected appear alongside the business groups and environments to which they apply.
 +
 . Select *Apply permissions*. +
-The permissions you selected appear in the *Permissions* section for your team.
+The permissions you selected now apply to team members and appear in the *Permissions* section for your team.
 
 == Manage Team Users
 

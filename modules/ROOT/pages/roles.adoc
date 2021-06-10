@@ -4,9 +4,9 @@ include::_attributes.adoc[]
 endif::[]
 
 [NOTE]
-Roles are now deprecated in favor of the xref:teams.adoc[Teams] feature, but you can still manage roles using business groups. You can now grant most roles can as permissions instead.
+Roles are now deprecated in favor of the xref:teams.adoc[Teams] feature, but you can still manage roles using business groups. You grant most roles as permissions instead.
 
-A role is a set of pre-defined permissions for each product, or feature, within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role. Roles can be set only for individual users. Use the xref:access-management::teams.adoc[Teams feature] for an access solution that works across business groups.
+A _role_ is a set of predefined permissions controlling access to each product or feature within Anypoint Platform. Depending on the product, you can use predefined roles with standard permissions, or you can specify your own permissions for each role. Roles are set only for individual users. Use the xref:access-management::teams.adoc[Teams feature] for an access solution that works across business groups.
 
 To manage roles and permissions within Anypoint Platform, you must have the Organization Administrator permission. To manage user permissions for an API version, you must have the API Versions Owner permission.
 
@@ -82,7 +82,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Request API access terms and conditions
 ** Edit portal terms and conditions
 ** Set custom policies
-** Manage access of third party applications to an API (Specific to the organization administrator of the root business group)
+** Manage access of third-party applications to an API (specific to the organization administrator of the root business group)
 ** Edit users' email addresses
 ** Grant VPC and CloudHub dedicated load balancer permissions
 
@@ -292,11 +292,11 @@ include::partial$include-nav-roles.adoc[]
 . Click *Convert to permissions...*.
 . Click *Convert to Permissions*.
 +
-The users who previously had the role are granted the same permissions as the role, and the role is deleted.
+The users who previously had the role are granted the same permissions that the role granted them, and the role is deleted.
 
 === Convert a Role to a Team
 
-When you convert a role to a team, you create a new team that contains the users who previously held the converted role. The team you create also inherits permissions from the parent team under which you create the new team.
+When you convert a role to a team, you create a new team that contains the users who previously held the converted role. The team you create also inherits permissions from the parent team under which you create it.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -312,11 +312,11 @@ Note that the team you are creating also inherits permissions from the parent te
 +
 . Click *Convert to Team*.
 +
-The users who previously had the role are added to a new team that has the same permissions as the role, and the role is deleted. Any external names that were associated with the role will be associated with the new team. 
+The users who previously had the role are added to a new team that has the same permissions as those granted by the role, and the role is deleted. Any external names formerly associated with the role are associated with the new team. 
 
 === Merge a Role with a Team
 
-When you merge a role with a team, the users that previously had the role keep those permissions and also obtain permissions from the team they have joined.
+When you merge a role with a team, the users that previously had the role keep the permissions granted by that role and also obtain permissions included in the team they have joined.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -327,7 +327,7 @@ include::partial$include-nav-roles.adoc[]
 . Select the team with which you want to merge the members who have the role.
 . Click *Merge with Team*.
 +
-The users who previously had the role are added to the selected team along with the respective permissions, and the role is deleted. Any external names that were associated with the role will be associated with the selected team.
+The users who previously had the role are added to the selected team along with the role permissions, and the role is deleted. Any external names formerly associated with the role are associated with the selected team.
 
 
 == See Also
