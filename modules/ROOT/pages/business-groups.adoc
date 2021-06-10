@@ -128,7 +128,7 @@ include::partial$include-nav-business-groups.adoc[]
 . Enter the number of vCores you want the business group to have.
 . Click *Save changes*.
 
-The *Business Group Info* window includes a resource counter showing a minimum value that equals the amount of the resource that is reassigned to child business groups plus the amount of the resource currently in use by the business group. Unavailable resources are not represented in the window.
+The *Business Group Info* window includes a resource counter that shows a value representing only available resources, the sum of those resources reassigned to child business groups plus those currently in use by the selected business group. 
 
 === See Also
 
