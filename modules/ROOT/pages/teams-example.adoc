@@ -18,7 +18,7 @@ This team represents your organization and root team, and every user in your org
 ** Exchange Viewer
 * Engineering +
 +
-The first child team of the Acme team, this team includes all of Acme’s engineers, but it excludes Acme’s other members, such as the Marketing and Partner teams. The Engineering team inherits permissions from the Everyone at Acme team, but you can give it additional permissions as needed. You can set permissions that allow the members of the Engineering team to deploy code to preproduction environments such as Sandbox and Design, but you can exclude permissions to deploy to production. To do this, you must configure the following permissions for the Engineering team:
+The first child team of the Acme team, this team includes all of Acme’s engineers, but it excludes Acme’s other members, such as the Marketing and Partner teams. The Engineering team inherits permissions from the Everyone at Acme team, but you can give it additional permissions as needed. You can set permissions that allow the members of the Engineering team to deploy code to preproduction environments such as sandbox and design, but you can exclude permissions to deploy to production. To do this, you must configure the following permissions for the Engineering team:
 ** Deploy API Proxies (applicable to sandbox and design environments)
 ** Design Center Developer
 ** Exchange Viewer
