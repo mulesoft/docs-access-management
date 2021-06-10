@@ -8,49 +8,49 @@ This section explains how permissions work across different products and APIs ma
 
 == Assumptions
 
-This page assumes that you have an Organization Administrator role in your organization, that you have been assigned as the administrator of one of the business groups of your Organization, or that you have API Version Owner permissions and that you want to manage user permissions for an API version, a business group or the entire organization.
+This page assumes that you have an Organization Administrator permission in your organization, that you have been assigned as the administrator of one of the business groups of your Organization, or that you have API Version Owner permissions and that you want to manage user permissions for an API version, a business group or the entire organization.
 
-== How Permissions Work in the Anypoint Platform
+== How Permissions Work in Anypoint Platform
 
-In the Anypoint Platform, users belong to an organization and have a set of *roles* and *permissions*.
+In the Anypoint Platform, users belong to an organization and have a set of permissions. These permissions are assigned using xref:teams.adoc[teams], xref:roles.adoc[roles] (deprecated), or by xref:users.adoc#grant-user-permissions[granting permissions to users individually].
 
-Each role contains a list of _permissions_ that define what a user that holds that role can do with the specific resources it scopes. +
-Certain Roles come with a set of default permissions. As an Organization Administrator, you can create your customized roles and assign the permissions you see fit, or, depending on the product, you can add permissions directly to a specific user, without the need for roles.
+The Teams feature enables you to create groups of users and then assign the members of those groups certain permissions across multiple business groups. As an Organization Administrator, you can create and modify teams and assign cascading permissions according to organizational structure.
+
+Each role (deprecated) contains a list of permissions that define what a user that holds that role can do with the specific resources it scopes. +
+Certain Roles come with a set of default permissions. As an Organization Administrator, you can create your customized roles and assign the permissions you see fit.
+
+Depending on the product, you can grant permissions directly to a specific user, without the need for roles or teams.
 
 === Understanding Permissions
 
-Depending on the amount of products you have in the Anypoint Platform, you'll see a set of default types of _permissions_ in every new organization and business group when first created. There is, however, one distinction to make between the permission types:
+Depending on the amount of products you have in the Anypoint Platform, you'll see a set of default types of _permissions_ in every new organization, team, and business group when first created. There is, however, one distinction to make between the permission types:
 
 . *Product Permissions*
-* Default permissions for each Anypoint Platform product (Runtime Manager, Data Gateway, etc). They are *environment specific* – they grant you the ability to do something within a particular environment, but not to the entire organization. +
-Product permissions can be assigned to custom roles, or to CloudHub roles.
+* Default permissions for each Anypoint Platform product (Runtime Manager, Data Gateway, and so on). They are _environment specific_ and grant you the ability to do something within a particular environment, but not to the entire organization. +
+Product permissions can be assigned to teams, custom roles, or to CloudHub roles.
 +
-[NOTE]
---
-Access to Exchange is handled through the *Exchange Administrators*, *Exchange Contributors*, and *Exchange Viewers* xref:roles.adoc[roles]. It is not possible to grant individual Exchange permissions to other roles. Consult the xref:exchange::to-set-permissions.adoc[product documentation] to learn more about this.
---
 . *API Permissions*
 +
 API Permissions vary depending on the API Manager version you are using.
 +
 .. *Permissions in API Manager 1.x*
 +
-* Default permissions for each API managed from  Anypoint Platform. They can be specific for an API version, or they can be extended to all versions. +
-You can manage user access based on a particular API version, but you cannot extend those permissions to the entire organization. To grant user permissions to all APIs, add them to the *API Versions Owner* and *Portals Owner* roles.
-* You can assign user permissions to edit or view individual API versions or API portals using the *API Version Owner* and the *Portal Viewer* permission.
+* Default permissions for each API managed from Anypoint Platform. They can be specific for an API version, or they can be extended to all versions. +
+You can manage user access based on a particular API version, but you cannot extend those permissions to the entire organization. To grant user permissions to all APIs, add them to teams that have the the API Versions Owner and Portals Owner permissions.
+* You can assign user permissions to edit or view individual API versions or API portals using the API Version Owner and the Portal Viewer permissions.
 +
 [NOTE]
 --
-These two API permissions grant the same scopes as the *API Versions Owner* and *Portals Viewer* roles, but limited to the API and version that you defined. +
-Learn about these specific scopes in the xref:roles.adoc#permission-scopes-for-default-roles[roles article].
+These two API permissions grant the same scopes as the API Versions Owner and Portals Viewer roles, but limited to the API and version that you defined. +
+For more information about these specific scopes, see xref:roles.adoc#permission-scopes-for-default-roles[Roles].
 --
 .. *Permissions in API Manager 2.x*
-* Default permissions for each API managed from API Manager. Permissions are over a specific environment and a specific resource (policies, alerts, etc). If a permission to an environment is granted to a user, it gives access to that environment immediately. Example: If you want to grant permission to create and edit alerts to a user, you have to assign *Manage Alerts* to him.
-* To Create an API in Exchange, you need to have assigned one of the following Exchange roles: Exchange Admin or Exchange Contributor
+* Default permissions for each API managed from API Manager. Permissions are over a specific environment and a specific resource (policies, alerts, etc). If a permission to an environment is granted to a user, it gives access to that environment immediately. Example: If you want to grant permission to create and edit alerts to a user, you have to assign the Manage Alerts permission to them.
+* To Create an API in Exchange, users need one of the following Exchange permissions: Exchange Admin or Exchange Contributor
 
 Since _API versions_ and _Products deployment environments_ are grouped under organizations (and optionally under business groups too), to access them you need to have an account that owns the necessary permissions and that belongs to its corresponding organization or business group (if such resource exists).
 
-Roles that are assigned at the root organization level can only reference resources that are at the root organization level, roles that belong to a business group can only reference resources within that business group.
+Roles that are assigned at the root organization level can only reference resources that are at the root organization level, and roles that belong to a business group can only reference resources within that business group.
 
 [NOTE]
 --

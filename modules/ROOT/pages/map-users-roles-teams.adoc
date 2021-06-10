@@ -166,7 +166,7 @@ include::partial$include-nav-roles.adoc[]
 . Click *Set external group mapping*.
 . Under *External group names*, enter one of the following: +
 
-* SAML: The group attribute that comes from your array of SAML groups 
+* SAML: The group attribute that comes from your array of SAML groups
 * OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
 * LDAP: The string from your SAML assertion AttributeValue
 
@@ -176,4 +176,4 @@ The SSO users associated with the groups you designated are assigned the role.
 == See Also
 
 * xref:teams.adoc[Teams]
-* xref:roles.adoc[Role]
+* xref:roles.adoc[Roles]

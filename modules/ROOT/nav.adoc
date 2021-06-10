@@ -18,7 +18,7 @@
   *** xref:conf-openid-connect-task.adoc[Configure OpenID Connect]
   **** xref:update-user-profile-task.adoc[Update Your User Profile]
   *** xref:test-external-identity-task.adoc[Test External Identity Configuration]
-  ** xref:map-users-roles-ldap-task.adoc[Map Single Sign-On Users to Roles in a Group]
+  ** xref:map-users-roles-teams.adoc[Map Single Sign-On Users to Teams or Roles in a Group]
   ** xref:conf-ldap-private-cloud-task.adoc[Configure LDAP in Anypoint Platform Private Cloud]
 * xref:managing-api-clients.adoc[Client Providers]
  ** xref:conf-client-mgmt-openam-task.adoc[Configure OpenAM Client Management]
