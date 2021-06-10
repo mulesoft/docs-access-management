@@ -14,7 +14,7 @@ This page assumes that you have an Organization Administrator permission in your
 
 In the Anypoint Platform, users belong to an organization and have a set of permissions. These permissions are assigned using xref:teams.adoc[teams], xref:roles.adoc[roles] (deprecated), or by xref:users.adoc#grant-user-permissions[granting permissions to users individually].
 
-The Teams feature enables you to create groups of users and then assign the members of those groups certain permissions. As an Organization Administrator, you can create and modify teams and assign permissions according to organizational structure.
+The Teams feature enables you to create groups of users and then assign the members of those groups certain permissions across multiple business groups. As an Organization Administrator, you can create and modify teams and assign cascading permissions according to organizational structure.
 
 Each role (deprecated) contains a list of permissions that define what a user that holds that role can do with the specific resources it scopes. +
 Certain Roles come with a set of default permissions. As an Organization Administrator, you can create your customized roles and assign the permissions you see fit.
