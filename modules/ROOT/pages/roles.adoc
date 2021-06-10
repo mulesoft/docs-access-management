@@ -282,7 +282,7 @@ When you convert or merge a role, the role is deleted.
 When you convert roles to permissions, users keep the same permissions that they previously received with roles.
 
 [WARNING]
-When you convert a role to permissions, the users that belonged to the role are no longer grouped according to their permissions and must be managed individually. Additionally, roles that can now be applied as (or converted to) permissions, such as the Exchange Contributors permission, can be managed only while you are using the Teams feature. 
+When you convert a role to permissions, the users that belonged to the role are no longer grouped according to their permissions and must be managed individually. Additionally, roles that can now be applied as (or converted to) permissions, such as the Exchange Contributors permission, can be managed only while you are using the Teams feature.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -312,7 +312,7 @@ Note that the team you are creating also inherits permissions from the parent te
 +
 . Click *Convert to Team*.
 +
-The users who previously had the role are added to a new team that has the same permissions as those granted by the role, and the role is deleted. Any external names formerly associated with the role are associated with the new team. 
+The users who previously had the role are added to a new team that has the same permissions as those granted by the role, and the role is deleted. Any external names formerly associated with the role are associated with the new team.
 
 === Merge a Role with a Team
 
@@ -336,5 +336,5 @@ The users who previously had the role are added to the selected team along with 
 * xref:organization.adoc[Organization]
 * xref:managing-permissions.adoc[Manage Permissions]
 * xref:design-center::index.adoc[Design Center]
-* xref:map-users-roles-ldap-task.adoc[Map Users to Roles in an LDAP Group]
+* xref:map-users-roles-teams.adoc[Map Users to Roles in an LDAP Group]
 * xref:environments.adoc[Environments]
