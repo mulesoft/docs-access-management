@@ -8,10 +8,10 @@ To manage user permissions for your API version, you must have the API Version O
 
 As an administrator of your root organization, you can enable, disable, or delete users.
 
-By ticking the checkbox next to a user, additional options related to that user are displayed:
+By selecting the checkbox next to a user, additional options related to that user are displayed:
 
-* *Enable*: Enables the user in the selected Organization / Business Group.
-* *Disable*: Disables the user in the selected Organization / Business Group. They will no longer be able to log in.
+* *Enable*: Enables the user in the selected organization or business group.
+* *Disable*: Disables the user in the selected organization or business group. They are no longer able to log in.
 * *Delete*: When deleting from the top level Organization, all of the user's roles/permissions are removed and the user becomes unattached. When deleting from a business group, all of the user's roles/permissions for only the selected business group are removed.
 
 == Inviting a User to Anypoint Platform
@@ -30,11 +30,11 @@ To invite new users to your organization:
 include::partial$include-nav-users.adoc[]
 
 . Click *Invite user*.
-. Enter the email addresses of who you want to invite in your organization as a comma-separated list.
-. Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role (deprecated)] to which to assign these users.
+. Enter the email addresses of the users that you want to invite to your organization as a comma-separated list.
+. Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role (deprecated)] for assign these users.
 . Click *Send Invitation*.
 
-The users who you invite receive email invitations to sign up to your organization. Invited users must use the link they receive in the invitation email to join your organization. When they click through the link they are presented with a sign-up form that already has the *Company* field completed, matching your organization.
+The users you specify receive email invitations to join your organization. Invited users must use the link they receive in the invitation to join your organization. When they click the link, they are presented with a sign-up form that already has the *Company* field completed with the name of your organization.
 
 Note that the email link expires in one week.
 
@@ -47,7 +47,7 @@ Click *Pending Invites* to view all invitations that have not yet been accepted.
 [[grant-user-permissions]]
 == Grant Permissions and Roles to Users
 
-Organization administrators can manage user access using xref:teams.adoc[teams], xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually.
+Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually.
 
 In the *Users* page, click a user name to access more information about that user, grant roles and permissions, see inherited permissions, or reset their password.
 
@@ -62,7 +62,7 @@ By default, in every new organization and business group, you get three options:
 Roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
 --
 
-If necessary, you can also remove user permissions, but note that if users have been granted their permissions through an assigned role, you can remove role-based permissions using only the xref:roles.adoc[Roles] functionality. You cannot view or remove role-based permissions in the *Users* page.
+If necessary, you can also remove user permissions, but note that if those permissions are granted through an assigned role, you can remove them only by using the xref:roles.adoc[Roles] functionality. You cannot view or remove role-based permissions in the *Users* page.
 
 Because the Roles feature is deprecated, it is best to xref:teams.adoc#opt-in-to-teams[opt in to the Teams feature] to manage permissions in a hierarchy.
 
@@ -72,15 +72,15 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-users.adoc[]
 
-. Select the user whose permissions you want to modify.
-. Select the product that contains the permission you want to add. For more information about the permissions that are available across Anypoint Platform, see xref:permissions-by-product.adoc[Permissions by Product].
-* If you want to grant the user permissions that apply across the current business group:
-.. Select the permissions from the top *Permission(s)* drop-down.
-.. Select the + button.
-* If you want to apply a permission only across a specific environment:
-.. Select the environments using the *Environments* drop-down.
-.. Select the permissions from the *Permission(s)* drop-down that is located next to the *Environment(s)* drop-down.
-.. Select the + button.
+. In the *Permissions* section, click *Add permissions*.
+. Next to each permission you want to grant the user, select the checkbox.
+. Click *Next*.
+. Select the business groups in which you want the selected permissions to apply.
+. Click *Next*.
+. Select the environments in which you want the selected permissions to apply.
+. Review the permissions, business groups, and environments, and then click *Add permissions*.
+
+The user now has the permissions you selected in the business groups and environments you specified.
 
 == Managing External Users of Your Public APIs
 

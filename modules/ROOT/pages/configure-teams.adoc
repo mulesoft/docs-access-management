@@ -98,7 +98,7 @@ If you use single sign-on (SSO) using SAML, OIDC, or LDAP, you can map SSO users
 
 When you add a user to a team, you can select whether that user is a team maintainer or a team member. You must have the Organization Administrator permission or be a team maintainer yourself to modify team members and team maintainers.
 
-You can designate a team maintainer to delegate team maintenance responsibilities to users without giving them additional permissions, or you can remove the team maintainer designation and convert users back to team members.
+You can designate a team maintainer to delegate team maintenance responsibilities to users without giving them full organization administrator permissions, or you can remove the team maintainer designation and convert users back to team members.
 
 include::partial$include-nav-steps-team-maintainer-admin.adoc[]
 
