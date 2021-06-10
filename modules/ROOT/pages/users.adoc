@@ -11,7 +11,7 @@ As an administrator of your root organization, you can enable, disable, or delet
 By ticking the checkbox next to a user, additional options related to that user are displayed:
 
 * *Enable*: Enables the user in the selected Organization / Business Group.
-* *Disable*: Disables the user in the selected Organization / Business Group. They will no longer be able to login.
+* *Disable*: Disables the user in the selected Organization / Business Group. They will no longer be able to log in.
 * *Delete*: When deleting from the top level Organization, all of the user's roles/permissions are removed and the user becomes unattached. When deleting from a business group, all of the user's roles/permissions for only the selected business group are removed.
 
 == Inviting a User to Anypoint Platform
@@ -31,14 +31,14 @@ include::partial$include-nav-users.adoc[]
 
 . Click *Invite user*.
 . Enter the email addresses of who you want to invite in your organization as a comma-separated list.
-. Optionally, select one or more xref:roles.adoc[roles] to which to assign these users.
+. Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role (deprecated)] to which to assign these users.
 . Click *Send Invitation*.
 
 The users who you invite receive email invitations to sign up to your organization. Invited users must use the link they receive in the invitation email to join your organization. When they click through the link they are presented with a sign-up form that already has the *Company* field completed, matching your organization.
 
 Note that the email link expires in one week.
 
-Invited users have access to the same set of resources as you (although they may have different roles that can restrict what they can view or do).
+Invited users have access to the same set of resources as you (although they may have different permissions that can restrict what they can view or do).
 
 == Resending or Canceling a Sent Invitation
 
@@ -49,7 +49,7 @@ Click *Pending Invites* to view all invitations that have not yet been accepted.
 
 Organization administrators can manage user access using xref:teams.adoc[teams], xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually.
 
-In the *Users* page, click a user name to access more information about that user, grant roles and permissions, or reset their password.
+In the *Users* page, click a user name to access more information about that user, grant roles and permissions, see inherited permissions, or reset their password.
 
 By default, in every new organization and business group, you get three options:
 
@@ -63,6 +63,8 @@ Roles and permissions are grouped under organizations (and also, optionally, und
 --
 
 If necessary, you can also remove user permissions, but note that if users have been granted their permissions through an assigned role, you can remove role-based permissions using only the xref:roles.adoc[Roles] functionality. You cannot view or remove role-based permissions in the *Users* page.
+
+Because the Roles feature is deprecated, it is best to xref:teams.adoc#opt-in-to-teams[opt in to the Teams feature] to manage permissions in a hierarchy.
 
 To grant permissions to an individual user:
 

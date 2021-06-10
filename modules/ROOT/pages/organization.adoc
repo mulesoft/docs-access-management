@@ -14,14 +14,14 @@ When you log in to Anypoint Platform, the organization icon and name are display
 
 == Organization Owner
 
-The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a role that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The owner is assigned the *Organization Administrators* role by default.
+The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a role that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The owner is assigned the Organization Administrator permission by default.
 
-Every business group created within the organization hierarchy thereafter must have an owner assigned. Only users with the *Organization Administrators* role can be assigned as owners of business groups. Any organization administrator can assign and change owners of business groups. There cannot be more than one owner at once for a business group. The Organization Administrator permission cannot be removed from organization owners.
+Every business group created within the organization hierarchy thereafter must have an owner assigned. Only users with the Organization Administrator permission can be assigned as owners of business groups. Any organization administrator can assign and change owners of business groups. There cannot be more than one owner at once for a business group. The Organization Administrator permission cannot be removed from organization owners.
 
 An Anypoint Platform user who has the _Organization Administrator_ permission can perform the following types of tasks:
 
 * Invite users to an organization
-* Assign users to roles that define their permissions in the platform
+* Assign users to teams or roles that define their permissions in Anypoint Platform
 * Edit and remove users from an organization
 * Assign or change owners of business groups
 * Configure organization settings
@@ -32,10 +32,10 @@ An Anypoint Platform user who has the _Organization Administrator_ permission ca
 
 == Organization Page
 
-On the *Organization* page, you can:
+In the *Organization* page, you can:
 
 * View a hierarchical tree of all of the organizations you have permissions to view. You can view and edit properties of an organization by clicking the name.
-* Click the name of a group to view and edit its information. What you can view and edit depends on your role.
+* Click the name of a group to view and edit its information. What you can view and edit depends on your permissions.
 +
 [NOTE]
 Changing the name or domain name of an organization changes the deep links to any existing API Portals in your organization.
@@ -89,15 +89,16 @@ An organization administrator can modify the organization name, domain name, and
 
 To access these settings:
 
+include::partial$include-nav-steps-org-admin.adoc[]
+
 include::partial$include-nav-organizations.adoc[]
 
+. Click the *Settings* tab.
 . Modify any of the following settings, then click *Save changes*.
   * *Organization name*: This can be anything, for example, the name of the company.
   * *Domain name*: Although multiple organizations can be created by different users using the same company name, each organization must have a unique domain name.
   * *Owner*: The identifier of the organization owner.
   * *Default session timeout*: Set the amount of time (in minutes) a user is inactive before they are automatically logged out of Anypoint Platform. The default is 60 minutes, the minimum is 15 minutes, and the maximum is 180 minutes.
-
-image::organization-11dbd.png[]
 
 You can also view the organization ID, client ID, and client secret. These values apply to the root organization and grant permissions for all of the business groups contained within.
 
@@ -116,7 +117,7 @@ Invited users must use the link they receive in the invitation email to join you
 
 If your organization is configured to use an external federated identity system, you do not need to invite users, as they are authenticated by the external identity provider.
 
-After a user joins your organization, they have access to the resources associated with the role(s) assigned to them. You can assign roles to grant users access to different resources within the organization. A best practice is to assign roles to the user at the time you invite them to join your organization so the roles are in effect when the user signs in for the first time. See xref:managing-permissions.adoc[Roles] for more information.
+After a user joins your organization, they have access to the resources associated with the permissions or roles assigned to them. You can assign permissions to grant users access to different resources within the organization. A best practice is to assign permissions to the user at the time you invite them to join your organization so the roles are in effect when the user signs in for the first time. See xref:managing-permissions.adoc[Roles] for more information.
 
 If your organization contains business groups, you can give users access to multiple business groups by granting them roles within each group.
 
@@ -124,5 +125,6 @@ If your organization contains business groups, you can give users access to mult
 
 * xref:business-groups.adoc[Business Groups]
 * xref:roles.adoc[Roles]
+* xref:teams.adoc[Teams]
 * xref:managing-permissions.adoc[Managing Permissions]
 * xref:environments.adoc[Environments]
