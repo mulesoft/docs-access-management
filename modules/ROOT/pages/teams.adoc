@@ -52,7 +52,7 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 
 . In the Access Management navigation menu, click *Try New Features*.
 . Click *Start Using These Features*. +
-The Access Management navigation menu options change, and you can now use the Teams feature.
+The Access Management navigation menu options change, and you can now use the Teams feature. You can xref:configure-teams.adoc#create-a-child-team[create a team] or xref:roles.adoc#migrate-roles-to-teams[migrate existing roles and permissions to teams].
 
 == Grant Permissions to Individual Users
 
