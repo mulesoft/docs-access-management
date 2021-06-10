@@ -1,0 +1,3 @@
+. In the Access Management navigation menu, click *Business Groups*.
+. Click the name of your root organization.
+. Click the *Environments* tab.

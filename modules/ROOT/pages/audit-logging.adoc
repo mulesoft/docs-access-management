@@ -17,7 +17,8 @@ The audit log UI is embedded in Access Management.
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-. In the Access Management navigation menu, click *Audit Logs*. +
+include::partial$include-nav-business-groups.adoc[]
+
 The *Audit Logs* page displays the logs. You can:
 
 * Download audit logs.
@@ -439,7 +440,7 @@ Properties: SLA tier
 
 |===
 
-The `Create Application` and `Delete Application` actions are logged at the master organization level.
+The `Create Application` and `Delete Application` actions are logged at the root organization level.
 
 == API Designer APIs
 

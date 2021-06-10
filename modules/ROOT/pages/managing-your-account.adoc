@@ -26,7 +26,7 @@ A form appears, where you can provide your contact information and create a user
 * Company - Must be at least two characters in length. +
 If you were invited to join an existing organization, the company name is already set.
 +
-Anypoint Platform creates a new master organization using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account can be associated with only one organization.
+Anypoint Platform creates a new root organization using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account can be associated with only one organization.
 
 * Click the terms of service link to read the Anypoint Platform Trial License agreement, then check the box to agree to the terms of service.
 . Click the *I'm not a Robot* Captcha's checkmark and wait for validation.
@@ -77,7 +77,7 @@ You can use an existing account to join an existing organization once you receiv
 After clicking the link in the invitation, you have one week to choose the account to use to join the organization.
 
 [NOTE]
-If the account you want to use is already associated with another master organization, an exclamation mark is displayed next to it. This means that additional steps are needed before migrating the account to a new organization.
+If the account you want to use is already associated with another root organization, an exclamation mark is displayed next to it. This means that additional steps are needed before migrating the account to a new organization.
 
 [[create_new_account]]
 == Create a New Account Within an Existing Organization
