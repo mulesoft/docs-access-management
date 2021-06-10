@@ -1,4 +1,4 @@
-= Managing Permissions
+= Manage Permissions
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
