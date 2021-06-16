@@ -10,13 +10,6 @@ The following permissions can be assigned to xref:teams.adoc[teams], granted to 
 * Organization Administrator
 * Audit Log Viewer
 
-== ANG Governance
-
-* Governance Manager - Admin
-* Governance Manager - Viewer
-* Governance Manager Contributor
-* Governance Reports Viewer
-
 == API Manager
 
 Depending on your organization, you might see one of the following sets of permissions available for API Manager.
