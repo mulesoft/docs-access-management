@@ -15,7 +15,7 @@ Permissions shared between organizations are granted at the organization level. 
 
 When you add a new organization to your external access configuration, you establish one half of a trust relationship. After the other organization adds yours to its configuration, both organizations can share permissions with each other.
 
-To add an organization to your configuration, you must know its Anypoint xref:access-management::organization.adoc#manage-master-organization-settings[domain]. Domains are human-readable names that uniquely identify an Anypoint Platform organization. Ask the administrators of the other organization what their domain is, and be prepared to share your domain with them so they can add your organization to their list in return.
+To add an organization to your configuration, you must know its Anypoint xref:access-management::organization.adoc#manage-root-organization-settings[domain]. Domains are human-readable names that uniquely identify an Anypoint Platform organization. Ask the administrators of the other organization what their domain is, and be prepared to share your domain with them so they can add your organization to their list in return.
 You can view your organization's unique domain name in the *External Access* page in Access Management.
 
 

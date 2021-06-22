@@ -1,0 +1,1 @@
+. In the Access Management navigation menu, click *Multi-factor Auth*.

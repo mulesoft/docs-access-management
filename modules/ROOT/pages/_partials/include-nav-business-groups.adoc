@@ -1,0 +1,2 @@
+. In the Access Management navigation menu, click *Business Groups*.
+. Click the name of the business group you want to access.

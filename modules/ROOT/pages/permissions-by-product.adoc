@@ -1,0 +1,128 @@
+= Permissions Available in Anypoint Platform
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to xref:roles.adoc#create-custom-roles[create custom roles].
+
+== General Permissions
+
+* Organization Administrator
+* Audit Log Viewer
+
+== API Manager
+
+Depending on your organization, you might see one of the following sets of permissions available for API Manager.
+
+* API Manager Environment Administrator
+* API Group Administrator
+* Deploy API Proxies
+* Manage API Alerts
+* Manage APIs Configuration
+* Manage Contracts
+* Manage Policies
+* View API Alerts
+* View APIs Configuration
+* View Contracts
+* View Policies
+
+Or:
+
+* API Creator
+* API Versions Owner
+* Portals Viewer
+
+== Anypoint Data Gateway
+
+* Data Gateway Administrator
+* Data Gateway Viewer
+
+== Anypoint DataGraph
+
+* Contribute
+* Consume
+* Operate
+* DataGraph Admin
+
+== Design Center
+
+* Design Center Developer
+* Design Center Contributor
+* Exchange
+* Exchange Administrator
+* Exchange Contributor
+* Exchange Viewer
+
+== Anypoint Monitoring
+
+* Anypoint Monitoring Viewer
+* Anypoint Monitoring User
+
+== Anypoint MQ
+
+* Clear destinations
+* Manage clients
+* Manage destinations
+* View clients
+* View destinations
+
+== Anypoint Partner Manager
+
+Depending on your organization, you might see one of the following sets of permissions available for Anypoint Partner Manager.
+
+* Partner Manager Administrator
+* View Host, Partners and Message Flows
+* Manage Partners and Message Flows
+* Manage Activity
+* Manage Host
+* View Activity
+* View Host, Partners and Message Flows
+* Manage Partners and Message Flow
+* Manage Activity
+* Manage Host
+* View Activity
+
+Or:
+
+* Manage Partners
+* Manage Transactions
+* Partners Administrator
+* View Partners
+* View Transactions
+
+== Runtime Manager
+
+* Cloudhub Network Administrator
+* Cloudhub Network Viewer
+* Delete Applications
+* Download Applications
+* Manage Alerts
+* Manage Application Data
+* Manage Queues
+* Manage Runtime Fabrics
+* Manage Runtime Fabric
+* Manage Schedules
+* Manage Settings
+* Manage Tenants
+* Read Alerts
+* Read Applications
+* Manage Servers
+* Read Servers
+* Manage Application Flows
+* Create Applications
+
+== Secrets Manager
+
+* Grant access to secrets
+* Manage secret groups
+* Read secrets metadata
+* Write secrets
+
+== Tokenization
+
+* Manage Tokenization Services
+* Manage Tokenization Formats
+
+== Anypoint Visualizer
+
+* Visualizer Editor

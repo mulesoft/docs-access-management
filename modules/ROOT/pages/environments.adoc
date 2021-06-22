@@ -27,7 +27,8 @@ To create a new environment or manage an existing environment:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Environments*.
+include::partial$include-nav-environments.adoc[]
+
 . Click *Add Environment*.
 . Enter a name for the environment.
 . Select the environment type.
@@ -45,7 +46,8 @@ image::environments-85dc3.png[]
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Environments*.
+include::partial$include-nav-environments.adoc[]
+
 . Click the name of the environment. You can perform one of the following actions:
 +
 * Modify the environment:
@@ -64,7 +66,8 @@ To view the client ID and secret for your environment:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Environments*.
+include::partial$include-nav-environments.adoc[]
+
 . Click the name of the environment whose client ID/secret you want to view.
 
 [NOTE]
@@ -81,7 +84,8 @@ To associate a client provider with an existing environment:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Environments*.
+include::partial$include-nav-environments.adoc[]
+
 . Click the name of the environment.
 . In the *Client Provider* field, select at least one client provider.
 . If you added more than one client provider, click *Set as default* to designate a default client provider.
@@ -98,7 +102,8 @@ When you remove all external client providers from an environment, the built-in 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Environments*.
+include::partial$include-nav-environments.adoc[]
+
 . Click the name of the environment.
 . If the client provider that you want to remove is the default, click *Set as default* next to the name of a different client provider.
 +

@@ -7,13 +7,10 @@ After configuring your organization's external identity provider, you can test t
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. In the Access Management navigation menu, click *Organization*.
-. In the *Organization* page, click the name of an organization listed in the Name column.
-+
-The *Organization Info* window appears.
-+
-image::domain-name.png[height=434,width=433]
-+
+include::partial$include-nav-organizations.adoc[]
+
+. Click the *Settings* tab. 
+
 . Copy your organization name from the Domain Name field.
 +
 . Log out of your Organization Administrator account in Anypoint Platform.

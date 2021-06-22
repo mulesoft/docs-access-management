@@ -17,7 +17,8 @@ The audit log UI is embedded in Access Management.
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-. In the Access Management navigation menu, click *Audit Logs*. +
+include::partial$include-nav-business-groups.adoc[]
+
 The *Audit Logs* page displays the logs. You can:
 
 * Download audit logs.
@@ -439,7 +440,7 @@ Properties: SLA tier
 
 |===
 
-The `Create Application` and `Delete Application` actions are logged at the master organization level.
+The `Create Application` and `Delete Application` actions are logged at the root organization level.
 
 == API Designer APIs
 
@@ -1137,6 +1138,41 @@ Properties: Environment name
 Environments that are created automatically when you create an organization or business group do not have audit log entries. As Anypoint Platform has evolved, the default environments created have also changed over time. Currently, `Sandbox` and `Design` are created automatically and do not have audit log entries.
 
 |===
+
+== Anypoint DataGraph
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Add API
+| User
+| data-graph-{api-name}-{env-name}
+| N/A
+| Add API
+| N/A
+
+| Update API
+| User
+| data-graph-{api-name}-{env-name}
+| N/A
+| Update API
+| N/A
+
+| Remove API
+| User
+| data-graph-{api-name}-{env-name}
+| N/A
+| Remove API
+| N/A
+
+|===
+
 
 == Exchange
 

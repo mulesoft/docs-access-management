@@ -1,0 +1,67 @@
+= Manage User Access Using Teams
+
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+The Teams feature enables you to create groups of users and then assign the members of those groups certain permissions.
+Teams have a cascading permissions structure that helps you manage users and permissions with scalability in mind.
+
+If you have the Organization Administrator permission over your root organization, you can achieve the following using the Teams feature:
+
+* Manage your organization from a simple, global view
+* Group users into teams to easily manage permissions and share assets
+* Assign team maintainers to delegate management of team members and child teams
+* Manage user and team permissions across multiple business groups in one place
+
+Starting with the “Everyone at <Root Organization>" team, which contains all users who join your organization either via an invitation or SSO, you can create specialized _child teams_ that have more specific permissions based on the responsibilities of their members.
+The Teams feature enables you to mimic the structure of your organization and seamlessly manage permissions and team membership as your organization grows.
+
+After your child teams are created, you can invite new users directly to the appropriate team using email invitations or using the xref:configure-teams#invite-users-with-teams[Teams feature interface].
+
+When you add a user to a team, you can also specify whether they should be a _team maintainer_ (a user who receives the permissions outlined in the team structure and manages team membership) or a _member_ (a user who receives the permissions outlined in the team structure). Outside of teams, you can still xref:users.adoc#grant-user-permissions[assign specific permissions to individual users] if they require permissions that should not extend to an entire team.
+
+Adopting a team structure in your organization also enables you to share assets more easily. In Anypoint Exchange, you can share an asset with an entire team rather than having to select each user individually.
+
+[NOTE]
+To manage teams permissions, you must have the Organization Administrator permission over the business group that contains the resources that you want to give a specific user or a team access to.
+You can modify permissions for all teams in your organization only if you have the Organization Administrator permission over the root organization.
+
+== Permissions Structure
+
+When you are planning your organization’s team structure, consider the following:
+
+* Each member of your organization is a member of the “Everyone at <Root Organization> team, or the _root_ team.
+* Your team structure should reflect the structure of your organization so that you can plan your teams and configure permissions according to member needs. However, you can move teams as the needs of your organization change.
+* Teams names must be unique across your organization.
+* Your organization can have up to 2000 teams.
+* Your teams can be nested up to 10 levels, including the “Everyone at <Root Organization> team.
+* You can create teams without adding members.
+* Every child team inherits permissions from its parent team.
+
+When you configure permissions in your organization, give your organization’s main team, “Everyone at <Root Organization>, permissions that do not afford too many privileges. Because every member of your organization is a member of that team, configure only those permissions that you want every user to have. The child teams you create under the top-level team inherit the permissions of the parent team. You can give each child team more specialized permissions that reflect the team members’ responsibilities.
+
+If you have the Organization Administrator permission over your root organization, you can add users to any team and select whether they are members or maintainers. Each team has a _team maintainer_, a member who can add new users to their own team. A team maintainer can only assign members to their specific team or child teams. Team maintainers can also designate new maintainers for teams they manage. 
+
+
+For an example of a teams structure applied across an organization, see xref:teams-example.adoc[Example Teams Structure].
+
+== Opt in to Teams
+
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. In the Access Management navigation menu, click *Try New Features*.
+. Click *Start Using These Features*. +
+The Access Management navigation menu options change, and you can now use the Teams feature. You can xref:configure-teams.adoc#create-a-child-team[create a team] or xref:roles.adoc#migrate-roles-to-teams[migrate existing roles and permissions to teams].
+
+== Grant Permissions to Individual Users
+
+If you have the Organization Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:users.adoc#grant-user-permissions[Grant Permissions and Roles to Users].
+
+== See Also
+
+* xref:configure-teams.adoc[Configure Teams]
+* xref:teams-example.adoc[Example Teams Structure]
+* xref:users.adoc#inviting-a-user-to-anypoint-platform[Inviting a User to Anypoint Platform]
+* xref:users.adoc#grant-user-permissions[Grant Permissions and Roles to Users]
+* xref:map-users-roles-teams.adoc[Map SSO Users to Teams]

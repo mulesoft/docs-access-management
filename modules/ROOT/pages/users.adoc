@@ -3,14 +3,15 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You must have the Organization Administrators role to manage users within an Anypoint Platform organization. To manage user permissions for your API version, you must have API Version Owner permissions.
+You must have the Organization Administrator permission to manage users within an Anypoint Platform organization.
+To manage user permissions for your API version, you must have the API Version Owner permission.
 
-As an administrator of your master organization, you can enable, disable, or delete users. Access this menu by first making sure that the correct business group is selected in the top-right of the screen next to your user name, then clicking the gear icon next to it, and then picking the *Users* link in the left menu.
+As an administrator of your root organization, you can enable, disable, or delete users.
 
-By ticking the checkbox next to a user, additional options related to that user are displayed:
+By selecting the checkbox next to a user, additional options related to that user are displayed:
 
-* *Enable*: Enables the user in the selected Organization / Business Group.
-* *Disable*: Disables the user in the selected Organization / Business Group. They will no longer be able to login.
+* *Enable*: Enables the user in the selected organization or business group.
+* *Disable*: Disables the user in the selected organization or business group. They are no longer able to log in.
 * *Delete*: When deleting from the top level Organization, all of the user's roles/permissions are removed and the user becomes unattached. When deleting from a business group, all of the user's roles/permissions for only the selected business group are removed.
 
 == Inviting a User to Anypoint Platform
@@ -22,32 +23,33 @@ This feature is not available in Anypoint Platform Private Cloud Edition.
 When running Anypoint Platform Private Cloud Edition, you need to configure user management methods such as SSO through a third-party IdP or LDAP.
 --
 
-As an organization administrator of a master organization or of one of its business groups, you can invite new users and manage existing users for your organization on the _Access Management_ Administration page, which you can reach by selecting the *Users* option in your *Access Management* section.
+As an organization administrator of a root organization or of one of its business groups, you can invite new users and manage existing users for your organization.
 
 To invite new users to your organization:
 
-. Click *Users* in the left navigation bar.
+include::partial$include-nav-users.adoc[]
+
 . Click *Invite user*.
-. Enter the email addresses of who you want to invite in your organization as a comma-separated list.
-. Optionally, select one or more xref:roles.adoc[roles] to which to assign these users.
+. Enter the email addresses of the users that you want to invite to your organization as a comma-separated list.
+. Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role (deprecated)] for assign these users.
 . Click *Send Invitation*.
 
-The users who you invite receive email invitations to sign up to your organization. Invited users must use the link they receive in the invitation email to join your organization. When they click through the link they are presented with a sign-up form that already has the *Company* field completed, matching your organization.
+The users you specify receive email invitations to join your organization. Invited users must use the link they receive in the invitation to join your organization. When they click the link, they are presented with a sign-up form that already has the *Company* field completed with the name of your organization.
 
 Note that the email link expires in one week.
 
-Invited users have access to the same set of resources as you (although they may have different roles that can restrict what they can view or do).
+Invited users have access to the same set of resources as you (although they may have different permissions that can restrict what they can view or do).
 
 == Resending or Canceling a Sent Invitation
 
 Click *Pending Invites* to view all invitations that have not yet been accepted. Select the ones you need to manage, and click *Re-send Invite* or *Cancel Invite*.
 
+[[grant-user-permissions]]
+== Grant Permissions and Roles to Users
 
-== Granting Permissions and Roles to Users
+Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually.
 
-Click a user name to access more information about that user, add roles and permissions to it, or reset its password.
-
-image::users-a3f39.png[]
+In the *Users* page, click a user name to access more information about that user, grant roles and permissions, see inherited permissions, or reset their password.
 
 By default, in every new organization and business group, you get three options:
 
@@ -60,7 +62,25 @@ By default, in every new organization and business group, you get three options:
 Roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
 --
 
-If necessary, you can also remove user permissions, but keep in mind that if users have been granted their permission through an assigned role, you cannot view or remove those role-based permissions here--you must do it using the xref:roles.adoc[Roles] section.
+If necessary, you can also remove user permissions, but note that if those permissions are granted through an assigned role, you can remove them only by using the xref:roles.adoc[Roles] functionality. You cannot view or remove role-based permissions in the *Users* page.
+
+Because the Roles feature is deprecated, it is best to xref:teams.adoc#opt-in-to-teams[opt in to the Teams feature] to manage permissions in a hierarchy.
+
+To grant permissions to an individual user:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-users.adoc[]
+
+. In the *Permissions* section, click *Add permissions*.
+. Next to each permission you want to grant the user, select the checkbox.
+. Click *Next*.
+. Select the business groups in which you want the selected permissions to apply.
+. Click *Next*.
+. Select the environments in which you want the selected permissions to apply.
+. Review the permissions, business groups, and environments, and then click *Add permissions*.
+
+The user now has the permissions you selected in the business groups and environments you specified.
 
 == Managing External Users of Your Public APIs
 
