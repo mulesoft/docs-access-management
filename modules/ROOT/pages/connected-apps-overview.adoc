@@ -13,8 +13,45 @@ The Connected Apps feature enables you to use secure authentication protocols an
 
 Anypoint Platform supports OAuth 2.0 and OpenID Connect to authorize apps to access data within Anypoint Platform.
 OAuth (Open Authorization) is an open protocol that provides secure API authorization from applications in a simple and standardized way.
-OAuth can authorize access to resources without revealing user credentials to apps.
+OAuth 2.0 can authorize access to resources without revealing user credentials to apps.
 OpenID Connect identifies the end user and obtains information to pass to OAuth 2.0 connected apps.
+
+
+
+The Connected Apps feature implements OAuth 2.0 and OpenID Connect, or _OIDC_, for authorizing access to data. OAuth 2.0 and OpenID Connect flows grant permission to services and users to access the Anypoint APIs.
+
+=== OAuth 2.0
+
+The OAuth 2.0 authorization protocol depends on several elements to function. 
+
+Client::
+An application that makes requests for data on behalf of a user or service with authorization.
+
+Authorization server::
+The server that gives access tokens to the client once the server does authorization.
+
+Resource server::
+The system that contains the requested data.
+
+Access token:: 
+A token needed to access data from the resource server. 
+
+Redirect URI::
+The destination the authorization server sends the user or server once the application is authorized.
+
+There are many types of OAuth 2.0 flows; the Connected Apps feature most commonly uses the following:
+
+`authorization_code`:: 
+In the authorization_code flow, the client navigates to the authorization server. The server then requests authorization for specific scopes, or _permissions_, from the user. If the user authorizes the client to have this information, an authorization code is sent the redirect URI. The redirect URI then exchanges the authorization code for an access token from the authorization server. The access token is then sent to the resource server to obtain the data by means of a specific API. This flow demonstrates _an application acting on behalf of the user_.
+
+`client_credentials`::
+In the client_credentials flow, the client navigates to the authorization server. The server then requests authorization for specific scopes, or _permissions_, from the application. If the application authorizes the client to have this information, an authorization code is sent the redirect URI. The redirect URI then exchanges the authorization code for an access token from the authorization server. The access token is then sent to the resource server to obtain the data by talking to a specific API. This flow demonstrates a _service-to-service_ use case.
+
+
+=== OpenID Connect (OIDC)
+
+OICD is an authentication protocol that authenticates users. This identity layer complements OAuth 2.0 protocol and provides authentication at a layer above it.
+
 
 For more information, see https://oauth.net/2/[OAuth 2.0] and https://openid.net/connect/[OpenID Connect].
 
