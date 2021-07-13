@@ -1,0 +1,3 @@
+Enables users to view, create, edit, and delete client apps with their client app ID and client secret
+
+// check this

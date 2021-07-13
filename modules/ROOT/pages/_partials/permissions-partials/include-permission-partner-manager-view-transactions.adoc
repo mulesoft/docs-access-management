@@ -1,0 +1,1 @@
+Enables users to view data in the *B2B Transactions* monitoring screen

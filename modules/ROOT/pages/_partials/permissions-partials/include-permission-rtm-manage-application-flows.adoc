@@ -1,0 +1,1 @@
+Enables users to manage application flows from Runtime Manager in a specific environment

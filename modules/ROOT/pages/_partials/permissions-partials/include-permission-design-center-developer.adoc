@@ -1,0 +1,1 @@
+Enables users to access to Design Center, use its features, run and deploy applications, and publish designs to Exchange. Users must also have the Exchange Contributor or Exchange Administrator permission to create and publish assets to Exchange.

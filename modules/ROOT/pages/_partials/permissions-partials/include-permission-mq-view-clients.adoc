@@ -1,0 +1,1 @@
+Enables users to view all the client apps with their client app ID and client secret

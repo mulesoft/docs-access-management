@@ -1,0 +1,1 @@
+Enables users to replay transactions and view data in the *B2B Transactions* monitoring screen

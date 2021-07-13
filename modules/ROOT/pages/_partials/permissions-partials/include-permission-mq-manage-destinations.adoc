@@ -1,0 +1,1 @@
+Enables users to view all the destinations with their settings (ID, Type, Default TTL & Default Lock TTL), "In Queue" messages and "In Flight" messages. Users with this permission can also purge messages, access *Message Sender* & *Browser* pages, and create, edit, and delete queues and exchanges.

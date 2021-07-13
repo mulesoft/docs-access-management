@@ -32,18 +32,18 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 
 === Default Roles and Permission Scopes
 
-* **API Creators**: Enables a user to create and manage an API in Anypoint Platform. Members of the API Creator role can add new APIs to the platform on the API administration page. This role does not grant privileges for Runtime Manager. This role has the following permission scopes:
+* **API Creators**: Enables users to create and manage an API in Anypoint Platform. Members of the API Creator role can add new APIs to the platform on the API administration page. This role does not grant privileges for Runtime Manager. This role has the following permission scopes:
 +
 ** Create/Import an API
 
-* **API Versions Owner**: Enables a user to manage, delete, and deprecate any API in the organization. They can edit the portal of any API in the organization. However, this role does not enable a user to create a new version of an existing API. This role has the following permission scopes:
+* **API Versions Owner**: Enables users to manage, delete, and deprecate any API in the organization. They can edit the portal of any API in the organization. However, this role does not enable a user to create a new version of an existing API. This role has the following permission scopes:
 +
 ** Manage any API Version in the organization
 ** Delete any API Version in the organization
 ** Deprecate any API Version in the organization
 ** Edit the Portal of any API version in the organization
 
-* **Audit Log Viewers**: Enables a user to access to the UI for the Audit Log under Access Management. This role has the following permission scopes:
+* **Audit Log Viewers**: Enables users to access to the UI for the Audit Log under Access Management. This role has the following permission scopes:
 +
 ** Visualize logs in the xref:audit-logging.adoc[Audit Logs] section.
 
@@ -76,7 +76,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 +
 ** Read Applications
 
-* **Organization Administrators**: Enables a user to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. Access to the Organization Administration page, where the user can add and manage users and roles, view and edit organization details, access *API Manager > Client Applications*, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. Members of the Organization Administrators role also inherit the role of *API Creator* by default. This role has the following permission scopes:
+* **Organization Administrators**: Enables users to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. Access to the Organization Administration page, where the user can add and manage users and roles, view and edit organization details, access *API Manager > Client Applications*, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. Members of the Organization Administrators role also inherit the role of *API Creator* by default. This role has the following permission scopes:
 +
 ** Edit developer portal theme settings
 ** Request API access terms and conditions
@@ -86,7 +86,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Edit users' email addresses
 ** Grant VPC and CloudHub dedicated load balancer permissions
 
-* **Exchange Administrators**: Enables a user to manage Exchange Portals, including customization, manage assets, manage reviews. This role has the following permission scopes:
+* **Exchange Administrators**: Enables users to manage Exchange Portals, including customization, manage assets, manage reviews. This role has the following permission scopes:
 +
 ** Create content
 ** Manage assets
@@ -100,7 +100,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Manage own content and versions
 ** Manage own reviews, including  the ability to add, edit, and delete
 
-* **Exchange Viewers**: Enables a user to view and consume Exchange assets. This role has the following permission scopes:
+* **Exchange Viewers**: Enables users to view and consume Exchange assets. This role has the following permission scopes:
 +
 ** View and consume Exchange assets
 ** Manage own reviews, including the ability to add, edit, and delete

@@ -1,0 +1,1 @@
+Enables users to view and download assets within a business group. Users with this permission cannot add new assets, edit asset portal content, or share an asset with another user. Assign this permission to those who consume your assets in a specific business group.
