@@ -3,5 +3,5 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-* xref:map-users-roles-ldap-task.adoc[To Map Users to Roles in an LDAP Group]
+* xref:map-users-roles-teams.adoc#configure-multiple-group-mappings-for-single-sign-on-using-ldap[To Map Users to Teams or Roles in an LDAP Group]
 * xref:conf-ldap-private-cloud-task.adoc[To Configure LDAP in Anypoint Platform Private Cloud]

@@ -29,9 +29,11 @@ If you already configured Anypoint Platform as a client application in your iden
 
 == To Configure OpenID Connect Dynamically
 
-. Log into the master Organization in Anypoint Platform as Administrator.
-. In Anypoint Platform, click Access Management > External Identity.
-. From Identity Management, select OpenID Connect.
+include::partial$include-nav-steps-org-admin-bg.adoc[]
+
+include::partial$include-nav-external-identity.adoc[]
+
+. In the *Identity Management* page, select *OpenID Connect*.
 +
 The External Identity - Identity Management OpenID Connect form appears.
 +
@@ -67,12 +69,14 @@ The URL that returns user profile information to Anypoint.
 +
 `+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
 +
-. Sign in through your identity provider to test the configuration.
+. Log in through your identity provider to test the configuration.
 
 == To Configure OpenID Connect Manually
 
-. Log into the master Organization in Anypoint Platform as Administrator.
-. In Anypoint Platform, click Access Management > External Identity.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-external-identity.adoc[]
+
 . From Identity Management, select OpenId Connect.
 +
 The External Identity - Identity Management OpenID Connect form appears.
@@ -115,7 +119,7 @@ The location of the OpenID Provider. For most providers, `/.well-known/openid-co
 +
 `+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
 +
-. Sign in through your identity provider to test the configuration.
+. Log in through your identity provider to test the configuration.
 
 == See Also
 

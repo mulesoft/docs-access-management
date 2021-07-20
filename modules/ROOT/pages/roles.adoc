@@ -3,9 +3,12 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-To manage roles and permissions within Anypoint Platform, you must have the Organization Administrators role. To manage user permissions for an API version, you must have the API Versions Owner role.
+[NOTE]
+Roles are now deprecated in favor of the xref:teams.adoc[Teams] feature, but you can still manage roles using business groups. You grant most roles as permissions instead.
 
-A role is a set of pre-defined permissions for each product, or feature, within Anypoint Platform. Depending on the product, you can use pre-defined roles with standard permissions, or you can specify your own permissions for each role.
+A _role_ is a set of predefined permissions controlling access to each product or feature within Anypoint Platform. Depending on the product, you can use predefined roles with standard permissions, or you can specify your own permissions for each role. Roles are set only for individual users. Use the xref:access-management::teams.adoc[Teams feature] for an access solution that works across business groups.
+
+To manage roles and permissions within Anypoint Platform, you must have the Organization Administrator permission. To manage user permissions for an API version, you must have the API Versions Owner permission.
 
 Anypoint Platform provides two types of roles:
 
@@ -15,17 +18,11 @@ Anypoint Platform provides two types of roles:
 
 Roles are business group specific, so ensure that you are in the correct business group for which to manage roles by clicking the menu next to your username on the top-right of the screen.
 
-image::switch-suborg.png[]
+== Access Roles
 
-To access the *Roles* menu in Access Management:
+include::partial$include-nav-steps-org-admin.adoc[]
 
-. Sign into your Anypoint Platform account as a user with the Organization Administrators role.
-. Select the *Access Management* option from the main page, or click the _menu_ button in the top-left corner.
-+
-image::anypoint-platform-nav-menu.png[]
-. In the Access Management page, click *Roles*.
-+
-image::roles-a3471.png[]
+include::partial$include-nav-roles.adoc[]
 
 == Default Roles
 
@@ -62,7 +59,6 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Manage Servers
 ** Manage Settings
 ** Read Applications
-** Read Servers
 
 * **CloudHub Developer**: *(Deprecated)* Provides access to all Runtime Manager functionality, except organization and billing settings. This role has the following permission scopes:
 +
@@ -86,7 +82,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Request API access terms and conditions
 ** Edit portal terms and conditions
 ** Set custom policies
-** Manage access of third party applications to an API (Specific to the organization administrator of the Master Business Group)
+** Manage access of third-party applications to an API (specific to the organization administrator of the root business group)
 ** Edit users' email addresses
 ** Grant VPC and CloudHub dedicated load balancer permissions
 
@@ -121,7 +117,10 @@ To control access for a single private API, don't assign the Exchange Viewers ro
 
 To add a user to a role, the user must belong to the same business group as the role.
 
-. Sign in to Access Management, then click *Roles*.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the default role.
 +
 Default roles do not have a radial button next to them.
@@ -140,15 +139,16 @@ When editing role names and descriptions, use the 'Enter' key to save changes. C
 
 As an organization administrator, you can create custom roles by combining API or applications, permissions, and users. Depending on the product to which the role is associated, these options may vary. For example, API roles cannot be removed and their permissions cannot be modified, however you can add a description and add users to that role.
 
-If the only permissions associated with your role are Portal Viewer​, Exchange Viewer​, or ​Application Owner​, then users belonging to this role won't have access to the organization's support portal.
-
 
 [NOTE]
 Product permissions are specific to a single environment. If you have multiple environments and want to give a role the same permissions on all, you must add these permissions multiple times--one for each environment.
 
 === Create a Custom Role
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
 . Click *Add role*.
 . Enter a *Name* and *Description* for your custom role. +
 Your custom role now appears in your list of roles.
@@ -163,7 +163,10 @@ When editing role names and descriptions, use the 'Enter' key to save changes. C
 
 After creating a custom role, you can assign users to the role.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to add users.
 . Click the *Users* tab, then enter a username or email in the search field.
 . Select the user, then click the *+* icon.
@@ -172,7 +175,10 @@ After creating a custom role, you can assign users to the role.
 
 After creating a custom role, you can assign permissions to the role. If these environments belong to a business group, they are available only when creating a role in that same business group.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to add permission scopes.
 . Click the *Permissions* tab, then select one of the following tabs:
 +
@@ -186,7 +192,7 @@ After creating a custom role, you can assign permissions to the role. If these e
 * Secrets Manger
 * Tokenization
 +
-Depending on your permissions you may not see all of these options.
+Depending on your permissions, you might not see all of these options.
 
 . Click the *Permissions* drop-down menu, then select the permissions you want to assign to the custom role.
 +
@@ -198,7 +204,10 @@ The list of available permissions is different for each application.
 
 After creating a custom role, grant the Design Center Developer permission scope to the custom role to enable access to Design Center.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to add users.
 . Click *Permissions*, then click *Design Center*.
 +
@@ -214,7 +223,10 @@ image::design-center-permissions.png[Adding permissions to Design Center]
 
 You can associate an API to a custom role. This enables you to create roles that give users access to a specific API.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
@@ -232,7 +244,10 @@ Select *All* to enable access to all versions of this API.
 
 You can associate environment permissions to the custom role. This enables you to create roles that give users different permissions over environments.
 
-. Click the *Roles* tab in the left navigation of the Access Management page for your organization.
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
 . Click the name of the custom role to which to grant access to an API.
 +
 Custom roles have a radial button next to them.
@@ -256,10 +271,70 @@ Custom roles have a radial button next to them.
 
 You can set up your Anypoint Platform organization so that when a SAML user belongs to certain groups, Anypoint Platform automatically grants certain equivalent roles in your Anypoint Platform organization.
 
+== Migrate Roles to Teams
+
+After you opt in to the Teams feature, you can convert existing roles into permissions, convert roles to teams, or merge roles with teams.
+
+When you convert or merge a role, the role is deleted.
+
+=== Convert a Role to Permissions
+
+When you convert roles to permissions, users keep the same permissions that they previously received with roles.
+
+[WARNING]
+When you convert a role to permissions, the users that belonged to the role are no longer grouped according to their permissions and must be managed individually. Additionally, roles that can now be applied as (or converted to) permissions, such as the Exchange Contributors permission, can be managed only while you are using the Teams feature.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
+. Next to the role that you want to convert, click the *...* menu.
+. Click *Convert to permissions...*.
+. Click *Convert to Permissions*.
++
+The users who previously had the role are granted the same permissions that the role granted them, and the role is deleted.
+
+=== Convert a Role to a Team
+
+When you convert a role to a team, you create a new team that contains the users who previously held the converted role. The team you create also inherits permissions from the parent team under which you create it.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
+. Next to the role that you want to convert, click the *...* menu.
+. Click *Convert to team...*.
+. Enter a name for your new team. +
+You can use alphanumeric characters, hyphens, and spaces in your team name.
++
+. Select a parent team. +
+Note that the team you are creating also inherits permissions from the parent team that you select.
++
+. Click *Convert to Team*.
++
+The users who previously had the role are added to a new team that has the same permissions as those granted by the role, and the role is deleted. Any external names formerly associated with the role are associated with the new team.
+
+=== Merge a Role with a Team
+
+When you merge a role with a team, the users that previously had the role keep the permissions granted by that role and also obtain permissions included in the team they have joined.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
+. Next to the role that you want to convert, click the *...* menu.
+. Click *Merge with team...*.
+. Select the team with which you want to merge the members who have the role.
+. Click *Merge with Team*.
++
+The users who previously had the role are added to the selected team along with the role permissions, and the role is deleted. Any external names formerly associated with the role are associated with the selected team.
+
+
 == See Also
 
+* xref:teams.adoc[Teams]
 * xref:organization.adoc[Organization]
-* xref:managing-permissions.adoc[Managing Permissions]
+* xref:managing-permissions.adoc[Manage Permissions]
 * xref:design-center::index.adoc[Design Center]
-* xref:map-users-roles-ldap-task.adoc[Map Users to Roles in an LDAP Group]
+* xref:map-users-roles-teams.adoc[Map Users to Roles in an LDAP Group]
 * xref:environments.adoc[Environments]

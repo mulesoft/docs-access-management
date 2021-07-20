@@ -25,9 +25,10 @@ You cannot grant users access to an environment directly. To grant a user access
 
 To create a new environment or manage an existing environment:
 
-. Log in to Anypoint Platform using an account that has the organization administrator role.
-. Navigate to Access Management.
-. In the menu on the left, click *Environments*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-environments.adoc[]
+
 . Click *Add Environment*.
 . Enter a name for the environment.
 . Select the environment type.
@@ -38,12 +39,15 @@ To create a new environment or manage an existing environment:
 image::environments-85dc3.png[]
 
 [NOTE]
-Depending on your CloudHub subscription, you may have restrictions on the number and type of environments you can create.
+* Depending on your CloudHub subscription, you might have restrictions on the number and type of environments you can create.
+* If you create a new environment using the name of an existing environment, `-<n>` is appended to the name of the new environment. `<n>` is an incremental number.
 
 == To Modify or Delete an Existing Environment
 
-. Navigate to Access Management.
-. In the menu on the left, click *Environments*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-environments.adoc[]
+
 . Click the name of the environment. You can perform one of the following actions:
 +
 * Modify the environment:
@@ -60,9 +64,10 @@ Each environment has a client ID and a client secret used for authentication. Yo
 
 To view the client ID and secret for your environment:
 
-. Log in to the Anypoint Platform as an administrator.
-. Navigate to Access Management.
-. In the menu on the left, click *Environments*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-environments.adoc[]
+
 . Click the name of the environment whose client ID/secret you want to view.
 
 [NOTE]
@@ -77,9 +82,10 @@ If your organization administrator provides multiple xref:managing-api-clients.a
 
 To associate a client provider with an existing environment:
 
-. Log in to Anypoint Platform using an account that has the organization administrator role.
-. Navigate to *Access Management*.
-. In the menu on the left, click *Environments*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-environments.adoc[]
+
 . Click the name of the environment.
 . In the *Client Provider* field, select at least one client provider.
 . If you added more than one client provider, click *Set as default* to designate a default client provider.
@@ -90,14 +96,18 @@ You can now configure client providers for APIs.
 [[remove-an-idp-from-an-environment]]
 == Remove a Client Provider from an Environment
 
-You can remove a client provider from an environment at any time.
-When you remove your default client provider from an environment that has more than one client provider, the next client provider is automatically named as your new default client provider.
+You can remove a client provider from an environment at any time. However, prior to removing the default client provider, specify another client provider as default.
+
 When you remove all external client providers from an environment, the built-in Anypoint Platform client provider becomes the default client provider for that environment.
 
-. Navigate to *Access Management*.
-. In the menu on the left, click *Environments*.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-environments.adoc[]
+
 . Click the name of the environment.
-. Click the *x* next to the name of the client provider that you want to remove.
+. If the client provider that you want to remove is the default, click *Set as default* next to the name of a different client provider.
++
+. Click the *Remove* button next to the name of the client provider that you want to remove.
 . Click *Update*.
 
 The client provider is removed. Any assets or APIs that were associated with the client provider continue to use it until you associate them with a new client provider.

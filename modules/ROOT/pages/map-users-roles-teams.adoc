@@ -1,0 +1,179 @@
+= Map Single Sign-On Users to Roles or Teams
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+:page-aliases: map-users-roles-ldap-task.adoc
+
+You can map users in a federated organization's group to a team or role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
+
+After you have mapped them, users in an organization can log in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. +
+This helps to ensure secure credentials and to maintain organizational structure for accessing privileged information.
+
+Anypoint Platform requires different information from your identity provider based on whether you use SAML, OpenID Connect, or LDAP.
+
+== Configure Multiple Group Mappings for Single Sign-On Using SAML
+
+If your organization uses single sign-on but also requires you to obtain permissions from multiple groups, you can configure an attribute that contains all of the groups from which you need to obtain individual access permission. In many cases, you can create an array of groups.
+
+For example, assume that your IDP provides your groups in the following format:
+
+----
+<ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
+  <ns2:AttributeValue>Mule_Org_Admin_XXX</ns2:AttributeValue>
+</ns2:Attribute>
+<ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
+  <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
+</ns2:Attribute>
+----
+
+To prevent security vulnerabilities, Anypoint Platform requires you to create an attribute that encompasses multiple group mappings:
+
+----
+<ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
+  <ns2:AttributeValue>Mule_Org_Admin_XXX</ns2:AttributeValue>
+  <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
+</ns2:Attribute>
+----
+
+In the above example of a SAML assertion, the *Group Attribute* is `Groups`.
+
+Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names.
+
+== Configure Multiple Group Mappings for Single Sign-On Using OpenID Connect (OIDC)
+
+External identity providers format groups claims in different ways.
+Anypoint Platform checks the `UserInfo` response for the groups claim. If it is not found, it then checks the `Token` endpoint response.
+
+Use groups claims values to create a team or role for each group of users in your organization:
+
+. Obtain a response to the `UserInfo` or `Token` endpoint that contains a groups claim from your external identity provider.
+. If your IdP requires an additional OIDC scope to authorize access to groups claims, enter it in the *Group Scope* field.
+. Verify that the https://jsonata.org[JSONata] query in *Group Attribute JSONata Expression* yields an array of group names from either the `UserInfo` or `Token` endpoint response.
+
+=== Examples of OIDC Group Expressions
+
+The following examples show responses from the `UserInfo` or `Token` endpoints that contain groups claims from different external identity providers.
+
+==== Okta
+
+The following example shows a typical Okta groups claim:
+
+[source,xml]
+----
+{
+ ...
+  "groups": [
+    "Everyone",
+    "groupOne"
+  ]
+}
+----
+
+Given that groups claim, the JSONata expression is `groups`.
+
+==== Auth0
+
+The following example shows a typical Auth0 groups claim:
+
+[source,xml]
+----
+{
+  ...
+  "https://anypoint.mulesoft.com/groups": [
+    "MyGroup",
+    "groupOne"
+  ]
+}
+----
+
+Given that groups claim, the JSONata expression is `https://anypoint.mulesoft.com/groups`.
+
+==== Salesforce
+
+The following example shows a typical Salesforce groups claim:
+
+[source,xml]
+----
+{
+  ...
+  "custom_attributes": {
+    "PermissionSets": "groupOne,groupTwo"
+  }
+}
+----
+
+Given that groups claim, the JSONata expression is `$split(custom_attributes.PermissionSets, ',')`.
+
+== Configure Multiple Group Mappings for Single Sign-On Using LDAP
+
+You can obtain the information you need to map your LDAP group to a team or role using a SAML assertion. Note that user management through LDAP is available only for Anypoint Platform Private Cloud Edition.
+
+Example string from your SAML assertion AttributeValue to the External Group Name:
+
+[source,xml,linenums]
+----
+<saml:AttributeValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:type="xs:string">cn=jira-users,ou=groups,dc=muleforge,dc=org</saml:AttributeValue>
+----
+
+Mapping:
+
+image::external-identity-cfb1e.png[]
+
+== Map SSO Users to Teams
+
+You can map SSO users to teams by including their group names.
+
+If a user has multiple group names that map to a single team, the group name that grants the most permissions is used. For example, if the Acme team has a Member group of `engineering-all` and a Maintainer group of `engineering-managers`, a user with both `engineering-all` and `engineering-managers` group names becomes a maintainer. If a user is explicitly designated as a maintainer of a team and has a group name that gives them member status, the group name is ignored, and the user remains a maintainer.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-teams.adoc[]
+
+. Click *Add Team*
+. Specify a team name and parent.
+. Click *Add Team*. +
+A new team is created.
++
+. In the *Teams* section, click the name of the new team.
+. Click the *Settings* tab.
+. In the *Group Name* field, enter the group name that you want to map: +
+
+* SAML: The group attribute that comes from your array of SAML groups
+* OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
+* LDAP: The string from your SAML assertion AttributeValue
++
+. Select a membership type for the group name. +
+If you select *Maintainer*, users who have that group name become team maintainers for this team. If you select *Member*, users who have this group name become team members.
++
+. Click *Add*.
+. Click *Save Changes*. +
+The SSO users associated with the group you designated are assigned to the team.
+
+== Map SSO Users to Roles
+
+You can create a role to map to groups of SSO users in your organization.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-roles.adoc[]
+
+. Click *Add Role*.
+. Specify a role name and description.
+. Click *Add Role*.
+. In the *Roles* section, click the name of the new role.
+. Click *Set external group mapping*.
+. Under *External group names*, enter one of the following: +
+
+* SAML: The group attribute that comes from your array of SAML groups
+* OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
+* LDAP: The string from your SAML assertion AttributeValue
+
+. Click *Update*. +
+The SSO users associated with the groups you designated are assigned the role.
+
+== See Also
+
+* xref:teams.adoc[Teams]
+* xref:roles.adoc[Roles]

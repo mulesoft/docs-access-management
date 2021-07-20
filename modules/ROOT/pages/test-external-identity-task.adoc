@@ -5,20 +5,19 @@ endif::[]
 
 After configuring your organization's external identity provider, you can test the integration. Obtain your organization's login URL, for example: `+https:/anypoint.mulesoft.com/accounts/login/{organization-domain-name}+` by following these steps.
 
-. Log into your Anypoint Platform administrator account, and click Access Management > Organization.
-. In Organization, click the name of an organization listed in the Name column.
-+
-Organization Info appears.
-+
-image::domain-name.png[height=434,width=433]
-+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-organizations.adoc[]
+
+. Click the *Settings* tab. 
+
 . Copy your organization name from the Domain Name field.
 +
-. Log out of your Administrator account in Anypoint Platform.
-. Go to your organization’s login URL.
+. Log out of your Organization Administrator account in Anypoint Platform.
+. Navigate to your organization’s login URL.
 +
 You are redirected to your identity provider.
 +
-. Log into your identity provider with a test user managed by your identity provider.
+. Log in to your identity provider with a test user managed by your identity provider.
 +
 After authenticating, you are redirected back to Anypoint Platform as an authenticated user.
