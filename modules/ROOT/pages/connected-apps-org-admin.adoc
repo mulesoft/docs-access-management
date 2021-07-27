@@ -23,6 +23,7 @@ You can configure one of two types of authorization policies for your users:
   Only connected apps that are whitelisted by an administrator can be authorized by organization members to act on their behalf.
 
 By default, the **Unrestricted** policy is enabled. If you change the policy to **Restricted**, the application whitelist is enabled, and all existing application authorizations are added automatically.
+When using the **Restricted** policy, you may disable auto-approval of all internal apps, in which case each internal app must be added to the whitelist like any other connected app.
 
 [[application-whitelist-admin]]
 == Application Whitelist
