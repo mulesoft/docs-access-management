@@ -55,7 +55,6 @@ Or:
 
 == Anypoint Monitoring
 
-* Anypoint Monitoring Viewer
 * Anypoint Monitoring User
 
 == Anypoint MQ
