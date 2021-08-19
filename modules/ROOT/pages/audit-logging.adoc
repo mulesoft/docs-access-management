@@ -145,7 +145,7 @@ Properties: None
 |API ID
 |N/A
 |Create
-|Subaction: Import API +
+|Subaction: None +
 Properties: None
 |Update label of API
 |API
