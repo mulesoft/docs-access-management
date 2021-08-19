@@ -1224,6 +1224,22 @@ Properties:
 * Target
 * Role
 
+|Publish an asset to public portal
+|Asset Version Group
+|Asset ID and version group
+|N/A
+|Publish to public portal
+|Subaction: None +
+Properties: Asset ID, name and type
+
+|Remove an asset from public portal
+|Asset Version Group
+|Asset ID and version group
+|N/A
+|Remove from public portal
+|Subaction: None +
+Properties: Asset ID, name and type
+
 |Update an asset icon
 |Asset icon
 |Asset ID
