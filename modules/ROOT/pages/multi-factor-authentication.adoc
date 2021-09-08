@@ -85,7 +85,7 @@ The *Manage Your Verification Methods* interface appears.
 
 == Manage Multi-Factor Authentication for Your Account
 
-If you use multi-factor authentication, because your organization requires it or you've turned it on for yourself, you can modify the verification methods that you use to log in. You must register at least one method to use MFA.
+If you use multi-factor authentication because your organization requires it or if you've turned it on for yourself, you can modify the verification methods that you use to log in. You must register at least one method to use MFA.
 
 If your organization has disabled its multi-factor authentication requirement, you can also remove all verification methods. However, for enhanced security, it is best to use at least one verification method.
 
