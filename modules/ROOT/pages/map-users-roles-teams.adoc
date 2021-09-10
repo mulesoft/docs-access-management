@@ -124,7 +124,7 @@ image::external-identity-cfb1e.png[]
 == Map SSO Users to Teams
 
 [NOTE]
-Deleting your IdP configuration will result in your associated team mappings to be deleted as well
+If you delete your IdP configuration, your associated team mappings are also deleted.
 
 You can map SSO users to teams by including their group names.
 
