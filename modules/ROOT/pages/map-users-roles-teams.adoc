@@ -123,6 +123,9 @@ image::external-identity-cfb1e.png[]
 
 == Map SSO Users to Teams
 
+[NOTE]
+Deleting your IdP configuration will result in your associated team mappings to be deleted as well
+
 You can map SSO users to teams by including their group names.
 
 If a user has multiple group names that map to a single team, the group name that grants the most permissions is used. For example, if the Acme team has a Member group of `engineering-all` and a Maintainer group of `engineering-managers`, a user with both `engineering-all` and `engineering-managers` group names becomes a maintainer. If a user is explicitly designated as a maintainer of a team and has a group name that gives them member status, the group name is ignored, and the user remains a maintainer.
