@@ -1,0 +1,24 @@
+= Limits in Access Management
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Access Management imposes the following limits on various features in an organization:
+
+* Roles per client: 3000
+* Clients per root organization: 10000
+* Client management providers per root organization: 10
+* Environments per organization: 150
+* Sub organizations per root organization: 100
+* Roles per organization: 500
+* External access relations per organization: 20
+* Teams per root organization: 1000
+* Users per organization: 10000
+* Roles per role group: 400
+* Roles per user: 5000
+* Role groups per user: 700
+* Connected apps per organization: 200
+* Scope assignments per connected app: 1000
+* Authorized applications per user: 30
+* Role assignments per team: 1000
+* External group mappings per team: 100
