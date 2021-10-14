@@ -44,4 +44,4 @@ https://anypoint.mulesoft.com/accounts/logout/receive-id?redirect_uri=https%3A%2
 
 == See Also
 
-* xref:managing-users.adoc[Configure SAML for SSO]
+* xref:conf-saml-sso.adoc[Configure SAML for SSO]

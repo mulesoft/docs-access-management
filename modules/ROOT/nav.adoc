@@ -10,7 +10,7 @@
 * xref:external-identity.adoc[Identity Providers]
  ** xref:sso-prerequisites-about.adoc[About SSO Prerequisites and Limitations]
  ** xref:external-identity-index.adoc[External Identity Configurations]
-  *** xref:managing-users.adoc[Configure SAML]
+  *** xref:conf-saml-sso.adoc[Configure SAML]
    **** xref:verify-saml-info-task.adoc[Verify SAML Information]
    **** xref:single-log-out-task.adoc[Configure Single Log Out]
    **** xref:saml-bearer-token.adoc[Obtain the Bearer Token Using SAML]

@@ -1,12 +1,42 @@
-= External Identity
+= Manage Identity Providers
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-* xref:managing-users.adoc[Configure SAML for SSO]
-** xref:verify-saml-info-task.adoc[Verify SAML Information]
-** xref:single-log-out-task.adoc[Configure Single Log Out]
-** xref:troubleshoot-saml-assertions-task.adoc[Troubleshoot SAML Assertions]
-* xref:conf-openid-connect-task.adoc[Configure OpenID Connect]
-** xref:update-user-profile-task.adoc[Update Your User Profile]
-* xref:test-external-identity-task.adoc[Test External Identity Configuration]
+Configure multiple external identity providers (IdPs) to enable single sign-on (SSO) for users in your organization.
+Anypoint Platform currently supports SAML 2.0 and OpenID Connect (OIDC) configurations for SSO providers.
+
+== Anypoint Identity Provider
+
+The Anypoint IdP is the default identity provider in Anypoint Platform. You can disable it after you add one or more external identity providers.
+
+Organizations that use Anypoint as one of its identity providers control whether organization administrators can add new users to the organization themselves or add users through an external identity provider.
+Organizations that do not require multi-factor authentication (MFA) for its user accounts have the option to enable or disable MFA and exempt accounts. If an organization requires MFA, organization administrators can manage exempt accounts in the settings for the Anypoint IdP.
+
+== Before You Begin
+
+Before getting started, ensure you have:
+
+* The organization administrator permission
+* An OpenID Connect or SAML 2.0 identity provider
+
+== Managing Identity Providers
+
+Access your list of identity providers, configure settings, and add additional identity providers.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-identity-providers.adoc[]
+
+If you have one or more external client providers configured for your organization, a list of identity providers appears.
+
+== Adding Identity Providers
+
+Click *Add Identity Provider*, and then select the identity provider type you want to add. Choose one of the following:
+
+* xref:access-management::conf-openid-connect-task.adoc[OpenID Connect]
+* xref:access-management::conf-saml-sso.adoc[SAML 2.0]
+
+== Deleting Identity Providers
+
+If you have more than one identity provider configured, delete external identity providers that you no longer need.

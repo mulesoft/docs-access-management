@@ -1,4 +1,4 @@
-= To Configure LDAP in Anypoint Platform Private Cloud
+= Configure LDAP in Anypoint Platform Private Cloud
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

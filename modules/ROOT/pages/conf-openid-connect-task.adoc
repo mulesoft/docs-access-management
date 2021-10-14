@@ -1,4 +1,4 @@
-= To Configure OpenID Connect
+= Configure OpenID Connect Identity Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -27,11 +27,11 @@ If you already configured Anypoint Platform as a client application in your iden
 | User Info | {BASE URL}/userinfo | {BASE URL}/userinfo | {BASE URL}/userinfo | {BASE URL}/idp/userinfo.openid
 |===
 
-== To Configure OpenID Connect Dynamically
+== Configure OpenID Connect Dynamically
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
-include::partial$include-nav-external-identity.adoc[]
+include::partial$include-nav-identity-providers.adoc[]
 
 . In the *Identity Management* page, select *OpenID Connect*.
 +
@@ -71,11 +71,11 @@ The URL that returns user profile information to Anypoint.
 +
 . Log in through your identity provider to test the configuration.
 
-== To Configure OpenID Connect Manually
+== Configure OpenID Connect Manually
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-include::partial$include-nav-external-identity.adoc[]
+include::partial$include-nav-identity-providers.adoc[]
 
 . From Identity Management, select OpenId Connect.
 +
