@@ -6,6 +6,12 @@ endif::[]
 Configure up to 25 external identity providers (IdPs) to enable single sign-on (SSO) for users in your organization.
 Anypoint Platform currently supports SAML 2.0 and OpenID Connect (OIDC) configurations for SSO providers.
 
+If you are using the Access Management API, note the following:
+
+* The old endpoints that are not scoped to new IdPs are replaced with new endpoints.
+* IdPs created prior to October 31, 2021 are backwards compatible with old endpoints.
+* If a legacy IdP is deleted, then old endpoints are no longer supported, even if the legacy IdP is readded.
+
 == Anypoint Platform Identity Provider
 
 The Anypoint IdP is the default identity provider in Anypoint Platform. You can disable it after you add one or more external identity providers.
