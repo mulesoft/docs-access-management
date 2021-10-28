@@ -13,10 +13,10 @@ By selecting the checkbox next to a user, additional options related to that use
 
 == Before You Begin
 
-Before getting started, ensure you have:
+Before getting started, ensure that you have:
 
 * The Organization Administrator permission
-* The API Version Owner permission if you plan on managing user permissions for your API version
+* The API Version Owner permission if you plan to manage user permissions for your API version
 
 == Inviting a User to Anypoint Platform
 

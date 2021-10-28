@@ -3,21 +3,21 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Configure multiple external identity providers (IdPs) to enable single sign-on (SSO) for users in your organization.
+Configure up to 25 external identity providers (IdPs) to enable single sign-on (SSO) for users in your organization.
 Anypoint Platform currently supports SAML 2.0 and OpenID Connect (OIDC) configurations for SSO providers.
 
-== Anypoint Identity Provider
+== Anypoint Platform Identity Provider
 
 The Anypoint IdP is the default identity provider in Anypoint Platform. You can disable it after you add one or more external identity providers.
 
-Organizations that use Anypoint as one of its identity providers control whether organization administrators can add new users to the organization themselves or add users through an external identity provider.
-Organizations that do not require multi-factor authentication (MFA) for its user accounts have the option to enable or disable MFA and exempt accounts. If an organization requires MFA, organization administrators can manage exempt accounts in the settings for the Anypoint IdP.
+Organizations that use the native Anypoint Platform IdP as one of their identity providers control whether new users are added to the organization using either that IdP or an external identity provider.
+Organizations that do not require multi-factor authentication (MFA) for their user accounts choose to enable or disable MFA and exempt accounts. If an organization requires MFA, administrators manage exempt accounts in the settings for the native Anypoint Platform IdP.
 
 == Before You Begin
 
-Before getting started, ensure you have:
+Before getting started, ensure that you have:
 
-* The organization administrator permission
+* The Organization Administrator permission
 * An OpenID Connect or SAML 2.0 identity provider
 
 == Managing Identity Providers
@@ -28,7 +28,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-identity-providers.adoc[]
 
-If you have one or more external client providers configured for your organization, a list of identity providers appears.
+A list of identity providers appears.
 
 == Adding Identity Providers
 
@@ -41,12 +41,12 @@ Click *Add Identity Provider*, and then select the identity provider type you wa
 
 If you have more than one identity provider configured, delete external identity providers that you no longer need.
 
-Before deleting an IdP, ensure your users' credentials and permissions structures are configured with a different IdP, such as the Anypoint IdP or a different external IdP. 
+Before deleting an IdP, ensure that your users' credentials and permissions structures are configured with a different IdP, such as the native Anypoint Platform IdP or an external IdP. 
 
 When you delete an IdP:
 
-* Users can no longer use that IdP to log in to Anypoint Platform.
-* Any external team or role group mappings associated with the IdP are deleted. 
+* Users can no longer use this IdP to log in to Anypoint Platform.
+* Any external team or role group mappings associated with this IdP are deleted. 
 * The Access Management API endpoints associated with this IdP are no longer supported.
 
 To delete an identity provider:
