@@ -40,3 +40,24 @@ Click *Add Identity Provider*, and then select the identity provider type you wa
 == Deleting Identity Providers
 
 If you have more than one identity provider configured, delete external identity providers that you no longer need.
+
+Before deleting an IdP, ensure your users' credentials and permissions structures are configured with a different IdP, such as the Anypoint IdP or a different external IdP. 
+
+When you delete an IdP:
+
+* Users can no longer use that IdP to log in to Anypoint Platform.
+* Any external team or role group mappings associated with the IdP are deleted. 
+* The Access Management API endpoints associated with this IdP are no longer supported.
+
+To delete an identity provider:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-identity-providers.adoc[]
+
+. Next to the identity provider you want to delete, click the *...* menu.
+. Click *Delete...*
+. In the *API Update* window, click *Continue*.
+. Enter the name of your identity provider.
+. Click *Delete*.
+
