@@ -12,12 +12,12 @@ If you are using the Access Management API, note the following:
 * IdPs created prior to October 31, 2021 are backwards compatible with old endpoints.
 * If a legacy IdP is deleted, then old endpoints are no longer supported, even if the legacy IdP is readded.
 
-== Anypoint Platform Identity Provider
+== Managing User Identities with Anypoint Platform
 
-The Anypoint IdP is the default identity provider in Anypoint Platform. You can disable it after you add one or more external identity providers.
+By default, an organization manages user identities and credentials using Anypoint Platform. You can disable this functionality after you add one or more external identity providers.
 
-Organizations that use the native Anypoint Platform IdP as one of their identity providers control whether new users are added to the organization using either that IdP or an external identity provider.
-Organizations that do not require multi-factor authentication (MFA) for their user accounts choose to enable or disable MFA and exempt accounts. If an organization requires MFA, administrators manage exempt accounts in the settings for the native Anypoint Platform IdP.
+Organizations that use Anypoint Platform to manage user identities control whether new users are added to the organization using either Access Management settings or an external identity provider.
+Organizations that do not require multi-factor authentication (MFA) for their user accounts choose to enable or disable MFA and exempt accounts. If an organization requires MFA, administrators manage exempt accounts in the *Identity Providers* section using the *Anypoint* settings.
 
 == Before You Begin
 
