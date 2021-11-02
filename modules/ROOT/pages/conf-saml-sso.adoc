@@ -49,7 +49,7 @@ ID of the identity provider instance that sends SAML assertions.
 +
 * *Public Key*
 +
-Public key provided by the identity provider, which is used to sign the SAML assertion.
+Public key provided by the identity provider, which is used to sign the SAML assertion. It is the "X509Certificate" value in the SAML Response. 
 +
 * *Audience*
 +

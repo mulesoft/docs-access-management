@@ -16,6 +16,6 @@ End users can manage third-party apps that they have authorized in their profile
 image::connected-apps-in-profile.png[A user's profile that contains authorized connected apps and their scopes, 80%,80%]
 
 
-If an organization administrator blacklists an app, end users cannot authorize the app to access their information.
+If an organization administrator blocks an app, end users cannot authorize the app to access their information.
 
 Because most applications are developed by a third-party, MuleSoft is not liable for how an app uses the data it's requesting access to. You can navigate to the developer information link and contact the application admin if you have questions or concerns about their application.

@@ -37,7 +37,7 @@ Each log entry has a set of properties that provides information about the activ
 * *Type*: The type of the object on which the action is performed, for example, `Organization`
 * *Action*: The action associated with the object, for example, `Create`
 * *Object*: The name of the object, for example, `foo`
-* *User*: The user who performed the action, for example, `johndoe`
+* *User Name*: The user who performed the action, for example, `johndoe`
 +
 [NOTE]
 --
@@ -49,6 +49,7 @@ Occasionally, there are `Anypoint Staff` log entries. This log entry is made whe
 * An action is performed by a MuleSoft employee on your behalf for other purposes, such as troubleshooting
 --
 
+* *Connected App*: Name of the connected app that takes an action on behalf of a user or itself. If a connected app did not execute the action, the payload is `N/A`.
 * *Environment*: Environment names for events from API Manager, Runtime Manager, CloudHub, Partner Manager, and MQ.
 * *Parent*: (Optional) The parent of the object (if any) on which the action is performed. Mainly relevant to APIs.
 * *Payload*: (Optional) More information about the log properties. For example, if an Organization was created, then the payload would contain information about the organization and the owner, such as IDs.
@@ -145,7 +146,7 @@ Properties: None
 |API ID
 |N/A
 |Create
-|Subaction: Import API +
+|Subaction: None +
 Properties: None
 |Update label of API
 |API
@@ -1223,6 +1224,22 @@ Properties:
 * Source
 * Target
 * Role
+
+|Publish an asset to public portal
+|Asset Version Group
+|Asset ID and version group
+|N/A
+|Publish to public portal
+|Subaction: None +
+Properties: Asset ID, name and type
+
+|Remove an asset from public portal
+|Asset Version Group
+|Asset ID and version group
+|N/A
+|Remove from public portal
+|Subaction: None +
+Properties: Asset ID, name and type
 
 |Update an asset icon
 |Asset icon

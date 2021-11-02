@@ -72,9 +72,9 @@ The exempt user accounts appear in the *Exempt Accounts* section.
 
 You can later remove user accounts from the *Exempt Accounts* list by clicking *X* next to their account names.
 
-== Enable Multi-Factor Authentication on Your User Account
+== Turn On Multi-Factor Authentication for Your User Account
 
-If you want to ensure you are the only person who can access your account, you can enable multi-factor authentication on your user account even if your organization does not require it. You can configure more than one verification method for your account:
+If you want to ensure you are the only person who can access your account, you can turn on multi-factor authentication for your user account even if your organization does not require it. You can register more than one verification method for your account:
 
 include::partial$include-nav-steps-to-profile.adoc[]
 
@@ -83,9 +83,9 @@ The *Manage Your Verification Methods* interface appears.
 . Next to the verification method you want to configure, click *Add*.
 . Follow the instructions for your preferred verification method.
 
-== Modify or Remove Multi-Factor Authentication on Your Account
+== Manage Multi-Factor Authentication for Your Account
 
-If you have previously configured multi-factor authentication, you can modify which verification methods you use for your account. If your organization requires multi-factor authentication, you must have at least one verification method configured.
+If you use multi-factor authentication because your organization requires it or if you've turned it on for yourself, you can modify the verification methods that you use to log in. You must register at least one method to use MFA.
 
 If your organization has disabled its multi-factor authentication requirement, you can also remove all verification methods. However, for enhanced security, it is best to use at least one verification method.
 
@@ -95,7 +95,7 @@ include::partial$include-nav-steps-to-profile.adoc[]
 
 . Click *Configure multi-factor authentication (MFA)*. +
 The *Manage Your Verification Methods* interface appears.
-. If you want to add an additional verification method:
+. If you want to register an additional verification method:
 .. Next to the verification method you want to configure, click *Add*.
 .. Follow the instructions to configure your preferred verification method.
 .. Click *Done*. +
@@ -143,4 +143,7 @@ If your organization requires multi-factor authentication, the user is prompted 
 
 == Known Issues
 
-* If you enable MFA, your users might experience an issue logging in via Anypoint Studio. As a temporary workaround, change the *Browser* setting from *Built-in* to *Native* in the Anypoint Studio *Preferences* section. Once you've made the change, your users should be able to authenticate successfully with "One-Time Password Generator" and "Salesforce Authenticator" verification methods. Anypoint Studio will resolve this issue in a future update.
+If you enable MFA, your users might experience an issue logging in via Anypoint Studio. You can use the following workarounds:
+
+* If MFA is required for the entire organization, a user who has the Organization Administrator permission can exempt individual users from the MFA requirement. For more information, see xref:access-management::multi-factor-authentication.adoc#exempt-users-from-multi-factor-authentication[Exempt Users from MFA].
+* In the *Preferences* section of Anypoint Studio, Change the *Browser* setting from *Built-in* to *Native*. Once you've made the change, your users should be able to authenticate successfully with "One-Time Password Generator" and "Salesforce Authenticator" verification methods.
