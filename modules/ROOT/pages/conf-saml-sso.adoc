@@ -2,7 +2,6 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
-
 :page-aliases: managing-users.adoc
 
 Configure SAML to provide external authentication of users and Single Sign-on (SSO) capability so users don't need to provide additional credentials when they access Anypoint Platform.
