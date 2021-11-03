@@ -3,9 +3,6 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You must have the Organization Administrator permission to manage users within an Anypoint Platform organization.
-To manage user permissions for your API version, you must have the API Version Owner permission.
-
 As an administrator of your root organization, you can enable, disable, or delete users.
 
 By selecting the checkbox next to a user, additional options related to that user are displayed:
@@ -13,6 +10,13 @@ By selecting the checkbox next to a user, additional options related to that use
 * *Enable*: Enables the user in the selected organization or business group.
 * *Disable*: Disables the user in the selected organization or business group. They are no longer able to log in.
 * *Delete*: When deleting from the top level Organization, all of the user's roles/permissions are removed and the user becomes unattached. When deleting from a business group, all of the user's roles/permissions for only the selected business group are removed.
+
+== Before You Begin
+
+Before getting started, ensure that you have:
+
+* The Organization Administrator permission
+* The API Version Owner permission if you plan to manage user permissions for your API version
 
 == Inviting a User to Anypoint Platform
 
