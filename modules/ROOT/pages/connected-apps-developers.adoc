@@ -83,7 +83,7 @@ However, you can modify client secrets in the *Application Settings* page.
 You should also determine the use-case and whether the app is internal to your company or is a third-party application that can be distributed outside of your organization.
 To create your app, follow these steps:
 
-. include::partial$include-nav-connected-apps.adoc[]
+include::partial$include-nav-connected-apps.adoc[]
 
 . Click *Create App*.
 . Create your app by completing the fields in the *Create App* page.
