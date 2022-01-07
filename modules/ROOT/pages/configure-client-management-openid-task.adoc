@@ -109,6 +109,8 @@ If the *Issuer* field isn't configured or the provider's discovery endpoint is u
 - Authorization
 - Refresh Token
 
+When you add a new client provider, metadata from `$ISSUER/.well-known/oauth-authorization-server` and `$ISSUER/.well-known/openid-configuration` is discovered and validated prior to merging grant types. If you want to fetch metadata for validation for an existing client provider, save that client provider again, and the validation occurs automatically.
+
 [NOTE]
 The Refresh token can be selected only if the authorization grant type is also selected.
 
