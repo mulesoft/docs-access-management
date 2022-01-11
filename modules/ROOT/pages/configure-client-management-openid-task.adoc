@@ -101,15 +101,13 @@ When Anypoint Platform makes an HTTP call to the configured OIDC endpoints, the 
 
 == Display Grant Types in the API Portal
 
-If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider.
+If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. If the client provider supports https://tools.ietf.org/id/draft-ietf-oauth-discovery-08.html#ASConfigurationRequest[this spec] on the `$ISSUER/.well-known/oauth-authorization-server` endpoint, the `$ISSUER/.well-known/openid-configuration` endpoint is discovered and validated prior to merging grant types. This process also enables the use of the Client Credentials grant type for Okta users. To fetch and validate metadata for an existing client provider, save that client provider again, and the list of supported grant types updates automatically.
 
 If the *Issuer* field isn't configured or the provider's discovery endpoint is unavailable, by default the Anypoint Platform UI lists the following grant types when registering an API client application in an xref:exchange::index.adoc[Anypoint Exchange API portal]:
 
 - Implicit
 - Authorization
 - Refresh Token
-
-When you add a new client provider, metadata from `$ISSUER/.well-known/oauth-authorization-server` and `$ISSUER/.well-known/openid-configuration` is discovered and validated prior to merging grant types. If you want to fetch metadata for validation for an existing client provider, save that client provider again, and the validation occurs automatically.
 
 [NOTE]
 The Refresh token can be selected only if the authorization grant type is also selected.
