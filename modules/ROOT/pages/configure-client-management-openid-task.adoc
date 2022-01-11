@@ -81,7 +81,7 @@ Authorization: Bearer access-token
 [IMPORTANT]
 Neither the `PUT` nor the `DELETE` are expected to work if the call is used directly against an IDP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
 
-** *Client Request Timeout (seconds)*: the time elapsed before a client provider request times out. The minimum value is five seconds. The maximum value is 20 seconds.
+** *Client Request Timeout (seconds)*: The time elapsed before a client provider request times out. The minimum value is five seconds. The maximum value is 20 seconds.
 * *Token Introspection Client*
  ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
