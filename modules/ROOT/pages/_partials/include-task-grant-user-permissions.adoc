@@ -1,0 +1,44 @@
+// tag::description[]
+= Grant Permissions and Roles to Users
+
+Organization administrators manage user access using xref:access-management::teams.adoc[teams] or xref:access-management::roles.adoc[roles] (deprecated), or by granting permissions to users individually.
+
+In the *Users* page, click a user name to access more information about that user, grant roles and permissions, see inherited permissions, or reset their password.
+
+By default, in every new organization and business group, you get three options:
+
+* Assign API Permissions: Write the name of the API you want to give access to, then pick a version and permission.
+* Assign Runtime Manager Permissions: Write the name of the Runtime Manager environment to give access to, then pick a permission.
+* Assign Roles: Write the name of the role to grant. Check the xref:access-management::roles.adoc[roles] section for a description of the default roles within an organization and business group.
+
+[NOTE]
+--
+Roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
+--
+
+If necessary, you can also remove user permissions, but note that if those permissions are granted through an assigned role, you can remove them only by using the xref:access-management::roles.adoc[Roles] functionality. You cannot view or remove role-based permissions in the *Users* page.
+
+Because the Roles feature is deprecated, it is best to xref:access-management::teams.adoc#opt-in-to-teams[opt in to the Teams feature] to manage permissions in a hierarchy.
+
+To grant permissions to an individual user:
+// end::description[]
+// tag::navStepsOrgAdmin[]
+
+. Log in to Anypoint Platform using an account that has the Organization Administrator permission.
+. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
+
+// end::navStepsOrgAdmin[]
+// tag::navUsers[]
+
+. In the Access Management navigation menu, click *Users*.
+
+// end::navUsers[]
+// tag::finalSteps[]
+
+. Click the Username of the user you are granting permissions.
+. Under the *Permissions* tab, select the component you are granting the user permissions to use.
+. Depending on the component, select the appropriate Permission(s) checkboxes and select Environments when available.
+. Click the blue plus icon (+) to save the permission(s).
+
+The user now has the permissions you selected in the business groups and environments you specified.
+// end::finalSteps[]

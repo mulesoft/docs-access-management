@@ -31,7 +31,7 @@ As an organization administrator of a root organization or of one of its busines
 
 To invite new users to your organization:
 
-include::partial$include-nav-users.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navUsers]
 
 . Click *Invite user*.
 . Enter the email addresses of the users that you want to invite to your organization as a comma-separated list.
@@ -49,42 +49,7 @@ Invited users have access to the same set of resources as you (although they may
 Click *Pending Invites* to view all invitations that have not yet been accepted. Select the ones you need to manage, and click *Re-send Invite* or *Cancel Invite*.
 
 [[grant-user-permissions]]
-== Grant Permissions and Roles to Users
-
-Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually.
-
-In the *Users* page, click a user name to access more information about that user, grant roles and permissions, see inherited permissions, or reset their password.
-
-By default, in every new organization and business group, you get three options:
-
-* Assign API Permissions: Write the name of the API you want to give access to, then pick a version and permission.
-* Assign Runtime Manager Permissions: Write the name of the Runtime Manager environment to give access to, then pick a permission.
-* Assign Roles: Write the name of the role to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
-
-[NOTE]
---
-Roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
---
-
-If necessary, you can also remove user permissions, but note that if those permissions are granted through an assigned role, you can remove them only by using the xref:roles.adoc[Roles] functionality. You cannot view or remove role-based permissions in the *Users* page.
-
-Because the Roles feature is deprecated, it is best to xref:teams.adoc#opt-in-to-teams[opt in to the Teams feature] to manage permissions in a hierarchy.
-
-To grant permissions to an individual user:
-
-include::partial$include-nav-steps-org-admin.adoc[]
-
-include::partial$include-nav-users.adoc[]
-
-. In the *Permissions* section, click *Add permissions*.
-. Next to each permission you want to grant the user, select the checkbox.
-. Click *Next*.
-. Select the business groups in which you want the selected permissions to apply.
-. Click *Next*.
-. Select the environments in which you want the selected permissions to apply.
-. Review the permissions, business groups, and environments, and then click *Add permissions*.
-
-The user now has the permissions you selected in the business groups and environments you specified.
+include::partial$include-task-grant-user-permissions.adoc[leveloffset=+1,tags=description;navStepsOrgAdmin;finalSteps]
 
 == Managing External Users of Your Public APIs
 

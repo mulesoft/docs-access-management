@@ -27,7 +27,7 @@ Note that `:providerId` is available only after you create the provider configur
 [[configure-saml]]
 == Configure SAML in Identity Management
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-identity-providers.adoc[]
 
@@ -109,7 +109,7 @@ When you use the key rotation feature, you must have keys available in Anypoint 
 
 ==== Generate a New Key
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-identity-providers.adoc[]
 
@@ -120,7 +120,7 @@ A newly generated key appears in the list of keys.
 
 ==== Upload an Existing Private and Public Key Pair
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-identity-providers.adoc[]
 
@@ -137,7 +137,7 @@ The key you uploaded appears in the list of keys.
 Because you can store up to three keys, you must designate a _primary key_ to be used for signing requests from Anypoint Platform.
 Before reassigning the primary key, ensure your IdP can access the key that you intend to use.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-identity-providers.adoc[]
 
@@ -152,7 +152,7 @@ To help ensure security, revoke a key that you have already used as the primary 
 Before you revoke a key, ensure your IdP is not using the key.
 Note that when you revoke a public key, Anypoint Platform also revokes the corresponding private key. For security purposes, you cannot retrieve a key that has been revoked.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-identity-providers.adoc[]
 

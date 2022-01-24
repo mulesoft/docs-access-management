@@ -30,7 +30,7 @@ Before getting started, ensure that you have:
 
 Access your list of identity providers, configure settings, and add additional identity providers.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-identity-providers.adoc[]
 
@@ -57,7 +57,7 @@ When you delete an IdP:
 
 To delete an identity provider:
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-identity-providers.adoc[]
 

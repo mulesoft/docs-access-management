@@ -19,7 +19,7 @@ The following table contains examples of the URLs you need to supply, depending 
 | Token Introspection | {BASE URL}/introspect | {BASE URL}/introspect | {BASE URL}/introspect
 |===
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-client-providers.adoc[]
 
@@ -35,7 +35,7 @@ The *Add OIDC client provider* page appears.
  ** (Optional) Click *Advanced settings* to add an *Authorization Header* for dynamic client registration requests. This header is required if the provider restricts registration requests to authorized clients. +
   *** For Okta, this value is `SSWS ${api_token}`, where `api_token` is an API token created through Okta.
   *** For ForgeRock, this value is `Bearer ${api_token}`, where `api_token` is an API token created through ForgeRock.
-  *** For Salesforce, this value is `Bearer ${api_token}`, where `api_token` is an API token created through Salesforce.
+  *** For Salesforce, this value is `Bearer ${api_token}`, where `api_token` is an API token created through Salesforce. +
  In *Advanced Settings* you can also select:
   *** *Disable server certificate validation*: Disables server certificate validation if your OpenID client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
   *** *Enable client deletion in Anypoint Platform*: Enables deletion of clients created with this integration.

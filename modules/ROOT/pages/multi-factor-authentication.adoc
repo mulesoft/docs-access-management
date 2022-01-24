@@ -132,9 +132,7 @@ You can reset multi-factor authentication for individual users if a device is co
 
 To reset multi-factor authentication for an individual user:
 
-include::partial$include-nav-steps-org-admin-bg.adoc[]
-
-include::partial$include-nav-users.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin;navUsers]
 
 . Click the user whose multi-factor authentication configuration you want to reset. +
 . Click *Reset multi-factor authentication*.

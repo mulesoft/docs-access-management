@@ -27,7 +27,7 @@ All child teams inherit user permissions from their parents, but you configure a
 
 To create a child team in the *Teams* page:
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-teams.adoc[]
 
@@ -129,7 +129,7 @@ Your team and its child teams now reside under the parent team you selected.
 
 You must have the Organization Administrator permission to delete a team. After you delete a team, the team cannot be restored. You cannot delete the root team that represents your entire root organization.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 . Click *...* next to the team that you want to delete.
 . Click *Delete...*.

@@ -73,7 +73,7 @@ The URL that returns user profile information to Anypoint.
 
 == Configure OpenID Connect Manually
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-identity-providers.adoc[]
 

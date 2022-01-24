@@ -43,7 +43,7 @@ Changing the name or domain name of an organization changes the deep links to an
 
 === Access an Organization
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 . In the Access Management navigation menu, click *Business Groups*.
 . Click the name of the root organization.
@@ -59,7 +59,7 @@ Organization-level client IDs and client secrets are supported only for backward
 
 === View the Client ID and Secret for Environments
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-environments.adoc[]
 
@@ -68,7 +68,7 @@ include::partial$include-nav-environments.adoc[]
 
 === View the Client ID and Secret for Organizations
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-organizations.adoc[]
 
@@ -89,7 +89,10 @@ An organization administrator can modify the organization name, domain name, and
 
 To access these settings:
 
-include::partial$include-nav-steps-org-admin.adoc[]
+IMPORTANT: These steps are using the New Features UI. Click the *Try New Features*
+button in the navigation bar to activate the new features and use the new UI.
+
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-organizations.adoc[]
 
@@ -100,7 +103,7 @@ include::partial$include-nav-organizations.adoc[]
   * *Owner*: The identifier of the organization owner.
   * *Default session timeout*: Set the amount of time (in minutes) a user is inactive before they are automatically logged out of Anypoint Platform. The default is 60 minutes, the minimum is 15 minutes, and the maximum is 180 minutes.
 
-You can also view the organization ID, client ID, and client secret. These values apply to the root organization and grant permissions for all of the business groups contained within.
+You can also view the business group ID (organization ID), client ID, and client secret. These values apply to the root organization and grant permissions for all of the business groups contained within.
 
 == Sharing Resources in an Organization
 

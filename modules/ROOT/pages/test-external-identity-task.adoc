@@ -5,7 +5,7 @@ endif::[]
 
 After configuring your organization's external identity provider, you can test the integration. Obtain your organization's login URL, for example: `+https:/anypoint.mulesoft.com/accounts/login/{organization-domain-name}+` by following these steps.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-organizations.adoc[]
 

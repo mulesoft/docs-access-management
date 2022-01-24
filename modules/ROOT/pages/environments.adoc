@@ -25,7 +25,7 @@ You cannot grant users access to an environment directly. To grant a user access
 
 To create a new environment or manage an existing environment:
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-environments.adoc[]
 
@@ -44,7 +44,7 @@ image::environments-85dc3.png[]
 
 == To Modify or Delete an Existing Environment
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-environments.adoc[]
 
@@ -64,7 +64,7 @@ Each environment has a client ID and a client secret used for authentication. Yo
 
 To view the client ID and secret for your environment:
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::access-management::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-environments.adoc[]
 
@@ -82,7 +82,7 @@ If your organization administrator provides multiple xref:managing-api-clients.a
 
 To associate a client provider with an existing environment:
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::access-management::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-environments.adoc[]
 
@@ -100,7 +100,7 @@ You can remove a client provider from an environment at any time. However, prior
 
 When you remove all external client providers from an environment, the built-in Anypoint Platform client provider becomes the default client provider for that environment.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::access-management::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-environments.adoc[]
 

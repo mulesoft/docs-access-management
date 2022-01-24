@@ -27,7 +27,7 @@ When you create a business group under another business group, only the redistri
 
 When you create a new business group under the top-level, or _root_, business group, all the current users with the Organization Administrator permission in the root business group appear in the list of users in the newly created business group.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-business-groups.adoc[]
 

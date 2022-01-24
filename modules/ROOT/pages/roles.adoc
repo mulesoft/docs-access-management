@@ -20,7 +20,7 @@ Roles are business group specific, so ensure that you are in the correct busines
 
 == Access Roles
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-roles.adoc[]
 
@@ -145,7 +145,7 @@ Product permissions are specific to a single environment. If you have multiple e
 
 === Create a Custom Role
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-roles.adoc[]
 
@@ -175,7 +175,7 @@ include::partial$include-nav-roles.adoc[]
 
 After creating a custom role, you can assign permissions to the role. If these environments belong to a business group, they are available only when creating a role in that same business group.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-roles.adoc[]
 
@@ -284,7 +284,7 @@ When you convert roles to permissions, users keep the same permissions that they
 [WARNING]
 When you convert a role to permissions, the users that belonged to the role are no longer grouped according to their permissions and must be managed individually. Additionally, roles that can now be applied as (or converted to) permissions, such as the Exchange Contributors permission, can be managed only while you are using the Teams feature.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-roles.adoc[]
 
@@ -298,7 +298,7 @@ The users who previously had the role are granted the same permissions that the 
 
 When you convert a role to a team, you create a new team that contains the users who previously held the converted role. The team you create also inherits permissions from the parent team under which you create it.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-roles.adoc[]
 
@@ -318,7 +318,7 @@ The users who previously had the role are added to a new team that has the same 
 
 When you merge a role with a team, the users that previously had the role keep the permissions granted by that role and also obtain permissions included in the team they have joined.
 
-include::partial$include-nav-steps-org-admin.adoc[]
+include::partial$include-task-grant-user-permissions.adoc[tags=navStepsOrgAdmin]
 
 include::partial$include-nav-roles.adoc[]
 
