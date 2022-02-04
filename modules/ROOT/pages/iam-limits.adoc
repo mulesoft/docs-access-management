@@ -43,9 +43,9 @@ Teams, roles, and user permissions:
 * Permission roles per team: 1000 -> Permissions per team?
 * Rolegroups/deprecated roles per user: 700 -> Roles per user?
 * Permission roles per api manager client or runtime client: 3000 -> ??
-* Deprecated roles per root or sub organization: 500 -> ??
-* Permission roles per deprecated role: 400 ->??
-* Permission roles per user: 5000 ->??
+* Deprecated roles per root or sub organization: 500 -> ?? Roles each org can have configured?
+* Permission roles per deprecated role: 400 -> Permissions each role can have associated with it? 
+* Permission roles per user: 5000 ->?? individual permissions?
 * External group mappings per team: 100 
 
 Identity providers:
