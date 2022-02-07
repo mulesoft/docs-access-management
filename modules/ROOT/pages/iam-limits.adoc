@@ -60,6 +60,6 @@ Client providers:
 Connected apps:
 
 * Authorized applications per user: 30 -> Connected apps per user? or.
-* External connected applications per root or sub organization: 20 -> Connected Apps shared using the External Access feature?
+* External connected applications per root or sub organization: 20 -> Connected Apps accessible by external organizations.
 * Internal connected applications per root or sub organization: 2000 -> Connected Apps within an organization?
 * Scope assignments per connected application: 1000
