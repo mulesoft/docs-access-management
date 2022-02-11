@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, permissions, configuring
 
-Use *Anypoint Access Management* to xref:managing-your-account.adoc#how-to-create-your-account[create your Anypoint Platform account] or configure federated xref:external-identity.adoc[External Identity].
+Use *Access Management* to xref:managing-your-account.adoc#how-to-create-your-account[create your Anypoint Platform account] or configure federated xref:external-identity.adoc[External Identity].
 
 [TIP]
 --
