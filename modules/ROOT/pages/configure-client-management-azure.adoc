@@ -17,16 +17,14 @@ The *Add OIDC Azure client provider* page appears.
 . Enter the following values from your identity provider’s configuration:
 .. *Issuer*: URL that the OpenID provider asserts is its trusted issuer.
 .. *Tenant ID for Azure AD*: The tenant ID from Azure Active Directory. For more information on obtaining your tenant ID, see https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID].
-.. *Authorization Header*: The header provides credentials to authenticate with a server. This value is the bearer `${api_token}`, where `api_token` is an API token created through Azure. This header is required if the provider restricts registration requests to authorized clients. 
+.. *Client ID*: The client ID for an existing client in your IdP capable of introspection of all tokens from all clients. Use a client that has permissions to create applications in Azure.
+.. *Client Secret*: The client secret that corresponds to the client ID.
 . Expand the *Advanced Settings* section. The following selections are optional:
 .. *Disable server certificate validation*: Disables server certificate validation if your Azure client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
 .. *Enable client deletion in Anypoint Platform*: Enables deletion of clients created with this integration.
 .. *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Azure DCR Wrapper to `https://graph.microsoft.com/v1.0/applications/{clientId}`. +
 +
 For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation. 
-
-. Enter the client ID, which is the client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
-. Enter the client secret, which is the client secret that corresponds to the client ID.
 . Click *Save*.
 
 == See Also
