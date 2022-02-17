@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can use dynamic client registration to configure Azure Active Directory client management with Anypoint Platform.
+You can use dynamic client registration to configure Azure Active Directory (Azure AD) client management with Anypoint Platform. Using Azure AD as a client manager enables you to authenticate and authorize API consumers with your existing configurations. Azure AD configuration in Anypoint Platform also provides a stateless microservice to convert OAuth 2.0 client application registration requests to requests supported by Azure AD.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
