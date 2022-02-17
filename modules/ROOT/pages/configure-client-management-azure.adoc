@@ -1,4 +1,4 @@
-= Configure Azure Client Management
+= Configure Azure Active Directory Client Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -16,13 +16,13 @@ The *Add OIDC Azure client provider* page appears.
 . Enter a name and description for your client provider.
 . Enter the following values from your identity provider’s configuration:
 .. *Issuer*: URL that the OpenID provider asserts is its trusted issuer.
-.. *Tenant ID for Azure AD*: The tenant ID from Azure Active Directory. For more information on obtaining your tenant ID, see https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID].
-.. *Client ID*: The client ID for an existing client in your identity provider (IdP) that is capable of creating applications in Azure Active Directory.
+.. *Tenant ID for Azure AD*: The tenant ID from Azure AD. For more information on obtaining your tenant ID, see https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID].
+.. *Client ID*: The client ID for an existing client in your identity provider (IdP) that is capable of creating applications in Azure AD.
 .. *Client Secret*: The client secret that corresponds to the client ID.
 . Expand the *Advanced Settings* section. The following selections are optional:
-.. *Disable server certificate validation*: Disables server certificate validation if your Azure Active Directory client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
+.. *Disable server certificate validation*: Disables server certificate validation if your Azure AD client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
 .. *Enable client deletion in Anypoint Platform*: Enables deletion of clients created with this integration.
-.. *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Azure Active Directory to `https://graph.microsoft.com/v1.0/applications/{clientId}`. +
+.. *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Azure AD to `https://graph.microsoft.com/v1.0/applications/{clientId}`. +
 +
 For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation. 
 . Click *Create*.
