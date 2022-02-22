@@ -135,7 +135,9 @@ For example, when you execute `account business-group list`, your organization i
 |===
 | Name | Type | ID
 | Great Company | Master | 12345678-7831-8734-9999-a0a0a0a0a0a0
+
 | Retail │ Business unit │ abcdef01-1234-53e1-a3b4-b0b0b0b0b0b0
+
 │ Engineering │ Business unit │ 87654321-abcd-e8e2-bab4-c0c0c0c0c0c0
 |===
 
