@@ -1,9 +1,9 @@
-= Configure Azure Client Management
+= Configure Azure Active Directory Client Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-You can use dynamic client registration to configure Azure client management with Anypoint Platform.
+You can use dynamic client registration to configure Azure Active Directory (Azure AD) client management with Anypoint Platform. Using Azure AD as a client provider enables you to authenticate and authorize API consumers with your existing configurations. Azure AD configuration in Anypoint Platform also provides a stateless microservice to convert OAuth 2.0 client application registration requests to requests supported by Azure AD.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -16,6 +16,21 @@ The *Add OIDC Azure client provider* page appears.
 . Enter a name and description for your client provider.
 . Enter the following values from your identity provider’s configuration:
 .. *Issuer*: URL that the OpenID provider asserts is its trusted issuer.
+.. *Tenant ID for Azure AD*: The tenant ID from Azure AD. For more information on obtaining your tenant ID, see https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID].
+.. *Client ID*: The client ID for an existing client in your identity provider (IdP) that is capable of creating applications in Azure AD.
+.. *Client Secret*: The client secret that corresponds to the client ID.
+. Expand the *Advanced Settings* section. The following selections are optional:
+.. *Disable server certificate validation*: Disables server certificate validation if your Azure AD client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
+.. *Enable client deletion in Anypoint Platform*: Enables the deletion of clients created with this integration.
+.. *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Azure AD to `https://graph.microsoft.com/v1.0/applications/{clientId}`. +
++
+For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation. 
+. Click *Create*.
+
+== See Also
+
+* https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID]
+=======
 .. *Tenant ID for Azure AD*: The tenant ID from Azure Active Directory. For more information on obtaining your tenant ID, see https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID].
 .. *Authorization Header*: The header to provide credentials to authenticate with a server. This header is required if the provider restricts registration requests to authorized clients.
 . Expand the *Advanced Settings* section. The following selections are optional:
@@ -67,4 +82,4 @@ Neither the `PUT` nor the `DELETE` are expected to work if the call is used dire
 
 == See Also
 
-* https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID].
+* https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID]
