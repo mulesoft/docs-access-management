@@ -132,13 +132,21 @@ You can use the Anypoint CLI (command-line interface) tool to execute xref:anypo
 
 For example, when you execute `account business-group list`, your organization information appears in the following format:
 
+[cols="1,1,2"]
 |===
-| Name | Type | ID
-| Great Company | Master | 12345678-7831-8734-9999-a0a0a0a0a0a0
+|Name |Type |ID
 
-| Retail │ Business unit │ abcdef01-1234-53e1-a3b4-b0b0b0b0b0b0
+|Great Company
+|Master
+|12345678-7831-8734-9999-a0a0a0a0a0a0
 
-│ Engineering │ Business unit │ 87654321-abcd-e8e2-bab4-c0c0c0c0c0c0
+|Retail
+|Business unit
+|abcdef01-1234-53e1-a3b4-b0b0b0b0b0b0
+
+|Engineering
+|Business unit
+|87654321-abcd-e8e2-bab4-c0c0c0c0c0c0
 |===
 
 In the example, the ID next to `Master` is the organization ID.
