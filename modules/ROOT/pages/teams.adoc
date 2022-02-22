@@ -34,7 +34,7 @@ When you are planning your organization’s team structure, consider the followi
 * Each member of your organization is a member of the “Everyone at <Root Organization> team, or the _root_ team.
 * Your team structure should reflect the structure of your organization so that you can plan your teams and configure permissions according to member needs. However, you can move teams as the needs of your organization change.
 * Teams names must be unique across your organization.
-* Your organization can have up to 2000 teams.
+* Your organization can have up to 1000 teams.
 * Your teams can be nested up to 10 levels, including the “Everyone at <Root Organization> team.
 * You can create teams without adding members.
 * Every child team inherits permissions from its parent team.
