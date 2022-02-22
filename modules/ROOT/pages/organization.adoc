@@ -102,6 +102,53 @@ include::partial$include-nav-organizations.adoc[]
 
 You can also view the organization ID, client ID, and client secret. These values apply to the root organization and grant permissions for all of the business groups contained within.
 
+== Find your Organization ID
+
+Some operations require you to specify your organization ID, or _org ID_. You also need your org ID to designate a business group or root organization when creating certain types of requests.
+
+You can obtain your org ID by extracting a your organization URL, executing an Anypoint CLI command, or using a token to invoke the Anypoint Platform REST API.
+
+=== Organization URL
+
+After logging in to Anypoint Platform, you can view your org ID by accessing https://anypoint.mulesoft.com/accounts/businessGroups[business groups].
+
+include::partial$include-nav-steps-no-permissions.adoc[]
+
+. If you are using the new feature UI (Teams feature is enabled):
+.. In the tree that contains the root organization and business groups, click the root organization or a business group. +
+The URL in your browser's address bar now appears in the following format: `https://anypoint.mulesoft.com/accounts/businessGroups/<XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX>`. +
+The string ('XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX') on the example provided URL (after `businessGroups/`) is the org ID of the selected organization.
++
+. If you are using the classic UI (Teams feature is not enabled):
+.. In the Access Management navigation menu, click *Organization*. +
+A tree containing the root organization and business groups appears.
++
+.. Click the root organization or a business group. +
+The org ID appears in the *Organization Id* field.
+
+=== Anypoint CLI
+
+You can use the Anypoint CLI (command-line interface) tool to execute xref:anypoint-cli::index.adoc#account-business-group-list[account business-group] to get a list of the business groups, their types, and the organization ID. Note that you must install Anypoint CLI first.
+
+For example, when you execute `account business-group list`, your organization information appears in the following format:
+
+|===
+| Name | Type | ID
+| Great Company | Master | 12345678-7831-8734-9999-a0a0a0a0a0a0
+| Retail │ Business unit │ abcdef01-1234-53e1-a3b4-b0b0b0b0b0b0
+│ Engineering │ Business unit │ 87654321-abcd-e8e2-bab4-c0c0c0c0c0c0
+|===
+
+In the example, the ID next to `Master` is the organization ID.
+
+=== Anypoint Platform REST API
+
+To get a token to invoke the Anypoint Platform REST API, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to generate your Authorization Bearer token for Anypoint Platform]. Then, invoke the URL `https://anypoint.mulesoft.com/accounts/api/me` using the token.
+
+For example:
+
+`$ curl -H "Authorization: Bearer [YOUR_ACCESS_TOKEN]" https://anypoint.mulesoft.com/accounts/api/`
+
 == Sharing Resources in an Organization
 
 All API versions and CloudHub environments that you create in an organization are accessible only to users within the organization.
