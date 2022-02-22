@@ -37,4 +37,5 @@
 * xref:audit-logging.adoc[Audit Logs]
 * xref:managing-permissions.adoc[Manage Permissions]
 * xref:troubleshooting-anypoint-platform-access.adoc[Anypoint Platform Access Management FAQs]
+* xref:iam-limits.adoc[Feature Limits]
 * xref:troubleshoot-access-management.adoc[Troubleshoot Access Management]

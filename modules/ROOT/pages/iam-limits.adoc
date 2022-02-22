@@ -1,0 +1,42 @@
+= Limits in Access Management
+ifndef::env-site,env-github[]
+include::_attributes.adoc[]
+endif::[]
+
+Access Management imposes the following limits on various features in an organization:
+
+Organization limits:
+
+* Sub organizations per root organization: 100
+* Users per root or sub organization: 10000
+* Environments per root or sub organization: 150
+* API Manager clients or runtime clients per root or sub organization: 10000
+* External access relations per root or sub organization: 20
+* Permissions per external organization: 1000
+
+Teams, roles, and user permissions:
+
+* Teams per root organization: 1000
+* Permissions per team: 1000
+* Permissions per API Manager client or runtime client: 3000
+* Permissions per custom role: 400 
+* Permissions per user: 5000
+* Roles per root or sub organization: 500
+* Roles per user: 700
+* External group mappings per team: 100 
+
+Identity providers:
+
+* Identity management provider keys per provider: 3
+* Identity management providers per root or sub organization: 25
+
+Client providers:
+
+* Client management providers per root or sub organization: 10
+
+Connected apps:
+
+* Authorized applications per user: 30
+* Connected apps accessible by external organizations: 20
+* Connected apps per root or sub organization: 2000
+* Scope assignments per connected application: 1000
