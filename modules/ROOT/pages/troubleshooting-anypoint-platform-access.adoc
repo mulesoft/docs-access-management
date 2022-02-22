@@ -32,11 +32,11 @@ Access Management imposes the following limits on features in an organization:
 === Identity providers:
 
 * Identity management provider keys per provider: 3
-* Identity management providers per root or sub organization: 25
+* Identity management providers per root organization: 25
 
 === Client providers:
 
-* Client management providers per root or sub organization: 10
+* Client management providers per root organization: 10
 
 === Connected apps:
 
