@@ -115,9 +115,10 @@ After logging in to Anypoint Platform, you can view your org ID by accessing htt
 include::partial$include-nav-steps-no-permissions.adoc[]
 
 . If you are using the new feature UI (Teams feature is enabled):
+.. In the Access Management navigation meenu, click *Business Groups*.
 .. In the tree that contains the root organization and business groups, click the root organization or a business group. +
 The URL in your browser's address bar now appears in the following format: `https://anypoint.mulesoft.com/accounts/businessGroups/<XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX>`. +
-The string ('XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX') on the example provided URL (after `businessGroups/`) is the org ID of the selected organization.
+The string (`XXXXXXX-XXXX-XXXX-XXXX-XXXXXXX`) on the example provided URL (after `businessGroups/`) is the org ID of the selected organization.
 +
 . If you are using the classic UI (Teams feature is not enabled):
 .. In the Access Management navigation menu, click *Organization*. +
