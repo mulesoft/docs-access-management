@@ -24,6 +24,7 @@
  ** xref:conf-client-mgmt-openam-task.adoc[Configure OpenAM Client Management]
  ** xref:conf-client-mgmt-pf-task.adoc[Configure PingFederate Client Management]
  ** xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management]
+ ** xref:configure-client-management-azure.adoc[Configure Azure Client Management]
 * xref:connected-apps-overview.adoc[Connected Apps]
  ** xref:connected-apps-org-admin.adoc[Connected Apps for Organization Administrators]
  ** xref:connected-apps-developers.adoc[Connected Apps for Developers]
