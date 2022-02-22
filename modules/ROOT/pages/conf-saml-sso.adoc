@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: managing-users.adoc
 
 Configure SAML to provide external authentication of users and Single Sign-on (SSO) capability so users don't need to provide additional credentials when they access Anypoint Platform.
 
@@ -47,7 +48,7 @@ ID of the identity provider instance that sends SAML assertions.
 +
 * *Public Key*
 +
-Public key provided by the identity provider, which is used to sign the SAML assertion.
+Public key provided by the identity provider, which is used to sign the SAML assertion. It is the "X509Certificate" value in the SAML Response. 
 +
 * *Audience*
 +

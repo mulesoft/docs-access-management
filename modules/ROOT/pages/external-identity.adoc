@@ -56,5 +56,5 @@ Users that log in with SSO are new users to the system. If the new user has the 
 == See Also
 
 * xref:conf-openid-connect-task.adoc[Configure OpenID Connect]
-* xref:managing-users.adoc[Configure SAML]
+* xref:conf-saml-sso.adoc[Configure SAML]
 * xref:conf-ldap-private-cloud-task.adoc[Configure LDAP in Anypoint Platform Private Cloud]

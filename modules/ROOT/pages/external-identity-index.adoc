@@ -1,12 +1,69 @@
-= External Identity
+= Manage Identity Providers
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-* xref:managing-users.adoc[Configure SAML for SSO]
-** xref:verify-saml-info-task.adoc[Verify SAML Information]
-** xref:single-log-out-task.adoc[Configure Single Log Out]
-** xref:troubleshoot-saml-assertions-task.adoc[Troubleshoot SAML Assertions]
-* xref:conf-openid-connect-task.adoc[Configure OpenID Connect]
-** xref:update-user-profile-task.adoc[Update Your User Profile]
-* xref:test-external-identity-task.adoc[Test External Identity Configuration]
+Configure up to 25 external identity providers (IdPs) to enable single sign-on (SSO) for users in your organization.
+Anypoint Platform currently supports SAML 2.0 and OpenID Connect (OIDC) configurations for SSO providers.
+
+If you are using the Access Management API, note the following:
+
+* The old endpoints that are not scoped to new IdPs are replaced with new endpoints.
+* IdPs created prior to October 31, 2021 are backwards compatible with old endpoints.
+* If a legacy IdP is deleted, then old endpoints are no longer supported, even if the legacy IdP is readded.
+
+== Managing User Identities with Anypoint Platform
+
+By default, an organization manages user identities and credentials using Anypoint Platform. You can disable this functionality after you add one or more external identity providers.
+
+Organizations that use Anypoint Platform to manage user identities control whether new users are added to the organization using either Access Management settings or an external identity provider.
+Organizations that do not require multi-factor authentication (MFA) for their user accounts choose to enable or disable MFA and exempt accounts. If an organization requires MFA, administrators manage exempt accounts in the *Identity Providers* section using the *Anypoint* settings.
+
+== Before You Begin
+
+Before getting started, ensure that you have:
+
+* The Organization Administrator permission
+* An OpenID Connect or SAML 2.0 identity provider
+
+== Managing Identity Providers
+
+Access your list of identity providers, configure settings, and add additional identity providers.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-identity-providers.adoc[]
+
+A list of identity providers appears.
+
+== Adding Identity Providers
+
+Click *Add Identity Provider*, and then select the identity provider type you want to add. Choose one of the following:
+
+* xref:access-management::conf-openid-connect-task.adoc[OpenID Connect]
+* xref:access-management::conf-saml-sso.adoc[SAML 2.0]
+
+== Deleting Identity Providers
+
+If you have more than one identity provider configured, delete external identity providers that you no longer need.
+
+Before deleting an IdP, ensure that your users' credentials and permissions structures are configured with a different IdP, such as the native Anypoint Platform IdP or an external IdP. 
+
+When you delete an IdP:
+
+* Users can no longer use this IdP to log in to Anypoint Platform.
+* Any external team or role group mappings associated with this IdP are deleted. 
+* The Access Management API endpoints associated with this IdP are no longer supported.
+
+To delete an identity provider:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-identity-providers.adoc[]
+
+. Next to the identity provider you want to delete, click the *...* menu.
+. Click *Delete...*
+. In the *API Update* window, click *Continue*.
+. Enter the name of your identity provider.
+. Click *Delete*.
+
