@@ -91,7 +91,7 @@ Neither the `PUT` nor the `DELETE` are expected to work if the call is used dire
 * *OpenID Connect Authorization URLs*
  ** *Authorize URL*: The URL where the user authenticates and grants OpenID Connect client applications access to the user's identity.
  ** *Token URL*: The URL that provides the user’s identity, encoded in a secure JSON Web Token.
-. Click *Save*.
+. Click *Create*.
 
 Once this is successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IDP that acts as a token provider.
 
