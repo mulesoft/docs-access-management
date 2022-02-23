@@ -106,7 +106,7 @@ You can also view the organization ID, client ID, and client secret. These value
 
 Some operations require you to specify your organization ID, or _orgId_. You also need your orgId to designate a business group or root organization when creating certain types of requests.
 
-You can obtain your orgId by extracting a your organization URL, executing an Anypoint CLI command, or using a token to invoke the Anypoint Platform REST API.
+You can obtain your orgId from your organization URL, executing an Anypoint CLI command, or using a token to invoke the Anypoint Platform REST API.
 
 === Organization URL
 
