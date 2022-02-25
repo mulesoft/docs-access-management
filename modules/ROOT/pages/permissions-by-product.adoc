@@ -105,6 +105,7 @@ Or:
 * Manage Tenants
 * Read Alerts
 * Read Applications
+* Read Runtime Fabric
 * Manage Servers
 * Read Servers
 * Manage Application Flows
