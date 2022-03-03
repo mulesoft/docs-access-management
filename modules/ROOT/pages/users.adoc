@@ -86,6 +86,14 @@ include::partial$include-nav-users.adoc[]
 
 The user now has the permissions you selected in the business groups and environments you specified.
 
+== What happens after a user is deleted
+
+After a user is deleted from the top level Organization, the user is "soft-deleted" and deasocited with the Organization. The reason why it's not "hard-deleted" is because the user identity is referenced in the Audit Log. 
+
+For an Anypoint Platform user, if a deleted user tries to login, the login request with fail with error "Your credentials are not valid". Organization administrator can invite the user to join the Organization again, but the user needs to choose a new username. Otherwise the sign up request will fail with error "Cannot create user. User already exists"
+
+For a federated Anypoint Platform user, if a deleted user tries to login, the login request will fail with error "This user is disabled", but the user will show up in the Organization again as disabled. Organization administrator can choose to re-enable this user. 
+
 == Managing External Users of Your Public APIs
 
 When you make an API portal public, users from any other Anypoint Platform organization can register client applications to call your API. When these users log in to your public developer portal, they are considered external users because they are outside of your organization.
