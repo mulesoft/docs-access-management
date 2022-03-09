@@ -5,11 +5,11 @@ endif::[]
 
 As an administrator of your root organization, you can enable, disable, or delete users.
 
-By selecting the checkbox next to a user, additional options related to that user are displayed:
+By selecting the checkbox next to a user, additional options related to that user appear:
 
 * *Enable*: Enables the user in the selected organization or business group.
 * *Disable*: Disables the user in the selected organization or business group. They are no longer able to log in.
-* *Delete*: When deleting from the top level Organization, all of the user's roles/permissions are removed and the user becomes unattached. When deleting from a business group, all of the user's roles/permissions for only the selected business group are removed.
+* *Delete*: When deleting from the root organization, all of the user's permissions are removed, and the user becomes unattached. When deleting from a business group, all of the user's permissions for only the selected business group are removed. The deleted user's data resides in the organization for audit logging purposes.
 
 == Before You Begin
 
@@ -22,9 +22,7 @@ Before getting started, ensure that you have:
 
 [NOTE]
 --
-This feature is not available in Anypoint Platform Private Cloud Edition.
-
-When running Anypoint Platform Private Cloud Edition, you need to configure user management methods such as SSO through a third-party IdP or LDAP.
+This feature is not available in Anypoint Platform Private Cloud Edition or for organizations that use external identity providers for single sign-on (SSO). You must manage users, including invitations for new users, through your third-party IdP or LDAP.
 --
 
 As an organization administrator of a root organization or of one of its business groups, you can invite new users and manage existing users for your organization.
@@ -35,7 +33,7 @@ include::partial$include-nav-users.adoc[]
 
 . Click *Invite user*.
 . Enter the email addresses of the users that you want to invite to your organization as a comma-separated list.
-. Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role (deprecated)] for assign these users.
+. Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role (deprecated)] to assign permissions to these users.
 . Click *Send Invitation*.
 
 The users you specify receive email invitations to join your organization. Invited users must use the link they receive in the invitation to join your organization. When they click the link, they are presented with a sign-up form that already has the *Company* field completed with the name of your organization.
@@ -49,24 +47,25 @@ Invited users have access to the same set of resources as you (although they may
 Click *Pending Invites* to view all invitations that have not yet been accepted. Select the ones you need to manage, and click *Re-send Invite* or *Cancel Invite*.
 
 [[grant-user-permissions]]
-== Grant Permissions and Roles to Users
+== Grant Permissions to Users
 
-Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually.
+Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually. Note that teams and roles functionality are mutually exclusive.
 
-In the *Users* page, click a user name to access more information about that user, grant roles and permissions, see inherited permissions, or reset their password.
+In the *Users* page, click a user name to access more information about that user, manage and view permissions, manage and view teams or roles, or reset their password.
 
-By default, in every new organization and business group, you get three options:
+By default, in every new organization and business group, you can assign the following:
 
-* Assign API Permissions: Write the name of the API you want to give access to, then pick a version and permission.
-* Assign Runtime Manager Permissions: Write the name of the Runtime Manager environment to give access to, then pick a permission.
-* Assign Roles: Write the name of the role to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
+* Assign API permissions: Write the name of the API you want to give access to, then pick a version and permission.
+* Assign Runtime Manager permissions: Write the name of the Runtime Manager environment to give access to, then pick a permission.
+* Assign teams: Write the name of the team to give access to.
+* Assign roles (deprecated): Write the name of the role to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
 
 [NOTE]
 --
-Roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
+In the legacy roles user interfact, roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
 --
 
-If necessary, you can also remove user permissions, but note that if those permissions are granted through an assigned role, you can remove them only by using the xref:roles.adoc[Roles] functionality. You cannot view or remove role-based permissions in the *Users* page.
+If necessary, you can also remove user permissions, but note that if those permissions are granted through an assigned team or role, you can remove them only by using the xref:teams.adoc[teams] or xref:roles.adoc[Roles] functionality respectively. You cannot view or remove team-based or role-based permissions in the *Users* page.
 
 Because the Roles feature is deprecated, it is best to xref:teams.adoc#opt-in-to-teams[opt in to the Teams feature] to manage permissions in a hierarchy.
 
