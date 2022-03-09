@@ -55,11 +55,6 @@ After configuring external identity management, you must add new SSO users using
 
 Users that log in with SSO are new users to the system. If the new user has the same username as a user that already exists in your Anypoint Platform organization, the new user co-exists with the original user with the same username. Users with the same username are managed independently from one another.
 
-== Multiple Identity Providers
-* Multiple IDP was released back in November 2021 
-* Organization administrators can now configure up to 25 SAML 2.0 or OpenID Connect identity providers (IdPs) for single sign-on.
-* To support multiple external IdPs, there are new endpoints available for the Access Management API; existing identity provider configurations are unaffected.
-
 == See Also
 
 * xref:conf-openid-connect-task.adoc[Configure OpenID Connect]
