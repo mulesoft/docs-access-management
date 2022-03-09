@@ -53,6 +53,8 @@ After configuring identity management, you must add new SSO users using your ext
 
 Users that log in with SSO are new users to the system. If the new user has the same username as a user that already exists in your Anypoint Platform organization, the new user co-exists with the original user with the same username. Users with the same username are managed independently from one another.
 
+Testing
+
 == See Also
 
 * xref:conf-openid-connect-task.adoc[Configure OpenID Connect]
