@@ -62,7 +62,7 @@ By default, in every new organization and business group, you can assign the fol
 
 [NOTE]
 --
-In the legacy roles user interfact, roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
+In the legacy roles user interface, roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
 --
 
 If necessary, you can also remove user permissions, but note that if those permissions are granted through an assigned team or role, you can remove them only by using the xref:teams.adoc[teams] or xref:roles.adoc[Roles] functionality respectively. You cannot view or remove team-based or role-based permissions in the *Users* page.
