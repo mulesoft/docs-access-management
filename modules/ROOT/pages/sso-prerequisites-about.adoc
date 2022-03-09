@@ -42,3 +42,4 @@ https://anypoint.mulesoft.com/accounts/login/{your_org_domain}
 Your IdP generates the sign-on URL that you configure.
 * External identity configuration is available only at the organization level.
 You cannot configure an external identity provider for a business group.
+* There is no sync between external identity and Anypoint on user deletion. If a user is deleted/removed from the customer's IdP then Anypoint will not know about this change and the user does not get deleted in Anypoint automatically. 
