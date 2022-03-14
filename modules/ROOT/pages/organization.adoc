@@ -138,7 +138,7 @@ For example, when you execute `account business-group list`, your organization i
 |Name |Type |ID
 
 |Great Company
-|Master
+|Root
 |12345678-7831-8734-9999-a0a0a0a0a0a0
 
 |Retail
@@ -150,7 +150,7 @@ For example, when you execute `account business-group list`, your organization i
 |87654321-abcd-e8e2-bab4-c0c0c0c0c0c0
 |===
 
-In the example, the ID next to `Master` is the orgId.
+In the example, the ID next to `Root` is the orgId.
 
 === Anypoint Platform REST API
 
