@@ -57,7 +57,8 @@ All nonexempt users in your organization are now required to configure a verific
 
 Service users or accounts that make programmatic calls to Anypoint Platform should be exempt from multi-factor authentication because they cannot provide verification aside from a username and password.
 
-[NOTE]The Exempt Accounts list only appears if the Multi-Factor authentication option is set to Required inside the Identity Provider's settings
+[NOTE]
+The Exempt Accounts list only appears if the Multi-Factor authentication option is set to Required inside the Identity Provider's settings
 
 It is best to use the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using service accounts. Using the Connected Apps feature provides more security and control than using user accounts.
 
