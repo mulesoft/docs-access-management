@@ -158,7 +158,7 @@ To get a token to invoke the Anypoint Platform REST API, see https://help.muleso
 
 For example:
 
-`$ curl -H "Authorization: Bearer [YOUR_ACCESS_TOKEN]" https://anypoint.mulesoft.com/accounts/api/`
+`$ curl -H "Authorization: Bearer [YOUR_ACCESS_TOKEN]" https://anypoint.mulesoft.com/accounts/api/me`
 
 == Sharing Resources in an Organization
 
