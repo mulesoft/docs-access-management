@@ -164,11 +164,11 @@ For example:
 
 All API versions and CloudHub environments that you create in an organization are accessible only to users within the organization.
 
-If you want to share resources with a user, you have to invite the user to join your organization, and the user must create a new account under the organization you sent the invitation from. See xref:users.adoc#inviting-users[Inviting Users] for more information.
+If you want to share resources with a user, you have to invite the user to join your organization, and the user must accept the invitation and join the organization you sent the invitation from. See xref:users.adoc#inviting-users[Inviting Users] for more information.
 
 [NOTE]
 --
-Because the organization name (often the company name) is not necessarily unique, it is not sufficient for the invited user to create a new account and use the company name associated with the root organization. The domain name you set in the organization information is what distinguishes your organization from other organizations.
+Because the organization name (often the company name) is not necessarily unique, it is not sufficient for the invited user to join the organization and use the company name associated with the root organization. The domain name you set in the organization information is what distinguishes your organization from other organizations.
 
 Invited users must use the link they receive in the invitation email to join your organization.
 --
