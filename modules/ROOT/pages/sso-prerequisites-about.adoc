@@ -43,4 +43,4 @@ Your IdP generates the sign-on URL that you configure.
 * External identity configuration is available only at the organization level.
 You cannot configure an external identity provider for a business group.
 * If you delete a user from your identity provider, you must also manually delete the user from your Anypoint Platform organization. 
-* If you delete a SAML identity provider and recreate one with the exact same configuration, it is considered a new identity provider. The users logging into Anypoint Platform using this configuration will be associated with the new identity provider. In case there's an existing user associated with the old/deleted SAML identity provider, duplicate users are seen as they are associated with different identity providers. 
+* If you delete a SAML identity provider and recreate one with the exact same configuration, it is considered a new identity provider. The users logging in to Anypoint Platform using this configuration will be associated with the new identity provider. If you have existing user accounts that are still associated with the deleted IdP, duplicate users appear as they are associated with a different IdP.
