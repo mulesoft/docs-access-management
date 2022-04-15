@@ -17,9 +17,10 @@ Please note, that although integration with the aforementioned Identity provider
 
 If you already configured Anypoint Platform as a client application in your identity provider, perform manual registration. Otherwise, if your identity provider supports dynamic client registration, perform dynamic registration. During registration, you need to provide several URLs. The following table contains examples of the URLs you need to provide, depending on your provider, during registration.
 
-[%autowidth.spread]
+[cols="5*",options="header"]
 |===
 | URL Name | Okta Example URL | Salesforce Example URL | OpenAM Example URL | PingFederate Example URL
+
 | Base | `+https://example.okta.com/oauth2/v1+` | `+https://domain.my.salesforce.com/services/oauth2+` | `+https://example.com/openam/oauth2+` | `+https://example.com:9031+`
 | Client Registration | {BASE URL}/clients | {BASE URL}/clients | {BASE URL}/connect/register | N/A
 | Authorize | {BASE URL}/authorize | {BASE URL}/authorize | {BASE URL}/authorize | {BASE URL}/as/authorization.oauth2
