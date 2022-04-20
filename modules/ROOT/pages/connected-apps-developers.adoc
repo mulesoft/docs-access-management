@@ -89,11 +89,11 @@ include::partial$include-nav-connected-apps.adoc[]
 . Create your app by completing the fields in the *Create App* page.
 . Click *Save*.
 
-[[application-whitelist-dev]]
-== Application Whitelist
+[[application-allowlist-dev]]
+== Application Allowlist
 
-Users with the Organization Administrator permission can enable a whitelist to control which apps can access their users' data.
-When your app is whitelisted, only the set of scopes associated with the app are reviewed and approved by the administrator.
+Users with the Organization Administrator permission can enable an allowlist to control which apps can access their users' data.
+When your app is added to an allowlist, only the set of scopes associated with the app are reviewed and approved by the administrator.
 If you add new scopes to your app at a later date, you are unable to request those scopes from users until the admin re-approves your app.
-Existing authorizations and new authorizations using the already-whitelisted set of scopes continue to work.
-For more information, see xref:connected-apps-org-admin.adoc#application-whitelist-admin[connected apps for administrators].
+Existing authorizations and new authorizations using the already-allowlisted set of scopes continue to work.
+For more information, see xref:connected-apps-org-admin.adoc#application-allowlist-admin[connected apps for administrators].
