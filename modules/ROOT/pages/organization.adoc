@@ -102,6 +102,8 @@ include::partial$include-nav-organizations.adoc[]
 
 You can also view the organization ID, client ID, and client secret. These values apply to the root organization and grant permissions for all of the business groups contained within.
 
+To modify your xref:multi-factor-authentication.adoc[multi-factor authentication settings] for your organization, click the *Identity Providers* in the Access Management navigation menu. Organizations created after April 30, 2022 require multi-factor authentication by default for all users.
+
 == Find your Organization ID
 
 Some operations require you to specify your organization ID, or _orgId_. You also need your orgId to designate a business group or root organization when creating certain types of requests.

@@ -21,6 +21,7 @@ After multi-factor authentication is enabled, users must verify their Anypoint P
 * Security key
 * Salesforce Authenticator
 
+Organizations created after April 30, 2022 require multi-factor authentication by default for all users. Organization administrators can xref:multi-factor-authentication.adoc#exempt-mfa-users[add individual user and service accounts to an exemption list] or xref:multi-factor-authentication.adoc#disable-org-mfa[disable MFA across the organization] (not recommended). Note that https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce users must have MFA enabled].
 
 == Multi-Factor Authentication Verification Methods
 
@@ -53,6 +54,7 @@ include::partial$include-nav-mfa.adoc[]
 . Click *Save*. +
 All nonexempt users in your organization are now required to configure a verification method when they log in to Anypoint Platform.
 
+[[exempt-mfa-users]]
 === Exempt Users from Multi-factor Authentication
 
 Service users or accounts that make programmatic calls to Anypoint Platform should be exempt from multi-factor authentication because they cannot provide verification aside from a username and password.
@@ -112,6 +114,7 @@ The *Manage Your Verification Methods* interface appears.
 If your organization requires multi-factor authentication and you have removed all verification methods, you must configure at least one verification method before you save your changes.
 . Click *Save*.
 
+[[disable-org-mfa]]
 == Disable Multi-Factor Authentication Requirement for All Organization Users
 
 When you disable the multi-factor authentication requirement, existing users no longer use it to log in to Anypoint Platform and new users log in without being prompted to configure it. Note that disabling multi-factor authentication requirements does not automatically remove multi-factor authentication from user accounts. Individual users who have independently enabled multi-factor authentication must manually remove it in their profile settings.
