@@ -12,6 +12,8 @@ An organization is an account where multiple users can share resources, includin
 
 When you log in to Anypoint Platform, the organization icon and name are displayed on the top right of the page. The root organization can contain multiple business groups. You can think of business groups as sub-organizations, or children of the root organization. Click the organization icon to navigate between business groups.
 
+// insert change here 
+
 == Organization Owner
 
 The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a role that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The owner is assigned the Organization Administrator permission by default.
