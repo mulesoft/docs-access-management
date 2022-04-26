@@ -117,7 +117,7 @@ If your organization requires multi-factor authentication and you have removed a
 [[disable-org-mfa]]
 == Disable Multi-Factor Authentication Requirement for All Organization Users
 
-NOTE:
+[NOTE]
 Organizations created after April 30, 2022 cannot disable the multi-factor authentication requirement in their organizations and must add individual accounts to the exemption list to bypass the requirement.
 
 When you disable the multi-factor authentication requirement, existing users no longer use it to log in to Anypoint Platform and new users log in without being prompted to configure it. Note that disabling multi-factor authentication requirements does not automatically remove multi-factor authentication from user accounts. Individual users who have independently enabled multi-factor authentication must manually remove it in their profile settings.
