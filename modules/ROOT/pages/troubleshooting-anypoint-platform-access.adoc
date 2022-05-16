@@ -14,13 +14,15 @@ Access Management imposes the following limits on features in an organization:
 * Business groups per root organization: 100
 * Users per root organization or business group: 10000
 * Environments per root organization or business group: 150
-* API Manager clients or runtime clients per root organization or business group: 10000
+* API Manager clients per root organization: 10000
+* Runtime clients per root organization or business group: 10000
 * External access relations per root organization or business group: 20
 * Permissions per external organization: 1000
 
 === Teams, roles, and user permissions:
 
 * Teams per root organization: 1000
+* Levels nested under parent teams: 10 
 * Permissions per team: 1000
 * Permissions per API Manager client or runtime client: 3000
 * Permissions per custom role: 400
