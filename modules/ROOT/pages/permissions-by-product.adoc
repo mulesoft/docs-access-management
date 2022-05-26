@@ -48,10 +48,20 @@ Or:
 
 * Design Center Developer
 * Design Center Contributor
-* Exchange
+
+== Exchange
+
+Organization level permissions:
+
 * Exchange Administrator
 * Exchange Contributor
 * Exchange Viewer
+
+Asset level permissions:
+
+* Asset Administrator
+* Asset Contributor
+* Asset Viewer
 
 == Anypoint Monitoring
 

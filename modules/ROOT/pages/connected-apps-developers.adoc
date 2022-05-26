@@ -74,7 +74,7 @@ For more information about how to embed the button, refer to the https://anypoin
 
 Before you create an app as an organization administrator, consider the following requirements and restrictions:
 
-* Your organization can own up to 200 connected apps, and each connected app can have up to 1000 scopes.
+* Your organization can own up to 2000 connected apps, and each connected app can have up to 1000 scopes.
 * A unique `clientID` is automatically assigned and can’t be modified.
 However, you can modify client secrets in the *Application Settings* page.
 * Your app is owned by your organization; any organization administrator can control it.
