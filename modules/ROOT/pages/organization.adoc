@@ -102,6 +102,8 @@ include::partial$include-nav-organizations.adoc[]
 
 You can also view the organization ID, client ID, and client secret. These values apply to the root organization and grant permissions for all of the business groups contained within.
 
+To modify your xref:multi-factor-authentication.adoc[multi-factor authentication settings] for your organization, click the *Identity Providers* in the Access Management navigation menu. Organizations created after April 30, 2022 require multi-factor authentication by default for all users.
+
 == Find your Organization ID
 
 Some operations require you to specify your organization ID, or _orgId_. You also need your orgId to designate a business group or root organization when creating certain types of requests.
@@ -138,7 +140,7 @@ For example, when you execute `account business-group list`, your organization i
 |Name |Type |ID
 
 |Great Company
-|Master
+|Root
 |12345678-7831-8734-9999-a0a0a0a0a0a0
 
 |Retail
@@ -150,7 +152,7 @@ For example, when you execute `account business-group list`, your organization i
 |87654321-abcd-e8e2-bab4-c0c0c0c0c0c0
 |===
 
-In the example, the ID next to `Master` is the orgId.
+In the example, the ID next to `Root` is the orgId.
 
 === Anypoint Platform REST API
 
@@ -158,17 +160,17 @@ To get a token to invoke the Anypoint Platform REST API, see https://help.muleso
 
 For example:
 
-`$ curl -H "Authorization: Bearer [YOUR_ACCESS_TOKEN]" https://anypoint.mulesoft.com/accounts/api/`
+`$ curl -H "Authorization: Bearer [YOUR_ACCESS_TOKEN]" https://anypoint.mulesoft.com/accounts/api/me`
 
 == Sharing Resources in an Organization
 
 All API versions and CloudHub environments that you create in an organization are accessible only to users within the organization.
 
-If you want to share resources with a user, you have to invite the user to join your organization, and the user must create a new account under the organization you sent the invitation from. See xref:users.adoc#inviting-users[Inviting Users] for more information.
+If you want to share resources with a user, you have to invite the user to join your organization, and the user must accept the invitation and join the organization you sent the invitation from. See xref:users.adoc#inviting-users[Inviting Users] for more information.
 
 [NOTE]
 --
-Because the organization name (often the company name) is not necessarily unique, it is not sufficient for the invited user to create a new account and use the company name associated with the root organization. The domain name you set in the organization information is what distinguishes your organization from other organizations.
+Because the organization name (often the company name) is not necessarily unique, it is not sufficient for the invited user to join the organization and use the company name associated with the root organization. The domain name you set in the organization information is what distinguishes your organization from other organizations.
 
 Invited users must use the link they receive in the invitation email to join your organization.
 --
