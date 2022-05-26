@@ -44,7 +44,7 @@ Access Management imposes the following limits on features in an organization:
 
 * Authorized applications per user: 30
 * Connected apps accessible by external organizations: 20
-* Connected apps per root organization or business group: 2000
+* Connected apps per root organization: 2000
 * Scope assignments per connected application: 1000
 
 
