@@ -85,6 +85,16 @@ include::partial$include-nav-users.adoc[]
 
 The user now has the permissions you selected in the business groups and environments you specified.
 
+== Managing Deleted Users
+
+When you delete a user from your root organization, the user is _soft deleted_. This user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs.
+
+If an Anypoint Platform user that was removed from an organization tries to log in to their former organization, the login request fails, with a `Your credentials are not valid` error message. 
+
+An organization administrator can invite the user to join the same organization again, but the user must create a new username. If the user tries to log in with their old account, the sign up request fails, stating `Cannot create user. User already exists`.
+
+If a deleted federated user tries to log in, the login request fails, with a `This user is disabled` error message, but the user still appears in the organization as a disabled account. An organization administrator can re-enable this user. 
+
 == Managing External Users of Your Public APIs
 
 When you make an API portal public, users from any other Anypoint Platform organization can register client applications to call your API. When these users log in to your public developer portal, they are considered external users because they are outside of your organization.
