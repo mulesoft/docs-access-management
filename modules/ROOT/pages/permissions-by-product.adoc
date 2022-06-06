@@ -47,7 +47,6 @@ Or:
 == Design Center
 
 * Design Center Developer
-* Design Center Contributor
 
 == Exchange
 
