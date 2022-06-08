@@ -15,7 +15,6 @@ Access Management imposes the following limits on features in an organization:
 * Users per root organization or business group: 10000
 * Environments per root organization or business group: 150
 * API Manager clients per root organization: 10000
-* Runtime clients per root organization or business group: 10000
 * External access relations per root organization or business group: 20
 * Permissions per external organization: 1000
 
