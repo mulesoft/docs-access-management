@@ -81,7 +81,8 @@ image::switch-suborg.png[switch+suborg]
 
 [NOTE]
 --
-When you log in to Anypoint Platform, you return to the business group where you were last active when you logged out of Anypoint Platform.
+a. When a Business Group or a Child Business Group is created, it is advised to Logout and Login again to see the newly created groups in the top-right corner Menu.
+b. When you log in to Anypoint Platform, you return to the business group where you were last active when you logged out of Anypoint Platform.
 --
 
 If you do not have the Organization Administrator permission, you can view only the business groups that you have permissions to view. In the *Organization* tab, your organization tree displays only the business groups to which you belong.
