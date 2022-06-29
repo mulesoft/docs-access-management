@@ -179,7 +179,25 @@ If your organization is configured to use an external federated identity system,
 
 After a user joins your organization, they have access to the resources associated with the permissions or roles assigned to them. You can assign permissions to grant users access to different resources within the organization. A best practice is to assign permissions to the user at the time you invite them to join your organization so the roles are in effect when the user signs in for the first time. See xref:managing-permissions.adoc[Roles] for more information.
 
-If your organization contains business groups, you can give users access to multiple business groups by granting them roles within each group.
+If your organization contains business groups, you can give users access to multiple business groups by granting them permissions within each group.
+
+== Connect MuleSoft Composer to Anypoint Platform
+
+Organizations that use both MuleSoft Composer and Anypoint Platform can connect the two products.
+
+To link Composer to Anypoint Platform:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. In the Access Management navigation menu, click *Composer Sync*.
+. In the *Composer Sync Orgs* page, click *Add Composer Orgs*.
+. In the *Add organization* window, in the *Organization ID* box, enter your Composer organization and then click *Add*.
++
+[NOTE]
+
+You can locate your Composer Organization ID by navigating to *Composer* > *Settings* > *Account* > *General Information*.
++
+An email is generated and sent to the Composer organization admin that provides a link to sync Anypoint Platform to Composer.
 
 === See Also
 
