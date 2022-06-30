@@ -25,6 +25,8 @@ The *Add OIDC Azure client provider* page appears.
 .. *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Azure AD to `https://graph.microsoft.com/v1.0/applications/{clientId}`. +
 +
 For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation. 
+
+Please also note, client secret updates are not currently supported. 
 . Click *Create*.
 
 == Microsoft Identity Platform Access Tokens 
