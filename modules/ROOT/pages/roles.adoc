@@ -173,7 +173,7 @@ include::partial$include-nav-roles.adoc[]
 
 === Assign Permission Scopes to a Custom Role
 
-After creating a custom role, you can assign permissions to the role. If these environments belong to a business group, they are available only when creating a role in that same business group.
+After creating a custom role, you can assign permissions to the role. Some permissions within a role can be applied to specific environments; if these environments belong to a business group rather than the root organization, they are available only when creating a role in that same business group.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
