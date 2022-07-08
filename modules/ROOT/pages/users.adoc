@@ -89,11 +89,11 @@ The user now has the permissions you selected in the business groups and environ
 
 When you delete a user from your root organization, the user is _soft deleted_. This user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs.
 
-If an Anypoint Platform user that was removed from an organization tries to log in to their former organization, the login request fails, with a `Your credentials are not valid` error message. 
+If an Anypoint Platform user that was removed from an organization tries to log in to their former organization, the login request fails, with a `Your credentials are not valid` error message.
 
 An organization administrator can invite the user to join the same organization again, but the user must create a new username. If the user tries to log in with their old account, the sign up request fails, stating `Cannot create user. User already exists`.
 
-If a deleted federated user tries to log in, the login request fails, with a `This user is disabled` error message, but the user still appears in the organization as a disabled account. An organization administrator can re-enable this user. 
+If a deleted federated user tries to log in, the login request fails, with a `This user is disabled` error message, but the user still appears in the organization as a disabled account. An organization administrator can re-enable this user.
 
 == Managing External Users of Your Public APIs
 
@@ -103,7 +103,11 @@ When a user logs into Anypoint Platform for the first time, they are automatical
 
 You cannot search for external users in other parts of Anypoint Platform because these users do not belong to your organization and do not have additional permissions. To grant users permission to perform tasks like deploying an application, you must invite the user to join your organization.
 
+== Managing Sensitive Account Information
 
+As an organization administrator, you can modify user some sensitive user information. For enhanced security, Access Management might ask you to re-authenticate before you can modify an organization user's email address.
+
+include::partial$include-reauthentication-conditions.adoc[]
 
 == See Also
 
