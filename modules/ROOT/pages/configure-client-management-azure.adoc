@@ -27,10 +27,13 @@ The *Add OIDC Azure client provider* page appears.
 For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation. 
 . Click *Create*.
 
-== Microsoft Identity Platform Access Tokens 
+== Microsoft Identity Platform Support
 
-For your APIs, Azure AD client management in Anypoint Platform supports both v1 and v2 JSON Web Tokens (JWTs) on Microsoft identity platform. 
+=== Access Tokens 
+For your APIs, Azure AD client management in Anypoint Platform supports both https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[v1 and v2 JSON Web Tokens](JWTs) on Microsoft identity platform. 
 
+=== OAuth 2.0 Endpoints
+Anypoint Platform supports only V2 Azure AD endpoints, i.e. Microsoft Identity Platform endpoints. Take token endpiont for example, Anypoint Platform supports https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token. 
 
 
 == See Also
