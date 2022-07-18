@@ -31,10 +31,19 @@ For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/
 
 === Access Tokens 
 
-For your APIs, Azure AD client management in Anypoint Platform supports both https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[v1 and v2 JSON Web Tokens](JWTs) on Microsoft identity platform. 
+For your APIs, Azure AD client management in Anypoint Platform supports both https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[v1 and v2 JSON Web Tokens] (JWTs) on Microsoft identity platform. 
 
 === OAuth 2.0 Endpoints
-Anypoint Platform supports only tokens obtained using Azure AD v2.0 endpoints, also known as Microsoft identity platform endpoints. For example, Anypoint Platform supports the token endpoint: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token`. 
+Anypoint Platform supports only tokens obtained using Azure AD v2.0 endpoints, also known as Microsoft identity platform endpoints. For example, Anypoint Platform supports the token endpoint: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token`. Below is an example of properties to use when you are using 'Authorization Code' grant type to obtain a token. 
+
+* *authorize url*: https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/authorize
+* *token url*: https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token
+* *client id*: {your client id}
+* *client secret*: {your client secret}
+* *scope*: https://graph.microsoft.com/.default
+
+Note, Anypoint Platform does not support custom scopes. Please use the default scope for Microsoft Graph default scope. 
+
 
 
 == See Also
