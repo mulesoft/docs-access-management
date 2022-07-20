@@ -47,7 +47,9 @@ Use the following properties when you are using the Authorization Code grant typ
 
 Anypoint Platform does not support custom scopes. Use the default scope for Microsoft Graph. 
 
+=== Grant Types === 
 
+Microsoft doesn't support specifying grant types when creating a new application and it supports "authorization_code" and "client_credentials" by default. 
 
 == See Also
 
