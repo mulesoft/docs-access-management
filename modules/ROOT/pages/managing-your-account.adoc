@@ -184,7 +184,7 @@ For enhanced security, Access Management might prompt you to re-authenticate bef
 
 include::partial$include-reauthentication-conditions.adoc[]
 
-Connected apps and clients are exempt from reauthentication. Because of the reauthentication requirement, you cannot use API calls to change your email address.
+Connected apps and clients are exempt from reauthentication. If you have a script that makes an API call to change your email address, it might need to accommodate reauthentication.
 
 == Reset Your Password
 
