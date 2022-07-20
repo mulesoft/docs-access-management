@@ -3,4 +3,4 @@ Access Management prompts you to reauthenticate under the following conditions:
 * If more than 30 minutes have elapsed since you entered your password, Access Management prompts you to reenter your password.
 * If you have multi-factor authentication (MFA) enabled and more than 8 hours have elapsed since you entered your password and used MFA, Access Management prompts you to reenter your password and confirm the login using MFA.
 
-Each time you log in or re-authenticate, the timer resets. If less than 30 minutes has elapsed since you logged in, Access Management does not prompt for your password again.
+Each time you log in or reauthenticate, the timer resets. If less than 30 minutes has elapsed since you logged in, Access Management does not prompt for your password again.
