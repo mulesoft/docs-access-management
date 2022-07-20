@@ -49,7 +49,7 @@ Anypoint Platform does not support custom scopes. Use the default scope for Micr
 
 === Grant Types === 
 
-Microsoft doesn't support specifying grant types when creating a new application and it supports "authorization_code" and "client_credentials" by default. 
+Microsoft doesn't support specifying grant types when https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application] and it supports "authorization_code" and "client_credentials" by default. 
 
 == See Also
 
