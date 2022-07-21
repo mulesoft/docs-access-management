@@ -105,7 +105,7 @@ You cannot search for external users in other parts of Anypoint Platform because
 
 == Managing Sensitive Account Information
 
-As an organization administrator, you can modify user some sensitive user information. For enhanced security, Access Management might ask you to reauthenticate before you can modify an organization user's email address. Connected apps and clients are exempt from reauthentication. If you have a script that makes an API call to change organization users' email addresses, it might need to accommodate reauthentication.
+As an organization administrator, you can modify some sensitive user information. For enhanced security, Access Management might ask you to reauthenticate before you can modify an organization user's email address. Connected apps and clients are exempt from reauthentication. If you have a script that makes an API call to change an organization user's email addresses, it might need to accommodate reauthentication.
 
 include::partial$include-reauthentication-conditions.adoc[]
 
