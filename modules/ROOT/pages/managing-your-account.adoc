@@ -178,6 +178,13 @@ image::managing-accounts-roles-and-permissions-98132.png[]
 
 You can modify your contact information, change your password, and see a list of the roles assigned to your account.
 
+=== Manage Sensitive Account Information
+
+For enhanced security, Access Management might prompt you to re-authenticate before you can modify your email address.
+
+include::partial$include-reauthentication-conditions.adoc[]
+
+Connected apps and clients are exempt from reauthentication. If you have a script that makes an API call to change your email address, it might need to accommodate reauthentication.
 
 == Reset Your Password
 
