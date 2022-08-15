@@ -1983,6 +1983,54 @@ Properties: Application metadata
 
 |===
 
+=== Private Spaces
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create/Modify/Delete
+|Private Space	
+|PrivateSpaceID	
+|N/A	
+|Create/Modify/Delete 	
+|Subaction: None +
+Properties: Private space metadata
+|Create/Modify/Delete Connection 	
+|Private Space	
+|PrivateSpaceID	
+|N/A	
+|Create/Modify/Delete	
+|Subaction: None +
+Properties: Connection metadata
+|Create/Modify/Delete VPN	
+|Private Space	
+|PrivateSpaceID	
+|N/A	
+|Create/Modify/Delete	
+|Subaction: None +
+Properties:  None
+|Create/Modify/Delete transit gateway	
+|Private Space	
+|PrivateSpaceID	
+|N/A	
+|Create/Modify/Delete	
+|Subaction: None +
+Properties: TransitGateway metadata
+|Create/Modify/Delete TLSContext
+|Private Space	
+|PrivateSpaceID	
+|N/A	
+|Create/Modify/Delete	
+|Subaction: None +
+Properties:  None
+
+|===
+
 
 == Anypoint MQ
 
