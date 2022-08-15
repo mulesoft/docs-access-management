@@ -2020,7 +2020,7 @@ Properties:  None
 |N/A	
 |Create/Modify/Delete	
 |Subaction: None +
-Properties: TransitGateway metadata
+Properties: Transit gateway metadata
 |Create/Modify/Delete TLSContext
 |Private Space	
 |PrivateSpaceID	
