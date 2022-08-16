@@ -1993,14 +1993,14 @@ Properties: Application metadata
 |Parent
 |Action
 |Payload
-|Create/Modify/Delete
+|Create/Modify/Delete private space
 |Private Space	
 |PrivateSpaceID	
 |N/A	
 |Create/Modify/Delete 	
 |Subaction: None +
 Properties: Private space metadata
-|Create/Modify/Delete Connection 	
+|Create/Modify/Delete connection 	
 |Private Space	
 |PrivateSpaceID	
 |N/A	
