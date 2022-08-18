@@ -12,6 +12,8 @@ For security reasons, MuleSoft recommends distributing this permission to as few
 
 Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
+Usage Viewer:: Enables a user to view usage reports. 
+
 == API Manager
 
 Depending on your organization, you might see one of the following sets of permissions available for API Manager.
