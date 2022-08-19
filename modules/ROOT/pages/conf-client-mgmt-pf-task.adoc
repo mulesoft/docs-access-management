@@ -7,6 +7,11 @@ include::partial$include-nav-steps-org-admin-bg.adoc[]
 
 include::partial$include-nav-client-providers.adoc[]
 
+== Steps to Add A PingFederate Client Provider
+
+[NOTE]
+Please note, we're supporting PingFederated from versions: 6 through 8. 
+
 . Click *Add Client Provider*, and then select *PingFederate*.
 +
 The *Add PingFederate client provider* page appears.
@@ -75,6 +80,7 @@ Password of user with privileges for creating new clients within the target Ping
 Now, you can apply the PingFederate OAuth Token Enforcement policy to your APIs.
 
 == See Also
-
+* https://docs.pingidentity.com/bundle/pingfederate-80/page/adminGuide/concept/oAuth2_0Endpoints.html[PingFederate 8.0 OAuth 2.0 Endpoints]
+* https://docs.pingidentity.com/bundle/pingfederate-80/page/adminGuide/concept/webServiceInterfaces.html[PingFederate 8.0 Web Service Interfaces]
 * xref:api-manager::mule-oauth-provider-landing-page.adoc[About OAuth 2.0]
 * xref:api-manager::openam-oauth-token-enforcement-policy.adoc[OpenAM and PingFederate OAuth Token Enforcement Policies]
