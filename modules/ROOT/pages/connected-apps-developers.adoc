@@ -38,6 +38,15 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 [NOTE]
 Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app.
 
+For more information on scopes and permissions in the Connected Apps feature, see the scopes documentation page in Access Management:
+
+include::partial$include-nav-connected-apps.adoc[]
+
+. Click the *Scopes Documentation* tab. +
+The *Scopes Documentation* page appears, displaying scopes, their respective permissions, and the products to which they belong. 
+
+You can filter and sort the contents of the *Scopes Documentation* page, and you can also click a scope name to view namespaces, methods, and actions.
+
 == OIDC Endpoints and Tokens
 
 To work with OpenID Connect, apps that require access to user data when the user isn’t logged in have to exchange refresh tokens for new access tokens.
