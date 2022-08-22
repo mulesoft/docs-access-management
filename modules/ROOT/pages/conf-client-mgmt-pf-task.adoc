@@ -10,7 +10,7 @@ include::partial$include-nav-client-providers.adoc[]
 == Steps to Add A PingFederate Client Provider
 
 [NOTE]
-Please note, we're supporting PingFederated from versions: 6 through 8. 
+Anypoint Platform supports only PingFederate versions 6 through 8. 
 
 . Click *Add Client Provider*, and then select *PingFederate*.
 +
