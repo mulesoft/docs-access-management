@@ -88,11 +88,6 @@ Depending on your organization, you might see one of the following sets of permi
 * Manage Activity
 * Manage Host
 * View Activity
-* View Host, Partners and Message Flows
-* Manage Partners and Message Flow
-* Manage Activity
-* Manage Host
-* View Activity
 
 Or:
 
