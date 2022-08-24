@@ -26,7 +26,7 @@ The *Add OIDC Azure client provider* page appears.
 +
 For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation. 
 +
-Please note, client secrets updates are not currently supported.
+Client secrets updates are not currently supported.
 . Click *Create*.
 
 == Microsoft Identity Platform Support
