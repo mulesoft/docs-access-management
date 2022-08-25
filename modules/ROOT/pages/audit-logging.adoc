@@ -7,7 +7,7 @@ Changes made by users within Anypoint Platform organizations are logged through 
 
 The audit logging service provides a queryable history of actions performed within the Anypoint Platform. It keeps track of all users who have interacted with objects in the system, and timestamps those actions. It also provides mechanisms for querying the set of users who have performed actions, the set of objects that had actions performed on them, and other endpoints that enable the querying of log entries.
 
-Audit logs have a default retention period of six years. Download your logs periodically if you want to maintain your log files for longer than six years. To check the audit log retention period for your organization, use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23335/[Audit Logging API^].
+Audit logs have a default retention period of six years. However, users who have the Organization Administrator and Audit Log Config Manager permission can customize the retention period. For more information, see xref:audit-log-retention.adoc[].
 
 == Access Audit Logging
 
@@ -1994,38 +1994,38 @@ Properties: Application metadata
 |Action
 |Payload
 |Create/Modify/Delete private space
-|Private Space	
-|PrivateSpaceID	
-|N/A	
-|Create/Modify/Delete 	
+|Private Space
+|PrivateSpaceID
+|N/A
+|Create/Modify/Delete
 |Subaction: None +
 Properties: Private space metadata
-|Create/Modify/Delete connection 	
-|Private Space	
-|PrivateSpaceID	
-|N/A	
-|Create/Modify/Delete	
+|Create/Modify/Delete connection
+|Private Space
+|PrivateSpaceID
+|N/A
+|Create/Modify/Delete
 |Subaction: None +
 Properties: Connection metadata
-|Create/Modify/Delete VPN	
-|Private Space	
-|PrivateSpaceID	
-|N/A	
-|Create/Modify/Delete	
+|Create/Modify/Delete VPN
+|Private Space
+|PrivateSpaceID
+|N/A
+|Create/Modify/Delete
 |Subaction: None +
 Properties:  None
-|Create/Modify/Delete transit gateway	
-|Private Space	
-|PrivateSpaceID	
-|N/A	
-|Create/Modify/Delete	
+|Create/Modify/Delete transit gateway
+|Private Space
+|PrivateSpaceID
+|N/A
+|Create/Modify/Delete
 |Subaction: None +
 Properties: Transit gateway metadata
 |Create/Modify/Delete TLSContext
-|Private Space	
-|PrivateSpaceID	
-|N/A	
-|Create/Modify/Delete	
+|Private Space
+|PrivateSpaceID
+|N/A
+|Create/Modify/Delete
 |Subaction: None +
 Properties:  None
 
@@ -2118,5 +2118,6 @@ curl 'https://anypoint.mulesoft.com/audit/v2/organizations/<organization_id>/que
 
 == See Also
 
+* xref:audit-log-retention.adoc[]
 * https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api[Audit Logging Query API]
 * xref:mq::mq-audit-logs.adoc[Anypoint MQ Audit Logs]
