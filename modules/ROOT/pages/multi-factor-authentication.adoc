@@ -3,10 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-[NOTE]
-Beginning February 1, 2022, multi-factor authentication (MFA) must be enabled for all of your Salesforce users. To learn more about this requirement, see the https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce Multi-Factor Authentication FAQ].
-
-Multi-factor authentication provides an additional layer of verification for Anypoint Platform users.
+Multi-factor authentication (MFA) provides an additional layer of verification for Anypoint Platform users.
 
 * As an organization administrator, you can require all non-SSO users in your organization to use multiple verification methods to successfully log in.
 * As an organization administrator, you can exempt specific user accounts from the multi-factor authentication requirement in order to allow existing integrations to continue operating without interruption.
@@ -21,7 +18,13 @@ After multi-factor authentication is enabled, users must verify their Anypoint P
 * Security key
 * Salesforce Authenticator
 
-Organizations created after April 30, 2022 require multi-factor authentication by default for all users. Organization administrators can xref:multi-factor-authentication.adoc#exempt-mfa-users[add individual user and service accounts to an exemption list]. Note that https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce users must have MFA enabled].
+== Multi-factor Authentication Requirements for Salesforce and MuleSoft Products
+
+* Beginning February 1, 2022, MFA must be enabled for all of your Salesforce users. To learn more about this requirement, see the https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce Multi-Factor Authentication FAQ].
+* Organizations created after April 30, 2022 require MFA by default for all users.
+* Beginning July 23, 2022, user accounts that are added to an existing organization must configure MFA.
+
+Organization administrators can xref:multi-factor-authentication.adoc#exempt-mfa-users[add individual user and service accounts to an exemption list]. MuleSoft recommends maintaining the MFA requirement for all user accounts.
 
 == Multi-Factor Authentication Verification Methods
 

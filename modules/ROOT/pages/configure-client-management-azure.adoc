@@ -25,8 +25,37 @@ The *Add OIDC Azure client provider* page appears.
 .. *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Azure AD to `https://graph.microsoft.com/v1.0/applications/{clientId}`. +
 +
 For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation. 
++
+Client secrets updates are not currently supported.
 . Click *Create*.
+
+== Microsoft Identity Platform Support
+
+=== Access Tokens 
+
+For your APIs, Azure AD client management in Anypoint Platform supports both https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[v1 and v2 JSON Web Tokens] (JWTs) on Microsoft identity platform. 
+
+=== OAuth 2.0 Endpoints
+
+Anypoint Platform supports only tokens obtained using Azure AD v2.0 endpoints, also known as Microsoft identity platform endpoints. For example, Anypoint Platform supports the token endpoint: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token`. 
+
+Use the following properties when you are using the Authorization Code grant type to obtain a token:
+
+* `authorize url`: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/authorize`
+* `token url`: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token`
+* `client id`: {your client id}
+* `client secret`: {your client secret}
+* `scope`: `https://graph.microsoft.com/.default`
+
+Anypoint Platform does not support custom scopes. Use the default scope for Microsoft Graph. 
+
+=== Grant Types
+
+When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application] with Microsoft Azure AD client provider, Anypoint Platform doesn't support grant types selection due to Microsoft Azure AD limitations.
+
+For a list of supported grant types, see the https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
 
 == See Also
 
 * https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID]
+* https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[Microsft identity platform access tokens]
