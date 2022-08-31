@@ -15,8 +15,10 @@ When you configure a retention period:
 
 Before getting started, ensure that you have an account that has the following permissions:
 
-* Organization administrator
 * Audit log config manager
+* Organization administrator (required only if you are using the user interface to set retention. You do not need this permission if you are using the API.)
+
+Your organization must also have *Try new features* or the Teams feature enabled in Access Management. 
 
 == Configure Audit Log Retention Period
 
@@ -30,7 +32,7 @@ include::partial$include-nav-steps-org-admin-audit-log-mgr.adoc[]
 A warning appears, confirming your new retention period and date effective.
 +
 . Click *Confirm*. +
-The new audit log retention period takes effect on the date you specified.
+The new audit log retention period takes effect on the date you specified at 0:0:00 UTC. 
 
 == See Also
 
