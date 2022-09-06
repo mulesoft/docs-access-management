@@ -7,7 +7,7 @@ Changes made by users within Anypoint Platform organizations are logged through 
 
 The audit logging service provides a queryable history of actions performed within the Anypoint Platform. It keeps track of all users who have interacted with objects in the system, and timestamps those actions. It also provides mechanisms for querying the set of users who have performed actions, the set of objects that had actions performed on them, and other endpoints that enable the querying of log entries.
 
-Audit logs have a default retention period of six years. However, users who have the Organization Administrator and Audit Log Config Manager permission can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically if you want to maintain your log files for longer than the current retention period.
+Audit logs have a default retention period of six years. However, users who have the Organization Administrator and Audit Log Config Manager permission can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically to maintain your log files for longer than the current retention period.
 
 == Access Audit Logging
 
