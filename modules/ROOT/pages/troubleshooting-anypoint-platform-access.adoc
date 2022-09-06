@@ -19,6 +19,7 @@ Access Management imposes the following limits on features in an organization:
 ** Managed by external client providers: 10,000
 * External access relations per root organization or business group: 20
 * Permissions per external organization: 1000
+* Audit log retention period: Between 30 and 2190 days
 
 === Teams, roles, and user permissions:
 

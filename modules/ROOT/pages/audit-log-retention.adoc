@@ -1,0 +1,40 @@
+= Audit Log Retention Period
+
+xref:audit-logging.adoc[Audit logs] have a default retention period of six years. Users who have Audit Log Config Manager and Organization Administrator permissions can configure the retention period for the audit logs in their organization.
+
+Download your logs periodically if you want to maintain your log files for longer than six years.
+To check the audit log retention period for your organization, check the retention period in your root organization's settings, or use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23341/[Audit Logging API^].
+
+When you configure a retention period:
+
+* You can specify a retention period between 30 and 2190 days.
+* The date the new retention period takes effect must be a minimum of seven days from the current date.
+* Configuring a new retention period affects your organization's compliance policy.
+
+== Before You Begin
+
+Before getting started, ensure that you have an account that has the following permissions:
+
+* Audit log config manager
+* Organization administrator (required only if you are using the user interface to set retention. You do not need this permission if you are using the API.)
+
+Your organization must also have *Try new features* or the Teams feature enabled in Access Management. 
+
+== Configure Audit Log Retention Period
+
+include::partial$include-nav-steps-org-admin-audit-log-mgr.adoc[]
+
+. Click the *Settings* tab.
+. Next to *Audit Log Retention Period*, click the pencil icon.
+. In the *Days* field, enter a value between 30 and 2190.
+. In the *Date Effective* field, select the date on which you want the new retention period to start.
+. Click *Save Changes*. +
+A warning appears, confirming your new retention period and effective date.
++
+. Click *Confirm*. +
+The new audit log retention period takes effect on the date you specified at 0:0:00 UTC. 
+
+== See Also
+
+* xref:audit-logging.adoc[]
+* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23343/[Audit Logging API^]
