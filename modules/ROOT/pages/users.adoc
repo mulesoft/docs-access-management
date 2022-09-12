@@ -7,8 +7,8 @@ As an administrator of your root organization, you can enable, disable, or delet
 
 By selecting the checkbox next to a user, additional options related to that user appear:
 
-* *Enable*: Enables the user in the selected organization or business group.
-* *Disable*: Disables the user in the selected organization or business group. They are no longer able to log in.
+* *Enable*: Enables the disabled users in the selected organization or business group. 
+* *Disable*: Disables the users in the selected organization or business group. They are no longer able to log in.
 * *Delete*: When deleting from the root organization, all of the user's permissions are removed, and the user becomes unattached. When deleting from a business group, all of the user's permissions for only the selected business group are removed. The deleted user's data resides in the organization for audit logging purposes.
 
 == Before You Begin
