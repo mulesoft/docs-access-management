@@ -187,7 +187,7 @@ Connected apps and clients are exempt from reauthentication. If you have a scrip
 
 If you have not verified your email address that you use to log in to Anypoint Platform, a prompt appears to verify your email when you log in.
 You can verify your email using the login prompt, or you can verify your email in your user profile.
-If you are an SSO user, you cannot verify your email address through Anypoint Platform.
+SSO users cannot verify their email addresses through Anypoint Platform and do not receive verification prompts.
 
 include::partial$include-nav-steps-to-profile.adoc[]
 
@@ -217,7 +217,7 @@ A window appears, prompting you to enter a verification code that you received a
 +
 . Enter the verification code.
 . Click *Confirm*. +
-The email address you entered is now the email address you use to log in to Anypoint Platform.
+The email address you entered is now your primary email address for Anypoint Platform.
 
 == Reset Your Password
 
