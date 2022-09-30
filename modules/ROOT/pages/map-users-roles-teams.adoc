@@ -166,7 +166,7 @@ include::partial$include-nav-roles.adoc[]
 * OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
 * LDAP: The string from your SAML assertion AttributeValue
 
-. In the *Provider name* drop-down, select the IdP associated with the mapping.
+. In the *Provider Name* drop-down, select the IdP associated with the mapping.
 . Click *Add*.
 . Click *Save Changes*. +
 The SSO users associated with the groups you designated are assigned the role.
