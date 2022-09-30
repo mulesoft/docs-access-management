@@ -134,6 +134,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-teams.adoc[]
 
+. Click the team you want to modify.
 . Click the *External IdP Groups* tab.
 . In the *Group Names* field, enter one of the following: 
 
@@ -156,6 +157,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
+. Click the role you want to modify.
 . Click the *External IdP Groups* tab.
 . In the *Group Names* field, enter one of the following: +
 
@@ -163,8 +165,7 @@ include::partial$include-nav-roles.adoc[]
 * OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
 * LDAP: The string from your SAML assertion AttributeValue
 
-. In the *Type* drop-down, select `Member` or `Maintainer`.
-. In the *Identity Provider* drop-down, select the IdP associated with the user group.
+. In the *Provider name* drop-down, select the IdP associated with the user group.
 . Click *Add*.
 . Click *Save Changes*. +
 The SSO users associated with the groups you designated are assigned the role.
