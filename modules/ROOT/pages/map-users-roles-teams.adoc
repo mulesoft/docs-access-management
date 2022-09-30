@@ -145,6 +145,7 @@ include::partial$include-nav-teams.adoc[]
 . In the *Type* drop-down, select `Member` or `Maintainer`. +
 If you select *Maintainer*, users who have that group name become team maintainers for this team. If you select *Member*, users who have this group name become team members.
 +
+. In the *Provider Name* drop-down, select the IdP associated with the mapping.
 . Click *Add*.
 . Click *Save Changes*. +
 The SSO users associated with the group you designated are assigned to the team.
@@ -165,7 +166,7 @@ include::partial$include-nav-roles.adoc[]
 * OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
 * LDAP: The string from your SAML assertion AttributeValue
 
-. In the *Provider name* drop-down, select the IdP associated with the user group.
+. In the *Provider name* drop-down, select the IdP associated with the mapping.
 . Click *Add*.
 . Click *Save Changes*. +
 The SSO users associated with the groups you designated are assigned the role.
