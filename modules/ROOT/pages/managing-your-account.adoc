@@ -174,9 +174,9 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 . Click the circle icon in the upper right-hand corner.
 . Click *Profile*.
 
-image::managing-accounts-roles-and-permissions-98132.png[]
+image::managing-accounts-roles-and-permissions-98132.png[The access point for your user profile]
 
-You can modify your contact information, change your password, and see a list of the roles assigned to your account.
+You can modify your contact information, change your password, and see a list of the permissions assigned to your account.
 
 === Manage Sensitive Account Information
 
