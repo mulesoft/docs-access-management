@@ -171,9 +171,9 @@ If you have a free trial account and want to migrate your user name to a new org
 
 include::partial$include-nav-steps-to-profile.adoc[]
 
-image::managing-accounts-roles-and-permissions-98132.png[]
+image::managing-accounts-roles-and-permissions-98132.png[The access point for your user profile]
 
-You can modify your contact information, change your password, and see a list of the roles assigned to your account.
+You can modify your contact information, change your password, and see a list of the permissions assigned to your account.
 
 === Manage Sensitive Account Information
 
