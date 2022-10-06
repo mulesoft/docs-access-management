@@ -185,7 +185,7 @@ Connected apps and clients are exempt from reauthentication. If you have a scrip
 
 === Verify Your Email Address
 
-If you have not verified your email address that you use to log in to Anypoint Platform, a prompt appears to verify your email when you log in.
+As of October 10, 2022, non-SSO users must verify their Anypoint Platform email addresses. If you have not verified your email address, an email verification request prompt appears each time you log in.
 You can verify your email using the login prompt, or you can verify your email in your user profile.
 SSO users cannot verify their email addresses through Anypoint Platform and do not receive verification prompts.
 
