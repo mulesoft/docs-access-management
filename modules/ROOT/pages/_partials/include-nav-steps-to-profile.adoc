@@ -1,3 +1,3 @@
 . Log in to Anypoint Platform.
-. In the Anypoint Platform navigation bar, click the circle icon that contains your organization or business group's acronym.
+. In the Anypoint Platform navigation bar, click the circle icon that contains the initials associated with your Anypoint Platform account.
 . In the drop-down, click *Profile*.

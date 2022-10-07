@@ -193,7 +193,7 @@ include::partial$include-nav-steps-to-profile.adoc[]
 
 . Click the *Contact Info* tab.
 . In the *Email* section, click *Verify Email*. +
-A window appears, prompting you to enter a verification code that you received at your Anypoint Platform account's email address.
+A window appears, prompting you to enter a verification code that you received at your Anypoint Platform account's email address. The verification email may take a few minutes to arrive. If you do not see the email in your inbox after several minutes, check your Spam folder.
 +
 . Enter the verification code.
 . Click *Confirm*. +
