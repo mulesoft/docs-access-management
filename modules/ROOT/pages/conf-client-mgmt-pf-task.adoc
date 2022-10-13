@@ -3,14 +3,15 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-include::partial$include-nav-steps-org-admin-bg.adoc[]
+Anypoint Platform supports only PingFederate versions 6 through 8.
 
-include::partial$include-nav-client-providers.adoc[]
+When you configure client provider URLs, use the endpoint `/pf-ws/rest/oauth/clients` and not `/as/clients.oauth2`. Do not use PingFederate's dynamic client registration URL for this configuration.
 
 == Steps to Add A PingFederate Client Provider
 
-[NOTE]
-Anypoint Platform supports only PingFederate versions 6 through 8. 
+include::partial$include-nav-steps-org-admin-bg.adoc[]
+
+include::partial$include-nav-client-providers.adoc[]
 
 . Click *Add Client Provider*, and then select *PingFederate*.
 +
