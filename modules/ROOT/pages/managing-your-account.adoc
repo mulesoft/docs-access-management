@@ -169,10 +169,7 @@ If you have a free trial account and want to migrate your user name to a new org
 
 == Update User Information
 
-include::partial$include-nav-steps-no-permissions.adoc[]
-
-. Click the circle icon in the upper right-hand corner.
-. Click *Profile*.
+include::partial$include-nav-steps-to-profile.adoc[]
 
 image::managing-accounts-roles-and-permissions-98132.png[The access point for your user profile]
 
@@ -185,6 +182,42 @@ For enhanced security, Access Management might prompt you to re-authenticate bef
 include::partial$include-reauthentication-conditions.adoc[]
 
 Connected apps and clients are exempt from reauthentication. If you have a script that makes an API call to change your email address, it might need to accommodate reauthentication.
+
+=== Verify Your Email Address
+
+As of October 10, 2022, non-SSO users must verify their Anypoint Platform email addresses. If you have not verified your email address, an email verification request prompt appears each time you log in.
+You can verify your email using the login prompt, or you can verify your email in your user profile.
+SSO users cannot verify their email addresses through Anypoint Platform and do not receive verification prompts.
+
+include::partial$include-nav-steps-to-profile.adoc[]
+
+. Click the *Contact Info* tab.
+. In the *Email* section, click *Verify Email*. +
+A window appears, prompting you to enter a verification code that you received at your Anypoint Platform account's email address. The verification email may take a few minutes to arrive. If you do not see the email in your inbox after several minutes, check your Spam folder.
++
+. Enter the verification code.
+. Click *Confirm*. +
+Your email address is verified. 
+
+== Change Your Account Email Address
+
+You can change the email address that you use to log in to your Anypoint Platform account.
+
+[NOTE]
+SSO users cannot change their account email address through Anypoint Platform.
+
+include::partial$include-nav-steps-to-profile.adoc[]
+
+. Click the *Contact Info* tab.
+. In the *Email* row, click the pencil icon.
+. Enter your new email address.
+. Click *Save Changes*.
+. If you have been logged in to Anypoint Platform for more than 30 minutes, reenter your password to reauthenticate. +
+A window appears, prompting you to enter a verification code that you received at the new email address you entered.
++
+. Enter the verification code.
+. Click *Confirm*. +
+The email address you entered is now your primary email address for Anypoint Platform.
 
 == Reset Your Password
 
