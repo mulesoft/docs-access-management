@@ -51,7 +51,7 @@ Anypoint Platform does not support custom scopes. Use the default scope for Micr
 
 === Grant Types
 
-When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application with Microsoft Azure AD client provider], one won't be able to specify the supported grant types. Thus, Anypoint Platform doesn't support grant types selection due to Microsoft Azure AD limitations.
+When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application with Microsoft Azure AD client provider], you can't specify the supported grant types. Because of this limitation on the Microsoft Azure AD side, Anypoint Platform does not support selecting grant types.
 
 For a list of supported grant types, see the https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
 
