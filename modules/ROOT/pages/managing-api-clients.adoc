@@ -17,7 +17,7 @@ You can configure the following OAuth providers:
 +
 Dynamic Client Registration-compliant identity providers must conform to the https://openid.net/specs/openid-connect-registration-1_0.html[OpenID Connect Client Registration 1.0 incorporating errata set 1].
 
-To configure client management on Anypoint Platform for these providers, you must have an identity provider(IdP) account.
+To configure client management on Anypoint Platform for supported providers, you must have an identity provider (IdP) account with the provider you want to use.
 
 == Delete a Client Provider
 
