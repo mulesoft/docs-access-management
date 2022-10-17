@@ -4,12 +4,14 @@ Every HTTP request you make to an external resource goes through the API Console
 
 To add a new domain:
 
-1. Go to Access Management.
-2. Click *Trusted domains*.
-3. Click *Add domain*. +
-The domain must not match with any existing trusted domain, and must not be any domain or subdomain of Mulesoft or Anypoint Platform.
-4. In the dialog box that appears, type the domain name and click *Add domain*. +
-_Result_: The domain has been added to your list of trusted domains. You are redirected to the trusted domains page, where you can edit or delete your domains. If you register a domain on a parent organization, it will also be allowlisted on all your business groups.
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Click *Trusted domains*.
+. Click *Add domain*. +
+The domain must not match with any existing trusted domain, and must not be any domain or subdomain of MuleSoft or Anypoint Platform. 
++
+. In the dialog box that appears, type the domain name and click *Add domain*. +
+_Result_: The domain has been added to your list of trusted domains. You are redirected to the trusted domains page, where you can edit or delete your domains. If you register a domain on a parent organization, it is also allowlisted on all your business groups.
 
 == Automatic Registration of Domains
 When publishing an API specification to Exchange, or sending a request trough the proxy, the base URI of the implementation will automatically be added to the list of trusted domains. Administrators will receive an email notifying you of this event. The email will redirect you to the *Trusted domains* page in Access Management, where you can add or delete new domains as explained before.
