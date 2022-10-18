@@ -14,7 +14,7 @@ When you log in to Anypoint Platform, the organization icon and name are display
 
 == Organization Owner
 
-The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a role that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The owner is assigned the Organization Administrator permission by default.
+The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a role that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The owner is assigned the Organization Administrator permission by default. If you transfer organization ownership to another user, the previous organization owner retains the Organization Administrator permission unless you revoke it.
 
 Every business group created within the organization hierarchy thereafter must have an owner assigned. Only users with the Organization Administrator permission can be assigned as owners of business groups. Any organization administrator can assign and change owners of business groups. There cannot be more than one owner at once for a business group. The Organization Administrator permission cannot be removed from organization owners.
 
