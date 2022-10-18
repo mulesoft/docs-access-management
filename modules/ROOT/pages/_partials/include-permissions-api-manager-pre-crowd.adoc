@@ -1,3 +1,3 @@
 API Creator:: Enables you to create an API in the specified environment.
-API Versions Owner:: Designates you as the owner of all API versions in the specified business group.
+API Versions Owner:: Enables you to view, modify, delete, and deprecate all API versions in the specified business group.
 Portals Viewer:: Enables you to view all portals in the specified business group.
