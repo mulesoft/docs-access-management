@@ -33,7 +33,7 @@ Security key:: Registers a USB security key, such as Yubico YubiKey or Google Ti
 Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to create verification codes that you provide when logging in to Anypoint Platform.
 
 [[exempt-mfa-users]]
-=== Exempt Users from Multi-factor Authentication
+== Exempt Users from Multi-factor Authentication
 
 To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform.
 However, it is best to use the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using service accounts.
