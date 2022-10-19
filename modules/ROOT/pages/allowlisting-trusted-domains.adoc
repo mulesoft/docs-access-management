@@ -17,4 +17,4 @@ _Result_: The domain has been added to your list of trusted domains. You are red
 
 When you publish an API specification to Exchange or send a request through the proxy, the base URI of the implementation is automatically added to the list of trusted domains. Organization administrators receive an email notification stating a trusted domain has been added, and the email redirects them to the *Trusted domains* page in Access Management, where they can add or delete new domains.
 
-NOTE: The allowlisting of trusted domains will be rolled in two phases. During the first phase, non-authenticated request will be automatically registered. During the second phase, non-authenticated requests from public portals or via link share won't be automatically added to the list of trusted domains and will fail if the domain is not manually added to the list.
+NOTE: Non-authenticated requests requests from public portals or via link share are automatically registered. 
