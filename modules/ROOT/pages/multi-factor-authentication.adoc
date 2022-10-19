@@ -4,14 +4,11 @@ include::_attributes.adoc[]
 endif::[]
 
 Multi-factor authentication (MFA) provides an additional layer of verification for Anypoint Platform users.
+By default, MFA is required for all user accounts except accounts that use single sign-on (SSO).
+However, as an organization administrator, you can exempt specific user accounts from the multi-factor authentication requirement in order to allow existing integrations to continue operating without interruption.
+SSO users should configure multi-factor authentication through their identity provider.
 
-* As an organization administrator, you can require all non-SSO users in your organization to use multiple verification methods to successfully log in.
-* As an organization administrator, you can exempt specific user accounts from the multi-factor authentication requirement in order to allow existing integrations to continue operating without interruption.
-* Non-SSO users can manually enable multi-factor authentication in their profile settings, even if their organization does not require it.
-
-The multi-factor authentication setting does not apply to SSO users.  SSO users should configure multi-factor authentication through their identity provider.
-
-After multi-factor authentication is enabled, users must verify their Anypoint Platform credentials using at least one of four verification methods:
+Users must verify their Anypoint Platform credentials using at least one of four verification methods:
 
 * Third-party TOTP authenticator apps
 * Built-in authenticator
@@ -20,11 +17,8 @@ After multi-factor authentication is enabled, users must verify their Anypoint P
 
 == Multi-factor Authentication Requirements for Salesforce and MuleSoft Products
 
-* Beginning February 1, 2022, MFA must be enabled for all of your Salesforce users. To learn more about this requirement, see the https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce Multi-Factor Authentication FAQ].
-* Organizations created after April 30, 2022 require MFA by default for all users.
-* Beginning July 23, 2022, user accounts that are added to an existing organization must configure MFA.
-
-Organization administrators can xref:multi-factor-authentication.adoc#exempt-mfa-users[add individual user and service accounts to an exemption list]. MuleSoft recommends maintaining the MFA requirement for all user accounts.
+* Beginning February 1, 2022, MFA must be enabled for all of your Salesforce users. To learn more about this requirement, see the https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce Multi-Factor Authentication FAQ]
+* Beginning October 29, 2022, all non-SSO accounts that do not have MFA configured or are not on your organization's xref:multi-factor-authentication.adoc#exempt-mfa-users[exemption list] are prompted to configure MFA when they log in to Anypoint Platform.
 
 == Multi-Factor Authentication Verification Methods
 
@@ -38,31 +32,12 @@ Security key:: Registers a USB security key, such as Yubico YubiKey or Google Ti
 
 Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to create verification codes that you provide when logging in to Anypoint Platform.
 
-== Enable or Exempt Multi-Factor Authentication for Your Organization Users
-
-For enhanced security, you can require all users in your organization to use multi-factor authentication. Users without a verification method already configured are prompted to do so when they subsequently log in to Anypoint Platform. Users with a method already configured are not prompted to configure another verification method.
-
-=== Prerequisite
-
-To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform. You must either configure these service account calls by using the xref:connected-apps-overview.adoc[Connected Apps] feature or add these accounts to the *Exempt Accounts* section when configuring multi-factor authentication.
-
-=== Enable Multi-Factor Authentication for All User Accounts
-
-include::partial$include-nav-steps-org-admin-bg.adoc[]
-
-include::partial$include-nav-mfa.adoc[]
-
-. Select *Required*.
-. If you want to exempt specific users or service accounts from multi-factor authentication, add them to the *Exempt Accounts* section.
-. Click *Save*. +
-All nonexempt users in your organization are now required to configure a verification method when they log in to Anypoint Platform.
-
 [[exempt-mfa-users]]
 === Exempt Users from Multi-factor Authentication
 
-Service users or accounts that make programmatic calls to Anypoint Platform should be exempt from multi-factor authentication because they cannot provide verification aside from a username and password.
-
-It is best to use the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using service accounts. Using the Connected Apps feature provides more security and control than using user accounts.
+To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform.
+However, it is best to use the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using service accounts.
+Using the Connected Apps feature provides more security and control than using user accounts.
 
 To exempt individual accounts from multi-factor authentication:
 
@@ -77,22 +52,9 @@ The exempt user accounts appear in the *Exempt Accounts* section.
 
 You can later remove user accounts from the *Exempt Accounts* list by clicking *X* next to their account names.
 
-== Turn On Multi-Factor Authentication for Your User Account
-
-If you want to ensure you are the only person who can access your account, you can turn on multi-factor authentication for your user account even if your organization does not require it. You can register more than one verification method for your account:
-
-include::partial$include-nav-steps-to-profile.adoc[]
-
-. Click *Configure multi-factor authentication (MFA)*. +
-The *Manage Your Verification Methods* interface appears.
-. Next to the verification method you want to configure, click *Add*.
-. Follow the instructions for your preferred verification method.
-
 == Manage Multi-Factor Authentication for Your Account
 
-If you use multi-factor authentication because your organization requires it or if you've turned it on for yourself, you can modify the verification methods that you use to log in. You must register at least one method to use MFA.
-
-If your organization has disabled its multi-factor authentication requirement, you can also remove all verification methods. However, for enhanced security, it is best to use at least one verification method.
+You can modify the verification methods that you use to log in. You must register at least one method to use MFA.
 
 To modify verification methods in your account:
 
@@ -114,26 +76,8 @@ The *Manage Your Verification Methods* interface appears.
 .. Click *Yes*
 .. Click *Done*.  +
 [NOTE]
-If your organization requires multi-factor authentication and you have removed all verification methods, you must configure at least one verification method before you save your changes.
+If you have removed all verification methods, you must configure at least one verification method before you save your changes.
 . Click *Save*.
-
-[[disable-org-mfa]]
-== Disable Multi-Factor Authentication Requirement for All Organization Users
-
-[NOTE]
-Organizations created after April 30, 2022 cannot disable the multi-factor authentication requirement in their organizations and must add individual accounts to the exemption list to bypass the requirement.
-
-When you disable the multi-factor authentication (MFA) requirement, new users who log in to the organization do not receive a prompt to configure MFA. Note that disabling MFA does not automatically remove MFA from user accounts. Individual users who have configured multi-factor authentication must manually remove it in their profile settings.
-
-To disable multi-factor authentication for all users:
-
-include::partial$include-nav-steps-org-admin-bg.adoc[]
-
-include::partial$include-nav-mfa.adoc[]
-
-. Unselect *Required*.
-. Click *Save*. +
-Multi-factor authentication configuration is no longer required for new users.
 
 == Reset Multi-Factor Authentication for Individual Users
 
@@ -148,7 +92,7 @@ include::partial$include-nav-users.adoc[]
 . Click the user whose multi-factor authentication configuration you want to reset. +
 . Click *Reset multi-factor authentication*.
 . Click *Confirm reset MFA*. +
-If your organization requires multi-factor authentication, the user is prompted to configure a new verification method the next time they log in to Anypoint Platform.
+Next time the user logs in to Anypoint Platform, they are prompted to configure a new verification method.
 
 == Known Issues
 
