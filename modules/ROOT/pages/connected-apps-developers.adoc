@@ -107,7 +107,7 @@ To work with OpenID Connect, apps have to exchange refresh tokens for new access
 Refresh tokens expire after 90 days.
 Access tokens expire after the user’s session expires.
 If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after the original access tokens expire.
-To request a new access token, you must send a request to the token endpoint using the `refresh_token grant` type.
+To request a new access token, you must send a request to the token endpoint using the `refresh_token` grant type.
 When authentication is successful, a refresh token is exchanged for an access token.
 
 === Password
@@ -121,9 +121,9 @@ The `jwt_bearer` (`urn:ietf:params:oauth:grant-type:jwt-bearer`) grant type is u
 It is suitable for use with trusted clients to gain access to protected resources without user authorization.
 A sample flow for the JWT Bearer grant type could be as follows:
 
-1. A developer creates the connected app that acts on behalf of a user with `jwt_bearer` as the grant type.
-2. JWT token exchange occurs with the following claims in the payload:
-
+. A developer creates the connected app that acts on behalf of a user with `jwt_bearer` as the grant type.
+. JWT token exchange occurs with the following claims in the payload:+
++
 |===
 | Attribute | Description
 
@@ -131,7 +131,10 @@ A sample flow for the JWT Bearer grant type could be as follows:
 | The issuer of the claim. This value must be same as the connected app’s `clientId`.
 
 | `sub`
-a| The subject of the token, such as `{version}|{identityProviderId}|{username}|{firstname}|{lastname}|email|externalgroups`.
+a| The subject of the token, such as: 
+----
+{version}\|{identityProviderId}\|{username}\|{firstname}\|{lastname}\|email\|externalgroups
+----
 
 NOTE: At minimum, `identityProvider_id` and `username` are required for `sub`, as these subjects identify the user in the system.
 
@@ -139,8 +142,8 @@ NOTE: At minimum, `identityProvider_id` and `username` are required for `sub`, a
 | The authentication server. For example, the authentication server for the US region is `https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token`.
 
 |===
-
-3. The app calls the authorization server with the generated assertion.
++
+. The app calls the authorization server with the generated assertion.
 
 === Client Credentials
 
