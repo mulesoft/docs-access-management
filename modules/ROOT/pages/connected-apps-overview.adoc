@@ -34,7 +34,7 @@ a|
 * Authorization Code
 * Password
 * JWT Bearer
-| Productizing additional third-party applications on top of Anypoint Platform
+| Productizing additional third-party applications on top of Anypoint Platform.
 
 | App that acts on its own behalf
 | Acts on its own behalf without impersonating a user. The app can be used only in the organization where it is created.
