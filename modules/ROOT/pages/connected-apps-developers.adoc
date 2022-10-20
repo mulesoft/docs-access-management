@@ -72,7 +72,13 @@ include::partial$include-nav-connected-apps.adoc[]
 . In the *Secret* field, enter a secret of your choice.
 . Click *Save*.
 
-// add image; alt text: "Edit mode for a connected app"
+image::connected-apps-edit-mode.png[Edit mode for a connected app]
++
+[calloutlist]
+. The name and username of the owner of the connected app
+. The name of the connected app
+. The ID of the connected app
+. The client secret of the connected app
 
 [[application-allowlist-dev]]
 == Application Allowlist
@@ -131,7 +137,7 @@ A sample flow for the JWT Bearer grant type could be as follows:
 | The issuer of the claim. This value must be same as the connected app’s `clientId`.
 
 | `sub`
-a| The subject of the token, such as: 
+a| The subject of the token, such as:
 ----
 {version}\|{identityProviderId}\|{username}\|{firstname}\|{lastname}\|email\|externalgroups
 ----
