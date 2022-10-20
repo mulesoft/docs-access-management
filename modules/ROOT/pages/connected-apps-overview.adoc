@@ -3,13 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The Connected Apps feature provides a framework that enables an external application to integrate with Anypoint Platform using https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[APIs] through OAuth 2.0 and OpenID Connect.
-Connected apps help users delegate their access without sharing sensitive credentials or giving full control of their accounts to third parties.
-Actions taken by connected apps are audited, and users can also revoke access at any time.
-Note that some products do not currently include client IDs in this release of the Connected Apps feature.
-The Connected Apps feature enables you to use secure authentication protocols and control an app's access to user data. Additionally, end users can authorize the app to access their Anypoint Platform data.
+The Connected Apps feature provides a framework that enables an external application to integrate with the Anypoint Platform using https://anypoint.mulesoft.com/exchange/portals/anypoint-platform[APIs] through OAuth 2.0 and OpenID Connect. Connected Apps help user delegate their access without sharing sensitive credentials or giving full control of their applications to third parties. Actions taken by connected apps are audited, and users can revoke access at any time. The Connected Apps feature enables you to use secure authentication protocols and control an app’s access to user data.
 
-== Authentication
+== Authentication and Authorization
 
 Anypoint Platform supports OAuth 2.0 and OpenID Connect to authorize apps to access data within Anypoint Platform.
 OAuth (Open Authorization) is an open protocol that provides secure API authorization from applications in a simple and standardized way.
@@ -25,3 +21,22 @@ You can use the Connected Apps feature to create a seamless authentication exper
 * An xref:connected-apps-org-admin.adoc[organization administrator] can control how their organization’s data is used by allowlisting apps, revoking access, and disabling this feature for the entire organization.
 * An xref:connected-apps-developers.adoc#developers[organization administrator who is developing a connected app] can register new (and manage existing) apps within their organization.
 * An xref:connected-apps-end-users.adoc#end-users[end user] can authorize apps to access particular information, such as viewing assets in Anypoint Exchange.
+
+There are two types of connected apps supporting different grant types:
+
+|===
+| Type | Description | Supported grant types | Example use cases
+
+| App that acts on behalf of a user
+| Authorized by a user to act on their behalf
+a|
+
+* Authorization Code
+* Password
+* JWT Bearer
+| Productizing additional third-party applications on top of Anypoint Platform
+
+| App that acts on its own behalf
+| Acts on its own behalf without impersonating a user. The app can be used only in the organization where it is created.
+| Client Credentials
+| Automation scenarios such as building or accessing CI/CD pipelines without user intervention.
