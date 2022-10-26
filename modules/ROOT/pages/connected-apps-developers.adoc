@@ -21,10 +21,10 @@ NOTE: Only developers who have the organization administrator permission can cre
 == Create a Connected App
 
 * Your organization can own up to 2000 connected apps, and each connected app can have up to 1000 scopes.
-* Your app is owned by your organization; any organization administrator can control it.
+* Your app is owned by your organization. Any organization administrator can control it.
 * A unique `clientID` is automatically assigned and can’t be modified. The `clientSecret` has no expiration date by default but can be modified.
 
-You should also determine the use-case on whether the app is internal to your company or is a third-party application that can be distributed outside of your organization. To create your app, follow these steps:
+You should also determine whether the app is internal to your company or is a third-party app that can be distributed outside of your organization. To create your app, follow these steps:
 
 include::partial$include-nav-connected-apps.adoc[]
 
@@ -47,7 +47,7 @@ Users can visit this URL to learn more about the app.
 Configure which URIs users should be directed to after authorization. Type the URL and click *Add* to add it to the list.
 +
 .. *Scopes* +
-The level of permissions to be provided to the app. Click on the *Add Scopes* button to select the scopes. For more information, see xref:connected-apps-developers.adoc#endpoint-scopes[Endpoint Scopes].
+The level of permissions to provide to the app. Click *Add Scopes* to select the scopes. For more information, see xref:connected-apps-developers.adoc#endpoint-scopes[Endpoint Scopes].
 +
 . Click *Save*
 
@@ -56,19 +56,18 @@ The level of permissions to be provided to the app. Click on the *Add Scopes* bu
 The connected app ownership gets transferred to the root organization owner
 when the user who created the connected app:
 
-* is deleted
-* is removed from the root organization
-* loses administrative privileges over the organization
+* is deleted.
+* is removed from the root organization.
+* loses administrative privileges over the organization.
 
-By clicking on the app name in Access Management > *Connected Apps* > *Owned Apps*, organization administrators can edit the
-owner of the connected app and transfer the ownership to other administrators.
+Organization administrators can edit the owner of the connected app and transfer the ownership to other administrators. To do so, click the app name in Access Management > *Connected Apps* > *Owned Apps* and make the appropriate edits.
 ====
 
 === Modify the Client Secret for a Connected App
 
 include::partial$include-nav-connected-apps.adoc[]
 
-. Click on the connected app from the list to enable Edit mode.
+. Click a connected app from the list to enable Edit mode.
 . In the *Secret* field, enter a secret of your choice.
 . Click *Save*.
 
@@ -86,7 +85,7 @@ image::connected-apps-edit-mode.png[Edit mode for a connected app]
 Users with the Organization Administrator permission can enable an allowlist to control which apps can access their users' data.
 When your app is added to an allowlist, only the set of scopes associated with the app are reviewed and approved by the administrator.
 If you add new scopes to your app at a later date, you are unable to request those scopes from users until the admin re-approves your app.
-Existing authorizations and new authorizations using the already-allowlisted set of scopes continue to work.
+Existing authorizations and new authorizations using the previously allowlisted set of scopes continue to work.
 For more information, see xref:connected-apps-org-admin.adoc#application-allowlist-admin[connected apps for administrators].
 
 [[grant-types-and-token-flow]]
@@ -98,9 +97,9 @@ For more information and examples on how to use each grant type, see the https:/
 
 === Authorization Code
 
-The `authorization_code` grant type is the commonly used grant type to authorize the app to access user’s data. A sample flow for the authorization code grant type could be as follows:
+The `authorization_code` grant type is commonly used to authorize the app to access a user's data. A sample flow for the authorization code grant type could be as follows:
 
-. A developer creates the connected app that acts on behalf of a user with authorization_code grant type.
+. A developer creates the connected app that acts on behalf of a user with the `authorization_code` grant type.
 . An end user authorizes the app to act on their behalf.
 . The authorization server sends a temporary authorization code back to the redirect URI.
 . The app calls the authorization server with the temporary code to receive the access token. +
@@ -123,7 +122,7 @@ Because the app has to collect the user’s credentials and its limitation with 
 
 === JWT Bearer
 
-The `jwt_bearer` (`urn:ietf:params:oauth:grant-type:jwt-bearer`) grant type is used when the application wants to receive access tokens without transmitting sensitive information such as the clientSecret.
+The `jwt_bearer` (`urn:ietf:params:oauth:grant-type:jwt-bearer`) grant type is used when the application wants to receive access tokens without transmitting sensitive information, such as the clientSecret.
 It is suitable for use with trusted clients to gain access to protected resources without user authorization.
 A sample flow for the JWT Bearer grant type could be as follows:
 
