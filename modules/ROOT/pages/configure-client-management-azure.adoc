@@ -60,7 +60,8 @@ For a list of supported grant types, see the https://docs.microsoft.com/en-us/az
 == Limitations 
 
 === Microsoft National Clouds
-Anypoint Platform do not support Azure AD client providers deployed in Microsoft national clouds, e.g. Azure Goverment, Azure China 21Vianet. 
+
+Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as  Azure Goverment or Azure China 21Vianet. 
 
 == See Also
 
