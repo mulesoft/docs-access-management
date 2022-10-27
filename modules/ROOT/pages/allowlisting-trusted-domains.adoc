@@ -15,6 +15,6 @@ _Result_: The domain has been added to your list of trusted domains. You are red
 
 == Automatic Registration of Domains
 
-When you publish an API specification to Exchange or send a request through the proxy, the base URI of the implementation is automatically added to the list of trusted domains. Organization administrators receive an email notification stating a trusted domain has been added, and the email redirects them to the *Trusted domains* page in Access Management, where they can add or delete new domains.
+When you publish an API specification to Exchange or send a request through the proxy, the base URI of the implementation is automatically added to the list of trusted domains.
 
 NOTE: Non-authenticated requests from public portals in Exchange or via shareable links in Mocking Service are automatically registered. 
