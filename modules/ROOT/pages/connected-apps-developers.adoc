@@ -16,14 +16,147 @@ All scopes in the endpoint map directly to permissions available in Anypoint Pla
 
 To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to log in using the *Sign in with Anypoint Platform* option.
 
-Developers who have the organization administrator role can create apps and specify access scopes in Anypoint Platform.
+NOTE: Only developers who have the organization administrator permission can create apps and specify access scopes in Anypoint Platform.
 
-== Token Flow
+== Create a Connected App
 
-When a developer creates an app, the app requests access to user data.
-When an end user receives such a request and authorizes the app to access their data, the app receives an access token, which allows the app to call Anypoint Platform on the user’s behalf.
-The access token allows the app to see who the user is by using the user’s Anypoint Platform credentials. A token is valid for up to 90 minutes.
+* Your organization can own up to 2000 connected apps, and each connected app can have up to 1000 scopes.
+* Your app is owned by your organization. Any organization administrator can control it.
+* A unique `clientID` is automatically assigned and can’t be modified. The `clientSecret` has no expiration date by default but can be modified.
 
+You should also determine whether the app is internal to your company or is a third-party app that can be distributed outside of your organization. To create your app, follow these steps:
+
+include::partial$include-nav-connected-apps.adoc[]
+
+. In the *Owned Apps* section, click *Create App*.
+. In the *Create App* page, complete the following fields:
+.. Name +
+A Unique name for the application
++
+.. *Type* +
+The type of Connected App to be created. Based on the type selected, the required fields varies.
++
+.. *Grant types* +
+The grant types to be used with this app. +
+Note: Additional information may be requested based on the grant type you select. For more information on grant types, see xref:connected-apps-developers.adoc#grant-types-and-token-flow[Grant types and token flow].
++
+.. *Website URL* +
+Users can visit this URL to learn more about the app.
++
+.. *Redirect URIs* +
+Configure which URIs users should be directed to after authorization. Type the URL and click *Add* to add it to the list.
++
+.. *Scopes* +
+The level of permissions to provide to the app. Click *Add Scopes* to select the scopes. For more information, see xref:connected-apps-developers.adoc#endpoint-scopes[Endpoint Scopes].
++
+. Click *Save*
+
+[NOTE]
+====
+The connected app ownership gets transferred to the root organization owner
+when the user who created the connected app:
+
+* is deleted.
+* is removed from the root organization.
+* loses administrative privileges over the organization.
+
+Organization administrators can edit the owner of the connected app and transfer the ownership to other administrators. To do so, click the app name in Access Management > *Connected Apps* > *Owned Apps* and make the appropriate edits.
+====
+
+=== Modify the Client Secret for a Connected App
+
+include::partial$include-nav-connected-apps.adoc[]
+
+. Click a connected app from the list to enable Edit mode.
+. In the *Secret* field, enter a secret of your choice.
+. Click *Save*.
+
+image::connected-apps-edit-mode.png[Edit mode for a connected app]
++
+[calloutlist]
+. The name and username of the owner of the connected app
+. The name of the connected app
+. The ID of the connected app
+. The client secret of the connected app
+
+[[application-allowlist-dev]]
+== Application Allowlist
+
+Users with the Organization Administrator permission can enable an allowlist to control which apps can access their users' data.
+When your app is added to an allowlist, only the set of scopes associated with the app are reviewed and approved by the administrator.
+If you add new scopes to your app at a later date, you are unable to request those scopes from users until the admin re-approves your app.
+Existing authorizations and new authorizations using the previously allowlisted set of scopes continue to work.
+For more information, see xref:connected-apps-org-admin.adoc#application-allowlist-admin[connected apps for administrators].
+
+[[grant-types-and-token-flow]]
+== Grant Types and Token Flow
+
+OAuth framework specification describes several grant types for acquiring access tokens for different use cases.
+Anypoint Platform supports `authorization_code`, `refresh_token`, `password`,  `jwt_bearer`, and `client_credentials` grant types.
+For more information and examples on how to use each grant type, see the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/pages/Connected%20App%20Examples/[Connected App Examples] in the Access Management API.
+
+=== Authorization Code
+
+The `authorization_code` grant type is commonly used to authorize the app to access a user's data. A sample flow for the authorization code grant type could be as follows:
+
+. A developer creates the connected app that acts on behalf of a user with the `authorization_code` grant type.
+. An end user authorizes the app to act on their behalf.
+. The authorization server sends a temporary authorization code back to the redirect URI.
+. The app calls the authorization server with the temporary code to receive the access token. +
+The access token can now be used to call Anypoint Platform APIs on the user’s behalf.
+
+=== Refresh Token
+
+The `refresh_token` grant type is used to grant access to user data when the user isn’t logged in.
+To work with OpenID Connect, apps have to exchange refresh tokens for new access tokens after the initial authorization to continue accessing user data.
+Refresh tokens expire after 90 days.
+Access tokens expire after the user’s session expires.
+If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after the original access tokens expire.
+To request a new access token, you must send a request to the token endpoint using the `refresh_token` grant type.
+When authentication is successful, a refresh token is exchanged for an access token.
+
+=== Password
+
+The `password` grant type is used when the application exchanges the user’s username and password for an access token.
+Because the app has to collect the user’s credentials and its limitation with no mechanisms for things like multi-factor authentication, it is not recommended to use this grant type.
+
+=== JWT Bearer
+
+The `jwt_bearer` (`urn:ietf:params:oauth:grant-type:jwt-bearer`) grant type is used when the application wants to receive access tokens without transmitting sensitive information, such as the clientSecret.
+It is suitable for use with trusted clients to gain access to protected resources without user authorization.
+A sample flow for the JWT Bearer grant type could be as follows:
+
+. A developer creates the connected app that acts on behalf of a user with `jwt_bearer` as the grant type.
+. JWT token exchange occurs with the following claims in the payload:+
++
+|===
+| Attribute | Description
+
+| `iss`
+| The issuer of the claim. This value must be same as the connected app’s `clientId`.
+
+| `sub`
+a| The subject of the token, such as:
+----
+{version}\|{identityProviderId}\|{username}\|{firstname}\|{lastname}\|email\|externalgroups
+----
+
+NOTE: At minimum, `identityProvider_id` and `username` are required for `sub`, as these subjects identify the user in the system.
+
+| `aud`
+| The authentication server. For example, the authentication server for the US region is `https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token`.
+
+|===
++
+. The app calls the authorization server with the generated assertion.
+
+=== Client Credentials
+
+The `client_credentials` grant type is suitable for machine-to-machine authentication where a specific user’s permission to access data is not required.
+It uses the `clientId` and `clientSecret` of the client to authorize and access protected data.
+CI/CD pipelines using service accounts to programmatically call Anypoint Platform can be configured to use connected apps to prevent service disruptions when configuring xref:multi-factor-authentication.adoc[multi-factor authentication].
+
+[[endpoint-scopes]]
 == Endpoint Scopes
 
 Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint] map directly to existing permissions in Anypoint Platform. Other available scopes are defined as follows:
@@ -36,33 +169,19 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 * `offline_access`: Access to the user's data when they are not logged in.
 
 [NOTE]
-Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope correspond to the user who created the connected app.
+Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope that corresponds to the user who created the connected app.
 
 For more information on scopes and permissions in the Connected Apps feature, see the scopes documentation page in Access Management:
 
 include::partial$include-nav-connected-apps.adoc[]
 
-. Click the *Scopes Documentation* tab. +
-The *Scopes Documentation* page appears, displaying scopes, their respective permissions, and the products to which they belong. 
+. In the *Connected Apps* page, click the *Scopes Documentation* tab. +
+The *Scopes Documentation* page appears, displaying scopes, their respective permissions, and the products to which they belong.
++
+. Use the search bar and filters to locate a scope based on the name, display name, permission methods, supported app type, or product label.
+. In the list of scopes, click a scope name to view the associated permissions and learn more about the scope.
 
 You can filter and sort the contents of the *Scopes Documentation* page, and you can also click a scope name to view namespaces, methods, and actions.
-
-== OIDC Endpoints and Tokens
-
-To work with OpenID Connect, apps that require access to user data when the user isn’t logged in have to exchange refresh tokens for new access tokens.
-Refresh tokens expire after 90 days. Access tokens expire after the user's session expires. If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after original access tokens expire.
-To request a new access token, you must send a request to the token endpoint using the `refresh_token` grant type.
-When authentication is successful, a refresh token is exchanged for an access token.
-
-The following example shows the structure of a token request given a pre-existing refresh_token:
-
-----
-POST /api/v2/oauth2/token
-Content-Type: application/x-www-form-urlencoded
-grant_type=refresh_token&client_id=<your_client_id>&client_secret=<your_client_secret>&refresh_token=<your_refresh_token>
-----
-
-Assuming the token request is fulfilled, the refresh token received in the endpoint response is similar to a regular token response, but it might not contain an `id_token`.
 
 == Log in with Anypoint Platform Widget
 
@@ -76,33 +195,3 @@ clientid="….">
 ----
 
 For more information about how to embed the button, refer to the https://anypoint-web-components.github.io/anypoint-signin/[developer playground].
-
-// == Example
-
-== Create an App
-
-Before you create an app as an organization administrator, consider the following requirements and restrictions:
-
-* Your organization can own up to 2000 connected apps, and each connected app can have up to 1000 scopes.
-* A unique `clientID` is automatically assigned and can’t be modified.
-However, you can modify client secrets in the *Application Settings* page.
-* Your app is owned by your organization; any organization administrator can control it.
-
-
-You should also determine the use-case and whether the app is internal to your company or is a third-party application that can be distributed outside of your organization.
-To create your app, follow these steps:
-
-include::partial$include-nav-connected-apps.adoc[]
-
-. Click *Create App*.
-. Create your app by completing the fields in the *Create App* page.
-. Click *Save*.
-
-[[application-allowlist-dev]]
-== Application Allowlist
-
-Users with the Organization Administrator permission can enable an allowlist to control which apps can access their users' data.
-When your app is added to an allowlist, only the set of scopes associated with the app are reviewed and approved by the administrator.
-If you add new scopes to your app at a later date, you are unable to request those scopes from users until the admin re-approves your app.
-Existing authorizations and new authorizations using the already-allowlisted set of scopes continue to work.
-For more information, see xref:connected-apps-org-admin.adoc#application-allowlist-admin[connected apps for administrators].
