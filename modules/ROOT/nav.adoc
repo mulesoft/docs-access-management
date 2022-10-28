@@ -38,3 +38,4 @@
 * xref:managing-permissions.adoc[Manage Permissions]
 * xref:troubleshooting-anypoint-platform-access.adoc[Anypoint Platform Access Management FAQs]
 * xref:troubleshoot-access-management.adoc[Troubleshoot Access Management]
+* xref:allowlisting-trusted-domains.adoc[Allowlisting Trusted Domains]
