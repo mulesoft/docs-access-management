@@ -3,18 +3,13 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to xref:roles.adoc#create-custom-roles[create custom roles].
+The following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to xref:roles.adoc#create-custom-roles[create custom roles (deprecated)].
+
+Note that some products require additional permissions from other products to use all of their features. See the permissions pages for each product to understand permission requirements.
 
 == General Permissions
 
-Organization Administrator:: At the root organization level, grants a user most permissions available in Anypoint Platform, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions. The Organization Administrator permission also grants access to the Organization Administration page, where the user can add and manage users and permissions, view and edit organization details, access API Manager > Client Applications, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. This permission enables a user to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. +
-For security reasons, MuleSoft recommends distributing this permission to as few users as possible.
-
-Audit Log Config Manager:: Enables a user to configure the retention period for audit logs over their organization. You must apply this permission at the root organization level. This permission appears only if you have *Try new features* or the Teams feature enabled in Access Management.
-
-Audit Log Viewer:: Enables a user to view audit logs in Access Management.
-
-Usage Viewer:: Enables a user to view usage reports.
+include::partial$include-permissions-access-management.adoc[]
 
 == API Manager
 
@@ -28,99 +23,56 @@ include::partial$include-permissions-api-manager-pre-crowd.adoc[]
 
 == Anypoint Data Gateway
 
-* Data Gateway Administrator
-* Data Gateway Viewer
+include::partial$include-permissions-data-gateway.adoc[]
 
 == Anypoint DataGraph
 
-* Contribute
-* Consume
-* Operate
-* DataGraph Admin
+include::partials$include-permissions-datagraph.adoc[]
 
 == Design Center
 
-* Design Center Developer
+include::partials$include-permissions-design-center.adoc[]
 
 == Exchange
 
 Organization level permissions:
 
-* Exchange Administrator
-* Exchange Contributor
-* Exchange Viewer
+include::partials$include-permissions-exchange-org.adoc[]
 
 Asset level permissions:
 
-* Asset Administrator
-* Asset Contributor
-* Asset Viewer
+include::partials$include-permissions-exchange-asset.adoc[]
 
 == Anypoint Monitoring
 
-* Anypoint Monitoring User
+include::partials$include-permissions-monitoring.adoc[]
 
 == Anypoint MQ
 
-* Clear destinations
-* Manage clients
-* Manage destinations
-* View clients
-* View destinations
+include::partials$include-permissions-mq.adoc[]
 
 == Anypoint Partner Manager
 
 Depending on your organization, you might see one of the following sets of permissions available for Anypoint Partner Manager.
 
-* Partner Manager Administrator
-* View Host, Partners and Message Flows
-* Manage Partners and Message Flows
-* Manage Activity
-* Manage Host
-* View Activity
+include::partials$include--permissions-partner-manager-2.adoc[]
 
 Or:
 
-* Manage Partners
-* Manage Transactions
-* Partners Administrator
-* View Partners
-* View Transactions
+include::partials$include-permissions-partner-manager-1.adoc[]
 
 == Runtime Manager
 
-* Cloudhub Network Administrator
-* Cloudhub Network Viewer
-* Delete Applications
-* Download Applications
-* Manage Alerts
-* Manage Application Data
-* Manage Queues
-* Manage Runtime Fabrics
-* Manage Runtime Fabric
-* Manage Schedules
-* Manage Settings
-* Manage Tenants
-* Read Alerts
-* Read Applications
-* Read Runtime Fabric
-* Manage Servers
-* Read Servers
-* Manage Application Flows
-* Create Applications
+include::partials$include-permissions-runtime-manager.adoc[]
 
 == Secrets Manager
 
-* Grant access to secrets
-* Manage secret groups
-* Read secrets metadata
-* Write secrets
+include::partials$include-permissions-secrets-manager.adoc[]
 
 == Tokenization
 
-* Manage Tokenization Services
-* Manage Tokenization Formats
+include::partials$include-permissions-tokenization.adoc[]
 
 == Anypoint Visualizer
 
-* Visualizer Editor
+include::partials$include-permissions-visualizer.adoc[]

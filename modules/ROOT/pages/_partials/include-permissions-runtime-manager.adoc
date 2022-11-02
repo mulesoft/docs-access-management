@@ -1,0 +1,31 @@
+[%header,cols="20,60a"]
+|===
+|Permission |Description
+
+|x
+a|
+
+|y
+a|
+
+|===
+
+* Cloudhub Network Administrator
+* Cloudhub Network Viewer
+* Delete Applications
+* Download Applications
+* Manage Alerts
+* Manage Application Data
+* Manage Queues
+* Manage Runtime Fabrics
+* Manage Runtime Fabric
+* Manage Schedules
+* Manage Settings
+* Manage Tenants
+* Read Alerts
+* Read Applications
+* Read Runtime Fabric
+* Manage Servers
+* Read Servers
+* Manage Application Flows
+* Create Applications

@@ -1,0 +1,25 @@
+[%header,cols="20,60a"]
+|===
+|Permission |Description
+|Admin a|Permission to:
+
+* Contribute, consume, and operate the unified schema
+* View usage metrics
+|Contribute a| Permission to:
+
+* Add source APIs to the unified schema
+* Edit any source API schema added to the unified schema
+* Request access to run queries
+* Promote API schemas to an environment
+* View query traces in real time while running queries from the UI
+* Download a copy of the unified schema from the query editor
+|Consume a|Permission to:
+
+* View and explore the unified schema
+* Request access to run queries and make data requests from the UI
+* Download a copy of the unified schema from the query editor
+|Operate a|Permission to:
+
+* View customer-facing logs
+* Set a dedicated load balancer URL for Anypoint Datagraph
+|===

@@ -1,0 +1,11 @@
+[%header,cols="20,60a"]
+|===
+|Permission |Description
+
+|Data Gateway Administrator
+a|
+
+|Data Gateway Viewer
+a|
+
+|===

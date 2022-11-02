@@ -1,0 +1,11 @@
+[%header,cols="20,60a"]
+|===
+|Permission |Description
+
+|Anypoint Monitoring Administrator
+a|
+
+|Anypoint Monitoring Viewer
+a|
+
+|===

@@ -1,0 +1,11 @@
+[%header,cols="20,60a"]
+|===
+|Permission |Description
+|Design Center Developer
+a|
+* View projects
+* Create projects
+* Modify projects
+* Delete projects
+
+|===

@@ -1,0 +1,18 @@
+[%header,cols="20,60a"]
+|===
+|Permission |Description
+
+|x
+a|
+
+|y
+a|
+
+|===
+
+* Partner Manager Administrator
+* View Host, Partners and Message Flows
+* Manage Partners and Message Flows
+* Manage Activity
+* Manage Host
+* View Activity

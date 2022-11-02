@@ -1,0 +1,17 @@
+[%header,cols="20,60a"]
+|===
+|Permission |Description
+
+|x
+a|
+
+|y
+a|
+
+|===
+
+* Manage Partners
+* Manage Transactions
+* Partners Administrator
+* View Partners
+* View Transactions

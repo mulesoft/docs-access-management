@@ -1,0 +1,14 @@
+[%header,cols="20,60a"]
+|===
+|Permission |Description
+
+|x
+a|
+
+|y
+a|
+
+|===
+
+* Manage Tokenization Services
+* Manage Tokenization Formats

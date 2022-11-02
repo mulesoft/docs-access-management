@@ -1,0 +1,50 @@
+[%header,cols="20,60a"]
+|===
+|Permission|Description
+|*View clients*
+|View all client apps, including client app IDs and client secrets for each client app.
+|*View destinations*
+|
+
+* View all destinations and each destination's settings (*ID*, *Type*, *Message TTL*, and *Message Lock Default TTL*).
+* View *In Queue* messages.
+* View *In Flight* message stats.
+|*Clear destinations*
+|Same privileges as *View destinations*.
+|*Manage clients*
+|Same privileges as *View clients*, plus permission to create client apps.
+|*Administer destinations*
+|Same privileges as *View destinations* and *Clear destinations*, plus permission to:
+
+** Create new queues, message exchanges, and bindings.
+** Edit existing queues, message exchanges, and bindings.
+** Purge messages from queues.
+|*Manage destinations (deprecated)*
+|Same privileges as *View destinations* and *Clear destinations*, plus permission to:
+
+** Create new queues and message exchanges.
+** Edit existing queues and message exchange settings.
+** Access *Message Sender* and *Browser* pages.
+** Delete messages.
+** Purge messages from queues.
+
+[NOTE]
+====
+This permission is deprecated.
+To achieve the same abilities as *Manage permissions*, assign these permissions to the user:
+
+** *Administer destinations*
+** *Destination subscriber for given environment*
+** *Destination publisher for given environment*
+====
+|*Destination subscriber for given environment*
+|
+** Consume messages from a destination.
+** Delete messages from a destination.
+|*Destination publisher for given environment*
+|
+** Send messages to a destination.
+** Update message TTL on a destination.
+|*Read MQ stats*
+| View organization and environment statistics.
+|===

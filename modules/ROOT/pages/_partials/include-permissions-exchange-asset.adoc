@@ -1,0 +1,14 @@
+[%header,cols="20,60a"]
+|===
+|Permission |Description
+
+|Asset Administrator
+a|
+
+|Asset Contributor
+a|
+
+|Asset Viewer
+a|
+
+|===
