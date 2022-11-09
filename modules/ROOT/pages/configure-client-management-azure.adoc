@@ -5,6 +5,10 @@ endif::[]
 
 You can use dynamic client registration to configure Azure Active Directory (Azure AD) client management with Anypoint Platform. Using Azure AD as a client provider enables you to authenticate and authorize API consumers with your existing configurations. Azure AD configuration in Anypoint Platform also provides a stateless microservice to convert OAuth 2.0 client application registration requests to requests supported by Azure AD.
 
+== Prerequisites 
+Please review "OAuth 2.0 and OpenID Connect(OIDC)" section of https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-protocols-oidc[Microsoft identity platform documentation]. 
+
+
 == Configuration Walkthrough
 
 include::partial$include-nav-steps-org-admin.adoc[]
