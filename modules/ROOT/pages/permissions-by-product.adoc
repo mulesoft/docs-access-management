@@ -16,6 +16,14 @@ Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
 Usage Viewer:: Enables a user to view usage reports.
 
+== API Catalog
+
+* API Catalog Contributor
+
+== API Governance
+
+* Governance Administrator
+
 == API Manager
 
 Depending on your organization, you might see one of the following sets of permissions available for API Manager.
