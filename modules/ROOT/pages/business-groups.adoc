@@ -108,8 +108,6 @@ Users who are assigned the Organization Administrator permission at any level ar
 
 You can view a list of users or teams in a business group and filter by their assigned permissions.
 
-include::partial$include-nav-steps-org-admin.adoc[]
-
 include::partial$include-nav-business-groups.adoc[]
 
 . Click the *Access Overview* tab. +
