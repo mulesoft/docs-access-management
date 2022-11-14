@@ -11,13 +11,13 @@ Audit logs have a default retention period of six years. However, users who have
 
 == Access Audit Logging
 
-Users belonging to the Organization Administrator role or the Audit Log Viewer role on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
+Users who have the Organization Administrator permission or the Audit Log Viewer permission on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
 
 The audit log UI is embedded in Access Management.
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-include::partial$include-nav-business-groups.adoc[]
+include::partial$include-nav-audit-logs.adoc[]
 
 The *Audit Logs* page displays the logs. You can:
 
