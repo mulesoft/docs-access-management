@@ -2105,13 +2105,15 @@ To gather data, you can initiate query loops and use cursors to navigate paginat
 
 The following example shows a series of calls in a query loop:
 
-. The first call does not have a cursor or request for totals. The cursor is paginated: +
+. The first call does not have a cursor or request for totals. The cursor is paginated: 
++
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
 ----
 +
-Body: +
+Body: 
++
 [source,console]
 ----
   {
@@ -2120,7 +2122,8 @@ Body: +
 	}
 ----
 +
-Response: +
+Response: 
++
 [source,console]
 ----
 {
@@ -2131,14 +2134,15 @@ Response: +
 +
 You can use the cursor from the first call's response in the next call to get the next set of rows.
 
-. The second call has a specific cursor in the request: +
-
+. The second call has a specific cursor in the request: 
++
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
 ----
 +
-Body: +
+Body: 
++
 [source,console]
 ----
 	{
@@ -2148,7 +2152,8 @@ Body: +
 	}
 ----
 +
-Response: +
+Response: 
++
 [source,console]
 ----
 	 {
@@ -2158,14 +2163,14 @@ Response: +
 ----
 
 . The third call is the final call in a loop. The response contains no data because is not a cursor, and there are no more logs to be returned.
-
++
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
 ----
 +
-Body: +
-
+Body: 
++
 [source,console]
 ----
 {
@@ -2175,8 +2180,8 @@ Body: +
 }
 ----
 +
-Response: +
-
+Response: 
++
 [source,console]
 ----
 {
@@ -2184,15 +2189,15 @@ Response: +
 }
 ----
 
-. The final call shows how to use a cursor and request the total: +
-
+. The final call shows how to use a cursor and request the total: 
++
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination= true&doIncludeTotal=true
 ----
 +
-Body: +
-
+Body: 
++
 [source,console]
 ----
 {
@@ -2202,8 +2207,8 @@ Body: +
 }
 ----
 +
-Response: +
-
+Response: 
++
 [source,console]
 ----
 {
