@@ -2099,13 +2099,29 @@ You can access the
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API and its
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.5/files/fat-raml/zip[RAML].
 
+
 === Use a Query Loop to make Requests in Audit Logs
 
-To gather data, you can initiate query loops and use cursors to navigate paginated audit logs. To avoid performance degradation, you can stop the query loop using the `total` by using the value returned by `IncludeTotal`.
+To query audit logs, the current https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23245/ [query api] will continue to work.
+Pagination in that api is via offset in the query payload, and the response returns the total number of records.
 
-The following example shows a series of calls in a query loop:
 
-. The first call does not have a cursor or request for totals. The cursor is paginated: 
+We are adding a new pagination using cursor and you can initiate query loops by using cursors. This cursor paging can be used by using the `cursorPagination` query parameter and setting it to true.
+When using cursor paging, each response will return a cursor. This cursor corresponds to the last data entry in the response data set. So the next request in query loop should include the cursor value that was returned in the previous response, and so on.
+When the data set is empty in response, then you have reached the end of query loop, and there is no more data to query for that time window. So, that is the indicator the stop the query loop. When the data set is empty in the response, there will be no cursor returned.
+Total is not returned by default when using cursor pagination, as the query loop is not dependent on offset and number of total rows.
+When using cursor paging, you can opt in to getting total by using the `includeTotal` query parameter and setting it to true.
+
+When using `cursorPagination` query param as true, if you send `offset` and `cursor` in the query body, we’ll give preference to cursor and ignore the offset.
+
+
+There is no mapping between `offset` and `cursor` values; And so when you run a query loop over a time window, you cannot switch to the new param somewhere in the middle by using the `cursorPagination` and continue the loop. This is because when using `cursorPagination`, `offset` is ignored and so the loop will be start from the beginning.
+
+
+The following example shows a series of calls in a query loop for cursor based query.
+
+
+. The first call does not have a cursor in the body; And it does not request for total. The response returns the data and a: 
 +
 [source,console]
 ----
@@ -2127,7 +2143,7 @@ Response:
 [source,console]
 ----
 {
-   "data": [logs],
+   "data": [log entries],
    "cursor": '123_abcd'
  }
 ----
@@ -2162,7 +2178,7 @@ Response:
 	}
 ----
 
-. The third call is the final call in a loop. The response contains no data because is not a cursor, and there are no more logs to be returned.
+. The third call is the final call in a loop. There are no more logs to be returned, and so the response contains no data.  Response doesn't have a cursor too as there are no more logs to be returned.
 +
 [source,console]
 ----
@@ -2189,7 +2205,7 @@ Response:
 }
 ----
 
-. The final call shows how to use a cursor and request the total: 
+. The following example shows how to use a cursor and request the total: 
 +
 [source,console]
 ----
@@ -2213,10 +2229,13 @@ Response:
 ----
 {
  "data": [logs],
-                    "cursor": '123_asdfg'
-                    "total": 50000
+ "cursor": '123_asdfg'
+ "total": 50000
 }
 ----
+
+=== Access the API using CURL Commands
+
 
 === Access the API using CURL Commands
 
