@@ -2112,7 +2112,7 @@ When the data set is empty in response, you have reached the end of the query lo
 When you use cursor pagination, `total` is not returned by default, because the query loop is not dependent on the offset or the number of total rows.
 If you want to see the total when you use cursor paging, set the `includeTotal` query parameter to true.
 
-When using `cursorPagination` query param as true, if you send `offset` and `cursor` in the query body, we’ll give preference to cursor and ignore the offset.
+When the `cursorPagination` query parameter is true and you use`offset` and `cursor` in the query body, `cursor` is prioritized, and `offset` is ignored.
 
 
 There is no mapping between `offset` and `cursor` values; And so when you run a query loop over a time window, you cannot switch to the new param somewhere in the middle by using the `cursorPagination` and continue the loop. This is because when using `cursorPagination`, `offset` is ignored and so the loop will be start from the beginning.
