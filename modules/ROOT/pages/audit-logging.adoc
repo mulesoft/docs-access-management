@@ -2106,7 +2106,7 @@ To query audit logs, the current https://anypoint.mulesoft.com/exchange/portals/
 Pagination in that api is via offset in the query payload, and the response returns the total number of records.
 
 
-We are adding a new pagination using cursor and you can initiate query loops by using cursors. This cursor paging can be used by using the `cursorPagination` query parameter and setting it to true.
+The newer version of the API uses pagination with cursors, so you can initiate query loops using cursors. Setting the `cursorPagination` query parameter to true enables you to use cursor paging.
 When using cursor paging, each response will return a cursor. This cursor corresponds to the last data entry in the response data set. So the next request in query loop should include the cursor value that was returned in the previous response, and so on.
 When the data set is empty in response, then you have reached the end of query loop, and there is no more data to query for that time window. So, that is the indicator the stop the query loop. When the data set is empty in the response, there will be no cursor returned.
 Total is not returned by default when using cursor pagination, as the query loop is not dependent on offset and number of total rows.
