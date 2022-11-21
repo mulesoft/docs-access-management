@@ -2109,7 +2109,7 @@ Pagination in that api is via offset in the query payload, and the response retu
 The newer version of the API uses pagination with cursors, so you can initiate query loops using cursors. Setting the `cursorPagination` query parameter to true enables you to use cursor paging.
 When using cursor paging, each response will return a cursor. This cursor corresponds to the last data entry in the response data set. So the next request in query loop should include the cursor value that was returned in the previous response, and so on.
 When the data set is empty in response, you have reached the end of the query loop, and there is no more data to query for that time window. At that point, stop the query loop. When the data set is empty in the response, no cursor is returned.
-Total is not returned by default when using cursor pagination, as the query loop is not dependent on offset and number of total rows.
+When you use cursor pagination, `total` is not returned by default, because the query loop is not dependent on the offset or the number of total rows.
 When using cursor paging, you can opt in to getting total by using the `includeTotal` query parameter and setting it to true.
 
 When using `cursorPagination` query param as true, if you send `offset` and `cursor` in the query body, we’ll give preference to cursor and ignore the offset.
