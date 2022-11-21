@@ -2178,7 +2178,7 @@ Response:
 	}
 ----
 
-. The third call is the final call in a loop. There are no more logs to be returned, and so the response contains no data.  Response doesn't have a cursor too as there are no more logs to be returned.
+. The third call is the final call in a loop. Because there are no more logs to be returned, the response does not have a cursor and contains no data.
 +
 [source,console]
 ----
