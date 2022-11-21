@@ -2110,7 +2110,7 @@ The newer version of the API uses pagination with cursors, so you can initiate q
 When using cursor paging, each response will return a cursor. This cursor corresponds to the last data entry in the response data set. So the next request in query loop should include the cursor value that was returned in the previous response, and so on.
 When the data set is empty in response, you have reached the end of the query loop, and there is no more data to query for that time window. At that point, stop the query loop. When the data set is empty in the response, no cursor is returned.
 When you use cursor pagination, `total` is not returned by default, because the query loop is not dependent on the offset or the number of total rows.
-If you want to see the total when you use cursor paging, set the `includeTotal` query parameter to true.
+If you want to see the total when you use cursor paging, set the `doIncludeTotal` query parameter to true.
 
 When the `cursorPagination` query parameter is true and you use`offset` and `cursor` in the query body, `cursor` is prioritized, and `offset` is ignored.
 
@@ -2209,7 +2209,7 @@ Response:
 +
 [source,console]
 ----
-POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination= true&doIncludeTotal=true
+POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true&doIncludeTotal=true
 ----
 +
 Body: 
