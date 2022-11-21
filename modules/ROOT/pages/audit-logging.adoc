@@ -1997,7 +1997,7 @@ Properties: Application metadata
 
 |===
 
-=== Private Spaces
+=== Private Spaces in CloudHub 2.0
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
