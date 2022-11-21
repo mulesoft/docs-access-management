@@ -2102,7 +2102,7 @@ https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8
 
 === Use a Query Loop to make Requests in Audit Logs
 
-The https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.5/files/fat-raml/zip[latest version of the query API] uses query pagination for efficiency, but you can continue to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23245/[previous version of the query API], which uses offset pagination and returns the total number of records.
+The https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.5/files/fat-raml/zip[latest version of the query API] uses cursor pagination for efficiency, but you can continue to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23245/[previous version of the query API], which uses offset pagination and returns the total number of records.
 
 
 The newer version of the API uses pagination with cursors, so you can initiate query loops using cursors. Setting the `cursorPagination` query parameter to true enables you to use cursor paging.
@@ -2115,6 +2115,8 @@ When the `cursorPagination` query parameter is true and you use`offset` and `cur
 
 
 There is no mapping between `offset` and `cursor` values; And so when you run a query loop over a time window, you cannot switch to the new param somewhere in the middle by using the `cursorPagination` and continue the loop. This is because when using `cursorPagination`, `offset` is ignored and so the loop will be start from the beginning.
+
+This cursor pagination api is not applicable to the csv query, and that continues to use the offset based pagination.
 
 
 The following example shows a series of calls in a query loop for cursor based query.
