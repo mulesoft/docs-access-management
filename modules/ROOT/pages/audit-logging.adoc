@@ -2121,7 +2121,7 @@ There is no mapping between `offset` and `cursor` values; And so when you run a 
 The following example shows a series of calls in a query loop for cursor based query.
 
 
-. The first call does not have a cursor in the body; And it does not request for total. The response returns the data and a: 
+. The first call does not have a cursor in the body and does not request the `total`. The response returns the following data: 
 +
 [source,console]
 ----
