@@ -2251,9 +2251,6 @@ Response:
 
 === Access the API using CURL Commands
 
-
-=== Access the API using CURL Commands
-
 The following are example `curl` commands for accessing the API (Windows users need to download `curl` before using these commands).
 
 Get authorization information:
