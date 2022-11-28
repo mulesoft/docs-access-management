@@ -863,12 +863,26 @@ Properties: None
 |Login
 |Subaction: None +
 Properties: None
+|Login success reauthenticate
+|User
+|UserID
+|N/A
+|Login - Reauthenticate
+|Subaction: Reauthenticate +
+Properties: None
 |Login failure
 |User
 |UserID
 |N/A
 |Login
 |Subaction: Failure +
+Properties: Error message
+|Login failure reauthentication
+|User
+|UserID
+|N/A
+|Login - Reauthentication Failure
+|Subaction: Reauthentication Failure +
 Properties: Error message
 |Logout
 |User
