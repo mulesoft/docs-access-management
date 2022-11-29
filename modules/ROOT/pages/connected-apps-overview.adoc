@@ -30,6 +30,7 @@ There are two types of connected apps supporting different grant types:
 | App that acts on behalf of a user
 | Authorized by a user to act on their behalf
 a|
+|===
 
 * Authorization Code
 * Password
