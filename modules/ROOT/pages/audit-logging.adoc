@@ -2111,12 +2111,12 @@ Properties: Store metadata
 
 You can access the
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API and its
-https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.5/files/fat-raml/zip[RAML].
+https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.9/files/fat-raml/zip[RAML].
 
 [[paginated-logs]]
 === Use a Query Loop to make Requests in Audit Logs
 
-The https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.5/files/fat-raml/zip[latest version of the query API] uses cursor pagination for efficiency, but you can continue to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23245/[previous version of the query API], which uses offset pagination and returns the total number of records.
+The https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.9/files/fat-raml/zip[latest version of the query API] uses cursor pagination for efficiency, but you can continue to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23245/[previous version of the query API], which uses offset pagination and returns the total number of records.
 
 
 The latest version of the API uses pagination with cursors, so you can initiate query loops using cursors. Setting the `cursorPagination` query parameter to `true` enables you to use cursor paging.
@@ -2147,10 +2147,10 @@ Body:
 +
 [source,console]
 ----
-  {
-		"startDate":"2022-09-01T22:14:47.099Z",
-		"endDate":"2022-11-30T23:14:47.099Z",
-	}
+{
+	"startDate":"2022-09-01T22:14:47.099Z",
+	"endDate":"2022-11-30T23:14:47.099Z",
+}
 ----
 +
 Response: 
@@ -2160,7 +2160,7 @@ Response:
 {
    "data": [log entries],
    "cursor": '123_abcd'
- }
+}
 ----
 +
 You can use the cursor from the first call's response in the next call to get the next set of rows.
@@ -2176,21 +2176,21 @@ Body:
 +
 [source,console]
 ----
-	{
-		"startDate":"2022-09-01T22:14:47.099Z",
-		"endDate":"2022-11-30T23:14:47.099Z",
-		"cursor": '123_abcd'
-	}
+{
+	"startDate":"2022-09-01T22:14:47.099Z",
+	"endDate":"2022-11-30T23:14:47.099Z",
+	"cursor": '123_abcd'
+}
 ----
 +
 Response: 
 +
 [source,console]
 ----
-	 {
-		"data": [logs],
-		"cursor": '123_xyz'
-	}
+{
+	"data": [logs],
+	"cursor": '123_xyz'
+}
 ----
 
 . The third call is the final call in a loop. Because there are no more logs to be returned, the response does not have a cursor and contains no data.
@@ -2205,9 +2205,9 @@ Body:
 [source,console]
 ----
 {
-  "startDate":"2022-09-01T22:14:47.099Z",
-  "endDate":"2022-11-30T23:14:47.099Z",
-  "cursor": '123_xyz'
+	"startDate":"2022-09-01T22:14:47.099Z",
+	"endDate":"2022-11-30T23:14:47.099Z",
+	"cursor": '123_xyz'
 }
 ----
 +
@@ -2216,7 +2216,7 @@ Response:
 [source,console]
 ----
 {
- "data": []
+	"data": []
 }
 ----
 
@@ -2232,9 +2232,9 @@ Body:
 [source,console]
 ----
 {
-  "startDate":"2022-09-01T22:14:47.099Z",
-  "endDate":"2022-11-30T23:14:47.099Z",
-  "cursor": '123_abcds'
+	"startDate":"2022-09-01T22:14:47.099Z",
+	"endDate":"2022-11-30T23:14:47.099Z",
+	"cursor": '123_abcds'
 }
 ----
 +
@@ -2243,9 +2243,9 @@ Response:
 [source,console]
 ----
 {
- "data": [logs],
- "cursor": '123_asdfg'
- "total": 50000
+	"data": [logs],
+	"cursor": '123_asdfg'
+	"total": 50000
 }
 ----
 
