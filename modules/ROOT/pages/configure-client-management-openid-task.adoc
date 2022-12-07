@@ -109,7 +109,7 @@ If you configure the optional *Issuer* field while setting up the OIDC Dynamic C
 
 === Update grant types
 
-If the *Issuer* is set and /.well-known url is available, you may go to an existing client provider 
+If the *Issuer* is set and /.well-known url is available, you may go to an existing client provider, save it again and the grant types will be updated based on the 'grant_types_supported' from your /.well-known metadata. /.well-known metadata is being fetched by the system when you create/update a client provider. 
 
 
 === Defaults
