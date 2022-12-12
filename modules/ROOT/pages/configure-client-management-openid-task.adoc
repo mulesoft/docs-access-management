@@ -101,9 +101,18 @@ For Okta, the Okta admin needs to assign the dynamically generated clients to a 
 [NOTE]
 When Anypoint Platform makes an HTTP call to the configured OIDC endpoints, the HTTP call times out if no response after 5 seconds.
 
-== Display Grant Types in the API Portal
+== Supported Grant Types 
 
-If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[this spec] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated prior to merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users. To fetch and validate metadata for an existing client provider, save that client provider again, and the list of supported grant types updates automatically.
+=== Pre-populated Grant Types in API Portal
+
+If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[this spec] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated prior to merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users. 
+
+=== Update Grant Types
+
+If the *Issuer* is set and the `/.well-known` URL is available, you can go to an existing client provider, save it again, and the grant types are updated based on the `grant_types_supported` from your `/.well-known` metadata. The system fetches the `/.well-known` metadata when you create or update a client provider. 
+
+
+=== Default Grant Types
 
 If the *Issuer* field isn't configured or the provider's discovery endpoint is unavailable, by default the Anypoint Platform UI lists the following grant types when registering an API client application in an xref:exchange::index.adoc[Anypoint Exchange API portal]:
 
