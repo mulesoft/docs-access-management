@@ -99,6 +99,7 @@ include::partial$include-nav-organizations.adoc[]
   * *Domain name*: Although multiple organizations can be created by different users using the same company name, each organization must have a unique domain name.
   * *Owner*: The identifier of the organization owner.
   * *Default session timeout*: Set the amount of time (in minutes) a user is inactive before they are automatically logged out of Anypoint Platform. The default is 60 minutes, the minimum is 15 minutes, and the maximum is 180 minutes.
+  * *Confidentiality Notification*: Create a custom popup that appears when users log in to your organization. The character limit is 1000 alphanumeric characters and symbols: `@`, `:`, `?`, `!`, `,`, `.`, `;`, `'`, `_`, and `-`. You can also add line breaks using `\n` and tabs using `\t`. If you leave this field blank, users do not receive a notification at login.
 
 You can also view the organization ID, client ID, and client secret. These values apply to the root organization and grant permissions for all of the business groups contained within.
 
