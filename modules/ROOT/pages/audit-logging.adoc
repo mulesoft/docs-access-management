@@ -1154,6 +1154,115 @@ Environments that are created automatically when you create an organization or b
 
 |===
 
+=== Connected Apps
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Create Connected Application
+| Connected Application
+| clientID
+| N/A
+| Create
+|Subaction:
+None +
+Properties:
+
+* clientName
+* clientID
+* orgID
+* grantTypes
+
+| Edit Connected Application
+| Connected Application
+| clientID
+| N/A
+| Edit
+|Subaction:
+None +
+Properties:
+
+* clientName
+* clientID
+* orgID
+* grantTypes
+
+| Delete Connected Application
+| Connected Application
+| clientID
+| N/A
+| Delete
+|Subaction:
+None +
+Properties:
+
+* clientName
+* clientID
+* orgID
+* grantTypes
+
+| Update Scope Assignments
+| Connected Application
+| clientID
+| N/A
+| Permissions Change
+| Subaction: Add Assignments +
+Properties: Scopes
+
+| Application Authorization Approved
+| External Authorization
+| clientID
+| N/A
+| Approved
+| Subaction: None +
+Properties: None
+
+| Application Authorization Denied
+| External Authorization
+| clientID
+| N/A
+| Denied
+| Subaction: None +
+Properties: None
+
+| Token Retrieval Success
+| Connected Application
+| clientID
+| N/A
+| Login - Token
+| Subaction: Token +
+Properties: None
+
+| Token Retrieval Failed
+| Connected Application
+| clientID
+| N/A
+| Login - Token
+| Subaction: Token +
+Properties: Error Message
+
+| Revoke Access/Refresh Tokens
+| Connected Application
+| clientID
+| N/A
+| Revoke Tokens
+|Subaction:
+None +
+Properties:
+
+* clientName
+* clientID
+* orgID
+* grantTypes
+
+|===
+
 == Anypoint DataGraph
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
