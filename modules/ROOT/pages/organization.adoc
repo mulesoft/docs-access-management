@@ -14,7 +14,7 @@ When you log in to Anypoint Platform, the organization icon and name are display
 
 == Organization Owner
 
-The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a role that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The owner is assigned the Organization Administrator permission by default. If you transfer organization ownership to another user, the previous organization owner retains the Organization Administrator permission unless you revoke it.
+The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a permission that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The owner is assigned the Organization Administrator permission by default. If you transfer organization ownership to another user, the previous organization owner retains the Organization Administrator permission unless you revoke it.
 
 Every business group created within the organization hierarchy thereafter must have an owner assigned. Only users with the Organization Administrator permission can be assigned as owners of business groups. Any organization administrator can assign and change owners of business groups. There cannot be more than one owner at once for a business group. The Organization Administrator permission cannot be removed from organization owners.
 
@@ -25,7 +25,8 @@ An Anypoint Platform user who has the _Organization Administrator_ permission ca
 * Edit and remove users from an organization
 * Assign or change owners of business groups
 * Configure organization settings
-* View a client ID and client secret
+* Create and manage teams
+* View a client ID and client secret for the root organization, business groups, and environments
 * Access analytics for the APIs in your organization
 * Create business groups to delegate management of the resources and define the scopes of roles and permissions
 * Configure additional properties at the business group level.
@@ -99,6 +100,7 @@ include::partial$include-nav-organizations.adoc[]
   * *Domain name*: Although multiple organizations can be created by different users using the same company name, each organization must have a unique domain name.
   * *Owner*: The identifier of the organization owner.
   * *Default session timeout*: Set the amount of time (in minutes) a user is inactive before they are automatically logged out of Anypoint Platform. The default is 60 minutes, the minimum is 15 minutes, and the maximum is 180 minutes.
+  * *Confidentiality Notification*: Create a custom popup that appears when users log in to your organization. The character limit is 1000 alphanumeric characters and symbols: `@`, `:`, `?`, `!`, `,`, `.`, `;`, `'`, `_`, and `-`. You can also add line breaks using `\n` and tabs using `\t`. If you leave this field blank, users do not receive a notification at login.
 
 You can also view the organization ID, client ID, and client secret. These values apply to the root organization and grant permissions for all of the business groups contained within.
 

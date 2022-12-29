@@ -11,13 +11,13 @@ Audit logs have a default retention period of six years. However, users who have
 
 == Access Audit Logging
 
-Users belonging to the Organization Administrator role or the Audit Log Viewer role on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
+Users who have the Organization Administrator permission or the Audit Log Viewer permission on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
 
 The audit log UI is embedded in Access Management.
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-include::partial$include-nav-business-groups.adoc[]
+include::partial$include-nav-audit-logs.adoc[]
 
 The *Audit Logs* page displays the logs. You can:
 
@@ -1154,6 +1154,115 @@ Environments that are created automatically when you create an organization or b
 
 |===
 
+=== Connected Apps
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Create Connected Application
+| Connected Application
+| clientID
+| N/A
+| Create
+|Subaction:
+None +
+Properties:
+
+* clientName
+* clientID
+* orgID
+* grantTypes
+
+| Edit Connected Application
+| Connected Application
+| clientID
+| N/A
+| Edit
+|Subaction:
+None +
+Properties:
+
+* clientName
+* clientID
+* orgID
+* grantTypes
+
+| Delete Connected Application
+| Connected Application
+| clientID
+| N/A
+| Delete
+|Subaction:
+None +
+Properties:
+
+* clientName
+* clientID
+* orgID
+* grantTypes
+
+| Update Scope Assignments
+| Connected Application
+| clientID
+| N/A
+| Permissions Change
+| Subaction: Add Assignments +
+Properties: Scopes
+
+| Application Authorization Approved
+| External Authorization
+| clientID
+| N/A
+| Approved
+| Subaction: None +
+Properties: None
+
+| Application Authorization Denied
+| External Authorization
+| clientID
+| N/A
+| Denied
+| Subaction: None +
+Properties: None
+
+| Token Retrieval Success
+| Connected Application
+| clientID
+| N/A
+| Login - Token
+| Subaction: Token +
+Properties: None
+
+| Token Retrieval Failed
+| Connected Application
+| clientID
+| N/A
+| Login - Token
+| Subaction: Token +
+Properties: Error Message
+
+| Revoke Access/Refresh Tokens
+| Connected Application
+| clientID
+| N/A
+| Revoke Tokens
+|Subaction:
+None +
+Properties:
+
+* clientName
+* clientID
+* orgID
+* grantTypes
+
+|===
+
 == Anypoint DataGraph
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
@@ -2111,7 +2220,145 @@ Properties: Store metadata
 
 You can access the
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API and its
-https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.5/files/fat-raml/zip[RAML].
+https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.9/files/fat-raml/zip[RAML].
+
+[[paginated-logs]]
+=== Use a Query Loop to make Requests in Audit Logs
+
+The https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.9/files/fat-raml/zip[latest version of the query API] uses cursor pagination for efficiency, but you can continue to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23245/[previous version of the query API], which uses offset pagination and returns the total number of records.
+
+
+The latest version of the API uses pagination with cursors, so you can initiate query loops using cursors. Setting the `cursorPagination` query parameter to `true` enables you to use cursor paging.
+When you use cursor pagination, each response returns a cursor. The cursor corresponds to the last data entry in the response data set. The subsequent request in the query loop should use the cursor value that was returned in the previous response, and so on.
+When the data set is empty in response, you have reached the end of the query loop, and there is no more data to query for that time window. At that point, stop the query loop. When the data set is empty in the response, no cursor is returned.
+When you use cursor pagination, `total` is not returned by default, because the query loop is not dependent on the offset or the number of total rows.
+If you want to see the total when you use cursor paging, set the `doIncludeTotal` query parameter to true.
+
+When the `cursorPagination` query parameter is true and you use `offset` and `cursor` in the query body, `cursor` is prioritized, and `offset` is ignored.
+
+
+There is no mapping between `offset` and `cursor` values; And so when you run a query loop over a time window, you cannot switch to the new param somewhere in the middle by using the `cursorPagination` and continue the loop. This is because when using `cursorPagination`, `offset` is ignored and so the loop will be start from the beginning.
+
+The cursor-based pagination API is not applicable to the CSV query. The query continues to use offset-based pagination.
+
+
+The following example shows a series of calls in a query loop for cursor based query.
+
+
+. The first call does not have a cursor in the body and does not request the `total`. The response returns the following data: 
++
+[source,console]
+----
+POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
+----
++
+Body: 
++
+[source,console]
+----
+{
+	"startDate":"2022-09-01T22:14:47.099Z",
+	"endDate":"2022-11-30T23:14:47.099Z",
+}
+----
++
+Response: 
++
+[source,console]
+----
+{
+   "data": [log entries],
+   "cursor": '123_abcd'
+}
+----
++
+You can use the cursor from the first call's response in the next call to get the next set of rows.
+
+. The second call has a specific cursor in the request: 
++
+[source,console]
+----
+POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
+----
++
+Body: 
++
+[source,console]
+----
+{
+	"startDate":"2022-09-01T22:14:47.099Z",
+	"endDate":"2022-11-30T23:14:47.099Z",
+	"cursor": '123_abcd'
+}
+----
++
+Response: 
++
+[source,console]
+----
+{
+	"data": [logs],
+	"cursor": '123_xyz'
+}
+----
+
+. The third call is the final call in a loop. Because there are no more logs to be returned, the response does not have a cursor and contains no data.
++
+[source,console]
+----
+POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
+----
++
+Body: 
++
+[source,console]
+----
+{
+	"startDate":"2022-09-01T22:14:47.099Z",
+	"endDate":"2022-11-30T23:14:47.099Z",
+	"cursor": '123_xyz'
+}
+----
++
+Response: 
++
+[source,console]
+----
+{
+	"data": []
+}
+----
+
+. The following example shows how to use a cursor and request the total: 
++
+[source,console]
+----
+POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true&doIncludeTotal=true
+----
++
+Body: 
++
+[source,console]
+----
+{
+	"startDate":"2022-09-01T22:14:47.099Z",
+	"endDate":"2022-11-30T23:14:47.099Z",
+	"cursor": '123_abcds'
+}
+----
++
+Response: 
++
+[source,console]
+----
+{
+	"data": [logs],
+	"cursor": '123_asdfg'
+	"total": 50000
+}
+----
+
+=== Access the API using CURL Commands
 
 The following are example `curl` commands for accessing the API (Windows users need to download `curl` before using these commands).
 
