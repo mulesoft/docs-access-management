@@ -329,7 +329,7 @@ include::partial$include-nav-roles.adoc[]
 +
 The users who previously had the role are added to the selected team along with the role permissions, and the role is deleted. Any external names formerly associated with the role are associated with the selected team.
 
-== View Limits for an Organization or Business Group
+== View Limits for a Role
 
 Each role has a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform. Note that this feature is available only if you are using the new Access Management user interface.
 
