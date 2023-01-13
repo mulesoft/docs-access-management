@@ -74,7 +74,7 @@ include::partial$include-nav-teams.adoc[]
 . Click the *Limits* tab.
 
 [NOTE]
-The number of permissions granted to a team might include internal permissions granted automatically by the system, which are not always visible in the UI.
+The number of permissions used might include internal permissions granted automatically by the system, which are not always visible in the UI.
 
 For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
 
