@@ -52,7 +52,10 @@ Or:
 
 == Design Center
 
+* Design Center Viewer
+* Design Center Creator
 * Design Center Developer
+
 
 == Exchange
 

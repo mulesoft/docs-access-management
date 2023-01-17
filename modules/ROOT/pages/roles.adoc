@@ -202,7 +202,7 @@ The list of available permissions is different for each application.
 
 === Enable Access to Design Center
 
-After creating a custom role, grant the Design Center Developer permission scope to the custom role to enable access to Design Center.
+After creating a custom role, grant the Design Center Developer, Design Center Viewer, or Design Center Creator permission scope to the custom role to enable access to Design Center.
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
@@ -210,11 +210,8 @@ include::partial$include-nav-roles.adoc[]
 
 . Click the name of the custom role to which to add users.
 . Click *Permissions*, then click *Design Center*.
-+
-image::design-center-permissions.png[Adding permissions to Design Center]
-
-. Click the *Select Access* drop-down, then click the check box next to *Design Center Developer*.
-. Click the *+* icon to add the Design Center Developer permission scope.
+. Click the *Select Access* drop-down, then select the corresponding permission you want to add.
+. Click the *+* icon to add the permission.
 
 
 === Assign API Permissions to a Custom Role
