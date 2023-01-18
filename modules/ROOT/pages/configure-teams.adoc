@@ -9,7 +9,7 @@ You can create _child teams_ under the parent team and configure those teams to 
 After you create child teams and assign permissions, you can add users to each of your teams according to what permissions the users should have.
 Further, you can assign _team maintainers_ who can modify users and permissions within the teams they maintain.
 
-Team maintainers can manage their teams in the following ways: 
+Team maintainers can manage their teams in the following ways:
 
 * Change the team name
 * Add or remove members from the team
@@ -42,7 +42,7 @@ Your new child team appears under its parent team in the list of teams. You can 
 
 == Manage Team Permissions
 
-When you begin using the Teams feature, your organization’s root team is named “Everyone at <Root Organization>” and does not have any permissions assigned. 
+When you begin using the Teams feature, your organization’s root team is named “Everyone at <Root Organization>” and does not have any permissions assigned.
 If you invite users to “Everyone at <Root Organization>” without assigning any permissions to that team, your users cannot execute tasks or view assets in your organization.
 If you have the Organization Administrator permission, you can configure permissions for this team, in addition to those for child teams.
 
@@ -62,6 +62,22 @@ The permissions you selected appear alongside the business groups and environmen
 . Select *Apply permissions*. +
 The permissions you selected now apply to team members and appear in the *Permissions* section for your team.
 
+=== View Team Permissions Limits
+
+Each team, including your root organization's team, has a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform.
+
+To view limits:
+
+include::partial$include-nav-teams.adoc[]
+
+. Click the team for which you want to view limits.
+. Click the *Limits* tab.
+
+[NOTE]
+The number of permissions used might include internal permissions granted automatically by the system, which are not always visible in the UI.
+
+For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
+
 == Manage Team Users
 
 If you have the Organization Administrator permission in your root organization, you can add users to existing teams using three methods:
@@ -78,8 +94,8 @@ include::partial$include-nav-steps-team-maintainer.adoc[]
 . In the *Teams* page, select the team to which you want to add a user.
 . Select *Add members*.
 . Select the name of each user you want to add to the team.
-. Select the membership status that you want to assign to each user: team member or team maintainer. + 
-A user who is added as a team maintainer receives team maintainer permissions as soon as you confirm their membership. 
+. Select the membership status that you want to assign to each user: team member or team maintainer. +
+A user who is added as a team maintainer receives team maintainer permissions as soon as you confirm their membership.
 +
 . Select *Add member*. +
 The user is added to the team and receives the team’s permissions.

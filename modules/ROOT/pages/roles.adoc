@@ -329,6 +329,18 @@ include::partial$include-nav-roles.adoc[]
 +
 The users who previously had the role are added to the selected team along with the role permissions, and the role is deleted. Any external names formerly associated with the role are associated with the selected team.
 
+== View Limits for a Role
+
+Each role has a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform. Note that this feature is available only if you are using the new Access Management user interface.
+
+To view limits:
+
+include::partial$include-nav-roles.adoc[]
+
+. Click the role for which you want to view limits.
+. Click the *Limits* tab.
+
+For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
 
 == See Also
 
