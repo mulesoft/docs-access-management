@@ -52,10 +52,17 @@ Or:
 
 == Design Center
 
+Organization level permissions:
+
 * Design Center Viewer
 * Design Center Creator
 * Design Center Developer
 
+Project level permissions:
+
+* Project Administrator
+* Project Editor
+* Project Viewer
 
 == Exchange
 
