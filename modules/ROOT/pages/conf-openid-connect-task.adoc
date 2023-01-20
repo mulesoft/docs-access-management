@@ -72,6 +72,9 @@ The URL that returns user profile information to Anypoint.
 +
 . Log in through your identity provider to test the configuration.
 
+[NOTE]
+The dynamically registered application at the identity provider has only default settings. If you want to configure additional functionalities (such as group mappings), you must update the settings on the provider side. Configuring dynamically registered applications is not currently supported. 
+
 == Configure OpenID Connect Manually
 
 include::partial$include-nav-steps-org-admin.adoc[]
