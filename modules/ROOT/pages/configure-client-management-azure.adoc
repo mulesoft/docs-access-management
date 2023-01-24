@@ -31,7 +31,7 @@ For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/
 Client secrets updates are not currently supported.
 . Click *Create*.
 
-== Microsoft Identity Platform Support
+== Microsoft Identity Platform (Azure AD) Support
 
 === Access Tokens 
 
@@ -55,7 +55,7 @@ Anypoint Platform does not support custom scopes. Use the default scope for Micr
 
 When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application with Microsoft Azure AD client provider], you can't specify the supported grant types. Because of this limitation on the Microsoft Azure AD side, Anypoint Platform does not support selecting grant types.
 
-For a list of supported grant types, see the https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
+We support 'Authorization Code', 'Client Credentials', etc. For more information on supported grant types, please go to the https://docs.microsoft.com/en-us/azure/active-directory[Microsoft identity platform documentation] and navigate to to Reference/Protocal reference/OAuth2.0 and OpenId Connect/Token grant flows.
 
 == Limitations 
 
