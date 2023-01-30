@@ -209,9 +209,9 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 include::partial$include-nav-roles.adoc[]
 
 . Click the name of the custom role to which to add users.
-. Click *Permissions*, then click *Design Center*.
-. Click the *Select Access* drop-down, then select the corresponding permission you want to add.
-. Click the *+* icon to add the permission.
+. Click *Permissions*, then click *Add permissions*.
+. In the Design Center section, next to each permission you want to grant the user, select the checkbox.
+. Click *Next* and then click *Add permissions* to add the permission.
 
 
 === Assign API Permissions to a Custom Role
