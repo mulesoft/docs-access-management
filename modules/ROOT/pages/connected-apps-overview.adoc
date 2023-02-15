@@ -30,7 +30,7 @@ There are two types of connected apps supporting different grant types:
 | App that acts on behalf of a user
 | Authorized by a user to act on their behalf
 a|
-|===
+
 
 * Authorization Code
 * Password
@@ -41,3 +41,4 @@ a|
 | Acts on its own behalf without impersonating a user. The app can be used only in the organization where it is created.
 | Client Credentials
 | Automation scenarios such as building or accessing CI/CD pipelines without user intervention.
+|===

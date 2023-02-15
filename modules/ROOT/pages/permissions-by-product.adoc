@@ -62,9 +62,9 @@ Or:
 
 Organization level permissions:
 
-* Design Center Viewer
-* Design Center Creator
 * Design Center Developer
+* Design Center Creator
+* Design Center Viewer
 
 Project level permissions:
 
