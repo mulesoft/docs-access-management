@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Platform acts as a client provider by default, but you can also configure external client providers to authorize client applications. As an API owner, you can apply an OAuth 2.0 policy to authorize client applications that try to access your API. You need an OAuth 2.0 provider to use an OAuth 2.0 policy.
+Anypoint Platform acts as a client provider by default, but you can also configure up to 25 external client providers to authorize client applications. As an API owner, you can apply an OAuth 2.0 policy to authorize client applications that try to access your API. You need an OAuth 2.0 provider to use an OAuth 2.0 policy.
 
 You can configure more than one client provider and xref:environments.adoc#add-an-idp-to-an-existing-environment[associate the client providers with different environments].
 If you configure multiple client providers after you have already created environments, you can associate the new client providers with the environment. You should review the existing client configuration before reassigning client providers to avoid any downtime with existing assets or APIs.
