@@ -46,7 +46,9 @@ If you have the Organization Administrator permission over your root organizatio
 
 For an example of a teams structure applied across an organization, see xref:teams-example.adoc[Example Teams Structure].
 
-== Opt in to Teams
+== Migrate to Access Management's Modern UI
+
+If your organization uses the Roles feature (deprecated) as its primary means of managing permissions, your organization uses the legacy UI in Access Management. The following steps enable you to migrate your organization to Access Management's modern UI, which enables you to use the Teams feature to manage permissions:
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
