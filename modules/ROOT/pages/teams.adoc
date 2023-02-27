@@ -49,11 +49,12 @@ For an example of a teams structure applied across an organization, see xref:tea
 [[opt-in-to-teams]]
 == Migrate to Access Management's Modern UI
 
-If your organization uses the Roles feature (deprecated) as its primary means of managing permissions, your organization uses the legacy UI in Access Management. The following steps enable you to migrate your organization to Access Management's modern UI, which enables you to use the Teams feature to manage permissions:
+If your organization uses the Roles feature (deprecated) as its primary means of managing permissions, your organization is using the legacy UI in Access Management. Migrate your organization to Access Management's modern UI, which enables you to use the Teams feature to manage permissions:
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-. In the Access Management navigation menu, click *Try New Features*.
+. In the Access Management navigation menu, click *Try New Features*. +
+If you do not see the *Try New Features* interface, your organization already uses the modern UI.
 . Click *Start Using These Features*. +
 The Access Management navigation menu options change, and you can now use the Teams feature. You can xref:configure-teams.adoc#create-a-child-team[create a team] or xref:roles.adoc#migrate-roles-to-teams[migrate existing roles and permissions to teams].
 
