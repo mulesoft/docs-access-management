@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Platform supports only PingFederate versions 6 through 8.
+Anypoint Platform supports only PingFederate versions 6 through 8. For version 9 and plus, we recommend setting up the Ping Federate client provider as an OIDC provider following xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management]
 
 When you configure client provider URLs, use the endpoint `/pf-ws/rest/oauth/clients` and not `/as/clients.oauth2`. Do not use PingFederate's dynamic client registration URL for this configuration.
 
