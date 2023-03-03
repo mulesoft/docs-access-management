@@ -1240,7 +1240,13 @@ Properties: None
 | N/A
 | Login - Token
 | Subaction: Token +
-Properties: None
+Properties: 
+
+* clientName
+* clientID
+* clientIP
+* orgID
+* grantTypes
 
 | Token Retrieval Failed
 | Connected Application
@@ -1248,7 +1254,11 @@ Properties: None
 | N/A
 | Login - Token
 | Subaction: Token +
-Properties: Error Message
+Properties: 
+
+* clientID
+* clientIP
+* Error Message
 
 | Revoke Access/Refresh Tokens
 | Connected Application
