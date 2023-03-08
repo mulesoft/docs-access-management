@@ -32,11 +32,14 @@ include::partial$include-nav-environments.adoc[]
 . Click *Add Environment*.
 . Enter a name for the environment.
 . Select the environment type.
++
+NOTE: You cannot change the environment type after you create your environment.
+
 . Select at least one xref:managing-api-clients.adoc[client provider] for your environment.
 . Optionally, if you added more than one client provider, click *Set as default* to designate a default client provider. If you do not select a default client provider, the first client provider that you added is the default.
 . Click *Create*.
 
-image::environments-85dc3.png[]
+image::environments-85dc3.png[The Environments interface in Access Management]
 
 [NOTE]
 * Depending on your CloudHub subscription, you might have restrictions on the number and type of environments you can create.

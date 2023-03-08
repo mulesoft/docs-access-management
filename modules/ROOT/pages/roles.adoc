@@ -202,19 +202,16 @@ The list of available permissions is different for each application.
 
 === Enable Access to Design Center
 
-After creating a custom role, grant the Design Center Developer permission scope to the custom role to enable access to Design Center.
+After creating a custom role, grant the Design Center Developer, Design Center Viewer, or Design Center Creator permission scope to the custom role to enable access to Design Center.
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
 . Click the name of the custom role to which to add users.
-. Click *Permissions*, then click *Design Center*.
-+
-image::design-center-permissions.png[Adding permissions to Design Center]
-
-. Click the *Select Access* drop-down, then click the check box next to *Design Center Developer*.
-. Click the *+* icon to add the Design Center Developer permission scope.
+. Click *Permissions*, then click *Add permissions*.
+. In the Design Center section, next to each permission you want to grant the user, select the checkbox.
+. Click *Next* and then click *Add permissions* to add the permission.
 
 
 === Assign API Permissions to a Custom Role
@@ -329,6 +326,18 @@ include::partial$include-nav-roles.adoc[]
 +
 The users who previously had the role are added to the selected team along with the role permissions, and the role is deleted. Any external names formerly associated with the role are associated with the selected team.
 
+== View Limits for a Role
+
+Each role has a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform. Note that this feature is available only if you are using the new Access Management user interface.
+
+To view limits:
+
+include::partial$include-nav-roles.adoc[]
+
+. Click the role for which you want to view limits.
+. Click the *Limits* tab.
+
+For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
 
 == See Also
 

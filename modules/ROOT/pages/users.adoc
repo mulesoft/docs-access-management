@@ -85,6 +85,22 @@ include::partial$include-nav-users.adoc[]
 
 The user now has the permissions you selected in the business groups and environments you specified.
 
+== View Limits for a User
+
+Each administrative page for a user contains a *Limits* section that shows how close the account is to hitting limits imposed by Anypoint Platform.
+
+To view limits:
+
+include::partial$include-nav-users.adoc[]
+
+. Click the user for which you want to view limits.
+. Click the *Limits* tab.
+
+[NOTE]
+The number of permissions used might include internal permissions granted automatically by the system, which are not always visible in the UI.
+
+For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
+
 == Managing Deleted Users
 
 When you delete a user from your root organization, the user is _soft deleted_. This user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs.

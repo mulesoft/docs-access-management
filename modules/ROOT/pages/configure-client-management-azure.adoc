@@ -5,6 +5,8 @@ endif::[]
 
 You can use dynamic client registration to configure Azure Active Directory (Azure AD) client management with Anypoint Platform. Using Azure AD as a client provider enables you to authenticate and authorize API consumers with your existing configurations. Azure AD configuration in Anypoint Platform also provides a stateless microservice to convert OAuth 2.0 client application registration requests to requests supported by Azure AD.
 
+== Configuration Walkthrough
+
 include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-client-providers.adoc[]
@@ -51,11 +53,18 @@ Anypoint Platform does not support custom scopes. Use the default scope for Micr
 
 === Grant Types
 
-When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application] with Microsoft Azure AD client provider, Anypoint Platform doesn't support grant types selection due to Microsoft Azure AD limitations.
+When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application with Microsoft Azure AD client provider], you can't specify the supported grant types. Because of this limitation on the Microsoft Azure AD side, Anypoint Platform does not support selecting grant types.
 
 For a list of supported grant types, see the https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
+
+== Limitations 
+
+=== Microsoft National Clouds
+
+Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet. 
 
 == See Also
 
 * https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID]
 * https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[Microsft identity platform access tokens]
+* https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-national-cloud[Microsoft National Clouds]

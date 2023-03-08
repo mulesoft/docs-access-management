@@ -198,6 +198,20 @@ Users can also be redirected based on their permissions. This occurs when:
 In these cases, a user with the Organization Administrator permission is redirected to the Anypoint Platform landing page.
 Users who do not have the Organization Administrator permission are directed to Anypoint Exchange.
 
+== View Limits for a SAML Identity Provider
+
+Each configured SAML IdP has a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform.
+
+To view limits:
+
+include::partial$include-nav-identity-providers.adoc[]
+
+. Click the SAML IdP for which you want to view limits.
+. Click the *Limits* tab.
+
+For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
+
+
 == See Also
 
 * xref:single-log-out-task.adoc[Configure Single Logout]

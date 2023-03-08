@@ -51,7 +51,7 @@ Name of user with privileges for creating new clients within the target OpenAM s
 * OAuth2 Client Provider
 ** Create URL
 +
-The URL at which the OpenAM client management API resources are served. Normally the endpoint is located at `/frrest/oauth2/client`. Confirm with your OpenAM administrator.
+The URL at which the OpenAM client management API resources are served. Normally the endpoint is located at `/oauth2/client`. Confirm with your OpenAM administrator.
 +
 ** Delete URL
 +
