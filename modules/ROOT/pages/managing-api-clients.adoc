@@ -13,7 +13,7 @@ You can configure the following OAuth providers:
 
 * xref:conf-client-mgmt-openam-task.adoc[OpenAM version: 14]
 * xref:conf-client-mgmt-pf-task.adoc[PingFederate versions: 6 through 8]
-* xref:configure-client-management-openid-task.adoc[Dynamic Client Registration-compliant identity providers]
+* xref:configure-client-management-openid-task.adoc[Dynamic Client Registration-compliant client providers]
  ** xref:configure-client-management-azure.adoc.adoc[Azure Active Directory Client Management]
 
 +
