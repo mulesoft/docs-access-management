@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Platform acts as a client provider by default, but you can also configure external client providers to authorize client applications. As an API owner, you can apply an OAuth 2.0 policy to authorize client applications that try to access your API. You need an OAuth 2.0 provider to use an OAuth 2.0 policy.
+Anypoint Platform acts as a client provider by default, but you can also configure up to 25 external client providers to authorize client applications. As an API owner, you can apply an OAuth 2.0 policy to authorize client applications that try to access your API. You need an OAuth 2.0 provider to use an OAuth 2.0 policy.
 
 You can configure more than one client provider and xref:environments.adoc#add-an-idp-to-an-existing-environment[associate the client providers with different environments].
 If you configure multiple client providers after you have already created environments, you can associate the new client providers with the environment. You should review the existing client configuration before reassigning client providers to avoid any downtime with existing assets or APIs.
@@ -13,7 +13,9 @@ You can configure the following OAuth providers:
 
 * xref:conf-client-mgmt-openam-task.adoc[OpenAM version: 14]
 * xref:conf-client-mgmt-pf-task.adoc[PingFederate versions: 6 through 8]
-* xref:configure-client-management-openid-task.adoc[Dynamic Client Registration-compliant identity providers]
+* xref:configure-client-management-openid-task.adoc[Dynamic Client Registration-compliant client providers]
+ ** xref:configure-client-management-azure.adoc.adoc[Azure Active Directory Client Management]
+
 +
 Dynamic Client Registration-compliant identity providers must conform to the https://openid.net/specs/openid-connect-registration-1_0.html[OpenID Connect Client Registration 1.0 incorporating errata set 1].
 
