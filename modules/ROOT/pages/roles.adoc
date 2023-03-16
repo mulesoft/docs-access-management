@@ -97,8 +97,8 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 * **Exchange Contributors**: This role has the following permission scopes:
 +
 ** Create content
-** Manage own content and versions
-** Manage own reviews, including  the ability to add, edit, and delete
+** Manage own content, including the ability to add a new version and edit your own version content, but you cannot delete your own version.
+** Manage own reviews, including the ability to add, edit, and delete
 
 * **Exchange Viewers**: Enables a user to view and consume Exchange assets. This role has the following permission scopes:
 +
