@@ -1,4 +1,4 @@
-= Anypoint Platform Access FAQs
+= Anypoint Platform Access Management FAQs
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -91,6 +91,30 @@ Talk your account representative, or use https://www.mulesoft.com/contact[the Mu
 === What can I do if my trial is about to expire?
 
 Talk to your account representative or use https://www.mulesoft.com/contact[the MuleSoft contact form] to request an Enterprise license for your on-premises Mule Runtime instances or to create a subscription account on CloudHub.
+
+== External Identity Provider
+
+=== After configuring external identity, can we keep or designate one account as a local account in Anypoint Platform (not using federation)? 
+
+Anypoint Platform supports multiple Identity Providers, including Anypoint itself serving as an identity provider. So users that are created prior to configuring the integration with an exterial identity providers remain as "local" users. 
+
+After exterial identity providers are configured/enabled, root Organization Administrators can enable inviting "local" users by follow the steps:
+ - browse to Access Mangement
+ - Choose the Identity Providers menu item
+ - Choose "Anypoint" from the providers list
+ - Tick "Allow account creation" in "Account Creation"
+
+=== Can a local(non-federated) user have the same username as a federated user?
+
+Once signing in with an external Identity Provicer, a new user will be created in the Anypoint Platform. It can have the same username/email/first name/last name but is different in the system as we assign each user a unique ID in the backend.
+
+=== After an external Identity Provider is configured, when is the federated user created in the Anypoint Platform? 
+
+After a federated user successfully logs in to Anypoint Platform for the first time, Anypoint Platform provisions a new account for the user. 
+
+=== Are roles/perrmissions for federated accounts defined only by mapping SAML 2.0 group attributes to roles in Anypoint Platofrm? Or can an admin user assign additional roles/permissions to a federated user account? 
+
+Organization administrators can map roles to the group attributes in your External Identity Provider and/or organization administrators could go into Access Management and add additional roles/permission/teams.
 
 === Where do I log in with external identity management?
 
