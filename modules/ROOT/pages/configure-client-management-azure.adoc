@@ -63,6 +63,17 @@ For a list of supported grant types, see the https://docs.microsoft.com/en-us/az
 
 Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet. 
 
+== Frequently Asked Questions
+
+
+**1. Is https://docs.mulesoft.com/policies/policies-included-openid-token-enforcement#token-validation-endpoint-authentication[Token Validation] supported when I use Azure AD as a client provider?**
+
+Yes. Although Microsoft Azure AD doesn't have an introspect endpoint out of the box, Anypoint Platform makes its own implementation on token introspection. Note, be sure to follow https://docs.mulesoft.com/access-management/configure-client-management-azure#oauth-2-0-endpoints[Oauth2.0 Endpoints] section to generate supported tokens. 
+
+**2. When attempting to enforce the OIDC policy by invoking an Anypoint API using a valid token obtained from Azure AD, I am getting a "Token has been revoked" error. I have verified the token validity, how can I troubleshoot this?**
+
+Please first refer to OAuth 2.0 Endpoints (https://docs.mulesoft.com/access-management/configure-client-management-azure#oauth-2-0-endpoints) section to confirm that you have obtained the token via the supported approaches. Then, if it still fails the token validation, please contact Engineering team. 
+
 == See Also
 
 * https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID]
