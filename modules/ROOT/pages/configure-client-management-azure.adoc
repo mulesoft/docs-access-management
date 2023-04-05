@@ -63,16 +63,16 @@ For a list of supported grant types, see the https://docs.microsoft.com/en-us/az
 
 Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet. 
 
-== Frequently Asked Questions
 
+== Token Validation
 
-**1. Is https://docs.mulesoft.com/policies/policies-included-openid-token-enforcement#token-validation-endpoint-authentication[Token Validation] supported when I use Azure AD as a client provider?**
+Although Microsoft Azure AD does not provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for token validation] when you use Azure AD as a client provider.
 
-Yes. Although Microsoft Azure AD doesn't have an introspect endpoint out of the box, Anypoint Platform makes its own implementation on token introspection. Note, be sure to follow https://docs.mulesoft.com/access-management/configure-client-management-azure#oauth-2-0-endpoints[Oauth2.0 Endpoints] section to generate supported tokens. 
+To use this policy, follow the documentation on xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[OAuth2.0 Endpoints] to generate supported tokens. 
 
-**2. When attempting to enforce the OIDC policy by invoking an Anypoint API using a valid token obtained from Azure AD, I am getting a "Token has been revoked" error. I have verified the token validity, how can I troubleshoot this?**
+=== Token has been Revoked Error 
 
-Please first refer to OAuth 2.0 Endpoints (https://docs.mulesoft.com/access-management/configure-client-management-azure#oauth-2-0-endpoints) section to confirm that you have obtained the token via the supported approaches. Then, if it still fails the token validation, please contact Engineering team. 
+When you attempt to enforce the OIDC policy by invoking an Anypoint API using a valid token obtained from Azure AD and get a `Token has been revoked` error, refer to the xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[documentation on OAuth 2.0 endpoints] to confirm that you have obtained the token using a supported method. If the token validation still fails, please contact the Engineering team. 
 
 == See Also
 
