@@ -1,6 +1,6 @@
 = Legacy and Modern UI Comparison
 
-Organizations who use the legacy user interface in Access Management can now upgrade to the modern user interface. The modern user interface has feature parity with the legacy UI but provides additional features, better accessibility, and a polished and intuitive interface. 
+Organizations that use the legacy user interface in Access Management can now upgrade to the modern user interface. The modern user interface has feature parity with the legacy UI but provides additional features, better accessibility, and a polished and intuitive interface. 
 
 When you switch to the modern user interface, your organization receives the following benefits:
 
