@@ -1,0 +1,15 @@
+= Legacy and Modern UI Comparison
+
+Organizations who use the legacy user interface in Access Management can now upgrade to the modern user interface. The modern user interface has feature parity with the legacy UI but provides additional features, better accessibility, and a polished and intuitive interface. 
+
+When you switch to the modern user interface, your organization receives the following benefits:
+
+* The Teams feature for robust and scalable permissions management. Your root organization is automatically given an "Everyone at <root organization>" team that enables you to provide a basic set of permissions for all users in your organization.
+* A polished business group interface featuring more details, including a broader look at membership, permissions, environments, and limits. This interface enables you to view and manage access to all of your business groups at once instead of having to switch between each business group.
+* Visual representations of feature consumption for business groups, users, teams, roles, and SAML identity providers
+* Custom confidentiality notifications
+* Configurable audit log retention period
+* Improved audit log query performance
+* Ability to sync your organization with MuleSoft Composer
+
+Using the *Try New Features* button, you can opt in to the modern UI, test it, and switch back to the legacy UI using the *Hide New Features* button. You don't lose data when you switch back and forth, but some features are available only in the modern UI. 
