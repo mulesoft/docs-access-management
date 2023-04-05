@@ -72,7 +72,7 @@ To use this policy, follow the documentation on xref:configure-client-management
 
 === Token has been Revoked Error 
 
-When you attempt to enforce the OIDC policy by invoking an Anypoint API using a valid token obtained from Azure AD and get a `Token has been revoked` error, refer to the xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[documentation on OAuth 2.0 endpoints] to confirm that you have obtained the token using a supported method. If the token validation still fails, please contact the Engineering team. 
+When you attempt to enforce the OIDC policy by invoking an Anypoint API using a valid token obtained from Azure AD and get a `Token has been revoked` error, refer to the xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[documentation on OAuth 2.0 endpoints] to confirm that you have obtained the token using a supported method. If the token validation still fails, contact Support. 
 
 == See Also
 
