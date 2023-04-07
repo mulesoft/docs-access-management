@@ -166,6 +166,15 @@ After support confirms that the migration is done, you can use your account to j
 [NOTE]
 If you have a free trial account and want to migrate your user name to a new organization you need another organization administrator in your current organization to delete your organization owner account from the organization associated with your trial account.
 
+// == Link Anypoint Platform Accounts
+
+include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinkingContextForUsers,leveloffset=+1]
+
+include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinkingForSSOtoLocal,leveloffset=+2]
+
+include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinkingForSSOtoSSO,leveloffset=+2]
+
+include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinkingMultiple,leveloffset=+2]
 
 == Update User Information
 
