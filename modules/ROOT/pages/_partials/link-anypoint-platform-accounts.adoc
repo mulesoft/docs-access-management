@@ -68,7 +68,7 @@ You can now view your linked profiles in the *Identity Providers* section of you
 
 // tag::profileLinkingContextForAdmins[]
 [[enable-profile-linking]]
-= Enabling Users to Link Anypoint Platform profiles
+= Enabling Users to Link Anypoint Platform Profiles
 
 // DO NOT USE THIS SECTION YET - NOT YET SUPPORTED 
 
