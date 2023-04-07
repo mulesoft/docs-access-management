@@ -49,6 +49,7 @@ You can now view your linked profiles in the *Identity Providers* section of you
 // tag::profileLinkingMultiple[]
 [[linking-multiple-profiles]]
 = Linking an existing SSO Profile to Multiple Profiles
+= Linking an existing SSO Profile to Multiple Profiles
 
 When you attempt to login using SSO and there are multiple user profiles that share the same email address but use different identity providers to log in, you are prompted to link the profiles. Note that you cannot link profiles that use the same IdP.
 
