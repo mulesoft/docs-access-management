@@ -31,7 +31,7 @@ You can now view your linked profiles in the *Identity Providers* section of you
 
 // tag::profileLinkingSSOtoSSO[]
 [[sso-to-sso]]
-= Linking an existing SSO profile to Another SSO profile
+= Linking an Existing SSO Profile to Another SSO Profile
 
 When you attempt to log in using SSO and there is another user that shares the same email address but uses a different external identity provider with SSO, you are prompted to link the profiles.
 
