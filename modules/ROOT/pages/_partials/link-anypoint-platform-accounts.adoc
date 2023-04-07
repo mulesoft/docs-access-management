@@ -14,7 +14,7 @@ Anypoint Platform does not support linking multiple profiles that use the same I
 
 // tag::profileLinkingForSSOtoLocal[]
 [[sso-to-local]]
-= Linking an SSO profile to a Local profile
+= Linking an SSO Profile to a Local Profile
 
 When you attempt to log in using SSO and there is another user that shares the same email address but uses Anypoint Platform credentials to log in, you are prompted to link the profiles.
 
