@@ -2397,7 +2397,7 @@ The Audit Log Query endpoint applies rate limits per IP in the three control pla
 [%header,cols="15a,15a"]
 |===
 |Control Plane
-|Allowed Requests per minute per IP
+|Allowed requests per minute per IP
 |US
 |700
 |EU
