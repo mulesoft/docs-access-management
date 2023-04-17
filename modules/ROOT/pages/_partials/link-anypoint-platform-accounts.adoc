@@ -71,17 +71,32 @@ You can now view your linked profiles in the *Identity Providers* section of you
 [[enable-profile-linking]]
 = Enabling Users to Link Anypoint Platform Profiles
 
-// DO NOT USE THIS SECTION YET - NOT YET SUPPORTED 
-
-As an organization administrator, you can require users to link multiple Anypoint Platform profiles that use the same email address to log in. 
+As an organization administrator, you can enable users to link multiple Anypoint Platform profiles that use the same email address to log in. 
 
 Anypoint Platform supports:
 
-* Linking an SSO profile to a local profile (profile managed by Anypoint IdP)
-* Linking an SSO profile to another SSO profile that uses a different IdP
-* Linking an SSO profile to multiple other profiles that use different IdPs
+* Linking an SSO login to a local profile by using credentials (login managed by Anypoint IdP)
+* Linking an SSO login to another SSO profile that uses a different IdP
+* Linking an SSO login to multiple other profiles that use different IdPs
 
-Anypoint Platform does not support linking multiple profiles that use the same IdP.
+Anypoint Platform does not support linking multiple profiles that use the same IdP. Note that only OpenID Connect (OIDC) IdPs are supported.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-identity-providers.adoc[]
+
+. In the *Link Multiple Accounts* section, click *Enabled*. 
+. Click *Save Changes*. 
++
+Users in your organization can now link their SSO logins with other IdP profiles that share the same email address.
+
+// end::profileLinkingContextForAdmins[]
+
+// tag::requireProfileLinkingForAdmins[]
+
+// DO NOT USE THIS SECTION YET - NOT YET SUPPORTED 
+
+If your organization has xref:external-identity-index.adoc#enable-profile-linking[enabled the *Link Multiple Accounts* setting], organization administrators can require all users to link available Anypoint Platform profiles.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -91,5 +106,4 @@ include::partial$include-nav-identity-providers.adoc[]
 +
 Users can no longer skip the prompt to link their user profiles when logging in to Anypoint Platform.
 
-// end::profileLinkingContextForAdmins[]
-
+// end::requireProfileLinkingForAdmins[]
