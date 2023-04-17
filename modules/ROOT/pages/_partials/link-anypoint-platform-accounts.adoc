@@ -94,6 +94,7 @@ Users in your organization can now link their SSO logins with other IdP profiles
 
 // tag::requireProfileLinkingForAdmins[]
 
+= Require Users to Link Anypoint Platform Profiles
 // DO NOT USE THIS SECTION YET - NOT YET SUPPORTED 
 
 If your organization has xref:external-identity-index.adoc#enable-profile-linking[enabled the *Link Multiple Accounts* setting], organization administrators can require all users to link available Anypoint Platform profiles.
