@@ -2392,7 +2392,7 @@ curl 'https://anypoint.mulesoft.com/audit/v2/organizations/<organization_id>/que
 
 === Rate Limit Policy for Audit Log Query Endpoint
 
-The Audit Log Query Endpoint applies rate limits per IP in the three control planes: US, EU, and Gov. The following table outlines the rate limits for each control plane:
+The Audit Log Query endpoint applies rate limits per IP in the three control planes: US, EU, and gov. The following table outlines the rate limits for each control plane:
 
 [%header,cols="15a,15a"]
 |===
