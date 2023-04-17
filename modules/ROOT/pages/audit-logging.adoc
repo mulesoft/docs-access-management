@@ -2390,6 +2390,27 @@ Get actions by date range:
 curl 'https://anypoint.mulesoft.com/audit/v2/organizations/<organization_id>/query?include_internal=false' -H 'Authorization: bearer <bearer_value>' -H 'Content-Type: application/json;charset=UTF-8' -H 'Accept: application/json, text/plain, */*' --data-binary '{"startDate":"2017-03-08T20:16:41.250Z","endDate":"2017-03-08T21:16:41.250Z","platforms":[],"objectTypes":[],"actions":[],"objectIds":[],"userIds":[],"ascending":false,"organizationId":"<organization_id>","offset":0,"limit":25}' --compressed ;
 ----
 
+=== Rate Limit Policy for Audit Log Query Endpoint
+
+The Audit Log Query Endpoint applies rate limits per IP in the three control planes: US, EU, and Gov. The following table outlines the rate limits for each control plane:
+
+[%header,cols="15a,15a"]
+|===
+|Control Plane
+|Allowed Requests per minute per IP
+|US
+|700
+|EU
+|40
+|Gov
+|40
+|===
+
+
+If a client exceeds the rate limit for a given control plane, the Audit Log Query Endpoint will return a `503 Service Unavailable` status code until the minute expires. During this time, the service will not be available to the client.
+
+We recommend that users of the Audit Log Query Endpoint monitor their request rates and adjust their usage accordingly to avoid exceeding the rate limit. Note that exceeding the rate limit may result in the endpoint being temporarily unavailable.
+
 
 == See Also
 
