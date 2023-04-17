@@ -2,21 +2,21 @@
 [[profile-linking-context-users]]
 = Linking Your Anypoint Platform Profiles
 
-When you log in to an Anypoint Platform using an email address that is associated with more than one profile in the same organization, you are prompted to link your profiles together. Your options for linking profiles vary based on whether the profiles use the Anypoint identity provider (IdP) or an external IdP that uses single sign-on (SSO). Anypoint Platform supports:
+When you log in to Anypoint Platform for the first time using an external identity provider (IdP), Anypoint Platform locates potential user accounts matched by your email address that is associated with the IdP profile. You are prompted to link your IdP profile with the existing accounts. Your options for linking profiles vary based on whether the profiles use the Anypoint identity provider (IdP) or an external IdP that uses single sign-on (SSO). Anypoint Platform supports:
 
-* Linking an SSO profile to a local profile (login managed by Anypoint IdP)
-* Linking an SSO profile to another SSO profile that uses a different IdP to log in
-* Linking an SSO profile to multiple other profiles that each use different IdPs to log in
+* Linking an SSO login to a local profile by using credentials (login managed by Anypoint IdP)
+* Linking an SSO login to another SSO login that uses a different IdP to log in
+* Linking an SSO login to multiple other profiles that each use different IdPs to log in
 
-Anypoint Platform does not support linking multiple profiles that use the same IdP. You can link up to 25 user profiles.
+Anypoint Platform does not support linking multiple profiles that use the same IdP. The IdP must be an OpenID Connect (OIDC) provider. You can link up to 25 user profiles. This feature is available only if an organization administrator has enabled it.
 
 // end::profileLinkingContextForUsers[]
 
 // tag::profileLinkingForSSOtoLocal[]
 [[sso-to-local]]
-= Linking an SSO Profile to a Local Profile
+= Linking an SSO Login to a Local Profile
 
-When you attempt to log in using SSO and there is another user that shares the same email address but uses Anypoint Platform credentials to log in, you are prompted to link the profiles.
+When you attempt to log in using SSO and there is another user profile that shares the same email address but uses Anypoint Platform credentials to log in, you are prompted to link the profiles.
 
 . In the Anypoint Platform login page, click *Sign in with <your identity provider>*.
 . If prompted, enter your credentials for your IdP. +
@@ -31,7 +31,7 @@ You can now view your linked profiles in the *Identity Providers* section of you
 
 // tag::profileLinkingSSOtoSSO[]
 [[sso-to-sso]]
-= Linking an Existing SSO Profile to Another SSO Profile
+= Linking an Existing SSO Login to Another SSO Login
 
 When you attempt to log in using SSO and there is another user that shares the same email address but uses a different external identity provider with SSO, you are prompted to link the profiles.
 
@@ -48,7 +48,7 @@ You can now view your linked profiles in the *Identity Providers* section of you
 
 // tag::profileLinkingMultiple[]
 [[linking-multiple-profiles]]
-= Linking an existing SSO Profile to Multiple Profiles
+= Linking an existing SSO Login to Multiple Profiles
 
 When you attempt to login using SSO and there are multiple user profiles that share the same email address but use different identity providers to log in, you are prompted to link the profiles. Note that you cannot link profiles that use the same IdP.
 
