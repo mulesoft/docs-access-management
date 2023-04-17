@@ -67,3 +67,4 @@ include::partial$include-nav-identity-providers.adoc[]
 . Enter the name of your identity provider.
 . Click *Delete*.
 
+include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinkingContextForAdmins,leveloffset=+1]
