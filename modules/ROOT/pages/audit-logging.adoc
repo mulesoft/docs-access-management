@@ -2407,7 +2407,7 @@ The Audit Log Query endpoint applies rate limits per IP in the three control pla
 |===
 
 
-If a client exceeds the rate limit for a given control plane, the Audit Log Query Endpoint will return a `503 Service Unavailable` status code until the minute expires. During this time, the service will not be available to the client.
+If a client exceeds the rate limit for a given control plane, the Audit Log Query endpoint returns a `503 Service Unavailable` status code until the minute expires. During this time, the service is unavailable to the client.
 
 We recommend that users of the Audit Log Query Endpoint monitor their request rates and adjust their usage accordingly to avoid exceeding the rate limit. Note that exceeding the rate limit may result in the endpoint being temporarily unavailable.
 
