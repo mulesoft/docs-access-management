@@ -20,7 +20,7 @@ When you attempt to log in using SSO and there is another user profile that shar
 
 . In the Anypoint Platform login page, click *Sign in with <your identity provider>*.
 . If prompted, enter your credentials for your IdP. +
-If your SSO credentials share an email address with a profile that is managed by the Anypoint IdP, you are prompted to log in. If you are not prompted, your local profile uses a different email address than your SSO login.
+If your SSO credentials share an email address with a profile that is managed by the Anypoint IdP, you are prompted to log in.
 +
 . In the *Link your Account* page, enter your credentials for your local Anypoint Platform profile.
 . Click *Link Accounts*.
