@@ -25,7 +25,7 @@ If your SSO credentials share an email address with a profile that is managed by
 . In the *Link your Account* page, enter your credentials for your local Anypoint Platform profile.
 . Click *Link Accounts*.
 +
-You can now view your linked profiles in the *Identity Providers* section of your user profile.
+You can now view your linked profile in the *Logged in via* section of your user profile.
 
 // end::profileLinkingForSSOtoLocal[]
 
