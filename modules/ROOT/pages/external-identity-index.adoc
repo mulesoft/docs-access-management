@@ -68,3 +68,5 @@ include::partial$include-nav-identity-providers.adoc[]
 . Click *Delete*.
 
 include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinkingContextForAdmins,leveloffset=+1]
+
+include::partial$link-anypoint-platform-accounts.adoc[tag=deleteLinkedProfilesAdmin,leveloffset=+1]
