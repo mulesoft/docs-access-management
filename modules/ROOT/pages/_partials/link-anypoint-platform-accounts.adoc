@@ -50,7 +50,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-identity-providers.adoc[]
 
-. In the *Link Multiple Accounts* section, click *Enabled*. 
+. In the *Link Multiple SSO Profiles* section, click *Enabled*. 
 . Click *Save Changes*. 
 +
 Users in your organization can now link their SSO logins with other IdP profiles that share the same email address.
@@ -70,13 +70,13 @@ Organization administrators can remove a linked profile from a user account by m
 = Require Users to Link Anypoint Platform Profiles
 // DO NOT USE THIS SECTION YET - NOT YET SUPPORTED 
 
-If your organization has xref:external-identity-index.adoc#enable-profile-linking[enabled the *Link Multiple Accounts* setting], organization administrators can require all users to link available Anypoint Platform profiles.
+If your organization has xref:external-identity-index.adoc#enable-profile-linking[enabled the *Link Multiple SSO Profiles* setting], organization administrators can require all users to link available Anypoint Platform profiles.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-identity-providers.adoc[]
 
-. In the *Link Multiple Accounts* section, click *Required* so that users must link their user profiles when logging in to Anypoint Platform. 
+. In the *Link Multiple SSO Profiles* section, click *Required* so that users must link their user profiles when logging in to Anypoint Platform. 
 
 
 // end::requireProfileLinkingForAdmins[]
