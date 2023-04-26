@@ -1240,7 +1240,7 @@ Properties: None
 | N/A
 | Login - Token
 | Subaction: Token +
-Properties: 
+Properties:
 
 * clientName
 * clientID
@@ -1254,7 +1254,7 @@ Properties:
 | N/A
 | Login - Token
 | Subaction: Token +
-Properties: 
+Properties:
 
 * clientID
 * clientIP
@@ -1274,6 +1274,142 @@ Properties:
 * clientIP
 * orgID
 * grantTypes
+
+|===
+
+=== Teams
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Create Team
+| Team
+| Team Name
+| N/A
+| Create
+| Subaction:
+None +
+Properties:
+
+* org_id
+* team_id
+* team_name
+* team_type
+* created_at
+* updated_at
+* ancestor_team_ids
+
+| Update Team
+| Team
+| Team Name
+| N/A
+| Update
+| Subaction:
+None +
+Properties:
+
+* org_id
+* team_id
+* team_type
+* ancestor_team_ids
+
+| Move Team
+| Team
+| Team Name
+| N/A
+| Move
+| Subaction:
+None +
+Properties:
+
+* org_id
+* team_id
+* team_type
+* ancestor_team_ids
+* previous_ancestor_team_ids
+
+| Add Members
+| Team
+| Team Name
+| N/A
+| Edit
+| Subaction:
+Add Members +
+Properties:
+
+* array of:
+** id (Member/Maintainer ID)
+** membership_type
+
+| Remove Members
+| Team
+| Team Name
+| N/A
+| Edit
+| Subaction:
+Remove Members +
+Properties:
+
+* Removed Member ID
+
+| Add Permissions
+| Team
+| Team Name
+| N/A
+| Permissions change
+| Subaction:
+Add permissions +
+Properties:
+
+* name (Permission Name)
+* role_id (Permission ID)
+* context_params)
+
+| Remove Permissions
+| Team
+| Team Name
+| N/A
+| Permissions change
+| Subaction:
+Remove permissions +
+Properties:
+
+* name (Permission Name)
+* role_id (Permission ID)
+* context_params)
+
+| Edit External Group Mappings
+| Team
+| Team Name
+| N/A
+| Edit
+| Subaction:
+Edit external group mapping +
+Properties:
+
+* data:
+** provider_id
+** membership_type
+** external_group_name
+* total
+
+| Delete Team
+| Team
+| Team Name
+| N/A
+| Delete
+| Subaction: None +
+Properties:
+
+* org_id
+* team_id
+* ancestor_team_ids
 
 |===
 
@@ -2259,14 +2395,14 @@ The cursor-based pagination API is not applicable to the CSV query. The query co
 The following example shows a series of calls in a query loop for cursor based query.
 
 
-. The first call does not have a cursor in the body and does not request the `total`. The response returns the following data: 
+. The first call does not have a cursor in the body and does not request the `total`. The response returns the following data:
 +
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
 ----
 +
-Body: 
+Body:
 +
 [source,console]
 ----
@@ -2276,7 +2412,7 @@ Body:
 }
 ----
 +
-Response: 
+Response:
 +
 [source,console]
 ----
@@ -2288,14 +2424,14 @@ Response:
 +
 You can use the cursor from the first call's response in the next call to get the next set of rows.
 
-. The second call has a specific cursor in the request: 
+. The second call has a specific cursor in the request:
 +
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
 ----
 +
-Body: 
+Body:
 +
 [source,console]
 ----
@@ -2306,7 +2442,7 @@ Body:
 }
 ----
 +
-Response: 
+Response:
 +
 [source,console]
 ----
@@ -2323,7 +2459,7 @@ Response:
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
 ----
 +
-Body: 
+Body:
 +
 [source,console]
 ----
@@ -2334,7 +2470,7 @@ Body:
 }
 ----
 +
-Response: 
+Response:
 +
 [source,console]
 ----
@@ -2343,14 +2479,14 @@ Response:
 }
 ----
 
-. The following example shows how to use a cursor and request the total: 
+. The following example shows how to use a cursor and request the total:
 +
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true&doIncludeTotal=true
 ----
 +
-Body: 
+Body:
 +
 [source,console]
 ----
@@ -2361,7 +2497,7 @@ Body:
 }
 ----
 +
-Response: 
+Response:
 +
 [source,console]
 ----
