@@ -1413,7 +1413,7 @@ Properties:
 
 |===
 
-=== Teams
+=== User IdP Profiles
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
