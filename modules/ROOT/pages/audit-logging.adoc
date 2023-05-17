@@ -1413,6 +1413,33 @@ Properties:
 
 |===
 
+=== User IdP Profiles
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Create User IdP Profile
+| User IdP Profile
+| N/A
+| N/A
+| Create
+| Subaction:
+None +
+Properties:
+
+* userId
+* idpUserId
+* providerId
+* loginProfileData
+
+|===
+
 == Anypoint DataGraph
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
