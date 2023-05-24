@@ -686,6 +686,7 @@ None +
 Properties:
 
 * orgID
+* projectID
 * userID
 * branchName
 
@@ -699,8 +700,9 @@ None +
 Properties:
 
 * orgID
+* projectID
 * userID
-* projectName
+* projectID
 
 |Sync with Github
 |Project
@@ -712,6 +714,7 @@ None +
 Properties:
 
 * orgID
+* projectID
 * userID
 * repositoryName
 
@@ -725,7 +728,9 @@ None +
 Properties:
 
 * orgID
+* projectID
 * userID
+* projectID
 
 |Modify organization settings
 |Project
@@ -737,7 +742,9 @@ None +
 Properties:
 
 * orgID
+* projectID
 * userID
+* projectID
 
 |Rename branch
 |Project
@@ -749,6 +756,7 @@ None +
 Properties:
 
 * orgID
+* projectID
 * userID
 * branchName
 
@@ -762,6 +770,7 @@ None +
 Properties:
 
 * orgID
+* projectID
 * userID
 * projectID
 |===
