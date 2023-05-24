@@ -702,19 +702,6 @@ Properties:
 * userID
 * projectName
 
-|Revert commit
-|Project
-|Project ID
-|N/A
-|Revert commit
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* commitID
-
 |Sync with Github
 |Project
 |Project ID
