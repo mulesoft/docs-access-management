@@ -675,6 +675,104 @@ Properties:
 * orgID
 * userID
 * branchName
+
+|Merge Branch
+|Project
+|Project ID
+|N/A
+|Merge Branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* branchName
+
+|Share project
+|Project
+|Project ID
+|N/A
+|Share project
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+
+|Sync with Github
+|Project
+|Project ID
+|N/A
+|Sync with Github
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* repositoryName
+
+|Unsync with Github
+|Project
+|Project ID
+|N/A
+|Unsync with Github
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+
+|Modify organization settings
+|Project
+|Organization ID
+|N/A
+|Modify organization settings
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+
+|Rename branch
+|Project
+|Project ID
+|N/A
+|Rename branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* branchName
+
+|Modify project settings
+|Project
+|Project ID
+|N/A
+|Modify project settings
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
 |===
 
 === Mocking Service
