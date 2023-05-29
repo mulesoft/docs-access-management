@@ -103,7 +103,9 @@ For more information on limits in Access Management, see xref:troubleshooting-an
 
 == Managing Deleted Users
 
-When you delete a user from your root organization, the user is _soft deleted_. This user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs.
+When you delete a user from your root organization, the user is _soft deleted_. This user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs. 
+
+Deleting a user does not affect the assets created by that user. For instance, deleting a user who has created an API in Exchange, an API in API Manager, or an application in Runtime Manager does not have any impact on the assets they created.
 
 If an Anypoint Platform user that was removed from an organization tries to log in to their former organization, the login request fails, with a `Your credentials are not valid` error message.
 
