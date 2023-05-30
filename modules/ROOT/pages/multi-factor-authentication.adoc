@@ -4,51 +4,55 @@ include::_attributes.adoc[]
 endif::[]
 
 Multi-factor authentication (MFA) provides an additional layer of verification for Anypoint Platform users.
-By default, MFA is required for all user accounts except accounts that use single sign-on (SSO).
-However, as an organization administrator, you can exempt specific user accounts from the multi-factor authentication requirement in order to allow existing integrations to continue operating without interruption.
-SSO users should configure multi-factor authentication through their identity provider.
+MuleSoft requires MFA when users access Anypoint Platform, either directly with their Anypoint credentials or via single sign-on (SSO).
+MFA is enabled for direct logins and can’t be turned off at the organization level. However, there are a few service account types that don’t require MFA. An organization administrator should waive MFA for these accounts to allow existing integrations to continue without interruption.
+For SSO users, set up MFA through the identity provider.
 
-Users must verify their Anypoint Platform credentials using at least one of four verification methods:
+When a user logs in with their Anypoint credentials, they must enter their password and then verify their identity with one of these verification methods:
 
 * Third-party TOTP authenticator apps
 * Built-in authenticator
 * Security key
 * Salesforce Authenticator
 
-== Multi-factor Authentication Requirements for Salesforce and MuleSoft Products
+== Multi-Factor Authentication Requirements for Salesforce and MuleSoft Products
 
-* Beginning February 1, 2022, MFA must be enabled for all of your Salesforce users. To learn more about this requirement, see the https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce Multi-Factor Authentication FAQ]
-* Beginning October 29, 2022, all non-SSO accounts that do not have MFA configured or are not on your organization's xref:multi-factor-authentication.adoc#exempt-mfa-users[exemption list] are prompted to configure MFA when they log in to Anypoint Platform.
+* Effective February 1, 2022, MFA must be enabled for all of your Anypoint Platform users. To learn more about this contractual requirement, see the https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce Multi-Factor Authentication FAQ]
+* As of October 29, 2022, all non-SSO accounts that do not have MFA configured are prompted to register for an MFA verification method and use that method each time they log in to Anypoint Platform.
 
 == Multi-Factor Authentication Verification Methods
 
 You can configure at least one of the following verification methods to comply with multi-factor authentication requirements:
 
-Third-party TOTP authenticator app:: Registers an authenticator app to create verification codes that you provide when logging in to Anypoint Platform.
+Third-party TOTP authenticator app:: Registers an authenticator app to create verification codes that you provide when you log in to Anypoint Platform.
 
-Built-in authenticator:: Registers a physical authentication device, such as Touch ID or Windows Hello, to verify your identity when logging in to Anypoint Platform.
+Built-in authenticator:: Registers a physical authentication device, such as Touch ID or Windows Hello, to verify your identity when you log in to Anypoint Platform.
 
-Security key:: Registers a USB security key, such as Yubico YubiKey or Google Titan Security Key, to your account. The device is then authorized to create verification codes that you provide when logging in to Anypoint Platform.
+Security key:: Registers a security key, such as Yubico YubiKey or Google Titan Security Key, to your account. Connect the security key to your computer to verify your identity when you log in to Anypoint Platform.
 
-Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to create verification codes that you provide when logging in to Anypoint Platform.
+Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to send you push notifications verifying your identity when you log in to Anypoint Platform.
 
 [[exempt-mfa-users]]
-== Exempt Users from Multi-factor Authentication
+== Exclude Exempt Accounts from Multi-Factor Authentication
 
-To prevent service disruptions, identify any accounts (_service accounts_) that are used to programmatically call Anypoint Platform.
-However, it is best to use the xref:connected-apps-overview.adoc[Connected Apps] feature to authorize apps to make programmatic calls to Anypoint Platform instead of using service accounts.
-Using the Connected Apps feature provides more security and control than using user accounts.
+These types of service accounts are exempt from the requirement to use MFA:
 
-To exempt individual accounts from multi-factor authentication:
+* Test automation tools, such as Selenium, Cucumber, or Appium
+* Robotic Process Automation (RPA) systems, such as Automation Anywhere
+
+[IMPORTANT]
+MuleSoft requires customers to use xref:connected-apps-org-admin.adoc[internal connected apps] instead of service accounts that make programmatic calls to Anypoint Platform. Connected apps provide more security and control than service accounts. If you’re having trouble switching to connected apps, reach out to Mulesoft for help. In the meantime, if you’re in this situation, you can temporarily waive MFA for your existing service accounts until they’re transitioned to connected apps.
+
+To prevent service disruptions, waive MFA for valid MFA-exempt accounts in your organization. Note that after August 1, 2023, waiving MFA for user accounts isn’t permitted.
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
 include::partial$include-nav-mfa.adoc[]
 
-. In the *Exempt Accounts* section, add the accounts that you want to exempt. +
-Only users who do not use single sign-on (SSO) appear in this list.
+. In the *Exempt Accounts* section, add the accounts that are valid to exclude from MFA. +
+Only accounts that do not use single sign-on (SSO) appear in this list.
 . Click *Save*. +
-The exempt user accounts appear in the *Exempt Accounts* section.
+The exempt accounts appear in the *Exempt Accounts* section.
 
 You can later remove user accounts from the *Exempt Accounts* list by clicking *X* next to their account names.
 
