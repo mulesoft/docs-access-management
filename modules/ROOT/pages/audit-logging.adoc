@@ -2426,6 +2426,16 @@ Properties: Transit gateway metadata
 |Create/Modify/Delete
 |Subaction: None +
 Properties:  None
+|Create/Modify/Delete routes
+|Private Space
+|PrivateSpaceID
+|N/A
+|Create/Modify/Delete
+|Subaction: None +
+Properties:
+
+* Target
+* Route object
 
 |===
 
