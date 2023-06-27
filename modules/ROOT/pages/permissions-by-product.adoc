@@ -5,7 +5,7 @@ endif::[]
 
 The following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to xref:roles.adoc#create-custom-roles[create custom roles].
 
-== General Permissions
+== Access Management
 
 Organization Administrator:: At the root organization level, grants a user most permissions available in Anypoint Platform, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions. The Organization Administrator permission also grants access to the Organization Administration page, where the user can add and manage users and permissions, view and edit organization details, access API Manager > Client Applications, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. This permission enables a user to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. +
 For security reasons, MuleSoft recommends distributing this permission to as few users as possible.
@@ -15,6 +15,14 @@ Audit Log Config Manager:: Enables a user to configure the retention period for 
 Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
 Usage Viewer:: Enables a user to view usage reports.
+
+== API Catalog
+
+* API Catalog Contributor
+
+== API Governance
+
+* Governance Administrator
 
 == API Manager
 
@@ -40,7 +48,17 @@ include::partial$include-permissions-api-manager-pre-crowd.adoc[]
 
 == Design Center
 
+Organization level permissions:
+
 * Design Center Developer
+* Design Center Creator
+* Design Center Viewer
+
+Project level permissions:
+
+* Project Administrator
+* Project Editor
+* Project Viewer
 
 == Exchange
 

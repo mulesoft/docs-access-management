@@ -51,7 +51,7 @@ For more information, see the documentation for your identity provider.
 
 == Managing Users with an External Identity Provider
 
-After configuring external identity management, you must add new SSO users using your external identity management solution and internal provisioning process. If you use the Invite User feature to add users to your organization after you have configured an identity provider, the credentials for these users are stored locally in your organization rather than with the identity provider.
+After configuring external identity management, you must add new SSO users using your external identity management solution and internal provisioning process. If you use the Invite User feature to add users to your organization after you have configured an external identity provider, the credentials for these users are stored in your organization using the Anypoint identity provider rather than with the external identity provider.
 
 Users that log in with SSO are new users to the system. If the new user has the same username as a user that already exists in your Anypoint Platform organization, the new user co-exists with the original user with the same username. Users with the same username are managed independently from one another.
 

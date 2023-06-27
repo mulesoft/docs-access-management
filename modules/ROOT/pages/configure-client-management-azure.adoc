@@ -61,7 +61,18 @@ For a list of supported grant types, see the https://docs.microsoft.com/en-us/az
 
 === Microsoft National Clouds
 
-Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as  Azure Goverment or Azure China 21Vianet. 
+Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet. 
+
+
+== Token Validation
+
+Although Microsoft Azure AD does not provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for token validation] when you use Azure AD as a client provider.
+
+To use this policy, follow the documentation on xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[OAuth2.0 Endpoints] to generate supported tokens. 
+
+=== Token has been Revoked Error 
+
+When you attempt to enforce the OIDC policy by invoking an Anypoint API using a valid token obtained from Azure AD and get a `Token has been revoked` error, refer to the xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[documentation on OAuth 2.0 endpoints] to confirm that you have obtained the token using a supported method. If the token validation still fails, contact Support. 
 
 == See Also
 
