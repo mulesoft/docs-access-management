@@ -38,7 +38,7 @@ API Catalog Contributor:: Enables a user to catalog assets and other resources u
 
 API Experience Hub Admin:: Enables a user to view, create, modify, and delete content in API Experience Hub.
 
-API Experience Hub Community User::  Enables a user to view but not modify content in API Experience Hub.
+API Experience Hub Community User:: Enables a user to view but not modify content in API Experience Hub.
 
 == API Governance
 
@@ -91,6 +91,12 @@ Consume:: Enables a user to view and explore the unified schema, request access 
 Operate:: Enables a user to view customer-facing logs and set a dedicated load balancer URL for Anypoint Datagraph.
 
 DataGraph Admin:: Enables a user to contribute, consume, and operate the unified schema and view usage metrics.
+
+DataGraph Project - Contributor:: Enables a user to add source APIs to the unified schema, edit any source API schema added to the unified schema, request access to run queries, promote API schemas to an environment, view query traces in real time while running queries from the UI, and download a copy of the unified schema from the query editor in a specific project.
+
+DataGraph Project - Operator:: Enables a user to view customer-facing logs and set a dedicated load balancer URL for Anypoint Datagraph in a specific project.
+
+DataGraph Project - Admin::  Enables a user to contribute, consume, and operate the unified schema and view usage metrics in a specific project.
 
 == Design Center
 
