@@ -48,28 +48,17 @@ Governance Administrator:: Enables a user to manage profiles and view reports.
 
 Depending on your organization, you might see one of the following sets of permissions available for API Manager.
 
-API Manager Environment Administrator
-API Group Administrator
-Deploy API Proxies
-Manage API Alerts
-Manage APIs Configuration
-Manage Contracts
-Manage Policies
-View API Alerts
-View APIs Configuration
-View Contracts
-View Policies
+include::partial$include-permissions-api-manager-post-crowd.adoc[]
 
 Or:
 
-API Creator
-API Versions Owner
-Portals Viewer
+include::partial$include-permissions-api-manager-pre-crowd.adoc[]
 
 ////
+
 == Composer
 
-Unlisted for now, but they need to beef these up before they can be posted.
+Unlisted for now but will need to be cleaned up
 
 Composer User:: ?
 
