@@ -163,25 +163,45 @@ View Transactions
 
 == Runtime Manager
 
-Cloudhub Network Administrator
-Cloudhub Network Viewer
-Delete Applications
-Download Applications
-Manage Alerts
-Manage Application Data
-Manage Queues
-Manage Runtime Fabrics
-Manage Runtime Fabric
-Manage Schedules
-Manage Settings
-Manage Tenants
-Read Alerts
-Read Applications
-Read Runtime Fabric
-Manage Servers
-Read Servers
-Manage Application Flows
-Create Applications
+CloudHub Network Administrator:: Enables a user to manage CloudHub network resources.
+
+CloudHub Network Viewer:: Enables a user to view CloudHub network resources.
+
+Delete Applications:: Enables a user to delete applications in a specific environment.
+
+Download Applications:: Enables a user to download application files in a specific environment.
+
+Manage Alerts:: Enables a user to create, update, and delete application alerts in a specific environment.
+
+Manage Application Data:: Enables a user to create and delete application data in a specific environment.
+
+Manage Queues:: Enables a user to clear application queues in a specific environment.
+
+Read Runtime Fabric:: Enables a user to query Runtime Fabrics in the organization.
+
+Manage Runtime Fabrics:: Enables a user to read, create, update and delete Runtime Fabric resources.
+
+Manage Runtime Fabric:: Enables a user to read, create, update and delete Runtime Fabric resources. 
+// what is the deal here?
+
+Manage Schedules:: Enables a user to run and update application schedules in a specific environment.
+
+Manage Settings:: Enables a user to update application settings in a specific environment.
+
+Manage Tenants:: Enables a user to create, update, and delete application tenants in a specific environment.
+
+Read Alerts:: Enables a user to view alerts in a specific environment.
+
+Read Applications:: Enables a user to view applications in a specific environment.
+
+Manage Servers:: Enables a user to create, update, and delete server and flex gateways resources.
+
+Read Servers:: Enables a user to view server and flex gateways resources.
+
+Manage Application Flows:: Enables a user to update flows.
+
+Create Applications:: Enables a user to create applications in a specific environment.
+
 
 == Secrets Manager
 
