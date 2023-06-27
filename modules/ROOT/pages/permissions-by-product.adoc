@@ -100,31 +100,33 @@ DataGraph Project - Admin::  Enables a user to contribute, consume, and operate 
 
 == Design Center
 
-=== Organization Level Permissions
+Design Center Developer:: Enables a user to create and manage any project from the organization.
 
-Design Center Developer
-Design Center Creator
-Design Center Viewer
+Design Center Creator:: Enables a user to create and administrate their own projects projects.
 
-=== Project Level Permissions
+Design Center Viewer:: Enables a user to view all Design Center projects.
 
-Project Administrator
-Project Editor
-Project Viewer
+// where did the project-level permissions go?
 
 == Exchange
 
-Organization level permissions:
+Exchange Administrator:: Enables a user to view, create, share, deprecate, delete, and download assets within a business group. Also enables a user to edit asset portal content for an existing asset version.
 
-Exchange Administrator
-Exchange Contributor
-Exchange Viewer
+Exchange Contributor:: Enables a user to view, create, and download assets within a business group. Also enables a user to edit asset portal content in an existing asset version.
+
+Exchange Viewer:: Enables a user to view and download assets within a business group. Also enables a user to edit asset portal content in an existing asset version.
+
+Exchange Creator:: Enables a user to create assets within a business group.
+
+////
+Where did thesse go?
 
 Asset level permissions:
 
 Asset Administrator
 Asset Contributor
 Asset Viewer
+////
 
 == MQ
 
