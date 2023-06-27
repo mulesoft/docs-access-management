@@ -3,7 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to xref:roles.adoc#create-custom-roles[create custom roles].
+The following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to xref:roles.adoc#create-custom-roles[create custom roles (deprecated)]. 
+
+When you configure permissions, note that some products require permissions from other products to use them properly. For example, Anypoint Monitoring requires users to have certain Runtime Manager permissions in addition to Anypoint Monitoring-related permissions.
 
 == Access Management
 
@@ -82,23 +84,23 @@ Data Gateway Viewer:: Enables a user to have read only access to Data Gateway De
 
 == DataGraph
 
-Contribute:: 
+Contribute:: Enables a user to add source APIs to the unified schema, edit any source API schema added to the unified schema, request access to run queries, promote API schemas to an environment, view query traces in real time while running queries from the UI, and download a copy of the unified schema from the query editor.
 
-Consume:: 
+Consume:: Enables a user to view and explore the unified schema, request access to run queries and make data requests from the UI, and download a copy of the unified schema from the query editor.
 
-Operate:: 
+Operate:: Enables a user to view customer-facing logs and set a dedicated load balancer URL for Anypoint Datagraph.
 
 DataGraph Admin:: Enables a user to contribute, consume, and operate the unified schema and view usage metrics.
 
 == Design Center
 
-Organization level permissions:
+=== Organization Level Permissions
 
 Design Center Developer
 Design Center Creator
 Design Center Viewer
 
-Project level permissions:
+=== Project Level Permissions
 
 Project Administrator
 Project Editor
