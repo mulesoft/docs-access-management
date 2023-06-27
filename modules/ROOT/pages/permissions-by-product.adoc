@@ -14,143 +14,183 @@ Audit Log Config Manager:: Enables a user to configure the retention period for 
 
 Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
-Usage Viewer:: Enables a user to view usage reports.
+== Anypoint Code Builder
+
+// needs to drop the anypoint in the UI
+
+Anypoint Code Builder Developer:: Enables a user to create and use Anypoint Code Builder WebIDE instances.
+
+== Anypoint Monitoring
+
+// this needs to drop the anypoint in the UI
+
+Anypoint Monitoring Administrator:: Enables a user to view, create, modify, and delete content in Anypoint Monitoring.
+
+Anypoint Monitoring Viewer:: Enables a user to view but not modify content in Anypoint Monitoring.
 
 == API Catalog
 
-* API Catalog Contributor
+API Catalog Contributor:: Enables a user to catalog assets and other resources using API Catalog.
+
+== API Experience Hub
+
+API Experience Hub Admin:: Enables a user to view, create, modify, and delete content in API Experience Hub.
+
+API Experience Hub Community User::  Enables a user to view but not modify content in API Experience Hub.
 
 == API Governance
 
-* Governance Administrator
+Governance Administrator:: Enables a user to manage profiles and view reports.
 
 == API Manager
 
 Depending on your organization, you might see one of the following sets of permissions available for API Manager.
 
-* API Manager Environment Administrator
-* API Group Administrator
-* Deploy API Proxies
-* Manage API Alerts
-* Manage APIs Configuration
-* Manage Contracts
-* Manage Policies
-* View API Alerts
-* View APIs Configuration
-* View Contracts
-* View Policies
+API Manager Environment Administrator
+API Group Administrator
+Deploy API Proxies
+Manage API Alerts
+Manage APIs Configuration
+Manage Contracts
+Manage Policies
+View API Alerts
+View APIs Configuration
+View Contracts
+View Policies
 
 Or:
 
-* API Creator
-* API Versions Owner
-* Portals Viewer
+API Creator
+API Versions Owner
+Portals Viewer
 
-== Anypoint Data Gateway
+////
+== Composer
 
-* Data Gateway Administrator
-* Data Gateway Viewer
+Unlisted for now, but they need to beef these up before they can be posted.
 
-== Anypoint DataGraph
+Composer User:: ?
 
-* Contribute
-* Consume
-* Operate
-* DataGraph Admin
+Composer Admin:: ?
+////
+
+== Data Gateway
+
+Data Gateway Administrator:: Enables a user to have full access to Data Gateway Designer.
+
+Data Gateway Viewer:: Enables a user to have read only access to Data Gateway Designer.
+
+== DataGraph
+
+Contribute:: 
+
+Consume:: 
+
+Operate:: 
+
+DataGraph Admin:: Enables a user to contribute, consume, and operate the unified schema and view usage metrics.
 
 == Design Center
 
 Organization level permissions:
 
-* Design Center Developer
-* Design Center Creator
-* Design Center Viewer
+Design Center Developer
+Design Center Creator
+Design Center Viewer
 
 Project level permissions:
 
-* Project Administrator
-* Project Editor
-* Project Viewer
+Project Administrator
+Project Editor
+Project Viewer
 
 == Exchange
 
 Organization level permissions:
 
-* Exchange Administrator
-* Exchange Contributor
-* Exchange Viewer
+Exchange Administrator
+Exchange Contributor
+Exchange Viewer
 
 Asset level permissions:
 
-* Asset Administrator
-* Asset Contributor
-* Asset Viewer
+Asset Administrator
+Asset Contributor
+Asset Viewer
 
-== Anypoint Monitoring
+== MQ
 
-* Anypoint Monitoring User
+Clear destinations
+Manage clients
+Manage destinations
+View clients
+View destinations
 
-== Anypoint MQ
-
-* Clear destinations
-* Manage clients
-* Manage destinations
-* View clients
-* View destinations
-
-== Anypoint Partner Manager
+== Partner Manager
 
 Depending on your organization, you might see one of the following sets of permissions available for Anypoint Partner Manager.
 
-* Partner Manager Administrator
-* View Host, Partners and Message Flows
-* Manage Partners and Message Flows
-* Manage Activity
-* Manage Host
-* View Activity
+Partner Manager Administrator
+View Host, Partners and Message Flows
+Manage Partners and Message Flows
+Manage Activity
+Manage Host
+View Activity
 
 Or:
 
-* Manage Partners
-* Manage Transactions
-* Partners Administrator
-* View Partners
-* View Transactions
+Manage Partners
+Manage Transactions
+Partners Administrator
+View Partners
+View Transactions
 
 == Runtime Manager
 
-* Cloudhub Network Administrator
-* Cloudhub Network Viewer
-* Delete Applications
-* Download Applications
-* Manage Alerts
-* Manage Application Data
-* Manage Queues
-* Manage Runtime Fabrics
-* Manage Runtime Fabric
-* Manage Schedules
-* Manage Settings
-* Manage Tenants
-* Read Alerts
-* Read Applications
-* Read Runtime Fabric
-* Manage Servers
-* Read Servers
-* Manage Application Flows
-* Create Applications
+Cloudhub Network Administrator
+Cloudhub Network Viewer
+Delete Applications
+Download Applications
+Manage Alerts
+Manage Application Data
+Manage Queues
+Manage Runtime Fabrics
+Manage Runtime Fabric
+Manage Schedules
+Manage Settings
+Manage Tenants
+Read Alerts
+Read Applications
+Read Runtime Fabric
+Manage Servers
+Read Servers
+Manage Application Flows
+Create Applications
 
 == Secrets Manager
 
-* Grant access to secrets
-* Manage secret groups
-* Read secrets metadata
-* Write secrets
+Grant access to secrets:: Enables a user to browse, read metadata and grant access to secrets in a specific environment.
 
+Manage secret groups:: Enables a user to create, modify, delete, read, and clone secret groups in a specific environment, as well to check if the user can initiate a new clone or restore operation.
+
+Read secrets metadata:: Enables a user to browse and read metadata of secrets in a specific environment.
+
+Write secrets:: Enables a user to upload, create, modify secrets in a specific environment.
+
+////
 == Tokenization
 
-* Manage Tokenization Services
-* Manage Tokenization Formats
+Where did this go?...not in QAX
 
-== Anypoint Visualizer
+Manage Tokenization Services:: ?
 
-* Visualizer Editor
+Manage Tokenization Formats:: ?
+////
+
+== Usage
+
+Usage Viewer:: Enables a user to view usage reports.
+
+== Visualizer
+
+Visualizer Editor:: Enables a user to view, create, modify, and delete content in Anypoint Visualizer.
