@@ -5,7 +5,7 @@ endif::[]
 
 The following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to xref:roles.adoc#create-custom-roles[create custom roles (deprecated)]. 
 
-When you configure permissions, note that some products require permissions from other products to use them properly. For example, Anypoint Monitoring requires users to have certain Runtime Manager permissions in addition to Anypoint Monitoring-related permissions.
+When you configure permissions, note that some products require permissions from other products to use them properly. For example, Anypoint Monitoring requires users to have certain Runtime Manager permissions in addition to Anypoint Monitoring-related permissions. Depending on your organization, its licensing, and its entitlements, you might not see all of these permissions during configuration. 
 
 == Access Management
 
