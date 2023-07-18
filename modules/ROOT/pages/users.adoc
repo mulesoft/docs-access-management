@@ -75,7 +75,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-users.adoc[]
 
-. Click the name of the user to whom you want to assign permissions.
+. Click the name of the user to assign permissions to.
 . In the *Permissions* section, click *Add permissions*.
 . Next to each permission you want to grant the user, select the checkbox.
 . Click *Next*.
