@@ -21,7 +21,7 @@ a|
 ** Access API Manager client applications.
 ** Access the client ID and client secret for the organization.
 ** Customize the theme of the developer portal.
-* Edit all versions of all APIS, registered applications, and API portals in Anypoint Platform.
+* Enables a user to edit all versions of all APIS, registered applications, and API portals in Anypoint Platform.
 
 For security reasons, distribute this permission to as few users as possible.
 
