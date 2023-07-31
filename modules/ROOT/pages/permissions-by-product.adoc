@@ -4,7 +4,7 @@ include::_attributes.adoc[]
 endif::[]
 
 Anypoint Platform has a variety of permissions to control user access to various areas of the software. While each product owns its own permissions, most of the following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to create xref:roles.adoc#create-custom-roles[roles (deprecated)]. Others can be assigned in their respective product interfaces. Additionally, some permissions are configurable at the environment or business group level. 
-+
+
 Some products require permissions from other products to use them properly. For example, Anypoint Monitoring requires users to have certain Runtime Manager permissions in addition to Anypoint Monitoring-related permissions. See each product's documentation to determine which permissions your users need and how to set them.
 
 Depending on your organization, its licensing, and its entitlements, you might not see all of these permissions during configuration. 
