@@ -7,138 +7,59 @@ The following permissions can be assigned to xref:teams.adoc[teams], granted to 
 
 == Access Management
 
-Organization Administrator:: At the root organization level, grants a user most permissions available in Anypoint Platform, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions. The Organization Administrator permission also grants access to the Organization Administration page, where the user can add and manage users and permissions, view and edit organization details, access API Manager > Client Applications, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. This permission enables a user to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. +
-For security reasons, MuleSoft recommends distributing this permission to as few users as possible.
+[%header%autowidth.spread]
+|===
+| Permission | Description
+| Organization Administrator
+a| 
+* At the root organization level, grants a user most permissions available in Anypoint Platform, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permission.
 
-Audit Log Config Manager:: Enables a user to configure the retention period for audit logs over their organization. You must apply this permission at the root organization level. This permission appears only if you have *Try new features* or the Teams feature enabled in Access Management.
+* On the Organization Administration page, enables a user to:
 
-Audit Log Viewer:: Enables a user to view audit logs in Access Management.
+** Add and manage users and permissions.
+** View and edit organization details.
+** Access API Manager client applications.
+** Access the client ID and client secret for the organization.
+** Customize the theme of the developer portal.
+* Enables a user to edit all versions of all APIS, registered applications, and API portals in Anypoint Platform.
 
-Usage Viewer:: Enables a user to view usage reports.
+For security reasons, distribute this permission to as few users as possible.
 
-== API Catalog
+| Audit Log Config Manager
+a|
+Enables a user to configure the retention period for audit logs over their organization.
 
-* API Catalog Contributor
+This permission must be applied at the root organization level. It appears only if the organization has the modern UI enabled in Access Management.
+| Audit Log Viewer
+a| Enables a user to view audit logs in Access Management.
+|===
 
-== API Governance
+== DataGraph
 
-* Governance Administrator
+[%header%autowidth.spread]
+|===
+| Permission | Descrption
+| Contribute 
+a| 
+Enables a user to:
 
-== API Manager
+* Add source APIs to the unified schema.
+* Edit any source API schema added to the unified schema. 
+* Request access to run queries.
+* Promote API schemas to an environment.
+* View query traces in real time while running queries from the UI.
+* Download a copy of the unified schema from the query editor.
+| Consume 
+a| 
+Enables a user to:
 
-Depending on your organization, you might see one of the following sets of permissions available for API Manager.
+* View and explore the unified schema.
+* Request access to run queries and make data requests from the UI.
+* Download a copy of the unified schema from the query editor.
+| Operate
+a|
+Enables a user to:
 
-include::partial$include-permissions-api-manager-post-crowd.adoc[]
-
-Or:
-
-include::partial$include-permissions-api-manager-pre-crowd.adoc[]
-
-== Anypoint Data Gateway
-
-* Data Gateway Administrator
-* Data Gateway Viewer
-
-== Anypoint DataGraph
-
-* Contribute
-* Consume
-* Operate
-* DataGraph Admin
-
-== Design Center
-
-Organization level permissions:
-
-* Design Center Developer
-* Design Center Creator
-* Design Center Viewer
-
-Project level permissions:
-
-* Project Administrator
-* Project Editor
-* Project Viewer
-
-== Exchange
-
-Organization level permissions:
-
-* Exchange Administrator
-* Exchange Contributor
-* Exchange Viewer
-
-Asset level permissions:
-
-* Asset Administrator
-* Asset Contributor
-* Asset Viewer
-
-== Anypoint Monitoring
-
-* Anypoint Monitoring User
-
-== Anypoint MQ
-
-* Clear destinations
-* Manage clients
-* Manage destinations
-* View clients
-* View destinations
-
-== Anypoint Partner Manager
-
-Depending on your organization, you might see one of the following sets of permissions available for Anypoint Partner Manager.
-
-* Partner Manager Administrator
-* View Host, Partners and Message Flows
-* Manage Partners and Message Flows
-* Manage Activity
-* Manage Host
-* View Activity
-
-Or:
-
-* Manage Partners
-* Manage Transactions
-* Partners Administrator
-* View Partners
-* View Transactions
-
-== Runtime Manager
-
-* Cloudhub Network Administrator
-* Cloudhub Network Viewer
-* Delete Applications
-* Download Applications
-* Manage Alerts
-* Manage Application Data
-* Manage Queues
-* Manage Runtime Fabrics
-* Manage Runtime Fabric
-* Manage Schedules
-* Manage Settings
-* Manage Tenants
-* Read Alerts
-* Read Applications
-* Read Runtime Fabric
-* Manage Servers
-* Read Servers
-* Manage Application Flows
-* Create Applications
-
-== Secrets Manager
-
-* Grant access to secrets
-* Manage secret groups
-* Read secrets metadata
-* Write secrets
-
-== Tokenization
-
-* Manage Tokenization Services
-* Manage Tokenization Formats
-
-== Anypoint Visualizer
-
-* Visualizer Editor
+* View customer-facing logs.
+* Set a dedicated load balancer URL for Anypoint Datagraph.
+|===
