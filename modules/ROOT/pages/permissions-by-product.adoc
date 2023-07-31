@@ -14,7 +14,8 @@ Depending on your organization, its licensing, and its entitlements, you might n
 Organization Administrator:: At the root organization level, grants a user most permissions available in Anypoint Platform, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions. The Organization Administrator permission also grants access to the Organization Administration page, where the user can add and manage users and permissions, view and edit organization details, access API Manager > Client Applications, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. This permission enables a user to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. +
 For security reasons, MuleSoft recommends distributing this permission to as few users as possible.
 
-Audit Log Config Manager:: Enables users to configure the retention period for audit logs across their organizations. Apply this permission at the root organization level. This permission appears only if the organization has the modern UI enabled in Access Management.
+Audit Log Config Manager:: Enables a user to configure the retention period for audit logs across their organization. +
+Apply this permission at the root organization level. This permission appears only if the organization has the modern UI enabled in Access Management.
 
 Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
@@ -65,49 +66,111 @@ Data Gateway Viewer:: Enables a user to have read only access to Data Gateway De
 
 == DataGraph
 
-Contribute:: Enables a user to add source APIs to the unified schema, edit any source API schema added to the unified schema, request access to run queries, promote API schemas to an environment, view query traces in real time while running queries from the UI, and download a copy of the unified schema from the query editor.
+Contribute:: Enables a user to:
++
+* Add source APIs to the unified schema
+* Edit any source API schema added to the unified schema
+* Request access to run queries
+* Promote API schemas to an environment
+* View query traces in real time while running queries from the UI
+* Download a copy of the unified schema from the query editor
 
-Consume:: Enables a user to view and explore the unified schema, request access to run queries and make data requests from the UI, and download a copy of the unified schema from the query editor.
+Consume:: Enables a user to: 
++
+* View and explore the unified schema
+* Request access to run queries and make data requests from the UI
+* Download a copy of the unified schema from the query editor
 
-Operate:: Enables a user to view customer-facing logs and set a dedicated load balancer URL for Anypoint Datagraph.
+Operate:: Enables a user to: 
++
+* View customer-facing logs 
+* Set a dedicated load balancer URL for Anypoint Datagraph
 
-DataGraph Admin:: Enables a user to contribute, consume, and operate the unified schema and view usage metrics.
+DataGraph Admin:: Enables a user to:
++
+* Contribute, consume, and operate the unified schema
+* View usage metrics
 
-DataGraph Project - Contributor:: Enables a user to add source APIs to the unified schema, edit any source API schema added to the unified schema, request access to run queries, promote API schemas to an environment, view query traces in real time while running queries from the UI, and download a copy of the unified schema from the query editor in a specific project.
+DataGraph Project - Contributor:: Enables a user to:
++
+* Add source APIs to the unified schema
+* Edit any source API schema added to the unified schema
+* Request access to run queries
+* Promote API schemas to an environment
+* View query traces in real time while running queries from the UI
+* Download a copy of the unified schema from the query editor in a specific project
 
 DataGraph Project - Operator:: Enables a user to view customer-facing logs and set a dedicated load balancer URL for Anypoint Datagraph in a specific project.
 
-DataGraph Project - Admin::  Enables a user to contribute, consume, and operate the unified schema and view usage metrics in a specific project.
+DataGraph Project - Admin::  Enables a user to: 
++
+* Contribute, consume, and operate the unified schema
+* View usage metrics in a specific project
 
 == Design Center
 
-Design Center Developer:: Enables a user to view, create, and manage all projects within a business group. Use this permission to set up administrators for all the projects within a specific business group.
-Design Center Creator:: Enables a user to create projects in Design Center from the navigation panel and view all projects created or shared with the user. Use this permission to invite users to create, edit, and maintain your projects.
-Design Center Viewer:: Enables a user to view all Design Center projects within a business group and test projects with the Mocking Service. Users with this permission cannot create new projects, edit or rename existing projects, or share projects with another user. Assign this permission to those who consume your project in a specific business group.
+Design Center Developer:: Enables a user to view, create, and manage all projects within a business group. +
+Use this permission to set up administrators for all the projects within a specific business group.
+Design Center Creator:: Enables a user to create projects in Design Center from the navigation panel and view all projects created or shared with the user. +
+Use this permission to invite users to create, edit, and maintain your projects.
+Design Center Viewer:: Enables a user to view all Design Center projects within a business group and test projects with the Mocking Service. +
+Users with this permission cannot create new projects, edit or rename existing projects, or share projects with another user. 
++
+Assign this permission to those who consume your project in a specific business group.
 
 Design Center also has project level permissions: 
 
-Project Administrator:: Enables a user to manage and share a Design Center project within a business group. Use this permission to set up administrators for all the projects within a specific business group.
-Project Editor:: Enables a user to edit a Design Center project within a business group. Use this permission to invite users to create, edit, and maintain your projects.
-Project Viewer:: Enables a user to view a Design Center project within a business group and test projects with the Mocking Service. Users with this permission cannot create a new project, edit or rename the existing project, or share the project with another user. Assign this permission to those who consume your project in a specific business group.
+Project Administrator:: Enables a user to manage and share a Design Center project within a business group. +
+Use this permission to set up administrators for all the projects within a specific business group.
+Project Editor:: Enables a user to edit a Design Center project within a business group. +
+Use this permission to invite users to create, edit, and maintain your projects.
+Project Viewer:: Enables a user to view a Design Center project within a business group and test projects with the Mocking Service. +
+Users with this permission cannot create a new project, edit or rename the existing project, or share the project with another user. 
++
+Assign this permission to those who consume your project in a specific business group.
 
 // where did the project-level permissions go?
 
 == Exchange
 
-Exchange Administrator:: Enables users to view, create, and download assets within a business group. Users with this permission have all the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. Use this permission to set up Exchange administrators for all the assets within a specific business group.
+Exchange Administrator:: Enables users to: 
++
+* View, create, and download assets within a business group
+* Edit asset portal content in an existing asset version 
++
+Users with this permission have all the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. 
++
+Use this permission to set up Exchange administrators for all the assets within a specific business group.
 
-Exchange Contributor:: Enables users to view, create, and download assets within a business group. Users with this permission can edit asset portal content in an existing asset version. Use this permission to invite users to edit and maintain your asset portal descriptions.
+Exchange Contributor:: Enables users to view, create, and download assets within a business group. +
+Users with this permission can edit asset portal content in an existing asset version. 
++
+Use this permission to invite users to edit and maintain your asset portal descriptions.
 
-Exchange Viewer:: Enables users to view and download assets within a business group. Users with this permission cannot add new assets, edit asset portal content, or share an asset with another user. Assign this permission to those who consume your assets in a specific business group.
+Exchange Viewer:: Enables users to view and download assets within a business group. +
+Users with this permission cannot add new assets, edit asset portal content, or share an asset with another user. 
++
+Assign this permission to those who consume your assets in a specific business group.
 
-Exchange Creator:: Enables users to create new assets within a business group’s catalog, but cannot modify assets or asset versions created by other users in the business group. Once the users with this permission create an asset, the Asset Administrator permission is automatically assigned for the assets they create. The Asset Administrator permission allows these users to modify only the assets that they create. Use this permission to restrict modification of assets other than assets created by this user while allowing all developers across all teams in a business group to create new assets in Exchange.
+Exchange Creator:: Enables users to create new assets within a business group’s catalog, but cannot modify assets or asset versions created by other users in the business group. +
+Once the users with this permission create an asset, the Asset Administrator permission is automatically assigned for the assets they create. The Asset Administrator permission allows these users to modify only the assets that they create. 
++
+Use this permission to restrict modification of assets other than assets created by this user while allowing all developers across all teams in a business group to create new assets in Exchange.
 
-Asset Viewer:: Enables users to view and download an asset. Users with this permission cannot edit asset portal content or share an asset with another user. Use this permission to invite a user outside your business group to view and download an asset.
+Asset Viewer:: Enables users to view and download an asset. +
+Users with this permission cannot edit asset portal content or share an asset with another user. 
++
+Use this permission to invite a user outside your business group to view and download an asset.
 
-Asset Contributor:: Enables users to view, add a new version, and download an asset. Use this permission to invite a user outside your business group to view, download, and add edit portal content for an asset.
+Asset Contributor:: Enables users to view, add a new version, and download an asset. 
++
+Use this permission to invite a user outside your business group to view, download, and add edit portal content for an asset.
 
-Asset Administrator:: Enables users to view, create, download, deprecate, and delete an asset. Users with this permission have the same access as users with the Exchange Administrators permission, but on only a single asset. This permission is assigned by default to an asset creator. Use this permission to extend administrator permissions to an asset to an additional user.
+Asset Administrator:: Enables users to view, create, download, deprecate, and delete an asset. +
+Users with this permission have the same access as users with the Exchange Administrators permission, but on only a single asset. +
+This permission is assigned by default to an asset creator. 
++
+Use this permission to extend administrator permissions to an asset to an additional user.
 
 == Monitoring
 
@@ -119,15 +182,46 @@ Monitoring Viewer:: Enables a user to view but not modify content in Anypoint Mo
 
 View clients:: Enables a user to view all client apps, including client app IDs and client secrets for each client app.
 
-View destinations:: Enables a user to view all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL). They can also view In Queue messages and view In Flight message stats.
+View destinations:: Enables a user to:
++
+* View all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL)
+* View In Queue messages 
+* View In Flight message stats
 
-Clear destinations:: Enables a user to view all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL). They can also view In Queue messages, view In Flight message stats, and clear destinations.
+Clear destinations:: Enables a user to: 
++
+* View all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL)
+* View In Queue messages
+* View In Flight message stats
+* Clear destinations
 
-Manage clients:: Enables a user to view all client apps, including client app IDs and client secrets for each client app. They can also create client apps.
+Manage clients:: Enables a user to: 
++
+* View all client apps, including client app IDs and client secrets for each client app
+* Create client apps
 
-Administer destinations:: Enables a user to view all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL). They can also view In Queue messages; view In Flight message stats; clear destinations; create new queues, message exchanges, and bindings; edit existing queues, message exchanges, and bindings; and purge messages from queues.
+Administer destinations:: Enables a user to:
++
+* View all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL)
+* View In Queue messages
+* View In Flight message stats
+* Clear destinations
+* Create new queues, message exchanges, and bindings
+* Edit existing queues, message exchanges, and bindings
+* Purge messages from queues
 
-Manage destinations (deprecated):: Enables a user to view all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL). They can also view In Queue messages; view In Flight message stats; clear destinations; create new queues, message exchanges, and bindings; edit existing queues, message exchanges, and bindings; purge messages from queues; edit existing queues and message exchange settings; access Message Sender and Browser pages; and delete messages.
+Manage destinations (deprecated):: Enables a user to: 
++ 
+* View all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL)
+* View In Queue messages
+* View In Flight message stats
+* Clear destinations
+* Create new queues, message exchanges, and bindings
+* Edit existing queues, message exchanges, and bindings
+* Purge messages from queues
+* Edit existing queues and message exchange settings
+* Access Message Sender and Browser pages
+* Delete messages
 +
 This permission is deprecated. To achieve the same abilities as Manage permissions, assign these permissions to the user: 
 +
@@ -143,29 +237,26 @@ Read MQ Stats:: Enables a user to view organization and environment statistics.
 
 == Partner Manager
 
-// Depending on your organization, you might see one of the following sets of permissions available for Anypoint Partner Manager.
-
 Partner Manager Administrator:: Enables a user to have complete access to the host, partner, message flow configurations, and transaction activity.
 
-View Host, Partners and Message Flows:: Enables a user to have view-only access to the host, partner, and message flow configurations. This user cannot view transaction activity.
+View Host, Partners and Message Flows:: Enables a user to have view-only access to the host, partner, and message flow configurations. +
+This user cannot view transaction activity.
 
-Manage Partners and Message Flows:: Enables a user to create, modify, and delete partners or message flow configurations; and view partner configurations This user cannot view and manage transaction activity.
+Manage Partners and Message Flows:: Enables a user to:
++
+* Create, modify, and delete partners or message flow configurations
+* View partner configurations
++
+This user cannot view and manage transaction activity.
 
-Manage Activity:: Enables a user to view and manage transaction activity. This user cannot view or modify either partner or message flow configurations.
+Manage Activity:: Enables a user to view and manage transaction activity. +
+This user cannot view or modify either partner or message flow configurations.
 
-Manage Host:: Enables a user to create, modify, and delete host configurations. This user cannot view or modify trading partner configurations or transaction activity. This access applies even if the user has the Organization Administrator permission.
+Manage Host:: Enables a user to create, modify, and delete host configurations. +
+This user cannot view or modify trading partner configurations or transaction activity. This access applies even if the user has the Organization Administrator permission.
 
-View Activity:: Enables a user have view-only access to transaction activity. This user cannot view or modify either partner or message flow configurations.
-
-////
-Or:
-
-Manage Partners
-Manage Transactions
-Partners Administrator
-View Partners
-View Transactions
-////
+View Activity:: Enables a user have view-only access to transaction activity. +
+This user cannot view or modify either partner or message flow configurations.
 
 == Runtime Manager
 
@@ -212,7 +303,10 @@ Create Applications:: Enables a user to create applications in a specific enviro
 
 Grant access to secrets:: Enables a user to browse, read metadata and grant access to secrets in a specific environment.
 
-Manage secret groups:: Enables a user to create, modify, delete, read, and clone secret groups in a specific environment, as well to check if the user can initiate a new clone or restore operation.
+Manage secret groups:: Enables a user to: 
++
+* Create, modify, delete, read, and clone secret groups in a specific environment
+* Check if the user can initiate a new clone or restore operation
 
 Read secrets metadata:: Enables a user to browse and read metadata of secrets in a specific environment.
 

@@ -1,4 +1,6 @@
-API Manager Environment Administrator:: Enables you to view, create, modify, and delete APIs in the specified environment. You can also execute any actions related to API configurations, groups, proxies, alerts, contracts, tiers, policies, automated policies, and other settings in the specified API Manager environment.
+API Manager Environment Administrator:: Enables you to view, create, modify, and delete APIs in the specified environment. 
++
+You can also execute any actions related to API configurations, groups, proxies, alerts, contracts, tiers, policies, automated policies, and other settings in the specified API Manager environment.
 API Group Administrator:: Enables you to view, create, modify, deprecate, and delete API groups and API group instances in the specified environment.
 Deploy API Proxies:: Enables you to deploy API proxies in the specified environment.
 Manage API Alerts:: Enables you to view, create, modify, and delete API alerts in the specified environment.
