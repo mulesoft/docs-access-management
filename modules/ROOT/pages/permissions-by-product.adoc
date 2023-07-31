@@ -3,7 +3,9 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Platform has a variety of permissions to control user access to various areas of the software. While each product owns its own permissions, most of the following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to create xref:roles.adoc#create-custom-roles[roles (deprecated)]. Others can be assigned in their respective product interfaces. Additionally, some permissions are configurable at the environment or business group level. When you configure permissions, note that some products require permissions from other products to use them properly. For example, Anypoint Monitoring requires users to have certain Runtime Manager permissions in addition to Anypoint Monitoring-related permissions. See each product's documentation to determine which permissions your users need and how to set them.
+Anypoint Platform has a variety of permissions to control user access to various areas of the software. While each product owns its own permissions, most of the following permissions can be assigned to xref:teams.adoc[teams], granted to xref:users.adoc#grant-user-permissions[individual users], or combined to create xref:roles.adoc#create-custom-roles[roles (deprecated)]. Others can be assigned in their respective product interfaces. Additionally, some permissions are configurable at the environment or business group level. 
++
+Some products require permissions from other products to use them properly. For example, Anypoint Monitoring requires users to have certain Runtime Manager permissions in addition to Anypoint Monitoring-related permissions. See each product's documentation to determine which permissions your users need and how to set them.
 
 Depending on your organization, its licensing, and its entitlements, you might not see all of these permissions during configuration. 
 
@@ -12,7 +14,7 @@ Depending on your organization, its licensing, and its entitlements, you might n
 Organization Administrator:: At the root organization level, grants a user most permissions available in Anypoint Platform, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions. The Organization Administrator permission also grants access to the Organization Administration page, where the user can add and manage users and permissions, view and edit organization details, access API Manager > Client Applications, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. This permission enables a user to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. +
 For security reasons, MuleSoft recommends distributing this permission to as few users as possible.
 
-Audit Log Config Manager:: Enables a user to configure the retention period for audit logs over their organization. This permission must be applied at the root organization level. This permission appears only if the organization has the modern UI enabled in Access Management.
+Audit Log Config Manager:: Enables users to configure the retention period for audit logs across their organizations. Apply this permission at the root organization level. This permission appears only if the organization has the modern UI enabled in Access Management.
 
 Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
