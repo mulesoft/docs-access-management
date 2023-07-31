@@ -198,6 +198,10 @@ Users can also be redirected based on their permissions. This occurs when:
 In these cases, a user with the Organization Administrator permission is redirected to the Anypoint Platform landing page.
 Users who do not have the Organization Administrator permission are directed to Anypoint Exchange.
 
+== Updates to a SAML Identity Provider 
+Admin users are able to update an existing SAML provider. However, please note that updating `Issuer`, `Audience` will effectively switch to a different IdP, hence causing potential undesired outcomes, e.g user duplication issue. For more info, see https://help.mulesoft.com/s/article/External-identity-migration-How-to-prevent-duplicate-users-being-created.
+
+
 == View Limits for a SAML Identity Provider
 
 Each configured SAML IdP has a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform.
