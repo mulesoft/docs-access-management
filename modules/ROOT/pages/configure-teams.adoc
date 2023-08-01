@@ -20,24 +20,29 @@ Team maintainers can manage their teams in the following ways:
 == Create a Child Team
 
 You can create child teams under the following circumstances:
-- If you are the Organization Administrator for root, you can create child teams at any org level.
-- If you are the Organization Administrator for a business group, you can create child teams at the root level and become the maintainer for that team.
-- If you are a team maintainer, you can create child teams for that team.
+
+* If you are the Organization Administrator for root, you can create child teams at any org level.
+* If you are the Organization Administrator for a business group, you can create child teams at the root level and become the maintainer for that team.
+* If you are a team maintainer, you can create child teams for that team. 
++
 All child teams inherit user permissions from their parents, but you configure additional permissions.
 
 To create a child team in the *Teams* page:
 
-include::partial$include-nav-steps-org-admin.adoc[]
+//include::partial$include-nav-steps-org-admin.adoc[] - this does not resolve and I do not know why. I am adding in the text directly. ESB
 
-include::partial$include-nav-teams.adoc[]
+//include::partial$include-nav-teams.adoc[] - this does not resolve and I do not know why. I am adding the text directly. ESB
 
+. Log in to Anypoint Platform using an account that has the Organization Administrator permission.
+. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
+. In the Access Management navigation menu, click *Teams*.
 . Select *Create Team*.
 . Enter a unique and intuitive name for your child team. +
 You can use only alphanumeric characters, hyphens, commas, periods, and spaces. The character limit is 255.
 +
 . Select a parent team.
 . Select *Save*.
-
++
 Your new child team appears under its parent team in the list of teams. You can select any parent team in that list and navigate to its *Child teams* tab to see a list of all that parent team's child teams.
 
 == Manage Team Permissions
