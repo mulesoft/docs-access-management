@@ -8,20 +8,20 @@ Access Management enables you to xref:managing-your-account.adoc#how-to-create-y
 
 For organization owners and administrators, Access Management enables you to:
 
-* xref:users.adoc[Invite users] to your organization and manage their access
-* Create xref:business-groups.adoc[business groups] to contain your Anypoint Platform resources such as apps and APIs
-* Create xref:environments.adoc[environments] to manage app and API deployment
-* xref:managing-permissions.adoc[Assign permissions to individual users] or setup hierarchal user management using the xref:teams.adoc[Teams] feature to manage access to assets and areas of your organization
-* Manage user identity and configure single sign-on (SSO) using federated xref:external-identity.adoc[external identity providers (IdPs)]
-* Protect your organization from unauthorized access using xref:multi-factor-authentication.adoc[multi-factor authentication]
-* Authorize client applications by configuring xref:managing-api-clients.adoc[external client providers]
-* View user and connected app activity using xref:audit-logs.adoc[audit logs]
-* Develop and configure xref:connected-apps-overview.adoc[connected apps] to delegate access to the platform
-* Allow xref:external-organization-access.adoc[external organization access] to facilitate collaboration with other Anypoint Platform organizations
+* xref:users.adoc[Invite users] to your organization and manage their access.
+* Create xref:business-groups.adoc[business groups] to contain your Anypoint Platform resources such as apps and APIs.
+* Create xref:environments.adoc[environments] to manage app and API deployment.
+* xref:managing-permissions.adoc[Assign permissions to individual users] or setup hierarchal user management by using the xref:teams.adoc[Teams] feature to manage access to assets and areas of your organization.
+* Manage user identity and configure single sign-on (SSO) by using federated xref:external-identity.adoc[external identity providers (IdPs)].
+* Protect your organization from unauthorized access by using xref:multi-factor-authentication.adoc[multi-factor authentication].
+* Authorize client applications by configuring xref:managing-api-clients.adoc[external client providers].
+* View user and connected app activity by using xref:audit-logs.adoc[audit logs].
+* Develop and configure xref:connected-apps-overview.adoc[connected apps] to delegate access to the platform.
+* Allow xref:external-organization-access.adoc[external organization access] to facilitate collaboration with other Anypoint Platform organizations.
 
 Access Management also provides a REST API for you to programmatically access the resources related to user and client management, organizations and business groups, and roles and permissions.
-Check the https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/apis/11270/versions/11646/pages/11244[Access Management API Portal].
+To use this API, use the https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/apis/11270/versions/11646/pages/11244[Access Management API Portal].
 
 Depending on your xref:hosting::hosting-home.adoc[control plane], some Access Management features may be unavailable to your organization. For example, account creation and user invitation from the platform is not available for Anypoint Platform Private Cloud Edition. Certain features are also unavailable for Mulesoft Government Cloud.
 
-If you are an organization administrator and have any questions about your account, contact your MuleSoft Account Team for help. Otherwise, contact your organization administrator.
+If you are an organization administrator and have questions about your account, contact your MuleSoft Account Team for help. Otherwise, contact your organization administrator.
