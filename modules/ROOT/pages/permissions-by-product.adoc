@@ -159,7 +159,6 @@ Users with this permission can edit asset portal content in an existing asset ve
 Use this permission to invite users to edit and maintain your asset portal descriptions.
 
 Exchange Viewer:: Enables a user to view and download assets within a business group. 
-+
 Users with this permission cannot add new assets, edit asset portal content, or share an asset with another user. 
 +
 Assign this permission to those who consume your assets in a specific business group.
