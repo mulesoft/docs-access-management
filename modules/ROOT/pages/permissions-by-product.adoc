@@ -334,7 +334,7 @@ Write secrets:: Enables a user to upload, create, modify secrets in a specific e
 
 Manage Tokenization Services:: Enables a user to to view, create, edit, and delete tokenization resources.
 
-Manage Tokenization Formats:: Enables a user to view, create, edit and delete tokenization formats.
+Manage Tokenization Formats:: Enables a user to view, create, edit, and delete tokenization formats.
 
 == Usage
 
