@@ -29,13 +29,10 @@ All child teams inherit user permissions from their parents, but you configure a
 
 To create a child team in the *Teams* page:
 
-//include::partial$include-nav-steps-org-admin.adoc[] - this does not resolve and I do not know why. I am adding in the text directly. ESB
+include::partial$include-nav-steps-org-admin.adoc[]
 
-//include::partial$include-nav-teams.adoc[] - this does not resolve and I do not know why. I am adding the text directly. ESB
+include::partial$include-nav-teams.adoc[] 
 
-. Log in to Anypoint Platform using an account that has the Organization Administrator permission.
-. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
-. In the Access Management navigation menu, click *Teams*.
 . Click *Create Team*.
 . Enter a unique and intuitive name for your child team. 
 +
