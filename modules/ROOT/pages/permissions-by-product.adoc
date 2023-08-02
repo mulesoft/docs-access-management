@@ -167,7 +167,7 @@ Exchange Creator:: Enables a user to create new assets within a business groupâ€
 +
 Once the users with this permission create an asset, the Asset Administrator permission is automatically assigned for the assets they create. The Asset Administrator permission allows these users to modify only the assets that they create. 
 +
-Use this permission to restrict modification of assets other than assets created by this user while allowing all developers across all teams in a business group to create new assets in Exchange.
+Use this permission to restrict the modification of assets except for assets created by this user while allowing all developers across all teams in a business group to create new assets in Exchange.
 
 Asset Viewer:: Enables a user to view and download an asset. 
 +
