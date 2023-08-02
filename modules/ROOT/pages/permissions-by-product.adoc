@@ -163,7 +163,7 @@ Users with this permission cannot add new assets, edit asset portal content, or 
 +
 Assign this permission to those who consume your assets in a specific business group.
 
-Exchange Creator:: Enables a user to create new assets within a business group’s catalog, but cannot modify assets or asset versions created by other users in the business group. 
+Exchange Creator:: Enables a user to create new assets within a business group’s catalog. A user with this permission can't modify assets or asset versions created by other users in the business group. 
 +
 Once the users with this permission create an asset, the Asset Administrator permission is automatically assigned for the assets they create. The Asset Administrator permission allows these users to modify only the assets that they create. 
 +
