@@ -62,28 +62,46 @@ By default, in every new organization and business group, you can assign the fol
 
 [NOTE]
 --
-In the legacy roles user interface, roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting.
+In the legacy roles user interface, roles and permissions are grouped under organizations (and also, optionally, under business groups). This means that you can only assign roles and permissions that are related to resources that exist in the organization and/or business group that you are selecting. 
 --
 
 If necessary, you can also remove user permissions, but note that if those permissions are granted through an assigned team or role, you can remove them only by using the xref:teams.adoc[teams] or xref:roles.adoc[Roles] functionality respectively. You cannot view or remove team-based or role-based permissions in the *Users* page.
 
-Because the Roles feature is deprecated, it is best to xref:teams.adoc#opt-in-to-teams[opt in to the Teams feature] to manage permissions in a hierarchy.
+Because the Roles feature is deprecated, it is best to xref:teams.adoc#opt-in-to-teams[opt in to the Teams feature by selecting *Try New Features*] to manage permissions in a hierarchy.
 
-To grant permissions to an individual user:
+You can use the legacy roles interface or the Teams feature to grant permissions to an individual user. 
+
+To grant permissions to an individual user in the legacy roles interface:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-users.adoc[]
+
+. Click the username of the user to which you want to assign permissions.
+. In the *Permissions* section, click the product to which you want to assign permissions. 
+. In the *Permission(s)* section, in the *Select access* field, select the permissions that you want assign and then click *+*.
+. If you selected a product to which you can assign permissions to an environment, in the *Environment* field, select the permissions that you want to assign and then click *+*.
++
+The user now has the permissions you selected.
+
+To grant permissions to an individual user with the xref:teams.adoc#opt-in-to-teams[Teams feature] enabled: 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-users.adoc[]
 
 . Click the name of the user to which you want to assign permissions.
+. Click the *Permissions* tab.
 . In the *Permissions* section, click *Add permissions*.
-. Next to each permission you want to grant the user, select the checkbox.
-. Click *Next*.
-. Select the business groups in which you want the selected permissions to apply.
-. Click *Next*.
-. Select the environments in which you want the selected permissions to apply.
-. Review the permissions, business groups, and environments, and then click *Add permissions*.
-
++
+The *Add Permissions* window appears. 
+. In the *Select Permissions* section, select the permissions that you want to add and then click *Next*.
+. In the *Select Business Groups* section, select the business groups to which you want to apply the permissions. If you selected a permission that enables you to select environments, you can select which environments to apply to the permission. Click *Next*. 
++
+In the *Review* section, review the permissions and the business groups and environments to which they apply.
++
+. Click *Add Permissions*. 
++
 The user now has the permissions you selected in the business groups and environments you specified.
 
 == View Limits for a User
