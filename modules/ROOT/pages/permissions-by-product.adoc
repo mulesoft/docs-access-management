@@ -221,20 +221,7 @@ Administer destinations:: Enables a user to:
 * Edit existing queues, message exchanges, and bindings.
 * Purge messages from queues.
 
-Manage destinations (deprecated):: Enables a user to: 
-+ 
-* View all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL).
-* View In Queue messages.
-* View In Flight message stats.
-* Clear destinations.
-* Create new queues, message exchanges, and bindings.
-* Edit existing queues, message exchanges, and bindings.
-* Purge messages from queues.
-* Edit existing queues and message exchange settings.
-* Access Message Sender and Browser pages.
-* Delete messages.
-+
-This permission is deprecated. To achieve the same abilities as Manage permissions, assign these permissions to the user: 
+Manage destinations (deprecated):: This permission is deprecated. To achieve the same abilities as Manage permissions, assign these permissions to the user: 
 +
 * Administer destinations
 * Destination subscriber for given environment
