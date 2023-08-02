@@ -147,7 +147,7 @@ Exchange Administrator:: Enables a user to:
 * View, create, and download assets within a business group.
 * Edit asset portal content in an existing asset version.
 +
-Users with this permission have all the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. 
+Users with this permission have the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. 
 +
 Use this permission to set up Exchange administrators for all assets within a specific business group.
 
