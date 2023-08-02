@@ -308,7 +308,7 @@ Read Alerts:: Enables a user to view alerts in a specific environment.
 
 Read Applications:: Enables a user to view applications in a specific environment.
 
-Manage Servers:: Enables a user to create, update, and delete server and flex gateways resources.
+Manage Servers:: Enables a user to create, update, and delete server and Flex Gateway resources.
 
 Read Servers:: Enables a user to view server and flex gateways resources.
 
