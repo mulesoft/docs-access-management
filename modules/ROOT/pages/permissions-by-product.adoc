@@ -310,7 +310,7 @@ Read Applications:: Enables a user to view applications in a specific environmen
 
 Manage Servers:: Enables a user to create, update, and delete server and Flex Gateway resources.
 
-Read Servers:: Enables a user to view server and flex gateways resources.
+Read Servers:: Enables a user to view server and Flex Gateway resources.
 
 Manage Application Flows:: Enables a user to update flows.
 
