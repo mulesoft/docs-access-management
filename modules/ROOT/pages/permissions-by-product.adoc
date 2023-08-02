@@ -176,7 +176,7 @@ Use this permission to invite a user outside your business group to view and dow
 
 Asset Contributor:: Enables a user to view, add a new version, and download an asset. 
 +
-Use this permission to invite a user outside your business group to view, download, and add edit portal content for an asset.
+Use this permission to invite a user outside of your business group to view, download, and add edit portal content for an asset.
 
 Asset Administrator:: Enables a user to view, create, download, deprecate, and delete an asset. 
 +
