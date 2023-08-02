@@ -36,7 +36,7 @@ To create a child team in the *Teams* page:
 . Log in to Anypoint Platform using an account that has the Organization Administrator permission.
 . In the navigation bar or the main Anypoint Platform page, click *Access Management*.
 . In the Access Management navigation menu, click *Teams*.
-. Select *Create Team*.
+. Click *Create Team*.
 . Enter a unique and intuitive name for your child team. 
 +
 You can use only alphanumeric characters, hyphens, commas, periods, and spaces. The character limit is 255.
@@ -63,12 +63,12 @@ include::partial$include-nav-steps-team-maintainer.adoc[]
 . In the *Permissions* section, click *Add permissions*.
 +
 The *Add Permissions* window appears. 
-. In the *Select Permissions* section, select the permissions that you want to add and then select *Next*.
-. In the *Select Business Groups* section, select the business groups to which you want to apply the permissions. If you selected a permission that enables you to select environments, you can select which environments to apply to the permission. Select *Next*. 
+. In the *Select Permissions* section, select the permissions that you want to add and then click *Next*.
+. In the *Select Business Groups* section, select the business groups to which you want to apply the permissions. If you selected a permission that enables you to select environments, you can select which environments to apply to the permission. Click *Next*. 
 +
 In the *Review* section, review the permissions and the business groups and environments to which they apply.
 +
-. Select *Add Permissions*. 
+. Click *Add Permissions*. 
 +
 The permissions you selected now apply to team members and appear in the *Permissions* section for your team.
 
