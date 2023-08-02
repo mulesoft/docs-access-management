@@ -296,7 +296,7 @@ Read Runtime Fabric:: Enables a user to query Runtime Fabrics in the organizatio
 
 Manage Runtime Fabrics:: Enables a user to read, create, update, and delete Runtime Fabric resources.
 
-Manage Runtime Fabric:: Enables a user to read, create, update and delete Runtime Fabric resources. 
+Manage Runtime Fabric:: Enables a user to read, create, update, and delete Runtime Fabric resources. 
 
 Manage Schedules:: Enables a user to run and update application schedules in a specific environment.
 
