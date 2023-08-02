@@ -270,7 +270,7 @@ This user cannot view or modify either partner or message flow configurations.
 
 Manage Host:: Enables a user to create, modify, and delete host configurations. 
 +
-This user cannot view or modify trading partner configurations or transaction activity. This access applies even if the user has the Organization Administrator permission.
+This user cannot view or modify partner configurations or transaction activity. This access applies even if the user has the Organization Administrator permission.
 
 View Activity:: Enables a user have view-only access to transaction activity. 
 +
