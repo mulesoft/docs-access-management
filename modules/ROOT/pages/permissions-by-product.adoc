@@ -124,7 +124,8 @@ Users with this permission cannot create new projects, edit or rename existing p
 +
 Assign this permission to those who consume your project in a specific business group.
 
-Design Center also has project level permissions: 
+
+=== Design Center Project-level Permissions
 
 Project Administrator:: Enables a user to manage and share a Design Center project within a business group. 
 +
