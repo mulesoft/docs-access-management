@@ -184,7 +184,7 @@ Users with this permission have the same access as users with the Exchange Admin
 +
 This permission is assigned by default to an asset creator. 
 +
-Use this permission to extend administrator permissions to an asset to an additional user.
+Use this permission to extend administrator permissions for an asset to an additional user.
 
 == Monitoring
 
