@@ -170,7 +170,6 @@ Once the users with this permission create an asset, the Asset Administrator per
 Use this permission to restrict the modification of assets except for assets created by this user while allowing all developers across all teams in a business group to create new assets in Exchange.
 
 Asset Viewer:: Enables a user to view and download an asset. 
-+
 Users with this permission cannot edit asset portal content or share an asset with another user. 
 +
 Use this permission to invite a user outside your business group to view and download an asset.
