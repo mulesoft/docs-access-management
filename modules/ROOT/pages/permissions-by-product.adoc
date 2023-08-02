@@ -179,10 +179,7 @@ Asset Contributor:: Enables a user to view, add a new version, and download an a
 Use this permission to invite a user outside of your business group to view, download, and add edit portal content for an asset.
 
 Asset Administrator:: Enables a user to view, create, download, deprecate, and delete an asset. 
-+
-Users with this permission have the same access as users with the Exchange Administrator permission, but on only a single asset. 
-+
-This permission is assigned by default to an asset creator. 
+Users with this permission have the same access as users with the Exchange Administrator permission, but on only a single asset. This permission is assigned by default to an asset creator. 
 +
 Use this permission to extend administrator permissions for an asset to an additional user.
 
