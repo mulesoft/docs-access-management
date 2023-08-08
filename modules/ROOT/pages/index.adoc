@@ -1,4 +1,4 @@
-= About Anypoint Access Management
+= About Access Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -15,7 +15,7 @@ For organization owners and administrators, Access Management enables you to:
 * Manage user identity and configure single sign-on (SSO) by using federated xref:external-identity.adoc[external identity providers (IdPs)].
 * Protect your organization from unauthorized access by using xref:multi-factor-authentication.adoc[multi-factor authentication].
 * Authorize client applications by configuring xref:managing-api-clients.adoc[external client providers].
-* View user and connected app activity by using xref:audit-logs.adoc[audit logs].
+* View user and connected app activity by using xref:audit-logging.adoc[audit logs].
 * Develop and configure xref:connected-apps-overview.adoc[connected apps] to delegate access to the platform.
 * Allow xref:external-organization-access.adoc[external organization access] to facilitate collaboration with other Anypoint Platform organizations.
 
