@@ -7,6 +7,8 @@ As an organization administrator, you are the only user who can view and manage 
 To manage your connected apps, navigate to *Access Management* and select the *Connected Apps* tab. You can add apps in the *Owned Apps* section and manage app access in the *Authorizations* section.
 For more information about the *Owned Apps* section, see the documentation for xref:connected-apps-developers.adoc[app developers].
 
+To maintain security, only root-level organization administrators can view and manage connected apps in Access Management.
+
 == Authorizations
 
 You can use the *Authorizations* section to manage which apps are authorized to access your users' data. Click the *...* icon next to an application to view more details or to remove the app from your organization.
