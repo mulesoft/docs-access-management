@@ -129,17 +129,6 @@ If your organization uses xref:access-management::external-identity.adoc[Single 
 . Click *Continue*.
 You are redirected to your identity provider.
 
-== Allowlist URLs to Log in to and Use Anypoint Platform
-
-If you are using a restricted environment such as a virtual machine or have proxy requirements that prevent you from logging in to Anypoint Platform, add the following URLs to your allowlists so your sessions are not blocked or interrupted by your organization's firewall or proxy:
-
-* `+https://*.mulesoft.com/*+`
-* `+https://*.salesforce.com/*+`
-* `+https://app.launchdarkly.com/*+`
-* `+https://clientstream.launchdarkly.com/*+`
-* `+https://www.gstatic.com/recaptcha/*+`
-* `+https://www.google.com/recaptcha/*+`
-
 == Use an Unassociated Account
 
 When an organization administrator deletes an account from the organization, the deleted account is left _unattached_.
