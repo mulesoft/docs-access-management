@@ -49,6 +49,7 @@ include::partial$include-nav-steps-org-admin-bg.adoc[]
 
 include::partial$include-nav-mfa.adoc[]
 
+. Click your Anypoint identity provider.
 . In the *Exempt Accounts* section, add the accounts that are valid to exclude from MFA. +
 Only accounts that do not use single sign-on (SSO) appear in this list.
 . Click *Save*. +
