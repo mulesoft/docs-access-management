@@ -1,5 +1,6 @@
 .xref:index.adoc[Access Management]
 * xref:index.adoc[About Access Management]
+* xref:iam-release-notes.adoc[Release Notes]
 * xref:managing-your-account.adoc[Managing Your Account]
 * xref:users.adoc[Users]
 * xref:business-groups.adoc[Business Groups]

@@ -1,2 +1,1 @@
 . In the Access Management navigation menu, click *Identity Providers*.
-. Click the name of the identity provider (or IdP) for which you want to manage multi-factor authentication.

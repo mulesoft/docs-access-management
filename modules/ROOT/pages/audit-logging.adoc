@@ -7,7 +7,7 @@ Changes made by users within Anypoint Platform organizations are logged through 
 
 The audit logging service provides a queryable history of actions performed within the Anypoint Platform. It keeps track of all users who have interacted with objects in the system, and timestamps those actions. It also provides mechanisms for querying the set of users who have performed actions, the set of objects that had actions performed on them, and other endpoints that enable the querying of log entries.
 
-Audit logs have a default retention period of six years. However, users who have the Organization Administrator and Audit Log Config Manager permission can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically to maintain your log files for longer than the current retention period.
+Audit logs have a default retention period of one year. If your organization was created before July 10, 2023 and you did not manually change the retention period, the retention period is six years. Users who have the Organization Administrator and Audit Log Config Manager permission can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically to maintain your log files for longer than the current retention period.
 
 == Access Audit Logging
 
@@ -675,6 +675,104 @@ Properties:
 * orgID
 * userID
 * branchName
+
+|Merge Branch
+|Project
+|Project ID
+|N/A
+|Merge Branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* branchName
+
+|Share project
+|Project
+|Project ID
+|N/A
+|Share project
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+
+|Sync with Github
+|Project
+|Project ID
+|N/A
+|Sync with Github
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* repositoryName
+
+|Unsync with Github
+|Project
+|Project ID
+|N/A
+|Unsync with Github
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+
+|Modify organization settings
+|Project
+|Organization ID
+|N/A
+|Modify organization settings
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+
+|Rename branch
+|Project
+|Project ID
+|N/A
+|Rename branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* branchName
+
+|Modify project settings
+|Project
+|Project ID
+|N/A
+|Modify project settings
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
 |===
 
 === Mocking Service
@@ -1240,7 +1338,7 @@ Properties: None
 | N/A
 | Login - Token
 | Subaction: Token +
-Properties: 
+Properties:
 
 * clientName
 * clientID
@@ -1254,7 +1352,7 @@ Properties:
 | N/A
 | Login - Token
 | Subaction: Token +
-Properties: 
+Properties:
 
 * clientID
 * clientIP
@@ -1274,6 +1372,169 @@ Properties:
 * clientIP
 * orgID
 * grantTypes
+
+|===
+
+=== Teams
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Create Team
+| Team
+| Team Name
+| N/A
+| Create
+| Subaction:
+None +
+Properties:
+
+* org_id
+* team_id
+* team_name
+* team_type
+* created_at
+* updated_at
+* ancestor_team_ids
+
+| Update Team
+| Team
+| Team Name
+| N/A
+| Update
+| Subaction:
+None +
+Properties:
+
+* org_id
+* team_id
+* team_type
+* ancestor_team_ids
+
+| Move Team
+| Team
+| Team Name
+| N/A
+| Move
+| Subaction:
+None +
+Properties:
+
+* org_id
+* team_id
+* team_type
+* ancestor_team_ids
+* previous_ancestor_team_ids
+
+| Add Members
+| Team
+| Team Name
+| N/A
+| Edit
+| Subaction:
+Add Members +
+Properties:
+
+* array of:
+** id (Member/Maintainer ID)
+** membership_type
+
+| Remove Members
+| Team
+| Team Name
+| N/A
+| Edit
+| Subaction:
+Remove Members +
+Properties:
+
+* Removed Member ID
+
+| Add Permissions
+| Team
+| Team Name
+| N/A
+| Permissions change
+| Subaction:
+Add permissions +
+Properties:
+
+* name (Permission Name)
+* role_id (Permission ID)
+* context_params)
+
+| Remove Permissions
+| Team
+| Team Name
+| N/A
+| Permissions change
+| Subaction:
+Remove permissions +
+Properties:
+
+* name (Permission Name)
+* role_id (Permission ID)
+* context_params)
+
+| Edit External Group Mappings
+| Team
+| Team Name
+| N/A
+| Edit
+| Subaction:
+Edit external group mapping +
+Properties:
+
+* data:
+** provider_id
+** membership_type
+** external_group_name
+* total
+
+| Delete Team
+| Team
+| Team Name
+| N/A
+| Delete
+| Subaction: None +
+Properties:
+
+* org_id
+* team_id
+* ancestor_team_ids
+
+|===
+
+=== User IdP Profiles
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Create User IdP Profile
+| User IdP Profile
+| N/A
+| N/A
+| Create
+| Subaction:
+None +
+Properties:
+
+* userId
+* idpUserId
+* providerId
+* loginProfileData
 
 |===
 
@@ -2165,6 +2426,16 @@ Properties: Transit gateway metadata
 |Create/Modify/Delete
 |Subaction: None +
 Properties:  None
+|Create/Modify/Delete routes
+|Private Space
+|PrivateSpaceID
+|N/A
+|Create/Modify/Delete
+|Subaction: None +
+Properties:
+
+* Target
+* Route object
 
 |===
 
@@ -2259,14 +2530,14 @@ The cursor-based pagination API is not applicable to the CSV query. The query co
 The following example shows a series of calls in a query loop for cursor based query.
 
 
-. The first call does not have a cursor in the body and does not request the `total`. The response returns the following data: 
+. The first call does not have a cursor in the body and does not request the `total`. The response returns the following data:
 +
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
 ----
 +
-Body: 
+Body:
 +
 [source,console]
 ----
@@ -2276,7 +2547,7 @@ Body:
 }
 ----
 +
-Response: 
+Response:
 +
 [source,console]
 ----
@@ -2288,14 +2559,14 @@ Response:
 +
 You can use the cursor from the first call's response in the next call to get the next set of rows.
 
-. The second call has a specific cursor in the request: 
+. The second call has a specific cursor in the request:
 +
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
 ----
 +
-Body: 
+Body:
 +
 [source,console]
 ----
@@ -2306,7 +2577,7 @@ Body:
 }
 ----
 +
-Response: 
+Response:
 +
 [source,console]
 ----
@@ -2323,7 +2594,7 @@ Response:
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true
 ----
 +
-Body: 
+Body:
 +
 [source,console]
 ----
@@ -2334,7 +2605,7 @@ Body:
 }
 ----
 +
-Response: 
+Response:
 +
 [source,console]
 ----
@@ -2343,14 +2614,14 @@ Response:
 }
 ----
 
-. The following example shows how to use a cursor and request the total: 
+. The following example shows how to use a cursor and request the total:
 +
 [source,console]
 ----
 POST https://base/audit/v2/organizations/<orgId>/query?cursorPagination=true&doIncludeTotal=true
 ----
 +
-Body: 
+Body:
 +
 [source,console]
 ----
@@ -2361,7 +2632,7 @@ Body:
 }
 ----
 +
-Response: 
+Response:
 +
 [source,console]
 ----
@@ -2389,6 +2660,27 @@ Get actions by date range:
 ----
 curl 'https://anypoint.mulesoft.com/audit/v2/organizations/<organization_id>/query?include_internal=false' -H 'Authorization: bearer <bearer_value>' -H 'Content-Type: application/json;charset=UTF-8' -H 'Accept: application/json, text/plain, */*' --data-binary '{"startDate":"2017-03-08T20:16:41.250Z","endDate":"2017-03-08T21:16:41.250Z","platforms":[],"objectTypes":[],"actions":[],"objectIds":[],"userIds":[],"ascending":false,"organizationId":"<organization_id>","offset":0,"limit":25}' --compressed ;
 ----
+
+=== Rate Limit Policy for Audit Log Query Endpoint
+
+The Audit Log Query endpoint applies rate limits per IP in the three control planes: US, EU, and gov. The following table outlines the rate limits for each control plane:
+
+[%header,cols="15a,15a"]
+|===
+|Control Plane
+|Allowed requests per minute per IP
+|US
+|700
+|EU
+|40
+|Gov
+|40
+|===
+
+
+If a client exceeds the rate limit for a given control plane, the Audit Log Query endpoint returns a `503 Service Unavailable` status code until the minute expires. During this time, the service is unavailable to the client.
+
+We recommend that users of the Audit Log Query Endpoint monitor their request rates and adjust their usage accordingly to avoid exceeding the rate limit. Note that exceeding the rate limit may result in the endpoint being temporarily unavailable.
 
 
 == See Also

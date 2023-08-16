@@ -167,6 +167,7 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 * `profile`: Read-only access to the user's Anypoint profile.
 * `email`: Read-only access to the user's email.
 * `offline_access`: Access to the user's data when they are not logged in.
+* `openid:google_wif`: Enables you to configure Anypoint as an IdP for Google Cloud by providing an `id_token` and an access token during the OAuth2 token flow for `client_credentials` connected apps. This ID token conforms to the IdP requirements as outlined in the https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers[GCP's WIF requirements].
 
 [NOTE]
 Apps that use `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries using the scope that corresponds to the user who created the connected app.

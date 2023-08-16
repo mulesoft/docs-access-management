@@ -1,0 +1,1 @@
+include::release-notes::partial$access-management/access-management-rn-landing-page.adoc[]

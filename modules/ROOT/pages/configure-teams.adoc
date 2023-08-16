@@ -20,24 +20,27 @@ Team maintainers can manage their teams in the following ways:
 == Create a Child Team
 
 You can create child teams under the following circumstances:
-- If you are the Organization Administrator for root, you can create child teams at any org level.
-- If you are the Organization Administrator for a business group, you can create child teams at the root level and become the maintainer for that team.
-- If you are a team maintainer, you can create child teams for that team.
+
+* If you are the Organization Administrator for root, you can create child teams at any org level.
+* If you are the Organization Administrator for a business group, you can create child teams at the root level and become the maintainer for that team.
+* If you are a team maintainer, you can create child teams for that team. 
++
 All child teams inherit user permissions from their parents, but you configure additional permissions.
 
 To create a child team in the *Teams* page:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-include::partial$include-nav-teams.adoc[]
+include::partial$include-nav-teams.adoc[] 
 
-. Select *Create Team*.
-. Enter a unique and intuitive name for your child team. +
+. Click *Create Team*.
+. Enter a unique and intuitive name for your child team. 
++
 You can use only alphanumeric characters, hyphens, commas, periods, and spaces. The character limit is 255.
 +
 . Select a parent team.
 . Select *Save*.
-
++
 Your new child team appears under its parent team in the list of teams. You can select any parent team in that list and navigate to its *Child teams* tab to see a list of all that parent team's child teams.
 
 == Manage Team Permissions
@@ -54,12 +57,16 @@ include::partial$include-nav-steps-team-maintainer.adoc[]
 
 . Click the team for which you want to configure permissions.
 . Click the *Permissions* tab.
-. In the *Permissions* section, click *Add permissions*
-. In the *Select Permissions* window, select the permissions that you want to add, and then select *Select contexts*.
-. Select the business groups and environments to which you want to apply the permissions, and then select *Review*. +
-The permissions you selected appear alongside the business groups and environments to which they apply.
+. In the *Permissions* section, click *Add permissions*.
 +
-. Select *Apply permissions*. +
+The *Add Permissions* window appears. 
+. In the *Select Permissions* section, select the permissions that you want to add and then click *Next*.
+. In the *Select Business Groups* section, select the business groups to which you want to apply the permissions. If you selected a permission that enables you to select environments, you can select which environments to apply to the permission. Click *Next*. 
++
+In the *Review* section, review the permissions and the business groups and environments to which they apply.
++
+. Click *Add Permissions*. 
++
 The permissions you selected now apply to team members and appear in the *Permissions* section for your team.
 
 === View Team Permissions Limits
@@ -94,7 +101,8 @@ include::partial$include-nav-steps-team-maintainer.adoc[]
 . In the *Teams* page, select the team to which you want to add a user.
 . Select *Add members*.
 . Select the name of each user you want to add to the team.
-. Select the membership status that you want to assign to each user: team member or team maintainer. +
+. Select the membership status that you want to assign to each user: team member or team maintainer. 
++
 A user who is added as a team maintainer receives team maintainer permissions as soon as you confirm their membership.
 +
 . Select *Add member*. +
@@ -119,7 +127,8 @@ You can designate a team maintainer to delegate team maintenance responsibilitie
 include::partial$include-nav-steps-team-maintainer-admin.adoc[]
 
 . In the *Members* section, navigate to the user you want to designate as a team maintainer.
-. In the *Type* drop-down, select either *Maintainer* or *Member*. +
+. In the *Type* drop-down, select either *Maintainer* or *Member*. 
++
 The team membership status for the user is updated.
 
 [[change-team-name]]
@@ -130,7 +139,8 @@ include::partial$include-nav-steps-team-settings.adoc[]
 . In the *Name* box, enter a new name for your team. +
 You can use only alphanumeric characters, hyphens, commas, periods, and spaces. The character limit is 255.
 +
-. Click *Save changes*. +
+. Click *Save changes*. 
++
 Your team is renamed.
 
 == Move Your Team
@@ -138,7 +148,8 @@ Your team is renamed.
 include::partial$include-nav-steps-team-settings.adoc[]
 
 . In the *Parent Team* list, select the new parent team.
-. Click *Save Changes*. +
+. Click *Save Changes*. 
++
 Your team and its child teams now reside under the parent team you selected.
 
 == Delete a Team
@@ -150,5 +161,6 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . Click *...* next to the team that you want to delete.
 . Click *Delete...*.
 . Enter the name of the team that you want to delete.
-. Click *Delete*. +
+. Click *Delete*. 
++
 The team is deleted and no longer appears in the *Teams* page.
