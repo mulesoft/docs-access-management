@@ -36,7 +36,7 @@ include::partial$include-nav-teams.adoc[]
 . Click *Create Team*.
 . Enter a unique and intuitive name for your child team. 
 +
-You can use only alphanumeric characters, hyphens, commas, periods, and spaces. The character limit is 255.
+You can use only alphanumeric characters, hyphens, underscores, and spaces. The character limit is 255.
 +
 . Select a parent team.
 . Select *Save*.
