@@ -22,6 +22,6 @@ For organization owners and administrators, Access Management enables you to:
 Access Management also provides a REST API for you to programmatically access the resources related to user and client management, organizations and business groups, and roles and permissions.
 To use this API, use the https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/apis/11270/versions/11646/pages/11244[Access Management API Portal].
 
-Depending on your xref:hosting::hosting-home.adoc[control plane], some Access Management features may be unavailable to your organization. For example, account creation and user invitation from the platform is not available for Anypoint Platform Private Cloud Edition. Certain features are also unavailable for Mulesoft Government Cloud.
+Depending on your xref:hosting-home::index.adoc[control plane], some Access Management features may be unavailable to your organization. For example, account creation and user invitation from the platform is not available for Anypoint Platform Private Cloud Edition. Certain features are also unavailable for Mulesoft Government Cloud.
 
 If you are an organization administrator and have questions about your account, contact your MuleSoft Account Team for help. Otherwise, contact your organization administrator.
