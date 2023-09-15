@@ -2511,9 +2511,9 @@ Properties: Store metadata
 |Parent
 |Action
 |Payload
-|Create secret group
+|Create a secret group
 |secretGroup
-|secretGroupID
+|secretGroup name
 |N/A
 |Create
 |Subaction:
@@ -2521,11 +2521,11 @@ None +
 Properties:
 
 * secretGroup path
-* transaction ID
+* secrets manager transaction ID
 
-|Delete secret group
+|Delete a secret group
 |secretGroup
-|secretGroupID
+|secretGroup name
 |N/A
 |Delete
 |Subaction:
@@ -2533,11 +2533,11 @@ None +
 Properties:
 
 * secretGroup path
-* transaction ID
+* secrets manager transaction ID
 
-|Create secret
-|secret such as sharedSecret
-|secretID
+|Create a secret
+|a secret type such as sharedSecret
+|secret name
 |N/A
 |Create
 |Subaction:
@@ -2545,11 +2545,11 @@ None +
 Properties:
 
 * secret path
-* transaction ID
+* secrets manager transaction ID
 
-|Update secret
-|secret such as sharedSecret
-|secretID
+|Update a secret
+|a secret type such as sharedSecret
+|secret name
 |N/A
 |Update
 |Subaction:
@@ -2557,11 +2557,11 @@ None +
 Properties:
 
 * secret path
-* transaction ID
+* secrets manager transaction ID
 
-|Patch secret
-|secret such as sharedSecret
-|secretID
+|Patch a secret
+|a secret type such as sharedSecret
+|secret name
 |N/A
 |Update
 |Subaction:
@@ -2569,7 +2569,7 @@ None +
 Properties:
 
 * secret path
-* transaction ID
+* secrets manager transaction ID
 
 |===
 
