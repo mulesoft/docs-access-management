@@ -2501,6 +2501,78 @@ Properties: Client metadata
 Properties: Store metadata
 |===
 
+== Secrets Manager
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create secret group
+|secretGroup
+|secretGroupID
+|N/A
+|Create
+|Subaction:
+None +
+Properties:
+
+* secretGroup path
+* transaction ID
+
+|Delete secret group
+|secretGroup
+|secretGroupID
+|N/A
+|Delete
+|Subaction:
+None +
+Properties:
+
+* secretGroup path
+* transaction ID
+
+|Create secret
+|secret such as sharedSecret
+|secretID
+|N/A
+|Create
+|Subaction:
+None +
+Properties:
+
+* secret path
+* transaction ID
+
+|Update secret
+|secret such as sharedSecret
+|secretID
+|N/A
+|Update
+|Subaction:
+None +
+Properties:
+
+* secret path
+* transaction ID
+
+|Patch secret
+|secret such as sharedSecret
+|secretID
+|N/A
+|Update
+|Subaction:
+None +
+Properties:
+
+* secret path
+* transaction ID
+
+|===
+
 == About Audit Log REST API Access
 
 You can access the
