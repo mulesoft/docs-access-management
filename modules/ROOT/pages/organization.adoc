@@ -79,7 +79,7 @@ include::partial$include-nav-organizations.adoc[]
 [NOTE]
 --
 * For newer Anypoint Platform accounts, the client ID and secret apply to environments rather than organizations. See xref:environments.adoc[Environments].
-* To change the client ID or client secret of an organization, please contact your MuleSoft customer support representative.
+* To change the client secret for an environment or organization, see https://help.mulesoft.com/s/article/How-to-set-or-reset-environment-client-secret-in-Anypoint-Platform[this help article], or contact your customer support representative.
 --
 
 == Manage Root Organization Settings
