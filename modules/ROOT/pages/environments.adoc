@@ -75,7 +75,7 @@ include::partial$include-nav-environments.adoc[]
 
 [NOTE]
 --
-To change the client ID or client secret of an environment, you must contact your customer support representative.
+To change the client secret for an environment, see https://help.mulesoft.com/s/article/How-to-set-or-reset-environment-client-secret-in-Anypoint-Platform[this help article], or contact your customer support representative.
 --
 
 [[add-an-idp-to-an-existing-environment]]
