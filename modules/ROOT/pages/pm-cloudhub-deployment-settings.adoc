@@ -1,6 +1,6 @@
 = Configuring CloudHub Deployment Settings for Partner Manager
 
-To configure settings for deploying Partner Manager to CloudHub, access the business unit and environment for which you want to deploy Partner Manager and then follow these steps:
+To configure settings for deploying Anypoint Partner Manager to CloudHub, access the business unit and environment for which you want to deploy Partner Manager and then follow these steps:
 
 . In the *Configure a Partner Manager environment* window, enter the following general settings:
 +
@@ -9,7 +9,7 @@ To configure settings for deploying Partner Manager to CloudHub, access the busi
 | Setting | Description | Default 
 | Deployment Target Type | Target type for your Partner Manager deployment. Select *CloudHub 1.0*. | CloudHub 1.0
 | Runtime Version | Mule runtime engine version to run Partner Manager applications.| 4.4.0
-| CloudHub Region |Region in which to deploy Partner Manager | Retrieved from the business group's Runtime Manager setting.
+| CloudHub Region |Region in CloudHub is deployed. | Retrieved from the business group's Runtime Manager setting
 | Anypoint MQ Region | This value is automatically assigned based on the specified CloudHub region and you can't change it. |  
 | Automatically restart app when not responding | Directs CloudHub to automatically restart your application when the monitoring system discovers an issue. | Selected
 |===
@@ -21,8 +21,8 @@ To configure settings for deploying Partner Manager to CloudHub, access the busi
 | Setting |Description | Default
 | Each B2B endpoint | Reserved CPU space, CPU space limit, and memory capacity for each Partner Manager endpoint. Partner Manager deploys a generic Mule app to the runtime for each endpoint protocol and direction (receive or send) combination. a| 0.1 vCores
 | B2B API Replication Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B API Replication Service. | 0.2 vCores
-| B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B Document Processing Service | 0.2 vCores
-| Deploy HTTP/AS2 apps to private port | Directs CloudHub to automatically deploy newly created AS2, HTTP, and HTTPS endpoints to a private port.| Selected
+| B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the B2B Document Processing Service. | 0.2 vCores
+| Deploy HTTP/AS2 apps to private port | Directs CloudHub to automatically deploy newly-created AS2, HTTP, and HTTPS endpoints to a private port.| Selected
 |===
 +
 For help with sizing, contact your MuleSoft Account Team. 

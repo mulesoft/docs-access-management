@@ -11,8 +11,8 @@ To configure settings for deploying Partner Manager to Anypoint Runtime Fabric, 
 | Runtime Fabric | Name of the Runtime Fabric instance to use as your deployment target.  | 
 | Runtime Version | Mule runtime engine version to run your Runtime Fabric instance.| 4.4.0
 | Anypoint MQ Region | Region where Anypoint MQ is deployed.  | US East (N. Virginia)
-| Enforce deploying replicas across nodes | Whether to enforce the deployment of Partner Manager application instances across different nodes. | Selected
-| Use persistent object store | Specifies that Partner Manager application instances must use a persistent object store. This value is always selected and you can't modify it. | 
+| Enforce deploying replicas across nodes | Directs Runtime Fabric to enforce the deployment of Partner Manager application instances across different nodes. | Selected
+| Use persistent object store | Specifies that Partner Manager application instances must use a persistent object store. This value is always selected and you can't modify it. | Selected
 |===
 +
 . Select *Applications* and enter the following application settings:
@@ -21,26 +21,27 @@ To configure settings for deploying Partner Manager to Anypoint Runtime Fabric, 
 |===
 | Setting |Description | Default
 | Application Name Prefix |  Prefix appended to the Partner Manager application names. Maximum length is five characters. | 
-| Each B2B endpoint | Reserved CPU space, CPU space limit, and memory capacity for each Partner Manager endpoint. Partner Manager deploys a generic Mule app to the runtime for each endpoint protocol and direction (receive or send) combination. For help with sizing, contact your MuleSoft Account Team. a| Defaults are:
+| Each B2B endpoint | Reserved CPU space, CPU space limit, and memory capacity for each Partner Manager endpoint. Partner Manager deploys a generic Mule app to the runtime for each endpoint protocol and direction (receive or send) combination. For help with sizing, contact your MuleSoft Account Team. a|
 
-* Reserved CPU: 80m
-* CPU Limit: 500m
-* Memory: 900Mi
-| B2B API Replication Service a| Reserved CPU space, CPU space limit, and memory capacity for the Partner Manager B2B API Replication Service. a| Defaults are:
+* *Reserved CPU*: 80m
+* *CPU Limit*: 500m
+* *Memory*: 900Mi
+| B2B API Replication Service a| Reserved CPU space, CPU space limit, and memory capacity for the Partner Manager B2B API Replication Service. a| 
 
-* Reserved CPU: 100m
-* CPU Limit: 500m
-* Memory: 1000Mi
-| B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the Partner Manager B2B Docunent Processing Service. a| Defaults are:
+* *Reserved CPU*: 100m
+* *CPU Limit*: 500m
+* *Memory*: 1000Mi
+| B2B Document Processing Service | Reserved CPU space, CPU space limit, and memory capacity for the Partner Manager B2B Docunent Processing Service. a| 
 
-* Reserved CPU: 100m
-* CPU Limit: 500m
-* Memory: 1200Mi
+* *Reserved CPU*: 100m
+* *CPU Limit*: 500m
+* *Memory*: 1200Mi
 |===
 +
 . Click *Save*.
 . Select *JMS Connection* and enter the JMS connection settings:
 +
+[%header%autowidth.spread]
 |===
 | Setting | Description | Default
 | JMS Broker URL | URL of the JMS broker.  | 

@@ -1,10 +1,10 @@
 = Deploying Partner Manager
 
-You can deploy Anypoint Partner Manager to either Cloudhub or Anypoint Runtime Fabric. 
+You can deploy Anypoint Partner Manager to either CloudHub or Anypoint Runtime Fabric. 
 
 To configure Partner Manager deployment settings, use the *Partner Manager Settings* page. You can configure separate deployment settings for each business group environment, such as for the design, test, and production environments:
 
 . In the Access Management navigation menu, click *Business Groups*. 
 . Select the business group for which you want to configure Partner Manager deployment settings.
 . Click *Partner Manager*.
-. In the *Configure a Partner Manager environment* window, configure settings for xref:pm-cloudhub-deployment-settings.adoc[deploying Partner Manager to CloudHub] or xref:pm-rtf-deployment-settings.adoc[deploying Partner Manager to Runtime Fabric].
+. In the *Configure a Partner Manager environment* window, configure settings for either xref:pm-cloudhub-deployment-settings.adoc[deploying Partner Manager to CloudHub] or xref:pm-rtf-deployment-settings.adoc[deploying Partner Manager to Runtime Fabric].
