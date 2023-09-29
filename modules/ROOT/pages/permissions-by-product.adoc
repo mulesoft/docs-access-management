@@ -25,7 +25,7 @@ Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
 == Anypoint Code Builder
 
-Anypoint Code Builder Developer:: Enables a user to create and use Anypoint Code Builder WebIDE instances.
+Anypoint Code Builder Developer:: Enables a user to create and use cloud IDE instances of Anypoint Code Builder. This permission does not apply to Anypoint Code Builder for Desktop. 
 
 == API Catalog
 
