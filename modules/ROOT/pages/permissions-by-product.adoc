@@ -260,6 +260,10 @@ View Activity:: Enables a user have view-only access to transaction activity.
 +
 This user cannot view or modify either partner or message flow configurations.
 
+== RPA
+
+include::rpa-home::partial$rpa-permissions.adoc[]
+
 == Runtime Manager
 
 CloudHub Network Administrator:: Enables a user to manage CloudHub network resources.
