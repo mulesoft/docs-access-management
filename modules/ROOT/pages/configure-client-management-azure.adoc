@@ -57,6 +57,10 @@ When https://docs.microsoft.com/en-us/graph/api/application-post-applications?vi
 
 For a list of supported grant types, see the https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
 
+=== Client Secrets 
+
+Initial secrets expiration is set to 6 months per Microsoft recommendation. 
+
 == Limitations 
 
 === Microsoft National Clouds
