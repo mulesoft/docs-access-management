@@ -70,7 +70,7 @@ Access Management imposes the following limits on features in an organization:
 * Connected apps per root organization: 2000
 * Scope assignments per connected application: 1000
 
-=== User token limits:
+=== User Token Limits:
 
 * Active tokens per user in Gov Cloud: 100
 * Active tokens per user in EU Region: 100
