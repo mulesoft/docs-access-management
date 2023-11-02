@@ -23,6 +23,7 @@ Usage Viewer:: Enables a user to view usage reports.
 == API Governance
 
 * Governance Administrator
+* Governance Viewer
 
 == API Manager
 
