@@ -2040,7 +2040,7 @@ Properties: Review object
 |Action
 |Payload
 
-| Create run Configuration
+| Create run configuration
 | Run configuration
 | Run configuration ID
 | N/A
@@ -2068,7 +2068,7 @@ Properties:
 ** Bot ID
 ** Assigned sessions
 
-| Edit run Configuration
+| Edit run configuration
 | Run configuration
 | Run configuration ID
 | N/A
@@ -2098,7 +2098,7 @@ Properties:
 ** Assigned sessions
 
 
-| Delete run Configuration
+| Delete run configuration
 | Run configuration
 | Run configuration ID
 | N/A
@@ -2112,7 +2112,7 @@ Properties:
 * Run configuration name
 
 
-| Deploy run Configuration
+| Deploy run configuration
 | Run configuration
 | Run configuration ID
 | N/A
@@ -2131,7 +2131,7 @@ Properties:
 ** Bot ID
 ** Assigned sessions
 
-| Publish run Configuration
+| Publish run configuration
 | Run configuration
 | Run configuration ID
 | N/A
@@ -2145,7 +2145,7 @@ Properties:
 * Run configuration name
 
 
-| Revoke run Configuration
+| Revoke run configuration
 | Run configuration
 | Run configuration ID
 | N/A
@@ -2159,7 +2159,7 @@ Properties:
 * Run configuration name
 
 
-| Pause run Configuration
+| Pause run configuration
 | Run configuration
 | Run configuration ID
 | N/A
@@ -2173,7 +2173,7 @@ Properties:
 * Run configuration name
 
 
-| Continue run Configuration
+| Continue run configuration
 | Run configuration
 | Run configuration ID
 | N/A
@@ -2275,7 +2275,7 @@ Properties:
 Properties:
 
 * Bot name
-* Api key name
+* API key name
 * Bot version
 * IP address
 * Hostname
@@ -2293,13 +2293,13 @@ Properties:
 Properties:
 
 * Bot name
-* Api key name
+* API key name
 * Bot version
 * IP address
 * Hostname
 * Time zone
 * Bot status
-* Assigned applications
+* Assigned Applications
 ** Application name
 * Assigned service times
 ** Service time name
