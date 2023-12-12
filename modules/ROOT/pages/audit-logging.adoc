@@ -2024,6 +2024,539 @@ Properties: Review object
 Properties: Review object
 |===
 
+
+== RPA 
+
+
+=== Run Configurations
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Create run configuration
+| Run configuration
+| Run configuration ID
+| N/A
+| Create
+| Subaction: None +
+Properties:
+
+* Process name
+* Process ID
+* Process phase
+* Run configuration name
+* Run configuration description
+* Run configuration priority
+* Activity parameters
+** Activity Parameter name
+*** Mapping with <global variable/credential name>
+* User task user
+* User task group 
+* Execution session type
+* Execution user
+* Execution taskbar option 
+* Schedule Name
+* Bots
+** Bot name
+** Bot ID
+** Assigned sessions
+
+| Edit run configuration
+| Run configuration
+| Run configuration ID
+| N/A
+| Edit
+|  Subaction: None +
+Properties:
+
+* Process name
+* Process ID
+* Process phase
+* Run configuration name
+* Run configuration description
+* Run configuration priority
+* Activity parameters
+** Activity Parameter name
+*** Mapping with <global variable/credential name>
+* User task user
+* User task group 
+* Execution session type
+* Execution user
+* Execution taskbar option 
+* Schedules
+** Schedule name
+* Bots
+** Bot name
+** Bot ID
+** Assigned sessions
+
+
+| Delete run configuration
+| Run configuration
+| Run configuration ID
+| N/A
+| Delete
+|  Subaction: None +
+Properties:
+
+* Process name
+* Process ID
+* Process phase
+* Run configuration name
+
+
+| Deploy run configuration
+| Run configuration
+| Run configuration ID
+| N/A
+| Deploy
+| Subaction: None +
+Properties:
+
+* Process name
+* Process ID
+* Process phase
+* Run configuration name
+* Schedules
+** Schedule name
+* Bots
+** Bot name
+** Bot ID
+** Assigned sessions
+
+| Publish run configuration
+| Run configuration
+| Run configuration ID
+| N/A
+| Publish
+|  Subaction: None +
+Properties:
+
+* Process name
+* Process ID
+* Process phase
+* Run configuration name
+
+
+| Revoke run configuration
+| Run configuration
+| Run configuration ID
+| N/A
+| Revoke
+|  Subaction: None +
+Properties:
+
+* Process name
+* Process ID
+* Process phase
+* Run configuration name
+
+
+| Pause run configuration
+| Run configuration
+| Run configuration ID
+| N/A
+| Pause
+|  Subaction: None +
+Properties:
+
+* Process name
+* Process ID
+* Process phase
+* Run configuration name
+
+
+| Continue run configuration
+| Run configuration
+| Run configuration ID
+| N/A
+| Continue
+|  Subaction: None +
+Properties:
+
+* Process name
+* Process ID
+* Process phase
+* Run configuration name
+
+|===
+
+
+=== Processes 
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Create process
+| Process
+| Process ID
+| N/A
+| Create
+| Subaction: none + 
+
+Properties:
+
+* Process name
+* Process phase
+* Applications required
+** Application name
+* Process team
+** Member name
+** Assigned phases
+* Advanced permissions option
+
+
+| Edit process
+| Process
+| Process ID
+| N/A
+| Edit
+| Subaction: none + 
+
+Properties:
+
+* Process name
+* Process phase
+* Applications required
+** Application name
+* Process team
+** Member name
+** Assigned phases
+* Advanced permissions option
+
+| Delete process
+| Process
+| Process ID
+| N/A
+| Delete
+| Subaction: none + 
+
+Properties:
+
+* Process name
+* Process phase
+
+|===
+
+
+=== Bots 
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+| Register bot
+| Bot
+| Bot ID
+| N/A
+| Register 
+| Subaction: none + 
+
+Properties:
+
+* Bot name
+* API key name
+* Bot version
+* IP address
+* Hostname
+* Time zone
+
+
+
+| Register bot
+| Bot
+| Bot ID
+| N/A
+| Register 
+| Subaction: none + 
+
+Properties:
+
+* Bot name
+* API key name
+* Bot version
+* IP address
+* Hostname
+* Time zone
+* Bot status
+* Assigned Applications
+** Application name
+* Assigned service times
+** Service time name
+* Phase affiliation
+* Description
+* Assigned Secure Sessions
+
+
+| Delete bot
+| Bot
+| Bot ID
+| N/A
+| Delete 
+| Subaction: none + 
+
+Properties:
+
+* Bot name
+
+|===
+
+
+=== Credential Pool
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+
+| Create credential
+| Credential
+| Credential ID
+| N/A 
+| Create 
+| Subaction: none + 
+
+Properties:
+
+* Credential name
+* Credential description
+* User affiliation
+* User group affiliation
+* Phase affiliation
+* Type
+
+
+| Edit credential
+| Credential
+| Credential ID
+| N/A 
+| Edit 
+| Subaction: none + 
+
+Properties:
+
+* Credential name
+* Credential description
+* User affiliation
+* User group affiliation
+* Phase affiliation
+
+
+| Delete credential
+| Credential
+| Credential ID
+| N/A 
+| Delete 
+| Subaction: none + 
+
+Properties:
+
+* Credential name
+
+
+|===
+
+
+=== Global Variables
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+
+| Create global variable
+| Global variable
+| Global variable ID
+| N/A
+| Create
+| Subaction: none + 
+
+Properties:
+
+* Global variable name
+* Global variable description
+* Phase affiliation
+* Type
+
+
+| Edit global variable
+| Global variable
+| Global variable ID
+| N/A
+| Edit
+| Subaction: none + 
+
+Properties:
+
+* Global variable name
+* Global variable description
+* Phase affiliation
+
+| Delete global variable
+| Global variable
+| Global variable ID
+| N/A
+| Delete
+| Subaction: none + 
+
+Properties:
+
+* Global variable name
+
+
+|===
+
+
+=== Applications 
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+
+| Create Application
+| Application
+| Application ID
+| N/A
+| Create
+| Subaction: none +
+
+Properties:
+
+* Application name
+* Application time zone
+* Downtimes
+** Downtime name
+
+
+| Edit Application
+| Application
+| Application ID
+| N/A
+| Edit
+| Subaction: none +
+
+Properties:
+
+* Application name
+* Application time zone
+* Downtimes
+** Downtime name
+
+
+| Delete Application
+| Application
+| Application ID
+| N/A
+| Delete
+| Subaction: none +
+
+Properties:
+
+* Application name
+
+
+|===
+
+
+=== Service Times
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+
+| Create service time
+| Service time 
+| Service time ID
+| N/A
+| Create
+|Subaction: none + 
+
+Properties:
+
+* Service time name
+* Timezone
+* Service time start
+* Service time end
+
+
+| Edit service time
+| Service time 
+| Service time ID
+| N/A
+| Edit
+|Subaction: none + 
+
+Properties:
+
+* Service time name
+* Timezone
+* Service time start
+* Service time end
+
+
+| Delete service time
+| Service time 
+| Service time ID
+| N/A
+| Delete
+|Subaction: none + 
+
+Properties:
+
+* Service time name
+
+
+|===
+
+
+
+
 == Runtime Manager
 
 
