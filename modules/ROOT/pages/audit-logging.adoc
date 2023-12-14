@@ -2028,6 +2028,12 @@ Properties: Review object
 == RPA 
 
 
+[NOTE]
+--
+The payload is split when it contains more than 32768 characters. Split audit log entries have the same correlation ID.
+--
+
+
 === Run Configurations
 
 
@@ -2053,6 +2059,7 @@ Properties:
 * Process phase
 * Run configuration name
 * Run configuration description
+* Run configuration type
 * Run configuration priority
 * Activity parameters
 ** Activity Parameter name
