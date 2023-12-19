@@ -2030,7 +2030,7 @@ Properties: Review object
 
 [NOTE]
 --
-The payload is split when it contains more than 32768 characters. Split audit log entries have the same correlation ID.
+The payload is split when it contains more than 32k (32768) characters. Split audit log entries have identical correlation IDs.
 --
 
 
