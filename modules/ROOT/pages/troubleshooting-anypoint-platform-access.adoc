@@ -61,7 +61,7 @@ Access Management imposes the following limits on features in an organization:
 
 === Client providers:
 
-* Client management providers per root organization: 10
+* Client management providers per root organization: 25
 
 === Connected apps:
 
