@@ -6,8 +6,11 @@ Deploy API Proxies:: Enables a user to deploy API proxies in the specified envir
 Manage API Alerts:: Enables a user to view, create, modify, and delete API alerts in the specified environment.
 Manage APIs Configuration:: Enables a user to view and modify API configurations in the specified environment.
 Manage Contracts:: Enables a user to view, accept, reject, and delete contracts and tiers in the specified environment.
-Manage Policies:: Enables a user to view, create, modify, and delete API policies in the specified environment. 
+Manage Policies:: Enables a user to view, create, modify, and delete API policies in the specified environment.
+Manage Client Applications: Enables a user to view, modify, and delete client application in the specified bussiness group.
 View API Alerts:: Enables a user to view the API alerts in the specified environment.
 View APIs Configuration:: Enables a user to view API configurations in the specified environment.
 View Contracts:: Enables a user to view contracts and tiers in the specified environment.
 View Policies:: Enables a user to view API policies in the specified environment.
+View Client Applications: Enables a user to view client applications in the specified bussiness group.
+
