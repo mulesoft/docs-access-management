@@ -44,7 +44,7 @@ NOTE: This feature is currently available only for select Anypoint Platform and 
 
 Salesforce organizations can establish a tenant relationship with their Anypoint Platform organizations. After this relationship is established, an Anypoint Platform user with the Organization Administrator permission can enable and disable this relationship in the *Access Management* user interface in Anypoint Platform. For more information on initiating a relationship with Salesforce, see https://help.salesforce.com/s/articleView?id=sf.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connection] in the Salesforce documentation.
 
-When you enable this connection with your Salesforce organization, the trusted Salesforce organization can publish assets from your Anypoint Platform organization. 
+When you enable this connection with your Salesforce organization, you can publish assets from your Anypoint Platform organization to the trusted Salesforce organization. 
 
 === Enable or Disable a Salesforce Connection to Your Organization
 
@@ -52,6 +52,6 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *External Access*.
 . In the *External Access* page, click *Salesforce*. +
-A list of Salesforce organizations that have requested tenancy appears, showing the name, organization ID, domain, and status of the relationship connection.
+A list of Salesforce organizations appears, showing the name, organization ID, domain, and status of the relationship connection.
 +
 . Click *Enable* or *Disable*.
