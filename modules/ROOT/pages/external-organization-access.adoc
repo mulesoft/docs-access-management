@@ -38,15 +38,15 @@ To remove a trusted organization from your list of trusted organizations:
 . Click *Remove organization*.
 . Click *Yes, remove*.
 
-== Manage a Tenant Relationship to a Trusted Salesforce Organization 
+== Manage a Tenant Relationship to a Trusted Salesforce Organization (Beta)
 
 NOTE: This feature is currently available only for select Anypoint Platform and Salesforce customers.
 
-Salesforce organizations can establish a tenant relationship with their Anypoint Platform organizations. After this relationship is established, an Anypoint Platform user with the Organization Administrator permission can enable and disable this relationship in the *Access Management* user interface in Anypoint Platform. For more information on initiating a relationship with Salesforce, see https://help.salesforce.com/s/articleView?id=sf.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connection] in the Salesforce documentation.
-
-When you enable this connection with your Salesforce organization, you can publish assets from your Anypoint Platform organization to the trusted Salesforce organization. 
+Salesforce organizations can establish a tenant relationship with their Anypoint Platform organizations. After this relationship is established, an Anypoint Platform user with the Organization Administrator permission can enable and disable this relationship in the *Access Management* user interface in Anypoint Platform. For more information about initiating a relationship with Salesforce, see https://help.salesforce.com/s/articleView?id=sf.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connection] in the Salesforce documentation.
 
 === Enable or Disable a Salesforce Connection to Your Organization
+
+When you enable the connection with your Salesforce organization, you can publish assets from your Anypoint Platform organization to the trusted Salesforce organization. When you disable the connection, the Salesforce organization still appears in the list of available organizations, but you can no longer publish assets from your Anypoint Platform to your Salesforce organization.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
