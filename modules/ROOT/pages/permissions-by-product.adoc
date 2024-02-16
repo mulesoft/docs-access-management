@@ -185,16 +185,12 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 == Monitoring
 
-Monitoring Administrator:: 
 include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringAdmin]
 
-Monitoring Viewer:: 
 include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringViewer]
 
-Telemetry Exporter Administrator::
 include::monitoring::partial$monitoring-permissions.adoc[tag=telExpAdmin]
 
-Telemetry Exporter Configuration Manager::
 include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
 
 == MQ
