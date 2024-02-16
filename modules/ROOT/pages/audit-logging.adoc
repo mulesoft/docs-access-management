@@ -28,7 +28,7 @@ The *Audit Logs* page displays the logs. You can:
 
 == Export Audit Logs
 
-You can use the xref:monitoring::telemetry-exporter.adoc[Telemetry Exporter feature] in Anypoint Monitoring to export audit logs to third-parter analytics and observability apps. 
+You can use the xref:monitoring::telemetry-exporter.adoc[Telemetry Exporter feature] in Anypoint Monitoring to export audit logs to third-party analytics and observability apps. 
 
 include::monitoring::partial$telemetry-exporter-notes.adoc[tag=auditLogDuplicates]
 
