@@ -34,7 +34,7 @@ include::monitoring::partial$telemetry-exporter-notes.adoc[tag=auditLogDuplicate
 
 Telemetry Exporter for audit logs currently has the following data differences, limitations, and known issues:
 
-include::monitoring::partial$telemetry-exporter-notes.adoc[tag=knownIssues]
+include::monitoring::partial$telemetry-exporter-notes.adoc[tag=knownIssuesAL]
 
 == Audit Log Contents
 
