@@ -26,6 +26,16 @@ The *Audit Logs* page displays the logs. You can:
 * Filter audit logs by product, type, and actions.
 * Search audit logs by environment, object, and user.
 
+== Export Audit Logs
+
+You can use the xref:monitoring::telemetry-exporter.adoc[Telemetry Exporter feature] in Anypoint Monitoring to export audit logs to third-parter analytics and observability apps. 
+
+include::monitoring::partial$telemetry-exporter-notes.adoc[tag=auditLogDuplicates]
+
+Telemetry Exporter for audit logs currently has the following data differences, limitations, and known issues:
+
+include::monitoring::partial$telemetry-exporter-notes.adoc[tag=knownIssues]
+
 == Audit Log Contents
 
 Activities represented in the log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload which can store application-specific information such as changed fields, environment information, etc.
