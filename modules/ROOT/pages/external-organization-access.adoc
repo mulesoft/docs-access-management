@@ -55,3 +55,4 @@ include::partial$include-nav-steps-org-admin.adoc[]
 If your organization has at least one established tenant relationship, a list of Salesforce organizations appears, showing the name, organization ID, domain, and status of the relationship connection.
 +
 . Click *Enable* or *Disable*.
+
