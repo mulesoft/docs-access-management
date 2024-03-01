@@ -185,9 +185,13 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 == Monitoring
 
-Monitoring Administrator:: Enables a user to view, create, modify, and delete content in Anypoint Monitoring.
+include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringAdmin]
 
-Monitoring Viewer:: Enables a user to view but not modify content in Anypoint Monitoring.
+include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringViewer]
+
+include::monitoring::partial$monitoring-permissions.adoc[tag=telExpAdmin]
+
+include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
 
 == MQ
 
