@@ -41,6 +41,8 @@ API Experience Hub Community User:: Enables a user to view but not modify conten
 
 Governance Administrator:: Enables a user to manage profiles and view reports.
 
+Governance Viewer:: Enables a user to view reports.
+
 == API Manager
 
 Depending on your organization, you might see one of the following sets of permissions available for API Manager.
