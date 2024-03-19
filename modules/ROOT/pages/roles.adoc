@@ -111,7 +111,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 
 [NOTE]
 If you are using API Manager 2.0, users with the Portals Viewer role are not able to view private APIs. For API Manager 2.0, assign the user at least the Exchange Viewers role to allow the user access to all Exchange assets within the business group in which you have assigned the permission. +
-To control access for a single private API, don't assign the Exchange Viewers role to the user for the business group where the private API resides. Instead, use the share asset feature in Exchange. See xref:exchange::to-share-an-asset-with-a-user[Share an Asset]. Only users with the Exchange Administrators role can share an asset with another user.
+To control access for a single private API, don't assign the Exchange Viewers role to the user for the business group where the private API resides. Instead, use the share asset feature in Exchange. See xref:exchange::to-share-an-asset.adoc[Share an Asset]. Only users with the Exchange Administrators role can share an asset with another user.
 
 === Add Users to a Default Role
 

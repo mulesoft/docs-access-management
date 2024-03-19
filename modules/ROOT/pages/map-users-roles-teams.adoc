@@ -55,6 +55,24 @@ Use groups claims values to create a team or role for each group of users in you
 
 The following examples show responses from the `UserInfo` or `Token` endpoints that contain groups claims from different external identity providers.
 
+==== Azure AD
+
+The following example shows a typical Azure AD groups claim:
+
+[source,xml]
+----
+{
+    ...
+    "roles": "[
+        \"Everyone\",
+        \"groupOne\"
+    ]",
+    ...
+}
+----
+
+Given that groups claim, the JSONata expression is `$eval($string(roles))`.
+
 ==== Okta
 
 The following example shows a typical Okta groups claim:

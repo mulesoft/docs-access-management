@@ -61,7 +61,7 @@ Access Management imposes the following limits on features in an organization:
 
 === Client providers:
 
-* Client management providers per root organization: 10
+* Client management providers per root organization: 25
 
 === Connected apps:
 
@@ -69,6 +69,11 @@ Access Management imposes the following limits on features in an organization:
 * Connected apps accessible by external organizations: 20
 * Connected apps per root organization: 2000
 * Scope assignments per connected application: 1000
+
+=== User Token Limits:
+
+* Active tokens per user in Gov Cloud: 100
+* Active tokens per user in EU Region: 100
 
 
 == Accounts

@@ -25,7 +25,7 @@ Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
 == Anypoint Code Builder
 
-Anypoint Code Builder Developer:: Enables a user to create and use Anypoint Code Builder WebIDE instances.
+Anypoint Code Builder Developer:: Enables a user to create and use cloud IDE instances of Anypoint Code Builder. This permission does not apply to Anypoint Code Builder for Desktop. 
 
 == API Catalog
 
@@ -40,6 +40,8 @@ API Experience Hub Community User:: Enables a user to view but not modify conten
 == API Governance
 
 Governance Administrator:: Enables a user to manage profiles and view reports.
+
+Governance Viewer:: Enables a user to view reports.
 
 == API Manager
 
@@ -185,9 +187,13 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 == Monitoring
 
-Monitoring Administrator:: Enables a user to view, create, modify, and delete content in Anypoint Monitoring.
+include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringAdmin]
 
-Monitoring Viewer:: Enables a user to view but not modify content in Anypoint Monitoring.
+include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringViewer]
+
+include::monitoring::partial$monitoring-permissions.adoc[tag=telExpAdmin]
+
+include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
 
 == MQ
 
@@ -259,6 +265,10 @@ This user cannot view or modify partner configurations or transaction activity. 
 View Activity:: Enables a user have view-only access to transaction activity. 
 +
 This user cannot view or modify either partner or message flow configurations.
+
+== RPA
+
+include::rpa-home::partial$rpa-permissions.adoc[]
 
 == Runtime Manager
 
