@@ -454,65 +454,33 @@ The `Create Application` and `Delete Application` actions are logged at the root
 |Action
 |Payload
 
-|Create an active profile
-|profile
-|profile name
+|Create profile
+|Profile
+|Profile name
 |N/A
 |Create
-|Subaction:
-None +
-Properties:
-
-* User ID
-* Organization ID
-* Business Group ID
-* Timestamp
-* Profile Name
-
-|Create a draft profile
-|profile
-|profile name
 |N/A
-|Create
-|Subaction:
-None +
-Properties:
 
-* User ID
-* Organization ID
-* Business Group ID
-* Timestamp
-* Profile Name
+|Update profile
+|Profile
+|Profile name
+|N/A
+|Update
+|N/A
 
-|Delete a profile
-|profile
-|profile name
+|Delete profile
+|Profile
+|Profile name
 |N/A
 |Delete
-|Subaction:
-None +
-Properties:
+|N/A
 
-* User ID
-* Organization ID
-* Business Group ID
-* Timestamp
-* Profile Name
-
-|Activate a draft profile
-|profile
-|profile name
+|Activate profile
+|Profile
+|Profile name
 |N/A
 |Activate
-|Subaction:
-None +
-Properties:
-
-* User ID
-* Organization ID
-* Business Group ID
-* Timestamp
-* Profile Name
+|N/A
 |===
 
 == API Designer APIs
