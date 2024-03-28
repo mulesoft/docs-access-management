@@ -459,28 +459,32 @@ The `Create Application` and `Delete Application` actions are logged at the root
 |Profile name
 |N/A
 |Create
-|N/A
+|Subaction: None +
+Properties: None
 
 |Update profile
 |Profile
 |Profile name
 |N/A
 |Update
-|N/A
+|Subaction: None +
+Properties: None
 
 |Delete profile
 |Profile
 |Profile name
 |N/A
 |Delete
-|N/A
+|Subaction: None +
+Properties: None
 
 |Activate profile
 |Profile
 |Profile name
 |N/A
 |Activate
-|N/A
+|Subaction: None +
+Properties: None
 |===
 
 == API Designer APIs
