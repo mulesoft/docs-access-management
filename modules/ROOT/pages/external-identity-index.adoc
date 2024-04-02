@@ -85,5 +85,5 @@ include::partial$include-nav-identity-providers.adoc[]
 . Click *Anypoint*.
 . Select one of the following:
 .. *Allow account creation*: Organization administrators can invite new users using the *Users* tab. Accounts created using this feature belong to the Anypoint identity provider and log in using their credentials rather than SSO.
-.. *Disable account creation*: Accounts must join the organization using an external identity provider. Existing accounts are unaffected and can continue to log in using their credentials.
+.. *Disable account creation*: New accounts must join the organization using an external identity provider and log in using SSO. Existing accounts are unaffected and can continue to log in using their credentials.
 . Click *Save Changes*.
