@@ -70,3 +70,20 @@ include::partial$include-nav-identity-providers.adoc[]
 include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinkingContextForAdmins,leveloffset=+1]
 
 include::partial$link-anypoint-platform-accounts.adoc[tag=deleteLinkedProfilesAdmin,leveloffset=+1]
+
+[[account-creation-changes]]
+== Enable or Disable Account Creation
+
+If your organization has single sign-on (SSO) using an xref:external-identity.adoc[external identity provider] enabled, you can prevent users from creating accounts that do not use SSO. 
+
+To modify account creation parameters:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-identity-providers.adoc[]
+
+. Click *Anypoint*.
+. Select one of the following:
+.. *Allow account creation*: Organization administrators can invite new users using the *Users* tab. Accounts created using this feature belong to the Anypoint identity provider and log in using their credentials rather than SSO.
+.. *Disable account creation*: New accounts must join the organization using an external identity provider and log in using SSO. Existing accounts are unaffected and can continue to log in using their credentials.
+. Click *Save Changes*.
