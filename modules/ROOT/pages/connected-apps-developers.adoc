@@ -30,8 +30,8 @@ include::partial$include-nav-connected-apps.adoc[]
 
 . In the *Owned Apps* section, click *Create App*.
 . In the *Create App* page, complete the following fields:
-.. Name +
-A Unique name for the application
+.. *Name* +
+A unique name for the application
 +
 .. *Type* +
 The type of Connected App to be created. Based on the type selected, the required fields varies.
@@ -45,6 +45,9 @@ Users can visit this URL to learn more about the app.
 +
 .. *Redirect URIs* +
 Configure which URIs users should be directed to after authorization. Type the URL and click *Add* to add it to the list.
++
+.. *Audience* +
+Configure whether the app is internal to your organization or is a third-party public app that can be distributed outside of your organization.
 +
 .. *Scopes* +
 The level of permissions to provide to the app. Click *Add Scopes* to select the scopes. For more information, see xref:connected-apps-developers.adoc#endpoint-scopes[Endpoint Scopes].
