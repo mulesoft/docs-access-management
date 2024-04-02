@@ -106,23 +106,6 @@ You can also view the organization ID, client ID, and client secret. These value
 
 To modify your xref:multi-factor-authentication.adoc[multi-factor authentication settings] for your organization, click the *Identity Providers* in the Access Management navigation menu. Organizations created after April 30, 2022 require multi-factor authentication by default for all users.
 
-[[account-creation-changes]]
-== Enable or Disable Account Creation
-
-If your organization has single sign-on (SSO) using an xref:external-identity.adoc[external identity provider] enabled, you can prevent users from creating accounts that do not use SSO. 
-
-To modify account creation parameters:
-
-include::partial$include-nav-steps-org-admin.adoc[]
-
-include::partial$include-nav-identity-providers.adoc[]
-
-. Click *Anypoint*.
-. Select one of the following:
-.. *Allow account creation*: Organization administrators can invite new users using the *Users* tab. Accounts created using this feature belong to the Anypoint identity provider and log in using their credentials rather than SSO.
-.. *Disable account creation*: Accounts must join the organization using an external identity provider. Existing accounts are unaffected and can continue to log in using their credentials.
-. Click *Save Changes*.
-
 == View Limits for an Organization or Business Group
 
 Your root organization and business groups each have a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform.
