@@ -96,13 +96,11 @@ To interact with a business group, you must be granted a permission within that 
 
 As a member of a business group, you are automatically granted permissions to view and access the business group, but to access certain resources, you must have the appropriate permissions or roles assigned to you. For example, to access APIs and CloudHub deployments in the business group, you must be assigned permissions that apply to that business group.
 
-For example, if you have the Organization Administrator permission in BusinessGroupA, you can grant users and teams access to APIs and CloudHub deployments in BusinessGroupA.
-
-If you also have the Organization Administrator permission in BusinessGroupB, this does not mean that you can grant access to APIs and CloudHub deployments in BusinessGroupA to users in BusinessGroupB, and vice versa.
+If you have the Organization Administrator permission in BusinessGroupA, you can grant users and teams access to APIs and CloudHub deployments in BusinessGroupA. If you also have the Organization Administrator permission in BusinessGroupB, this does not mean that you can grant access to APIs and CloudHub deployments in BusinessGroupA to users in BusinessGroupB, and vice versa.
 
 Resources that belong to the root organization require permissions specified at the root organization level.
 
-Users who are assigned the Organization Administrator permission at any level are automatically assigned that same permission in any child business group created within that level, so are automatically visible in the child. This does not apply retroactively to users who are assigned the Organization Administrator permission after a child is created.
+Users who are assigned the Organization Administrator permission at any level are automatically assigned that same permission in any child business group created within that level, so they are automatically visible in the child business group. This does not apply retroactively to users who are assigned the Organization Administrator permission after a child business group is created.
 
 == Control Access to Business Groups
 
@@ -117,6 +115,16 @@ The *Access Overview* section appears, displaying a list of all users with any p
 * `Users` or `Teams`
 * Permissions (sorted by product)
 * Business group
+
+=== Become a Business Group Administrator as a Root Organization Administrator
+
+If you have the Organization Administrator permission over your root organization, you can assign yourself the Organization Administrator permission in a specific business group. 
+
+include::partial$include-nav-business-groups.adoc[]
+
+. Click the *...* or overflow menu next to a business group.
+. Click *Add me as an admin...*
+
 
 == Delete a Business Group
 
