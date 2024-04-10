@@ -132,7 +132,7 @@ include::partial$include-nav-business-groups.adoc[]
 
 . Click the *...* or overflow menu next to a business group.
 . Click *Add me as an admin...*
-
+. Click *Confirm*.
 
 == Delete a Business Group
 
