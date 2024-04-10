@@ -126,7 +126,7 @@ When you use this feature, note the following:
 * If you use this feature on a business group that has a child business group, the Organization Administrator permission does not automatically extend to the child business group. +
 For example, if you add yourself as an admin to BusinessGroupA that has BusinessGroupB as a child, you only receive the Organization Administrator permission for BusinessGroupA. 
 +
-* If you use this feature on a business group and then create a child business group under the original, you are automatically given the Organization Administrator permission for the new child business group.
+* If you use this feature on a business group and then create a child business group under the original, you are automatically given the Organization Administrator permission for the newly created child business group.
 
 include::partial$include-nav-business-groups.adoc[]
 
