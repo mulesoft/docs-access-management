@@ -118,7 +118,15 @@ The *Access Overview* section appears, displaying a list of all users with any p
 
 === Become a Business Group Administrator as a Root Organization Administrator
 
-If you have the Organization Administrator permission over your root organization, you can assign yourself the Organization Administrator permission in a specific business group. Note that this option does not appear if you already have the Organization Administrator in the business group.
+If you have the Organization Administrator permission over your root organization, you can assign yourself the Organization Administrator permission in a specific business group. 
+
+When you use this feature, note the following: 
+
+* This option does not appear if you already have the Organization Administrator in the business group.
+* If you use this feature on a business group that has a child business group, the Organization Administrator permission does not automatically extend to the child business group. +
+For example, if you add yourself as an admin to BusinessGroupA that has BusinessGroupB as a child, you only receive the Organization Administrator permission for BusinessGroupA. 
++
+* If you use this feature on a business group and then create a child business group under the original, you are automatically given the Organization Administrator permission for the new child business group.
 
 include::partial$include-nav-business-groups.adoc[]
 
