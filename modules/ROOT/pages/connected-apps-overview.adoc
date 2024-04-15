@@ -19,7 +19,7 @@ For more information, see https://oauth.net/2/[OAuth 2.0] and https://openid.net
 You can use the Connected Apps feature to create a seamless authentication experience for end users. Connected apps address use cases for the following types of users:
 
 * An xref:connected-apps-org-admin.adoc[organization administrator] can control how their organization’s data is used by allowlisting apps, revoking access, and disabling this feature for the entire organization.
-* An xref:connected-apps-developers.adoc#developers[organization administrator who is developing a connected app] can register new (and manage existing) apps within their organization.
+* An xref:connected-apps-developers.adoc#developers[organization administrator who is developing a connected app] can register new (and manage existing) apps at the root organization or business group level.
 * An xref:connected-apps-end-users.adoc#end-users[end user] can authorize apps to access particular information, such as viewing assets in Anypoint Exchange.
 
 There are two types of connected apps supporting different grant types:
