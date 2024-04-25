@@ -5,9 +5,15 @@ API Group Administrator:: Enables a user to view, create, modify, deprecate, and
 Deploy API Proxies:: Enables a user to deploy API proxies in the specified environment.
 Manage API Alerts:: Enables a user to view, create, modify, and delete API alerts in the specified environment.
 Manage APIs Configuration:: Enables a user to view and modify API configurations in the specified environment.
+Manage Client Applications:: Enables a user to create and manage client applications in the root organization. 
++
+Users with this permission can view and modify application credentials and can add and remove client owners.
 Manage Contracts:: Enables a user to view, accept, reject, and delete contracts and tiers in the specified environment.
 Manage Policies:: Enables a user to view, create, modify, and delete API policies in the specified environment. 
 View API Alerts:: Enables a user to view the API alerts in the specified environment.
 View APIs Configuration:: Enables a user to view API configurations in the specified environment.
+View Client Applications:: Enables a user to view client applications in the root organization. 
++
+Users with this credential cannot view application secrets and cannot modify applications.
 View Contracts:: Enables a user to view contracts and tiers in the specified environment.
 View Policies:: Enables a user to view API policies in the specified environment.
