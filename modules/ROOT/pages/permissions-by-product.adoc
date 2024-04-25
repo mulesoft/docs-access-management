@@ -185,6 +185,16 @@ Users with this permission have the same access as users with the Exchange Admin
 +
 Use this permission to extend administrator permissions for an asset to an additional user.
 
+== IDP 
+
+include::idp::partial$permissions.adoc[tag=permissionManage]
+
+include::idp::partial$permissions.adoc[tag=permissionBuild]
+
+include::idp::partial$permissions.adoc[tag=permissionExecute]
+
+include::idp::partial$permissions.adoc[tag=permissionConfigure]
+
 == Monitoring
 
 include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringAdmin]
