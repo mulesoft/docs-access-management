@@ -9,7 +9,7 @@ When you configure client provider URLs, use the endpoint `/pf-ws/rest/oauth/cli
 
 == Steps to Add A PingFederate Client Provider
 
-include::partial$include-nav-steps-org-admin-bg.adoc[]
+include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-client-providers.adoc[]
 
