@@ -1,4 +1,4 @@
-= Client Management with PingFederate
+= Configure Client Management with PingFederate
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

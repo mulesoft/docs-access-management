@@ -1,4 +1,4 @@
-= OpenID Connect Client Management
+= Configure OpenID Connect Client Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -53,7 +53,7 @@ In *Advanced Settings* you can also select:
 
 * *Disable server certificate validation*: Disables server certificate validation if your OpenID client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
 * *Enable client deletion in Anypoint Platform*: Enables deletion of clients created with this integration.
-* *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`. For detailed example, please see below. 
+* *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`. For detailed example, please see below.
 
 Once this is successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IDP that acts as a token provider.
 
@@ -63,9 +63,9 @@ For Okta, the Okta admin needs to assign the dynamically generated clients to a 
 [NOTE]
 When Anypoint Platform makes an HTTP call to the configured OIDC endpoints, the HTTP call times out if no response after 5 seconds.
 
-== Client Application Updates and Deletes 
+== Client Application Updates and Deletes
 
-Anypoint platform embraces OpenID Connect Dynamic Client Registration, and hence client modification or deletion is not supported, although OKTA or another IDP might do so independently. But, as mentioned above we instead provide and support hooks for someone to implement API calls that are particular to their IDP. Below are samples for PUT and DELETE requests Anypoint will make. 
+Anypoint platform embraces OpenID Connect Dynamic Client Registration, and hence client modification or deletion is not supported, although OKTA or another IDP might do so independently. But, as mentioned above we instead provide and support hooks for someone to implement API calls that are particular to their IDP. Below are samples for PUT and DELETE requests Anypoint will make.
 
 This is an example of the payload for a PUT (update) request:
 ----
@@ -108,15 +108,15 @@ Authorization: Bearer access-token
 Neither the `PUT` nor the `DELETE` are expected to work if the call is used directly against an IDP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
 
 
-== Supported Grant Types 
+== Supported Grant Types
 
 === Pre-populated Grant Types in API Portal
 
-If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[this spec] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated prior to merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users. 
+If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[this spec] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated prior to merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users.
 
 === Update Grant Types
 
-If the *Issuer* is set and the `/.well-known` URL is available, you can go to an existing client provider, save it again, and the grant types are updated based on the `grant_types_supported` from your `/.well-known` metadata. The system fetches the `/.well-known` metadata when you create or update a client provider. 
+If the *Issuer* is set and the `/.well-known` URL is available, you can go to an existing client provider, save it again, and the grant types are updated based on the `grant_types_supported` from your `/.well-known` metadata. The system fetches the `/.well-known` metadata when you create or update a client provider.
 
 
 === Default Grant Types

@@ -1,4 +1,4 @@
-= Azure Active Directory Client Management
+= Configure Azure Active Directory Client Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
