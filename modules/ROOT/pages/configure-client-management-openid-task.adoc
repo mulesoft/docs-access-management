@@ -19,7 +19,8 @@ The following table contains examples of the URLs you need to supply, depending 
 | Token Introspection | {BASE URL}/introspect | {BASE URL}/introspect | {BASE URL}/introspect
 |===
 
-== How to Configure
+== Configuring Client Management
+
 include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-client-providers.adoc[]
