@@ -39,6 +39,8 @@ The *Add OIDC client provider* page appears.
   *** For ForgeRock, this value is `Bearer ${api_token}`, where `api_token` is an API token created through ForgeRock.
   *** For Salesforce, this value is `Bearer ${api_token}`, where `api_token` is an API token created through Salesforce.
 ** *Client Request Timeout (seconds)*: The time elapsed before a client provider request times out. The minimum value is five seconds. The maximum value is 20 seconds.
+[NOTE]
+Anypoint Platform makes an HTTP call to the configured OIDC endpoints, and if there is no response after five seconds, the HTTP call times out.
 * *Token Introspection Client*
  ** *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
@@ -60,9 +62,6 @@ Once this is successfully configured, you can apply the OpenID Connect OAuth Tok
 
 [NOTE]
 For Okta, the Okta admin needs to assign the dynamically generated clients to a user or a group of users in order for them to receive access tokens by sending over the Client ID and Client Secret.
-
-[NOTE]
-Anypoint Platform makes an HTTP call to the configured OIDC endpoints, and if there is no response after five seconds, the HTTP call times out.
 
 == Client Application Updates and Deletes
 
