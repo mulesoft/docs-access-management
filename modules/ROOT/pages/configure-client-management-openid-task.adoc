@@ -97,7 +97,7 @@ Authorization: Bearer access-token
 `client_name` in the request maps to `name` on the inbound side. +
 The authorization method depends on the grant type. For example, if the grant type is `implicit`, the `id_token` and `token` are returned.
 
-This is another example of the DELETE request header:
+The following example shows another DELETE request header:
 
 ----
 DELETE /oauth2/connect/register/{{client_id}}
