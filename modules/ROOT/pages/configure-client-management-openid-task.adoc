@@ -62,7 +62,7 @@ Once this is successfully configured, you can apply the OpenID Connect OAuth Tok
 For Okta, the Okta admin needs to assign the dynamically generated clients to a user or a group of users in order for them to receive access tokens by sending over the Client ID and Client Secret.
 
 [NOTE]
-When Anypoint Platform makes an HTTP call to the configured OIDC endpoints, the HTTP call times out if no response after 5 seconds.
+Anypoint Platform makes an HTTP call to the configured OIDC endpoints, and if there is no response after five seconds, the HTTP call times out.
 
 == Client Application Updates and Deletes
 
