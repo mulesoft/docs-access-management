@@ -28,7 +28,7 @@ The *Add OIDC Azure client provider* page appears.
 +
 For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation.
 +
-Client secrets updates are not currently supported.
+
 . Click *Create*.
 
 == Microsoft Identity Platform Support
@@ -59,7 +59,7 @@ For a list of supported grant types, see the https://docs.microsoft.com/en-us/az
 
 === Client Secrets
 
-Initial secrets expiration is set to 6 months per Microsoft recommendation.
+Initial secrets expiration is set to 6 months per Microsoft recommendation. You can reset client secrets via Anypoint. Note, Anypoint creates new secrets on your behalf but does not support removal of the old secrets from Microsoft account. You can always remove the old secrets in Microsoft accounts.
 
 == Limitations
 
