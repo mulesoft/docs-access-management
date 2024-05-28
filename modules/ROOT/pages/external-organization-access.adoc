@@ -37,3 +37,22 @@ To remove a trusted organization from your list of trusted organizations:
 . In the *External Access* page, select *…* next to the name of the organization you want to remove.
 . Click *Remove organization*.
 . Click *Yes, remove*.
+
+== Manage a Tenant Relationship to a Trusted Salesforce Organization (Beta)
+
+NOTE: This feature is currently available for select Anypoint Platform and Salesforce customers.
+
+Salesforce organizations can establish a tenant relationship with Anypoint Platform organizations. After this relationship is established, an Anypoint Platform user with the Organization Administrator permission can enable or disable this relationship in *Access Management*. For more information about initiating a relationship with Salesforce, see https://help.salesforce.com/s/articleView?id=sf.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connection] in the Salesforce documentation.
+
+=== Enable or Disable a Salesforce Connection to Your Organization
+
+When you enable the connection with your Salesforce organization, you can publish assets from your Anypoint Platform organization to the trusted Salesforce organization. When you disable the connection, the Salesforce organization still appears in the list of available organizations but you can no longer publish assets from your Anypoint Platform to your Salesforce organization.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Click *External Access*.
+. In the *External Access* page, click *Salesforce*. +
+If your organization has at least one established tenant relationship, a list of Salesforce organizations appears, showing the name, organization ID, domain, and status of the relationship connection.
++
+. Click *Enable* or *Disable*.
+

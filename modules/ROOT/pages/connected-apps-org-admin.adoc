@@ -3,11 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-As an organization administrator, you are the only user who can view and manage connected apps in Access Management. You can use authorization policies to dictate which apps can be authorized to access user data, and you can add apps that users want to use to an allowlist.
+As an organization administrator at the root organization or business group level, you are the only user who can view and manage connected apps in Access Management. You can use authorization policies to dictate which apps can be authorized to access user data, and you can add apps that users want to use to an allowlist.
 To manage your connected apps, navigate to *Access Management* and select the *Connected Apps* tab. You can add apps in the *Owned Apps* section and manage app access in the *Authorizations* section.
 For more information about the *Owned Apps* section, see the documentation for xref:connected-apps-developers.adoc[app developers].
 
-To maintain security, only root-level organization administrators can view and manage connected apps in Access Management.
+To maintain security, you can view and manage connected apps only if you have the Organization Administrator permission in the root organization or in the business group where the connected app resides.
 
 == Authorizations
 

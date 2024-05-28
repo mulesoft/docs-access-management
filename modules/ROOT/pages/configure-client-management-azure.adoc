@@ -26,20 +26,20 @@ The *Add OIDC Azure client provider* page appears.
 .. *Enable client deletion in Anypoint Platform*: Enables the deletion of clients created with this integration.
 .. *Enable client deletion and updates in IdP*: To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Azure AD to `https://graph.microsoft.com/v1.0/applications/{clientId}`. +
 +
-For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation. 
+For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/graph/api/application-update?view=graph-rest-1.0&tabs=http[Update application] documentation. For an example of the `DELETE` payload, see the https://docs.microsoft.com/en-us/graph/api/application-delete?view=graph-rest-1.0&tabs=http[Delete application] documentation.
 +
-Client secrets updates are not currently supported.
+
 . Click *Create*.
 
 == Microsoft Identity Platform Support
 
-=== Access Tokens 
+=== Access Tokens
 
-For your APIs, Azure AD client management in Anypoint Platform supports both https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[v1 and v2 JSON Web Tokens] (JWTs) on Microsoft identity platform. 
+For your APIs, Azure AD client management in Anypoint Platform supports both https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[v1 and v2 JSON Web Tokens] (JWTs) on Microsoft identity platform.
 
 === OAuth 2.0 Endpoints
 
-Anypoint Platform supports only tokens obtained using Azure AD v2.0 endpoints, also known as Microsoft identity platform endpoints. For example, Anypoint Platform supports the token endpoint: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token`. 
+Anypoint Platform supports only tokens obtained using Azure AD v2.0 endpoints, also known as Microsoft identity platform endpoints. For example, Anypoint Platform supports the token endpoint: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token`.
 
 Use the following properties when you are using the Authorization Code grant type to obtain a token:
 
@@ -49,7 +49,7 @@ Use the following properties when you are using the Authorization Code grant typ
 * `client secret`: {your client secret}
 * `scope`: `https://graph.microsoft.com/.default`
 
-Anypoint Platform does not support custom scopes. Use the default scope for Microsoft Graph. 
+Anypoint Platform does not support custom scopes. Use the default scope for Microsoft Graph.
 
 === Grant Types
 
@@ -57,26 +57,26 @@ When https://docs.microsoft.com/en-us/graph/api/application-post-applications?vi
 
 For a list of supported grant types, see the https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
 
-=== Client Secrets 
+=== Client Secrets
 
-Initial secrets expiration is set to 6 months per Microsoft recommendation. 
+Initial secrets expiration is set to 6 months per Microsoft's recommendation. You can reset client secrets via Anypoint Platform. Anypoint Platform creates new secrets on your behalf but does not support removing the old secrets from your Microsoft account on your behalf. However, you can still remove the old secrets in Microsoft accounts.
 
-== Limitations 
+== Limitations
 
 === Microsoft National Clouds
 
-Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet. 
+Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet.
 
 
 == Token Validation
 
 Although Microsoft Azure AD does not provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for token validation] when you use Azure AD as a client provider.
 
-To use this policy, follow the documentation on xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[OAuth2.0 Endpoints] to generate supported tokens. 
+To use this policy, follow the documentation on xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[OAuth2.0 Endpoints] to generate supported tokens.
 
-=== Token has been Revoked Error 
+=== Token has been Revoked Error
 
-When you attempt to enforce the OIDC policy by invoking an Anypoint API using a valid token obtained from Azure AD and get a `Token has been revoked` error, refer to the xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[documentation on OAuth 2.0 endpoints] to confirm that you have obtained the token using a supported method. If the token validation still fails, contact Support. 
+When you attempt to enforce the OIDC policy by invoking an Anypoint API using a valid token obtained from Azure AD and get a `Token has been revoked` error, refer to the xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[documentation on OAuth 2.0 endpoints] to confirm that you have obtained the token using a supported method. If the token validation still fails, contact Support.
 
 == See Also
 

@@ -152,48 +152,41 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-teams.adoc[]
 
-. Click *Add Team*
-. Specify a team name and parent.
-. Click *Add Team*. +
-A new team is created.
-+
-. In the *Teams* section, click the name of the new team.
-. Click the *Settings* tab.
-. Select the identity provider with which the mapping should be associated.
-. In the *Group Name* field, enter the group name that you want to map: +
+. Click the team you want to modify.
+. Click the *External IdP Groups* tab.
+. In the *Group Names* field, enter one of the following: 
 
 * SAML: The group attribute that comes from your array of SAML groups
 * OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
 * LDAP: The string from your SAML assertion AttributeValue
 +
-. Select a membership type for the group name. +
+. In the *Type* drop-down, select `Member` or `Maintainer`. +
 If you select *Maintainer*, users who have that group name become team maintainers for this team. If you select *Member*, users who have this group name become team members.
 +
+. In the *Provider Name* drop-down, select the IdP associated with the mapping.
 . Click *Add*.
 . Click *Save Changes*. +
 The SSO users associated with the group you designated are assigned to the team.
 
 == Map SSO Users to Roles
 
-You can create a role to map to groups of SSO users in your organization.
+You map groups of SSO users to roles in your organization. However, MuleSoft recommends using the Teams feature to manage user permissions.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click *Add Role*.
-. Specify a role name and description.
-. Click *Add Role*.
-. In the *Roles* section, click the name of the new role.
-. Click *Set external group mapping*.
-. Select the identity provider with which the mapping should be associated.
-. Under *External group names*, enter one of the following: +
+. Click the role you want to modify.
+. Click the *External IdP Groups* tab.
+. In the *Group Names* field, enter one of the following: +
 
 * SAML: The group attribute that comes from your array of SAML groups
 * OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
 * LDAP: The string from your SAML assertion AttributeValue
 
-. Click *Update*. +
+. In the *Provider Name* drop-down, select the IdP associated with the mapping.
+. Click *Add*.
+. Click *Save Changes*. +
 The SSO users associated with the groups you designated are assigned the role.
 
 == See Also

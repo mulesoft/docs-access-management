@@ -16,35 +16,42 @@ All scopes in the endpoint map directly to permissions available in Anypoint Pla
 
 To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to log in using the *Sign in with Anypoint Platform* option.
 
-NOTE: Only developers who have the organization administrator permission can create apps and specify access scopes in Anypoint Platform.
+When you create connected apps, note the following: 
 
-== Create a Connected App
-
-* Your organization can own up to 2000 connected apps, and each connected app can have up to 1000 scopes.
-* Your app is owned by your organization. Any organization administrator can control it.
+* Your organization can own up to 2000 connected apps at the root organization or business group levels.
+* Each connected app can have up to 1000 scopes.
+* Your organization owns your app. Any organization administrator over the root organization or the business group in which it resides can control it.
 * A unique `clientID` is automatically assigned and can’t be modified. The `clientSecret` has no expiration date by default but can be modified.
 
-You should also determine whether the app is internal to your company or is a third-party app that can be distributed outside of your organization. To create your app, follow these steps:
+== Before You Begin
+
+* You need the Organization Administrator permission at the level you want to create apps and specify access scopes. 
+* You must determine whether the app is internal to your company or is a third-party app that can be distributed outside of your organization.
+
+== Create a Connected App
 
 include::partial$include-nav-connected-apps.adoc[]
 
 . In the *Owned Apps* section, click *Create App*.
 . In the *Create App* page, complete the following fields:
-.. Name +
-A Unique name for the application
+.. *Name* +
+A unique name for the application
 +
 .. *Type* +
 The type of Connected App to be created. Based on the type selected, the required fields varies.
 +
 .. *Grant types* +
 The grant types to be used with this app. +
-Note: Additional information may be requested based on the grant type you select. For more information on grant types, see xref:connected-apps-developers.adoc#grant-types-and-token-flow[Grant types and token flow].
+Note: Additional information might be requested based on the grant type you select. For more information about grant types, see xref:connected-apps-developers.adoc#grant-types-and-token-flow[Grant types and token flow].
 +
 .. *Website URL* +
 Users can visit this URL to learn more about the app.
 +
 .. *Redirect URIs* +
-Configure which URIs users should be directed to after authorization. Type the URL and click *Add* to add it to the list.
+Configure which URIs users are directed to after authorization. Type the URL and click *Add* to add it to the list.
++
+.. *Audience* +
+Configure whether the app is internal to your organization or is a third-party public app that can be distributed outside of your organization.
 +
 .. *Scopes* +
 The level of permissions to provide to the app. Click *Add Scopes* to select the scopes. For more information, see xref:connected-apps-developers.adoc#endpoint-scopes[Endpoint Scopes].

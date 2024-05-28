@@ -41,6 +41,8 @@ API Experience Hub Community User:: Enables a user to view but not modify conten
 
 Governance Administrator:: Enables a user to manage profiles and view reports.
 
+Governance Viewer:: Enables a user to view reports.
+
 == API Manager
 
 Depending on your organization, you might see one of the following sets of permissions available for API Manager.
@@ -183,11 +185,25 @@ Users with this permission have the same access as users with the Exchange Admin
 +
 Use this permission to extend administrator permissions for an asset to an additional user.
 
+== IDP 
+
+include::idp::partial$permissions.adoc[tag=permissionManage]
+
+include::idp::partial$permissions.adoc[tag=permissionBuild]
+
+include::idp::partial$permissions.adoc[tag=permissionExecute]
+
+include::idp::partial$permissions.adoc[tag=permissionConfigure]
+
 == Monitoring
 
-Monitoring Administrator:: Enables a user to view, create, modify, and delete content in Anypoint Monitoring.
+include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringAdmin]
 
-Monitoring Viewer:: Enables a user to view but not modify content in Anypoint Monitoring.
+include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringViewer]
+
+include::monitoring::partial$monitoring-permissions.adoc[tag=telExpAdmin]
+
+include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
 
 == MQ
 
