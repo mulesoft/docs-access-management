@@ -36,7 +36,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . Click *Confirm*. +
 After the connection completes on the Anypoint Platform side, a connection code for your Anypoint Platform organization appears.
 +
-, Copy the Anypoint Platform connection code.
+. Copy the Anypoint Platform connection code.
 . Return to the Salesforce connection creation interface, and enter your Anypoint Platform connection code.
 . Complete the instructions in Salesforce.
 
