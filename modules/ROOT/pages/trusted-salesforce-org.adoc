@@ -17,7 +17,7 @@ Using the Anypoint Platform user interface, you can:
 
 == Before You Begin
 
-You need the following permissions:
+You need the following:
 
 * The Organization Administrator permission at the root organization level in Anypoint Platform
 * Any permissions required to modify Salesforce connections
