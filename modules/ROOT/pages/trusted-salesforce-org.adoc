@@ -74,7 +74,7 @@ If your organization has at least one established tenant relationship, a list of
 
 == Remove a Connection 
 
-If you want to permanently delete the connection between your Anypoint Platform organization and your Salesforce organization using the Salesforce interface. After you delete the connection, a user with the appropriate permissions in both your Anypoint Platform and Salesforce organizations must recreate the connection.
+You can permanently delete the connection between your Anypoint Platform organization and your Salesforce organization using the Salesforce interface. After you delete the connection, a user with the appropriate permissions in both your Anypoint Platform and Salesforce organizations must recreate the connection if they want to reestablish a relationship.
 
 . In the Salesforce user interface, select your Anypoint Platform organization.
 . Click the overflow menu icon.
