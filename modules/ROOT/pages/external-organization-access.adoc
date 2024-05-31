@@ -10,4 +10,4 @@ Organization administrators control which organizations their users can collabor
 Using the External Access functionality in Access Management, you can:
 
 * xref:trusted-anypoint-platform-org.adoc[Establish a relationship with a trusted Anypoint Platform organization.]
-* xref:trusted-salesforce-org.adoc[Establish a tenant relationship with a trusted Salesforce organization (beta).]
+* xref:trusted-salesforce-org.adoc[Establish a relationship with a trusted Salesforce organization.]
