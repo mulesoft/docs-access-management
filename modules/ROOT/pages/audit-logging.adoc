@@ -453,6 +453,50 @@ Properties: SLA tier
 
 The `Create Application` and `Delete Application` actions are logged at the root organization level.
 
+== API Governance
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create profile
+|Profile
+|Profile name
+|N/A
+|Create
+|Subaction: None +
+Properties: None
+
+|Update profile
+|Profile
+|Profile name
+|N/A
+|Update
+|Subaction: None +
+Properties: None
+
+|Delete profile
+|Profile
+|Profile name
+|N/A
+|Delete
+|Subaction: None +
+Properties: None
+
+|Activate profile
+|Profile
+|Profile name
+|N/A
+|Activate
+|Subaction: None +
+Properties: None
+|===
+
 == API Designer APIs
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
