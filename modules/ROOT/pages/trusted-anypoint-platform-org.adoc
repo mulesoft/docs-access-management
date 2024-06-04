@@ -1,4 +1,4 @@
-= Enable External Access to Trusted Anypoint Platform Organizations
+= Enable External Access to a Trusted Anypoint Platform Organization
 
 To establish a connection to a trusted Anypoint Platform organization, both organizations must reside in the same control plane, and trust must be established between organizations before permissions can be granted. For the users of Organization A to share with the users of Organization B, Organization A must list Organization B as a trusted organization, and Organization B must likewise list Organization A. If either Organization A or Organization B removes the other, all shared permissions are revoked.
 
