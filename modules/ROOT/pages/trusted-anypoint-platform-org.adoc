@@ -24,7 +24,7 @@ To add an external organization to your list of trusted organizations:
 
 When you remove a trusted organization from your external access configuration, both organizations lose all existing shared permissions. In addition, you cannot grant new permissions until you reestablish the trust relationship.
 
-To remove a trusted organization from your list of trusted organizations:
+To remove a trusted organization:
 
 . From the *Access Management* home page, click the *External Access* tab.
 . In the *External Access* page, select *…* next to the name of the organization you want to remove.
