@@ -3,56 +3,11 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The External Access feature enables separate organizations to collaborate in Anypoint Platform. For example, organizations can share API specifications, connectors, and other assets in Anypoint Exchange with each other, without making them public.
+The External Access feature enables separate organizations to collaborate in Anypoint Platform. For example, organizations can share API specifications, connectors, and other assets in Anypoint Exchange with each other, without making them public. Additionally, you can establish a connection with a trusted Salesforce organization.
 
-Administrators control which organizations their users can collaborate with by maintaining a list of trusted organizations in Access Management. Adding an entry to this list means that you trust the other organization and its users, and you acknowledge that you are enabling your users to grant permission to and be granted permissions by the other organization.
+Organization administrators control which organizations their users can collaborate with by maintaining a list of trusted organizations in Access Management. Adding an entry to this list means that you trust the other organization and its users, and you acknowledge that you are enabling your users to grant permission to and be granted permissions by the other organization.
 
-Both organizations must reside in the same control plane, and trust must be established between organizations before permissions can be granted. For the users of Organization A to share with the users of Organization B, Organization A must list Organization B as a trusted organization, and Organization B must likewise list Organization A. If either Organization A or Organization B removes the other, all shared permissions are revoked.
+Using the External Access functionality in Access Management, you can:
 
-Permissions shared between organizations are granted at the organization level. For example, if Organization A grants Organization B permission to view an asset, it grants that permission to every user in Organization B. Organization A does not receive any information about Organization B's users, sub-organizations, or internal layout.
-
-== Add a New Trusted Organization
-
-When you add a new organization to your external access configuration, you establish one half of a trust relationship. After the other organization adds yours to its configuration, both organizations can share permissions with each other.
-
-To add an organization to your configuration, you must know its Anypoint xref:access-management::organization.adoc#manage-root-organization-settings[domain]. Domains are human-readable names that uniquely identify an Anypoint Platform organization. Ask the administrators of the other organization what their domain is, and be prepared to share your domain with them so they can add your organization to their list in return.
-You can view your organization's unique domain name in the *External Access* page in Access Management.
-
-
-To add an external organization to your list of trusted organizations:
-
-. From the *Access Management* home page, click the *External Access* tab.
-. In the *External Access* page, click *Add organization*.
-. Enter the unique domain name of the organization you want to share permissions with.
-. Click *Add*.
-
-
-== Remove a Trusted Organization
-
-When you remove a trusted organization from your external access configuration, both organizations lose all existing shared permissions. In addition, no new permissions can be granted until a trust relationship is reestablished.
-
-To remove a trusted organization from your list of trusted organizations:
-
-. From the *Access Management* home page, click the *External Access* tab.
-. In the *External Access* page, select *…* next to the name of the organization you want to remove.
-. Click *Remove organization*.
-. Click *Yes, remove*.
-
-== Manage a Tenant Relationship to a Trusted Salesforce Organization (Beta)
-
-NOTE: This feature is currently available for select Anypoint Platform and Salesforce customers.
-
-Salesforce organizations can establish a tenant relationship with Anypoint Platform organizations. After this relationship is established, an Anypoint Platform user with the Organization Administrator permission can enable or disable this relationship in *Access Management*. For more information about initiating a relationship with Salesforce, see https://help.salesforce.com/s/articleView?id=sf.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connection] in the Salesforce documentation.
-
-=== Enable or Disable a Salesforce Connection to Your Organization
-
-When you enable the connection with your Salesforce organization, you can publish assets from your Anypoint Platform organization to the trusted Salesforce organization. When you disable the connection, the Salesforce organization still appears in the list of available organizations but you can no longer publish assets from your Anypoint Platform to your Salesforce organization.
-
-include::partial$include-nav-steps-org-admin.adoc[]
-
-. Click *External Access*.
-. In the *External Access* page, click *Salesforce*. +
-If your organization has at least one established tenant relationship, a list of Salesforce organizations appears, showing the name, organization ID, domain, and status of the relationship connection.
-+
-. Click *Enable* or *Disable*.
-
+* xref:trusted-anypoint-platform-org.adoc[Establish a relationship with a trusted Anypoint Platform organization.]
+* xref:trusted-salesforce-org.adoc[Establish a relationship with a trusted Salesforce organization.]
