@@ -40,4 +40,4 @@ The following image shows a SAML response element in Chrome developer tools as a
 image::iam-chromedevtools.png[]
 
 In the *Network* tab (1), the `receive-id` line (2) indicates that you attempted to sign in to Anypoint Platform using single sign-on through your identity provider.
-Because the signin is successful, you can expand `receive-id` and access form data that contains your SAML response element (3). Note that unsuccessful signin attempts still generate SAML response elements.
+Because the signin is successful, you can expand `receive-id` and access form data that contains your SAML response element (3). Unsuccessful signin attempts still generate SAML response elements.
