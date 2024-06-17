@@ -99,7 +99,7 @@ Talk to your account representative or use https://www.mulesoft.com/contact[the 
 
 === Where do I sign in with external identity management?
 
-If your organization uses external identity management, sign into your account at *anypoint.mulesoft.com/accounts/login/_yourorganizationname_*.
+If your organization uses external identity management, sign in to your account at *anypoint.mulesoft.com/accounts/login/_yourorganizationname_*.
 
 === How do I delete my account?
 
