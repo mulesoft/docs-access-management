@@ -14,7 +14,7 @@ Anypoint Platform does not support linking multiple profiles that use the same I
 
 // tag::profileLinking[]
 [[profile-linking]]
-= Linking a New SSO signin to Existing Profiles
+= Linking a New SSO Signin to Existing Profiles
 
 When you attempt to sign in using SSO for the first time and there are additional user profiles that share the same email address but use different identity providers (IdPs) to sign in, you are prompted to link the profiles. You cannot link profiles that use the same IdP.
 
