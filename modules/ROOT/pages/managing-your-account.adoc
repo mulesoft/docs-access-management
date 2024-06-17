@@ -41,6 +41,7 @@ Google's reCaptcha verification service auto-detects your browser's language.
 +
 . Click *Accept and create account*.
 
+[[join-existing-org]]
 == Join an Existing Organization
 
 If there is an existing Anypoint Platform organization that you want to join, ask the organization administrator for an invitation. When the administrator responds with an email invitation, you must click the included link within one week.
@@ -107,21 +108,21 @@ Your username must be at least three characters and contain only the following: 
 [NOTE]
 You cannot create a new account within an existing organization without an email invitation.
 
-== Log in to Anypoint Platform
+== Sign in to Anypoint Platform
 
-. Navigate to the Anypoint Platform login screen.
+. Navigate to the Anypoint Platform signin screen.
 . Enter your username and password.
 . Click *Sign in*.
 
 [NOTE]
-If you try to log in and Anypoint Platform rejects your valid credentials, your organization might use an xref:access-management::external-identity.adoc[external identity provider] to initiate the sign-in process. Either navigate to your external identity provider's interface to sign in, or xref:access-management::managing-your-account.adoc#use-CustomDomainLogin[enter your organization's domain name] before reentering your credentials.
+If you try to sign in and Anypoint Platform rejects your valid credentials, your organization might use an xref:access-management::external-identity.adoc[external identity provider] to initiate the sign-in process. Either navigate to your external identity provider's interface to sign in, or xref:access-management::managing-your-account.adoc#use-CustomDomainLogin[enter your organization's domain name] before reentering your credentials.
 
 [[use-CustomDomainLogin]]
-== Log in to Anypoint Platform Using Single Sign-on
+== Sign in to Anypoint Platform Using Single Sign-on
 
 If your organization uses xref:access-management::external-identity.adoc[Single Sign-on], you must provide your organization's domain name as part of the sign-in process.
 
-. Navigate to the Anypoint Platform login screen.
+. Navigate to the Anypoint Platform signin screen.
 . Click *Use custom domain*.
 . Enter your organization's domain name.
 +
@@ -129,7 +130,8 @@ If your organization uses xref:access-management::external-identity.adoc[Single 
 . Click *Continue*.
 You are redirected to your identity provider.
 
-== Allowlist URLs to Log in to and Use Anypoint Platform
+[[allowlist-urls]]
+== Allowlist URLs to Sign in to and Use Anypoint Platform
 
 If you use a restricted environment, such as a virtual machine, or have proxy requirements preventing you from logging in to Anypoint Platform, add the following URLs to your allowlists. This ensures your sessions are not blocked or interrupted by your organization's firewall or proxy.
 
@@ -140,6 +142,7 @@ If you use a restricted environment, such as a virtual machine, or have proxy re
 * `+https://www.gstatic.com/recaptcha/*+`
 * `+https://www.google.com/recaptcha/*+`
 
+[[use-unassociated-account]]
 == Use an Unassociated Account
 
 When an organization administrator deletes an account from the organization, the deleted account is left _unattached_.
@@ -147,6 +150,7 @@ When an organization administrator deletes an account from the organization, the
 You can use an unattached account to join the *MuleSoft* organization with no further configurations needed. +
 Select the account, enter its corresponding password, and click *Sign in*.
 
+[[use-admin-account]]
 == Use an Administrator Account
 
 If your account is an organization administrator for a different organization (or business group within that organization), your username is displayed with an exclamation mark next to it. +
@@ -157,6 +161,7 @@ After selecting this account and entering the password associated with it, you a
 * If there are other members in the business group you are leaving behind, the organization administrator of the parent organization is automatically assigned as organization administrator for the business group.
 * If there are no other members, the business group is deleted.
 
+[[account-associated-org-owner]]
 == Account Associated as an Organization Owner
 
 A common scenario, is to create an account and not associate it with any existing organization. This automatically assigns your account to a _new_ organization and sets your account as an xref:roles.adoc#organization-owner[organization owner]. +
@@ -183,6 +188,7 @@ include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinkingContextF
 
 include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinking,leveloffset=+2]
 
+[[update-user-info]]
 == Update User Information
 
 include::partial$include-nav-steps-to-profile.adoc[]
@@ -201,8 +207,8 @@ Connected apps and clients are exempt from reauthentication. If you have a scrip
 
 === Verify Your Email Address
 
-As of October 10, 2022, non-SSO users must verify their Anypoint Platform email addresses. If you have not verified your email address, an email verification request prompt appears each time you log in.
-You can verify your email using the login prompt, or you can verify your email in your user profile.
+As of October 10, 2022, non-SSO users must verify their Anypoint Platform email addresses. If you have not verified your email address, an email verification request prompt appears each time you sign in.
+You can verify your email using the signin prompt, or you can verify your email in your user profile.
 SSO users cannot verify their email addresses through Anypoint Platform and do not receive verification prompts.
 
 include::partial$include-nav-steps-to-profile.adoc[]
@@ -215,9 +221,10 @@ A window appears, prompting you to enter a verification code that you received a
 . Click *Confirm*. +
 Your email address is verified. 
 
+[[change-email]]
 == Change Your Account Email Address
 
-You can change the email address that you use to log in to your Anypoint Platform account.
+You can change the email address that you use to sign in to your Anypoint Platform account.
 
 [NOTE]
 SSO users cannot change their account email address through Anypoint Platform.
@@ -235,26 +242,29 @@ A window appears, prompting you to enter a verification code that you received a
 . Click *Confirm*. +
 The email address you entered is now your primary email address for Anypoint Platform.
 
+[[reset-password]]
 == Reset Your Password
 
 When you reset your password, your new password must be between 8 and 64 characters in length with at least one uppercase letter, one lowercase letter, and one number. Your password must contain only ASCII-standard characters.
 Additionally, you cannot reuse any of your previous three passwords.
 
 
-. Navigate to the Anypoint Platform login screen.
+. Navigate to the Anypoint Platform signin screen.
 . Click the *Forgot your username or password* link.
 . In the *Forgot your credentials* form, enter your username. +
 A link to create a new password is emailed to you.
 . Click the reset password link in the email.
 . In the *Reset your password* form, enter a new password and click *Reset Password*.
 
+[[forgot-user-name]]
 == Forgot User Name
 
-. Navigate to the Anypoint Platform login screen.
+. Navigate to the Anypoint Platform sign screen.
 . Click the *Forgot your username or password* link.
 . In the *Forgot your credentials* form, enter the email address you used for your Anypoint Platform account, then click *Request credentials*. +
 You receive an email from Anypoint Platform with a list of user names associated with your email address.
 
+[[upgrade-account]]
 == Upgrade Your Account
 
 To upgrade your Anypoint Platform trial account to an enterprise license, contact your account representative or https://www.mulesoft.com/contact[the MuleSoft sales team].

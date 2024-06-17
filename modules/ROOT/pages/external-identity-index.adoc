@@ -1,4 +1,4 @@
-= Manage Identity Providers
+= Managing Identity Providers
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -51,7 +51,7 @@ Before deleting an IdP, ensure that your users' credentials and permissions stru
 
 When you delete an IdP:
 
-* Users can no longer use this IdP to log in to Anypoint Platform.
+* Users can no longer use this IdP to sign in to Anypoint Platform.
 * Any external team or role group mappings associated with this IdP are deleted. 
 * The Access Management API endpoints associated with this IdP are no longer supported.
 
@@ -84,6 +84,6 @@ include::partial$include-nav-identity-providers.adoc[]
 
 . Click *Anypoint*.
 . Select one of the following:
-.. *Allow account creation*: Organization administrators can invite new users using the *Users* tab. Accounts created using this feature belong to the Anypoint identity provider and log in using their credentials rather than SSO.
-.. *Disable account creation*: New accounts must join the organization using an external identity provider and log in using SSO. Existing accounts are unaffected and can continue to log in using their credentials.
+.. *Allow account creation*: Organization administrators can invite new users using the *Users* tab. Accounts created using this feature belong to the Anypoint identity provider and sign in using their credentials rather than SSO.
+.. *Disable account creation*: New accounts must join the organization using an external identity provider and sign in using SSO. Existing accounts are unaffected and can continue to sign in using their credentials.
 . Click *Save Changes*.

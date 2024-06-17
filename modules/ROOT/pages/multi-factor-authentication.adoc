@@ -5,10 +5,10 @@ endif::[]
 
 Multi-factor authentication (MFA) provides an additional layer of verification for Anypoint Platform users.
 MuleSoft requires MFA when users access Anypoint Platform, either directly with their Anypoint credentials or via single sign-on (SSO).
-MFA is enabled for direct logins and can’t be turned off at the organization level. However, there are a few service account types that don’t require MFA. An organization administrator should waive MFA for these accounts to allow existing integrations to continue without interruption.
+MFA is enabled for direct signins and can’t be turned off at the organization level. However, a few service account types don’t require MFA. An organization administrator should waive MFA for these accounts so that existing integrations can continue without interruption.
 For SSO users, set up MFA through the identity provider.
 
-When a user logs in with their Anypoint credentials, they must enter their password and then verify their identity with one of these verification methods:
+When a user signs in with their Anypoint credentials, they must enter their password and then verify their identity with one of these verification methods:
 
 * Third-party TOTP authenticator apps
 * Built-in authenticator
@@ -18,19 +18,19 @@ When a user logs in with their Anypoint credentials, they must enter their passw
 == Multi-Factor Authentication Requirements for Salesforce and MuleSoft Products
 
 * Effective February 1, 2022, MFA must be enabled for all of your Anypoint Platform users. To learn more about this contractual requirement, see the https://help.salesforce.com/apex/HTViewSolution?urlname=Salesforce-Multi-Factor-Authentication-FAQ[Salesforce Multi-Factor Authentication FAQ]
-* As of October 29, 2022, all non-SSO accounts that do not have MFA configured are prompted to register for an MFA verification method and use that method each time they log in to Anypoint Platform.
+* As of October 29, 2022, all non-SSO accounts that do not have MFA configured are prompted to register for an MFA verification method and use it to sign in to Anypoint Platform.
 
 == Multi-Factor Authentication Verification Methods
 
 You can configure at least one of the following verification methods to comply with multi-factor authentication requirements:
 
-Third-party TOTP authenticator app:: Registers an authenticator app to create verification codes that you provide when you log in to Anypoint Platform.
+Third-party TOTP authenticator app:: Registers an authenticator app to create verification codes that you provide when you sign in to Anypoint Platform.
 
-Built-in authenticator:: Registers a physical authentication device, such as Touch ID or Windows Hello, to verify your identity when you log in to Anypoint Platform.
+Built-in authenticator:: Registers a physical authentication device, such as Touch ID or Windows Hello, to verify your identity when you sign in to Anypoint Platform.
 
-Security key:: Registers a security key, such as Yubico YubiKey or Google Titan Security Key, to your account. Connect the security key to your computer to verify your identity when you log in to Anypoint Platform.
+Security key:: Registers a security key, such as Yubico YubiKey or Google Titan Security Key, to your account. Connect the security key to your computer to verify your identity when you sign in to Anypoint Platform.
 
-Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to send you push notifications verifying your identity when you log in to Anypoint Platform.
+Salesforce Authenticator:: Registers the Salesforce Authenticator mobile app to send you push notifications verifying your identity when you sign in to Anypoint Platform.
 
 [[exempt-mfa-users]]
 == Exclude Exempt Accounts from Multi-Factor Authentication
@@ -59,7 +59,7 @@ You can later remove user accounts from the *Exempt Accounts* list by clicking *
 
 == Manage Multi-Factor Authentication for Your Account
 
-You can modify the verification methods that you use to log in. You must register at least one method to use MFA.
+You can modify the verification methods that you use to sign in. You must register at least one method to use MFA.
 
 To modify verification methods in your account:
 
@@ -97,4 +97,4 @@ include::partial$include-nav-users.adoc[]
 . Click the user whose multi-factor authentication configuration you want to reset. +
 . Click *Reset multi-factor authentication*.
 . Click *Confirm reset MFA*. +
-Next time the user logs in to Anypoint Platform, they are prompted to configure a new verification method.
+Next time the user signs in to Anypoint Platform, they are prompted to configure a new verification method.

@@ -1,9 +1,9 @@
-= To Verify SAML Information
+= Verifying SAML Information
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-During verification of SAML information, if you determine that information needs to be changed, log into the MuleSoft Support Portal and submit a request.
+During verification of SAML information, if you determine that information must be changed, sign in to the MuleSoft Support Portal and submit a request.
 
 . In Anypoint Platform, click Access Management > External Identity.
 . From Identity Management, select SAML 2.0.

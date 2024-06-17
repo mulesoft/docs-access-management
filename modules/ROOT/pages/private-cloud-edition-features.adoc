@@ -1,18 +1,12 @@
 = Private Cloud Edition Features
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
-== Overview
 
-This section describes the Access Management features available in Anypoint Platform Private Cloud Edition.
-
-Users running Anypoint Platform Private Cloud Edition can:
+Anypoint Platform Private Cloud Edition enables you to:
 
 . Configure xref:external-identity.adoc#user-management[User Management] using xref:external-identity.adoc#configure-ldap[LDAP].
 . Configure an <<SMTP,SMTP server>> to send API Manager alerts from your Anypoint Platform Private Cloud Edition installation
 . Set your <<Security,certificates and private key>> to handle SSL encryption for Anypoint Platform
-. Add customized <<Disclaimer,disclaimer>> to the Anypoint Platform Log-in message
+. Add customized <<Disclaimer,disclaimer>> to the Anypoint Platform sign-in message
 
 == SMTP
 
@@ -36,15 +30,15 @@ image::on-premises-features-2c60a.png[]
 |Password | Your SMTP password | `examplepassphrase`
 |===
 
-After you set your configuration, click the *Save* button below.
+After you set your configuration, click *Save*.
 
 == DNS or IP
 
-You need to provide the DNS or IP with which your instance of the Anypoint Platform is exposed to the local network, this is necessary for Mule runtimes to be able to communicate with it.
+You must provide the DNS or IP that is exposed on your instance of the Anypoint Platform to the local network, to enable Mule runtimes to communicate with it.
 
-. Enter *Access Management*
-. Select the *DNS/IP tab
-. fill in the *Platform DNS/IP* field with the address where you are hosting the platform
+. Enter *Access Management*.
+. Select the *DNS/IP tab.
+. fill in the *Platform DNS/IP* field with the address where you are hosting the platform.
 . Click *Save*.
 
 
@@ -53,30 +47,30 @@ image::on-premises-features-2f348.png[]
 
 == Security
 
-You can configure Anypoint Platform to use your own certificate. +
+You can configure Anypoint Platform to use your own certificate. 
++
 Additionally you can choose the cipher and DH groups for the key exchange method.
 
 In the left navigation bar, click the *Security* link.
 
 image::on-prem-features-5f98d.png[]
 
-. In the *Certificate* field, click the *Browse* button and search the certificate in your hard drive
-. In the *Key* field, click the *Browse* button and search for the private key of the certificate you provided
-. Click the Save button
-. Optionally you can choose to disregard the default configuration and choose your own cipher and Diffie-Hellman group file.
+. In the *Certificate* field, click *Browse* and search the certificate in your hard drive.
+. In the *Key* field, click *Browse* and search for the private key of the certificate you provided
+. Click *Save*.
+. Optionally, you can disregard the default configuration and choose your own cipher and Diffie-Hellman group file.
 +
 image::on-premises-features-3120e.png[]
 
-. Uncheck the `Use default ciphers and DH Group` mark
-.. Define the cipher you want to use (e.g. `ECDHE-RSA-AES128-SHA256`)
-.. Upload a DH Group
+. Uncheck the `Use default ciphers and DH Group` mark.
+.. Define the cipher you want to use (e.g. `ECDHE-RSA-AES128-SHA256`).
+.. Upload a DH Group.
 
 
-== Disclaimer
+== Set up a Disclaimer Message
 
-By clicking the *Disclaimer* section you can set up a disclaimer message that your users see when they access the Anypoint Platform's log-in page.
+. Click the *Disclaimer* section to set up a disclaimer message that your users see when they access the Anypoint Platform signin page.
++
+This can also be a custom HTML message. 
+. Click *Save*.
 
-image::on-prem-features-d22af.png[]
-
-
-You can set up a custom HTML message as well.

@@ -13,6 +13,7 @@ The domain must not match with any existing trusted domain, and must not be any 
 . In the dialog box that appears, type the domain name and click *Add domain*. +
 _Result_: The domain has been added to your list of trusted domains. You are redirected to the trusted domains page, where you can edit or delete your domains. If you register a domain on a parent organization, it is also allowlisted on all your business groups.
 
+[[auto-registration-domains]]
 == Automatic Registration of Domains
 
 When you publish an API specification to Exchange or send a request through the proxy, the base URI of the implementation is automatically added to the list of trusted domains.

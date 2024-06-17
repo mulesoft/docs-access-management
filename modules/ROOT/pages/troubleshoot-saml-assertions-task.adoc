@@ -1,9 +1,6 @@
 = View a SAML Response in the Browser
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
-To view your SAML response in a browser, perform a single sign-on and use the developer tools in your browser to find the bearer token and SAML response.
+To view your SAML response in a browser, perform a single sign-on (SSO) and use the developer tools in your browser to find the bearer token and SAML response.
 
 [NOTE]
 Complete this task before calling the MuleSoft Support team to assist you in troubleshooting your SAML 2.0 compliant SSO setup.
@@ -14,7 +11,7 @@ include::partial$include-nav-organizations.adoc[]
 
 . Click the *Settings* tab.
 . Copy the domain name.
-. Go to `anypoint.mulesoft.com/accounts/login/_domain_name_`. This will redirect you to your IDP’s Single sign on page.
+. Go to `anypoint.mulesoft.com/accounts/login/_domain_name_`. This will redirect you to your IDP’s single sign-on page.
 . Enter the IDP account credentials and authenticate yourself.
 . In the Chrome developer tool *Form data* window, select the *Params* tab.
 +
@@ -34,10 +31,10 @@ https://www.mulesoft.com/support-login
 
 == Example: Chrome Developer Tools SAML Response Element
 
-The following image shows a SAML response element in Chrome developer tools as a result of logging in to Anypoint Platform using SSO.
+The following image shows a SAML response element in Chrome developer tools as a result of signing in to Anypoint Platform using SSO.
 
-.SAML response element after logging in to Anypoint Platform in Google Chrome.
+.SAML response element after signing in to Anypoint Platform in Google Chrome.
 image::iam-chromedevtools.png[]
 
-In the *Network* tab (1), the `receive-id` line (2) indicates that you attempted to log in to Anypoint Platform using single sign-on through your identity provider.
-Because the login is successful, you can expand `receive-id` and access form data that contains your SAML response element (3). Note that unsuccessful login attempts still generate SAML response elements.
+In the *Network* tab (1), the `receive-id` line (2) indicates that you attempted to sign in to Anypoint Platform using single signon through your identity provider.
+Because the signin is successful, you can expand `receive-id` and access form data that contains your SAML response element (3). Unsuccessful signin attempts still generate SAML response elements.

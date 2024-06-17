@@ -1,11 +1,11 @@
-= Configure LDAP in Anypoint Platform Private Cloud
+= Configuring LDAP in Anypoint Platform Private Cloud
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-The following procedure describes how to configure user management using LDAP version 3 for the Private Cloud Edition of Anypoint Platform. User management through LDAP is only available for the Private Cloud Edition.
+Configure user management using LDAP version 3 for Anypoint Platform Private Cloud Edition (Anypoint PCE). User management through LDAP is available only for Anypoint PCE.
 
-. From Anypoint Platform, click Access Management > External Identity.
+. From Anypoint Platform, click *Access Management > External Identity*.
 +
 A form for configuring LDAP appears.
 +

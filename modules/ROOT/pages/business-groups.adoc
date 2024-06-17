@@ -1,7 +1,4 @@
 = Business Groups
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 Business groups are self-contained resource groups that contain Anypoint Platform resources such as applications and APIs. Business groups provide a way to separate and control access to Anypoint Platform resources because users have access only to the business groups in which they have a role.
 
@@ -23,6 +20,7 @@ Conversely, owners of child business groups cannot:
 
 When you create a business group under another business group, only the redistributable entitlements, such as VPCs and load balancers, that were assigned to the parent business group can be allocated to the child business group.
 
+[[create-business-group]]
 == Create a Business Group
 
 When you create a new business group under the top-level, or _root_, business group, all the current users with the Organization Administrator permission in the root business group appear in the list of users in the newly created business group.
@@ -54,6 +52,7 @@ The business group appears in the hierarchy, under the root organization.
 Allocating redistributable resources to a business group makes those resources available only to that business group, which makes them unavailable to the parent organization.
 --
 
+[[create-child-business-group]]
 == Create a Child Business Group
 
 Create a business group hierarchy to help you better control user access to resources.
@@ -73,6 +72,7 @@ This option is available only if global deployment is enabled on the parent busi
 . Click *Add Business Group*. +
 The new business group appears in the parent business group hierarchy.
 
+[[navigate-business-groups]]
 == Navigate Between Business Groups
 
 When your organization has multiple business groups, you can navigate between them using the menu at the top-right corner. Switching between business groups changes the list of available CloudHub deployments, APIs, users, and roles settings.
@@ -81,8 +81,8 @@ image::switch-suborg.png[switch+suborg]
 
 [NOTE]
 --
-When you create a business group, log out and log in to Anypoint Platform to see newly-created business groups in the business group navigation menu.
-When you log in to Anypoint Platform, you return to the business group where you were last active when you logged out of Anypoint Platform.
+When you create a business group, sign out and sign in to Anypoint Platform to see newly-created business groups in the business group navigation menu.
+When you sign in to Anypoint Platform, you return to the business group where you were last active when you signed out of Anypoint Platform.
 --
 
 If you do not have the Organization Administrator permission, you can view only the business groups that you have permissions to view. In the *Organization* tab, your organization tree displays only the business groups to which you belong.
@@ -104,6 +104,7 @@ Resources that belong to the root organization require permissions specified at 
 
 Users who are assigned the Organization Administrator permission at any level are automatically assigned that same permission in any child business group created within that level, so are automatically visible in the child. This does not apply retroactively to users who are assigned the Organization Administrator permission after a child is created.
 
+[[control-business-group-access]]
 == Control Access to Business Groups
 
 You can view a list of users or teams in a business group and filter by their assigned permissions.
@@ -118,6 +119,7 @@ The *Access Overview* section appears, displaying a list of all users with any p
 * Permissions (sorted by product)
 * Business group
 
+[[delete-business-group]]
 == Delete a Business Group
 
 Only an organization administrator that belongs to a business group can delete it. The top-level (root) business group can't be deleted, even by an organization administrator.

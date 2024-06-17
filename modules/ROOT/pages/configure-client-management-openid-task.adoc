@@ -1,4 +1,4 @@
-= Configure OpenID Connect Client Management
+= Configuring OpenID Connect Client Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
