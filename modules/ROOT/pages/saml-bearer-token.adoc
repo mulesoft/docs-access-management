@@ -1,9 +1,9 @@
-= To Obtain an API Bearer Token Using a SAML Assertion
+= Obtaining an API Bearer Token Using a SAML Assertion
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-This topic describes how to obtain the bearer token from Anypoint Platform. If you are using an identity provider configured to use SAML 2.0, federated users within your organization can access platform APIs using the bearer token.
+Federated users within your organization can access Anypoint Platform APIs using the bearer token if you are using an identity provider configured to use SAML 2.0.
 
 [NOTE]
 Obtaining an API bearer token using a SAML assertion works only for IdP-initiated single sign-on. Service provider-initiated SSO does not support unsolicited assertions.

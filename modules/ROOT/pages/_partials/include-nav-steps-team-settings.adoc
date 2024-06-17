@@ -1,4 +1,4 @@
-. Log in to Anypoint Platform using an account that has the Organization Administrator permission or is a team maintainer of the team you want to modify.
+. Sign in to Anypoint Platform using an account that has the Organization Administrator permission or is a team maintainer of the team you want to modify.
 . In the navigation bar or the main Anypoint Platform page, click *Access Management*.
 . In the Access Management navigation menu, click *Teams*.
 . Click the *Settings* tab.

@@ -1,4 +1,4 @@
-= Configure Client Management with OpenAM
+= Configuring Client Management with OpenAM
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]

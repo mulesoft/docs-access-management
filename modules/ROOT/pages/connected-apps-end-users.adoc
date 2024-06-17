@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-End users can delegate API access and log in to third-party applications using their Anypoint Platform credentials. They can also view connected apps created in their root organization or business groups.
+End users can delegate API access and sign in to third-party applications using their Anypoint Platform credentials. They can also view connected apps created in their root organization or business groups.
 
 Connected apps might request authorization from end users, and they can grant access in the following interface:
 

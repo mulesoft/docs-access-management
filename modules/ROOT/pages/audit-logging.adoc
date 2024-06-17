@@ -3,12 +3,14 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Changes made by users within Anypoint Platform organizations are logged through an audit logging service. You can access the data logs through the audit logging query API or through the audit logging UI.
 
 The audit logging service provides a queryable history of actions performed within the Anypoint Platform. It keeps track of all users who have interacted with objects in the system, and timestamps those actions. It also provides mechanisms for querying the set of users who have performed actions, the set of objects that had actions performed on them, and other endpoints that enable the querying of log entries.
 
 Audit logs have a default retention period of one year. If your organization was created before July 10, 2023 and you did not manually change the retention period, the retention period is six years. Users who have the Organization Administrator and Audit Log Config Manager permission can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically to maintain your log files for longer than the current retention period.
 
+You can access the data logs through the audit logging query API or through the audit logging UI.
+
+[[access-audit-logging]]
 == Access Audit Logging
 
 Users who have the Organization Administrator permission or the Audit Log Viewer permission on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
@@ -26,6 +28,7 @@ The *Audit Logs* page displays the logs. You can:
 * Filter audit logs by product, type, and actions.
 * Search audit logs by environment, object, and user.
 
+[[export-audit-logs]]
 == Export Audit Logs
 
 You can use the xref:monitoring::telemetry-exporter.adoc[Telemetry Exporter feature] in Anypoint Monitoring to export audit logs to third-party analytics and observability apps. 
@@ -36,6 +39,7 @@ Telemetry Exporter for audit logs currently has the following data differences, 
 
 include::monitoring::partial$telemetry-exporter-notes.adoc[tag=knownIssuesAL]
 
+[[audit-log-content]]
 == Audit Log Contents
 
 Activities represented in the log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload which can store application-specific information such as changed fields, environment information, etc.
@@ -453,6 +457,7 @@ Properties: SLA tier
 
 The `Create Application` and `Delete Application` actions are logged at the root organization level.
 
+[[api-governance]]
 == API Governance
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
@@ -497,6 +502,7 @@ Properties: None
 Properties: None
 |===
 
+[[api-designer-api]]
 == API Designer APIs
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
@@ -953,6 +959,7 @@ Properties: Public / private state
 
 |===
 
+[[access-management]]
 == Access Management
 
 === Users
@@ -1592,6 +1599,7 @@ Properties:
 
 |===
 
+[[anypoint-data-graph]]
 == Anypoint DataGraph
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
@@ -1627,6 +1635,7 @@ Properties:
 |===
 
 
+[[exchange]]
 == Exchange
 
 === Assets
@@ -2078,7 +2087,7 @@ Properties: Review object
 Properties: Review object
 |===
 
-
+[[rpa]]
 == RPA 
 
 
@@ -2616,8 +2625,7 @@ Properties:
 |===
 
 
-
-
+[[runtime-manager]]
 == Runtime Manager
 
 
@@ -3033,7 +3041,7 @@ Properties:
 
 |===
 
-
+[[anypoint-mq]]
 == Anypoint MQ
 
 
@@ -3076,6 +3084,7 @@ Properties: Exchange metadata
 Properties: Client metadata
 |===
 
+[[object-store-v2]]
 == Object Store v2
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
@@ -3095,6 +3104,7 @@ Properties: Client metadata
 Properties: Store metadata
 |===
 
+[[secrets-manager]]
 == Secrets Manager
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
@@ -3167,7 +3177,8 @@ Properties:
 
 |===
 
-== About Audit Log REST API Access
+[[audit-log-rest-api-access]]
+== Audit Log REST API Access
 
 You can access the
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API and its

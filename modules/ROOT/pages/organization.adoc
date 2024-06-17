@@ -10,7 +10,7 @@ The organization name is the name you entered in the *Company* field in the init
 
 An organization is an account where multiple users can share resources, including applications and environments. The level of access users have to various resources depends on their assigned roles and permissions. For example, one user might have permission to manage API alerts, while another user has permission only to view API alerts.
 
-When you log in to Anypoint Platform, the organization icon and name are displayed on the top right of the page. The root organization can contain multiple business groups. You can think of business groups as sub-organizations, or children of the root organization. Click the organization icon to navigate between business groups.
+When you sign in to Anypoint Platform, the organization icon and name are displayed on the top right of the page. The root organization can contain multiple business groups. You can think of business groups as sub-organizations, or children of the root organization. Click the organization icon to navigate between business groups.
 
 == Organization Owner
 
@@ -99,8 +99,8 @@ include::partial$include-nav-organizations.adoc[]
   * *Organization name*: This can be anything, for example, the name of the company.
   * *Domain name*: Although multiple organizations can be created by different users using the same company name, each organization must have a unique domain name.
   * *Owner*: The identifier of the organization owner.
-  * *Default session timeout*: Set the amount of time (in minutes) a user is inactive before they are automatically logged out of Anypoint Platform. The default is 60 minutes, the minimum is 15 minutes, and the maximum is 180 minutes.
-  * *Confidentiality Notification*: Create a custom popup that appears when users log in to your organization. The character limit is 1000 alphanumeric characters and symbols: `@`, `:`, `?`, `!`, `,`, `.`, `;`, `'`, `_`, and `-`. You can also add line breaks using `\n` and tabs using `\t`. If you leave this field blank, users do not receive a notification at login.
+  * *Default session timeout*: Set the amount of time (in minutes) a user is inactive before they are automatically signed out of Anypoint Platform. The default is 60 minutes, the minimum is 15 minutes, and the maximum is 180 minutes.
+  * *Confidentiality Notification*: Create a custom popup that appears when users sign in to your organization. The character limit is 1000 alphanumeric characters and symbols: `@`, `:`, `?`, `!`, `,`, `.`, `;`, `'`, `_`, and `-`. You can also add line breaks using `\n` and tabs using `\t`. If you leave this field blank, users do not receive a notification at signin.
 
 You can also view the organization ID, client ID, and client secret. These values apply to the root organization and grant permissions for all of the business groups contained within.
 
@@ -127,7 +127,7 @@ You can obtain your orgId from your organization URL, executing an Anypoint CLI 
 
 === Organization URL
 
-After logging in to Anypoint Platform, you can view your orgId by accessing https://anypoint.mulesoft.com/accounts/businessGroups[business groups].
+After signing in to Anypoint Platform, you can view your orgId by accessing https://anypoint.mulesoft.com/accounts/businessGroups[business groups].
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 

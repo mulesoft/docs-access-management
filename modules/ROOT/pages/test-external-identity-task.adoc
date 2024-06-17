@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-After configuring your organization's external identity provider, you can test the integration. Obtain your organization's login URL, for example: `+https:/anypoint.mulesoft.com/accounts/login/{organization-domain-name}+` by following these steps.
+After configuring your organization's external identity provider, you can test the integration. Obtain your organization's signin URL, for example: `+https:/anypoint.mulesoft.com/accounts/login/{organization-domain-name}+` by following these steps.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -13,11 +13,11 @@ include::partial$include-nav-organizations.adoc[]
 
 . Copy your organization name from the Domain Name field.
 +
-. Log out of your Organization Administrator account in Anypoint Platform.
-. Navigate to your organization’s login URL.
+. Sign out of your Organization Administrator account in Anypoint Platform.
+. Navigate to your organization’s signin URL.
 +
 You are redirected to your identity provider.
 +
-. Log in to your identity provider with a test user managed by your identity provider.
+. Sign in to your identity provider with a test user managed by your identity provider.
 +
 After authenticating, you are redirected back to Anypoint Platform as an authenticated user.

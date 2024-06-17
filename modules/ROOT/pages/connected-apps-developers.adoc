@@ -14,7 +14,7 @@ The Connected Apps feature supports OAuth 2.0 and OpenID Connect. As such, devel
 To find out what specific OpenID Connect capabilities are supported, refer to the information provided in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint].
 All scopes in the endpoint map directly to permissions available in Anypoint Platform, with some exceptions noted in the *Endpoint Scopes* section.
 
-To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to log in using the *Sign in with Anypoint Platform* option.
+To foster a consistent authentication experience for end users, third-party developers with their own websites or web apps can allow users to sign in using the *Sign in with Anypoint Platform* option.
 
 When you create connected apps, note the following: 
 
@@ -114,7 +114,7 @@ The access token can now be used to call Anypoint Platform APIs on the user’s 
 
 === Refresh Token
 
-The `refresh_token` grant type is used to grant access to user data when the user isn’t logged in.
+The `refresh_token` grant type is used to grant access to user data when the user isn’t signed in.
 To work with OpenID Connect, apps have to exchange refresh tokens for new access tokens after the initial authorization to continue accessing user data.
 Refresh tokens expire after 90 days.
 Access tokens expire after the user’s session expires.
@@ -173,7 +173,7 @@ Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.
 * `openid`: Read-only access to the user's username and unique Anypoint ID.
 * `profile`: Read-only access to the user's Anypoint profile.
 * `email`: Read-only access to the user's email.
-* `offline_access`: Access to the user's data when they are not logged in.
+* `offline_access`: Access to the user's data when they are not signed in.
 * `openid:google_wif`: Enables you to configure Anypoint as an IdP for Google Cloud by providing an `id_token` and an access token during the OAuth2 token flow for `client_credentials` connected apps. This ID token conforms to the IdP requirements as outlined in the https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers[GCP's WIF requirements].
 
 [NOTE]
@@ -191,7 +191,7 @@ The *Scopes Documentation* page appears, displaying scopes, their respective per
 
 You can filter and sort the contents of the *Scopes Documentation* page, and you can also click a scope name to view namespaces, methods, and actions.
 
-== Log in with Anypoint Platform Widget
+== Sign in with Anypoint Platform Widget
 
 For seamless implementation, developers can integrate a button into the front end of their apps with a pre-built template and set of components. They can add this widget using the following code:
 

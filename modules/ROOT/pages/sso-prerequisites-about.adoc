@@ -1,34 +1,34 @@
-= About SSO Prerequisites and Limitations
+= SSO Prerequisites and Limitations
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-This topic describes the prerequisites and limitations for using SSO within Anypoint Platform.
+When using SSO within Anypoint Platform, there are some prerequisites and limitations to be aware of.
 
 == Prerequisites
 
 Before using SSO, ensure that you have performed the following:
 
 * Configure your identity provider to send the username and email in your assertion.
-* Configure Anypoint Platform to map the username and email to the expected attribute name. If you do not configure this setting, login fails with a 403 unauthorized error message.
+* Configure Anypoint Platform to map the username and email to the expected attribute name. If you do not configure this setting, signin fails with a 403 unauthorized error message.
 * Configure the SAML assertion of the identity provider as signed and optionally encrypted using
 ** either *AES128* or *AES256* block encryption algorithm,
 ** *RSA-OAEP (including MGF1 with SHA1)* key transport algorithm, and
 ** *Anypoint Platform Signing Certificate* which can be downloaded from the *SAML 2.0* SSO page.
-
-* The identity provider issues the SAML assertion as an XML file which is sent through HTTP as a POST request.
++
+After you configure the SAML assertion for the identity provider, the identity provider issues the SAML assertion as an XML file, which is sent through HTTP as a POST request.
 
 == Client Considerations
 
 Be aware of the following considerations related to client behavior:
 
-* User accounts created before configuring your federated organization remain within the organization. However, users can only login through the Anypoint Platform login page. They cannot login from the redirected login page of the identity provider.
+* User accounts created before configuring your federated organization remain within the organization. However, users can only signin through the Anypoint Platform signin page. They cannot signin from the redirected signin page of the identity provider.
 
 * Existing non-federated users can continue to work as normally with the following exceptions:
 +
-** If a user session times out, the user is redirected to the federated identity login page instead of the generic one. Links and bookmarks that identify the organization redirect the user to the federated login page, which fails for non-federated users.
+** If a user session times out, the user is redirected to the federated identity signin page instead of the generic one. Links and bookmarks that identify the organization redirect the user to the federated signin page, which fails for non-federated users.
 +
-** If you configure your identity provider to handle user information assertion, users must log into Anypoint Platform using the following URL:
+** If you configure your identity provider to handle user information assertion, users must sign into Anypoint Platform using the following URL:
 +
 ----
 https://anypoint.mulesoft.com/accounts/login/{your_org_domain}
@@ -36,11 +36,11 @@ https://anypoint.mulesoft.com/accounts/login/{your_org_domain}
 
 == Limitations
 
-* OpenID Connect does not support single logout.
+* OpenID Connect does not support single signout.
 * If a SAML user belongs to certain groups, Anypoint Platform does not automatically grant equivalent permissions in the organization.
 * Anypoint Platform does not generate the SAML assertion for single sign on.
 Your IdP generates the sign-on URL that you configure.
 * External identity configuration is available only at the organization level.
 You cannot configure an external identity provider for a business group.
 * If you delete a user from your identity provider, you must also manually delete the user from your Anypoint Platform organization. 
-* If you delete a SAML identity provider and recreate one with the exact same configuration, it is considered a new identity provider. The users logging in to Anypoint Platform using this configuration will be associated with the new identity provider. If you have existing user accounts that are still associated with the deleted IdP, duplicate users appear as they are associated with a different IdP.
+* If you delete a SAML identity provider and recreate one with the exact same configuration, it is considered a new identity provider. The users signing in to Anypoint Platform using this configuration will be associated with the new identity provider. If you have existing user accounts that are still associated with the deleted IdP, duplicate users appear as they are associated with a different IdP.

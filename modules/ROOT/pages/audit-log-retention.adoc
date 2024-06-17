@@ -11,6 +11,7 @@ When you configure a retention period:
 * The date the new retention period takes effect must be a minimum of seven days from the current date.
 * Configuring a new retention period affects your organization's compliance policy.
 
+[[before-you-begin]]
 == Before You Begin
 
 Before getting started, ensure that you have an account that has the following permissions:
@@ -20,6 +21,7 @@ Before getting started, ensure that you have an account that has the following p
 
 Your organization must also have *Try new features* or the Teams feature enabled in Access Management. 
 
+[[configure-audit-log-retention]]
 == Configure Audit Log Retention Period
 
 include::partial$include-nav-steps-org-admin-audit-log-mgr.adoc[]

@@ -1,4 +1,4 @@
-= Configure SAML for SSO
+= Configuring SAML for SSO
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -12,7 +12,7 @@ Configuring SAML for SSO involves:
 * Navigating to and completing the *External Identity - Identity Management SAML 2.0* form in Anypoint Platform, and optionally configuring some advanced settings
 * Saving and testing your new configuration
 
-== Prerequisites
+== Before you Begin
 
 * Your Anypoint Platform organization must be set up as your audience.
 * The assertion consumer service must be set to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`. +
@@ -92,8 +92,9 @@ If enabled, the SAML assertions sent from the IdP must be encrypted and follow t
 +
 . Click *Create*.
 +
-. Log out of Anypoint Platform, navigate to the sign-on URL you entered in the *Identity Management SAML 2.0* form, and then log in through your identity provider to test the configuration.
+. Sign out of Anypoint Platform, navigate to the sign-on URL you entered in the *Identity Management SAML 2.0* form, and then sign in through your identity provider to test the configuration.
 
+[[rotate-saml-key]]
 == Rotate a SAML Key
 
 As a security best practice, many organizations rotate the key used to encrypt SAML 2.0 assertions. With the Key Rotation feature, Anypoint Platform can generate a new key, or you can upload a public and private key pair (up to three keys). When you want to rotate a key, you can designate a new _primary key_ in Anypoint Platform and your IdP, and you can revoke the obsolete key to remove it from the rotation.
@@ -161,6 +162,7 @@ include::partial$include-nav-identity-providers.adoc[]
 . Next to the key that you want to revoke, click *...* and select *Revoke*.
 . Click *Revoke*.
 
+[[import-saml-metadata]]
 == Import SAML Metadata
 
 When creating a new SAML 2.0 configuration, you can upload an XML file containing your identity provider's SAML 2.0 metadata to Anypoint Platform using the *Import IdP Metadata* link. Once uploaded, the XML file's values automatically populate the *Identity Management SAML 2.0* form.
@@ -172,22 +174,23 @@ When you upload an XML file to import your metadata:
 * Anypoint Platform does not check the validity of the values in the XML that you upload. +
 Verify that your identity configuration is correct before creating the identity provider configuration.
 
+[[export-saml-metadata]]
 == Export SAML Metadata
 
 If your identity provider supports uploading service-provider metadata, you can click the *Anypoint service provider metadata* link to download your SAML configuration settings in an XML file. You can then upload this file to your identity provider to configure Anypoint Platform. Note that you must have a SAML 2.0 identity configuration to export this data.
 
-
+[[sso-redirect-using-cookies]]
 == SSO Redirect Process Using Cookies
 
-Anypoint Platform uses cookies to ensure that SSO users are redirected to the same location from which they initiated their login.
+Anypoint Platform uses cookies to ensure that SSO users are redirected to the same location from which they initiated their signin.
 
-. When a user logs in to Anypoint Platform, a cookie is created for the login session: `mulesoft.sess=xxxxx`. +
-The cookie contains the location, such as a public portal, from which the user initiated the login.
+. When a user signs in to Anypoint Platform, a cookie is created for the signin session: `mulesoft.sess=xxxxx`. +
+The cookie contains the location, such as a public portal, from which the user initiated the signin.
 . The cookie is passed to the user's browser.
 . The user is directed to their SSO provider for authentication.
 . After the user is authenticated using SSO, the provider directs the user back to Anypoint Platform with the authorization decision SAML response.
-. The session cookie, `mulesoft.sess=xxxxx`, is passed from the browser, which redirects the user back to the location from which they initiated the login process.
-. After the user successfully logs in to Anypoint Platform, the `mulesoft.sess` cookie returns to its default value, based on the OWASP standard.
+. The session cookie, `mulesoft.sess=xxxxx`, is passed from the browser, which redirects the user back to the location from which they initiated the signin process.
+. After the user successfully signs in to Anypoint Platform, the `mulesoft.sess` cookie returns to its default value, based on the OWASP standard.
 
 Users can also be redirected based on their permissions. This occurs when:
 
@@ -198,11 +201,12 @@ Users can also be redirected based on their permissions. This occurs when:
 In these cases, a user with the Organization Administrator permission is redirected to the Anypoint Platform landing page.
 Users who do not have the Organization Administrator permission are directed to Anypoint Exchange.
 
+[[updating-saml-identity-provider]]
 == Updating a SAML Identity Provider 
 
 Organization administrators can update existing SAML providers. However, when you update `Issuer` or `Audience`, you will effectively switch to a different IdP, which can cause issues such as unwanted user duplication. For more information, see https://help.mulesoft.com/s/article/External-identity-migration-How-to-prevent-duplicate-users-being-created[the Help article on preventing user duplication].
 
-
+[[view-limits-saml-identity-provider]]
 == View Limits for a SAML Identity Provider
 
 Each configured SAML IdP has a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform.
@@ -219,4 +223,4 @@ For more information on limits in Access Management, see xref:troubleshooting-an
 
 == See Also
 
-* xref:single-log-out-task.adoc[Configure Single Logout]
+* xref:single-log-out-task.adoc[]

@@ -9,12 +9,12 @@ These tips provide information on what to do if you encounter issues.
 
 === Sign in Credentials are Not Recognized
 
-If your credentials aren't recognized when you try to log in to Anypoint Platform, try the following:
+If your credentials aren't recognized when you try to sign in to Anypoint Platform, try the following:
 
-* Check that you are using the correct URL to log in to your organization. +
-If your organization uses an external identity management system, your login URL is *anypoint.mulesoft.com/accounts/login/_yourOrganizationDomain_*.
+* Check that you are using the correct URL to sign in to your organization. +
+If your organization uses an external identity management system, your signin URL is *anypoint.mulesoft.com/accounts/login/_yourOrganizationDomain_*.
 * Verify that you are using the correct username and password for the account.
-* If your organization isn't using an external identity management system and your login credentials aren't working, reset your password or ask your Organization Administrator if your account is still active.
+* If your organization isn't using an external identity management system and your signin credentials aren't working, reset your password or ask your Organization Administrator if your account is still active.
 
 === Access Management Invitation Link Returns an Error
 

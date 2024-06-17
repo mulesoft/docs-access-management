@@ -12,7 +12,7 @@ Users running Anypoint Platform Private Cloud Edition can:
 . Configure xref:external-identity.adoc#user-management[User Management] using xref:external-identity.adoc#configure-ldap[LDAP].
 . Configure an <<SMTP,SMTP server>> to send API Manager alerts from your Anypoint Platform Private Cloud Edition installation
 . Set your <<Security,certificates and private key>> to handle SSL encryption for Anypoint Platform
-. Add customized <<Disclaimer,disclaimer>> to the Anypoint Platform Log-in message
+. Add customized <<Disclaimer,disclaimer>> to the Anypoint Platform sign-in message
 
 == SMTP
 
@@ -74,7 +74,7 @@ image::on-premises-features-3120e.png[]
 
 == Disclaimer
 
-By clicking the *Disclaimer* section you can set up a disclaimer message that your users see when they access the Anypoint Platform's log-in page.
+By clicking the *Disclaimer* section you can set up a disclaimer message that your users see when they access the Anypoint Platform's sign-in page.
 
 image::on-prem-features-d22af.png[]
 

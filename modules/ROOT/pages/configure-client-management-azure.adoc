@@ -1,4 +1,4 @@
-= Configure Azure Active Directory Client Management
+= Configuring Azure Active Directory Client Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
@@ -31,6 +31,7 @@ For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/
 
 . Click *Create*.
 
+[[microsoft-identity-platform-support]]
 == Microsoft Identity Platform Support
 
 === Access Tokens
@@ -57,17 +58,19 @@ When https://docs.microsoft.com/en-us/graph/api/application-post-applications?vi
 
 For a list of supported grant types, see the https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
 
+[[client-secrets]]
 === Client Secrets
 
 Initial secrets expiration is set to 6 months per Microsoft's recommendation. You can reset client secrets via Anypoint Platform. Anypoint Platform creates new secrets on your behalf but does not support removing the old secrets from your Microsoft account on your behalf. However, you can still remove the old secrets in Microsoft accounts.
 
+[[limitations]]
 == Limitations
 
 === Microsoft National Clouds
 
 Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet.
 
-
+[[token-validation]]
 == Token Validation
 
 Although Microsoft Azure AD does not provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for token validation] when you use Azure AD as a client provider.

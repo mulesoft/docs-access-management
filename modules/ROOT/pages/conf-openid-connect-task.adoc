@@ -1,19 +1,19 @@
-= Configure OpenID Connect Identity Management
+= Configuring OpenID Connect Identity Management
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-This task topic covers two identity management procedures for client registration in OpenID Connect:
+There are two identity management procedures for client registration in OpenID Connect:
 
 * Dynamic registration
 * Manual registration
 
-MuleSoft verifies support in Anypoint Platform for the following registrations:
+Anypoint Platform supports the following registrations:
 
 * Clients created dynamically in Okta and OpenAM
 * Clients created manually in Salesforce, Okta, OpenAM, and PingFederate
 
-Please note, that although integration with the aforementioned Identity providers have been officially tested, Anypoint platform supports the OpenID Connect Protocol. This means that, any Identity Provider that supports the protocol should be able to integrate unless they diverge from the http://openid.net/specs/openid-connect-core-1_0.html[specification].
+Although integration with the aforementioned Identity providers has been officially tested, Anypoint Platform supports the OpenID Connect Protocol. This means that any Identity Provider that supports the protocol can integrate unless they diverge from the http://openid.net/specs/openid-connect-core-1_0.html[specification].
 
 If you already configured Anypoint Platform as a client application in your identity provider, perform manual registration. Otherwise, if your identity provider supports dynamic client registration, perform dynamic registration. During registration, you need to provide several URLs. The following table contains examples of the URLs you need to provide, depending on your provider, during registration.
 
@@ -28,6 +28,7 @@ If you already configured Anypoint Platform as a client application in your iden
 | User Info | {BASE URL}/userinfo | {BASE URL}/userinfo | {BASE URL}/userinfo | {BASE URL}/idp/userinfo.openid
 |===
 
+[[configure-openid-connect-dynamically]]
 == Configure OpenID Connect Dynamically
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
@@ -70,11 +71,12 @@ The URL that returns user profile information to Anypoint.
 +
 `+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
 +
-. Log in through your identity provider to test the configuration.
+. Sign in through your identity provider to test the configuration.
 
 [NOTE]
 The dynamically registered application at the identity provider has only default settings. If you want to configure additional functionalities (such as group mappings), you must update the settings on the provider side. Configuring dynamically registered applications is not currently supported. 
 
+[[configure-openid-connect-manually]]
 == Configure OpenID Connect Manually
 
 include::partial$include-nav-steps-org-admin.adoc[]
@@ -123,7 +125,7 @@ The location of the OpenID Provider. For most providers, `/.well-known/openid-co
 +
 `+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
 +
-. Log in through your identity provider to test the configuration.
+. Sign in through your identity provider to test the configuration.
 
 == See Also
 
