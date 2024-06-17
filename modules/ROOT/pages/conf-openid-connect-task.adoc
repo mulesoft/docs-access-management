@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-There are two identity management procedures for client registration in OpenID Connect:
+You can use one of these identity management procedures for client registration in OpenID Connect:
 
 * Dynamic registration
 * Manual registration
