@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Configure user management using LDAP version 3 for the Private Cloud Edition of Anypoint Platform. User management through LDAP is available only for the Private Cloud Edition.
+Configure user management using LDAP version 3 for Anypoint Platform Private Cloud Edition (Anypoint PCE). User management through LDAP is available only for Anypoint PCE.
 
 . From Anypoint Platform, click *Access Management > External Identity*.
 +
