@@ -1,5 +1,5 @@
 .xref:index.adoc[Access Management]
-* xref:index.adoc[]
+* xref:index.adoc[Overview]
 * xref:iam-release-notes.adoc[]
 * xref:managing-your-account.adoc[]
 * xref:users.adoc[]
