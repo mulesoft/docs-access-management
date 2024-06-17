@@ -184,7 +184,8 @@ If your identity provider supports uploading service-provider metadata, you can 
 
 Anypoint Platform uses cookies to ensure that SSO users are redirected to the same location from which they initiated their signin.
 
-. When a user signs in to Anypoint Platform, a cookie is created for the signin session: `mulesoft.sess=xxxxx`. +
+. When a user signs in to Anypoint Platform, a cookie is created for the signin session: `mulesoft.sess=xxxxx`.
++
 The cookie contains the location, such as a public portal, from which the user initiated the signin.
 . The cookie is passed to the user's browser.
 . The user is directed to their SSO provider for authentication.
