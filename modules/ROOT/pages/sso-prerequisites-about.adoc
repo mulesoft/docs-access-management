@@ -10,7 +10,7 @@ When using SSO within Anypoint Platform, there are some prerequisites and limita
 Before using SSO, ensure that you have performed the following:
 
 * Configure your identity provider to send the username and email in your assertion.
-* Configure Anypoint Platform to map the username and email to the expected attribute name. If you do not configure this setting, signin fails with a 403 unauthorized error message.
+* Configure Anypoint Platform to map the username and email to the expected attribute name. If you don't configure this setting, signin fails with a 403 unauthorized error message.
 * Configure the SAML assertion of the identity provider as signed and optionally encrypted using
 ** either *AES128* or *AES256* block encryption algorithm,
 ** *RSA-OAEP (including MGF1 with SHA1)* key transport algorithm, and
