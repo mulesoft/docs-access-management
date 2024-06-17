@@ -5,7 +5,7 @@ endif::[]
 
 Multi-factor authentication (MFA) provides an additional layer of verification for Anypoint Platform users.
 MuleSoft requires MFA when users access Anypoint Platform, either directly with their Anypoint credentials or via single sign-on (SSO).
-MFA is enabled for direct signins and can’t be turned off at the organization level. However, there are a few service account types that don’t require MFA. An organization administrator should waive MFA for these accounts to allow existing integrations to continue without interruption.
+MFA is enabled for direct signins and can’t be turned off at the organization level. However, a few service account types don’t require MFA. An organization administrator should waive MFA for these accounts so that existing integrations can continue without interruption.
 For SSO users, set up MFA through the identity provider.
 
 When a user signs in with their Anypoint credentials, they must enter their password and then verify their identity with one of these verification methods:
