@@ -13,7 +13,7 @@ Anypoint Platform supports the following registrations:
 * Clients created dynamically in Okta and OpenAM
 * Clients created manually in Salesforce, Okta, OpenAM, and PingFederate
 
-Although integration with the aforementioned Identity providers has been officially tested, Anypoint Platform supports the OpenID Connect Protocol. This means that any Identity Provider that supports the protocol can integrate unless they diverge from the http://openid.net/specs/openid-connect-core-1_0.html[specification].
+MuleSoft has officially tested the integration with these identity providers. Because Anypoint Platform supports the OpenID Connect Protocol, any identity provider that supports the protocol can integrate unless they diverge from the http://openid.net/specs/openid-connect-core-1_0.html[specification].
 
 If you already configured Anypoint Platform as a client application in your identity provider, perform manual registration. Otherwise, if your identity provider supports dynamic client registration, perform dynamic registration. During registration, you need to provide several URLs. The following table contains examples of the URLs you need to provide, depending on your provider, during registration.
 
