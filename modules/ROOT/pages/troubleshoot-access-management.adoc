@@ -9,7 +9,7 @@ These tips provide information on what to do if you encounter issues.
 
 === Sign in Credentials are Not Recognized
 
-If your credentials aren't recognized when you try to sign in to Anypoint Platform, try the following:
+If your credentials aren't recognized when you sign in to Anypoint Platform, try the following:
 
 * Check that you are using the correct URL to sign in to your organization. +
 If your organization uses an external identity management system, your signin URL is *anypoint.mulesoft.com/accounts/login/_yourOrganizationDomain_*.
