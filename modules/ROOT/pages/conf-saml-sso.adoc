@@ -190,7 +190,7 @@ The cookie contains the location, such as a public portal, from which the user i
 . The cookie is passed to the user's browser.
 . The user is directed to their SSO provider for authentication.
 . After the user is authenticated using SSO, the provider directs the user back to Anypoint Platform with the authorization decision SAML response.
-. The session cookie, `mulesoft.sess=xxxxx`, is passed from the browser, which redirects the user back to the location from which they initiated the signin process.
+. The session cookie, `mulesoft.sess=xxxxx`, is passed from the browser, which redirects the user back to the location where they initiated the signin process.
 . After the user successfully signs in to Anypoint Platform, the `mulesoft.sess` cookie returns to its default value, based on the OWASP standard.
 
 Users can also be redirected based on their permissions. This occurs when:
