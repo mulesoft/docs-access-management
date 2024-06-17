@@ -28,7 +28,7 @@ Be aware of the following considerations related to client behavior:
 +
 ** If a user session times out, the user is redirected to the federated identity signin page instead of the generic one. Links and bookmarks that identify the organization redirect the user to the federated signin page, which fails for non-federated users.
 +
-** If you configure your identity provider to handle user information assertion, users must sign into Anypoint Platform using the following URL:
+** If you configure your identity provider to handle user-information assertion, users must sign into Anypoint Platform using the following URL:
 +
 ----
 https://anypoint.mulesoft.com/accounts/login/{your_org_domain}
