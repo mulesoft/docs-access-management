@@ -1,7 +1,4 @@
 = Business Groups
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 Business groups are self-contained resource groups that contain Anypoint Platform resources such as applications and APIs. Business groups provide a way to separate and control access to Anypoint Platform resources because users have access only to the business groups in which they have a role.
 

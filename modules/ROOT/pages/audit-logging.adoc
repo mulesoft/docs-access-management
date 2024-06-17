@@ -1,8 +1,4 @@
 = Audit Logging
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
 
 The audit logging service provides a queryable history of actions performed within the Anypoint Platform. It keeps track of all users who have interacted with objects in the system, and timestamps those actions. It also provides mechanisms for querying the set of users who have performed actions, the set of objects that had actions performed on them, and other endpoints that enable the querying of log entries.
 

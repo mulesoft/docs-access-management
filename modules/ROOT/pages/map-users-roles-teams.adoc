@@ -1,8 +1,4 @@
 = Mapping Single Sign-On Users to Roles or Teams
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-
 :page-aliases: map-users-roles-ldap-task.adoc
 
 You can map users in a federated organization's group to a team or role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
@@ -168,7 +164,8 @@ If you select *Maintainer*, users who have that group name become team maintaine
 +
 . In the *Provider Name* drop-down, select the IdP associated with the mapping.
 . Click *Add*.
-. Click *Save Changes*. +
+. Click *Save Changes*. 
++
 The SSO users associated with the group you designated are assigned to the team.
 
 [[map-sso-users-to-roles]]
