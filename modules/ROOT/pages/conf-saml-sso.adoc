@@ -186,7 +186,7 @@ Anypoint Platform uses cookies to ensure that SSO users are redirected to the sa
 
 . When a user signs in to Anypoint Platform, a cookie is created for the signin session: `mulesoft.sess=xxxxx`.
 +
-The cookie contains the location, such as a public portal, from which the user initiated the signin.
+The cookie contains the location, such as a public portal, where the user initiated the signin.
 . The cookie is passed to the user's browser.
 . The user is directed to their SSO provider for authentication.
 . After the user is authenticated using SSO, the provider directs the user back to Anypoint Platform with the authorization decision SAML response.
