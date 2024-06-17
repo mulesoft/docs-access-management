@@ -12,7 +12,7 @@ Configuring SAML for SSO involves:
 * Navigating to and completing the *External Identity - Identity Management SAML 2.0* form in Anypoint Platform, and optionally configuring some advanced settings
 * Saving and testing your new configuration
 
-== Before you Begin
+== Before You Begin
 
 * Your Anypoint Platform organization must be set up as your audience.
 * The assertion consumer service must be set to send a `POST` request to `+https://anypoint.mulesoft.com/accounts/login/:org-domain/providers/:providerId/receive-id+`. +
