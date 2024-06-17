@@ -109,7 +109,7 @@ Please create a https://help.mulesoft.com[MuleSoft support case] for account del
 
 === What account should I use?
 
-If you have one or more existing MuleSoft community accounts tied to the email address at which you received your invitation, MuleSoft prompts you to use your existing account to sign in and accept the invitation. You can also choose to create a new account by following the *Sign Up* link at the bottom of the form.
+If existing MuleSoft community accounts are associated with the email address where you received your invitation, MuleSoft prompts you to use your existing account to sign in and accept the invitation. You can also create a new account by clicking the *Sign Up* link at the bottom of the form.
 
 === How can I use a different email address?
 
