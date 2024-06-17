@@ -5,7 +5,7 @@ endif::[]
 
 When using SSO within Anypoint Platform, there are some prerequisites and limitations to be aware of.
 
-== Prerequisites
+== Before You Begin
 
 Before using SSO, ensure that you have performed the following:
 
