@@ -65,7 +65,7 @@ Client secrets (application password) use a string value in the Azure applicatio
 
 Client secrets are initially set to expire six months from the date of creation per Microsoft's security recommendations. You can reset the expiration date for client secrets in Anypoint Platform. The lifetime limit for a client secret is 24 months and can't be extended beyond that. 
 
-You can also create new client secrets in Anypoint Platform, but you can't remove old or expired secrets from your Microsoft account from Anypoint Platform. You must xref:https://learn.microsoft.com/en-us/partner-center/marketplace-offers/create-or-update-client-ids-and-secrets#to-delete-a-client-secret[delete old and expired secrets] in your Microsoft account. It is best practice to remove expired secrets promptly. 
+You can also create new client secrets in Anypoint Platform, but you can't remove old or expired secrets from your Microsoft account from Anypoint Platform. You must delete old and expired client secrets in your Microsoft account. It's best practice to remove expired secrets promptly. 
 
 [[limitations]]
 == Limitations
