@@ -1,7 +1,4 @@
 = Users
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 As an administrator of your root organization, you can enable, disable, or delete users.
 
@@ -122,19 +119,21 @@ For more information on limits in Access Management, see xref:troubleshooting-an
 
 == Managing Deleted Users
 
-When you delete a user from your root organization, the user is _soft deleted_. This user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs. 
+When you delete a user from your root organization, the user is _soft deleted_. The deleted user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs. 
 
 Deleting a user does not affect the assets created by that user. For instance, deleting a user who has created an API in Exchange, an API in API Manager, or an application in Runtime Manager does not have any impact on the assets they created.
 
-If an Anypoint Platform user that was removed from an organization tries to log in to their former organization, the login request fails, with a `Your credentials are not valid` error message.
+An Anypoint Platform user can't sign into an organization they were removed from. If a user tries to sign in to an organization they were removed from, they are added to a new trial organization as an administrator.  
 
-An organization administrator can invite the user to join the same organization again, but the user must create a new username. If the user tries to log in with their old account, the sign up request fails, stating `Cannot create user. User already exists`.
+An organization administrator can invite a user to rejoin the organization they were previously removed from, but the user must create a new username. 
 
-If a deleted federated user tries to log in, the login request fails, with a `This user is disabled` error message, but the user still appears in the organization as a disabled account. An organization administrator can re-enable this user.
+A deleted federated user appears in the organization as a disabled account. An organization administrator can reenable this user.
+
+// If the user tries to sign in with their old account, the sign up request fails, stating `Cannot create user. User already exists`.
 
 == Managing External Users of Your Public APIs
 
-When you make an API portal public, users from any other Anypoint Platform organization can register client applications to call your API. When these users log in to your public developer portal, they are considered external users because they are outside of your organization.
+When you make an API portal public, users from any other Anypoint Platform organization can register client applications to call your API. When these users sign in to your public developer portal, they are considered external users because they are outside of your organization.
 
 When a user logs into Anypoint Platform for the first time, they are automatically added to the *External Users* tab. From the *External Users* tab in Access management, you can view a list of all external users. You can also enable or disable each of these external users from this screen. When you disable an external user, they can no longer log in to your public portal.
 
