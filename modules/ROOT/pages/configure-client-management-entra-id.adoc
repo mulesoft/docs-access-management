@@ -1,4 +1,5 @@
-= Configuring Azure Active Directory Client Management
+= Configuring Microsoft Entra ID Client Management
+:page-aliases: access-management::configure-client-management-azure.adoc
 
 You can use dynamic client registration to configure Microsoft Entra ID (formerly Azure AD), client management with Anypoint Platform. Using Microsoft Entra ID as a client provider enables you to authenticate and authorize API consumers with your existing Microsoft Entra ID configurations. Microsoft Entra ID configuration in Anypoint Platform also provides a stateless microservice to convert OAuth 2.0 client application registration requests to requests supported by Microsoft Entra ID.
 
@@ -8,14 +9,14 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-client-providers.adoc[]
 
-. Click *Add Client Provider*, and then select *OpenID Connect DCR for Azure*.
+. Click *Add Client Provider*, and then select *OpenID Connect DCR for Microsoft Entra ID (Azure AD)*.
 +
-The *Add OIDC Azure client provider* page appears.
+The *Add OIDC Microsoft Entra ID (Azure AD) client provider* page appears.
 +
 . Enter a name and description for your client provider.
 . Enter the following values from your identity provider’s configuration:
 .. *Issuer*: URL that the OpenID provider asserts is its trusted issuer.
-.. *Tenant ID for Azure AD*: The tenant ID from Microsoft Entra ID. For more information on obtaining your tenant ID, see https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID].
+.. *Tenant ID for Microsoft Entra ID*: The tenant ID from Microsoft Entra ID. For more information on obtaining your tenant ID, see https://learn.microsoft.com/en-us/entra/fundamentals/how-to-find-tenant[How to find your Microsoft Entra tenant ID].
 .. *Client ID*: The client ID for an existing client in your identity provider (IdP) that is capable of creating applications in Microsoft Entra ID.
 .. *Client Secret*: The client secret that corresponds to the client ID.
 . Expand the *Advanced Settings* section. The following selections are optional:
@@ -35,8 +36,9 @@ Anypoint Platform provides support for Microsoft Identity Platform access tokens
 
 === Access Tokens
 
-For your APIs, Microsoft Entra ID client management in Anypoint Platform supports both https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[v1 and v2 JSON Web Tokens] (JWTs) on Microsoft identity platform.
+For your APIs, Microsoft Entra ID client management in Anypoint Platform supports both https://learn.microsoft.com/en-us/entra/identity-platform/access-tokens[v1 and v2 JSON Web Tokens] (JWTs) on Microsoft identity platform.
 
+[[oauth2]]
 === OAuth 2.0 Endpoints
 
 Anypoint Platform supports only tokens obtained using Microsoft Entra ID v2.0 endpoints, also known as Microsoft identity platform endpoints. For example, Anypoint Platform supports the token endpoint: `https://login.microsoftonline.com/{tenantId}/oauth2/v2.0/token`.
@@ -51,17 +53,18 @@ Use the following properties when you are using the Authorization Code grant typ
 
 Anypoint Platform does not support custom scopes. Use the default scope for Microsoft Graph.
 
+[[grant-types]]
 === Grant Types
 
-For a list of supported OAuth 2.0 authorization code grant types, see the https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
+For a list of supported OAuth 2.0 authorization code grant types, see the https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
 
-When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application with Microsoft], you can't specify the supported OAuth 2.0 authorization code grant types. Because of this limitation on the Microsoft Microsoft Entra ID side, Anypoint Platform does not support selecting grant types.
+When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application with Microsoft], you can't specify the supported OAuth 2.0 authorization code grant types. Because of this limitation on the Microsoft Entra ID side, Anypoint Platform does not support selecting grant types.
 
 
 [[client-secrets]]
 === Client Secrets
 
-Client secrets (application password) use a string value in the Azure application to authenticate instead of a certificate for identity. 
+Client secrets (application password) use a string value in the Microsoft Entra application to authenticate instead of a certificate for identity. 
 
 Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations. 
 
@@ -72,21 +75,21 @@ You can create new client secrets in Anypoint Platform, but you can't remove old
 
 === Microsoft National Clouds
 
-Anypoint Platform does not support Azure AD client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet.
+Anypoint Platform does not support Microsoft Azure client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet.
 
 [[token-validation]]
 == Token Validation
 
-Although Microsoft Microsoft Entra ID doesn't provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for token validation] when you use Microsoft Entra ID as a client provider.
+Although Microsoft Entra ID doesn't provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for token validation] when you use Microsoft Entra ID as a client provider.
 
-To use this policy, follow the documentation on xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[OAuth2.0 Endpoints] to generate supported tokens.
+To use this policy, follow the documentation on <<oauth2>> to generate supported tokens.
 
 === Token has been Revoked Error
 
-When you attempt to enforce the OpenID Connect (OIDC) policy by invoking an Anypoint API using a valid token obtained from Microsoft Entra ID and get a `Token has been revoked` error, refer to the xref:configure-client-management-azure.adoc#oauth-2-0-endpoints[documentation on OAuth 2.0 endpoints] to confirm that you obtained the token using a supported method. If the token validation still fails, contact Support.
+When you attempt to enforce the OpenID Connect (OIDC) policy by invoking an Anypoint API using a valid token obtained from Microsoft Entra ID and get a `Token has been revoked` error, refer to <<oauth2>> to confirm that you obtained the token using a supported method. If the token validation still fails, contact Support.
 
 == See Also
 
-* https://docs.microsoft.com/en-us/azure/active-directory/fundamentals/active-directory-how-to-find-tenant[How to find your Azure Active Directory tenant ID]
-* https://docs.microsoft.com/en-us/azure/active-directory/develop/access-tokens[Microsft identity platform access tokens]
-* https://learn.microsoft.com/en-us/azure/active-directory/develop/authentication-national-cloud[Microsoft National Clouds]
+* https://learn.microsoft.com/en-us/entra/fundamentals/how-to-find-tenant[How to find your Microsoft Entra ID tenant ID]
+* https://learn.microsoft.com/en-us/entra/identity-platform/access-tokens[Microsft identity platform access tokens]
+* https://learn.microsoft.com/en-us/entra/identity-platform/authentication-national-cloud[Microsoft National Clouds]

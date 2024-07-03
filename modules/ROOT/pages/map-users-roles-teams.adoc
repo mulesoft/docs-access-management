@@ -53,9 +53,9 @@ Use groups claims values to create a team or role for each group of users in you
 
 The following examples show responses from the `UserInfo` or `Token` endpoints that contain groups claims from different external identity providers.
 
-==== Azure AD
+====  Entra ID
 
-The following example shows a typical Azure AD groups claim:
+The following example shows a typical Entra ID groups claim:
 
 [source,xml]
 ----
