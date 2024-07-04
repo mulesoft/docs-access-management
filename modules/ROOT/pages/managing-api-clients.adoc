@@ -14,7 +14,7 @@ You can configure the following OAuth providers:
 * xref:conf-client-mgmt-openam-task.adoc[OpenAM version: 14]
 * xref:conf-client-mgmt-pf-task.adoc[PingFederate versions: 6 through 8]
 * xref:configure-client-management-openid-task.adoc[Dynamic Client Registration-compliant client providers]
- ** xref:configure-client-management-azure.adoc[Azure Active Directory Client Management]
+ ** xref:configure-client-management-entra-id.adoc[Microsoft Entra ID Client Management]
 
 +
 Dynamic Client Registration-compliant identity providers must conform to the https://openid.net/specs/openid-connect-registration-1_0.html[OpenID Connect Client Registration 1.0 incorporating errata set 1].
