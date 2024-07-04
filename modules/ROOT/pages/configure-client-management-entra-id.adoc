@@ -58,7 +58,7 @@ Anypoint Platform does not support custom scopes. Use the default scope for Micr
 
 For a list of supported OAuth 2.0 authorization code grant types, see the https://learn.microsoft.com/en-us/entra/identity-platform/v2-oauth2-auth-code-flow[Microsoft identity platform documentation].
 
-When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application with Microsoft], you can't specify the supported OAuth 2.0 authorization code grant types. Because of this limitation on the Microsoft Entra ID side, Anypoint Platform does not support selecting grant types.
+When https://docs.microsoft.com/en-us/graph/api/application-post-applications?view=graph-rest-1.0&tabs=http[creating a new application with Microsoft], you can't specify the supported OAuth 2.0 authorization code grant types. Because of this limitation on the Microsoft Entra ID side, Anypoint Platform doesn't support selecting grant types.
 
 
 [[client-secrets]]
