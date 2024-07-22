@@ -11,7 +11,10 @@ When you configure client provider URLs, use the endpoint `/pf-ws/rest/oauth/cli
 
 To edit existing PingFederate client providers:
 
-. On the *Access Management* page, click *Client Providers*. 
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-client-providers.adoc[]
+
 . Click the name of the PingFederate client to edit. 
 . Edit the following fields:
 +
