@@ -3,22 +3,17 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-Anypoint Platform supports only PingFederate versions 6 through 8. For versions 9 or later, you can configure the PingFederate client provider as an OIDC provider by following the instructions in xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management].
+Anypoint Platform supports only PingFederate versions 6 through 8. 
 
 When you configure client provider URLs, use the endpoint `/pf-ws/rest/oauth/clients` and not `/as/clients.oauth2`. Do not use PingFederate's dynamic client registration URL for this configuration.
 
-[[add-pingfederate-client-provider]]
-== Add A PingFederate Client Provider
+== Manage a PingFederate Client Provider
 
-include::partial$include-nav-steps-org-admin.adoc[]
+To edit existing PingFederate client providers:
 
-include::partial$include-nav-client-providers.adoc[]
-
-. Click *Add Client Provider*, and then select *PingFederate*.
-+
-The *Add PingFederate client provider* page appears.
-+
-. Fill in the following required fields:
+. On the *Access Management* page, click *Client Providers*. 
+. Click the name of the PingFederate client to edit. 
+. Edit the following fields:
 +
 * OAuth2 Authorization Provider, Authorize URL
 +
@@ -77,9 +72,9 @@ Name of user with privileges for creating new clients within the target PingFede
 Password of user with privileges for creating new clients within the target PingFederate system.
 +
 . Check Bypass approval page if you already have approval.
-. Save your configuration.
+. Click *Save*.
 
-Now, you can apply the PingFederate OAuth Token Enforcement policy to your APIs.
+
 
 == See Also
 
