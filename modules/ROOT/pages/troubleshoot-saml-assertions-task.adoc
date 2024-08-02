@@ -34,7 +34,7 @@ https://www.mulesoft.com/support-login
 The following image shows a SAML response element in Chrome developer tools as a result of signing in to Anypoint Platform using SSO.
 
 .SAML response element after signing in to Anypoint Platform in Google Chrome.
-image::iam-chromedevtools.png[]
+image::iam-chromedevtools.png["A Chrome developer tools screenshot showing an API request in progress"]
 
 In the *Network* tab (1), the `receive-id` line (2) indicates that you attempted to sign in to Anypoint Platform using single signon through your identity provider.
 Because the signin is successful, you can expand `receive-id` and access form data that contains your SAML response element (3). Unsuccessful signin attempts still generate SAML response elements.

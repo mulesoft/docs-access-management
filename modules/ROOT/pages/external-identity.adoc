@@ -11,7 +11,7 @@ As the Anypoint Platform organization administrator, you can configure identity 
 
 The following diagram shows the SAML identity management process:
 
-image::external-identity-decbd.png[A diagram showing the SAML identity management flow]
+image::external-identity-decbd.png["A diagram showing the SAML identity management flow"]
 
 Before configuring OpenID Connect or SAML 2.0, select an OpenID Connect-compliant provider, such as PingFederate, OpenAM, or Okta. If you are not using OpenID Connect, select any SAML 2.0-compliant provider.
 
