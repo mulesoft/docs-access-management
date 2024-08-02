@@ -136,7 +136,7 @@ Example string from your SAML assertion AttributeValue to the External Group Nam
 
 Mapping:
 
-image::external-identity-cfb1e.png[An example of a list of external group names]
+image::external-identity-cfb1e.png["An example of a list of external group names"]
 
 == Map SSO Users to Teams
 
