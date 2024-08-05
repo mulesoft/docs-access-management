@@ -1,6 +1,6 @@
-= Establish a Tenant Relationship to a Trusted Salesforce Organization
+= Add Salesforce Organizations to Your Anypoint Platform Organization
 
-Establish a tenant relationship between your Anypoint Platform organization and a Salesforce organization to enable the management of MuleSoft services from the Salesforce organization. You can establish relationships with multiple Salesforce organizations in Anypoint Platform, but a Salesforce organization can be connected to only one Anypoint Platform organization.
+Establish a tenant relationship between your Anypoint Platform organization and a trusted Salesforce organization to enable the management of Anypoint Platform features from the Salesforce organization. You can establish relationships with multiple Salesforce organizations in your Anypoint Platform organization, but a Salesforce organization can be connected to only one Anypoint Platform organization.
 
 When you connect an Anypoint Platform organization with a Salesforce organization, a Saleforce admin can: 
 
@@ -21,6 +21,7 @@ Use the Salesforce *MuleSoft > Setup* user interface to:
 
 Use the Anypoint Platform *Access Management > Salesforce* user interface to:
 
+* Add connections to Salesforce organizations
 * Continue creating a connection to a Salesforce organization.
 * Enable or disable a tenant relationship with Salesforce.
 * Delete the relationship between Anypoint Platform and a Salesforce organization.
@@ -41,15 +42,17 @@ You must have the tenant key from the Salesforce organization to connect before 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. Click *External Access*.
-. In the *External Access* page, click *Salesforce*.
-. Click *Connect with a new Salesforce Org*.
+. Click *Salesforce*.
+. Click *Add Salesforce Org*.
 . Enter the Salesforce tenant key, and click *Confirm*. 
 The format for the Salesforce tenant key is `cloud/env/org-id`.
-. In the *Connect with a new Salesforce Org* dialog, click *Confirm*. 
-. Copy the Anypoint Platform ID, and click *OK*.
+. In the *Add the Salesforce Org* dialog, click *Add*. 
+. Click *Copy* to copy the Anypoint Platform ID. 
+. If you are the admin for the Salesforce org you are adding, click *Manage in Salesforce* to continue setting up the relationship. 
++
+If you are not the Salesforce organization administrator, provide the Anypoint Platform organization ID to the Salesforce administrator.
 
-The organization relationship appears in the *Salesforce* section of *External Access* with the `Enabled` status, which means that it's enabled for connection in your Salesforce org. The connection steps must be completed in your Salesforce organization.
+The Salesforce organization appears in the *Salesforce Orgs* section with the `Disabled` status.
 
 [complete-organization-connection]
 == Completing the Organization Connection in Salesforce
@@ -70,11 +73,10 @@ When you enable the connection with a Salesforce organization, you can publish a
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
-. Click *External Access*.
-. In the *External Access* page, click *Salesforce*. 
+. Click *Salesforce*.
 +
-If your organization has at least one established tenant relationship, a list of Salesforce organizations appears, showing the name, organization ID, domain, and status of the relationship connection.
-. Click *Enable* or *Disable*.
+If your organization has at least one established tenant relationship, a list of Salesforce organizations appears, showing the name, organization ID, and status of the relationship connection.
+. Click *Enable* or *Disable* for the Salesforce org you want to enable or disable the connection for.
 
 [removing-connection]
 == Removing a Connection in Salesforce
