@@ -1,0 +1,21 @@
+= Manage Connected Salesforce Organizations
+
+When you establish a tenant relationship between your Anypoint Platform organization and a trusted Salesforce organization, you can manage certain aspects of the connected Salesforce organization in the *Access Management > Salesforce* page, including:  
+
+== Going to the Salesforce Organization
+To go directly to the connected Salesforce organization:
+
+
+== Getting Your Anypoint Platform Organization ID
+To get your Anypoint Platform organization ID:
+
+== Editing the Salesforce Organization name
+You can change the way the Salesforce organization name is displayed in Anypoint Platform. This doesn't change the Salesforce organization name on the Salesforce side. 
+
+To edit the Salesforce organization name:
+
+== Repair Salesforce Organization Informmation
+
+
+
+== Removing a Salesforce Organization

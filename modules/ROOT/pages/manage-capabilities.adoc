@@ -1,0 +1,9 @@
+= Manage Capabilities in Access Management
+
+When you connect your Anypoint Platform organization with a Salesforce organization, you see the status of the capabilities that are associated with the Salesforce organization. 
+
+Capabilities include features and products that are visible in both the Salesforce organization and the Anypoint Platform organization. Depending on the capability, enablement is managed in either the Salesforce organization or the Anypoint Platform organization.
+
+* Enabling the ability of a Salesforce organization to access and import Anypoint Platform APIs from the API Catalog. For more information about API Catalog, see ADD DOC LINK. This capability is managed in Anypoint Platform, meaning an Anypoint Platform organization administrator must enable it in Anypoint Platform access management.
+
+
