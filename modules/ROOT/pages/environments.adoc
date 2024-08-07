@@ -94,7 +94,7 @@ include::partial$include-nav-environments.adoc[]
 . If you added more than one client provider, click *Set as default* to designate a default client provider.
 . Click *Update*.
 
-You can now configure client providers for APIs.
+The update applies only to new APIs in this environment. If you want to change the client provider for an existing API, you can do that by xref:api-manager::edit-api-endpoint-task.adoc[editing the API in API Manager] and selecting the client provider from the *Client provider* dropdown.
 
 [[remove-an-idp-from-an-environment]]
 == Remove a Client Provider from an Environment

@@ -1,22 +1,29 @@
 = Connected Apps for End Users
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
-End users can delegate API access and sign in to third-party applications using their Anypoint Platform credentials. They can also view connected apps created in their root organization or business groups.
+Delegate API access and sign in to third-party applications using your Anypoint Platform credentials. You can also view connected apps created in your root organization or business groups.
 
-Connected apps might request authorization from end users, and they can grant access in the following interface:
+To grant access to a connected app:
 
-.The *Authorize App* interface enables end users to see which organization is requesting access to data and how the data is used. After the end user clicks *Grant Access*, the app is authorized to access the data indicated in the *Authorize App* interface.
-image::connected-apps-authorize.png[The interface the user sees before authorizing an app to use their data, 60%,60%]
+. In the *Authorize App* dialog window, click *Grant Access*. 
++
+You can see which organization is requesting access to data and how the data is used. After you click *Grant Access*, the app is authorized to access the data indicated in the *Authorize App* dialog window.
++
+image::connected-apps-authorize.png["App authorization with username and a list of permissions granted to the app", 60%,60%]
 
+== Managing Third-party Apps
 
-End users can manage third-party apps that they have authorized in their profile settings. They can view authorized apps in their profiles by clicking on their profile icon and selecting *Profile*. The following screenshot illustrates how a user’s profile page shows authorized connected apps:
+You can manage third-party apps you have authorized in your profile settings: 
 
-.The *Application Name* column lists the name of the app with which the user is sharing their data. The *Scopes* column lists the token granted to the app, in addition to the permissions the connected app has.
-image::connected-apps-in-profile.png[A user's profile that contains authorized connected apps and their scopes, 80%,80%]
+. Click your profile icon and select *Profile*.
++
+The following image shows what the connected apps look like in your profile:
++
+image::connected-apps-in-profile.png["A user's profile that contains authorized connected apps and their scopes", 80%,80%]
 
+The *Application Name* column lists the name of the app with which the user is sharing their data. 
 
-If an organization administrator blocks an app, end users cannot authorize the app to access their information.
+The *Scopes* column lists the token granted to the app, in addition to the permissions the connected app has.
 
-Because most applications are developed by a third-party, MuleSoft is not liable for how an app uses the data it's requesting access to. You can navigate to the developer information link and contact the application admin if you have questions or concerns about their application.
+If an organization administrator blocks an app, you can't authorize the app to access your information.
+
+Because most applications are developed by third parties, MuleSoft is not liable for how an app uses the data it's requesting access to. You can navigate to the developer information link and contact the application's admin if you have questions or concerns about the application.
