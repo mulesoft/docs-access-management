@@ -2,8 +2,28 @@
 
 When you connect your Anypoint Platform organization with a Salesforce organization, you see the status of the capabilities that are associated with the Salesforce organization. 
 
-Capabilities include features and products that are visible in both the Salesforce organization and the Anypoint Platform organization. Depending on the capability, enablement is managed in either the Salesforce organization or the Anypoint Platform organization.
+Capabilities include features and products that are visible and can be managed in both the Anypoint Platform organization and the connected Salesforce organization. Depending on the capability, enablement is managed in either the Salesforce organization or the Anypoint Platform organization.
 
-* Enabling the ability of a Salesforce organization to access and import Anypoint Platform APIs from the API Catalog. For more information about API Catalog, see ADD DOC LINK. This capability is managed in Anypoint Platform, meaning an Anypoint Platform organization administrator must enable it in Anypoint Platform access management.
+== Making Anypoint Platform APIs Available in a Salesforce Organization
+
+Enable a connected Salesforce organization to access and import Anypoint Platform APIs into the Salesforce API Catalog and expose them as invocable actions. This capability is managed in Anypoint Platform access management and must be enabled by an Anypoint Platform organization administrator.
+
+To enable this feature:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Click *Salesforce*.
+. In the *Capabilities Managed in Anypoint Platform* section, click *Settings* next to *Make MuleSoft Anypoint Platform APIs Available in Salesforce*.
+. In *Settings for Anypoint APIs in Salesforce*, read the information, and then click *Continue*.
+. In the next window, select which APIs to make available to the connected Salesforce organization, and then click *Save settings*.
++
+This feature is now enabled. 
+
+[NOTE]
+The Salesforce administrator must select individual API operations to expose to selected Salesforce developers. After an API operation is assigned to a developer, an access request is sent to the owner of the API. 
+
+== See Also
+
+ADD LINK TO API CATALOG DOCUMENTATION
 
 
