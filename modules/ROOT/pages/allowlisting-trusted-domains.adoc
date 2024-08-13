@@ -16,7 +16,7 @@ _Result_: The domain has been added to your list of trusted domains. You are red
 [[auto-registration-domains]]
 == Automatic Registration of Domains
 
-NOTE: If you have Exchange assets or Public Portals created before 2024, you need to manually register the domain.
+NOTE: You must manually register the domain for Exchange assets and public portals created before 2024.
 
 When you publish an API specification to Exchange or send a request through the proxy, the base URI of the implementation is automatically added to the list of trusted domains.
 
