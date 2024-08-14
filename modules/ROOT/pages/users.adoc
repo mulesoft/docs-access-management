@@ -54,7 +54,7 @@ include::partial$include-nav-users.adoc[]
 
 == Access the User's Settings Page
 
-The user's Settings page is where you can edit the user's first and last name, email address, and exempt them from two-factor authentication. 
+The user's Settings page is where you can edit the user's first and last name, email address, and exempt them from multi-factor authentication. 
 
 include::partial$include-nav-users.adoc[]
 
