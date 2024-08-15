@@ -60,16 +60,16 @@ The user's *Settings* page is where you can edit the user's first and last name,
 
 include::partial$include-nav-users.adoc[]
 
-. There are three ways to access the user's Settings page:
+. There are three ways to access the user's *Settings* page:
 * Click the user's name in the *Name* column.
 * Click the username of the user in the *Username* column.
-* Click the More actions menu (...) in the user's row, and select *Manage User*. 
+* Click the more actions menu (*...*) in the user's row, and select *Manage User*. 
 . Click the *Settings* tab. 
 
 [[grant-user-permissions]]
 == Grant Permissions to Users
 
-Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually. Note that teams and roles functionality are mutually exclusive.
+Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually. Teams and roles functionality are mutually exclusive.
 
 In the *Users* page, click a user name to access more information about that user, manage and view permissions, manage and view teams or roles, or reset their password.
 
