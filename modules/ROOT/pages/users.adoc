@@ -5,11 +5,12 @@ As an administrator of your root organization, you can enable, disable, or delet
 On the access management *Users* page, you can:
 
 * Invite users to join your organization.
-* Enable the disabled users in the selected organization or business group. 
-* Disable the users in the selected organization or business group so that they're no longer able to sign in.
+* Enable and disable users. 
++
+When you disable a user, they are no longer able to sign in to your organization.
 * Delete users. 
 +
-When deleting a user from the root organization, all of the user's permissions are removed, and the user becomes unattached. When deleting a user from a business group, all of the user's permissions for only the selected business group are removed. The deleted user's data resides in the organization for audit logging purposes.
+When deleting a user from the root organization, all of the user's permissions are removed, and the user becomes unattached. 
 * Send a request to a user to reset their password.
 * 
 
@@ -44,6 +45,7 @@ Note that the email link expires in one week.
 
 Invited users have access to the same set of resources as you (although they may have different permissions that restrict what they can view or do).
 
+[[resend-or-cancel-invitation]]
 == Resend or Cancel a Sent Invitation
 
 include::partial$include-nav-users.adoc[]
@@ -52,6 +54,7 @@ include::partial$include-nav-users.adoc[]
 . Click the More actions menu (...) in the row for the invitation to manage. 
 . Select *Re-send Invite* or *Cancel Invite*.
 
+[[access-user-settings]]
 == Access the User's Settings Page
 
 The user's Settings page is where you can edit the user's first and last name, email address, and exempt them from multi-factor authentication. 
