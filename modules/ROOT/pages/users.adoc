@@ -12,7 +12,6 @@ When you disable a user, they are no longer able to sign in to your organization
 +
 When deleting a user from the root organization, all of the user's permissions are removed, and the user becomes unattached. 
 * Send a request to a user to reset their password.
-* 
 
 == Before You Begin
 
@@ -51,13 +50,13 @@ Invited users have access to the same set of resources as you (although they may
 include::partial$include-nav-users.adoc[]
 
 . Click *Pending Invites* to view all invitations that have not yet been accepted. 
-. Click the More actions menu (...) in the row for the invitation to manage. 
+. Click the more actions menu (*...*) in the row for the invitation to manage. 
 . Select *Re-send Invite* or *Cancel Invite*.
 
 [[access-user-settings]]
 == Access the User's Settings Page
 
-The user's Settings page is where you can edit the user's first and last name, email address, and exempt them from multi-factor authentication. 
+The user's *Settings* page is where you can edit the user's first and last name, email address, and exempt them from multi-factor authentication. 
 
 include::partial$include-nav-users.adoc[]
 
