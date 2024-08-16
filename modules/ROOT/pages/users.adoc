@@ -125,7 +125,7 @@ In the *Review* section, review the permissions and the business groups and envi
 The user now has the permissions you selected in the business groups and environments you specified.
 
 [[removing-permissions-from-user]]
-== Removing Permissions for a User
+== Remove Permissions for a User
 
 To edit or remove permissions for an individual user:
 
