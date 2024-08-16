@@ -124,6 +124,20 @@ In the *Review* section, review the permissions and the business groups and envi
 +
 The user now has the permissions you selected in the business groups and environments you specified.
 
+== Removing Permissions for a User
+
+To edit or remove permissions for an individual user:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-users.adoc[]
+
+. Click the name of the user to edit permissions for.
+. In the row that has the permissions to edit, click *Edit*.
++
+The *Edit Permissions* dialog shows the permissions that are assigned to the user.
+. Deselect the permissions to remove from the user, and then click *Done*.
+
 == View Limits for a User
 
 Each administrative page for a user contains a *Limits* section that shows how close the account is to hitting limits imposed by Anypoint Platform.
@@ -171,6 +185,6 @@ include::partial$include-reauthentication-conditions.adoc[]
 == See Also
 
 * xref:exchange::to-share-an-asset.adoc[To Share an Asset or Publish to a Portal]
-* xref:external-identity.adoc#managing-users[user management]
+* xref:external-identity.adoc#managing-users-external-identity[Managing Users with an External Identity Provider]
 * xref:external-identity.adoc#instructions-for-saml-configuration[SSO through a Third-party IdP]
 * xref:external-identity.adoc#configure-ldap[LDAP]
