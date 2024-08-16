@@ -24,8 +24,7 @@ Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
 Anypoint Code Builder Developer:: Enables a user to create and use cloud IDE instances of Anypoint Code Builder. This permission does not apply to Anypoint Code Builder for Desktop. 
 
-Mule Developer Generative AI User:: Enables a user to use natural language prompts to develop and generate flows using the Einstein for Anypoint Code Builder Generative Flows feature. This permission is displayed only if the organization administrator enables the *Gen AI* feature for Anypoint Code Builder. 
-
+Mule Developer Generative AI User:: Enables a user to use natural language prompts to develop and generate flows using the Einstein for Anypoint Code Builder Generative Flows feature.  
 
 == API Catalog
 
