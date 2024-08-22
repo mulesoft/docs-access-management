@@ -2,7 +2,7 @@
 
 When you connect your Anypoint Platform organization with a Salesforce organization, you see the status of the capabilities that are associated with the Salesforce organization. 
 
-Capabilities include features and products that are visible and can be managed in both the Anypoint Platform organization and the connected Salesforce organization. Depending on the capability, enablement is managed in either the Salesforce organization or the Anypoint Platform organization.
+Capabilities include features that are visible and can be managed in both the Anypoint Platform organization and the connected Salesforce organization. Enablement of capabilities is done either in Anypoint Platform or in the Salesforce organization, depending on the capability. 
 
 == Enabling Invocable Actions for Your Salesforce Organization
 
@@ -10,6 +10,10 @@ The Salesforce organization administrator enables the invocable actions capabili
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
+. In the *Your connected Anypoint Platform Organization* section, click *View Connection Info*.
+. In the *Connection to MuleSoft Anypoint Platform* window, turn on *Enable Invocable Actions from Anypoint Automations.*
++
+After the Salesforce organization administrator enables this feature, *Enabled in Salesforce* is displayed. 
 
 == Making Anypoint Platform APIs Available in a Salesforce Organization
 
