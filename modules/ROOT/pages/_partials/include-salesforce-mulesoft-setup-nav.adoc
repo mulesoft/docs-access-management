@@ -1,0 +1,2 @@
+. Log in to your Salesforce organization with your admin credentials:
+. From Setup, in the Quick Find box, enter `MuleSoft`, and then select *MuleSoft > Setup*.

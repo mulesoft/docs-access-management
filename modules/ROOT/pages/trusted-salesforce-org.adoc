@@ -60,8 +60,8 @@ The Salesforce organization appears in the *Salesforce Orgs* section with the `D
 
 To complete connecting your Anypoint Platform organization to a Salesforce organization:
 
-. Log in to your Salesforce organization with your admin credentials:
-. From Setup, in the Quick Find box, enter `MuleSoft`, and then select *MuleSoft > Setup*.
+include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
+
 . In the *Your connected Anypoint Platform Organization* section, click *View Connection Info*.
 . In the *Connection to MuleSoft Anypoint Platform* dialog, enter your Anypoint Platform organization ID in the box, and then click *Connect*.
 + 
@@ -84,7 +84,8 @@ If your organization has at least one established tenant relationship, a list of
 
 You can remove the connection between your Anypoint Platform organization and your Salesforce organization using the Salesforce user interface. After you remove the connection, administrators with the appropriate permissions in both your Anypoint Platform and Salesforce organizations must recreate the connection if they want to reestablish a relationship.
 
-. From Setup, in the Quick Find box, enter `MuleSoft`, and then select *MuleSoft > Setup*.
+include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
+
 . In the *Your connected Anypoint Platform Organization* section, click *View Connection Info*.
 . In the *Go To Anypoint* drop-down list, select *Remove connection.*
 . In the *Remove connection to Anypoint Platform* dialog box, click *OK*.
