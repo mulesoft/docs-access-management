@@ -38,7 +38,6 @@
 * xref:external-organization-access.adoc[]
  ** xref:trusted-anypoint-platform-org.adoc[]
  ** xref:trusted-salesforce-org.adoc[]
- *** xref:manage-connected-salesforce-org.adoc[]
  *** xref:manage-capabilities.adoc[]
 * xref:allowlisting-trusted-domains.adoc[]
 * xref:audit-logging.adoc[Audit Logs]
