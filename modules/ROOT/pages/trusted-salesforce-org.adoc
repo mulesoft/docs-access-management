@@ -1,11 +1,12 @@
 = Add Salesforce Organizations to Your Anypoint Platform Organization
 
-Establish a tenant relationship between your Anypoint Platform organization and a trusted Salesforce organization to enable the management of Anypoint Platform features from the Salesforce organization. You can establish relationships with multiple Salesforce organizations in your Anypoint Platform organization, but a Salesforce organization can be connected to only one Anypoint Platform organization.
+Establish a connection between your Anypoint Platform organization and a trusted Salesforce organization (tenant) to enable the management of Anypoint Platform features from the Salesforce organization. You can establish relationships with multiple Salesforce organizations in your Anypoint Platform organization, but a Salesforce organization can be connected to only one Anypoint Platform organization.
 
 When you connect an Anypoint Platform organization with a Salesforce organization, a Saleforce admin can: 
 
 * Access a catalog of APIs hosted by Anypoint Platform that can then be instantiated as invocable actions in their Salesforce organization. 
 * Enable the Einstein feature for the connected Anypoint Platform organization from within the Salesforce user interface. After the Salesforce admin enables Einstein, the Anypoint Platform organization is aware that the feature is enabled and the Anypoint organization is then enabled as a target for Einstein integrations with Anypoint Platform features. 
+* Enable invocable actions 
 
 When a Salesforce organization establishes a tenant relationship with an Anypoint Platform organization, an Anypoint Platform user with the Organization Administrator permission can then enable or disable this relationship in *Access Management*. 
 
@@ -35,11 +36,12 @@ You must have the following:
 * Salesforce admin permission set
 * Any permissions required to modify Salesforce connections
 * The tenant key of the Salesforce organization to connect
+* The Anypoint Platform organization ID
 
 [connect-orgs]
 == Connecting With a Salesforce Org in Anypoint Platform
 
-You must have the Salesforce organization tenant key to connect before you can connect to a Salesforce organization. If you don't have the Salesforce organization tenant key, contact the Salesforce admin for the organization to connect. 
+As an Anypoint Platform root organization administrator, you can create  a ou must have the Salesforce organization tenant key to connect before you can connect to a Salesforce organization. If you don't have the Salesforce organization tenant key, contact the Salesforce admin for the organization to connect. 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
