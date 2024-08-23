@@ -1,7 +1,4 @@
 = Identity Management
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 As the Anypoint Platform organization administrator, you can configure identity management in Anypoint Platform to set up users for single sign-on (SSO). An organization can have up to 25 external identity providers, or _IdPs_, configured for SSO. Configure identity management using one of the following single sign-on standards:
 
@@ -49,6 +46,7 @@ The IdP you select is effective for the entire organization and all business gro
 
 For more information, see the documentation for your identity provider.
 
+[[managing-users-external-identity]]
 == Managing Users with an External Identity Provider
 
 After configuring external identity management, you must add new SSO users using your external identity management solution and internal provisioning process. If you use the Invite User feature to add users to your organization after you have configured an external identity provider, the credentials for these users are stored in your organization using the Anypoint identity provider rather than with the external identity provider.

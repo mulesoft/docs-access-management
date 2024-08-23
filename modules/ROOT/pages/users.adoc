@@ -1,12 +1,17 @@
-= Users
+= Managing Users
 
-As an administrator of your root organization, you can enable, disable, or delete users.
+As an administrator of your root organization, you can enable, disable, or delete users, assign permissions to users, and edit a user's settings.
 
-By selecting the checkbox next to a user, additional options related to that user appear:
+On the access management *Users* page, you can:
 
-* *Enable*: Enables the disabled users in the selected organization or business group. 
-* *Disable*: Disables the users in the selected organization or business group so that they're no longer able to sign in.
-* *Delete*: When deleting from the root organization, all of the user's permissions are removed, and the user becomes unattached. When deleting from a business group, all of the user's permissions for only the selected business group are removed. The deleted user's data resides in the organization for audit logging purposes.
+* Invite users to join your organization.
+* Enable and disable users. 
++
+When you disable a user, they are no longer able to sign in to your organization.
+* Delete users. 
++
+When deleting a user from the root organization, all of the user's permissions are removed, and the user becomes unattached. 
+* Send a request to a user to reset their password.
 
 == Before You Begin
 
@@ -15,7 +20,7 @@ Before getting started, ensure that you have:
 * The Organization Administrator permission
 * The API Version Owner permission if you plan to manage user permissions for your API version
 
-== Inviting a User to Anypoint Platform
+== Invite a User to Anypoint Platform
 
 [NOTE]
 --
@@ -37,16 +42,34 @@ The users you specify receive email invitations to join your organization. Invit
 
 Note that the email link expires in one week.
 
-Invited users have access to the same set of resources as you (although they may have different permissions that can restrict what they can view or do).
+Invited users have access to the same set of resources as you (although they may have different permissions that restrict what they can view or do).
 
-== Resending or Canceling a Sent Invitation
+[[resend-or-cancel-invitation]]
+== Resend or Cancel a Sent Invitation
 
-Click *Pending Invites* to view all invitations that have not yet been accepted. Select the ones you need to manage, and click *Re-send Invite* or *Cancel Invite*.
+include::partial$include-nav-users.adoc[]
+
+. Click *Pending Invites* to view all invitations that have not yet been accepted. 
+. Click the more actions menu (*...*) in the row for the invitation to manage. 
+. Select *Re-send Invite* or *Cancel Invite*.
+
+[[access-user-settings]]
+== Access the User's Settings Page
+
+The user's *Settings* page is where you can edit the user's first and last name, email address, and exempt them from multi-factor authentication. 
+
+include::partial$include-nav-users.adoc[]
+
+. There are three ways to access the user's *Settings* page:
+* Click the user's name in the *Name* column.
+* Click the username of the user in the *Username* column.
+* Click the more actions menu (*...*) in the user's row, and select *Manage User*. 
+. Click the *Settings* tab. 
 
 [[grant-user-permissions]]
 == Grant Permissions to Users
 
-Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually. Note that teams and roles functionality are mutually exclusive.
+Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually. Teams and roles functionality are mutually exclusive.
 
 In the *Users* page, click a user name to access more information about that user, manage and view permissions, manage and view teams or roles, or reset their password.
 
@@ -87,7 +110,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-users.adoc[]
 
-. Click the name of the user to which you want to assign permissions.
+. Click the name of the user to assign permissions to.
 . Click the *Permissions* tab.
 . In the *Permissions* section, click *Add permissions*.
 +
@@ -100,6 +123,21 @@ In the *Review* section, review the permissions and the business groups and envi
 . Click *Add Permissions*. 
 +
 The user now has the permissions you selected in the business groups and environments you specified.
+
+[[removing-permissions-from-user]]
+== Remove Permissions for a User
+
+To edit or remove permissions for an individual user:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-users.adoc[]
+
+. Click the name of the user to edit permissions for.
+. In the row that has the permissions to edit, click *Edit*.
++
+The *Edit Permissions* dialog shows the permissions that are assigned to the user.
+. Deselect the permissions to remove from the user, and then click *Done*.
 
 == View Limits for a User
 
@@ -117,7 +155,7 @@ The number of permissions used might include internal permissions granted automa
 
 For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
 
-== Managing Deleted Users
+== Manage Deleted Users
 
 When you delete a user from your root organization, the user is _soft deleted_. The deleted user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs. 
 
@@ -131,7 +169,7 @@ A deleted federated user appears in the organization as a disabled account. An o
 
 // If the user tries to sign in with their old account, the sign up request fails, stating `Cannot create user. User already exists`.
 
-== Managing External Users of Your Public APIs
+== Manage External Users of Your Public APIs
 
 When you make an API portal public, users from any other Anypoint Platform organization can register client applications to call your API. When these users sign in to your public developer portal, they are considered external users because they are outside of your organization.
 
@@ -139,7 +177,7 @@ When a user logs into Anypoint Platform for the first time, they are automatical
 
 You cannot search for external users in other parts of Anypoint Platform because these users do not belong to your organization and do not have additional permissions. To grant users permission to perform tasks like deploying an application, you must invite the user to join your organization.
 
-== Managing Sensitive Account Information
+== Manage Sensitive Account Information
 
 As an organization administrator, you can modify some sensitive user information. For enhanced security, Access Management might ask you to reauthenticate before you can modify an organization user's email address. Connected apps and clients are exempt from reauthentication. If you have a script that makes an API call to change an organization user's email addresses, it might need to accommodate reauthentication.
 
@@ -148,6 +186,6 @@ include::partial$include-reauthentication-conditions.adoc[]
 == See Also
 
 * xref:exchange::to-share-an-asset.adoc[To Share an Asset or Publish to a Portal]
-* xref:external-identity.adoc#managing-users[user management]
+* xref:external-identity.adoc#managing-users-external-identity[Managing Users with an External Identity Provider]
 * xref:external-identity.adoc#instructions-for-saml-configuration[SSO through a Third-party IdP]
 * xref:external-identity.adoc#configure-ldap[LDAP]
