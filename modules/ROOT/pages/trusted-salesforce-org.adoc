@@ -3,10 +3,11 @@
 Establish a connection between your Anypoint Platform organization and a trusted Salesforce organization (tenant) to enable the management of Anypoint Platform features from the Salesforce organization. You can establish relationships with multiple Salesforce organizations in your Anypoint Platform organization, but a Salesforce organization can be connected to only one Anypoint Platform organization.
 
 When you connect an Anypoint Platform organization with a Salesforce organization, a Saleforce admin can: 
-
+////
 * Access a catalog of APIs hosted by Anypoint Platform that can then be instantiated as invocable actions in their Salesforce organization. 
 * Enable the Einstein feature for the connected Anypoint Platform organization from within the Salesforce user interface. After the Salesforce admin enables Einstein, the Anypoint Platform organization is aware that the feature is enabled and the Anypoint organization is then enabled as a target for Einstein integrations with Anypoint Platform features. 
-* Enable invocable actions 
+////
+* Enable invocable actions so that MuleSoft developers can publish invocable actions directly from their Robotic Process Automations (RPA) and Composer flows.
 
 When a Salesforce organization establishes a tenant relationship with an Anypoint Platform organization, an Anypoint Platform user with the Organization Administrator permission can then enable or disable this relationship in *Access Management*. 
 
