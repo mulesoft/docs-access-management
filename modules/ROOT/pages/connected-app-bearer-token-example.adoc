@@ -1,6 +1,6 @@
 = Getting the Bearer Token for a Connected App Example
 
-This example demonstrates how to create a connected app and get the bearer token so that you can call an Anypoint Platform API. 
+This example demonstrates how to create a connected app and get the bearer token so that you can invoke Anypoint Platform APIs. 
 
 [[create-connected-app]]
 == Create a Connected App
