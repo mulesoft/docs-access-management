@@ -1,7 +1,4 @@
 = Connected Apps for Developers
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] that developers can use to extend functionality.
 With the Connected Apps feature, developers can delegate access to applications that use APIs to interact with Anypoint Platform programmatically.
@@ -10,7 +7,7 @@ While some might use the Connected Apps feature to build CI/CD pipelines, others
 In addition to enabling new flows to authenticate users, developers can enable or disable clients and view client usage.
 For example, developers can see how many organizations are using the app and how many users have access.
 
-The Connected Apps feature supports OAuth 2.0 and OpenID Connect. As such, developers must ensure their app can use tokens to request access to user data.
+The Connected Apps feature supports OAuth 2.0 and OpenID Connect, so developers must ensure their app can use tokens to request access to user data.
 To find out what specific OpenID Connect capabilities are supported, refer to the information provided in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint].
 All scopes in the endpoint map directly to permissions available in Anypoint Platform, with some exceptions noted in the *Endpoint Scopes* section.
 
@@ -28,6 +25,7 @@ When you create connected apps, note the following:
 * You need the Organization Administrator permission at the level you want to create apps and specify access scopes. 
 * You must determine whether the app is internal to your company or is a third-party app that can be distributed outside of your organization.
 
+[[create-connected-app]]
 == Create a Connected App
 
 include::partial$include-nav-connected-apps.adoc[]
