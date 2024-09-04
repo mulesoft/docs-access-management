@@ -1,10 +1,10 @@
-= Manage Capabilities in Access Management
+= Managing Capabilities in Access Management
 
-When you connect your Anypoint Platform organization with a Salesforce organization, you see the status of the capabilities that are associated with the Salesforce organization. 
+When you connect your Anypoint Platform organization with a Salesforce organization, you see the enabled and disabled capabilities that are associated with connected Salesforce organizations. 
 
-Capabilities include features that are visible and can be managed in both the Anypoint Platform organization and the connected Salesforce organization. Enablement of capabilities is done either in Anypoint Platform or in the Salesforce organization, depending on the capability. 
+Capabilities include features that are enabled in either the Anypoint Platform organization or the connected Salesforce organization. 
 
-== Enabling Invocable Actions for Your Salesforce Organization
+== Enable Invocable Actions for Your Salesforce Organization
 
 The Salesforce organization administrator enables the invocable actions capability within the Salesforce organization in the MuleSoft *Setup* page. 
 
@@ -13,11 +13,11 @@ include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 . In the *Your connected Anypoint Platform Organization* section, click *View Connection Info*.
 . In the *Connection to MuleSoft Anypoint Platform* window, turn on *Enable Invocable Actions from Anypoint Automations.*
 +
-After the Salesforce organization administrator enables this feature, *Enabled in Salesforce* is displayed. 
+After the Salesforce organization administrator enables this feature, the Anypoint Platform organization administrator sees *Enabled in Salesforce* next to the capability in the access management *Salesforce* page. 
 
-== Making Anypoint Platform APIs Available in a Salesforce Organization
+== Make Anypoint Platform APIs Accessible From a Salesforce Organization
 
-Enable a connected Salesforce organization to access and import Anypoint Platform APIs into the Salesforce API Catalog and expose them as invocable actions. This capability is managed in Anypoint Platform access management and must be enabled by an Anypoint Platform organization administrator.
+Enable a connected Salesforce organization to access and import Anypoint Platform APIs into the Salesforce API Catalog and expose them as invocable actions. This capability is enabled in Anypoint Platform access management by an Anypoint Platform organization administrator.
 
 To enable this feature:
 
@@ -32,6 +32,10 @@ This feature is now enabled.
 
 [NOTE]
 The Salesforce administrator must select individual API operations to expose to selected Salesforce developers. After an API operation is assigned to a developer, an access request is sent to the owner of the API. 
+
+== Enable Einstein 
+
+
 
 == See Also
 
