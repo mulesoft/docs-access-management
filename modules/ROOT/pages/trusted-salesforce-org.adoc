@@ -5,20 +5,19 @@ Enable the management of Anypoint Platform features in a trusted Salesforce orga
 When you connect an Anypoint Platform organization with a Salesforce organization, a Saleforce admin can: 
 
 * Access a catalog of APIs hosted by Anypoint Platform that can then be instantiated as invocable actions in their Salesforce organization. 
-* Enable the Einstein feature for the connected Anypoint Platform organization from within the Salesforce user interface. After the Salesforce admin enables Einstein, the Anypoint Platform organization is aware that the feature is enabled and the Anypoint organization is then enabled as a target for Einstein integrations with Anypoint Platform features. 
-////
-* Enable invocable actions so that MuleSoft developers can publish invocable actions directly from their Robotic Process Automations (RPA) and Composer flows.
-////
+* Enable the Einstein feature for the connected Anypoint Platform organization from within the Salesforce user interface. 
++
+After the Salesforce admin enables Einstein, the Anypoint Platform organization is aware that the feature is enabled and the Anypoint organization is then enabled as a target for Einstein integrations with Anypoint Platform features. 
  
 For more information about initiating and maintaining a relationship with a Salesforce organization, see https://help.salesforce.com/s/articleView?id=sf.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connection] in the Salesforce documentation.
 
-The connection between your Anypoint Platform and Salesforce organizations is managed in both Anypoint Platform access management by the Anypoint Platform organization administrator and the Salesforce organization by the Salesforce admin in the *MuleSoft > Setup* page. 
+The connection between your Anypoint Platform and Salesforce organizations is managed in both Anypoint Platform access management by the Anypoint Platform organization administrator and the Salesforce organization by the Salesforce admin in the Salesforce *MuleSoft > Setup* page. 
 
 Use the Salesforce *MuleSoft Anypoint > Setup* user interface to:
 
-* Initiate and complete the connection process to your Anypoint Platform organization.
+* Initiate and complete the connection process to the Anypoint Platform organization.
 * Disconnect or reconnect an Anypoint Platform and Salesforce organization.
-* Delete the connection between your Anypoint Platform organization and your Salesforce organization.
+* Delete the connection between the Anypoint Platform organization and your Salesforce organization.
 
 Use the Anypoint Platform *Access Management > Salesforce* user interface to:
 
@@ -27,24 +26,29 @@ Use the Anypoint Platform *Access Management > Salesforce* user interface to:
 * Enable or disable a tenant relationship with Salesforce.
 * Delete the relationship between Anypoint Platform and a Salesforce organization.
 * Manage connected Salesforce organizations.
-* Enable and disable capabilities
+* Enable and disable capabilities like API Catalog and Einstein.
 
 == Before You Begin
 
-You must have the following:
+Anypoint Platform organization administrators must have:
 
-* The Anypoint Platform Organization Administrator permission at the root organization level
-* Salesforce admin permission set
-* Any permissions required to modify Salesforce connections
-* The tenant key of the Salesforce organization to connect
+* The Anypoint Platform Organization Administrator permission at the root organization level.
+* Any permissions required to modify Salesforce connections.
+* The Salesforce organization tenant key of the Salesforce organization to connect.
 +
-If you aren't the Salesforce admin for the Salesforce organization to connect, ask the Salesforce organization admin for the tenant key.
-* The Anypoint Platform organization ID
+You can get this from the Salesforce organization administrator.
+
+Salesforce organization administrators must have:
+
+* The Salesforce admin permission set.
+* The Anypoint Platform organization ID.
++
+You can get this from the Anypoint Platform organization administrator. 
 
 [connect-orgs]
-== Connecting With a Salesforce Org in Anypoint Platform
+== Connecting With a Salesforce Organization in Anypoint Platform
 
-As an Anypoint Platform root organization administrator, you can start the process of connecting to a trusted Salesforce organization. 
+As an Anypoint Platform organization administrator, you can start the process of connecting to a trusted Salesforce organization. 
 
 You must have the Salesforce organization's connection key (tenant key) before you can connect to a Salesforce organization. If you don't have the Salesforce organization tenant key, contact the Salesforce organization admin. 
 
@@ -60,7 +64,7 @@ The format for the Salesforce tenant key is `cloud/env/org-id`.
 +
 If you are not the Salesforce organization administrator, provide the Anypoint Platform organization ID to the Salesforce administrator.
 
-The Salesforce organization appears in the *Salesforce Orgs* section with the `Disabled` status until the connection is completed in the Salesforce organization.
+The Salesforce organization appears in the *Salesforce Orgs* section of the *Salesforce* page with the `Disabled` status until the connection is completed in the Salesforce organization.
 
 [complete-organization-connection]
 == Completing the Organization Connection in Salesforce
@@ -74,42 +78,13 @@ include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 +
 If you don't have the Anypoint Platform organization ID, contact the Anypoint Platform organization administrator.
 + 
-You are returned to the *Connection to MuleSoft Anypoint Platform* page and see the details of the connected Salesforce organization, including the enablement status of the capabilites associated with the Salesforce organization. 
-
-[enable-disable-connection]
-== Enabling or Disabling a Connection in Anypoint Platform
-
-When you enable the connection with a Salesforce organization, you can publish assets from your Anypoint Platform organization to the trusted Salesforce organization. When you disable the connection, the Salesforce organization still appears in the list of available organizations but you can no longer publish assets from your Anypoint Platform to your Salesforce organization. Disabling a connection does not remove the connection to your Salesforce organization. 
-
-include::partial$include-nav-steps-org-admin.adoc[]
-
-. Click *Salesforce*.
-+
-If your organization has at least one established tenant relationship, a list of Salesforce organizations appears, showing the name, organization ID, and status of the relationship connection.
-. Click *Enable* or *Disable* for the Salesforce org you want to enable or disable the connection for.
-
-[removing-connection-anypoint-platform]
-== Removing a Connected Salesforce Organization in Anypoint Platform
-
-[removing-connection-salesforce]
-== Removing a Connected Anypoint Platform Organization in Salesforce
-
-As a Salesforce organization admin, you can remove the connection between your Anypoint Platform organization and your Salesforce organization using the Salesforce user interface. After you remove the connection, administrators with the appropriate permissions in both the Anypoint Platform and Salesforce organizations must recreate the connection to reestablish a relationship.
-
-include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
-
-. In the *Your connected Anypoint Platform Organization* section, click *View Connection Info*.
-. In the *Go To Anypoint* drop-down list, select *Remove connection.*
-. In the *Remove connection to Anypoint Platform* dialog box, click *OK*.
-
-Alternatively, if you want to temporarily prevent Anypoint Platform users from publishing assets to Salesforce from the Anypoint Platform side, you can instead <<enable-disable-connection,disable>> the connection temporarily.
-
-For more information about managing this relationship from the Salesforce user interface, see the https://help.salesforce.com/s/articleView?id=sf.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Salesforce documentation]. 
-
+You are returned to the *Connection to MuleSoft Anypoint Platform* page and see the details of the connected Salesforce organization, including the enablement status of the capabilites associated with the connected Salesforce organization. 
 
 == See Also
 
-* xref:manage-capabilities.adoc[]
-* xref:managing-connected-salesforce.org[]
+* xref:managing-connected-salesforce-orgs.adoc[]
+* xref:enabling-api-catalog.adoc[]
+* xref:enabling-einstein.adoc[]
+
 
 

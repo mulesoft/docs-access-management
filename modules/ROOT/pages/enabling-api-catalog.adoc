@@ -1,0 +1,45 @@
+= Enabling API Catalog
+
+Enable a connected Salesforce organization to access and import Anypoint Platform APIs into the Salesforce API Catalog and expose them as invocable actions. This capability is enabled in Anypoint Platform access management by an Anypoint Platform organization administrator.
+
+Settings for Anypoint APIs in Salesforce
+Here’s how it works:
+
+
+
+== Enable API Catalog in Anypoint Platform
+
+To enable this feature:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Click *Salesforce*.
+. In the *Capabilities Managed in Anypoint Platform* section, click *Settings* next to *Make MuleSoft Anypoint Platform APIs Available in Salesforce*.
+. In *Settings for Anypoint APIs in Salesforce*, click *Continue*.
+. In the Settings page, select the Anypoint Platform business groups that allow the selected Salesforce org to import Anypoint Platform APIs into its API Catalog, and click *Save Settings*.
++
+[NOTE]
+Within the selected business groups, only APIs that have specs published in Exchange with active instances can be imported into the Salesforce organization.
+
+The Salesforce organization admin must turn on synchronization to import the APIs into their catalog.
+After the APIs are imported, the Salesforce admin selects individual API instances and operations and converts them into invocable actions for access by selected Salesforce developers.
+A client ID is created and an access request for the selected Salesforce developers is sent to the Anypoint owner of that API through API Manager.
+Only after the request is accepted can those selected Salesforce developers start using the API.
+
+Warning: After the Salesforce Org imports APIs from Anypoint Platform into its API Catalog, changes to the settings here affect synchronization with the Catalog. Access granted to Anypoint APIs continues through API Manager, but the API Catalog might not have the latest versions of the APIs from Anypoint Platform.
+Begin here by selecting the Anypoint Platform business groups that make their APIs available to this Salesforce Org.
+Cancel
+Changes will not be saved.
+Continue
+. In the next window, select which APIs to make available to the connected Salesforce organization, and then click *Save settings*.
++
+This feature is now enabled. 
+
+[NOTE]
+The Salesforce administrator must select individual API operations to expose to selected Salesforce developers. After an API operation is assigned to a developer, an access request is sent to the owner of the API. 
+
+== See Also
+
+* xref:trusted-salesforce-org.adoc[]
+* LINK TO API CATALOG documentation
+* xref:managing-connected-salesforce-orgs.adoc[]
