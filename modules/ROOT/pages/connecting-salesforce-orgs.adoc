@@ -58,7 +58,7 @@ image::connected-salesforce-org-invocable-actions-enabled.png["The connected Sal
 
 == See Also
 
-* xref: trusted-salesforce-org.adoc[]
+* xref:trusted-salesforce-org.adoc[]
 * xref:managing-connected-salesforce-orgs.adoc[]
 * xref:enabling-api-catalog.adoc[]
 * xref:enabling-einstein.adoc[]
