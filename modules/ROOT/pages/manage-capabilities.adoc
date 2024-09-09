@@ -1,0 +1,11 @@
+= Managing Capabilities
+
+When you establish a connection between your Anypoint Platform organization and a trusted Salesforce organization, you can enable and disable capabilites associated with the Salesforce organization, including:
+
+* xref:enabling-api-catalog.adoc[]
+* xref:enabling-einstein.adoc[Enabling Einstein for Anypoint Code Builder]
+
+== See Also
+
+* xref:trusted-salesforce-org.adoc[]
+* xref:managing-connected-salesforce-orgs.adoc[]
