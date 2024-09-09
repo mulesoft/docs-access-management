@@ -2,7 +2,6 @@
 
 Enable a connected Salesforce organization to access and import Anypoint Platform APIs into the Salesforce API Catalog and expose them as invocable actions. This capability is enabled in Anypoint Platform access management by an Anypoint Platform organization administrator.
 
-
 == Enable API Catalog in Anypoint Platform
 
 To enable this feature:
