@@ -32,8 +32,7 @@ Anypoint Platform organization administrators use the Anypoint Platform *Access 
 == See Also
 * xref:connecting-salesforce-orgs.adoc[]
 * xref:managing-connected-salesforce-orgs.adoc[]
-* xref:enabling-api-catalog.adoc[]
-* xref:enabling-einstein.adoc[]
+* xref:manage-capabilities.adoc[]
 
 
 

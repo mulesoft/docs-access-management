@@ -98,5 +98,4 @@ include::partial$include-nav-steps-org-admin.adoc[]
 == See Also
 
 * xref:trusted-salesforce-org.adoc[]
-* xref:enabling-api-catalog.adoc[]
-* xref:enabling-einstein.adoc[]
+* xref:manage-capabilities.adoc[]

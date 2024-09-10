@@ -41,8 +41,6 @@
  ** xref:connecting-salesforce-orgs.adoc[]
  ** xref:managing-connected-salesforce-orgs.adoc[]
  ** xref:manage-capabilities.adoc[]
-  *** xref:enabling-api-catalog.adoc[]
-  *** xref:enabling-einstein.adoc[]
 * xref:allowlisting-trusted-domains.adoc[]
 * xref:audit-logging.adoc[Audit Logs]
 * xref:troubleshooting-anypoint-platform-access.adoc[]
