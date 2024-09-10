@@ -1,6 +1,6 @@
 = Connecting a Trusted Salesforce Organization to Your Anypoint Platform Organization
 
-An Anypoint Platform organization administrator can initiate the process of connecting Salesforce organizations to your Anypoint Platform organization. A Salesforce organization administrator can initiate the connection process in the Salesforce organization. For information about how to initiate the connection process in Salesforce, see LINK TO VERONICA'S DOC.
+An Anypoint Platform organization administrator can initiate the process of connecting Salesforce orgs to your Anypoint Platform organization. A Salesforce org admin can initiate the connection process in the Salesforce org. For information about how to initiate the connection process in Salesforce, see LINK TO VERONICA'S DOC.
 
 == Before You Begin
 
@@ -8,42 +8,42 @@ Anypoint Platform organization administrators must have:
 
 * The Anypoint Platform Organization Administrator permission at the root organization level.
 * Any permissions required to modify Salesforce connections.
-* The Salesforce organization tenant key of the Salesforce organization to connect.
+* The Salesforce tenant key of the Salesforce org to connect.
 +
-You can get this from the Salesforce organization administrator.
+You can get this from the Salesforce org admin.
 
-Salesforce organization administrators must have:
+Salesforce org admins must have:
 
-* The Salesforce administrator permission set.
+* The Salesforce admin permission set.
 * The Anypoint Platform organization ID.
 +
 You can get this from the Anypoint Platform organization administrator. 
 
 [connect-orgs]
-== Connect With a Salesforce Organization in Anypoint Platform
+== Connect With a Salesforce Org in Anypoint Platform
 
-As an Anypoint Platform organization administrator, you can start the process of connecting to a trusted Salesforce organization. 
+As an Anypoint Platform organization administrator, you can start the process of connecting to a trusted Salesforce org. 
 
-You must have the Salesforce organization's connection key (tenant key) before you can connect to a Salesforce organization. If you aren't the Salesforce organization administrator, contact the Salesforce organization administrator to get the tenant key. 
+You must have the Salesforce org's connection key (tenant key) before you can connect to a Salesforce org. Contact the Salesforce org admin to get the tenant key. 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *Salesforce*.
 . Click *Add Salesforce Org*.
-. Enter the Salesforce organization connection key, and click *Confirm*. 
+. Enter the Salesforce org tenant key, and click *Confirm*. 
 The format for the Salesforce tenant key is `cloud/env/org-id`.
 . In the *Add the Salesforce Org* dialog verify the information and click *Add*. 
 . Click *Copy* to copy the Anypoint Platform ID. 
-. If you are the administrator for the Salesforce organization you are adding, click *Manage in Salesforce* to continue setting up the relationship in Salesforce. 
+. If you are the admin for the Salesforce org you are adding, click *Manage in Salesforce* to continue setting up the relationship in Salesforce. 
 +
-If you are not the Salesforce organization administrator, provide the Anypoint Platform organization ID to the Salesforce administrator.
+If you are not the Salesforce admin, provide the Anypoint Platform organization ID to the Salesforce admin.
 
-The Salesforce organization appears in the *Salesforce Orgs* section of the *Salesforce* page with the `Disabled` status until the connection is completed in the Salesforce organization.
+The Salesforce org appears in the *Salesforce Orgs* section of the *Salesforce* page with the `Disabled` status until the connection is completed in the Salesforce org.
 
 [complete-organization-connection]
 == Complete the Organization Connection in Salesforce
 
-As a Salesforce organization admin, you complete the connection between your organization and the Anypoint Platform organization.  You must have the Anypoint Platform organization ID to complete the connection.
+As a Salesforce org admin, you complete the connection between your org and the Anypoint Platform organization.  You must have the Anypoint Platform organization ID to complete the connection.
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
@@ -52,9 +52,9 @@ include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 +
 If you don't have the Anypoint Platform organization ID, contact the Anypoint Platform organization administrator.
 + 
-You are returned to the *Connection to MuleSoft Anypoint Platform* page and see the details of the connected Salesforce organization, including the enablement status of the capabilites associated with the connected Salesforce organization. 
+You are returned to the *Connection to MuleSoft Anypoint Platform* page and see the details of the connected Salesforce org, including the enablement status of the capabilities associated with the connected Salesforce org. 
 
-image::connected-salesforce-org-invocable-actions-enabled.png["The connected Salesforce organization with API Catalog disabled and Invocable Actions enabled"]
+image::connected-salesforce-org-invocable-actions-enabled.png["The connected Salesforce org with API Catalog disabled and Invocable Actions enabled"]
 
 == See Also
 
