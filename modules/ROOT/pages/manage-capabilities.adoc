@@ -1,6 +1,6 @@
 = Managing Capabilities for a Connected Salesforce Org
 
-When you establish a connection between your Anypoint Platform organization and a trusted Salesforce org, you can enable and disable capabilites associated with the Salesforce org. 
+When you establish a connection between your Anypoint Platform organization and a trusted Salesforce org, you can enable and disable capabilities associated with the Salesforce org. 
 
 == Enable or Disable API Catalog in Anypoint Platform
 

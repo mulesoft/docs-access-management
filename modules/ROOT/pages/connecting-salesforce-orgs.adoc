@@ -1,4 +1,4 @@
-= Connecting a Trusted Salesforce Organization to Your Anypoint Platform Organization
+= Connecting a Salesforce Organization to Your Anypoint Platform Organization
 
 An Anypoint Platform organization administrator can initiate the process of connecting Salesforce orgs to your Anypoint Platform organization. A Salesforce org admin can initiate the connection process in the Salesforce org. For information about how to initiate the connection process in Salesforce, see LINK TO VERONICA'S DOC.
 
@@ -7,7 +7,6 @@ An Anypoint Platform organization administrator can initiate the process of conn
 Anypoint Platform organization administrators must have:
 
 * The Anypoint Platform Organization Administrator permission at the root organization level.
-* Any permissions required to modify Salesforce connections.
 * The Salesforce tenant key of the Salesforce org to connect.
 +
 You can get this from the Salesforce org admin.
@@ -33,12 +32,12 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . Enter the Salesforce org tenant key, and click *Confirm*. 
 The format for the Salesforce tenant key is `cloud/env/org-id`.
 . In the *Add the Salesforce Org* dialog verify the information and click *Add*. 
-. Click *Copy* to copy the Anypoint Platform ID. 
+. Click *Copy* to copy the Anypoint Platform organization ID. 
 . If you are the admin for the Salesforce org you are adding, click *Manage in Salesforce* to continue setting up the relationship in Salesforce. 
 +
-If you are not the Salesforce admin, provide the Anypoint Platform organization ID to the Salesforce admin.
+If you are not the Salesforce admin, provide the Anypoint Platform organization ID to the Salesforce admin so they can finish the connection process in Salesforce.
 
-The Salesforce org appears in the *Salesforce Orgs* section of the *Salesforce* page with the `Disabled` status until the connection is completed in the Salesforce org.
+When the connection process is complete, the Salesforce org appears in the *Salesforce Orgs* section of the *Salesforce* page.
 
 [complete-organization-connection]
 == Complete the Organization Connection in Salesforce
@@ -60,5 +59,4 @@ image::connected-salesforce-org-invocable-actions-enabled.png["The connected Sal
 
 * xref:trusted-salesforce-org.adoc[]
 * xref:managing-connected-salesforce-orgs.adoc[]
-* xref:enabling-api-catalog.adoc[]
-* xref:enabling-einstein.adoc[]
+
