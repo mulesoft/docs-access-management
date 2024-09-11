@@ -27,7 +27,7 @@ Anypoint Platform organization administrators use the Anypoint Platform *Access 
 * Enable or disable a tenant relationship with Salesforce.
 * Delete the relationship between Anypoint Platform and a Salesforce org.
 * Manage connected Salesforce organizations.
-* Enable and disable capabilities like API Catalog and invocable actions.
+* Enable and disable API Catalog.
 
 == See Also
 * xref:connecting-salesforce-orgs.adoc[]

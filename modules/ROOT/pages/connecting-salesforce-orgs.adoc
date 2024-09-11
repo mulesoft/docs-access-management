@@ -43,7 +43,7 @@ The Salesforce org appears in the *Salesforce Orgs* section of the *Salesforce* 
 [complete-organization-connection]
 == Complete the Organization Connection in Salesforce
 
-As a Salesforce org admin, you complete the connection between your org and the Anypoint Platform organization.  You must have the Anypoint Platform organization ID to complete the connection.
+As a Salesforce org admin, you complete the connection between your org and the Anypoint Platform organization when the connection process is initiated in Anypoint Platform.  You must have the Anypoint Platform organization ID to complete the connection.
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
