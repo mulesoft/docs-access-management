@@ -78,9 +78,13 @@ You can create new client secrets in Anypoint Platform, but you can't remove old
 Anypoint Platform does not support Microsoft Azure client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet.
 
 [[token-validation]]
-== Token Validation
+== Token Introspection
 
-Although Microsoft Entra ID doesn't provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for token validation] when you use Microsoft Entra ID as a client provider.
+Although Microsoft Entra ID doesn't provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for you] when you configure Microsoft Entra ID as a client provider following the previous flow. 
+
+When you create your client provider following the OpenID Connect DCR for Microsoft Entra ID flow, Anypoint Platform populates an introspect URL. You can view the URL using `GET /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}`. 
+
+When token introspection happens, Anypoint Platform calls `https://graph.microsoft.com/v1.0` with your provided token. As long as the response to such a call isn't a failure, the token is determined to be valid.
 
 To use this policy, follow the documentation on <<oauth2>> to generate supported tokens.
 
