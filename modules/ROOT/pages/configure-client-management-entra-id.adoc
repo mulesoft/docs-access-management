@@ -80,7 +80,7 @@ Anypoint Platform does not support Microsoft Azure client providers deployed in 
 [[token-validation]]
 == Token Introspection
 
-Although Microsoft Entra ID doesn't provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for you] when you configure Microsoft Entra ID as a client provider following above flow. 
+Although Microsoft Entra ID doesn't provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for you] when you configure Microsoft Entra ID as a client provider following the previous flow. 
 
 When you create your client provider following the OpenID Connect DCR for Microsoft Entra ID flow, Anypoint Platform populates an introspect URL. You can view the URL using `GET /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}`. 
 
