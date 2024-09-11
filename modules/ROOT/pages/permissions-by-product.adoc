@@ -281,9 +281,9 @@ include::rpa-home::partial$rpa-permissions.adoc[]
 
 == Runtime Manager
 
-CloudHub Network Administrator:: Enables a user to manage CloudHub network resources.
+CloudHub Network Administrator:: Enables a user to manage CloudHub and CloudHub 2.0 network resources.
 
-CloudHub Network Viewer:: Enables a user to view CloudHub network resources.
+CloudHub Network Viewer:: Enables a user to view CloudHub and CloudHub 2.0 network resources.
 
 Delete Applications:: Enables a user to delete applications in a specific environment.
 

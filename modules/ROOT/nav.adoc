@@ -5,6 +5,7 @@
 * xref:users.adoc[]
 * xref:business-groups.adoc[]
  ** xref:organization.adoc[]
+ ** xref:managing-business-groups.adoc[]
  ** xref:environments.adoc[]
 * xref:managing-permissions.adoc[]
  ** xref:permissions-by-product.adoc[]
