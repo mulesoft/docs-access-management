@@ -1,6 +1,6 @@
 = Trusted Salesforce Organizations
 
-Enable the management of Anypoint Platform features in a trusted Salesforce org (tenant) by establishing a connection between your Anypoint Platform organization and a trusted Salesforce org. You can establish relationships with multiple Salesforce orgs in your Anypoint Platform organization, but a Salesforce org can be connected to only one Anypoint Platform organization.
+Enable cross-platform features between your Anypoint Platform organization and a trusted Salesforce org (tenant) by establishing a connection between the two. You can establish relationships with multiple Salesforce orgs in your Anypoint Platform organization, but a Salesforce org can be connected to only one Anypoint Platform organization.
 
 == Anypoint Platform Administrators
 
@@ -14,7 +14,7 @@ Anypoint Platform organization administrators use the Anypoint Platform *Access 
 
 == Salesforce Organization Administrators
 
-When you connect an Anypoint Platform organization with a Salesforce org, a Salesforce administrator can: 
+When connecting an Anypoint Platform organization with a Salesforce org, a Salesforce administrator can: 
 
 * Initiate and complete the connection process to the Anypoint Platform organization.
 * Disconnect or reconnect an Anypoint Platform and Salesforce org.

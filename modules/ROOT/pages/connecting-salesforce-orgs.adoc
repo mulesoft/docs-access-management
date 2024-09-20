@@ -1,6 +1,6 @@
 = Connecting a Salesforce Organization to Your Anypoint Platform Organization
 
-An Anypoint Platform organization administrator can initiate the process of connecting Salesforce orgs to your Anypoint Platform organization. A Salesforce org admin can initiate the connection process in the Salesforce org. For information about how to initiate the connection process in Salesforce, see LINK TO VERONICA'S DOC.
+An Anypoint Platform organization administrator can initiate the process of connecting Salesforce orgs to your Anypoint Platform organization. 
 
 == Before You Begin
 
