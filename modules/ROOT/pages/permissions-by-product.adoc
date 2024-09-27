@@ -8,49 +8,98 @@ Depending on your organization, its licensing, and its entitlements, you might n
 
 == Access Management
 
-Organization Administrator:: At the root organization level, grants a user most permissions available in Anypoint Platform, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions. 
-+
-The Organization Administrator permission also grants access to the Organization Administration page, where the user can add and manage users and permissions, view and edit organization details, access *API Manager > Client Applications*, access the client ID and client secret for the organization, and customize the theme of the Developer Portal. This permission enables a user to edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. 
-+
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|Organization Administrator | At the root organization level, perform most Anypoint Platform tasks, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions.
+
+Access the Organization Administration page.
+Add and manage users and permissions, view and edit organization details, access *API Manager > Client Applications*, access the client ID and client secret for the organization, and customize the theme of the Developer Portal.
+
+Edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. |
+
 For security reasons, MuleSoft recommends distributing this permission to as few users as possible.
+|Audit Log Config Manager| Configure the retention period for audit logs across the organization. 
+| Apply this permission at the root organization level.
 
-Audit Log Config Manager:: Enables a user to configure the retention period for audit logs across their organization. 
-+
-Apply this permission at the root organization level. This permission appears only if the organization has the modern UI enabled in Access Management.
+This permission appears only if the organization has the modern UI enabled in access management. 
+|Audit Log Viewer | View audit logs in Access Management.| 
+|===
 
-Audit Log Viewer:: Enables a user to view audit logs in Access Management.
 
 == Anypoint Code Builder
 
-Anypoint Code Builder Developer:: Enables a user to create and use cloud IDE instances of Anypoint Code Builder. This permission does not apply to Anypoint Code Builder for Desktop. 
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|Anypoint Code Builder Developer | Create and use cloud IDE instances of Anypoint Code Builder.  | This permission does not apply to Anypoint Code Builder for Desktop. 
+|Mule Developer Generative AI User | Use natural language prompts to develop and generate flows using the Einstein for Anypoint Code Builder Generative Flows feature. |
+|===
 
-Mule Developer Generative AI User:: Enables a user to use natural language prompts to develop and generate flows using the Einstein for Anypoint Code Builder Generative Flows feature.  
 
 == API Catalog
 
-API Catalog Contributor:: Enables a user to catalog assets and other resources using API Catalog.
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|API Catalog Contributor| Catalog assets and other resources using API Catalog.| 
+|===
+
 
 == API Experience Hub
 
-API Experience Hub Admin:: Enables a user to view, create, modify, and delete content in API Experience Hub.
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|API Experience Hub Admin| View, create, modify, and delete content in API Experience Hub.| 
+|API Experience Hub Community User| View, but not modify content in API Experience Hub.| 
+|===
 
-API Experience Hub Community User:: Enables a user to view but not modify content in API Experience Hub.
 
 == API Governance
 
-Governance Administrator:: Enables a user to manage profiles and view reports.
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|Governance Administrator| Manage profiles and view reports.| 
+|Governance Viewer | View reports.| 
+|===
 
-Governance Viewer:: Enables a user to view reports.
 
 == API Manager
 
 Depending on your organization, you might see one of the following sets of permissions available for API Manager.
 
-include::partial$include-permissions-api-manager-post-crowd.adoc[]
+.Post-Crowd
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|API Manager Environment Administrator| View, create, modify, and delete APIs in the specified environment.|
+Users can also execute any actions related to API configurations, groups, proxies, alerts, contracts, tiers, policies, automated policies, and other settings in the specified API Manager environment.
+| API Group Administrator | View, create, modify, deprecate, and delete API groups and API group instances in the specified environment. |
+| Deploy API Proxies | Deploy API proxies in the specified environment.|
+| Manage API Alerts| View, create, modify, and delete API alerts in the specified environment. |
+| Manage APIs Configuration | View and modify API configurations in the specified environment. |
+| Manage Client Applications | Create and manage client applications in the root organization. |
+Users with this permission can view and modify application credentials and can add and remove client owners.
+|Manage Contracts | View, accept, reject, and delete contracts and tiers in the specified environment.|
+|Manage Policies | View, create, modify, and delete API policies in the specified environment. |
+|View API Alerts | View the API alerts in the specified environment. |
+|View APIs Configuration | View API configurations in the specified environment. |
+|View Client Applications| View client applications in the root organization. |
+Users with this credential cannot view application secrets and cannot modify applications.
+|View Contracts | View contracts and tiers in the specified environment. |
+|View Policies | View API policies in the specified environment. |
+|===
 
-Or:
-
-include::partial$include-permissions-api-manager-pre-crowd.adoc[]
+.Pre-Crowd
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|API Creator| Create an API in the specified environment.|
+|API Versions Owner | View, modify, delete, and deprecate all API versions in the specified business group.|
+| Portals Viewer | View all portals in the specified business group.|
+|===
 
 ////
 == Composer
@@ -65,137 +114,169 @@ Composer Admin:: Enables a user to invite and manage users in addition to creati
 
 == Data Gateway
 
-Data Gateway Administrator:: Enables a user to have full access to Data Gateway Designer.
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|Data Gateway Administrator | Full access to Data Gateway Designer.|
+|Data Gateway Viewer| Read-only access to Data Gateway Designer. |
+|===
 
-Data Gateway Viewer:: Enables a user to have read-only access to Data Gateway Designer.
 
 == DataGraph
 
-Contribute:: Enables a user to:
-+
-* Add source APIs to the unified schema.
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|Contribute| * Add source APIs to the unified schema.
 * Edit any source API schema added to the unified schema.
 * Request access to run queries.
 * Promote API schemas to an environment.
 * View query traces in real-time while running queries from the UI.
-* Download a copy of the unified schema from the query editor.
-
-Consume:: Enables a user to: 
-+
-* View and explore the unified schema.
+* Download a copy of the unified schema from the query editor.|
+|Consume| * View and explore the unified schema.
 * Request access to run queries and make data requests from the UI.
-* Download a copy of the unified schema from the query editor.
-
-Operate:: Enables a user to: 
-+
-* View customer-facing logs.
-* Set a dedicated load balancer URL for Anypoint Datagraph.
-
-DataGraph Admin:: Enables a user to:
-+
+* Download a copy of the unified schema from the query editor. |
+|Operate|* View customer-facing logs.
+* Set a dedicated load balancer URL for Anypoint Datagraph.|
+|DataGraph Admin |
 * Contribute, consume, and operate the unified schema.
-* View usage metrics.
-
-DataGraph Project - Contributor:: Enables a user to:
-+
+* View usage metrics.|
+|DataGraph Project - Contributor |
 * Add source APIs to the unified schema.
 * Edit any source API schema added to the unified schema.
 * Request access to run queries.
 * Promote API schemas to an environment.
 * View query traces in real-time while running queries from the UI.
-* Download a copy of the unified schema from the query editor in a specific project.
+* Download a copy of the unified schema from the query editor in a specific project.|
+| DataGraph Project - Operator | View customer-facing logs and set a dedicated load balancer URL for Anypoint Datagraph in a specific project.|
+|DataGraph Project - Admin |
 
-DataGraph Project - Operator:: Enables a user to view customer-facing logs and set a dedicated load balancer URL for Anypoint Datagraph in a specific project.
-
-DataGraph Project - Admin::  Enables a user to: 
-+
 * Contribute, consume, and operate the unified schema.
-* View usage metrics in a specific project.
+* View usage metrics in a specific project.|
+|===
+
 
 == Design Center
 
-Design Center Developer:: Enables a user to view, create, and manage all projects within a business group. 
-+
-Use this permission to set up administrators for all projects within a specific business group.
-Design Center Creator:: Enables a user to create projects in Design Center from the navigation panel and view all projects created or shared with the user. 
-+
-Use this permission to invite users to create, edit, and maintain your projects.
-Design Center Viewer:: Enables a user to view all Design Center projects within a business group and test projects with the Mocking Service. +
-Users with this permission cannot create new projects, edit or rename existing projects, or share projects with another user. 
-+
-Assign this permission to those who consume your project in a specific business group.
 
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+| Design Center Developer | View, create, and manage all projects within a business group.|
+Use this permission to set up administrators for all projects within a specific business group.
+|Design Center Creator | Create projects in Design Center from the navigation panel and view all projects created or shared with the user. |
+Use this permission to invite users to create, edit, and maintain your projects.
+|Design Center Viewer |View all Design Center projects within a business group and test projects with the Mocking Service. |
+
+Users with this permission cannot create new projects, edit or rename existing projects, or share projects with another user. 
+
+Assign this permission to those who consume your project in a specific business group.
+|===
 
 === Design Center Project-level Permissions
 
-Project Administrator:: Enables a user to manage and share a Design Center project within a business group. 
-+
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|Project Administrator| Manage and share a Design Center project within a business group.|
 Use this permission to set up administrators for all the projects within a specific business group.
-Project Editor:: Enables a user to edit a Design Center project within a business group. 
-+
+|Project Editor | Edit a Design Center project within a business group.|
 Use this permission to invite users to create, edit, and maintain your projects.
-Project Viewer:: Enables a user to view a Design Center project within a business group and test projects with the Mocking Service. 
-+
+|Project Viewer |View a Design Center project within a business group and test projects with the Mocking Service.|
 Users with this permission cannot create a new project, edit or rename the existing project, or share the project with another user. 
-+
+
 Assign this permission to those who consume your project in a specific business group.
+|===
 
 // where did the project-level permissions go?
 
 == Exchange
 
-Exchange Administrator:: Enables a user to: 
-+
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+| Exchange Administrator |
+
 * View, create, and download assets within a business group.
 * Edit asset portal content in an existing asset version.
-+
-Users with this permission have the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. 
-+
-Use this permission to set up Exchange administrators for all assets within a specific business group.
 
-Exchange Contributor:: Enables a user to view, create, and download assets within a business group. 
-+
-Users with this permission can edit asset portal content in an existing asset version. 
-+
+Users with this permission have the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. |
+Use this permission to set up Exchange administrators for all assets within a specific business group.
+|Exchange Contributor |View, create, and download assets within a business group. 
+
+Users with this permission can edit asset portal content in an existing asset version.|
 Use this permission to invite users to edit and maintain your asset portal descriptions.
 
-Exchange Viewer:: Enables a user to view and download assets within a business group. 
+| Exchange Viewer | View and download assets within a business group.|
+
 Users with this permission cannot add new assets, edit asset portal content, or share an asset with another user. 
-+
+
 Assign this permission to those who consume your assets in a specific business group.
 
-Exchange Creator:: Enables a user to create new assets within a business group’s catalog. A user with this permission can't modify assets or asset versions created by other users in the business group. 
-+
+| Exchange Creator | Create new assets within a business group’s catalog. |
+
+A user with this permission can't modify assets or asset versions created by other users in the business group. 
+
 Once the users with this permission create an asset, the Asset Administrator permission is automatically assigned for the assets they create. The Asset Administrator permission allows these users to modify only the assets that they create. 
-+
+
 Use this permission to restrict the modification of assets except for assets created by this user while allowing all developers across all teams in a business group to create new assets in Exchange.
 
-Asset Viewer:: Enables a user to view and download an asset. 
+| Asset Viewer | View and download an asset. |
+
 Users with this permission cannot edit asset portal content or share an asset with another user. 
-+
+
 Use this permission to invite a user outside your business group to view and download an asset.
 
-Asset Contributor:: Enables a user to view, add a new version, and download an asset. 
-+
+| Asset Contributor | View, add a new version, and download an asset.|
 Use this permission to invite a user outside of your business group to view, download, and add edit portal content for an asset.
 
-Asset Administrator:: Enables a user to view, create, download, deprecate, and delete an asset. 
+| Asset Administrator |View, create, download, deprecate, and delete an asset. |
+
 Users with this permission have the same access as users with the Exchange Administrator permission, but on only a single asset. This permission is assigned by default to an asset creator. 
-+
+
 Use this permission to extend administrator permissions for an asset to an additional user.
+|===
 
-== IDP 
+== IDP
 
-include::idp::partial$permissions.adoc[tag=permissionManage]
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+| Manage Actions | Complete access to IDP and assigns reviewer permission by default for every document action.|
+|Build Actions | Create, edit, and publish document actions and assign reviewers to the actions.|
+|Execute Published Actions | Execute a published document action and retrieve the results of the execution.|
+|Configure Connected Apps | Configure a connected app to communicate with IDP.|
+|===
 
-include::idp::partial$permissions.adoc[tag=permissionBuild]
 
-include::idp::partial$permissions.adoc[tag=permissionExecute]
 
-include::idp::partial$permissions.adoc[tag=permissionConfigure]
+// include::idp::partial$permissions.adoc[tag=permissionManage]
+// include::idp::partial$permissions.adoc[tag=permissionBuild]
+// include::idp::partial$permissions.adoc[tag=permissionExecute]
+// include::idp::partial$permissions.adoc[tag=permissionConfigure]
+
+
 
 == Monitoring
 
+[%header,cols="20a,50a,30a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+| Monitoring Administrator | View, create, modify, and delete content in Anypoint Monitoring.|
+|Monitoring Viewer | View but not modify content in Anypoint Monitoring.|
+| Telemetry Exporter Administrator |
+
+* View connections and configurations in Telemetry Exporter.
+* Create, modify, and delete connections in Telemetry Exporter.
+* Create, modify, and delete configurations in Telemetry Exporter.| 
+
+Assign this permission at the root organization level.
+| Telemetry Exporter Configurations Manager | 
+* View connections and configurations in Telemetry Exporter.
+* Create, modify, and delete configurations in Telemetry Exporter.|
+
+|===
+////
 include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringAdmin]
 
 include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringViewer]
@@ -203,6 +284,7 @@ include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringViewer]
 include::monitoring::partial$monitoring-permissions.adoc[tag=telExpAdmin]
 
 include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
+////
 
 == MQ
 
