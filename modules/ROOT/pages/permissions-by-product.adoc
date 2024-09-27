@@ -8,7 +8,7 @@ Depending on your organization, its licensing, and its entitlements, you might n
 
 == Access Management
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |Organization Administrator | At the root organization level, perform most Anypoint Platform tasks, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions.
@@ -29,7 +29,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 
 == Anypoint Code Builder
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |Anypoint Code Builder Developer | Create and use cloud IDE instances of Anypoint Code Builder.  | This permission does not apply to Anypoint Code Builder for Desktop. 
@@ -39,7 +39,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 
 == API Catalog
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |API Catalog Contributor| Catalog assets and other resources using API Catalog.| 
@@ -48,7 +48,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 
 == API Experience Hub
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |API Experience Hub Admin| View, create, modify, and delete content in API Experience Hub.| 
@@ -58,7 +58,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 
 == API Governance
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |Governance Administrator| Manage profiles and view reports.| 
@@ -71,7 +71,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 Depending on your organization, you might see one of the following sets of permissions available for API Manager.
 
 .Post-Crowd
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |API Manager Environment Administrator| View, create, modify, and delete APIs in the specified environment.|
@@ -93,7 +93,7 @@ Users with this credential cannot view application secrets and cannot modify app
 |===
 
 .Pre-Crowd
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |API Creator| Create an API in the specified environment.|
@@ -114,7 +114,7 @@ Composer Admin:: Enables a user to invite and manage users in addition to creati
 
 == Data Gateway
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |Data Gateway Administrator | Full access to Data Gateway Designer.|
@@ -124,7 +124,7 @@ Composer Admin:: Enables a user to invite and manage users in addition to creati
 
 == DataGraph
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |Contribute| * Add source APIs to the unified schema.
@@ -159,7 +159,7 @@ Composer Admin:: Enables a user to invite and manage users in addition to creati
 == Design Center
 
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 | Design Center Developer | View, create, and manage all projects within a business group.|
@@ -175,7 +175,7 @@ Assign this permission to those who consume your project in a specific business 
 
 === Design Center Project-level Permissions
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 |Project Administrator| Manage and share a Design Center project within a business group.|
@@ -192,15 +192,16 @@ Assign this permission to those who consume your project in a specific business 
 
 == Exchange
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 | Exchange Administrator |
 
 * View, create, and download assets within a business group.
-* Edit asset portal content in an existing asset version.
+* Edit asset portal content in an existing asset version.|
 
-Users with this permission have the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset. |
+Users with this permission have the same access as users with the Exchange contributor and Exchange viewer permissions, and access to share an asset with another user, deprecate an asset, and delete an asset.
+
 Use this permission to set up Exchange administrators for all assets within a specific business group.
 |Exchange Contributor |View, create, and download assets within a business group. 
 
@@ -239,7 +240,7 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 == IDP
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 | Manage Actions | Complete access to IDP and assigns reviewer permission by default for every document action.|
@@ -259,7 +260,7 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 == Monitoring
 
-[%header,cols="20a,50a,30a"]
+[%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability To | Notes
 | Monitoring Administrator | View, create, modify, and delete content in Anypoint Monitoring.|
@@ -274,8 +275,8 @@ Assign this permission at the root organization level.
 | Telemetry Exporter Configurations Manager | 
 * View connections and configurations in Telemetry Exporter.
 * Create, modify, and delete configurations in Telemetry Exporter.|
-
 |===
+
 ////
 include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringAdmin]
 
@@ -288,143 +289,360 @@ include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
 
 == MQ
 
-View clients:: Enables a user to view all client apps, including client app IDs and client secrets for each client app.
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|View clients | View all client apps, including client app IDs and client secrets for each client app.|
+|View destinations | 
 
-View destinations:: Enables a user to:
-+
 * View all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL).
 * View In Queue messages. 
-* View In Flight message stats.
-
-Clear destinations:: Enables a user to: 
-+
+* View In Flight message stats.|
+| Clear destinations | 
+ 
 * View all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL).
 * View In Queue messages.
 * View In Flight message stats.
-* Clear destinations.
+* Clear destinations.|
+|Manage clients | 
 
-Manage clients:: Enables a user to: 
-+
 * View all client apps, including client app IDs and client secrets for each client app.
-* Create client apps.
+* Create client apps.|
+|Administer destinations|
 
-Administer destinations:: Enables a user to:
-+
 * View all destinations and each destination’s settings (ID, Type, Message TTL, and Message Lock Default TTL).
 * View In Queue messages.
 * View In Flight message stats.
 * Clear destinations.
 * Create new queues, message exchanges, and bindings.
 * Edit existing queues, message exchanges, and bindings.
-* Purge messages from queues.
+* Purge messages from queues.|
+| Manage destinations (deprecated)|| This permission is deprecated. To achieve the same abilities as Manage permissions, assign these permissions to the user: 
 
-Manage destinations (deprecated):: This permission is deprecated. To achieve the same abilities as Manage permissions, assign these permissions to the user: 
-+
 * Administer destinations
 * Destination subscriber for given environment
 * Destination publisher for given environment
+|Destination subscriber for given environment | Consume messages from a destination and delete messages from a destination.|
+| Destination publisher for given environment| Send messages to a destination and update message TTL on a destination.|
+|Read MQ Stats |View organization and environment statistics.|
+|===
 
-Destination subscriber for given environment:: Enables a user to consume messages from a destination and delete messages from a destination.
-
-Destination publisher for given environment:: Enables a user to send messages to a destination and update message TTL on a destination.
-
-Read MQ Stats:: Enables a user to view organization and environment statistics.
 
 == Partner Manager
 
-Partner Manager Administrator:: Enables a user to have complete access to the host, partner, message flow configurations, and transaction activity.
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|Partner Manager Administrator| Have complete access to the host, partner, message flow configurations, and transaction activity.|
+|View Host, Partners and Message Flows|Have view-only access to the host, partner, and message flow configurations.| This user cannot view transaction activity.
+| Manage Partners and Message Flows|
 
-View Host, Partners and Message Flows:: Enables a user to have view-only access to the host, partner, and message flow configurations. 
-+
-This user cannot view transaction activity.
-
-Manage Partners and Message Flows:: Enables a user to:
-+
 * Create, modify, and delete partners or message flow configurations.
-* View partner configurations.
-+
+* View partner configurations.|
 This user cannot view and manage transaction activity.
-
-Manage Activity:: Enables a user to view and manage transaction activity. 
-+
+|Manage Activity | View and manage transaction activity.|
 This user cannot view or modify either partner or message flow configurations.
-
-Manage Host:: Enables a user to create, modify, and delete host configurations. 
-+
+|Manage Host | Create, modify, and delete host configurations.|
 This user cannot view or modify partner configurations or transaction activity. This access applies even if the user has the Organization Administrator permission.
-
-View Activity:: Enables a user have view-only access to transaction activity. 
-+
+|View Activity|Have view-only access to transaction activity. |
 This user cannot view or modify either partner or message flow configurations.
+|===
 
 == RPA
 
-include::rpa-home::partial$rpa-permissions.adoc[]
+// include::rpa-home::partial$rpa-permissions.adoc[]
+
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|RPA Administrator| Perform all tasks, except those provided by the RPA Project Manager permission.|
+A user with this permission can only view or administer automation projects if the user is part of the process team.
+|RPA Automations Designer | RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner) to do the following in RPA Manager:
+
+* Create automation projects.
+* Record or design models of business processes that a process manager or center of excellence approved for automation.
+* Document and edit the applications required for performing the processes.
+| The RPA Automations Designer permission contains the following deprecated RPA permissions:
+
+* Application Create
+* Application Edit
+* Process Automation Open
+* Process Create
+* Process Recording
+
+| RPA Automations Contributor | RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner) to do the following:
+
+* In RPA Manager:
+** Create automation projects.
+** Record or design models of business processes that a process manager or center of excellence approved for automation.
+** Document and edit the applications required for performing the processes.
+** Create and edit global variables to link to activity parameters created with RPA Builder.
+
+* In RPA Builder:
+** Build the automation based on the model.
+** Reuse activities from the Activity Library.
+| The RPA Automations Contributor permission contains the following deprecated RPA permissions:
+
+* Activity Library Open
+* Application Create
+* Application Edit
+* Builder Usage
+* Global Variables Create for Productionphase
+* Global Variables Create for Testphase
+* Global Variables Edit for Productionphase
+* Global Variables Edit for Testphase
+* Process Automation Open
+* Process Create
+* Process Recording
+
+|RPA Automations Manager |RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner) to do the following:
+
+* In RPA Manager:
+** Create automation projects.
+** Record or design models of business processes that a process manager or center of excellence approved for automation.
+** Document and manage the applications required for performing the processes.
+** Create and manage global variables to link to activity parameters created with RPA Builder.
+** Change the owners and managers of processes.
+** Reassign unprocessed user tasks
+
+* In RPA Builder:
+** Build the automation based on the model.
+** Reuse and manage activities from the Activity Library.
+|The RPA Automations Manager permission contains the following deprecated RPA permissions:
+
+* Activity Library Administration
+* Activity Library Open
+* Application Create
+* Application Delete
+* Application Edit
+* Builder Usage
+* Change Process Owner
+* Change Project Manager
+* Global Variables Create for Productionphase
+* Global Variables Create for Testphase
+* Global Variables Edit for Productionphase
+* Global Variables Edit for Testphase
+* Global Variables Delete
+* Process Automation Open
+* Process Create
+* Process Recording
+* Unprocessed Task List Edit
+* Unprocessed Task List Open
+| RPA Bots Manager |Do the following in RPA Manager:
+
+* Monitor and manage all RPA Bots, including the following:
+** Manage service times.
+** View session queues.
+* Manage the applications required for performing the processes, including downtimes.
+| The RPA Bots Manager permission contains the following deprecated RPA permissions:
+
+* Application Create
+* Application Delete
+* Application Edit
+* Process Monitoring Open
+* Robot Management Administration
+* Robot Management Open
+* Robot State and Operation Open
+* Service Time Create
+* Service Time Delete
+* Service Time Edit
+
+| RPA Evaluations Viewer | 
+Do the following in RPA Manager:
+
+* View all process evaluations, regardless of whether the user belongs to the process team.
+* View:
+** Evaluation criteria
+** Evaluation templates
+| The RPA Evaluations Viewer permission contains the following deprecated RPA permissions:
+
+* Evaluation Criteria Open
+* Evaluation Templates Open
+* Global Process Evaluation View
+* Process Evaluation Open
+| RPA Evaluations Contributor | Do the following in RPA Manager:
+
+* View all process evaluations, regardless of whether the user belongs to the process team.
+* View, create, and edit:
+** Evaluation criteria
+** Evaluation templates
+* View, create, edit, and delete process evaluations.
+| The RPA Evaluations Contributor contains the following deprecated RPA permissions:
+
+* Evaluation Criteria Create
+* Evaluation Criteria Edit
+* Evaluation Criteria Open
+* Evaluation Templates Create
+* Evaluation Templates Edit
+* Evaluation Templates Open
+* Global Process Evaluation View
+* Process Evaluation Administration
+* Process Evaluation Open
+
+| RPA Evaluations Manager | Do the following in RPA Manager:
+
+* View all process evaluations, regardless of whether the user belongs to the process team.
+* View, create, edit, and delete:
+** Evaluation criteria
+** Evaluation templates
+* Process evaluations
+* Approve evaluated processes to a center of excellence or a project manager for automation.
+|The RPA Evaluations Manager contains the following deprecated RPA permissions:
+
+* Evaluation Criteria Create
+* Evaluation Criteria Delete
+* Evaluation Criteria Edit
+* Evaluation Criteria Open
+* Evaluation Templates Create
+* Evaluation Templates Delete
+* Evaluation Templates Edit
+* Evaluation Templates Open
+* Global Process Evaluation View
+* Process Evaluation Administration
+* Process Evaluation Approval to a CoE
+* Process Evaluation Approval to a Project manager
+* Process Evaluation Open
+| RPA Operations Viewer | Eo the following in RPA Manager:
+
+* View all aspects of the following RPA assets:
+** Alerts
+** Bots
+** Dashboards
+* View the following information for processes for which the user belongs to the process team:
+** Deployment maps
+** Execution plans
+** Session queues
+* Watch the bot at work via process streaming.
+
+| The RPA Operations Viewer contains the following deprecated RPA permissions:
+
+* Alerting Open
+* Dashboard Open
+* Process Deployment Map Open
+* Process Execution Plans Open
+* Process Monitoring Open
+* Process Streaming Open
+* Robot Management Open
+* Robot State and Operation Open
+
+| RPA Operations Manager | Do the following in RPA Manager:
+
+* View and manage the following RPA assets:
+** Alerts
+** Bots
+** Dashboards
+** Unprocessed user tasks
+** Upcoming process changes
+* Analyze finance aspects and billing reports
+* View the following information for processes for which the user belongs to the process team:
+** Deployment maps
+** Execution plans
+** Session queues
+* Watch the bot at work via process streaming.
+|The RPA Operations Viewer contains the following deprecated RPA permissions:
+
+* Alerting Administration
+* Alerting Open
+* Dashboard Open
+* Process Deployment Map Open
+* Process Execution Plans Open
+* Process Monitoring Open
+* Process Streaming Open
+* Robot Management Open
+* Robot State and Operation Open
+* Billing Report Open
+* Dashboard Administration
+* Finance Analysis Edit
+* Finance Analysis Open
+* Global Finance Analysis View
+* Global Process Execution Plans View
+* Unprocessed Task List Edit
+* Unprocessed Task List Open
+* Upcoming Process Changes Administration
+* Upcoming Process Changes Open
+| RPA Performance Analyzer |Do the following in RPA Manager:
+
+* Analyze the financial aspects (such as the break-even point) of all processes.
+* View the billing reports.
+| 
+The RPA Performance Analyzer permission contains the following deprecated RPA permissions:
+
+* Billing Report Open
+* Finance Analysis Edit
+* Finance Analysis Open
+* Global Finance Analysis View
+
+| RPA Project Manager | Be assigned as a project manager of automation projects in RPA Manager. For a user to function as a project manager, the user must also have one of the following permissions:
+
+* RPA Automations Designer
+* RPA Automations Contributor
+* RPA Automations Manager
+* RPA Administrator
+| The RPA Project Manager permission contains the deprecated RPA Project Management permissions.
+|===
 
 == Runtime Manager
 
-CloudHub Network Administrator:: Enables a user to manage CloudHub and CloudHub 2.0 network resources.
-
-CloudHub Network Viewer:: Enables a user to view CloudHub and CloudHub 2.0 network resources.
-
-Delete Applications:: Enables a user to delete applications in a specific environment.
-
-Download Applications:: Enables a user to download application files in a specific environment.
-
-Manage Alerts:: Enables a user to create, update, and delete application alerts in a specific environment.
-
-Manage Application Data:: Enables a user to create and delete application data in a specific environment.
-
-Manage Queues:: Enables a user to clear application queues in a specific environment.
-
-Read Runtime Fabric:: Enables a user to query Runtime Fabrics in the organization.
-
-Manage Runtime Fabrics:: Enables a user to read, create, update, and delete Runtime Fabric resources.
-
-Manage Runtime Fabric:: Enables a user to read, create, update, and delete Runtime Fabric resources. 
-
-Manage Schedules:: Enables a user to run and update application schedules in a specific environment.
-
-Manage Settings:: Enables a user to update application settings in a specific environment.
-
-Manage Tenants:: Enables a user to create, update, and delete application tenants in a specific environment.
-
-Read Alerts:: Enables a user to view alerts in a specific environment.
-
-Read Applications:: Enables a user to view applications in a specific environment.
-
-Manage Servers:: Enables a user to create, update, and delete server and Flex Gateway resources.
-
-Read Servers:: Enables a user to view server and Flex Gateway resources.
-
-Manage Application Flows:: Enables a user to update flows.
-
-Create Applications:: Enables a user to create applications in a specific environment.
-
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+| CloudHub Network Administrator | Manage CloudHub and CloudHub 2.0 network resources.|
+| CloudHub Network Viewer | View CloudHub and CloudHub 2.0 network resources.|
+| Delete Applications | Delete applications in a specific environment.|
+| Download Applications | Download application files in a specific environment.|
+| Manage Alerts | Create, update, and delete application alerts in a specific environment.|
+| Manage Application Data | Create and delete application data in a specific environment.|
+| Manage Queues | Clear application queues in a specific environment.|
+| Read Runtime Fabric | Query Runtime Fabric instances in the organization.|
+| Manage Runtime Fabrics | read, create, update, and delete Runtime Fabric resources.|
+| Manage Runtime Fabric | Read, create, update, and delete Runtime Fabric resources. |
+| Manage Schedules | Run and update application schedules in a specific environment.|
+| Manage Settings | Update application settings in a specific environment.|
+| Manage Tenants | Create, update, and delete application tenants in a specific environment.|
+| Read Alerts | View alerts in a specific environment.|
+| Read Applications | View applications in a specific environment.|
+| Manage Servers | Create, update, and delete server and Flex Gateway resources.|
+| Read Servers | View server and Flex Gateway resources.|
+| Manage Application Flows | Update flows.|
+| Create Applications | Create applications in a specific environment.|
+|===
 
 == Secrets Manager
 
-Grant access to secrets:: Enables a user to browse, read metadata and grant access to secrets in a specific environment.
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+| Grant access to secrets | Browse, read metadata and grant access to secrets in a specific environment.|
+| Manage secret groups|
 
-Manage secret groups:: Enables a user to: 
-+
 * Create, modify, delete, read, and clone secret groups in a specific environment.
-* Check if the user can initiate a new clone or restore operation.
-
-Read secrets metadata:: Enables a user to browse and read metadata of secrets in a specific environment.
-
-Write secrets:: Enables a user to upload, create, modify secrets in a specific environment.
+* Check if the user can initiate a new clone or restore operation.|
+| Read secrets metadata | Browse and read metadata of secrets in a specific environment.| 
+| Write secrets | Upload, create, modify secrets in a specific environment.|
+|===
 
 == Tokenization
 
-Manage Tokenization Services:: Enables a user to to view, create, edit, and delete tokenization resources.
-
-Manage Tokenization Formats:: Enables a user to view, create, edit, and delete tokenization formats.
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+| Manage Tokenization Services | View, create, edit, and delete tokenization resources.|
+| Manage Tokenization Formats | View, create, edit, and delete tokenization formats.|
+|===
 
 == Usage
 
-Usage Viewer:: Enables a user to view usage reports.
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+| Usage Viewer| View usage reports.|
+|===
 
 == Visualizer
 
-Visualizer Editor:: Enables a user to view, create, modify, and delete content in Anypoint Visualizer.
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability To | Notes
+|Visualizer Editor | View, create, modify, and delete content in Anypoint Visualizer.|
+|===
+
