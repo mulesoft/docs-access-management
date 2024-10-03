@@ -24,7 +24,7 @@ image:connected-salesforce-org-api-catalog-enabled.png["Connected Salesforce org
 +
 The Salesforce org administrator can then sync APIs into their catalog. 
 +
-For details about syncing APIs and using API Catalog in Salesforce, see xref:api-catalog-in-salesforce.adoc[].
+For details about syncing APIs and using API Catalog in Salesforce, see xref:general::api-catalog-in-salesforce.adoc[].
 +
 . After the APIs are imported, the Salesforce admin selects individual API instances and operations and converts them into invocable actions for access by selected Salesforce developers.
 . A client ID is created and an access request for the selected Salesforce developers is sent to the Anypoint Platform owner of that API through API Manager.
