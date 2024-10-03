@@ -25,7 +25,7 @@ As an Anypoint Platform organization administrator, you can start the process of
 
 You must have the Salesforce org's connection key (tenant key) before you can connect to a Salesforce org. Contact the Salesforce org admin to get the tenant key. 
 
-TIP: Salesforce admins get the Salesforce org tenant key and enable MuleSoft features in their Salesforce org Setup in *MuleSoft | Anypoint Platform Setup*.
+TIP: Salesforce admins get the Salesforce org tenant key and enable MuleSoft features in their Salesforce org Setup in *MuleSoft > Anypoint Platform Setup*.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 

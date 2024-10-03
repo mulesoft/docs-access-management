@@ -21,12 +21,16 @@ Within the selected business groups, only APIs that have specs published in Exch
 . In the *Capabilities Managed in Anypoint Platform* section, switch between *Enabled* or *Disabled* in the *Make MuleSoft Anypoint Platform APIs Available in Salesforce* section. 
 +
 image:connected-salesforce-org-api-catalog-enabled.png["Connected Salesforce org with both Invocable Actions and API Catalog enabled"]
-. The Salesforce org administrator must then turn on synchronization to import the APIs into their catalog.
++
+The Salesforce org administrator can then sync APIs into their catalog. 
++
+For details about syncing APIs and using API Catalog in Salesforce, see xref:api-catalog-in-salesforce.adoc[].
++
 . After the APIs are imported, the Salesforce admin selects individual API instances and operations and converts them into invocable actions for access by selected Salesforce developers.
 . A client ID is created and an access request for the selected Salesforce developers is sent to the Anypoint Platform owner of that API through API Manager.
 +
 Only after the request is accepted can those selected Salesforce developers start using the API.
-+
+
 After the Salesforce org imports APIs from Anypoint Platform into its API Catalog, changes to the settings in Anypoint Platform affect synchronization with the Catalog. Access granted to Anypoint Platform APIs continues through API Manager, but the API Catalog might not have the latest versions of the APIs from Anypoint Platform.
 *QUESTION FOR REVIEWERS:* What does this mean that the API Catalog might not have the latest versions of the Anypoint Platform APIs? What do they need to do to ensure that they DO have the latest versions? 
 
