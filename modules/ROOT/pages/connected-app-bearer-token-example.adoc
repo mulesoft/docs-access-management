@@ -1,0 +1,64 @@
+= Getting the Bearer Token for a Connected App Example
+
+This example demonstrates how to create a connected app and get the bearer token so that you can invoke Anypoint Platform APIs. 
+
+[[create-connected-app]]
+== Create a Connected App
+
+include::partial$include-nav-connected-apps.adoc[]
+
+. In the *Owned Apps* section, click *Create App*.
+. In the *Create App* page, enter a unique *Name* for the app, select *App acts on its own behalf (client credentials)*, and then click *Save*.
+
+[[add-required-scopes]]
+== Add the Required Scopes
+
+To deploy the app to CloudHub, you must add Runtime Manager scopes to the app.
+
+. On the *Connected Apps* page, click the name of the app to add permissions to. 
+. In the *Update App* window, click *Add Scopes*.
+. Select the scopes for the app from the *Runtime Manager* section, and then click *Next*. 
++
+For information about scopes and permissions in the Connected Apps feature, see the xref:connected-apps-developers.adoc#endpoint-scopes[endpoint scopes] documentation page in Access Management.
+. Select the *Business Groups* in which the app has permission to access the assigned scopes and click *Next*.
+. Select the *Environments* for the business groups and scopes you selected, and click *Next*. 
+. Review the scopes you added and click *Add Scopes*.
++
+image::bearer-token-example-review-scopes.png["Add scopes review with Runtime Manager scopes selected"]
+. On the *Update App* page, click *Save Changes*.
+
+[[get-bearer-token]]
+== Get the bearer token
+
+To get the bearer token for the app:
+
+include::partial$include-nav-connected-apps.adoc[]
+
+. In the *Owned Apps* section, click *Copy Id* for the app to get the bearer token for.
+. Paste and save the app's client ID in a secure location.
+. Repeat the previous step to copy the app's client secret. 
+. Run the following cURL command and replace `CLIENT_ID` and `CLIENT_SECRET` with your client ID and secret:
++
+[source,command]
+----
+curl --location --request POST https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=<CLIENT_ID>' \
+--data-urlencode 'client_secret=<CLIENT_SECRET>' \
+--data-urlencode 'grant_type=client_credentials'
+----
++
+You receive the following response:
++ 
+----
+{
+    "access_token": "<bearer token>",
+    "token_type": "bearer"
+}
+----
++
+Now that you have the bearer token, you can use the connected app to invoke Anypoint Platform APIs. For more examples, see https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/pages/Connected%20App%20Examples/[Connected App Examples].
+
+== See Also
+
+* xref:connected-apps-developers.adoc[]
