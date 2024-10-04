@@ -14,7 +14,7 @@ You can get this from the Salesforce org admin.
 Salesforce org admins must have:
 
 * The Salesforce admin permission set.
-* The Anypoint Platform organization ID.
+* The Anypoint Platform organization key.
 +
 You can get this from the Anypoint Platform organization administrator. 
 
@@ -34,17 +34,17 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . Enter the Salesforce org tenant key, and click *Confirm*. 
 The format for the Salesforce tenant key is `cloud/env/org-id`.
 . In the *Add the Salesforce Org* dialog verify the information and click *Add*. 
-. Click *Copy* to copy the Anypoint Platform organization ID. 
+. Click *Copy* to copy the Anypoint Platform organization key. 
 . If you are the admin for the Salesforce org you are adding, click *Manage in Salesforce* to continue setting up the relationship in Salesforce. 
 +
-If you are not the Salesforce admin, provide the Anypoint Platform organization ID to the Salesforce admin so they can finish the connection process in Salesforce.
+If you are not the Salesforce admin, provide the Anypoint Platform organization key to the Salesforce admin so they can finish the connection process in Salesforce.
 
 When the connection process is complete, the Salesforce org appears in the *Salesforce Orgs* section of the *Salesforce* page.
 
 [complete-organization-connection]
 == Complete the Organization Connection in Salesforce
 
-As a Salesforce org admin, you complete the connection between your org and the Anypoint Platform organization when the connection process is initiated in Anypoint Platform. You must have the Anypoint Platform organization ID to complete the connection.
+As a Salesforce org admin, you complete the connection between your org and the Anypoint Platform organization when the connection process is initiated in Anypoint Platform. You must have the Anypoint Platform organization key to complete the connection.
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
@@ -53,7 +53,7 @@ include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 +
 NOTE: The Anypoint Platform organization key is the universally unique identifier (UUID) for the Anypoint Platform organization ID.
 + 
-If you don't have the Anypoint Platform organization ID, contact the Anypoint Platform organization administrator.
+If you don't have the Anypoint Platform organization key, contact the Anypoint Platform organization administrator.
 + 
 You are returned to the *Connection to MuleSoft Anypoint Platform* page and see the details of the connected Salesforce org, including the enablement status of the capabilities associated with the connected Salesforce org. 
 
