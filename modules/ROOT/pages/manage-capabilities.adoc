@@ -31,11 +31,6 @@ For details about syncing APIs and using API Catalog in Salesforce, see xref:gen
 +
 Only after the request is accepted can those selected Salesforce developers start using the API.
 
-After the Salesforce org imports APIs from Anypoint Platform into its API Catalog, changes to the settings in Anypoint Platform affect synchronization with the Catalog. Access granted to Anypoint Platform APIs continues through API Manager, but the API Catalog might not have the latest versions of the APIs from Anypoint Platform. For information about how to sync APIs in API Catalog to import the latest versions, see xref:general::api-catalog-in-salesforce.adoc[].
-
-// *QUESTION FOR REVIEWERS:* What does this mean that the API Catalog might not have the latest versions of the Anypoint Platform APIs? What do they need to do to ensure that they DO have the latest versions? 
-// Answer from Beth: Salesforce admins need to sync APIs in API Catalog. In the pilot, they need to do this manually.  
-
 === Add the Exchange Contributor permissions
 
 When you connect a Salesforce org to your Anypoint Platform organization and enable API Catalog, an API Catalog Integration user is automatically created with the URL of the connected Salesforce org. You must assign the *Exchange Contributor* permission to this user to enable the sync of APIs from Anypoint Platform to API Catalog in Salesforce. 
