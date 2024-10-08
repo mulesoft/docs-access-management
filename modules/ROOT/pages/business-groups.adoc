@@ -137,7 +137,7 @@ You can redistribute resources (such as vCores, VPCs, load balancers, and so on)
 
 The business group hierarchy prevents a child business group from consuming additional resources from its parent group unless an organization administrator redistributes those resources to the child group. Resource distribution proceeds from root to parent to child. For example, you can't redistribute sandbox VCores to a child business group if the parent business group doesn't have any sandbox vCores available, even if the root organization has sandbox vCores available.
 
-Additionally, the root organization or parent business group can't reclaim resources that are allocated to a business group that isn't a direct child.
+Additionally, the root organization or parent business group can't reclaim resources allocated to a business group that isn't a direct child.
 
 To see resource utilization for the root organization, navigate to *Access Management > Subscription > Runtime Manage Subscription*.
 
