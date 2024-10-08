@@ -133,7 +133,7 @@ include::partial$include-nav-organizations.adoc[]
 [[redistribute-resources]]
 == Redistribute Resources Between Existing Business Groups
 
-If you need to redistribute resources (such as vCores, VPCs, load balancers, and so on), you can redistribute resources between business groups at the business group level only (not at the root organization level). 
+You can redistribute resources (such as vCores, VPCs, load balancers, and so on) between business groups at the business group level only, not at the root organization level. 
 
 The business group hierarchy prevents a child business group from consuming additional resources from its parent group unless an organization administrator redistributes those resources to the child group. Resource distribution proceeds from root to parent to child. For example, you can't redistribute sandbox VCores to a child business group if the parent business group doesn't have any sandbox vCores available, even if the root organization has sandbox vCores available.
 
