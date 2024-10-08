@@ -111,7 +111,8 @@ You can view a list of users or teams in a business group and filter by their as
 
 include::partial$include-nav-business-groups.adoc[]
 
-. Click the *Access Overview* tab. +
+. Click the *Access Overview* tab. 
++
 The *Access Overview* section appears, displaying a list of all users with any permissions in the current business group by default.
 +
 . Use the drop-downs to specify:
@@ -132,20 +133,25 @@ include::partial$include-nav-organizations.adoc[]
 [[redistribute-resources]]
 == Redistribute Resources Between Existing Business Groups
 
-Sometimes you need to redistribute resources (such as vCores, VPCs, load balancers, and so on) based on deployment of apps in your business groups.
-The business group hierarchy prevents a child business group from consuming resources from either its parent group or the root organization unless an Organization Administrator redistributes those resources. Resource distribution proceeds from root to parent to child.
-For example, a child business group cannot receive sandbox vCores if the parent business group does not have any sandbox vCores available, even if the root organization has sandbox vCores available.
-Additionally, the root organization or parent business group cannot reclaim resources that are currently allocated to a business group that is lower in the hierarchy.
+If you need to redistribute resources (such as vCores, VPCs, load balancers, and so on), you can redistribute resources between business groups at the business group level only (not at the root organization level). 
 
-You must have the Organization Administrator permission to redistribute resources.
+The business group hierarchy prevents a child business group from consuming resources from either its parent group or the root organization unless an organization administrator redistributes those resources. Resource distribution proceeds from root to parent to child. For example, you can't redistribute sandbox VCores to a child business group if the parent business group doesn't have any sandbox vCores available, even if the root organization has sandbox vCores available.
 
-include::partial$include-nav-business-groups.adoc[]
+Additionally, the root organization or parent business group can't reclaim resources that are allocated to a business group that is lower in the hierarchy.
 
+To see resource utilization for the root organization, navigate to *Access Management > Subscription > Runtime Manage Subscription*.
+
+You must have the Organization Administrator permission for the root organization to redistribute resources.
+
+. In the Access Management navigation menu, click *Business Groups*.
+. Click the name of the business group to reassign resources to.
++
+The *Settings* section appears, showing details about the root organization or business group.
 . Click the *Settings* tab.
 . Enter the number of vCores you want the business group to have.
 . Click *Save changes*.
 
-The *Business Group Info* window includes a resource counter that shows a value representing only available resources, the sum of those resources reassigned to child business groups plus those currently in use by the selected business group.
+The *Business Group Info* window includes a resource counter that shows a value representing available resources, the sum of those resources that are reassigned to child business groups, and resources currently in use by the selected business group.
 
 === See Also
 
