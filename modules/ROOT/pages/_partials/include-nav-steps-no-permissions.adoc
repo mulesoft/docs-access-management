@@ -1,2 +1,1 @@
-. Log in to Anypoint Platform.
-. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
+. In Anypoint Platform, go to *Access Management*.
