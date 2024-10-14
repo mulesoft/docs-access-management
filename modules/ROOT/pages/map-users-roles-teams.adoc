@@ -104,7 +104,7 @@ The following example shows a typical Auth0 groups claim:
 }
 ----
 
-Given that groups claim, the JSONata expression is +\https://anypoint.mulesoft.com/groups\+.
+Given that groups claim, the JSONata expression is +https://anypoint.mulesoft.com/groups+.
 
 ==== Salesforce
 
