@@ -1,6 +1,6 @@
 = Managing Users
 
-As an administrator of your root organization, you can enable, disable, or delete users, assign permissions to users, and edit a user's settings.
+As an administrator of your root organization, you can enable, disable, or delete users, assign permissions to users, and edit a user's settings. 
 
 On the access management *Users* page, you can:
 

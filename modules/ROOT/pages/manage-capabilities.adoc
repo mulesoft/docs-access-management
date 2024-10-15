@@ -1,0 +1,57 @@
+= Managing Capabilities for a Connected Salesforce Org
+
+When you establish a connection between your Anypoint Platform organization and a trusted Salesforce org, you can enable and disable capabilities associated with the Salesforce org. 
+
+== Enable or Disable API Catalog in Anypoint Platform
+
+Enable a connected Salesforce org to access and import Anypoint Platform APIs into the Salesforce API Catalog and expose them as invocable actions. This capability is enabled in Anypoint Platform access management by an Anypoint Platform organization administrator.
+
+To enable this feature:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Click *Salesforce*.
+. In the *Capabilities Managed in Anypoint Platform* section, click *Settings* next to *Make MuleSoft Anypoint Platform APIs Available in Salesforce*.
+. In *Settings for Anypoint APIs in Salesforce*, click *Continue*.
+. In the *Settings* page, select the Anypoint Platform business groups that allow the selected Salesforce org to import Anypoint Platform APIs into its API Catalog, and click *Save Settings*.
++
+[NOTE]
+Within the selected business groups, only APIs that have specs published in Exchange with active instances can be imported into Salesforce.
+. In the *Capabilities Managed in Anypoint Platform* section, switch between *Enabled* or *Disabled* in the *Make MuleSoft Anypoint Platform APIs Available in Salesforce* section. 
++
+image:connected-salesforce-org-api-catalog-enabled.png["Connected Salesforce org with both Invocable Actions and API Catalog enabled"]
++
+The Salesforce org administrator can then sync APIs into their catalog. 
++
+For details about syncing APIs and using API Catalog in Salesforce, see xref:general::api-catalog-in-salesforce.adoc[].
++
+. After the APIs are imported, the Salesforce admin selects individual API instances and operations and converts them into invocable actions for access by selected Salesforce developers.
+. A client ID is created and an access request for the selected Salesforce developers is sent to the Anypoint Platform owner of that API through API Manager.
++
+Only after the request is accepted can those selected Salesforce developers start using the API.
+
+=== Add the Exchange Contributor permissions
+
+When you connect a Salesforce org to your Anypoint Platform organization and enable API Catalog, an API Catalog Integration user is automatically created with the URL of the connected Salesforce org. You must assign the *Exchange Contributor* permission to this user to enable the sync of APIs from Anypoint Platform to API Catalog in Salesforce. 
+
+To assign the *Exchange Contributor* permission:
+
+. In the Access Management navigation menu, click *Users*.
+. Click the *Username* of the *API Catalog Integration* user.
+. Click *Add permissions*.
+. In the *Exchange* section of *Permissions*, select *Exchange Contributor* and click *Next*. 
+. Select the business groups to add the permission to and click *Next*. 
+. Click *Add Permissions*. 
+
+== Enable or Disable Invocable Actions in the Salesforce Org
+
+When this capability is enabled by the Salesforce admin in Salesforce, MuleSoft automation developers can publish invocable actions directly from their Robotic Process Automations (RPA) and Composer flows to the connected Salesforce org.
+
+. In Salesforce Setup, go to the *Quick Find* box and enter `MuleSoft`, then select *MuleSoft > MuleSoft Anypoint Platform*.
+. In the *Your connected Anypoint Platform Organization* section, click *View Connection Info* to open a new dialog.
+. In the *Connection to MuleSoft Anypoint Platform* window, switch between *Enabled* or *Disabled* in the *Enable Invocable Actions from MuleSoft Anypoint Platform Automations* section.
+
+== See Also
+
+* xref:trusted-salesforce-org.adoc[]
+* xref:managing-connected-salesforce-orgs.adoc[]

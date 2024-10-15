@@ -1,0 +1,5 @@
+. Log in to your Salesforce organization with your admin credentials.
+. Go to *Setup*. 
++
+image:salesforce-setup.png["Salesforce Setup menu with Setup selected"]
+. From *Setup*, in the Quick Find box, enter `MuleSoft`, and then select *MuleSoft > Anypoint Platform Setup*.
