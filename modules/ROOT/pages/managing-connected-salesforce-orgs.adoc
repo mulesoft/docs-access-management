@@ -2,32 +2,32 @@
 
 As an Anypoint Platform organization administrator, you can:
 
-* <<enable-disable-connection,Enable or disable the connection>> to a Salesforce org.
-* <<removing-connections,Remove the connection>> to a Salesforce org.
-* <<repairing-org-connection,Repair the connection>> to a Salesforce org.
-* <<edit-org-name,Edit the Salesforce org name>>.
+* <<enable-disable-connection,Enable or disable the connection>> to a Salesforce organization.
+* <<removing-connections,Remove the connection>> to a Salesforce organization.
+* <<repairing-org-connection,Repair the connection>> to a Salesforce organization.
+* <<edit-org-name,Edit the Salesforce organization name>>.
 
 [enable-disable-connection]
 == Enable or Disable a Connection in Anypoint Platform
 
-Enable the connection with a Salesforce org from your Anypoint Platform organization to the trusted Salesforce org. 
+Enable your Anypoint Platform organization to connect to a trusted Salesforce organization. 
 
 [NOTE]
-Tenant relationships that automatically provisioned with your Anypoint Platform organization are disabled until you enable them. 
+Tenant relationships that are automatically provisioned for your Anypoint Platform organization are disabled until you enable them. 
 
-When you disable the connection, the Salesforce org still appears in the list of available organizations with a status of `Disabled`. When the connection is disabled, you can't publish assets from your Anypoint Platform organization to the Salesforce org or use any of the other features associated with the connected Salesforce org until the connection is reenabled. Disabling a connection does not remove the connection to the Salesforce org. 
+When you disable the connection between your Anypoint Platform and a connected Salesforce organization, the Salesforce organization still appears in the list of available organizations with a status of `Disabled`. When the connection is disabled, you can't publish assets from your Anypoint Platform organization to the Salesforce organization or use any of the other features associated with the connected Salesforce organization until the connection is reenabled. Disabling a connection doesn't remove the connection to the Salesforce organization. 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *Salesforce*.
 +
-If your organization has at least one established tenant relationship with a Salesforce org, a list of Salesforce orgs appears, showing the name, org ID, and status of the relationship connection.
-. Click *Enable* or *Disable* for the Salesforce org you want to enable or disable the connection for.
+If your organization has at least one established tenant relationship with a Salesforce organization, a list of Salesforce orgs appears, showing the name, organization ID, and status of the relationship connection.
+. Click *Enable* or *Disable* for the Salesforce organization you want to enable or disable the connection for.
 
 [[removing-connections]]
 == Remove the Connection Between Anypoint Platform and Salesforce Organizations
 
-You can remove the connection between Anypoint Platform organizations and Salesforce organizations. When the connection is removed, the Salesforce org no longer appears in the list of connected organizations. The connection still exists in the Salesforce org until it's removed by the Salesforce admin.
+You can remove the connection between Anypoint Platform organizations and Salesforce organizations. When the connection is removed, the Salesforce organization no longer appears in the list of connected organizations. The connection still exists in the Salesforce organization until it's removed by the Salesforce admin.
 
 To reestablish the connection between Anypoint Platform and removed Salesforce organizations, administrators with the appropriate permissions in both Anypoint Platform and Salesforce organizations must recreate the connection.
 
@@ -36,20 +36,20 @@ To reestablish the connection between Anypoint Platform and removed Salesforce o
 
 An Anypoint Platform organization administrator can remove the connection between their Anypoint Platform organization and connected Salesforce orgs.
 
-When you remove a connection to a Salesforce org, any capabilities that are associated with the Salesforce org, such as API Catalog, are removed. 
+When you remove a connection to a Salesforce organization, any capabilities that are associated with the Salesforce organization, such as API Catalog, are removed. 
 
-To remove the connection to a Salesforce org:
+To remove the connection to a Salesforce organization:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *Salesforce*.
-. Click the *Actions* menu (*...*) in the Salesforce org to remove the connection from and select *Remove Salesforce Org*. 
+. Click the *Actions* menu (*...*) in the Salesforce organization to remove the connection from and select *Remove Salesforce Org*. 
 . In the *Remove Salesforce Org* dialog, click *Remove Org*.
 
 [removing-connection-salesforce]
 === Remove a Connected Anypoint Platform Organization in Salesforce
 
-A Salesforce org admin can remove the connection between an Anypoint Platform organization and Salesforce org using the Salesforce user interface. 
+A Salesforce organization admin can remove the connection between an Anypoint Platform organization and Salesforce organization using the Salesforce user interface. 
 
 To remove the connection to an Anypoint Platform organization:
 
@@ -66,28 +66,28 @@ For more information about managing this relationship from the Salesforce user i
 [[repairing-org-connection]]
 == Repair the Connection to a Salesforce Org
 
-If the Salesforce *My Domain* is changed in the connected Salesforce org, you can rediscover the Salesforce org and repair the connection. 
+If the Salesforce *My Domain* is changed in the connected Salesforce organization, you can rediscover the Salesforce organization and repair the connection. 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *Salesforce*.
-. Click the *Actions* menu (*...*) in the Salesforce org to repair the connection for and select *Repair Org Info*.
-. Click *Repair* to rediscover the Salesforce org. 
+. Click the *Actions* menu (*...*) in the Salesforce organization to repair the connection for and select *Repair Org Info*.
+. Click *Repair* to rediscover the Salesforce organization. 
 
 [[edit-org-name]]
 == Edit the Salesforce Organization name
 
-You can edit the Salesforce org display name in your Anypoint Platform organization. This doesn't change the name of the Salesforce org within Salesforce. 
+You can edit the Salesforce organization display name in your Anypoint Platform organization. This doesn't change the name of the Salesforce organization within Salesforce. 
 
-To edit a Salesforce org name:
+To edit a Salesforce organization name:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *Salesforce*.
-. Click the *Actions* menu (*...*) in the Salesforce org to edit the name for and select *Edit Org Name*. 
-. Enter the name for the Salesforce org and click *Save*.
+. Click the *Actions* menu (*...*) in the Salesforce organization to edit the name for and select *Edit Org Name*. 
+. Enter the name for the Salesforce organization and click *Save*.
 +
-The Salesforce org name appears in Anypoint Platform anywhere the org is referenced.
+The Salesforce organization name appears in Anypoint Platform anywhere the organization is referenced.
 
 == Copy Your Anypoint Platform Organization ID
 
