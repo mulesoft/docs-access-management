@@ -3,7 +3,8 @@
 
 You can map users in a federated organization's group to a team or role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
 
-After you have mapped them, users in an organization can sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. +
+After you have mapped them, users in an organization can sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. 
+
 This helps to ensure secure credentials and to maintain organizational structure for accessing privileged information.
 
 Anypoint Platform requires different information from your identity provider (IdP) based on whether you use SAML, OpenID Connect, or LDAP. User mappings apply only to the IdP for which you configure them.
@@ -103,7 +104,7 @@ The following example shows a typical Auth0 groups claim:
 }
 ----
 
-Given that groups claim, the JSONata expression is `https://anypoint.mulesoft.com/groups`.
+Given that groups claim, the JSONata expression is +https://anypoint.mulesoft.com/groups+.
 
 ==== Salesforce
 
@@ -154,14 +155,12 @@ include::partial$include-nav-teams.adoc[]
 . Click the team you want to modify.
 . Click the *External IdP Groups* tab.
 . In the *Group Names* field, enter one of the following: 
-
 * SAML: The group attribute that comes from your array of SAML groups
 * OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
 * LDAP: The string from your SAML assertion AttributeValue
+. In the *Type* drop-down, select `Member` or `Maintainer`. 
 +
-. In the *Type* drop-down, select `Member` or `Maintainer`. +
 If you select *Maintainer*, users who have that group name become team maintainers for this team. If you select *Member*, users who have this group name become team members.
-+
 . In the *Provider Name* drop-down, select the IdP associated with the mapping.
 . Click *Add*.
 . Click *Save Changes*. 
@@ -179,15 +178,14 @@ include::partial$include-nav-roles.adoc[]
 
 . Click the role you want to modify.
 . Click the *External IdP Groups* tab.
-. In the *Group Names* field, enter one of the following: +
-
+. In the *Group Names* field, enter one of the following: 
 * SAML: The group attribute that comes from your array of SAML groups
 * OIDC: The groups claims values that come from the `UserInfo` or `Token` endpoint responses
 * LDAP: The string from your SAML assertion AttributeValue
-
 . In the *Provider Name* drop-down, select the IdP associated with the mapping.
 . Click *Add*.
-. Click *Save Changes*. +
+. Click *Save Changes*. 
++
 The SSO users associated with the groups you designated are assigned the role.
 
 == See Also
