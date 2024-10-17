@@ -1,6 +1,6 @@
 = Permissions Available in Anypoint Platform
 
-Anypoint Platform has a variety of permissions that control user access to various areas of Anypoint Platform. Each product owns its own permissions, but you can assign most of the following permissions to xref:teams.adoc[teams] and xref:users.adoc#grant-user-permissions[individual users]. You can assign other permissions in their respective product interfaces. 
+Anypoint Platform has a variety of permissions that control user access to various areas of Anypoint Platform. Each product owns its own permissions, but you can assign most of the permissions to xref:teams.adoc[teams] and xref:users.adoc#grant-user-permissions[individual users]. You can assign other permissions in their respective product interfaces. 
 
 Some products require permissions from other products to use them properly. For example, Anypoint Monitoring requires users to have certain Runtime Manager permissions in addition to Anypoint Monitoring-related permissions. See each product's documentation to determine which permissions your users need and how to set them.
 
@@ -68,7 +68,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 
 == API Manager
 
-Depending on your organization, you might see one of the following sets of permissions available for API Manager.
+Depending on your organization, you might see one of these sets of permissions available for API Manager.
 
 .Post-Crowd
 [%header,cols="30a,50a,20a"]
@@ -397,7 +397,7 @@ This user can't view or modify either partner or message flow configurations.
 |Required Permissions | Grants the Ability to | Notes
 |RPA Administrator| Perform all tasks, except those provided by the RPA Project Manager permission.|
 A user with this permission can only view or administer automation projects if the user is part of the process team.
-|RPA Automations Designer | RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner).
+|RPA Automations Designer | RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner):
 
 In RPA Manager:
 
@@ -414,7 +414,7 @@ In RPA Manager:
 * Process Create
 * Process Recording
 ====
-| RPA Automations Contributor | RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner).
+| RPA Automations Contributor | RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner):
 
 * In RPA Manager:
 ** Create automation projects.
@@ -441,7 +441,7 @@ In RPA Manager:
 * Process Create
 * Process Recording
 ====
-|RPA Automations Manager |RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner) to:
+|RPA Automations Manager |RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner):
 
 * In RPA Manager:
 ** Create automation projects.
@@ -478,9 +478,10 @@ In RPA Manager:
 * Unprocessed Task List Edit
 * Unprocessed Task List Open
 ====
-| RPA Bots Manager |In RPA Manager:
+| RPA Bots Manager |
+In RPA Manager:
 
-* Monitor and manage all RPA Bots, including the following:
+* Monitor and manage all RPA Bots, including:
 ** Manage service times.
 ** View session queues.
 * Manage the applications required for performing the processes, including downtimes.
@@ -516,7 +517,8 @@ In RPA Manager:
 * Global Process Evaluation View
 * Process Evaluation Open
 ====
-| RPA Evaluations Contributor | In RPA Manager:
+| RPA Evaluations Contributor |
+In RPA Manager:
 
 * View all process evaluations, regardless of whether the user belongs to the process team.
 * View, create, and edit:
@@ -537,7 +539,8 @@ In RPA Manager:
 * Process Evaluation Administration
 * Process Evaluation Open
 ====
-| RPA Evaluations Manager | In RPA Manager:
+| RPA Evaluations Manager |
+In RPA Manager:
 
 * View all process evaluations, regardless of whether the user belongs to the process team.
 * View, create, edit, and delete:
@@ -566,11 +569,11 @@ In RPA Manager:
 | RPA Operations Viewer | 
 In RPA Manager:
 
-* View all aspects of the following RPA assets:
+* View all aspects of these RPA assets:
 ** Alerts
 ** Bots
 ** Dashboards
-* View the following information for processes for which the user belongs to the process team:
+* View this information for processes for which the user belongs to the process team:
 ** Deployment maps
 ** Execution plans
 ** Session queues
@@ -589,16 +592,17 @@ In RPA Manager:
 * Robot Management Open
 * Robot State and Operation Open
 ====
-| RPA Operations Manager | In RPA Manager:
+| RPA Operations Manager |
+In RPA Manager:
 
-* View and manage the following RPA assets:
+* View and manage these RPA assets:
 ** Alerts
 ** Bots
 ** Dashboards
 ** Unprocessed user tasks
 ** Upcoming process changes
 * Analyze finance aspects and billing reports
-* View the following information for processes for which the user belongs to the process team:
+* View this information for processes for which the user belongs to the process team:
 ** Deployment maps
 ** Execution plans
 ** Session queues
@@ -627,7 +631,8 @@ In RPA Manager:
 * Upcoming Process Changes Administration
 * Upcoming Process Changes Open
 ====
-| RPA Performance Analyzer |In RPA Manager:
+| RPA Performance Analyzer |
+In RPA Manager:
 
 * Analyze the financial aspects (such as the break-even point) of all processes.
 * View the billing reports.
@@ -640,7 +645,7 @@ In RPA Manager:
 * Finance Analysis Open
 * Global Finance Analysis View
 ====
-| RPA Project Manager | Be assigned as a project manager of automation projects in RPA Manager. For a user to function as a project manager, the user must also have one of the following permissions:
+| RPA Project Manager | Be assigned as a project manager of automation projects in RPA Manager. For a user to function as a project manager, the user must also have one of these permissions:
 
 * RPA Automations Designer
 * RPA Automations Contributor
