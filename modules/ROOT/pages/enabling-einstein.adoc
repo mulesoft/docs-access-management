@@ -11,11 +11,8 @@ You can store your Einstein generative AI audit and feedback data in Salesforce 
 
 Before enabling Einstein in your Anypoint Platform organization, you must have:
  
-* Administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired with these permissions: 
-** Organization Administrator
-** Anypoint Code Builder Developer
-** Mule Developer Generative AI User
-* The Organization Administrators role.
+* Administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
+* The Organization Administrator permission and role.
 * Administrative access to a Salesforce organization that https://help.salesforce.com/s/articleView?id=sf.generative_ai_enable.htm&type=5[has Einstein enabled]. 
 * xref:access-management::trusted-salesforce-org.adoc[Established a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization. 
 
@@ -24,11 +21,11 @@ Before enabling Einstein in your Anypoint Platform organization, you must have:
 
 When the Salesforce administrator enables Einstein for the connected Anypoint Platform organization, billing and tracking is done in the Salesforce org. 
 
-When Einstein is enabled, any Anypoint Platform feature running in that organization is able to use Einstein. The Salesforce administrator isn't able to specify that Einstein can only be used for particular features, for example, IDP can use Einstein but Anypoint Code Builder can't. 
+When Einstein is enabled in Anypoint Platform, any Anypoint Platform feature running in that organization is able to use Einstein. The Salesforce administrator isn't able to specify that Einstein can only be used for particular features, for example, IDP can use Einstein but Anypoint Code Builder can't. 
 
 To enable Einstein for the connected Anypoint Platform organization:
 
-. In Salesforce Setup, go to the *Quick Find* box and enter `MuleSoft`, then select *MuleSoft > MuleSoft Anypoint Platform*.
+. In Salesforce Setup, go to the *Quick Find* box and enter `MuleSoft`, then select *MuleSoft > Anypoint Platform Setup*.
 . In the *Your connected Anypoint Platform Organization* section, click *View Connection Info* to open a new dialog.
 . In the *Connection to MuleSoft Anypoint Platform* window, switch between *Enabled* or *Disabled* in the *Enable Einstein for MuleSoft Anypoint Platform* section.
 + 
