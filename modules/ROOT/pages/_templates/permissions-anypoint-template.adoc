@@ -1,0 +1,34 @@
+// Add this table to the permissions-by-product file
+== <Product Name>
+
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability to | Notes
+|<Permission Name>
+|Description partial from _partials/include-permissions-<product>
+|Any notes, if applicable
+|===
+
+////
+Example:
+
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability to | Notes
+|View clients 
+|include::access-management::partial$include-permissions-mq.adoc[tag=permsViewClients]
+|
+
+|View destinations 
+|include::access-management::partial$include-permissions-mq.adoc[tag=permsViewClearDestinations]
+|
+| Manage destinations (deprecated)
+|include::access-management::partial$include-permissions-mq.adoc[tag=permsManageDestinations]
+|This permission is deprecated. Assign these permissions instead:
+
+* Administer destinations 
+* Destination subscriber for given environment
+* Destination publisher for given environment
+|===
+
+////
