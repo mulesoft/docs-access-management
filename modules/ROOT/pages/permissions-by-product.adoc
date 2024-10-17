@@ -10,7 +10,7 @@ Depending on your organization, its licensing, and its entitlements, you might n
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |Organization Administrator | At the root organization level, perform most Anypoint Platform tasks, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions.
 
 Access the Organization Administration page.
@@ -31,7 +31,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |Anypoint Code Builder Developer | Create and use cloud IDE instances of Anypoint Code Builder.  | This permission does not apply to Anypoint Code Builder for Desktop. 
 |Mule Developer Generative AI User | Use natural language prompts to develop and generate flows using the Einstein for Anypoint Code Builder Generative Flows feature. |
 |===
@@ -41,7 +41,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |API Catalog Contributor| Catalog assets and other resources using API Catalog.| 
 |===
 
@@ -50,7 +50,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |API Experience Hub Admin| View, create, modify, and delete content in API Experience Hub.| 
 |API Experience Hub Community User| View, but not modify content in API Experience Hub.| 
 |===
@@ -60,7 +60,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |Governance Administrator| Manage profiles and view reports.| 
 |Governance Viewer | View reports.| 
 |===
@@ -73,7 +73,7 @@ Depending on your organization, you might see one of the following sets of permi
 .Post-Crowd
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |API Manager Environment Administrator| View, create, modify, and delete APIs in the specified environment.|
 Users can also execute any actions related to API configurations, groups, proxies, alerts, contracts, tiers, policies, automated policies, and other settings in the specified API Manager environment.
 | API Group Administrator | View, create, modify, deprecate, and delete API groups and API group instances in the specified environment. |
@@ -95,7 +95,7 @@ Users with this credential cannot view application secrets and cannot modify app
 .Pre-Crowd
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |API Creator| Create an API in the specified environment.|
 |API Versions Owner | View, modify, delete, and deprecate all API versions in the specified business group.|
 | Portals Viewer | View all portals in the specified business group.|
@@ -116,7 +116,7 @@ Composer Admin:: Enables a user to invite and manage users in addition to creati
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |Data Gateway Administrator | Full access to Data Gateway Designer.|
 |Data Gateway Viewer| Read-only access to Data Gateway Designer. |
 |===
@@ -126,7 +126,7 @@ Composer Admin:: Enables a user to invite and manage users in addition to creati
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |Contribute| * Add source APIs to the unified schema.
 * Edit any source API schema added to the unified schema.
 * Request access to run queries.
@@ -161,7 +161,7 @@ Composer Admin:: Enables a user to invite and manage users in addition to creati
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 | Design Center Developer | View, create, and manage all projects within a business group.|
 Use this permission to set up administrators for all projects within a specific business group.
 |Design Center Creator | Create projects in Design Center from the navigation panel and view all projects created or shared with the user. |
@@ -177,7 +177,7 @@ Assign this permission to those who consume your project in a specific business 
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |Project Administrator| Manage and share a Design Center project within a business group.|
 Use this permission to set up administrators for all the projects within a specific business group.
 |Project Editor | Edit a Design Center project within a business group.|
@@ -194,7 +194,7 @@ Assign this permission to those who consume your project in a specific business 
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 | Exchange Administrator |
 
 * View, create, and download assets within a business group.
@@ -242,7 +242,7 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 | Manage Actions | Complete access to IDP and assigns reviewer permission by default for every document action.|
 |Build Actions | Create, edit, and publish document actions and assign reviewers to the actions.|
 |Execute Published Actions | Execute a published document action and retrieve the results of the execution.|
@@ -262,7 +262,7 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 | Monitoring Administrator | View, create, modify, and delete content in Anypoint Monitoring.|
 |Monitoring Viewer | View but not modify content in Anypoint Monitoring.|
 | Telemetry Exporter Administrator |
@@ -291,7 +291,7 @@ include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |View clients 
 |include::access-management::partial$include-permissions-mq.adoc[tag=permsViewClients]
 |
@@ -339,7 +339,7 @@ include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 
 |Manage stores
 |include::access-management::partial$include-permissions-osv2.adoc[tag=permsManageStores]
@@ -372,7 +372,7 @@ include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |Partner Manager Administrator| Have complete access to the host, partner, message flow configurations, and transaction activity.|
 |View Host, Partners and Message Flows|Have view-only access to the host, partner, and message flow configurations.| This user cannot view transaction activity.
 | Manage Partners and Message Flows|
@@ -394,7 +394,7 @@ This user cannot view or modify either partner or message flow configurations.
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |RPA Administrator| Perform all tasks, except those provided by the RPA Project Manager permission.|
 A user with this permission can only view or administer automation projects if the user is part of the process team.
 |RPA Automations Designer | RPA developer, citizen technologist, or knowledge source (such as a business analyst or process owner) to do the following in RPA Manager:
@@ -625,7 +625,7 @@ The RPA Performance Analyzer permission contains the following deprecated RPA pe
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 | CloudHub Network Administrator | Manage CloudHub and CloudHub 2.0 network resources.|
 | CloudHub Network Viewer | View CloudHub and CloudHub 2.0 network resources.|
 | Delete Applications | Delete applications in a specific environment.|
@@ -651,7 +651,7 @@ The RPA Performance Analyzer permission contains the following deprecated RPA pe
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 | Grant access to secrets | Browse, read metadata and grant access to secrets in a specific environment.|
 | Manage secret groups|
 
@@ -665,7 +665,7 @@ The RPA Performance Analyzer permission contains the following deprecated RPA pe
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 | Manage Tokenization Services | View, create, edit, and delete tokenization resources.|
 | Manage Tokenization Formats | View, create, edit, and delete tokenization formats.|
 |===
@@ -675,7 +675,7 @@ The RPA Performance Analyzer permission contains the following deprecated RPA pe
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 | Usage Viewer| View usage reports.|
 |===
 
@@ -683,7 +683,7 @@ The RPA Performance Analyzer permission contains the following deprecated RPA pe
 
 [%header,cols="30a,50a,20a"]
 |===
-|Required Permissions | Grants the Ability To | Notes
+|Required Permissions | Grants the Ability to | Notes
 |Visualizer Editor | View, create, modify, and delete content in Anypoint Visualizer.|
 |===
 
