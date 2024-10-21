@@ -47,7 +47,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . Enter the Salesforce organization tenant key, and click *Confirm*. 
 +
 The format for the Salesforce tenant key is `cloud/env/org-id`.
-. In the *Add the Salesforce Org* dialog verify the information and click *Add*. 
+. In the *Add the Salesforce Org* dialog, verify the information and click *Add*. 
 . Click *Copy* to copy the Anypoint Platform organization key. 
 . If you are the admin for the Salesforce organization you are adding, click *Manage in Salesforce* to continue setting up the relationship in Salesforce. 
 +
