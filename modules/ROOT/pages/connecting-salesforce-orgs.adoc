@@ -62,7 +62,7 @@ As a Salesforce organization administrator, you complete the connection between 
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
-. In the *Your connected Anypoint Platform Organization* section, click *View Connection Info*.
+. In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
 . In the *Connection to MuleSoft Anypoint Platform* dialog, enter the Anypoint Platform organization key in the *Anypoint Platform Organization ID* field, and then click *Connect*.
 +
 NOTE: The Anypoint Platform organization key is the universally unique identifier (UUID) for the Anypoint Platform organization ID.
