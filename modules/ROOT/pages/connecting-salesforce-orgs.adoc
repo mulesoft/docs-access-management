@@ -69,7 +69,7 @@ NOTE: The Anypoint Platform organization key is the universally unique identifie
 + 
 If you don't have the Anypoint Platform organization key, contact the Anypoint Platform organization administrator.
 + 
-You are returned to the *Connection to MuleSoft Anypoint Platform* page and see the details of the connected Salesforce organization, including the enablement status of the capabilities associated with the connected Salesforce organization. 
+You return to the *Connection to MuleSoft Anypoint Platform* page. The page shows the connected Salesforce organization details, including the enablement status of the capabilities associated with the connected Salesforce organization. 
 
 image::connected-salesforce-org-invocable-actions-enabled.png["The connected Salesforce organization with API Catalog disabled and Invocable Actions enabled"]
 
