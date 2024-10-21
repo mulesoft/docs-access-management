@@ -11,8 +11,7 @@ When you establish the tenant relationship, you can initiate, complete, and mana
 These are the ways to establish a tenant relationship:
 
 * A Salesforce organization is provisioned with the tenant relationship with an Anypoint Platform organization already established. In this case, the Anypoint Platform organization administrator just needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the connection] in Anypoint Platform. 
-* The tenant relationship is initiated by the Anypoint Platform organization administrator in Anypoint Platform and setup is completed in the Salesforce organization by the Salesforce organization administrator.  
-* The tenant relationship is initiated in the Salesforce organization by the Salesforce organization administrator. 
+* The Anypoint Platform organization administrator initiates the tenant relationship in Anypoint Platform and the Salesforce organization administrator completes the setup in the Salesforce organization.   
 
 In some cases, the Anypoint Platform organization administrator and Salesforce organization administrator are different people, and in some cases, they are the same person.
 
