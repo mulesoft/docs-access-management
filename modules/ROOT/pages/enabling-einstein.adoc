@@ -67,7 +67,7 @@ If you use this trial organization:
 * You can't store your Einstein generative AI audit and feedback data in Salesforce Data Cloud.
 * You are subject to the rate-limiting policies of the trial organization, which can sometimes result in the service being too busy to process Einstein requests.
 * Einstein is enabled only for Anypoint Code Builder.
-* You can't use the Einstein capabilities that come with a connected Salesforce organization.
+* You can't use the Einstein capabilities that come with a connected Salesforce organization, such as IDP.
 
 To enable Einstein for Anypoint Code Builder:
 
