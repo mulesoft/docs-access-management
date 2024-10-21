@@ -34,7 +34,7 @@ After the request is accepted, the selected Salesforce developers can start usin
 [[add-api-catalog-permission]]
 === Add the API Catalog Permission
 
-When you connect a Salesforce organization to your Anypoint Platform organization and enable API Catalog, an API Catalog Integration user is automatically created with the URL of the connected Salesforce organization. You must assign the *API Catalog Contributor* permission to this user to enable the sync of APIs from Anypoint Platform to API Catalog in Salesforce. 
+When you connect a Salesforce organization to your Anypoint Platform organization and enable API Catalog, an API Catalog Integration user is automatically created with the URL of the connected Salesforce organization. You must assign the *API Catalog Contributor* permission to this user to enable them to sync APIs from Anypoint Platform to API Catalog in Salesforce. 
 
 To assign the *API Catalog Contributor* permission:
 
