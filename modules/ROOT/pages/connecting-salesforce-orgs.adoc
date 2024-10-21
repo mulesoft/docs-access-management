@@ -6,16 +6,15 @@ Establishing a tenant relationship between an Anypoint Platform organization and
 * Enhance Anypoint Code Builder and Intelligent Document Processing (IDP) developer experiences with Einstein. 
 * Make MuleSoft APIs available in the connected Salesforce organization's API Catalog.
 
-When you establish the tenant relationship, you can initiate, complete, and manage the tenant relationships. You can also enable, disable, and remove connections. 
+When you establish the tenant relationship, you can initiate, complete, and manage the tenant relationships. You can also enable, disable, and remove connections.  
 
-Tenant relationships are initiated in Anypoint Platform.   
+These are the ways to establish a tenant relationship:
 
-These are the ways a tenant relationship is established:
+* A Salesforce organization is provisioned with the tenant relationship with an Anypoint Platform organization already established. In this case, the Anypoint Platform organization administrator just needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the connection] in Anypoint Platform. 
+* The tenant relationship is initiated by the Anypoint Platform organization administrator in Anypoint Platform and setup is completed in the Salesforce organization by the Salesforce organization administrator.  
+* The tenant relationship is initiated in the Salesforce organization by the Salesforce organization administrator. 
 
-* A Salesforce organization is provisioned with the tenant relationship to an Anypoint Platform organization already established. In this case, the Anypoint Platform organization administrator just needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the connection] in Anypoint Platform. 
-* The tenant relationship is created by the Anypoint Platform organization administrator in Anypoint Platform and setup is completed in the Salesforce organization by the Salesforce organization administrator.  
-
-In some cases, the Anypoint Platform organization administrator and Salesforce organization administrator are two different people, and in some cases, they are the same person.
+In some cases, the Anypoint Platform organization administrator and Salesforce organization administrator are different people, and in some cases, they are the same person.
 
 == Before You Begin
 
@@ -31,7 +30,7 @@ Salesforce organization administrators must have:
 * The Salesforce administrator permission set.
 * The Anypoint Platform organization key.
 +
-The Salesforce organization administrator can get the key from the Anypoint Platform organization administrator. 
+The Salesforce organization administrator can get the Anypoint Platform organization key from the Anypoint Platform organization administrator. 
 
 [connect-orgs]
 == Connect With a Salesforce Org in Anypoint Platform
