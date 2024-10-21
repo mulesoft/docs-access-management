@@ -26,7 +26,7 @@ The Anypoint Platform organization administrator can get the tenant key from the
 
 Salesforce organization administrators must have:
 
-* The Salesforce administrator permission set.
+* Salesforce administrator permission set
 * The Anypoint Platform organization key.
 +
 The Salesforce organization administrator can get the Anypoint Platform organization key from the Anypoint Platform organization administrator. 
