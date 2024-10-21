@@ -51,7 +51,7 @@ To assign the *API Catalog Contributor* permission:
 When this capability is enabled by the Salesforce admin in Salesforce, MuleSoft automation developers can publish invocable actions directly from their Robotic Process Automations (RPA) and Composer flows to the connected Salesforce organization.
 
 . In Salesforce Setup, go to the *Quick Find* box and enter `MuleSoft`, then select *MuleSoft > MuleSoft Anypoint Platform*.
-. In the *Your connected Anypoint Platform Organization* section, click *View Connection Info* to open a new dialog.
+. In *Your connected Anypoint Platform Organization*, click *View Connection Info* to open a new dialog.
 . In the *Connection to MuleSoft Anypoint Platform* window, switch between *Enabled* or *Disabled* in the *Enable Invocable Actions from MuleSoft Anypoint Platform Automations* section.
 
 == See Also
