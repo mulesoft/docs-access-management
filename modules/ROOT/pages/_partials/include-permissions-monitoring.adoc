@@ -1,0 +1,89 @@
+// All Permissions: Create tags for new permissions and add to table (based on patterns below)
+// tag::permsMonitoringAll[]
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability to | Notes
+
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsAdminMonitoring]
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsAdminMonitoringDesc]
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsAdminMonitoringNotes]
+
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsViewMonitoring]
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsViewMonitoringDesc]
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsViewMonitoringNotes]
+
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsAdminTelemetryExporter]
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsAdminTelemetryExporterDesc]
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsAdminTelemetryExporterNotes]
+
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsManageTelemetryExporterConfig]
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsManageTelemetryExporterConfigDesc]
+|include::access-management::partial$include-permissions-monitoring.adoc[tag=permsManageTelemetryExporterConfigNotes]
+|===
+// end::permsMonitoringAll[]
+//
+
+//
+// Administer Anypoint Monitoring
+// tag::permsAdminMonitoring[]
+Monitoring Administrator 
+// end::permsAdminMonitoring[]
+//
+// tag::permsAdminMonitoringDesc[]
+View, create, modify, and delete content in Anypoint Monitoring.
+// end::permsAdminMonitoringDesc[]
+//
+// tag:permsAdminMonitoringNotes[]
+&nbsp;
+// end::permsAdminMonitoringNotes[]
+//
+
+//
+// View Anypoint Monitoring
+// tag::permsViewMonitoring[]
+Monitoring Viewer
+// end::permsViewMonitoring[]
+//
+// tag::permsViewMonitoringDesc[]
+View but not modify content in Anypoint Monitoring.
+// end::permsViewMonitoringDesc[]
+//
+// tag::permsViewMonitoringNotes[]
+&nbsp;
+// end::permsViewMonitoringNotes[]
+//
+
+//
+// Administer Telemetry Exporter
+// tag::permsAdminTelemetryExporter[]
+Telemetry Exporter Administrator 
+// end::permsAdminTelemetryExporter[]
+//
+// tag::permsAdminTelemetryExporterDesc[]
+
+* View connections and configurations in Telemetry Exporter.
+* Create, modify, and delete connections in Telemetry Exporter.
+* Create, modify, and delete configurations in Telemetry Exporter.
+// end::permsAdminTelemetryExporterDesc[]
+//
+// tag::permsAdminTelemetryExporterNotes[]
+Assign this permission at the root organization level.
+// end::permsAdminTelemetryExporterNotes[]
+//
+
+//
+// Manage Telemetry Exporter Configs
+// tag::permsManageTelemetryExporterConfig[]
+Telemetry Exporter Configurations Manager 
+// end::permsManageTelemetryExporterConfig[]
+//
+// tag::permsManageTelemetryExporterConfigDesc[]
+
+* View connections and configurations in Telemetry Exporter.
+* Create, modify, and delete configurations in Telemetry Exporter.
+// end::permsManageTelemetryExporterConfigDesc[]
+//
+// tag::permsManageTelemetryExporterConfigNotes[]
+&nbsp;
+// end::permsManageTelemetryExporterConfigNotes[]
+//

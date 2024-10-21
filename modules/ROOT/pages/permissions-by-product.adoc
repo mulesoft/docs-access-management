@@ -260,6 +260,9 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 == Monitoring
 
+include::access-management::partial$include-permissions-monitoring.adoc[tag=permsMonitoringAll]
+
+////
 [%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability to | Notes
@@ -276,6 +279,7 @@ Assign this permission at the root organization level.
 * View connections and configurations in Telemetry Exporter.
 * Create, modify, and delete configurations in Telemetry Exporter.|
 |===
+////
 
 ////
 include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringAdmin]
