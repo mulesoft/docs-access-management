@@ -79,7 +79,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 [[edit-org-name]]
 == Edit the Salesforce Organization Name
 
-You can edit the Salesforce organization display name in your Anypoint Platform organization. This doesn't change the name of the Salesforce organization within Salesforce. 
+You can edit the Salesforce organization display name in your Anypoint Platform organization. The name of the Salesforce organization within Salesforce remains the same. 
 
 To edit a Salesforce organization name:
 
