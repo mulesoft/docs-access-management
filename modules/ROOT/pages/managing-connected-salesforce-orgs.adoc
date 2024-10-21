@@ -57,7 +57,7 @@ To remove the connection to an Anypoint Platform organization in Salesforce:
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
-. In the *Your connected Anypoint Platform Organization* section, click *View Connection Info*.
+. In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
 . From *Go To Anypoint*, select *Remove connection*.
 . In *Remove connection to Anypoint Platform*, click *OK*.
 
