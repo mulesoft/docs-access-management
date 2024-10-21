@@ -58,7 +58,7 @@ To remove the connection to an Anypoint Platform organization in Salesforce:
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
 . In the *Your connected Anypoint Platform Organization* section, click *View Connection Info*.
-. In the *Go To Anypoint* drop-down list, select *Remove connection*.
+. From *Go To Anypoint*, select *Remove connection*.
 . In the *Remove connection to Anypoint Platform* dialog box, click *OK*.
 
 Alternatively, if you want to temporarily prevent Anypoint Platform users from publishing assets to Salesforce from the Anypoint Platform side, you can instead <<enable-disable-connection,disable>> the connection temporarily.
