@@ -29,7 +29,7 @@ For details about syncing APIs and using API Catalog in Salesforce, see xref:gen
 . After the APIs are imported, the Salesforce administrator selects individual API instances and operations and converts them into invocable actions for access by selected Salesforce developers.
 . A client ID is created and an access request for the selected Salesforce developers is sent to the Anypoint Platform owner of that API through API Manager.
 +
-Only after the request is accepted can those selected Salesforce developers start using the API.
+After the request is accepted, the selected Salesforce developers can start using the API.
 
 [[add-api-catalog-permission]]
 === Add the API Catalog Permission
