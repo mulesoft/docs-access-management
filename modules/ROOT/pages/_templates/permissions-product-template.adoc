@@ -1,0 +1,38 @@
+// Add this table to the permissions topic or section in your product docs
+// in the Overview or Getting Started area of the TOC for your product.
+
+// Adjust the heading level as needed.
+// == <Product Name> Permissions
+
+[%header,cols="30a,50a,20a"]
+|===
+|To... | Required Permissions  | Notes
+|Description partial from _partials/include-permissions-<product>
+|<Permission Name>
+|Any notes, if applicable
+|===
+
+////
+Example:
+
+[%header,cols="30a,50a,20a"]
+|===
+|To... | Required Permissions | Notes
+|include::access-management::partial$include-permissions-mq.adoc[tag=permsViewClients]
+|View clients 
+|
+
+|include::access-management::partial$include-permissions-mq.adoc[tag=permsViewClearDestinations]
+|View destinations
+|
+
+|include::access-management::partial$include-permissions-mq.adoc[tag=permsManageDestinations]
+|Manage destinations (deprecated)
+|This permission is deprecated. Assign these permissions instead:
+
+* Administer destinations 
+* Destination subscriber for given environment
+* Destination publisher for given environment
+|===
+
+////
