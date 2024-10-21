@@ -1,42 +1,43 @@
 = Enabling Einstein for Anypoint Platform
 
-When you establish a tenant relationship with a Salesforce org that has Einstein enabled, you can enable Einstein for your Anypoint Platform organization. All of the users in your organization can use Einstein with Anypoint Platform products that have Einstein capabilities, including:
+When you establish a tenant relationship with a Salesforce organization that has Einstein enabled, you can enable Einstein for your Anypoint Platform organization and store your Einstein generative AI audit and feedback data in Salesforce Data Cloud. You can then use that data for compliance, analytics, prompt adjustments, and LLM tuning to enhance your generative AI applications.
+
+As an organization administrator, you can assign permission to the users in your organization so they can use Einstein with Anypoint Platform products that have Einstein capabilities, including:
 
 * Anypoint Code Builder
 * Intelligent Document Processing (IDP)
 
-You can store your Einstein generative AI audit and feedback data in Salesforce Data Cloud, and use that data for compliance, analytics, prompt adjustments, and LLM tuning to enhance your generative AI applications.
 
 == Before You Begin
 
-Before enabling Einstein in your Anypoint Platform organization, you must have:
+Before enabling Einstein in your Anypoint Platform organization, you must:
  
-* Administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
-* The Organization Administrator permission and role.
-* Administrative access to a Salesforce organization that https://help.salesforce.com/s/articleView?id=sf.generative_ai_enable.htm&type=5[has Einstein enabled]. 
-* xref:access-management::trusted-salesforce-org.adoc[Established a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization. 
+* Have administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired
+* Have the Organization Administrator permission and role
+* Have administrative access to a Salesforce organization that https://help.salesforce.com/s/articleView?id=sf.generative_ai_enable.htm&type=5[has Einstein enabled]. 
+* xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization. 
 
 [[enable-einstein-salesforce]]
-== Enable Einstein in the Salesforce Org
+== Enable Einstein in the Salesforce Organization
 
-When the Salesforce administrator enables Einstein for the connected Anypoint Platform organization, billing and tracking is done in the Salesforce org. 
-
-When Einstein is enabled in Anypoint Platform, any Anypoint Platform feature running in that organization is able to use Einstein. The Salesforce administrator isn't able to specify that Einstein can only be used for particular features, for example, IDP can use Einstein but Anypoint Code Builder can't. 
+When the Salesforce administrator enables Einstein for the connected Anypoint Platform organization, Einstein requests are routed through the connected Salesforce organization. Billing and tracking are done in the Salesforce organization. 
 
 To enable Einstein for the connected Anypoint Platform organization:
 
+. Log in to your Salesforce organization.
 . In Salesforce Setup, go to the *Quick Find* box and enter `MuleSoft`, then select *MuleSoft > Anypoint Platform Setup*.
-. In the *Your connected Anypoint Platform Organization* section, click *View Connection Info* to open a new dialog.
-. In the *Connection to MuleSoft Anypoint Platform* window, switch between *Enabled* or *Disabled* in the *Enable Einstein for MuleSoft Anypoint Platform* section.
+. In *Your connected Anypoint Platform Organization*, click *View Connection Info* to open a new dialog.
+. In *Connection to MuleSoft Anypoint Platform*, switch between *Enabled* or *Disabled* in *Enable Einstein for MuleSoft Anypoint Platform*.
 + 
 image::einstein-enabled-in-salesforce.png["Einstein for MuleSoft Anypoint Platform is enabled"]
 . Click *Close*.
 +
-After Einstein is enabled in the Salesforce org, it is displayed in Anypoint Platform as *Enabled in Salesforce* for the connected Salesforce org.
+After Einstein is enabled in the Salesforce organization, it's displayed in Anypoint Platform as *Enabled in Salesforce* for the connected Salesforce organization.
 
 [[enable-einstein-anypoint]]
 == Enable Einstein for Your Anypoint Platform Organization
 
+When Einstein is enabled in Anypoint Platform, any Anypoint Platform feature running in that organization is able to use Einstein. The Salesforce administrator can't specify which features are enabled for Einstein, for example, IDP can use Einstein but Anypoint Code Builder can't. 
 
 To enable Einstein for your Anypoint Platform organization:
 
@@ -48,25 +49,25 @@ include::partial$include-nav-steps-org-admin.adoc[]
 +
 Salesforce orgs that have xref:connecting-salesforce-orgs.adoc[established tenant relationships] with your Anypoint Platform organization are listed in the *Salesforce Orgs* section. 
 +
-Each Salesforce org has a list of enabled and disabled capabilities.
-. Select the Salesforce org to use by default in your Anypoint Platform organization:
-.. Click *Settings* for the Salesforce org that has Einstein enabled. 
-.. In *Einstein for Anypoint Platform Setting*, select the Salesforce org and click *Save*.
+Each Salesforce organization has a list of enabled and disabled capabilities.
+. Select the Salesforce organization to use by default in your Anypoint Platform organization:
+.. Click *Settings* for the Salesforce organization that has Einstein enabled. 
+.. In *Einstein for Anypoint Platform Setting*, select the Salesforce organization and click *Save*.
 
 [[enable-einstein]]
-== Enable Einstein for Anypoint Code Builder
+== Use the Anypoint Code Builder Trial Organization
 
-Anypoint Code Builder provides a free trial shared Salesforce org to enable Einstein for Anypoint Code Builder only. 
+Anypoint Code Builder provides a free trial shared Salesforce organization to enable Einstein for Anypoint Code Builder only. 
 
 [NOTE]
-You can't use this trial organization if the default Salesforce org is already set. 
+You can't use this trial organization if the default Salesforce organization is already set. 
 
 If you use this trial organization:
 
 * You can't store your Einstein generative AI audit and feedback data in Salesforce Data Cloud.
 * You are subject to the rate-limiting policies of the trial organization, which can sometimes result in the service being too busy to process Einstein requests.
 * Einstein is enabled only for Anypoint Code Builder.
-* You can't use the Einstein capabilities that come with a connected Salesforce org.
+* You can't use the Einstein capabilities that come with a connected Salesforce organization.
 
 To enable Einstein for Anypoint Code Builder:
 
@@ -77,6 +78,25 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . Read the terms and conditions, select *I accept the terms and conditions.", and then click *Accept*.
 . In the *Capabilities managed in Salesforce* section, switch Einstein to *Enabled*.
 
+== Add the Einstein Permissions for Users
+
+When Einstein is enabled for your Anypoint Platform organization, organization administrators are granted the required Einstein password automatically. 
+
+To enable Einstein for users in your organization, you must assign the required permissions manually. 
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. xref:configure-teams.adoc[Create a team] for the users you are enabling to use Einstein.
+. Click the *Permissions* tab.
+. In *Permissions*, click *Add permissions*.
++
+The Add Permissions window appears.
+. In *Select Permissions*, select the permissions that you want to add and then click *Next*.
+. In *Select Business Groups*, select the business groups to apply the permissions to. 
++
+If you selected a permission that enables you to select environments, you can select which environments to apply to the permission. 
+. Click *Next*.
+. In *Review*, review the permissions and the business groups and environments to which they apply, and then click *Add Permissions*.
 
 [[disable-einstein]]
 == Disable Einstein
