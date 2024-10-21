@@ -12,7 +12,7 @@ To enable this feature:
 include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *Salesforce*.
-. In the *Capabilities Managed in Anypoint Platform* section, click *Settings* next to *Make MuleSoft Anypoint Platform APIs Available in Salesforce*.
+. In *Capabilities Managed in Anypoint Platform*, click *Settings* for *Make MuleSoft Anypoint Platform APIs Available in Salesforce*.
 . In *Settings for Anypoint APIs in Salesforce*, click *Continue*.
 . In the *Settings* page, select the Anypoint Platform business groups that allow the selected Salesforce organization to import Anypoint Platform APIs into its API Catalog, and click *Save Settings*.
 +
