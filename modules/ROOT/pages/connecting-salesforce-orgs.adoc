@@ -19,7 +19,7 @@ In some cases, the Anypoint Platform organization administrator and Salesforce o
 
 Anypoint Platform organization administrators must have:
 
-* The Anypoint Platform Organization Administrator permission at the root organization level.
+* Anypoint Platform Organization Administrator permission at the root organization level
 * The Salesforce tenant key of the Salesforce organization to connect.
 +
 The Anypoint Platform organization administrator can get the tenant key from the Salesforce organization administrator.
