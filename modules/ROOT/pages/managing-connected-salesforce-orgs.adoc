@@ -15,7 +15,9 @@ Enable or disable the connection to a Salesforce organization that has an establ
 [NOTE]
 Tenant relationships that are automatically provisioned for your Anypoint Platform organization are disabled until you enable them. 
 
-When you disable the connection between your Anypoint Platform and a connected Salesforce organization, the Salesforce organization still appears in the list of available organizations with a status of `Disabled`. When the connection is disabled, you can't publish assets from your Anypoint Platform organization to the Salesforce organization or use any of the other features associated with the connected Salesforce organization until the connection is reenabled. Disabling a connection doesn't remove the connection to the Salesforce organization. 
+Disabling the connection between your Anypoint Platform and a connected Salesforce organization doesn't remove the connection to the Salesforce organization. 
+The Salesforce organization still appears in the list of available organizations with a status of `Disabled`. 
+You can't publish assets from your Anypoint Platform organization to the Salesforce organization or use any of the other features associated with the connected Salesforce organization until the connection is reenabled.  
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
