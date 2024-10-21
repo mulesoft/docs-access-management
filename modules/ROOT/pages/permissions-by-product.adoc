@@ -260,6 +260,7 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 == Monitoring
 
+//all monitoring permissions
 include::access-management::partial$include-permissions-monitoring.adoc[tag=permsMonitoringAll]
 
 == MQ
