@@ -91,7 +91,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . In *Permissions*, click *Add permissions*.
 +
 The Add Permissions window appears.
-. In *Select Permissions*, select the permissions that you want to add and then click *Next*.
+. Select the permissions to add and click *Next*.
 . In *Select Business Groups*, select the business groups to apply the permissions to. 
 +
 If you selected a permission that enables you to select environments, you can select which environments to apply to the permission. 
