@@ -82,7 +82,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 When Einstein is enabled for your Anypoint Platform organization, organization administrators are granted the required Einstein password automatically. 
 
-To enable Einstein for users in your organization, you must assign the required permissions manually. 
+To enable Einstein for users in your organization, assign the required permissions manually:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
