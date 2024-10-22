@@ -39,7 +39,7 @@ To remove the connection to a Salesforce organization:
 include::partial$include-nav-salesforce.adoc[]
 
 . Click the *Actions* menu (*...*) in the Salesforce organization to remove the connection from and select *Remove Salesforce Org*. 
-. In the *Remove Salesforce Org* dialog, click *Remove Org*.
+. In *Remove Salesforce Org*, click *Remove Org*.
 
 [removing-connection-salesforce]
 === Remove a Connected Anypoint Platform Organization in Salesforce
