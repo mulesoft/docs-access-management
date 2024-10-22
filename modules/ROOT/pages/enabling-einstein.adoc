@@ -49,7 +49,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 +
 Salesforce orgs that have xref:connecting-salesforce-orgs.adoc[established tenant relationships] with your Anypoint Platform organization are listed in the *Salesforce Orgs* section. 
 +
-Each Salesforce organization has a list of enabled and disabled capabilities.
+Each Salesforce organization shows the enabled and disabled capabilities.
 . Select the Salesforce organization to use by default in your Anypoint Platform organization:
 .. Click *Settings* for the Salesforce organization that has Einstein enabled. 
 .. In *Einstein for Anypoint Platform Setting*, select the Salesforce organization and click *Save*.
