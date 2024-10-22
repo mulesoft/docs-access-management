@@ -96,7 +96,7 @@ The Add Permissions window appears.
 +
 If you selected a permission that enables you to select environments, you can select which environments to apply to the permission. 
 . Click *Next*.
-. In *Review*, review the permissions and the business groups and environments to which they apply, and then click *Add Permissions*.
+. Review the permissions and the business groups and environments they apply to, and then click *Add Permissions*.
 
 [[disable-einstein]]
 == Disable Einstein
