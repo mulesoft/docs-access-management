@@ -260,32 +260,8 @@ Use this permission to extend administrator permissions for an asset to an addit
 
 == Monitoring
 
-[%header,cols="30a,50a,20a"]
-|===
-|Required Permissions | Grants the Ability to | Notes
-| Monitoring Administrator | View, create, modify, and delete content in Anypoint Monitoring.|
-|Monitoring Viewer | View but not modify content in Anypoint Monitoring.|
-| Telemetry Exporter Administrator |
-
-* View connections and configurations in Telemetry Exporter.
-* Create, modify, and delete connections in Telemetry Exporter.
-* Create, modify, and delete configurations in Telemetry Exporter.| 
-
-Assign this permission at the root organization level.
-| Telemetry Exporter Configurations Manager | 
-* View connections and configurations in Telemetry Exporter.
-* Create, modify, and delete configurations in Telemetry Exporter.|
-|===
-
-////
-include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringAdmin]
-
-include::monitoring::partial$monitoring-permissions.adoc[tag=monitoringViewer]
-
-include::monitoring::partial$monitoring-permissions.adoc[tag=telExpAdmin]
-
-include::monitoring::partial$monitoring-permissions.adoc[tag=telExpManager]
-////
+//all monitoring permissions
+include::access-management::partial$include-permissions-monitoring.adoc[tag=permsMonitoringAll]
 
 == MQ
 
