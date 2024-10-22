@@ -37,7 +37,7 @@ After Einstein is enabled in the Salesforce organization, it's displayed in Anyp
 [[enable-einstein-anypoint]]
 == Enable Einstein for Your Anypoint Platform Organization
 
-When Einstein is enabled in Anypoint Platform, any Anypoint Platform feature running in that organization is able to use Einstein. The Salesforce administrator can't specify which features are enabled for Einstein, for example, IDP can use Einstein but Anypoint Code Builder can't. 
+When Einstein is enabled in Anypoint Platform, any Anypoint Platform feature running in that organization can use Einstein. The Salesforce administrator can't specify which features are enabled for Einstein, for example, IDP can use Einstein but Anypoint Code Builder can't. 
 
 To enable Einstein for your Anypoint Platform organization:
 
