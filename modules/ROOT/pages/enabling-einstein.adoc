@@ -26,7 +26,7 @@ To enable Einstein for the connected Anypoint Platform organization:
 
 . Log in to your Salesforce organization.
 . In Salesforce Setup, go to the *Quick Find* box and enter `MuleSoft`, then select *MuleSoft > Anypoint Platform Setup*.
-. In *Your connected Anypoint Platform Organization*, click *View Connection Info* to open a new dialog.
+. In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
 . In *Connection to MuleSoft Anypoint Platform*, switch between *Enabled* or *Disabled* in *Enable Einstein for MuleSoft Anypoint Platform*.
 + 
 image::einstein-enabled-in-salesforce.png["Einstein for MuleSoft Anypoint Platform is enabled"]
