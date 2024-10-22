@@ -47,7 +47,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . In *Enable Einstein for Anypoint Platform*, click *Accept*.
 . Read the terms and conditions, select *I accept the terms and conditions.", and then click *Accept*.
 +
-Salesforce orgs that have xref:connecting-salesforce-orgs.adoc[established tenant relationships] with your Anypoint Platform organization are listed in the *Salesforce Orgs* section. 
+The *Salesforce Orgs* section shows the orgs with xref:connecting-salesforce-orgs.adoc[established tenant relationships] with your Anypoint Platform organization. 
 +
 Each Salesforce organization shows the enabled and disabled capabilities.
 . Select the Salesforce organization to use by default in your Anypoint Platform organization:
