@@ -6,23 +6,20 @@ Enable cross-platform features between your Anypoint Platform organization and a
 
 Anypoint Platform organization administrators use the Anypoint Platform *Access Management > Salesforce* user interface to:
 
-* Initiate and complete the connection process to a Salesforce org.
+* Initiate the connection process to a Salesforce org.
 * Enable or disable a tenant relationship with Salesforce.
 * Delete the relationship between Anypoint Platform and a Salesforce org.
 * Manage connected Salesforce organizations.
-* Enable, disable, and manage API Catalog.
 
 == Salesforce Organization Administrators
 
 When connecting an Anypoint Platform organization with a Salesforce org, a Salesforce administrator can: 
 
-* Initiate and complete the connection process to the Anypoint Platform organization.
+* Complete the connection process to the Anypoint Platform organization.
 * Disconnect or reconnect an Anypoint Platform and Salesforce org.
-* Delete the connection between the Anypoint Platform organization and your Salesforce org.
-* Enable Salesforce developers to access a catalog of APIs hosted by Anypoint Platform that can then be instantiated as invocable actions in their Salesforce org. 
-+
-This feature must be enabled in the connected Anypoint Platform organization before you can assign APIs to Salesforce developers in your org. 
+* Delete the connection between the Anypoint Platform organization and the Salesforce org.
 * Enable Anypoint Platform automation developers to publish invocable actions directly from their Robotic Process Automations (RPA) and Composer flows. 
+* Enable the connected Anypoint Platform organization to use the Salesforce organization's Einstein capability.
  
 For more information about initiating and maintaining a relationship with a Salesforce org, see https://help.salesforce.com/s/articleView?id=sf.external_services_manage_your_mulesoft_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connection] in the Salesforce documentation.
 

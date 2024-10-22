@@ -4,7 +4,6 @@ Establishing a tenant relationship between an Anypoint Platform organization and
 
 * Publish invocable actions directly from their Robotic Process Automations (RPA) and Composer flows.
 * Enhance Anypoint Code Builder and Intelligent Document Processing (IDP) developer experiences with Einstein. 
-* Make MuleSoft APIs available in the connected Salesforce organization's API Catalog.
 
 When you establish the tenant relationship, you can initiate, complete, and manage the tenant relationships. You can also enable, disable, and remove connections.  
 
@@ -38,16 +37,13 @@ As an Anypoint Platform organization administrator, you can start the process of
 
 You must have the Salesforce organization's connection key (tenant key) before you can connect to a Salesforce organization. Contact the Salesforce organization admin to get the tenant key. 
 
-TIP: Salesforce admins get the Salesforce organization tenant key and enable MuleSoft features in their Salesforce organization Setup in *MuleSoft > Anypoint Platform Setup*.
+include::partial$include-nav-salesforce.adoc[]
 
-include::partial$include-nav-steps-org-admin.adoc[]
-
-. Click *Salesforce*.
 . Click *Add Salesforce Org*.
-. Enter the Salesforce organization tenant key, and click *Confirm*. 
+. Enter the Salesforce organization's tenant key, and click *Confirm*. 
 +
 The format for the Salesforce tenant key is `cloud/env/org-id`.
-. In the *Add the Salesforce Org* dialog, verify the information and click *Add*. 
+. In *Add the Salesforce Org*, verify the information and click *Add*. 
 . Click *Copy* to copy the Anypoint Platform organization key. 
 . If you are the admin for the Salesforce organization you are adding, click *Manage in Salesforce* to continue setting up the relationship in Salesforce. 
 +
@@ -63,7 +59,7 @@ As a Salesforce organization administrator, you complete the connection between 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
 . In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
-. In the *Connection to MuleSoft Anypoint Platform* dialog, enter the Anypoint Platform organization key in the *Anypoint Platform Organization ID* field, and then click *Connect*.
+. In *Connection to MuleSoft Anypoint Platform*, enter the Anypoint Platform organization key in *Anypoint Platform Organization ID*, and then click *Connect*.
 +
 NOTE: The Anypoint Platform organization key is the universally unique identifier (UUID) for the Anypoint Platform organization ID.
 + 
@@ -71,7 +67,11 @@ If you don't have the Anypoint Platform organization key, contact the Anypoint P
 + 
 You return to the *Connection to MuleSoft Anypoint Platform* page. The page shows the connected Salesforce organization details, including the enablement status of the capabilities associated with the connected Salesforce organization. 
 
-image::connected-salesforce-org-invocable-actions-enabled.png["The connected Salesforce organization with API Catalog disabled and Invocable Actions enabled"]
+=== Get the Salesforce Organization Tenant Key
+
+. In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
+. In *Connection to MuleSoft Anypoint Platform*, click the action menu and select *Copy Salesforce Org Key*.
+. Paste the key in the location of your choice. 
 
 == See Also
 
