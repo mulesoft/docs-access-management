@@ -65,13 +65,13 @@ NOTE: The Anypoint Platform organization key is the universally unique identifie
 + 
 If you don't have the Anypoint Platform organization key, contact the Anypoint Platform organization administrator.
 + 
-You return to the *Connection to MuleSoft Anypoint Platform* page. The page shows the connected Salesforce organization details, including the enablement status of the capabilities associated with the connected Salesforce organization. 
+You return to the *Connection to MuleSoft Anypoint Platform* page. The page shows the connected Anypoint Platform organization details, including the enablement status of the capabilities associated with your Salesforce organization. 
 
 === Get the Salesforce Organization Tenant Key
 
 . In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
 . In *Connection to MuleSoft Anypoint Platform*, click the action menu and select *Copy Salesforce Org Key*.
-. Paste the key in the location of your choice. 
+. If you are signed in to the Salesforce organization as an admin, click *Manage in Salesforce* to continue setting up the connection in Salesforce.
 
 == See Also
 
