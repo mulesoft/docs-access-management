@@ -35,7 +35,7 @@ include::partial$include-nav-users.adoc[]
 
 . Click *Invite user*.
 . Enter the email addresses of the users that you want to invite to your organization as a comma-separated list.
-. Optionally, select a xref:teams.adoc[team] to assign permissions to these users.
+. Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role (deprecated)] to assign permissions to these users.
 . Click *Send Invitation*.
 
 The users you specify receive email invitations to join your organization. Invited users must use the link they receive in the invitation to join your organization. When they click the link, they are presented with a sign-up form that already has the *Company* field completed with the name of your organization.
@@ -69,7 +69,7 @@ include::partial$include-nav-users.adoc[]
 [[grant-user-permissions]]
 == Grant Permissions to Users
 
-Organization administrators manage user access using xref:teams.adoc[teams], or by granting permissions to users individually. 
+Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually. Teams and roles functionality are mutually exclusive.
 
 For more information about configuring Teams, see xref:configure-teams.adoc#manage-team-permissions[Manage Team Permissions].
 
