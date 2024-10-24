@@ -71,6 +71,8 @@ include::partial$include-nav-users.adoc[]
 
 Organization administrators manage user access using xref:teams.adoc[teams], or by granting permissions to users individually. 
 
+For more information about configuring Teams, see xref:configure-teams.adoc#manage-team-permissions[Manage Team Permissions].
+
 In the *Users* page, click a user name to access more information about that user, manage and view permissions, manage and view teams, or reset their password.
 
 By default, in every new organization and business group, you can assign the following:
@@ -79,29 +81,6 @@ By default, in every new organization and business group, you can assign the fol
 * Assign Runtime Manager permissions: Select the name of the Runtime Manager environment to give access to, then pick a permission.
 * Assign teams: Select the name of the team to give access to.
 * Assign roles (deprecated): Select the name of the role to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
-
-=== Grant Permissions to Users With the Teams Feature
-
-To grant permissions to users who are members of teams:
-
-include::partial$include-nav-teams.adoc[]
-
-. Select the team with the members to add permissions for. 
-. Select the *Permissions* tab, and click *Add Permissions*.
-. Select the permissions to add and click *Next*.
-+
-The list of *Permissions* includes all permissions, even if they are already assigned to users. If you add a permission that's already assigned, there is no effect.
-. Select the business groups to apply the permissions to. 
-+
-Select which environments to apply the permission to if it's enabled for the permission. 
-. Click *Next*.
-. Review the permissions and the business groups and environments they apply to, and then click *Add Permissions*.
-+ 
-The members of the team now have the permissions you selected in the business groups and environments you specified. 
-
-For more information about configuring Teams, see xref:configure-teams.adoc#manage-team-permissions[Manage Team Permissions].
-
-=== Grant Permissions to Individual Users
 
 To grant permissions to individual users: 
 
