@@ -91,6 +91,8 @@ include::partial$include-nav-users.adoc[]
 . Click the name of the user to assign permissions to.
 . Click the *Permissions* tab and click *Add permissions*.
 . Select the permissions to add and click *Next*.
++
+The list of *Permissions* includes all permissions, even if they are already assigned to users. If you add a permission that's already assigned, there is no effect.
 . Select the business groups to apply the permissions to. 
 +
 Select which environments to apply the permission to if it's enabled for the permission. 
