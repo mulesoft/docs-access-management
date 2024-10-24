@@ -2,6 +2,7 @@
 
 When you create an Anypoint Platform account, a root organization (business group) is created, and you are assigned as the owner of the organization. A root organization is a single instance of Anypoint Platform that includes all the entitlements, features, and capabilities you purchased. The owner of the root organization automatically inherits the Organization Administrator permission.
 
+
 The organization name is the name you entered in the *Company* field in the initial Anypoint Platform signup form. You can change the name in the organization settings.
 
 An organization is an account where multiple users can share resources, including applications and environments. The level of access users have to various resources depends on their assigned roles and permissions. For example, one user might have permission to manage API alerts, while another user has permission only to view API alerts.
