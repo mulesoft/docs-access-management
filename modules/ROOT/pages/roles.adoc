@@ -181,20 +181,6 @@ include::partial$include-nav-steps-org-admin.adoc[]
 include::partial$include-nav-roles.adoc[]
 
 . Click the name of the custom role to which to add permission scopes.
-. Click the *Permissions* tab, then select one of the following tabs:
-+
-* API Manager
-* Visualizer
-* Runtime Manager
-* Design Center
-* Data Gateway
-* MQ
-* Anypoint Monitoring
-* Secrets Manger
-* Tokenization
-+
-Depending on your permissions, you might not see all of these options.
-
 . Select the *Permissions* tab, and click *Add Permissions*.
 . Select the permissions to add and click *Next*.
 +
