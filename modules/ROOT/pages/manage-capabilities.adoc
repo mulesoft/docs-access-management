@@ -1,0 +1,13 @@
+= Managing Capabilities for a Connected Salesforce Organization
+
+When you establish a tenant relationship and enable the connection between your Anypoint Platform organization and a trusted Salesforce organization, you can enable and disable capabilities associated with the Salesforce organization. 
+
+* xref:enabling-einstein.adoc[]
+* xref:enabling-invocable-actions.adoc[]
+
+
+
+== See Also
+
+* xref:trusted-salesforce-org.adoc[]
+* xref:managing-connected-salesforce-orgs.adoc[]
