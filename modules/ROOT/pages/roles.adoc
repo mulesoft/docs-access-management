@@ -127,7 +127,8 @@ Default roles do not have a radial button next to them.
 . Enter the user's name in the search box.
 . Select the user from the drop-down list of results, then click the blue plus sign on the right of the search box.
 . To change the role's description:
-.. Click the description. +
+.. Click the description. 
++
 The description changes to an editable field.
 .. Enter the new description for the role, then press `Enter`.
 
@@ -197,6 +198,8 @@ Depending on your permissions, you might not see all of these options.
 . Click the *Permissions* drop-down menu, then select the permissions you want to assign to the custom role.
 +
 The list of available permissions is different for each application.
++
+The list of *Permissions* includes all permissions, even if they are already assigned to users. If you add a permission that's already assigned, there is no effect.
 
 . Click the *+* icon to add the permissions to the role.
 

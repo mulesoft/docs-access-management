@@ -78,6 +78,7 @@ By default, in every new organization and business group, you can assign the fol
 * Assign API permissions: Select the name of the API you want to give access to, then pick a version and permission.
 * Assign Runtime Manager permissions: Select the name of the Runtime Manager environment to give access to, then pick a permission.
 * Assign teams: Select the name of the team to give access to.
+* Assign roles (deprecated): Select the name of the role to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
 
 === Grant Permissions to Users With the Teams Feature
 
@@ -97,6 +98,8 @@ Select which environments to apply the permission to if it's enabled for the per
 . Review the permissions and the business groups and environments they apply to, and then click *Add Permissions*.
 + 
 The members of the team now have the permissions you selected in the business groups and environments you specified. 
+
+For more information about configuring Teams, see xref:configure-teams.adoc#manage-team-permissions[Manage Team Permissions].
 
 === Grant Permissions to Individual Users
 
