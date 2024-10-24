@@ -127,7 +127,8 @@ Default roles do not have a radial button next to them.
 . Enter the user's name in the search box.
 . Select the user from the drop-down list of results, then click the blue plus sign on the right of the search box.
 . To change the role's description:
-.. Click the description. +
+.. Click the description. 
++
 The description changes to an editable field.
 .. Enter the new description for the role, then press `Enter`.
 
@@ -180,25 +181,15 @@ include::partial$include-nav-steps-org-admin.adoc[]
 include::partial$include-nav-roles.adoc[]
 
 . Click the name of the custom role to which to add permission scopes.
-. Click the *Permissions* tab, then select one of the following tabs:
+. Select the *Permissions* tab, and click *Add Permissions*.
+. Select the permissions to add and click *Next*.
 +
-* API Manager
-* Visualizer
-* Runtime Manager
-* Design Center
-* Data Gateway
-* MQ
-* Anypoint Monitoring
-* Secrets Manger
-* Tokenization
+The list of *Permissions* includes all permissions, even if they are already assigned to users. If you add a permission that's already assigned, there is no effect.
+. Select which environments to apply the permission to if it's enabled for the permission. 
+. Click *Next*.
+. Review the permissions and environments they apply to, and then click *Add Permissions*.
 +
-Depending on your permissions, you might not see all of these options.
-
-. Click the *Permissions* drop-down menu, then select the permissions you want to assign to the custom role.
-+
-The list of available permissions is different for each application.
-
-. Click the *+* icon to add the permissions to the role.
+The permissions you selected now apply to the members of the role and appear in the *Permissions* section for the role.
 
 === Enable Access to Design Center
 
