@@ -1,4 +1,4 @@
-= Enabling Einstein for Anypoint Platform
+= Enabling or Disabling Einstein for Anypoint Platform
 
 When you establish a tenant relationship with a Salesforce organization that has Einstein enabled, you can enable Einstein for your Anypoint Platform organization and store your Einstein generative AI audit and feedback data in Salesforce Data Cloud. You can then use that data for compliance, analytics, prompt adjustments, and LLM tuning to enhance your generative AI applications.
 
