@@ -1,0 +1,57 @@
+// View clients
+// tag::permsViewClients[]
+View all client apps, including client app IDs and client secrets for each client app.
+// end::permsViewClients[]
+
+// View destinations, Clear destinations
+// tag::permsViewClearDestinations[]
+* View all destinations and each destination's settings (*ID*, *Type*, *Message TTL*, and *Message Lock Default TTL*).
+* View *In Queue* messages.
+* View *In Flight* message stats.
+// end::permsViewClearDestinations[]
+
+// Manage clients
+// tag::permsManageClients[]
+* View all client apps, including client app IDs and client secrets for each client app.
+* Create client apps.
+// end::permsManageClients[]
+
+// Administer destinations
+// tag::permsAdministerDestinations[]
+* View all destinations and each destination's settings (*ID*, *Type*, *Message TTL*, and *Message Lock Default TTL*).
+* View *In Queue* messages.
+* View *In Flight* message stats.
+** Create new queues, message exchanges, and bindings.
+** Edit existing queues, message exchanges, and bindings.
+** Purge messages from queues.
+// end::permsAdministerDestinations[]
+
+// Manage destinations
+// tag::permsManageDestinations[]
+* View all destinations and each destination's settings (*ID*, *Type*, *Message TTL*, and *Message Lock Default TTL*).
+* View *In Queue* messages.
+* View *In Flight* message stats.
+* Create new queues and message exchanges.
+* Edit existing queues and message exchange settings.
+* Access *Message Sender* and *Browser* pages.
+* Delete messages.
+* Purge messages from queues.
+// end::permsManageDestinations[]
+
+
+// Destination subscriber for given environment
+// tag::permsDestSubEnv[]
+* Consume messages from a destination.
+* Delete messages from a destination.
+// end::permsDestSubEnv[]
+
+// Destination publisher for given environment
+// tag::permsDestPubEnv[]
+* Send messages to a destination.
+* Update message TTL on a destination.
+// end::permsDestPubEnv[]
+
+// Read MQ stats
+// tag::permsReadStats[]
+View organization and environment statistics.
+// end::permsReadStats[]
