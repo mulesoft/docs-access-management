@@ -54,14 +54,14 @@ When the connection process is complete, the Salesforce organization appears in 
 [complete-organization-connection]
 == Complete the Organization Connection in Salesforce
 
-As a Salesforce organization administrator, you complete the connection between your organization and the Anypoint Platform organization when the connection process is initiated in Anypoint Platform. You must have the Anypoint Platform organization key to complete the connection.
+As a Salesforce organization administrator, you complete the connection between your organization and the Anypoint Platform organization when the connection process is initiated in Anypoint Platform. You must have the Anypoint Platform organization (tenant) key to complete the connection.
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
 . In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
 . In *Connection to MuleSoft Anypoint Platform*, enter the Anypoint Platform organization key in *Anypoint Platform Organization ID*, and then click *Connect*.
 +
-NOTE: The Anypoint Platform organization key is the universally unique identifier (UUID) for the Anypoint Platform organization ID.
+The Anypoint Platform organization key is in the format of `cloud/env/org-id`. 
 + 
 If you don't have the Anypoint Platform organization key, contact the Anypoint Platform organization administrator.
 + 

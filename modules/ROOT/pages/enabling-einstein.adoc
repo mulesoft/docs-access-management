@@ -13,7 +13,7 @@ As an organization administrator, you can assign permission to the users in your
 Before enabling Einstein in your Anypoint Platform organization, you must:
  
 * Have administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
-* Have the Organization Administrator permission and role.
+* Have the root Organization Administrator permission and role.
 * Have administrative access to a Salesforce organization that https://help.salesforce.com/s/articleView?id=sf.generative_ai_enable.htm&type=5[has Einstein enabled]. 
 * xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization. 
 
