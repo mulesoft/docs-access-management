@@ -7,7 +7,7 @@ Establishing a tenant relationship between an Anypoint Platform organization and
 
 When you establish the tenant relationship, you can initiate, complete, and manage the tenant relationships. You can also enable, disable, and remove connections.  
 
-These are the ways to establish a tenant relationship:
+Ways to establish a tenant relationship include:
 
 * A Salesforce organization is provisioned with the tenant relationship with an Anypoint Platform organization already established. In this case, the Anypoint Platform organization administrator just needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the connection] in Anypoint Platform. 
 * The Anypoint Platform organization administrator initiates the tenant relationship in Anypoint Platform and the Salesforce organization administrator completes the setup in the Salesforce organization.   
@@ -61,7 +61,7 @@ include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 . In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
 . In *Connection to MuleSoft Anypoint Platform*, enter the Anypoint Platform organization key in *Anypoint Platform Organization ID*, and then click *Connect*.
 +
-The Anypoint Platform organization key is in the format of `cloud/env/org-id`. 
+The format for tthe Anypoint Platform organization key is `cloud/env/org-id`. 
 + 
 If you don't have the Anypoint Platform organization key, contact the Anypoint Platform organization administrator.
 + 
