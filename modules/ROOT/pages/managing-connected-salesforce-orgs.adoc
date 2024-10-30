@@ -65,8 +65,8 @@ If the Salesforce *My Domain* is changed in the connected Salesforce organizatio
 
 include::partial$include-nav-salesforce.adoc[]
 
-. Click the *Actions* menu (*...*) in the Salesforce org and select *Repair Org Info*.
-. Click *Repair* to rediscover the Salesforce org. 
+. Click the *Actions* menu (*...*) in the Salesforce organization and select *Repair Org Info*.
+. Click *Repair* to rediscover the Salesforce organization. 
 
 [[edit-org-name]]
 == Edit the Salesforce Organization Name
@@ -77,8 +77,8 @@ To edit a Salesforce organization name:
 
 include::partial$include-nav-salesforce.adoc[]
 
-. Click the *Actions* menu (*...*) in the Salesforce org and select *Edit Org Name*. 
-. Enter the name for the Salesforce org and click *Save*.
+. Click the *Actions* menu (*...*) in the Salesforce organization and select *Edit Org Name*. 
+. Enter the name for the Salesforce organization and click *Save*.
 +
 The Salesforce organization name appears in Anypoint Platform anywhere the organization is referenced.
 
