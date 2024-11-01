@@ -7,8 +7,8 @@ Enable cross-platform features between your Anypoint Platform organization and a
 Anypoint Platform organization administrators can:
 
 * Initiate the connection process to a Salesforce organization.
-* Enable or disable a tenant relationship with Salesforce.
-* Delete the relationship between Anypoint Platform and a Salesforce organization.
+* Enable a tenant relationship with Salesforce.
+* Remove the relationship between Anypoint Platform and a Salesforce organization.
 * Manage connected Salesforce organizations.
 
 == Salesforce Organization Administrators
@@ -17,7 +17,7 @@ Salesforce admins can:
 
 * Complete the connection process to the Anypoint Platform organization.
 * Disconnect or reconnect an Anypoint Platform and Salesforce organization.
-* Delete the connection between the Anypoint Platform organization and the Salesforce organization.
+* Remove the connection between the Anypoint Platform organization and the Salesforce organization.
 * Enable Anypoint Platform automation developers to publish invocable actions directly from their Robotic Process Automations (RPA) and Composer flows. 
 * Enable the connected Anypoint Platform organization to use the Salesforce organization's Einstein capability.
  

@@ -1,24 +1,25 @@
 = Managing Connected Salesforce Orgs
 
-As an Anypoint Platform organization administrator, you can enable, disable, remove, and repair connections, and edit the name of Salesforce organizations.
+As an Anypoint Platform organization administrator, you can enable, remove, and repair connections, and edit the name of Salesforce organizations.
 
 [enable-disable-connection]
-== Enable or Disable a Connection in Anypoint Platform
+== Enable the Connection in Anypoint Platform
 
-Enable or disable the connection to a Salesforce organization that has an established tenant relationship with your Anypoint Platform organization. 
+Enable the connection to a Salesforce organization that has an established tenant relationship with your Anypoint Platform organization. 
 
 [NOTE]
 Tenant relationships that are automatically provisioned for your Anypoint Platform organization are disabled until you enable them. 
 
-Disabling the connection between Anypoint Platform and a Salesforce organization doesn't remove the connection to the Salesforce organization. 
-The Salesforce organization still appears in the list of available organizations with a status of `Disabled`. 
-You can't publish assets from Anypoint Platform to the Salesforce organization or use any of the other features associated with the connected Salesforce organization until the connection is reenabled.  
+// Disabling the connection between Anypoint Platform and a Salesforce organization doesn't remove the connection to the Salesforce organization. 
+// The Salesforce organization still appears in the list of available organizations with a status of `Disabled`. 
+You can't publish assets from Anypoint Platform to the Salesforce organization or use any of the other features associated with the connected Salesforce organization until the connection is enabled.  
 
 include::partial$include-nav-salesforce.adoc[]
 
 +
 If your organization has at least one established tenant relationship with a Salesforce organization, a list of Salesforce orgs appears, showing the name, organization ID, and status of the tenant relationship connection.
-. Switch between *Enable* and *Disable* for the Salesforce organization to enable or disable the connection.
+. Click the *Actions* menu (*...*) in the Salesforce organization to enable and select *Enable Org*.
+. In *Enable Salesforce Org*, click *Enable*. 
 
 [[removing-connections]]
 == Remove the Connection Between Anypoint Platform and Salesforce Organizations
