@@ -9,7 +9,7 @@ For more information about the *Owned Apps* section, see the documentation for x
 
 To maintain security, you can view and manage connected apps only if you have the Organization Administrator permission in the root organization or in the business group where the connected app resides.
 
-When an organization administrator leaves the organization or is deleted or disabled, the ownership of the connected apps owned by that user is automatically transferred to the organization owner. When ownership is transferred, it is best practice to manually rotate the client secrets of all the connected apps in the organization for security reasons. For more information about how to rotate client secrets, see xref:connected-apps-developers#modify-the-client-secret-for-a-connected-app[Modify the Client Secret for a Connected App].
+When an organization administrator leaves the organization, is deleted, or is disabled, ownership of their connected apps automatically transfers to the organization owner. To maintain security, manually rotate the client secrets of all connected apps in the organization after the transfer. For more information about how to rotate client secrets, see xref:connected-apps-developers.adoc#modify-the-client-secret-for-a-connected-app[Modify the Client Secret for a Connected App].
 
 == Authorizations
 
