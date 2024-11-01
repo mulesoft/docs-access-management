@@ -1,26 +1,21 @@
 = Getting the Bearer Token for a Connected App Example
 
-This example demonstrates how to create a connected app and get the bearer token so that you can invoke Anypoint Platform APIs. 
+This example demonstrates how to create a connected app that acts on its own behalf using client credentials to get the bearer token so you can invoke Anypoint Platform APIs. 
 
 [[create-connected-app]]
 == Create a Connected App
+
+To create a connected app, add Runtime Manager scopes, and deploy the app to CloudHub:
 
 include::partial$include-nav-connected-apps.adoc[]
 
 . In the *Owned Apps* section, click *Create App*.
 . In the *Create App* page, enter a unique *Name* for the app, select *App acts on its own behalf (client credentials)*, and then click *Save*.
-
-[[add-required-scopes]]
-== Add the Required Scopes
-
-To deploy the app to CloudHub, you must add Runtime Manager scopes to the app.
-
-. On the *Connected Apps* page, click the name of the app to add permissions to. 
-. In the *Update App* window, click *Add Scopes*.
+. Click *Add Scopes*.
 . Select the scopes for the app from the *Runtime Manager* section, and then click *Next*. 
 +
-For information about scopes and permissions in the Connected Apps feature, see the xref:connected-apps-developers.adoc#endpoint-scopes[endpoint scopes] documentation page in Access Management.
-. Select the *Business Groups* in which the app has permission to access the assigned scopes and click *Next*.
+For information about scopes and permissions for Connected Apps, see the xref:connected-apps-developers.adoc#endpoint-scopes[Endpoint Scopes].
+. Select the *Business Groups* the app has permission to access the assigned scopes and click *Next*.
 . Select the *Environments* for the business groups and scopes you selected, and click *Next*. 
 . Review the scopes you added and click *Add Scopes*.
 +
@@ -34,8 +29,7 @@ To get the bearer token for the app:
 
 include::partial$include-nav-connected-apps.adoc[]
 
-. In the *Owned Apps* section, click *Copy Id* for the app to get the bearer token for.
-. Paste and save the app's client ID in a secure location.
+. In the *Owned Apps* section, click *Copy Id* for the app to get the bearer token for and save the app's client ID in a secure location.
 . Repeat the previous step to copy the app's client secret. 
 . Run the following cURL command and replace `CLIENT_ID` and `CLIENT_SECRET` with your client ID and secret:
 +
