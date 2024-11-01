@@ -1,13 +1,15 @@
 = Connected Apps for Organization Administrators
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
-As an organization administrator at the root organization or business group level, you are the only user who can view and manage connected apps in Access Management. You can use authorization policies to dictate which apps can be authorized to access user data, and you can add apps that users want to use to an allowlist.
+As an organization administrator at the root organization or business group level, you are the only user who can view and manage connected apps in Access Management. You can use authorization policies to dictate which apps are authorized to access user data, and you can add apps to an allowlist.
+
+== Owned Apps
+
 To manage your connected apps, navigate to *Access Management* and select the *Connected Apps* tab. You can add apps in the *Owned Apps* section and manage app access in the *Authorizations* section.
 For more information about the *Owned Apps* section, see the documentation for xref:connected-apps-developers.adoc[app developers].
 
 To maintain security, you can view and manage connected apps only if you have the Organization Administrator permission in the root organization or in the business group where the connected app resides.
+
+When an organization administrator leaves the organization or is deleted or disabled, the ownership of the connected apps owned by that user is automatically transferred to the organization owner. When ownership is transferred, it is best practice to manually rotate the client secrets of all the connected apps in the organization for security reasons. For more information about how to rotate client secrets, see xref:connected-apps-developers#modify-the-client-secret-for-a-connected-app[Modify the Client Secret for a Connected App].
 
 == Authorizations
 
@@ -58,3 +60,4 @@ By default, connected apps are configured at the root organization level, not at
 When you create a connected app to act on its own behalf using client credentials, you can choose which root organization or business groups to enable it in after you choose scopes.
 
 A connected app that acts on behalf of a user receives its own access and permissions based on the scopes, organizations, and business groups to which the user has access.
+
