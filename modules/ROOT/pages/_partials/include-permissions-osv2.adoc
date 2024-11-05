@@ -1,0 +1,29 @@
+// Manage stores
+// tag::permsManageStores[]
+Create, read, update, and delete stores.
+// end::permsManageStores[]
+
+// Manage stores data
+// tag::permsManageStoresData[]
+Perform all store operations including data, partition, and confirmation APIs.
+// end::permsManageStoresData[]
+
+// View stores
+// tag::permsViewStores[]
+Read store details.
+// end::permsViewStores[]
+
+// Manage store clients
+// tag::permsManageStoreClients[]
+Manage all clients of a cloud store.
+// end::permsManageStoreClients[]
+
+// View store clients
+// tag::permsViewStoreClients[]
+View all clients of a cloud store.
+// end::permsViewStoreClients[]
+
+// Store Metrics Viewer
+// tag::permsStoreMetricsViewer[]
+Retrieve Object Store v2 metrics using the Object Store v2 Stats API.
+// end::permsStoreMetricsViewer[]

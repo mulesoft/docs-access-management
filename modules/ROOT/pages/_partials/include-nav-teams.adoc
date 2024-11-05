@@ -1,1 +1,3 @@
+. Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
+. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
 . In the Access Management navigation menu, click *Teams*.
