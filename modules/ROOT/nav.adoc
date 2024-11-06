@@ -35,6 +35,7 @@
 * xref:connected-apps-overview.adoc[]
  ** xref:connected-apps-org-admin.adoc[]
  ** xref:connected-apps-developers.adoc[]
+  *** xref:connected-app-bearer-token-example.adoc[]
  ** xref:connected-apps-end-users.adoc[]
 * xref:external-organization-access.adoc[]
  ** xref:trusted-anypoint-platform-org.adoc[]
