@@ -85,11 +85,13 @@ Users can also execute any actions related to API configurations, groups, proxie
 | Manage APIs Configuration | View and modify API configurations in the specified environment. |
 | Manage Client Applications | Create and manage client applications in the root organization. |
 Users with this permission can view and modify application credentials and can add and remove client owners.
+
+include::partial$include-root-org-permissions-note.adoc[]
 |Manage Contracts | View, accept, reject, and delete contracts and tiers in the specified environment.|
 |Manage Policies | View, create, modify, and delete API policies in the specified environment. |
 |View API Alerts | View the API alerts in the specified environment. |
 |View APIs Configuration | View API configurations in the specified environment. |
-|View Client Applications| View client applications in the root organization. |
+|View Client Applications| View client applications in the root organization. |include::partial$include-root-org-permissions-note.adoc[]
 Users with this credential can't view application secrets and can't modify applications.
 |View Contracts | View contracts and tiers in the specified environment. |
 |View Policies | View API policies in the specified environment. |
@@ -688,7 +690,7 @@ In RPA Manager:
 [%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability to | Notes
-| Usage Viewer| View usage reports.|
+| Usage Viewer| View usage reports.| include::partial$include-root-org-permissions-note.adoc[]
 |===
 
 == Visualizer
