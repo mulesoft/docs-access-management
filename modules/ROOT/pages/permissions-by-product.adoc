@@ -53,6 +53,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 |Required Permissions | Grants the Ability to | Notes
 |API Experience Hub Admin| View, create, modify, and delete content in API Experience Hub.| 
 |API Experience Hub Community User| View, but not modify content in API Experience Hub.| 
+|API Experience Hub Users Approver | Approve or reject new user access requests and manage existing members' access.
 |===
 
 
