@@ -1,5 +1,7 @@
 = Enabling API Catalog
 
+Enable API Catalog for a connected Salesforce org to enable the Salesforce admin to access and bring MuleSoft APIs into their Salesforce org, providing a single place to view MuleSoft APIs in Salesforce. 
+
 [[enable-disable-api-catalog]]
 == Enable or Disable API Catalog in Anypoint Platform
 

@@ -43,6 +43,7 @@
  ** xref:connecting-salesforce-orgs.adoc[]
  ** xref:managing-connected-salesforce-orgs.adoc[]
  ** xref:manage-capabilities.adoc[]
+ *** xref:enabling-api-catalog.adoc[]
  *** xref:enabling-einstein.adoc[]
  *** xref:enabling-invocable-actions.adoc[]
 * xref:allowlisting-trusted-domains.adoc[]
