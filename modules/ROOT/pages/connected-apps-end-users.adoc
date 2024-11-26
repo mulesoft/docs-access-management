@@ -1,70 +1,13 @@
 = Connected Apps for End Users
 
-Organization Administrators and end users can delegate API access and sign in to third-party applications using Anypoint Platform credentials to create a seamless authentication experience for users.
+Delegate API access and sign in to third-party applications using your Anypoint Platform credentials. You can also view connected apps created in your root organization or business groups.
 
-== Create a Connected App That Acts on Its Own Behalf
+[NOTE]
+The organization administrator must set up and integrate the connected app before you can grant access to it. See xref:connected-apps-developers.adoc[]
 
-. In Anypoint Platform, go to *Access Management*.
-. Click *Connected Apps* in the navigation pane.
-. Click *Create app*.
-. Specify a name for the app.
-. Select *App acts on it's own behalf (client credentials)*.
-include::partial$include-add-scopes.adoc[]
-. Go to *Connected Apps* and select the app you created. 
-. Click *Copy Id* and *Copy Secret* to copy the ID and secret for the app.
+To grant access to a connected app:
 
-
-=== Get the Bearer Token
-
-. Go to your client application, for example, Postman, and generate a bearer token with the `clientid` and `clientsecret` of the connected app.
-. Copy the bearer token and save it in a secure location.
-. In the client application you're using, enter an endpoint that's associated with the scopes you selected. 
-+
-For example, if you selected the *Design Center Developer* scope, enter \https://anypoint.mulesoft.com/designcenter/api-designer/projects.
-. Fill in the required parameters, for example, *Authorization* is the bearer token you generated, and then send the API request.
-
-== Create a Connected App That Acts on Behalf of a User
-
-. In Anypoint Platform, go to *Access Management*.
-. Click *Connected Apps* in the navigation pane.
-. Click *Create app*.
-. Specify a name for the app.
-. Select *App acts on it's own behalf (client credentials)*.
-. Select the *Grant types*, for example, *Authorization Code*.
-. Provide the *Website URL* for the application.
-. Provide the *Redirect URI*, for example, \https://oauth.pstmn.io/v1/callback.
-. From *Who can use this application?*, select *Members of this organization only* or *All Anypoint Platform users*.
-include::partial$include-add-scopes.adoc[]
-. Go to your client application, for example, Postman. 
-. Enter an endpoint that's associated with the scopes you selected. 
-. Select the *Authorization* tab and select the authorization type, for example, OAuth 2.0.
-. Enter the required parameters for the authorization type. 
-+
-This is an example in Postman for the OAuth 2.0 authorization type:
-+
-* Token Name
-+
-Enter a name for the token you are going to generate.
-* Grant Type
-+
-Authorization Code.
-* Auth URL
-+
-The URL for the authorization server, for example, \https://anypoint.mulesoft.com/accounts/api/v2/oauth2/authorize.
-* Client ID
-+
-Client ID for the connected app you created.
-* Client Secret+
-+
-Client secret for the connected app you created.
-* Scope
-+
-Choose the scope that matches the scopes you selected for the connected app. For example, if you selected the *Design Center Creator* scope, enter `create:design_center`. 
-+
-For a list of the supported scopes, see xref:https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[scopes_supported].
-. Get the new access token.
-. The *Authorize App* dialog appears. 
-. Click *Grant Access*. 
+. In the *Authorize App* dialog, click *Grant Access*.
 +
 You can see which organization is requesting access to data and how the data is used. After you click *Grant Access*, the app is authorized to access the data indicated in the *Authorize App* dialog.
 +
