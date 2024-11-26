@@ -4,7 +4,7 @@
 . Click *Add Scopes*.
 +
 Scopes are roles with associated permissions, which determine which actions the app can perform within a business group and environment.
-. In Add Scope, select the scopes to apply and click *Next*.
-.. Select the business groups to apply the scopes to and click *Next*.
-.. Select the environments to apply the scopes to and click *Next*.
+.. In Add Scopes, select the scopes to apply and click *Add Scopes*.
+.. If applicable, select the business groups to apply the scopes to and click *Next*.
+.. If applicable, select the environments to apply the scopes to and click *Next*.
 . Click *Add Scopes*, and then click *Save*.
