@@ -208,3 +208,7 @@ clientid="….">
 ----
 
 For more information about how to embed the button, see the https://anypoint-web-components.github.io/anypoint-signin/[developer playground].
+
+== See Also
+
+xref:https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a[…]management-api/minor/1.0/pages/Connected%20App%20Examples/[Access Management API - Connected App Examples]
