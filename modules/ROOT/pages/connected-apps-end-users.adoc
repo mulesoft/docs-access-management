@@ -9,7 +9,6 @@ Organization Administrators and end users can delegate API access and sign in to
 . Click *Create app*.
 . Specify a name for the app.
 . Select *App acts on it's own behalf (client credentials)*.
-
 include::partial$include-add-scopes.adoc[]
 . Go to *Connected Apps* and select the app you created. 
 . Click *Copy Id* and *Copy Secret* to copy the ID and secret for the app.
@@ -35,7 +34,6 @@ For example, if you selected the *Design Center Developer* scope, enter \https:/
 . Provide the *Website URL* for the application.
 . Provide the *Redirect URI*, for example, \https://oauth.pstmn.io/v1/callback.
 . From *Who can use this application?*, select *Members of this organization only* or *All Anypoint Platform users*.
-
 include::partial$include-add-scopes.adoc[]
 . Go to your client application, for example, Postman. 
 . Enter an endpoint that's associated with the scopes you selected. 
@@ -63,7 +61,7 @@ Client secret for the connected app you created.
 +
 Choose the scope that matches the scopes you selected for the connected app. For example, if you selected the *Design Center Creator* scope, enter `create:design_center`. 
 +
-For a list of the supported scopes, see the xref:https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[scopes_supported].
+For a list of the supported scopes, see xref:https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[scopes_supported].
 . Get the new access token.
 . The *Authorize App* dialog appears. 
 . Click *Grant Access*. 
