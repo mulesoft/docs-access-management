@@ -1,0 +1,10 @@
+//These are the steps for adding scopes
+//Used in connected-apps-end-users
+
+. Click *Add Scopes*.
++
+Scopes are roles with associated permissions, which determine which actions the app can perform within a business group and environment.
+. In Add Scope, select the scopes to apply and click *Next*.
+. Select the business groups to apply the scopes to and click *Next*.
+. Select the environments to apply the scopes to and click *Next*.
+. Click *Add Scopes*, and then click *Save*.
