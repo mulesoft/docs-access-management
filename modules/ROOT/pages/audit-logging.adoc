@@ -1,15 +1,15 @@
 = Audit Logging
 
-The audit logging service provides a queryable history of actions performed within the Anypoint Platform. It keeps track of all users who have interacted with objects in the system, and timestamps those actions. It also provides mechanisms for querying the set of users who have performed actions, the set of objects that had actions performed on them, and other endpoints that enable the querying of log entries.
+The audit logging service provides a queryable history of actions performed within Anypoint Platform. It keeps track of all user interactions with objects in the system and timestamps those actions. Audit logging also provides mechanisms for querying the set of users who performed actions, the set of objects that had actions performed on them, and other endpoints that enable log entry querying.
 
-Audit logs have a default retention period of one year. If your organization was created before July 10, 2023 and you did not manually change the retention period, the retention period is six years. Users who have the Organization Administrator and Audit Log Config Manager permission can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically to maintain your log files for longer than the current retention period.
+Audit logs have a default retention period of one year. If your organization was created before July 10, 2023 and you didn't manually change the retention period, the retention period is six years. Users who have the Organization Administrator and Audit Log Config Manager permissions can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically to retain your log files for longer than the current retention period.
 
 You can access the data logs through the audit logging query API or through the audit logging UI.
 
 [[access-audit-logging]]
 == Access Audit Logging
 
-Users who have the Organization Administrator permission or the Audit Log Viewer permission on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
+Users who have Anypoint Platform Organization Administrator permission or the Audit Log Viewer permission have access to both the UI and the Audit Log Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
 
 The audit log UI is embedded in Access Management.
 
@@ -20,51 +20,52 @@ include::partial$include-nav-audit-logs.adoc[]
 The *Audit Logs* page displays the logs. You can:
 
 * Download audit logs.
-* Set a time period for audit logs to display.
+* Set a time period for showing audit logs.
 * Filter audit logs by product, type, and actions.
 * Search audit logs by environment, object, and user.
 
 [[export-audit-logs]]
 == Export Audit Logs
 
-You can use the xref:monitoring::telemetry-exporter.adoc[Telemetry Exporter feature] in Anypoint Monitoring to export audit logs to third-party analytics and observability apps. 
+If you have the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can use the xref:monitoring::telemetry-exporter.adoc[Telemetry Exporter feature] in Anypoint Monitoring to export audit logs to third-party analytics and observability apps. 
 
 include::monitoring::partial$telemetry-exporter-notes.adoc[tag=auditLogDuplicates]
 
-Telemetry Exporter for audit logs currently has the following data differences, limitations, and known issues:
+Telemetry Exporter for audit logs currently has these data differences, limitations, and known issues:
 
 include::monitoring::partial$telemetry-exporter-notes.adoc[tag=knownIssuesAL]
 
 [[audit-log-content]]
 == Audit Log Contents
 
-Activities represented in the log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload which can store application-specific information such as changed fields, environment information, etc.
+Activities in the audit log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload that can store application-specific information such as changed fields, environment information, and so on.
 
 Each log entry has a set of properties that provides information about the activity:
 
-* *Time*: The timestamp when the activity occurred.
-* *Product*: The product where the object resides, for example, `Access Management`
-* *Type*: The type of the object on which the action is performed, for example, `Organization`
-* *Action*: The action associated with the object, for example, `Create`
-* *Object*: The name of the object, for example, `foo`
-* *User Name*: The user who performed the action, for example, `johndoe`
+* *Time*: Timestamp when the activity occurred
+* *Product*: Product where the object resides, for example, `Access Management`
+* *Type*: Type of object the action is performed, for example, `Organization`
+* *Action*: Action associated with the object, for example, `Create`
+* *Object*: Name of the object, for example, `foo`
+* *User Name*: User who performed the action, for example, `johndoe`
 +
 [NOTE]
 --
-Occasionally, there are `Anypoint Staff` log entries. This log entry is made when the audit action was performed by a user who does not belong to your organization. +
-`Anypoint Staff` entries are created for when these events occur:
+Occasionally, there are `Anypoint Staff` log entries. This log entry is made when the audit action was performed by a user who doesn't belong to your organization. 
 
-* An internal or system process that is a routine part of Anypoint Platform operations is performed
+`Anypoint Staff` entries are created when these events occur:
+
+* An internal or system process that's a routine part of Anypoint Platform operations is performed
 * The MuleSoft procurement staff changes entitlements for your organization as a result of license grants
 * An action is performed by a MuleSoft employee on your behalf for other purposes, such as troubleshooting
 --
 
-* *Connected App*: Name of the connected app that takes an action on behalf of a user or itself. If a connected app did not execute the action, the payload is `N/A`.
+* *Connected App*: Name of the connected app that takes an action on behalf of itself or a user. If a connected app didn't execute the action, the payload is `N/A`.
 * *Environment*: Environment names for events from API Manager, Runtime Manager, CloudHub, Partner Manager, and MQ.
-* *Parent*: (Optional) The parent of the object (if any) on which the action is performed. Mainly relevant to APIs.
-* *Payload*: (Optional) More information about the log properties. For example, if an Organization was created, then the payload would contain information about the organization and the owner, such as IDs.
+* *Parent*: (Optional) Parent of the object (if any) the action is performed on. The mainly applies to APIs.
+* *Payload*: (Optional) More information about the log properties. For example, if an organization is created, the payload contains information about the organization and the owner, such as IDs.
 
-The following is a list of actions per product and object type that Anypoint Platform audits:
+This a list of actions per product and object type that Anypoint Platform audits:
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -863,7 +864,7 @@ Properties: Link metadata
 
 === Portals
 
-The following actions apply to API Manager v1.x portals.
+These actions apply to API Manager v1.x portals:
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -1054,7 +1055,7 @@ Properties: None
 
 * `Login` and `Logout` actions are logged only at the organization level.
 * `Login failure` actions are logged only against existing user accounts.
-* `Login failure` actions are not logged if you are using SSO configured with LDAP or OIDC, which includes login failures to Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+* `Login failure` actions aren't logged if you are using SSO configured with LDAP or OIDC, which includes login failures to Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
 
 ====
 
@@ -3200,10 +3201,10 @@ There is no mapping between `offset` and `cursor` values; And so when you run a 
 The cursor-based pagination API is not applicable to the CSV query. The query continues to use offset-based pagination.
 
 
-The following example shows a series of calls in a query loop for cursor based query.
+This example shows a series of calls in a query loop for cursor based query:
 
 
-. The first call does not have a cursor in the body and does not request the `total`. The response returns the following data:
+. The first call doesn't have a cursor in the body and doesn't request the `total`. The response returns this data:
 +
 [source,console]
 ----
@@ -3260,7 +3261,7 @@ Response:
 }
 ----
 
-. The third call is the final call in a loop. Because there are no more logs to be returned, the response does not have a cursor and contains no data.
+. The third call is the final call in a loop. Because there are no more logs to return, the response doesn't have a cursor and contains no data.
 +
 [source,console]
 ----
@@ -3287,7 +3288,7 @@ Response:
 }
 ----
 
-. The following example shows how to use a cursor and request the total:
+. This example shows how to use a cursor and request the total:
 +
 [source,console]
 ----
@@ -3318,7 +3319,7 @@ Response:
 
 === Access the API using CURL Commands
 
-The following are example `curl` commands for accessing the API (Windows users need to download `curl` before using these commands).
+These are example `curl` commands for accessing the API (Windows users need to download `curl` before using these commands).
 
 Get authorization information:
 
@@ -3336,7 +3337,9 @@ curl 'https://anypoint.mulesoft.com/audit/v2/organizations/<organization_id>/que
 
 === Rate Limit Policy for Audit Log Query Endpoint
 
-The Audit Log Query endpoint applies rate limits per IP in the three control planes: US, EU, and gov. The following table outlines the rate limits for each control plane:
+The Audit Log Query endpoint applies rate limits per IP in the three control planes: US, EU, and gov. 
+
+This table outlines the rate limits for each control plane:
 
 [%header,cols="15a,15a"]
 |===
@@ -3353,7 +3356,7 @@ The Audit Log Query endpoint applies rate limits per IP in the three control pla
 
 If a client exceeds the rate limit for a given control plane, the Audit Log Query endpoint returns a `503 Service Unavailable` status code until the minute expires. During this time, the service is unavailable to the client.
 
-We recommend that users of the Audit Log Query Endpoint monitor their request rates and adjust their usage accordingly to avoid exceeding the rate limit. Note that exceeding the rate limit may result in the endpoint being temporarily unavailable.
+It's best for Audit Log Query Endpoint users to monitor their request rates and adjust their usage accordingly to avoid exceeding the rate limit. Exceeding the rate limit can make the endpoint temporarily unavailable.
 
 
 == See Also
