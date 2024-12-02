@@ -28,8 +28,9 @@ When you create connected apps, keep in mind:
 [[create-connected-app]]
 == Create a Connected App That Acts on Behalf of a User
 
-include::partial$include-nav-connected-apps.adoc[]
+include::partial$include-create-connected-apps.adoc[]
 
+. Optionally, in the *Business Group* dropdown, select the business group to create the app in.
 . Click *Create App*.
 . In the *Create App* page, enter a unique name for the application.
 . For *Type*, select *App acts on behalf of a user*. 
@@ -51,8 +52,9 @@ Scopes determine the level of permissions to provide to the app. For more inform
 
 == Create a Connected App That Acts on Its Own Behalf
 
-include::partial$include-nav-connected-apps.adoc[]
+include::partial$include-create-connected-apps.adoc[]
 
+. Optionally, in the *Business Group* dropdown, select the business group to create the app in.
 . Click *Create App*.
 . In the *Create App* page, enter a unique name for the application.
 . Select *App acts on it's own behalf (client credentials)*.
