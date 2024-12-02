@@ -4,7 +4,7 @@ When you create connected apps, keep in mind:
 
 * Your organization can own up to 2000 connected apps at the root organization or business group level.
 * Each connected app can have up to 1000 scopes.
-* All scopes in the endpoint map directly to permissions available in Anypoint Platform, except for exceptions noted in <<endpoint-scopes>>.
+* All scopes in the endpoint map directly to permissions available in Anypoint Platform, except for exceptions noted in <<endpoint-scopes>>. Scopes determine the level of permissions to provide to the app. 
 * Your Anypoint Platform organization owns your app. Any organization administrator of the root organization or business group in which the app resides can control it.
 * A unique `clientID` is automatically assigned and can’t be changed. 
 * The `clientSecret` has no expiration date by default but you can change it.
@@ -33,8 +33,6 @@ Note: Based on the grant type you select, additional information might be reques
 * *Members of this organization only* if the app is internal to your organization, or
 * *All Anypoint Platform users* if it's a third-party public app that can be distributed outside of your organization.
 include::partial$include-add-scopes.adoc[]
-+
-Scopes determine the level of permissions to provide to the app. For more information, see <<endpoint-scopes>>.
 
 [[create-connected-app-on-its-own-behalf]]
 == Create a Connected App That Acts on Its Own Behalf
@@ -44,25 +42,35 @@ include::partial$include-create-connected-apps.adoc[]
 . Select *App acts on it's own behalf (client credentials)*.
 include::partial$include-add-scopes.adoc[]
 
-
-
 [[grant-types-and-token-flow]]
 == Grant Types and Token Flow
 
-OAuth framework specification describes several grant types for getting access tokens for different use cases.
-Anypoint Platform supports `authorization_code`, `refresh_token`, `password`,  `jwt_bearer`, and `client_credentials` grant types.
+The OAuth framework specification describes grant types for getting access tokens for different use cases.
+
+Anypoint Platform supports these grant types:
+
+* <<auth-code>> 
+* <<refresh-token>>
+* <<password>>
+* <<jwt-bearer>>
+* <<client-credentials>>
+
 For more information and examples on how to use each grant type, see the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/pages/Connected%20App%20Examples/[Connected App Examples] in the Access Management API.
 
+[[auth-code]]
 === Authorization Code
 
-Use the `authorization_code` grant type to authorize the app to access a user's data, for example:
+Use the `authorization_code` grant type to authorize the app to access a user's data. 
+
+This is an example of the development flow: 
 
 . A developer creates the connected app that acts on behalf of a user with the `authorization_code` grant type.
-. An end user authorizes the app to act on their behalf.
-. The authorization server sends a temporary authorization code back to the redirect URI.
+. The end user authorizes the app to act on their behalf.
+. The authorization server sends a temporary authorization code back to the specified redirect URI.
 . The app calls the authorization server with the temporary code to receive the access token. +
 The access token can now be used to call Anypoint Platform APIs on the user’s behalf.
 
+[[refresh-token]]
 === Refresh Token
 
 Use the `refresh_token` grant type to grant access to user data when the user isn’t signed in. Refresh tokens expire after 90 days. Access tokens expire after the user’s session expires.
@@ -73,15 +81,18 @@ If the app is using the authorization code grant type, the `offline_access` scop
 
 To request a new access token, send a request to the token endpoint using the `refresh_token` grant type. When authentication is successful, a refresh token is exchanged for an access token.
 
+[[password]]
 === Password
 
 Use the `password` grant type when the application exchanges the user’s username and password for an access token.
 
+[[NOTE]]
 This grant type is not recommended, as it exposes user credentials directly to the connected app. It also precludes the use of additional security measures such as multi-factor authentication.
 
-=== JWT Bearer
+[[jwt-bearer]]
+=== JWT Bearer Token
 
-Use the `jwt_bearer` (`urn:ietf:params:oauth:grant-type:jwt-bearer`) grant type when the application wants to receive access tokens without transmitting sensitive information, such as the clientSecret.
+Use the `jwt_bearer` (`urn:ietf:params:oauth:grant-type:jwt-bearer`) grant type when the application receives access tokens without transmitting sensitive information, such as the client secret.
 
 The `jwt_bearer` grant type is suitable for use with trusted clients to gain access to protected resources without user authorization, for example:
 
@@ -108,35 +119,53 @@ NOTE: At minimum, `identityProvider_id` and `username` are required for `sub`, a
 |===
 . The app calls the authorization server with the generated assertion.
 
+[[client-credentials]]
 === Client Credentials
 
 Use the `client_credentials` grant type for machine-to-machine authentication where a specific user’s permission to access data isn't required.
 
 The `client_credentials` grant type uses the `clientId` and `clientSecret` of the client to authorize and access protected data.
 
-CI/CD pipelines using service accounts to programmatically call Anypoint Platform can be configured to use connected apps to prevent service disruptions when configuring xref:multi-factor-authentication.adoc[multi-factor authentication].
+You can configure CI/CD pipelines using service accounts to programmatically call Anypoint Platform to use connected apps to prevent service disruptions when configuring xref:multi-factor-authentication.adoc[multi-factor authentication].
 
 [[endpoint-scopes]]
 == Endpoint Scopes
 
-Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint] map directly to existing permissions in Anypoint Platform. Other available scopes are defined as follows:
+Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint] map directly to existing permissions in Anypoint Platform. Other available scopes are:
 
-* `full`: Full access to anything the user can do.
-* `read:full`: Read-only access to anything the user can read.
-* `openid`: Read-only access to the user's username and unique Anypoint ID.
-* `profile`: Read-only access to the user's Anypoint profile.
-* `email`: Read-only access to the user's email.
-* `offline_access`: Access to the user's data when they're not signed in.
-* `openid:google_wif`: Enables you to configure Anypoint as an IdP for Google Cloud by providing an `id_token` and an access token during the OAuth2 token flow for `client_credentials` connected apps. This ID token conforms to the IdP requirements as outlined in the https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers[GCP's WIF requirements].
+* `full`
++
+Full access to anything the user can do.
+* `read:full`
++
+Read-only access to anything the user can read.
+* `openid`
++
+Read-only access to the user's username and unique Anypoint Platform ID.
+* `profile`
++
+Read-only access to the user's Anypoint Platform profile.
+* `email`
++
+Read-only access to the user's email.
+* `offline_access`
++
+Access to the user's data when they're not signed in.
+* `openid:google_wif`
++
+Enables you to configure Anypoint Platform as an IdP for Google Cloud by providing an `id_token` and an access token during the OAuth2 token flow for `client_credentials` connected apps. This ID token conforms to the IdP requirements as outlined in the https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers[GCP's WIF requirements].
 
 [NOTE]
 Apps that use the `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries uses the scope that corresponds to the user who created the connected app.
+
+[[scopes-documentation]]
+=== Access Scopes Documentation
 
 For more information on scopes and permissions in the Connected Apps feature, see the scopes documentation page in Access Management:
 
 include::partial$include-nav-connected-apps.adoc[]
 
-. In the *Connected Apps* page, click the *Scopes Documentation* tab. 
+. In *Connected Apps*, click the *Scopes Documentation* tab. 
 +
 The *Scopes Documentation* page appears, showing the scopes, their respective permissions, and the products to which they belong.
 . Use the search bar and filters to locate a scope based on the name, display name, permission methods, supported app type, or product label.
@@ -144,9 +173,11 @@ The *Scopes Documentation* page appears, showing the scopes, their respective pe
 
 You can filter and sort the contents of the *Scopes Documentation* page, and you can also click a scope name to view namespaces, methods, and actions.
 
-== Sign in with the Anypoint Platform Widget
+== Sign in With the Anypoint Platform Widget
 
-For seamless implementation, you can integrate a button into the front end of your apps with a pre-built template and set of components. To add this widget, use this code:
+For seamless implementation, you can integrate a button into the front end of your apps with a prebuilt template and set of components. 
+
+To add this widget, use this code:
 
 ----
 <anypoint-signin scopes="full"
