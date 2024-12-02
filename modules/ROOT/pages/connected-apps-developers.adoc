@@ -1,94 +1,21 @@
 = Connected Apps for Developers
 
-Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] that developers can use to extend functionality.
-With the Connected Apps feature, developers can delegate access to applications that use APIs to interact with Anypoint Platform programmatically.
-While some might use the Connected Apps feature to build CI/CD pipelines, others can productize additional third-party use-cases on top of Anypoint Platform.
+Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] to extend functionality.
 
-In addition to enabling new flows to authenticate users, developers can enable or disable clients and view client usage.
-For example, developers can see how many organizations are using the app and how many users have access.
+The Connected Apps feature enables you to:
 
-The Connected Apps feature supports OAuth 2.0 and OpenID Connect, so developers must ensure their app can use tokens to request access to user data.
-To find out what specific OpenID Connect capabilities are supported, see the information in the Open ID configuration https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint].
-All scopes in the endpoint map directly to permissions available in Anypoint Platform, with some exceptions noted in the *Endpoint Scopes* section.
+* Delegate access to applications that use APIs to interact with Anypoint Platform programmatically. 
+* Build CI/CD pipelines or productize additional third-party use cases on top of Anypoint Platform.
+* Enable or disable clients and view client usage. For example, you can see how many organizations are using the app and how many users have access.
+
+== Authentication
+
+The Connected Apps feature supports OAuth 2.0 and OpenID Connect, so you must ensure your app can use tokens to request access to user data.
+
+See the information in the Open ID configuration https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint] to find the supported OpenID Connect capabilities. 
 
 To make the authentication experience consistent for end users, third-party developers with their own websites or web apps can allow users to sign in using the *Sign in with Anypoint Platform* option.
 
-When you create connected apps, keep in mind: 
-
-* Your organization can own up to 2000 connected apps at the root organization or business group levels.
-* Each connected app can have up to 1000 scopes.
-* Your organization owns your app. Any organization administrator of the root organization or business group in which it resides can control it.
-* A unique `clientID` is automatically assigned and can’t be changed. The `clientSecret` has no expiration date by default but can be changed.
-
-== Before You Begin
-
-* You need the Organization Administrator permission at the level you want to create connected apps and specify access scopes. 
-* Determine whether the app is internal to your company or is a third-party app that can be distributed outside of your organization.
-
-[[create-connected-app]]
-== Create a Connected App That Acts on Behalf of a User
-
-include::partial$include-create-connected-apps.adoc[]
-
-. Optionally, in the *Business Group* dropdown, select the business group to create the app in.
-. Click *Create App*.
-. In the *Create App* page, enter a unique name for the application.
-. For *Type*, select *App acts on behalf of a user*. 
-. Select the grant types to use with the app:
-* Authorization Code
-* Password
-* JWT Bearer
-+
-Note: Based on the grant type you select, additional information might be requested. For more information about grant types, see <<grant-types-and-token-flow>>.
-. In *Website URL* , enter the URL where users go to learn more about the app.
-. In *Redirect URIs*, configure which URIs users are directed to after authorization. 
-.. Type the URL and click *Add* to add it to the list.
-. In *Audience*, select either:
-* *Members of this organization only* if the app is internal to your organization, or
-* *All Anypoint Platform users* if it's a third-party public app that can be distributed outside of your organization.
-include::partial$include-add-scopes.adoc[]
-+
-Scopes determine the level of permissions to provide to the app. For more information, see <<endpoint-scopes>>.
-
-== Create a Connected App That Acts on Its Own Behalf
-
-include::partial$include-create-connected-apps.adoc[]
-
-. Optionally, in the *Business Group* dropdown, select the business group to create the app in.
-. Click *Create App*.
-. In the *Create App* page, enter a unique name for the application.
-. Select *App acts on it's own behalf (client credentials)*.
-include::partial$include-add-scopes.adoc[]
-
-[[connected-app-ownership]]
-== Connected App Ownership
-
-Connected app ownership gets transferred to the root organization owner when the user who created the connected app:
-
-* is deleted.
-* is removed from the root organization.
-* loses administrative privileges over the organization.
-
-Organization administrators can edit the owner of the connected app and transfer the ownership to other administrators:
-
-. In Access Management > *Connected Apps* > *Owned Apps*, click the app name. 
-. Make the changes and click *Save changes*.
-
-== Modify the Client Secret for a Connected App
-
-include::partial$include-nav-connected-apps.adoc[]
-
-. Click a connected app from the list to enable Edit mode.
-. In the *Secret* field, enter a secret of your choice.
-. Click *Save*.
-
-image::connected-apps-edit-mode.png[Edit mode for a connected app]
-+
-[calloutlist]
-. The name and username of the owner of the connected app
-. The name of the connected app
-. The ID of the connected app
-. The client secret of the connected app
 
 [[application-allowlist-dev]]
 == Application Allowlist
@@ -100,117 +27,8 @@ Existing authorizations and new authorizations using the previously allowlisted 
 
 For more information, see xref:connected-apps-org-admin.adoc#application-allowlist-admin[connected apps for administrators].
 
-[[grant-types-and-token-flow]]
-== Grant Types and Token Flow
-
-OAuth framework specification describes several grant types for getting access tokens for different use cases.
-Anypoint Platform supports `authorization_code`, `refresh_token`, `password`,  `jwt_bearer`, and `client_credentials` grant types.
-For more information and examples on how to use each grant type, see the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/pages/Connected%20App%20Examples/[Connected App Examples] in the Access Management API.
-
-=== Authorization Code
-
-Use the `authorization_code` grant type to authorize the app to access a user's data, for example:
-
-. A developer creates the connected app that acts on behalf of a user with the `authorization_code` grant type.
-. An end user authorizes the app to act on their behalf.
-. The authorization server sends a temporary authorization code back to the redirect URI.
-. The app calls the authorization server with the temporary code to receive the access token. +
-The access token can now be used to call Anypoint Platform APIs on the user’s behalf.
-
-=== Refresh Token
-
-Use the `refresh_token` grant type to grant access to user data when the user isn’t signed in. Refresh tokens expire after 90 days. Access tokens expire after the user’s session expires.
-
-To work with OpenID Connect, apps have to exchange refresh tokens for new access tokens after the initial authorization to continue accessing user data.
-
-If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after the original access tokens expire.
-
-To request a new access token, send a request to the token endpoint using the `refresh_token` grant type. When authentication is successful, a refresh token is exchanged for an access token.
-
-=== Password
-
-Use the `password` grant type when the application exchanges the user’s username and password for an access token.
-
-This grant type is not recommended, as it exposes user credentials directly to the connected app. It also precludes the use of additional security measures such as multi-factor authentication.
-
-=== JWT Bearer
-
-Use the `jwt_bearer` (`urn:ietf:params:oauth:grant-type:jwt-bearer`) grant type when the application wants to receive access tokens without transmitting sensitive information, such as the clientSecret.
-
-The `jwt_bearer` grant type is suitable for use with trusted clients to gain access to protected resources without user authorization, for example:
-
-. A developer creates the connected app that acts on behalf of a user with `jwt_bearer` as the grant type.
-. The JWT token exchange occurs with these claims in the payload:
-+
-|===
-| Attribute | Description
-
-| `iss`
-| The issuer of the claim. This value must be same as the connected app’s `clientId`.
-
-| `sub`
-a| The subject of the token, such as:
-----
-{version}\|{identityProviderId}\|{username}\|{firstname}\|{lastname}\|email\|externalgroups
-----
-
-NOTE: At minimum, `identityProvider_id` and `username` are required for `sub`, as these subjects identify the user in the system.
-
-| `aud`
-| The authentication server. For example, the authentication server for the US region is `https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token`.
-
-|===
-. The app calls the authorization server with the generated assertion.
-
-=== Client Credentials
-
-Use the `client_credentials` grant type for machine-to-machine authentication where a specific user’s permission to access data isn't required.
-
-The `client_credentials` grant type uses the `clientId` and `clientSecret` of the client to authorize and access protected data.
-
-CI/CD pipelines using service accounts to programmatically call Anypoint Platform can be configured to use connected apps to prevent service disruptions when configuring xref:multi-factor-authentication.adoc[multi-factor authentication].
-
-[[endpoint-scopes]]
-== Endpoint Scopes
-
-Most of the scopes in the https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint] map directly to existing permissions in Anypoint Platform. Other available scopes are defined as follows:
-
-* `full`: Full access to anything the user can do.
-* `read:full`: Read-only access to anything the user can read.
-* `openid`: Read-only access to the user's username and unique Anypoint ID.
-* `profile`: Read-only access to the user's Anypoint profile.
-* `email`: Read-only access to the user's email.
-* `offline_access`: Access to the user's data when they're not signed in.
-* `openid:google_wif`: Enables you to configure Anypoint as an IdP for Google Cloud by providing an `id_token` and an access token during the OAuth2 token flow for `client_credentials` connected apps. This ID token conforms to the IdP requirements as outlined in the https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers[GCP's WIF requirements].
-
-[NOTE]
-Apps that use the `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries uses the scope that corresponds to the user who created the connected app.
-
-For more information on scopes and permissions in the Connected Apps feature, see the scopes documentation page in Access Management:
-
-include::partial$include-nav-connected-apps.adoc[]
-
-. In the *Connected Apps* page, click the *Scopes Documentation* tab. 
-+
-The *Scopes Documentation* page appears, showing the scopes, their respective permissions, and the products to which they belong.
-. Use the search bar and filters to locate a scope based on the name, display name, permission methods, supported app type, or product label.
-. In the list of scopes, click a scope name to view the associated permissions and learn more about the scope.
-
-You can filter and sort the contents of the *Scopes Documentation* page, and you can also click a scope name to view namespaces, methods, and actions.
-
-== Sign in with the Anypoint Platform Widget
-
-For seamless implementation, you can integrate a button into the front end of your apps with a pre-built template and set of components. To add this widget, use this code:
-
-----
-<anypoint-signin scopes="full"
-redirecturi="...."
-clientid="….">
-</anypoint-signin>
-----
-
-For more information about how to embed the button, see the https://anypoint-web-components.github.io/anypoint-signin/[developer playground].
-
 == See Also
 
 * https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a[…]management-api/minor/1.0/pages/Connected%20App%20Examples/[Access Management API - Connected App Examples]
+* xref:creating-connected-apps-dev.adoc[]
+* xref:connected-apps-org-admin.adoc[]
