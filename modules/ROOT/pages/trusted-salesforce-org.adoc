@@ -4,7 +4,7 @@ Enable cross-platform features between your Anypoint Platform organization and a
 
 Establishing a tenant relationship between an Anypoint Platform organization and a Salesforce organization enables users in your organization to:
 
-* Enable API Catalog to import managed MuleSoft APIs into Salesforce, view a catalog of MuleSoft APIs that are available for use in Salesforce, and sync APIs to get the latest changes and updates.
+* Enable API Catalog for a connected Salesforce organization to view a catalog of MuleSoft APIs that are available for use in the connected Salesforce organization and sync APIs to get the latest changes and updates.
 * Publish invocable actions directly from their Robotic Process Automations (RPA) and Composer flows.
 * Enhance Anypoint Code Builder and Intelligent Document Processing (IDP) developer experiences with Einstein. 
 
