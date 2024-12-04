@@ -67,7 +67,8 @@ This is an example of the development flow:
 . A developer creates the connected app that acts on behalf of a user with the `authorization_code` grant type.
 . The end user authorizes the app to act on their behalf.
 . The authorization server sends a temporary authorization code back to the specified redirect URI.
-. The app calls the authorization server with the temporary code to receive the access token. +
+. The app calls the authorization server with the temporary code to receive the access token.
++
 The access token can now be used to call Anypoint Platform APIs on the user’s behalf.
 
 [[refresh-token]]
