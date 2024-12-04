@@ -4,14 +4,14 @@ When you create connected apps, keep in mind:
 
 * Your organization can own up to 2000 connected apps at the root organization or business group level.
 * Each connected app can have up to 1000 scopes.
-* All scopes in the endpoint map directly to permissions available in Anypoint Platform, except for exceptions noted in <<endpoint-scopes>>. Scopes determine the level of permissions to provide to the app. 
+* All scopes in the endpoint correspond directly to permissions available in Anypoint Platform, except for exceptions noted in <<endpoint-scopes>>. Scopes determine the level of permissions to provide to the app. 
 * Your Anypoint Platform organization owns your app. Any organization administrator of the root organization or business group in which the app resides can control it.
 * A unique `clientID` is automatically assigned and can’t be changed. 
-* The `clientSecret` has no expiration date by default but you can change it.
+* The `clientSecret` has no expiration date by default but you can change the expiration date.
 
 == Before You Begin
 
-* You need the Organization Administrator permission at the business group level you want to create connected apps in and specify access scopes for. 
+* You need the Organization Administrator permission at the business group level you want to create connected apps in and specify access scopes for. For more information, see xref:permissions-by-product.adoc#access-management[].
 * Determine whether the app is internal to your company or is a third-party app that's distributable outside of your organization.
 
 [[create-connected-app]]
@@ -28,7 +28,8 @@ include::partial$include-create-connected-apps.adoc[]
 Note: Based on the grant type you select, additional information might be requested. For more information about grant types, see <<grant-types-and-token-flow>>.
 . In *Website URL* , enter the URL where users go to learn more about the app.
 . In *Redirect URIs*, configure which URIs users are directed to after authorization. 
-.. Type the URL and click *Add* to add it to the list.
++
+Type the URL and click *Add* to add it to the list.
 . In *Audience*, select either:
 * *Members of this organization only* if the app is internal to your organization
 * *All Anypoint Platform users* if it's a third-party public app that can be distributed outside of your organization
@@ -87,7 +88,7 @@ To request a new access token, send a request to the token endpoint using the `r
 
 Use the `password` grant type when the application exchanges the user’s username and password for an access token.
 
-[[NOTE]]
+[NOTE]
 This grant type isn’t recommended, as it reveals user credentials directly to the connected app. This type also precludes the use of additional security measures, such as multi-factor authentication.
 
 [[jwt-bearer]]
@@ -127,7 +128,7 @@ Use the `client_credentials` grant type for machine-to-machine authentication wh
 
 The `client_credentials` grant type uses the `clientId` and `clientSecret` of the client to authorize and access protected data.
 
-You can configure CI/CD pipelines using service accounts to programmatically call Anypoint Platform to use connected apps to prevent service disruptions when configuring xref:multi-factor-authentication.adoc[multi-factor authentication].
+To prevent service disruptions, configure CI/CD pipelines using service accounts to programmatically call Anypoint Platform to use connected apps when configuring xref:multi-factor-authentication.adoc[multi-factor authentication].
 
 [[endpoint-scopes]]
 == Endpoint Scopes
@@ -154,7 +155,7 @@ Read-only access to the user's email.
 Access to the user's data when they're not signed in.
 * `openid:google_wif`
 +
-Enables you to configure Anypoint Platform as an IdP for Google Cloud by providing an `id_token` and an access token during the OAuth2 token flow for `client_credentials` connected apps. This ID token conforms to the IdP requirements as outlined in the https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers[GCP's WIF requirements].
+`id_token` and an access token used to configure Anypoint Platform as an IdP for Google Cloud during the OAuth2 token flow for `client_credentials` connected apps. This ID token conforms to the IdP requirements as outlined in the https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers[GCP's WIF requirements].
 
 [NOTE]
 Apps that use the `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries uses the scope that corresponds to the user who created the connected app.

@@ -1,5 +1,5 @@
 //These are the steps for adding scopes
-//Used in connected-apps-end-users
+//Used in creating-connected-apps-dev
 
 . Click *Add Scopes*.
 +
