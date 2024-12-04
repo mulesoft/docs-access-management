@@ -64,7 +64,7 @@ When you revoke an app’s access, the app’s OAuth 2.0 access tokens and refre
 
 == Configure Authorization Policies
 
-You can configure one of two types of authorization policies for your users:
+You can configure one of these types of authorization policies for your users:
 
 * Unrestricted
 +
