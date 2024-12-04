@@ -3,7 +3,7 @@
 Delegate API access and sign in to third-party applications using your Anypoint Platform credentials. You can also view connected apps created in your root organization or business groups.
 
 [NOTE]
-The organization administrator must set up and integrate the connected app before you can grant access to it. See xref:connected-apps-developers.adoc[]
+The organization administrator must set up and integrate the connected app before you can grant access to it. See xref:connected-apps-developers.adoc[].
 
 To grant access to a connected app:
 
