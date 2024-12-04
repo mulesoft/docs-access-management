@@ -11,7 +11,7 @@ When you create connected apps, keep in mind:
 
 == Before You Begin
 
-* You need the Organization Administrator permission at the business group level you want to create connected apps in and specify access scopes for. For more information, see xref:permissions-by-product.adoc#access-management[].
+* You need the Organization Administrator permission at the business group level you want to create connected apps in and specify access scopes for. For more information, see xref:permissions-by-product.adoc#access-management[Access Management Permissions].
 * Determine whether the app is internal to your company or is a third-party app that's distributable outside of your organization.
 
 [[create-connected-app]]
