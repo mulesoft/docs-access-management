@@ -42,7 +42,7 @@ include::partial$include-nav-connected-apps.adoc[]
 . Click *Save*.
 
 image::connected-apps-edit-mode.png[Edit mode for a connected app]
-+
+
 [calloutlist]
 . Name and username of the owner of the connected app
 . Name of the connected app
