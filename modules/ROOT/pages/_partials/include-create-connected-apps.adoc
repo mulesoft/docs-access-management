@@ -1,4 +1,4 @@
-\\Used in creating-connected-apps-dev
+//Used in creating-connected-apps-dev
 
 . In the Access Management navigation menu, click *Connected Apps*.
 . Optionally, select the business group to create the connected app in.
