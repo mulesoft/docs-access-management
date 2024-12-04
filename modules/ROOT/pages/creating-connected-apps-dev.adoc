@@ -76,7 +76,7 @@ The access token can now be used to call Anypoint Platform APIs on the user’s 
 
 Use the `refresh_token` grant type to grant access to user data when the user isn’t signed in. Refresh tokens expire after 90 days. Access tokens expire after the user’s session expires.
 
-To work with OpenID Connect, apps have to exchange refresh tokens for new access tokens after the initial authorization to continue accessing user data.
+To work with OpenID Connect, apps exchange refresh tokens for new access tokens after the initial authorization to continue accessing user data.
 
 If the app is using the authorization code grant type, the `offline_access` scope is required to use refresh tokens after the original access tokens expire.
 
