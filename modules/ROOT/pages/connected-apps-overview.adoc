@@ -1,7 +1,5 @@
 = Connected Apps
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+
 
 The Connected Apps feature provides a framework that enables an external application to integrate with Anypoint Platform using https://anypoint.mulesoft.com/exchange/portals/anypoint-platform[APIs] through OAuth 2.0 and OpenID Connect. Connected Apps help users delegate their access without sharing sensitive credentials or giving full control of their applications to third parties. Actions taken by connected apps are audited, and users can revoke access at any time. The Connected Apps feature enables you to use secure authentication protocols and control an app’s access to user data.
 
