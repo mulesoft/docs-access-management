@@ -168,7 +168,7 @@ include::partial$include-nav-connected-apps.adoc[]
 
 . In *Connected Apps*, click the *Scopes Documentation* tab. 
 +
-The *Scopes Documentation* page appears, showing the scopes, their respective permissions, and the products to which they belong.
+*Scopes Documentation* shows the scopes, their respective permissions, and the products they belong to.
 . Use the search bar and filters to locate a scope based on the name, display name, permission methods, supported app type, or product label.
 . In the list of scopes, click a scope name to view the associated permissions and learn more about the scope.
 
