@@ -3,7 +3,7 @@
 
 . Click *Add Scopes*.
 +
-Scopes are roles with associated permissions, which determine which actions the app can perform within a business group and environment. For more information, see <<endpoint-scopes>>.
+Scopes are roles with associated permissions, which determine the actions the app can perform within a business group and environment. For more information, see <<endpoint-scopes>>.
 . In Add Scopes, select the scopes to apply and click *Add Scopes*.
 . If applicable, select the business groups to apply the scopes to and click *Next*.
 . If applicable, select the environments to apply the scopes to and click *Next*.
