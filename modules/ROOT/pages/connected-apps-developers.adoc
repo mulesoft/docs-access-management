@@ -20,7 +20,7 @@ To make the authentication experience consistent for end users, third-party deve
 [[application-allowlist-dev]]
 == Application Allowlist
 
-Organization administrators can enable an allowlist to control which apps can access the organization's users' data.
+Organization administrators can enable an allowlist to control which apps can access the organization's user data.
 
 When your app is added to an allowlist, only the set of scopes associated with the app are reviewed and approved by the administrator. If you add new scopes to your app at a later date, you are unable to request those scopes from users until the admin reapproves your app.
 Existing authorizations and new authorizations using the previously allowlisted set of scopes continue to work.
