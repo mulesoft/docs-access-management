@@ -88,7 +88,7 @@ To request a new access token, send a request to the token endpoint using the `r
 Use the `password` grant type when the application exchanges the user’s username and password for an access token.
 
 [[NOTE]]
-This grant type is not recommended, as it exposes user credentials directly to the connected app. It also precludes the use of additional security measures such as multi-factor authentication.
+This grant type isn’t recommended, as it reveals user credentials directly to the connected app. This type also precludes the use of additional security measures, such as multi-factor authentication.
 
 [[jwt-bearer]]
 === JWT Bearer Token
