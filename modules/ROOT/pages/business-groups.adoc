@@ -105,26 +105,29 @@ Resources that belong to the root organization require permissions specified at 
 Users who are assigned the Organization Administrator permission at any level are automatically assigned that same permission in any child business group created within that level, so are automatically visible in the child. This does not apply retroactively to users who are assigned the Organization Administrator permission after a child is created.
 
 [[control-business-group-access]]
-== View User and Team Access to a Business Group
+=== Access Overview
 
-You can view a list of users or teams in a business group and filter by their assigned permissions.
+You can view a list of users or teams that have access to a business group or environment and filter by their assigned permissions.
 
 include::partial$include-nav-business-groups.adoc[]
 
 . Click the *Access Overview* tab. 
 +
 A list of users in the current business group is shown. 
-. To see a list of users with specific permissions assigned to them, select a permission from the dropdown. 
+
+==== View User Access and Permissions
+
+. In *Access Overview*, select the business group or environment from the dropdown to view a list of users with access to the selected business group or environment.
+. Select a permission from the dropdown to see a list of users who have the selected permission in the selected business group or environment. 
+
+==== View Team Access and Permissions
+
+. In *Access Overview*, select *Teams* from the dropdown to see a list of teams that have access to the current business group.
+. Optionally, select an environment from the dropdown to view a list of teams with access to the selected environment.
+. To see teams that have specific permissions assigned, select the permission from the dropdown. 
 +
-A list of users that have the selected permission is shown. 
-. To see a list of teams 
-. Use the dropdowns to specify:
-* *Users*
-+
-The permissions shown are permissions that are directly assigned to the user. 
-* *Teams*
-* *Permissions* (sorted by product)
-* *Business group*
+Permissions that are granted directly to users outside of the Teams feature aren't shown in the returned list. 
+
 
 [[delete-business-group]]
 == Delete a Business Group

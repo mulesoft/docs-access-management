@@ -1,8 +1,5 @@
 = Manage User Access Using Teams
 
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 The Teams feature enables you to create groups of users and then assign the members of those groups certain permissions.
 Teams have a cascading permissions structure that helps you manage users and permissions with scalability in mind.
