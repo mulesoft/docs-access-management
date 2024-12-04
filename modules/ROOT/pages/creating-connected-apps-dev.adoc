@@ -123,7 +123,7 @@ NOTE: At minimum, `identityProvider_id` and `username` are required for `sub`, a
 [[client-credentials]]
 === Client Credentials
 
-Use the `client_credentials` grant type for machine-to-machine authentication where a specific user’s permission to access data isn't required.
+Use the `client_credentials` grant type for machine-to-machine authentication when a specific user’s permission to access data isn't required.
 
 The `client_credentials` grant type uses the `clientId` and `clientSecret` of the client to authorize and access protected data.
 
@@ -162,7 +162,7 @@ Apps that use the `client_credentials` grant type always have the `profile` scop
 [[scopes-documentation]]
 === Access Scopes Documentation
 
-For more information on scopes and permissions in the Connected Apps feature, see the scopes documentation page in Access Management:
+For more information about scopes and permissions in the Connected Apps feature, see the scopes documentation page in Access Management:
 
 include::partial$include-nav-connected-apps.adoc[]
 
