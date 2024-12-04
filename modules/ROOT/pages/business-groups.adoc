@@ -105,7 +105,7 @@ Resources that belong to the root organization require permissions specified at 
 Users who are assigned the Organization Administrator permission at any level are automatically assigned that same permission in any child business group created within that level, so are automatically visible in the child. This does not apply retroactively to users who are assigned the Organization Administrator permission after a child is created.
 
 [[control-business-group-access]]
-== Control Access to Business Groups
+== View User and Team Access to a Business Group
 
 You can view a list of users or teams in a business group and filter by their assigned permissions.
 
@@ -113,12 +113,18 @@ include::partial$include-nav-business-groups.adoc[]
 
 . Click the *Access Overview* tab. 
 +
-The *Access Overview* section appears, displaying a list of all users with any permissions in the current business group by default.
+A list of users in the current business group is shown. 
+. To see a list of users with specific permissions assigned to them, select a permission from the dropdown. 
 +
-. Use the drop-downs to specify:
-* `Users` or `Teams`
-* Permissions (sorted by product)
-* Business group
+A list of users that have the selected permission is shown. 
+. To see a list of teams 
+. Use the dropdowns to specify:
+* *Users*
++
+The permissions shown are permissions that are directly assigned to the user. 
+* *Teams*
+* *Permissions* (sorted by product)
+* *Business group*
 
 [[delete-business-group]]
 == Delete a Business Group
