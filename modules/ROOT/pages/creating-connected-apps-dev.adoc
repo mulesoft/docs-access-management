@@ -30,7 +30,7 @@ Note: Based on the grant type you select, additional information might be reques
 . In *Redirect URIs*, configure which URIs users are directed to after authorization. 
 .. Type the URL and click *Add* to add it to the list.
 . In *Audience*, select either:
-* *Members of this organization only* if the app is internal to your organization, or
+* *Members of this organization only* if the app is internal to your organization
 * *All Anypoint Platform users* if it's a third-party public app that can be distributed outside of your organization.
 include::partial$include-add-scopes.adoc[]
 
