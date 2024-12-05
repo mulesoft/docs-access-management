@@ -113,7 +113,8 @@ include::partial$include-nav-business-groups.adoc[]
 
 . Select the *Access Overview* tab. 
 +
-A list of users in the current business group is shown. 
+A list of users in the current business group is shown.
+ 
 .. Select the business group or environment from the dropdown to view a list of users with access to the selected business group or environment.
 .. Select a permission from the dropdown to see a list of users who have the selected permission in the selected business group or environment. 
 . To see teams with access to the selected business group or environment, select *Teams* from the dropdown.
