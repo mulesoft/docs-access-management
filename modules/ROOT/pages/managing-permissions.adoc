@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, permissions, configuring, accounts, roles
+:page-aliases: managing-accounts-roles-and-permissions.adoc
 
 This section explains how permissions work across different products and APIs managed from the Anypoint Platform.
 
