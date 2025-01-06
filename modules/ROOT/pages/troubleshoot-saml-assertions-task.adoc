@@ -5,7 +5,13 @@ To view your SAML response in a browser, perform a single sign-on (SSO) and use 
 [NOTE]
 Complete this task before calling the MuleSoft Support team to assist you in troubleshooting your SAML 2.0 compliant SSO setup.
 
-. Open a new tab in your browser and open Chrome Developer Tools, Firebug for Firefox, or a SAML tracer to capture the SAML response.
+. Open a new tab in your browser and open Chrome Developer Tools:
+.. In the Chrome developer tool:
+.. Select the *Network* tab.
+.. Select *Preserve log*.
+.. Optionally, if the *Method* column isn't visible in the Developer Tools Network log pane, right-click any column label and select *Method*.
+
+
 
 include::partial$include-nav-organizations.adoc[]
 
@@ -13,25 +19,25 @@ include::partial$include-nav-organizations.adoc[]
 . Copy the domain name.
 . Go to `anypoint.mulesoft.com/accounts/login/_domain_name_`. This will redirect you to your IDP’s single sign-on page.
 . Enter the IDP account credentials and authenticate yourself.
-. In the Chrome developer tool *Form data* window, select the *Params* tab.
-+
+. In *Headers*, look for a SAML Post in the Developer Tools Network log pane and select it.
+
 Other tools or tracers might have different labels.
 . Record the SAML response element.
 
-After recording the SAML response, use it to xref:access-management::saml-bearer-token.adoc[obtain a bearer token] to access platform APIs. It is also useful to record the SAML response to provide to MuleSoft support if you contact them.
+After recording the SAML response, use it to xref:access-management::saml-bearer-token.adoc[obtain a bearer token] to access platform APIs. It's also useful to record the SAML response to provide to MuleSoft support if you contact them.
 
-. Log in to the MuleSoft Support Portal at the following URL:
+. Log in to the MuleSoft Support Portal:
 +
 ----
 https://www.mulesoft.com/support-login
 ----
 
-. Provide a screen shot of your SAML configuration in Anypoint Platform.
+. Provide a screenshot of your SAML configuration in Anypoint Platform.
 . Include an XML SAML assertion.
 
 == Example: Chrome Developer Tools SAML Response Element
 
-The following image shows a SAML response element in Chrome developer tools as a result of signing in to Anypoint Platform using SSO.
+This image shows a SAML response element in Chrome developer tools after signing in to Anypoint Platform using SSO:
 
 .SAML response element after signing in to Anypoint Platform in Google Chrome.
 image::iam-chromedevtools.png["A Chrome developer tools screenshot showing an API request in progress"]
