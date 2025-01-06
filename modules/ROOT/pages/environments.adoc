@@ -2,6 +2,7 @@
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
+:page-aliases: managing-cloudhub-environments.adoc
 
 Anypoint Platform enables you to create and manage separate deployment environments for APIs and applications.  These environments are independent from each other and enable you to test your applications under the same conditions as your production environment.
 
