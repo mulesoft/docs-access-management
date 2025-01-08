@@ -44,17 +44,6 @@ Each team has a _team maintainer_ who receives the permissions outlined in the t
 
 Team members receive the permissions outlined in the team structure.  
 
-== Opt in to Teams
-
-// I don't think this is accurate. Need to test.
-
-include::partial$include-nav-steps-no-permissions.adoc[]
-
-. In the Access Management navigation menu, click *Try New Features*.
-. Click *Start Using These Features*. 
-+
-The Access Management navigation menu options change so you can use the Teams feature. You can xref:configure-teams.adoc#create-a-child-team[create a team] or xref:roles.adoc#migrate-roles-to-teams[migrate existing roles and permissions to teams].
-
 == Grant Permissions to Individual Users
 
 If you have the Organization Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:users.adoc#grant-user-permissions[Grant Permissions and Roles to Users].
