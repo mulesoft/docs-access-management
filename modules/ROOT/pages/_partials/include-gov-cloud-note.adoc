@@ -1,4 +1,6 @@
 // Used in Government Cloud Overview and Access Management configure-client-management-entra-id
 
+// tag::govcloud[]
 [NOTE]
 You can't configure Microsoft Entra ID (formerly Azure AD) as a client provider in MuleSoft Government Cloud.
+// end::govcloud[]
