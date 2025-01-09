@@ -3,6 +3,7 @@
 
 You can use dynamic client registration to configure Microsoft Entra ID (formerly Azure AD), client management with Anypoint Platform. Using Microsoft Entra ID as a client provider enables you to authenticate and authorize API consumers with your existing Microsoft Entra ID configurations. Microsoft Entra ID configuration in Anypoint Platform also provides a stateless microservice to convert OAuth 2.0 client application registration requests to requests supported by Microsoft Entra ID.
 
+[NOTE]
 include::partial$include-gov-cloud-note.adoc[tag=govcloud]
 
 == Configuration Walkthrough
