@@ -1,14 +1,14 @@
-= Manage User Access Using Teams
+= Using Teams to Manage User Permissions 
 
 Use the Teams feature to seamlessly manage user permissions and team membership as your organization grows. Create groups of users and then assign the members of those groups selected permissions. Teams have a cascading permissions structure so managing users and permissions is scalable. 
 
-Adopting a team structure for your organization also enables you to share assets more easily. In Anypoint Exchange, you can share an asset with an entire team rather than having to select each user individually.
+Adopting a team structure for your organization also enables you to share assets more easily. For example, in Anypoint Exchange, you can share an asset with an entire team rather than having to select each user individually.
 
 As a root organization administrator, you can:
 
 * Manage your organization from a simple, global view.
-* Group users into teams to easily manage permissions and share assets. 
-* Easily assign both global and team-level permissions 
+* Group users into teams to manage permissions and share assets. 
+* Assign both global and team-level permissions. 
 * Assign team maintainers to delegate management of team members and child teams.
 * Manage user and team permissions across multiple business groups in one place.
 
@@ -17,15 +17,15 @@ As a root organization administrator, you can:
 
 Teams are hierarchical, starting with the *Everyone at <Root Organization>* team, or the root team, which contains all users who join your organization either via an invitation or SSO. 
 
-When you create teams, use a structure that reflects the structure of your organization so that you can plan your teams and configure permissions according to member needs. For example, you can create a team based on a geographical region or specific job function.
+When you create teams, use a structure that reflects the structure of your organization so that you can plan your teams and configure permissions according to member needs. For example, you can create teams based on geographical regions or specific job functions.
 
 When you're planning your organization’s team structure, keep in mind that:
 
-* All users in your organization belong to the root team. When you configure permissions in your organization, assign only permissions you want every user in the root team to have.  
+* All users in your organization belong to the *Everyone at <Root Organization>* team. When you configure permissions in your organization, assign only permissions you want every user in the root team to have.  
 * You can move teams within the hierarchy if the needs of your organization change.
 * Teams names must be unique across your organization.
 * Your organization can have up to 1000 teams.
-* Your can nest teams up to 10 levels, including the *Everyone at <Root Organization>* team.
+* You can nest teams up to 10 levels, including the *Everyone at <Root Organization>* team.
 * You can create teams without adding members.
 * Every child team inherits permissions from its parent team. You can add permissions to the inherited set of permissions to give each child team more specialized permissions that reflect the team members’ responsibilities.
 
@@ -33,7 +33,7 @@ For an example of a teams structure applied across an organization, see xref:tea
 
 == Grant Permissions to Individual Users
 
-If you have the Organization Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individuals, see xref:users.adoc#grant-user-permissions[Grant Permissions and Roles to Users].
+If you have the Organization Administrator permission, you can assign permissions to individual users without assigning those users to a team. For more information about assigning permissions to individual users, see xref:users.adoc#grant-user-permissions[Grant Permissions and Roles to Users].
 
 == See Also
 
