@@ -105,20 +105,30 @@ Resources that belong to the root organization require permissions specified at 
 Users who are assigned the Organization Administrator permission at any level are automatically assigned that same permission in any child business group created within that level, so are automatically visible in the child. This does not apply retroactively to users who are assigned the Organization Administrator permission after a child is created.
 
 [[control-business-group-access]]
-== Control Access to Business Groups
+=== View User and Team Access 
 
-You can view a list of users or teams in a business group and filter by their assigned permissions.
+You can view a list of users or teams that have access to a business group or environment and filter by their assigned permissions.
 
 include::partial$include-nav-business-groups.adoc[]
 
-. Click the *Access Overview* tab. 
+. Select the *Access Overview* tab. 
 +
-The *Access Overview* section appears, displaying a list of all users with any permissions in the current business group by default.
+A list of users in the current business group is shown.
+ 
+.. Select the business group or environment from the dropdown to view a list of users with access to the selected business group or environment.
+.. Select a permission from the dropdown to see a list of users who have the selected permission in the selected business group or environment. 
+. To see teams with access to the selected business group or environment, select *Teams* from the dropdown.
+. To see teams that have specific permissions assigned, select the permission from the dropdown. 
 +
-. Use the drop-downs to specify:
-* `Users` or `Teams`
-* Permissions (sorted by product)
-* Business group
+Permissions that are granted directly to users outside of the Teams feature aren't shown. 
+
+=== View Roles Associated With the Business Group
+
+include::partial$include-nav-business-groups.adoc[]
+
+. Select the *Roles* tab. 
++
+A list of roles in the current business group is shown. 
 
 [[delete-business-group]]
 == Delete a Business Group

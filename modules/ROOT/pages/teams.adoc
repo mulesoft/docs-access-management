@@ -1,6 +1,6 @@
 = Using Teams to Manage User Permissions 
 
-Use the Teams feature to seamlessly manage user permissions and team membership as your organization grows. Create groups of users and then assign the members of those groups selected permissions. Teams have a cascading permissions structure so managing users and permissions is scalable. 
+Use the Teams feature to seamlessly manage user permissions and team membership as your organization grows. Create groups of users and then assign the members of those groups selected permissions. Teams have a cascading permissions structure, so managing users and permissions is scalable. 
 
 Adopting a team structure for your organization also enables you to share assets more easily. For example, in Anypoint Exchange, you can share an asset with an entire team rather than having to select each user individually.
 
