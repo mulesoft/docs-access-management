@@ -1,7 +1,4 @@
 = SSO Prerequisites and Limitations
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
 When using SSO within Anypoint Platform, there are some prerequisites and limitations to be aware of.
 
@@ -22,13 +19,13 @@ After you configure the SAML assertion for the identity provider, the identity p
 
 Be aware of the following considerations related to client behavior:
 
-* User accounts created before configuring your federated organization remain within the organization. However, users can only signin through the Anypoint Platform signin page. They cannot signin from the redirected signin page of the identity provider.
+* User accounts created before configuring your federated organization remain within the organization. However, users can only sign in through the Anypoint Platform signin page. They can't sign in from the redirected signin page of the identity provider.
 
-* Existing non-federated users can continue to work as normally with the following exceptions:
+* Existing non-federated users can continue to work normally with the following exceptions:
 +
 ** If a user session times out, the user is redirected to the federated identity signin page instead of the generic one. Links and bookmarks that identify the organization redirect the user to the federated signin page, which fails for non-federated users.
 +
-** If you configure your identity provider to handle user-information assertion, users must sign into Anypoint Platform using the following URL:
+** If you configure your identity provider to handle user-information assertion, users must sign in to Anypoint Platform using the URL:
 +
 ----
 https://anypoint.mulesoft.com/accounts/login/{your_org_domain}
@@ -37,10 +34,10 @@ https://anypoint.mulesoft.com/accounts/login/{your_org_domain}
 == Limitations
 
 * OpenID Connect does not support single signout.
-* If a SAML user belongs to certain groups, Anypoint Platform does not automatically grant equivalent permissions in the organization.
-* Anypoint Platform does not generate the SAML assertion for single sign on.
+* If a SAML user belongs to certain groups, Anypoint Platform doesn't automatically grant equivalent permissions in the organization.
+* Anypoint Platform doesn't generate the SAML assertion for single sign on.
 Your IdP generates the sign-on URL that you configure.
 * External identity configuration is available only at the organization level.
-You cannot configure an external identity provider for a business group.
+You can't configure an external identity provider for a business group.
 * If you delete a user from your identity provider, you must also manually delete the user from your Anypoint Platform organization. 
-* If you delete an SAML identity provider and recreate one with the same configuration, it's considered a new identity provider. Users signing in to Anypoint Platform using this configuration are associated with the new identity provider. If existing user accounts are still associated with the deleted IdP, duplicate users appear because they are associated with a different IdP.
+* If you delete a SAML identity provider and recreate one with the same configuration, it's considered a new identity provider. Users signing in to Anypoint Platform using this configuration are associated with the new identity provider. If existing user accounts are still associated with the deleted IdP, duplicate users appear because they are associated with a different IdP.

@@ -8,7 +8,6 @@ After you create child teams and assign permissions, you can add users to each o
 
 include::partial$include-nav-teams.adoc[] 
 
-
 == Create a Child Team
 
 Organization Administrators for the root organization can create child teams at any business group level.

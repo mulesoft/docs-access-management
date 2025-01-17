@@ -1,15 +1,35 @@
 = Mapping Single Sign-On Users to Roles or Teams
 :page-aliases: map-users-roles-ldap-task.adoc
  
-Map the users in a federated organization's group to a team or role to ensure secure credentials and to maintain organizational structure for accessing privileged information. Users in an organization can then sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. To do this, your Anypoint Platform organization must use an external identity provider, such as PingFederate.
+Map the users in a federated organization's group to a team or role to ensure secure credentials and to maintain organizational structure for accessing privileged information. Users in an external organization can then sign in to Anypoint Platform using the same organizational credentials and access permissions that an external organization maintains using SAML, OpenID Connect (OIDC), or LDAP. 
 
-Anypoint Platform requires different information from your identity provider (IdP) based on whether you use SAML, OpenID Connect, or LDAP. User mappings apply only to the IdP for which you configure them.
+Anypoint Platform requires different information from your identity provider (IdP) based on whether you use SAML, OpenID Connect, or LDAP. User mappings apply only to the IdP you configured them for. Performing these steps requires you to move back and forth between applications and the identity provider application to copy or add information.
+
+== Before You Begin
+
+* You must have the Organization Administrator permission in the root Anypoint Platform organization.
+* Configure an external identity provider (IdP), such as PingFederate, for your Anypoint Platform organization.
+* Create and configure the single sign-on (SSO) app in your IdP.
+* Ensure the user or identity of the group of users are created in the identity provider.
+
+== Add Group Mappings
+
+include::partial$include-nav-teams.adoc[] 
+
+. Select the team to add the external IdP group to.
+. Select *External IdP Groups*.
+. Enter the name of the group in *Group Name*.
+. In *Provider Name*, select the name of the identity provider.
+. In *Type*, select *Member*, and then click *Add*.
+. Click *Save Changes*.
++
+The SSO users associated with the group you mapped are assigned to the team.
 
 == Configure Multiple Group Mappings for Single Sign-On Using SAML
 
 If your organization uses single sign-on but also requires you to obtain permissions from multiple groups, you can configure an attribute that contains all of the groups from which you need to obtain individual access permission. In many cases, you can create an array of groups.
 
-For example, assume that your IDP provides your groups in the following format:
+For example, if your IDP provides your groups in this format, you must create an attribute that encompasses multiple group mappings to prevent security vulnerabilities:
 
 ----
 <ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
@@ -19,8 +39,6 @@ For example, assume that your IDP provides your groups in the following format:
   <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
 </ns2:Attribute>
 ----
-
-To prevent security vulnerabilities, you must create an attribute that encompasses multiple group mappings. 
 
 In this example of a SAML assertion, the *Group Attribute* is `Groups`:
 ----
@@ -140,8 +158,6 @@ image::external-identity-cfb1e.png["An example of a list of external group names
 
 == Map SSO Users to Teams
 
-// Verify these steps
-
 [NOTE]
 If you delete your IdP configuration, your associated team mappings are also deleted.
 
@@ -153,7 +169,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-teams.adoc[]
 
-. Click the team you want to modify.
+. Click the team to modify.
 . Click the *External IdP Groups* tab.
 . In the *Group Names* field, enter one of the following: 
 * SAML: The group attribute that comes from your array of SAML groups
