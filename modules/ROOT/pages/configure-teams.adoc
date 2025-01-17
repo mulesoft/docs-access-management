@@ -1,17 +1,17 @@
 = Configuring Teams
 
-Create _child teams_ under the root team and configure those teams to have different sets of permissions based on the needs of the respective team members. Every user in your organization is automatically a member of the root team and each inherits all the permissions of the root team.
+Create child teams under the root team and configure those teams to have different sets of permissions based on the needs of the respective team members. Every user in your organization is automatically a member of the root team and each inherits all the permissions of the root team. When you configure permissions in your organization, assign only permissions you want every user in the root team to have.
 
 After you create child teams and assign permissions, you can add users to each of your teams according to what permissions the users in the team need. 
 
 == Create a Child Team
 
-You can create child teams when:
+Organization Administrators for the root organization can create child teams at any business group level.
 
-* You are the Organization Administrator for the root organization, you can create child teams at any org level.
-* You are the Organization Administrator for a business group, you can create child teams at the root level and become the maintainer for that team.
-* You are a team maintainer, you can create child teams for that team. 
-+
+If you are the Organization Administrator for a business group, you can create child teams in the business group you have the Organization Administrator permission in and become the maintainer for that team.
+
+When you're a team maintainer, you can create child teams for the team you are a maintainer for.  
+
 All child teams inherit user permissions from their parent teams, but you can configure additional permissions.
 
 include::partial$include-nav-teams.adoc[] 
@@ -26,13 +26,18 @@ You can use only alphanumeric characters, hyphens, underscores, and spaces. The 
 +
 Your new child team appears under its parent team in the list of teams. You can select any parent team in that list and navigate to its *Child teams* tab to see a list of all that parent team's child teams.
 
+After you create child teams, you can invite new users directly to the appropriate team using email invitations or using the Teams feature interface.
+
 == Manage Team Permissions
+
+To manage teams permissions, you must have the Organization Administrator permission in the business group that contains the resources you want to give a specific user or team access to.
+To modify permissions for all teams in the organization, you must have the Organization Administrator permission in the root organization.
 
 Your organization’s root team is *Everyone at <Root Organization>* and doesn't have any permissions assigned.
 
 If you invite users to *Everyone at <Root Organization>* without assigning any permissions to that team, your users can't execute tasks or view assets in your organization.
 
-If you have the Organization Administrator permission in the root organization, you can configure permissions for the root team and the child teams.
+If you have the Organization Administrator permission in the root organization, you can configure permissions for the root team and all its child teams.
 
 If you have the Organization Administrator permission in a specific business group but not in the root organization, you can assign permissions to any existing teams or users within the business group you are the organization administrator for.
 
@@ -52,7 +57,7 @@ The permissions you selected now apply to team members and appear in the *Permis
 
 === View Team Permissions Limits
 
-Each team, including the root team, has a *Limits* section that shows how close it is to reaching limits imposed by Anypoint Platform.
+Each team, including the root team, has a *Limits* section that shows how close the team is to reaching limits imposed by Anypoint Platform.
 
 To view limits:
 
@@ -80,9 +85,12 @@ If you have the Organization Administrator permission in your root organization,
 include::partial$include-nav-steps-team-maintainer.adoc[]
 
 . In the *Teams* page, select the team to add a user to.
-. Select *Add members*.
+. Click *Add members*.
 . Select the name of each user you want to add to the team.
-. Select the membership status that you want to assign to each user: team member or team maintainer. 
+. Select the membership type that you want to assign to each user:  
+* *Member* 
++
+* *Maintainer* 
 +
 A user who is added as a team maintainer receives team maintainer permissions as soon as you confirm their membership.
 +
@@ -102,7 +110,7 @@ If you use single sign-on (SSO) using SAML, OIDC, or LDAP, you can map SSO users
 
 === Manage Team Members and Maintainers
 
-When you add a user to a team, you can select whether that user is a team maintainer or a team member. You must have the Organization Administrator permission or be a team maintainer yourself to modify team members and team maintainers.
+When you add a user to a team, you can select whether that user is a team maintainer or a team member. You must have the Organization Administrator permission or be a team maintainer yourself to modify team members and team maintainers. Team maintainers can manage only the teams and child teams they are maintainers for (not the root team).
 
 Team maintainers can:
 
@@ -118,8 +126,6 @@ include::partial$include-nav-steps-team-maintainer-admin.adoc[]
 
 . In *Members*, navigate to the user to designate as a team maintainer.
 . In *Type*, select either *Maintainer* or *Member*. 
-+
-The team membership status for the user is updated.
 
 [[change-team-name]]
 == Change the Name of Your Team

@@ -12,21 +12,16 @@ As a root organization administrator, you can:
 * Assign team maintainers to delegate management of team members and child teams.
 * Manage user and team permissions across multiple business groups in one place.
 
-After you create child teams, you can invite new users directly to the appropriate team using email invitations or using the xref:configure-teams.adoc#invite-users-with-teams[Teams feature interface].
-
-[NOTE]
-To manage teams permissions, you must have the Organization Administrator permission in the business group that contains the resources you want to give a specific user or team access to.
-To modify permissions for all the teams in the organization, you must have the Organization Administrator permission in the root organization.
 
 == Permissions Structure
 
 Teams are hierarchical, starting with the *Everyone at <Root Organization>* team, or the root team, which contains all users who join your organization either via an invitation or SSO. 
 
-When you create teams, use a structure that reflects the structure of your organization so that you can plan your teams and configure permissions according to member needs. For example, you can create a team based on a geographical region or specific department, such as "South American Sales Team."
+When you create teams, use a structure that reflects the structure of your organization so that you can plan your teams and configure permissions according to member needs. For example, you can create a team based on a geographical region or specific job function.
 
 When you're planning your organization’s team structure, keep in mind that:
 
-* Since all users in your organization belong to the root team, when you configure permissions in your organization, assign only permissions you want every user in the root team to have.  
+* All users in your organization belong to the root team. When you configure permissions in your organization, assign only permissions you want every user in the root team to have.  
 * You can move teams within the hierarchy if the needs of your organization change.
 * Teams names must be unique across your organization.
 * Your organization can have up to 1000 teams.
@@ -35,14 +30,6 @@ When you're planning your organization’s team structure, keep in mind that:
 * Every child team inherits permissions from its parent team. You can add permissions to the inherited set of permissions to give each child team more specialized permissions that reflect the team members’ responsibilities.
 
 For an example of a teams structure applied across an organization, see xref:teams-example.adoc[Example Teams Structure].
-
-== Team Maintainers and Members
-
-If you are the organization administrator of the root organization, you can add users as members or maintainers to any team in the organization.
-
-Each team has a _team maintainer_ who receives the permissions outlined in the team structure and manages team membership. A team maintainer can assign members only to their specific team or child teams. Team maintainers can also designate new maintainers for teams they manage.
-
-Team members receive the permissions outlined in the team structure.  
 
 == Grant Permissions to Individual Users
 
