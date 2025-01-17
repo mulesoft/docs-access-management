@@ -9,7 +9,7 @@
  ** xref:environments.adoc[]
 * xref:managing-permissions.adoc[]
  ** xref:permissions-by-product.adoc[]
- ** xref:teams.adoc[Teams]
+ ** xref:teams.adoc[]
   *** xref:configure-teams.adoc[]
   *** xref:teams-example.adoc[]
  ** xref:roles.adoc[Roles]
