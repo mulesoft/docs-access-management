@@ -10,7 +10,7 @@ Anypoint Platform requires different information from your identity provider (Id
 * You must have the Organization Administrator permission in the root Anypoint Platform organization.
 * Configure an external identity provider (IdP), such as PingFederate, for your Anypoint Platform organization.
 * Create and configure the single sign-on (SSO) app in your IdP.
-* Ensure the user or identity of the group of users are created in the identity provider.
+* Ensure the user or identity of the group of users is created in the identity provider.
 
 == Add Group Mappings
 
