@@ -3,7 +3,7 @@
  
 Map the users in a federated organization's group to a team or role to ensure secure credentials and to maintain organizational structure for accessing privileged information. Users in an external organization can then sign in to Anypoint Platform using the same organizational credentials and access permissions that an external organization maintains using SAML, OpenID Connect (OIDC), or LDAP. 
 
-Anypoint Platform requires different information from your identity provider (IdP) based on whether you use SAML, OpenID Connect, or LDAP. User mappings apply only to the IdP you configured them for. Performing these steps requires you to move back and forth between applications and the identity provider application to copy or add information.
+Anypoint Platform requires different information from your identity provider (IdP) based on whether you use SAML, OpenID Connect, or LDAP. User mappings apply only to the IdP you configured them for. 
 
 == Before You Begin
 
