@@ -2187,20 +2187,6 @@ Properties:
 * User Id
 * Document Action Name
 
-| Delete Document Action Version
-| Document Action Version
-| Document Action Version Id
-|
-| Delete
-a| Subaction: none +
-Properties: 
-
-* Document Action Id
-* Document Action Version Id
-* Timestamp
-* User Id
-* Document Action Name
-
 | Document Action Version Created
 | Document Action Version
 | Document Action Version Id
