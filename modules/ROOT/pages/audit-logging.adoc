@@ -2200,6 +2200,7 @@ Properties:
 * Timestamp
 * User Id
 * Document Action Name
+* Document Action Version Name
 
 | Document instance is reviewed
 | Document Action Execution
