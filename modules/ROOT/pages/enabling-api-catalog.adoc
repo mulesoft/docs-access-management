@@ -13,14 +13,14 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . In *Settings*, select the Anypoint Platform business groups that allow the Salesforce organization to import Anypoint Platform APIs into its API Catalog, and click *Save Settings*.
 +
 [NOTE]
-Within the selected business groups, you can import only APIs that have specs published in Exchange with active instances into Salesforce.
+Within the selected business groups, you can sync only APIs from Exchange that have managed instances and meet the prerequisite conditions. For more information, see https://help.salesforce.com/s/articleView?id=platform.api_catalog.htm[API Catalog].
 . In *Capabilities Managed in Anypoint Platform*, switch between *Enabled* or *Disabled* in *Make MuleSoft Anypoint Platform APIs Available in Salesforce*. 
 +
 image:connected-salesforce-org-api-catalog-enabled.png["Connected Salesforce organization with both Invocable Actions and API Catalog enabled"]
 +
 The Salesforce organization administrator can then sync APIs into their catalog. 
 +
-For details about syncing APIs and using API Catalog in Salesforce, see xref:general::api-catalog-in-salesforce.adoc[].
+https://help.salesforce.com/s/articleView?id=platform.api_catalog.htm[API Catalog].
 . After the APIs are synced, the Salesforce administrator selects individual API instances and operations and converts them into invocable actions so Salesforce developers can access them.
 +
 A client ID is created.
