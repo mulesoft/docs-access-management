@@ -8,13 +8,12 @@ Enable a connected Salesforce organization to access and sync Anypoint Platform 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *Salesforce*.
-. In *Capabilities Managed in Anypoint Platform*, click *Settings* for *Make MuleSoft Anypoint Platform APIs Available in Salesforce*.
+. In the section for your connected Salesforce org, switch to *Enabled* for *You allow this Salesforce org to import APIs*.
 . In *Settings for Anypoint APIs in Salesforce*, click *Continue*.
-. In *Settings*, select the Anypoint Platform business groups that allow the Salesforce organization to import Anypoint Platform APIs into its API Catalog, and click *Save Settings*.
+. In *Settings*, select the Anypoint Platform business groups that allow the Salesforce organization to import Anypoint Platform APIs into its API Catalog, and click *Save settings*.
 +
 [NOTE]
-Within the selected business groups, you can sync only APIs from Exchange that have managed instances and meet the prerequisite conditions. For more information, see https://help.salesforce.com/s/articleView?id=platform.api_catalog.htm[API Catalog].
-. In *Capabilities Managed in Anypoint Platform*, switch between *Enabled* or *Disabled* in *Make MuleSoft Anypoint Platform APIs Available in Salesforce*. 
+Within the selected business groups, you can sync only APIs from Exchange that have managed instances and meet the prerequisite conditions. For more information, see https://help.salesforce.com/s/articleView?id=platform.api_catalog.htm[API Catalog]. 
 +
 image:connected-salesforce-org-api-catalog-enabled.png["Connected Salesforce organization with both Invocable Actions and API Catalog enabled"]
 +
