@@ -11,16 +11,17 @@ Depending on your organization, its licensing, and its entitlements, you might n
 [%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability to | Notes
-|Organization Administrator | At the root organization level, perform most Anypoint Platform tasks, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions.
+|Organization Administrator a| 
 
-Access the Organization Administration page.
-Add and manage users and permissions, view and edit organization details, access *API Manager > Client Applications*, access the client ID and client secret for the organization, and customize the theme of the Developer Portal.
+* Perform most Anypoint Platform tasks, including but not limited to secrets management, network administration, and other view, modify, execute, and delete permissions.
+* Access the Organization Administration page.
+* Add and manage users and permissions.
+* View and edit organization details, access *API Manager > Client Applications*, access the client ID and client secret for the organization, and customize the theme of the Developer Portal.
+* Edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. |
 
-Edit all versions of all APIs, all registered applications, and all API Portals in Anypoint Platform. |
-
-For security reasons, MuleSoft recommends distributing this permission to as few users as possible.
+For security reasons, assign this permission to as few users as possible.
 |Audit Log Config Manager| Configure the retention period for audit logs across the organization. 
-| Apply this permission at the root organization level.
+| include::partial$include-root-org-permissions-note.adoc[]
 
 This permission appears only if the organization has the modern UI enabled in access management. 
 |Audit Log Viewer | View audit logs in Access Management.| 
@@ -33,7 +34,9 @@ This permission appears only if the organization has the modern UI enabled in ac
 |===
 |Required Permissions | Grants the Ability to | Notes
 |Anypoint Code Builder Developer | Create and use cloud IDE instances of Anypoint Code Builder.  | This permission does not apply to Anypoint Code Builder for Desktop. 
-|Mule Developer Generative AI User | Use natural language prompts to develop and generate flows using the Einstein for Anypoint Code Builder Generative Flows feature. |
+
+include::partial$include-root-org-permissions-note.adoc[]
+|Mule Developer Generative AI User | Use natural language prompts to develop and generate flows using the Einstein for Anypoint Code Builder Generative Flows feature. |include::partial$include-root-org-permissions-note.adoc[]
 |===
 
 
@@ -52,7 +55,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 |===
 |Required Permissions | Grants the Ability to | Notes
 |API Experience Hub Admin| View, create, modify, and delete content in API Experience Hub.| 
-|API Experience Hub Community User| View, but not modify content in API Experience Hub.| 
+|API Experience Hub Users Approver | Approve or reject new user access requests and manage existing members' access.|
 |===
 
 
@@ -82,11 +85,13 @@ Users can also execute any actions related to API configurations, groups, proxie
 | Manage APIs Configuration | View and modify API configurations in the specified environment. |
 | Manage Client Applications | Create and manage client applications in the root organization. |
 Users with this permission can view and modify application credentials and can add and remove client owners.
+
+include::partial$include-root-org-permissions-note.adoc[]
 |Manage Contracts | View, accept, reject, and delete contracts and tiers in the specified environment.|
 |Manage Policies | View, create, modify, and delete API policies in the specified environment. |
 |View API Alerts | View the API alerts in the specified environment. |
 |View APIs Configuration | View API configurations in the specified environment. |
-|View Client Applications| View client applications in the root organization. |
+|View Client Applications| View client applications in the root organization. |include::partial$include-root-org-permissions-note.adoc[]
 Users with this credential can't view application secrets and can't modify applications.
 |View Contracts | View contracts and tiers in the specified environment. |
 |View Policies | View API policies in the specified environment. |
@@ -685,7 +690,7 @@ In RPA Manager:
 [%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability to | Notes
-| Usage Viewer| View usage reports.|
+| Usage Viewer| View usage reports.| include::partial$include-root-org-permissions-note.adoc[]
 |===
 
 == Visualizer
@@ -693,6 +698,6 @@ In RPA Manager:
 [%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability to | Notes
-|Visualizer Editor | View, create, modify, and delete content in Anypoint Visualizer.|
+|Visualizer Editor | View, create, modify, and delete content in Anypoint Visualizer.|include::partial$include-root-org-permissions-note.adoc[]
 |===
 

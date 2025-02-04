@@ -1,19 +1,35 @@
 = Mapping Single Sign-On Users to Roles or Teams
 :page-aliases: map-users-roles-ldap-task.adoc
+ 
+Map the users in a federated organization's group to a team or role to ensure secure credentials and to maintain organizational structure for accessing privileged information. Users in an external organization can then sign in to Anypoint Platform using the same organizational credentials and access permissions that an external organization maintains using SAML, OpenID Connect (OIDC), or LDAP. 
 
-You can map users in a federated organization's group to a team or role. Your Anypoint Platform organization must use an external identity provider, such as PingFederate.
+Anypoint Platform requires different information from your identity provider (IdP) based on whether you use SAML, OpenID Connect, or LDAP. User mappings apply only to the IdP you configured them for. 
 
-After you have mapped them, users in an organization can sign in to Anypoint Platform using the same organizational credentials and access permissions that an organization maintains using SAML, OpenID Connect (OIDC), or LDAP. 
+== Before You Begin
 
-This helps to ensure secure credentials and to maintain organizational structure for accessing privileged information.
+* You must have the Organization Administrator permission in the root Anypoint Platform organization.
+* Configure an external identity provider (IdP), such as PingFederate, for your Anypoint Platform organization.
+* Create and configure the single sign-on (SSO) app in your IdP.
+* Ensure the user or identity of the group of users is created in the identity provider.
 
-Anypoint Platform requires different information from your identity provider (IdP) based on whether you use SAML, OpenID Connect, or LDAP. User mappings apply only to the IdP for which you configure them.
+== Add Group Mappings
+
+include::partial$include-nav-teams.adoc[] 
+
+. Select the team to add the external IdP group to.
+. Select *External IdP Groups*.
+. Enter the name of the group in *Group Name*.
+. In *Provider Name*, select the name of the identity provider.
+. In *Type*, select *Member*, and then click *Add*.
+. Click *Save Changes*.
++
+The SSO users associated with the group you mapped are assigned to the team.
 
 == Configure Multiple Group Mappings for Single Sign-On Using SAML
 
 If your organization uses single sign-on but also requires you to obtain permissions from multiple groups, you can configure an attribute that contains all of the groups from which you need to obtain individual access permission. In many cases, you can create an array of groups.
 
-For example, assume that your IDP provides your groups in the following format:
+For example, if your IDP provides your groups in this format, you must create an attribute that encompasses multiple group mappings to prevent security vulnerabilities:
 
 ----
 <ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
@@ -24,16 +40,13 @@ For example, assume that your IDP provides your groups in the following format:
 </ns2:Attribute>
 ----
 
-To prevent security vulnerabilities, Anypoint Platform requires you to create an attribute that encompasses multiple group mappings:
-
+In this example of a SAML assertion, the *Group Attribute* is `Groups`:
 ----
 <ns2:Attribute Name="Groups" NameFormat="urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified">
   <ns2:AttributeValue>Mule_Org_Admin_XXX</ns2:AttributeValue>
   <ns2:AttributeValue>Mule_Exchange_XXX</ns2:AttributeValue>
 </ns2:Attribute>
 ----
-
-In the above example of a SAML assertion, the *Group Attribute* is `Groups`.
 
 Verify that the value in the *Group Attribute* field matches the name of the SAML attribute that contains the group names.
 
@@ -41,7 +54,7 @@ Verify that the value in the *Group Attribute* field matches the name of the SAM
 == Configure Multiple Group Mappings for Single Sign-On Using OpenID Connect (OIDC)
 
 External identity providers format groups claims in different ways.
-Anypoint Platform checks the `UserInfo` response for the groups claim. If it is not found, it then checks the `Token` endpoint response.
+Anypoint Platform checks the `UserInfo` response for the groups claim. If the response for the groups claim isn't found, Anypoint Platform then checks the `Token` endpoint response.
 
 Use groups claims values to create a team or role for each group of users in your organization:
 
@@ -52,11 +65,11 @@ Use groups claims values to create a team or role for each group of users in you
 [[oidc-examples]]
 === Examples of OIDC Group Expressions
 
-The following examples show responses from the `UserInfo` or `Token` endpoints that contain groups claims from different external identity providers.
+These examples show responses from the `UserInfo` or `Token` endpoints that contain groups claims from different external identity providers.
 
 ==== Entra ID
 
-The following example shows a typical Entra ID groups claim:
+This example shows a typical Entra ID groups claim:
 
 [source,xml]
 ----
@@ -74,7 +87,7 @@ Given that groups claim, the JSONata expression is `$eval($string(roles))`.
 
 ==== Okta
 
-The following example shows a typical Okta groups claim:
+This example shows a typical Okta groups claim:
 
 [source,xml]
 ----
@@ -91,7 +104,7 @@ Given that groups claim, the JSONata expression is `groups`.
 
 ==== Auth0
 
-The following example shows a typical Auth0 groups claim:
+This example shows a typical Auth0 groups claim:
 
 [source,xml]
 ----
@@ -108,7 +121,7 @@ Given that groups claim, the JSONata expression is +https://anypoint.mulesoft.co
 
 ==== Salesforce
 
-The following example shows a typical Salesforce groups claim:
+This example shows a typical Salesforce groups claim:
 
 [source,xml]
 ----
@@ -125,9 +138,12 @@ Given that groups claim, the JSONata expression is `$split(custom_attributes.Per
 [[configure-multiple-group-mappings-ldap]]
 == Configure Multiple Group Mappings for Single Sign-On Using LDAP
 
-You can obtain the information you need to map your LDAP group to a team or role using a SAML assertion. Note that user management through LDAP is available only for Anypoint Platform Private Cloud Edition.
+You can obtain the information you need to map your LDAP group to a team or role using a SAML assertion.
 
-Example string from your SAML assertion AttributeValue to the External Group Name:
+[NOTE]
+User management through LDAP is available only for Anypoint Platform Private Cloud Edition.
+
+This is an example string from the SAML assertion `AttributeValue` to the *External group name*:
 
 [source,xml,linenums]
 ----
@@ -135,8 +151,9 @@ Example string from your SAML assertion AttributeValue to the External Group Nam
   xsi:type="xs:string">cn=jira-users,ou=groups,dc=muleforge,dc=org</saml:AttributeValue>
 ----
 
-Mapping:
+This shows an example of an external group mapping:
 
+// Verify this image
 image::external-identity-cfb1e.png["An example of a list of external group names"]
 
 == Map SSO Users to Teams
@@ -152,7 +169,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-teams.adoc[]
 
-. Click the team you want to modify.
+. Click the team to modify.
 . Click the *External IdP Groups* tab.
 . In the *Group Names* field, enter one of the following: 
 * SAML: The group attribute that comes from your array of SAML groups
