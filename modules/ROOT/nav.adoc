@@ -2,6 +2,8 @@
 * xref:index.adoc[Overview]
 * xref:iam-release-notes.adoc[Release Notes]
 * xref:unified-identity-management.adoc[]
+ ** xref:uiam-permission-management.adoc[]
+ ** xref:uiam-access-ap-from-salesforce-home-org.adoc[]
 * xref:managing-your-account.adoc[]
 * xref:users.adoc[]
 * xref:business-groups.adoc[]

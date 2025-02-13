@@ -1,0 +1,4 @@
+= Accessing MuleSoft Anypoint Platform from Your Salesforce Home Org
+
+. Log in to your Salesforce Home org.
+. 
