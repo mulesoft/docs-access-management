@@ -1,0 +1,18 @@
+= Unified Identity Management
+
+Unified identity management provides a single place to manage users from their Salesforce home org, which simplifies user management and reduces redundancy as users have only one user ID across both Salesforce and Anypoint Platform. All forms of authentication are managed in the Salesforce home org.
+
+All users are created and maintained in the Salesforce home org. Users in the Salesforce home org who are assigned MuleSoft permissions only need to log in to their Salesforce home org to seamlessly navigate to the connected Anypoint Platform org and use Anypoint Platform features. 
+
+Unified identity management ensures a seamless user experience, eliminates the need for multiple user accounts, and enhances security by centralizing identity management. 
+
+== Salesforce Home Org
+
+== Permission Management from the Salesforce Home Org
+
+Anypoint Platform-specific permissions are still managed in Anypoint Platform. 
+
+The Salesforce home org is the single identity provider for the connected Anypoint Platform org. The Salesforce home org administrator determines who in their org can access Anypoint Platform and with what privileges. There are two permissions the Salesforce home org admin can assign: 
+
+* MuleSoft Administrator
+*  MuleSoft User
