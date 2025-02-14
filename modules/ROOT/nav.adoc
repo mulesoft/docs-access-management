@@ -4,8 +4,8 @@
 * xref:unified-identity-management.adoc[]
  ** xref:uiam-permission-management.adoc[]
  ** xref:uiam-access-ap-from-salesforce-home-org.adoc[]
-* xref:managing-your-account.adoc[]
-* xref:users.adoc[]
+// * xref:managing-your-account.adoc[]
+// * xref:users.adoc[]
 * xref:business-groups.adoc[]
  ** xref:organization.adoc[]
  ** xref:managing-business-groups.adoc[]
@@ -17,6 +17,8 @@
   *** xref:teams-example.adoc[]
  ** xref:roles.adoc[Roles]
 * xref:multi-factor-authentication.adoc[]
+
+////
 * xref:external-identity.adoc[]
  ** xref:sso-prerequisites-about.adoc[]
  ** xref:external-identity-index.adoc[]
@@ -35,6 +37,8 @@
  ** xref:conf-client-mgmt-pf-task.adoc[]
  ** xref:configure-client-management-openid-task.adoc[]
  ** xref:configure-client-management-entra-id.adoc[]
+////
+
 * xref:connected-apps-overview.adoc[]
  ** xref:connected-apps-org-admin.adoc[]
  ** xref:connected-apps-developers.adoc[]

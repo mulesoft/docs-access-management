@@ -1,8 +1,13 @@
-= Managing Permissions in the Salesforce Home Org
+= Managing Permissions 
 
-The Salesforce Home org is the single identity provider for the connected Anypoint Platform org. The Salesforce Home org administrator determines who in their org can access Anypoint Platform and with what privileges. 
+The Salesforce Home org is the single identity provider for the connected Anypoint Platform org. Anypoint Platform-specific permissions are managed in Anypoint Platform. 
 
-== MuleSoft Anypoint Platform Permissions
+[[manage-permissions-salesforce-home]]
+== Manage Permissions in the Salesforce Home Org
+
+The Salesforce Home org administrator determines who in their org can access Anypoint Platform and with what privileges. 
+
+=== MuleSoft Anypoint Platform Permissions
 
 There are two permission sets the Salesforce Home org admin can assign to users for MuleSoft Anypoint Platform: 
 
@@ -15,7 +20,8 @@ Gives users in your Salesforce Home org permission to access the associated Mule
 
 When a user record in the Salesforce Home org is given one of these permission sets, a corresponding MuleSoft Anypoint Platform account is automatically created. The user can then access their MuleSoft Anypoint Platform account by authenticating with their Salesforce account. All Anypoint Platform users are also Salesforce users.
 
-== Assign Permissions to Users
+[[assign-permissions-salesforce-home]]
+=== Assign Permissions to Users
 
 User permissions are managed in the Saleforce Home org Setup page.
 
@@ -29,6 +35,61 @@ User permissions are managed in the Saleforce Home org Setup page.
 . Click *Add*, then click *Save*.
 
 After a user is assigned either the Anypoint User or Anypoint Admin permission, when they log in to the Salesforce Home org, they see the MuleSoft Anypoint platform welcome page, where they can directly access Anypoint Platform.
+
+[[manage-permissions-anypoint]]
+== Manage Permissions in Anypoint Platform
+
+[[grant-user-permissions]]
+=== Grant Permissions to Users
+
+Organization administrators manage user access to Anypoint Platform features and functionality using xref:teams.adoc[teams] or by granting permissions to users individually. 
+
+For more information about configuring Teams, see xref:configure-teams.adoc#manage-team-permissions[Manage Team Permissions].
+
+In the *Users* page, click a user name to access more information about that user, manage and view permissions, manage and view teams, or reset their password.
+
+By default, in every new organization and business group, you can assign the following:
+
+* Assign API permissions: Select the name of the API you want to give access to, then pick a version and permission.
+* Assign Runtime Manager permissions: Select the name of the Runtime Manager environment to give access to, then pick a permission.
+* Assign teams: Select the name of the team to give access to.
+* Assign roles (deprecated): Select the name of the role to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
+
+To grant permissions to individual users: 
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-users.adoc[]
+
+. Click the name of the user to assign permissions to.
+. Click the *Permissions* tab and click *Add permissions*.
+. Select the permissions to add and click *Next*.
++
+The list of *Permissions* includes all permissions, even if they are already assigned to users. If you add a permission that's already assigned, there is no effect.
+. Select the business groups to apply the permissions to. 
++
+Select which environments to apply the permission to if it's enabled for the permission. 
+. Click *Next*.
+. Review the permissions and the business groups and environments they apply to, and then click *Add Permissions*.
++
+The user now has the permissions you selected in the business groups and environments you specified.
+
+[[removing-permissions-from-user]]
+=== Remove Permissions for a User
+
+You can remove user permissions for an individual user, but if those permissions are granted through an assigned team, you can remove them only by using the xref:teams.adoc[Teams] feature. You can't view or remove team-based permissions in the *Users* page.
+
+To edit or remove permissions for an individual user:
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+include::partial$include-nav-users.adoc[]
+
+. Click the name of the user to edit permissions for.
+. In the row that has the permissions to edit, click *Edit*.
++
+The *Edit Permissions* dialog shows the permissions that are assigned to the user.
+. Deselect the permissions to remove from the user, and then click *Done*.
 
 
 
