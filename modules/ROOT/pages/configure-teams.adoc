@@ -111,9 +111,11 @@ When you send an email to invite a new user to your organization, the user is au
 
 For more information about inviting a user to an existing team via email, see xref:users.adoc#inviting-a-user-to-anypoint-platform[Inviting a User to Anypoint Platform].
 
+////
 === Add Users Via External Group Mapping
 
 If you use single sign-on (SSO) using SAML, OIDC, or LDAP, you can map SSO users to teams. For more information, see xref:map-users-roles-teams.adoc[Map SSO Users to Teams].
+////
 
 [[change-team-name]]
 == Change the Name of Your Team
@@ -150,4 +152,4 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 * xref:teams.adoc[]
 * xref:teams-example.adoc[]
-* xref:map-users-roles-teams.adoc[]
+// * xref:map-users-roles-teams.adoc[]

@@ -1,8 +1,4 @@
 = Environments
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
-:page-aliases: managing-cloudhub-environments.adoc
 
 Anypoint Platform enables you to create and manage separate deployment environments for APIs and applications.  These environments are independent from each other and enable you to test your applications under the same conditions as your production environment.
 
@@ -18,9 +14,11 @@ Sandbox environments enable you to safely test an application without affecting 
 
 * **Design environment**: Enables you to test and run applications at design time. This environment is used by the Design Center application. By default, a new Anypoint Platform account contains one design environment with one vCore assigned to it. Only applications deployed from Design Center can target this environment; you can't deploy an application to a runtime registered in the Design environment using Runtime Manager.
 
+////
 == Adding Users to an Environment
 
-You cannot grant users access to an environment directly. To grant a user access to an environment use role permissions. See xref:roles.adoc#assigning-permissions-to-roles[Assigning Permissions to Roles] for more information.
+You can't grant users access to an environment directly. To grant a user access to an environment use role permissions. See xref:roles.adoc#assigning-permissions-to-roles[Assigning Permissions to Roles] for more information.
+////
 
 == To Create a New Environment
 
@@ -34,7 +32,7 @@ include::partial$include-nav-environments.adoc[]
 . Enter a name for the environment.
 . Select the environment type.
 +
-NOTE: You cannot change the environment type after you create your environment.
+NOTE: You can't change the environment type after you create your environment.
 
 . Select at least one xref:managing-api-clients.adoc[client provider] for your environment.
 . Optionally, if you added more than one client provider, click *Set as default* to designate a default client provider. If you do not select a default client provider, the first client provider that you added is the default.
@@ -72,13 +70,14 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-environments.adoc[]
 
-. Click the name of the environment whose client ID/secret you want to view.
+. Click the name of the environment whose client ID and secret you want to view.
 
 [NOTE]
 --
 To change the client secret for an environment, see https://help.mulesoft.com/s/article/How-to-set-or-reset-environment-client-secret-in-Anypoint-Platform[this help article], or contact your customer support representative.
 --
 
+////
 [[add-an-idp-to-an-existing-environment]]
 == Associate a Client Provider with an Existing Environment
 
@@ -100,7 +99,7 @@ The update applies only to new APIs in this environment. If you want to change t
 [[remove-an-idp-from-an-environment]]
 == Remove a Client Provider from an Environment
 
-You can remove a client provider from an environment at any time. However, prior to removing the default client provider, specify another client provider as default.
+You can remove a client provider from an environment at any time. However, before removing the default client provider, specify another client provider as default.
 
 When you remove all external client providers from an environment, the built-in Anypoint Platform client provider becomes the default client provider for that environment.
 
@@ -115,3 +114,4 @@ include::partial$include-nav-environments.adoc[]
 . Click *Update*.
 
 The client provider is removed. Any assets or APIs that were associated with the client provider continue to use it until you associate them with a new client provider.
+////

@@ -15,7 +15,7 @@
  ** xref:teams.adoc[]
   *** xref:configure-teams.adoc[]
   *** xref:teams-example.adoc[]
- ** xref:roles.adoc[Roles]
+ // ** xref:roles.adoc[Roles]
 * xref:multi-factor-authentication.adoc[]
 
 ////
@@ -30,7 +30,7 @@
   *** xref:conf-openid-connect-task.adoc[]
   **** xref:update-user-profile-task.adoc[]
   *** xref:test-external-identity-task.adoc[]
-  ** xref:map-users-roles-teams.adoc[]
+ ** xref:map-users-roles-teams.adoc[]
   ** xref:conf-ldap-private-cloud-task.adoc[]
 * xref:managing-api-clients.adoc[]
  ** xref:conf-client-mgmt-openam-task.adoc[]

@@ -557,6 +557,7 @@ Properties: None
 
 ====
 
+////
 === Roles
 
 
@@ -609,6 +610,7 @@ Properties: New mapping
 Properties: Role metadata
 
 |===
+////
 
 === Permissions
 
