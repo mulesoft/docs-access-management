@@ -1,4 +1,4 @@
-== Managing Permissions in the Salesforce Home Org
+= Managing Permissions in the Salesforce Home Org
 
 The Salesforce home org is the single identity provider for the connected Anypoint Platform org. The Salesforce home org administrator determines who in their org can access Anypoint Platform and with what privileges. 
 
