@@ -2,15 +2,33 @@
 
 The Salesforce home org is the single identity provider for the connected Anypoint Platform org. The Salesforce home org administrator determines who in their org can access Anypoint Platform and with what privileges. 
 
-== Giving Users MuleSoft Permissions
+== MuleSoft Anypoint Platform Permissions
 
-There are two permissions the Salesforce Home org admin can assign to users for MuleSoft Anypoint Platform: 
+There are two permission sets the Salesforce Home org admin can assign to users for MuleSoft Anypoint Platform: 
 
-* Access Anypoint Platform
+* Anypoint User
 +
-Gives users in your Salesforce Home org permission to access the associated MuleSoft Anypoint Platform org as a non-admin (general) user.
-* Manage Anypoint Platform
+Gives users in your Salesforce Home org permission to access the associated MuleSoft Anypoint Platform org as a non-admin (general) user. This permission set includes the *Access Anypoint Platform* permission, which can be used in other permission sets.
+* Anypoint Admin
 +
-Gives users in your Salesforce Home org permission to access the associated MuleSoft Anypoint Platform org as an Anypoint Platform root xref:permissions-by-product.adoc#access-management[organization administrator].
+Gives users in your Salesforce Home org permission to access the associated MuleSoft Anypoint Platform org as an Anypoint Platform root xref:permissions-by-product.adoc#access-management[organization administrator]. This permission set includes the *Manage Anypoint Platform* permission, which can be used in other permission sets.
 
-When a user record in the Salesforce Home org is given one of these permissions, a corresponding MuleSoft Anypoint Platform account is automatically created. The user can then access their MuleSoft Anypoint Platform account by authenticating with their Salesforce account. All Anypoint Platform users are also Salesforce users.
+When a user record in the Salesforce Home org is given one of these permission sets, a corresponding MuleSoft Anypoint Platform account is automatically created. The user can then access their MuleSoft Anypoint Platform account by authenticating with their Salesforce account. All Anypoint Platform users are also Salesforce users.
+
+== Assign Permissions to Users
+
+User permissions are managed in the Saleforce home org Setup page.
+
+. From *Setup*, in the Quick Find box, enter `users`, and select *Users*.
+. Select the user to grant the permission to. 
+. In *Permission Set Assignments*, click *Edit Assignments*.
+. In *Available Permission Sets*, select the permission to assign to the user:
++
+* Anypoint User
+* Anypoint Admin 
+. Click *Add*, then click *Save*.
+
+After a user is assigned either the Anypoint User or Anypoint Admin permission, when they log in to the Salesforce Home org, they see the MuleSoft Anypoint platform welcome page, where they can directly access Anypoint Platform.
+
+
+
