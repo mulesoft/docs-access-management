@@ -1,5 +1,21 @@
 = Accessing MuleSoft Anypoint Platform from Your Salesforce Home Org
 
+After you are assigned the *Anypoint User* or *Anypoint Admin* permission:  
 
 . Log in to your Salesforce Home org.
-. 
++
+After you log in, you see the *Anypoint Home* tab. 
+. Click *Continue to Anypoint Platform*.
++
+You see the Anypoint Platform landing page.
+. Optionally, select *Skip this page when opening Anypoint*. 
+If you select this option, the next time you log in, you go directly to the Anypoint Platform landing page, rather than the Salesforce Home org page. 
+. To return to the Salesforce Home org, click the Salesforce logo. 
++
+image:go-to-salesforce-home.png["Salesforce logo selected"]
+
+== See Also
+
+* xref:uiam-permission-management.adoc[]
+* xref:unified-identity-management.adoc[]
+
