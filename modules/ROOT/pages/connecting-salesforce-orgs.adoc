@@ -1,7 +1,8 @@
 = Establish a Tenant Relationship With a Trusted Salesforce Organization
 
-Ways to establish a tenant relationship include:
+A tenant relationship between Anypoint Platform and Salesforce orgs is established when:
 
+* You have a Salesforce Home org with the MuleSoft Integration license.
 * A Salesforce organization is provisioned with the tenant relationship with an Anypoint Platform organization already established. In this case, the Anypoint Platform organization administrator just needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the connection] in Anypoint Platform. 
 * The Anypoint Platform organization administrator initiates the tenant relationship in Anypoint Platform and the Salesforce organization administrator completes the setup in the Salesforce organization.   
 
@@ -69,5 +70,6 @@ You return to the *Connection to MuleSoft Anypoint Platform* page. The page show
 
 == See Also
 
+* xref:unified-identity-management.adoc[]
 * xref:trusted-salesforce-org.adoc[]
 * xref:managing-connected-salesforce-orgs.adoc[]
