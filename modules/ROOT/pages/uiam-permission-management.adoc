@@ -1,6 +1,12 @@
 = Managing Permissions 
 
-The Salesforce Home org is the single identity provider for the connected Anypoint Platform org. Anypoint Platform-specific permissions are managed in Anypoint Platform. 
+The Salesforce Home org is the single identity provider for the connected Anypoint Platform org. Anypoint Platform-specific permissions like teams and business groups and more fine-grained access to Anypoint Platform products and features are managed in Anypoint Platform. 
+
+== Before you Begin
+
+All users with the Salesforce Integration license also have access to the *MuleSoft Integration* profile. 
+
+To have access to unified identity management in a Salesforce Home org, you must have the MuleSoft Integration Add-on license for your Salesforce org.
 
 [[manage-permissions-salesforce-home]]
 == Manage Permissions in the Salesforce Home Org

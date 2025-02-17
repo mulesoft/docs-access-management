@@ -1,16 +1,16 @@
 = Unified Identity Management
 
-Unified identity management provides a Salesforce Home org, a single place to create and manage users. The Salesforce Home org simplifies user management and reduces redundancy as users have only one user ID across both Salesforce and Anypoint Platform. All forms of authentication are managed in the Salesforce Home Org.
+Unified identity management provides an established trusted relationship between a Salesforce org and Anypoint Platform org with no additional manual setup required. This established trust provides a Salesforce Home org where users are created and managed. The Salesforce org can be an existing or new Salesforce org, and the Anypoint Platform org is a _new_ org. 
 
-All users are created and maintained in the Salesforce Home org. Users in the Salesforce Home org who are assigned MuleSoft permissions only need to log in to their Salesforce Home org to seamlessly navigate to the connected Anypoint Platform org to use Anypoint Platform features. 
+Users in the Salesforce Home org who are assigned MuleSoft permissions by the Salesforce admin need only to log in to their Salesforce Home org with a single ID to seamlessly navigate to the connected Anypoint Platform org and use Anypoint Platform features. 
+
+The Salesforce Home org simplifies user management and reduces redundancy as users have only one user ID across both Salesforce and Anypoint Platform. All forms of authentication are managed in the Salesforce Home Org.
 
 Unified identity management ensures a seamless user experience, eliminates the need for multiple user accounts, and enhances security by centralizing identity management in the Salesforce Home org. 
 
-Anypoint Platform-specific permissions are managed in Anypoint Platform. 
-
 == Before you Begin
 
-You must have the MuleSoft Integration license for your Salesforce org.
+You must have the MuleSoft Integration Add-on license for your Salesforce org. If you don't have the MuleSoft Integration Add-on license, contact your account representative. 
 
 
 == See Also
