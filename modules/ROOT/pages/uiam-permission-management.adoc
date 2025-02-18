@@ -20,7 +20,7 @@ There are two permission sets the Salesforce Home org admin can assign to users 
 * Anypoint User
 +
 Gives users in your Salesforce Home org permission to access the associated MuleSoft Anypoint Platform org as a non-admin (general) user. This permission set includes the *Access Anypoint Platform* permission, which can be used in other permission sets.
-* Anypoint Admin
+* Anypoint Admin User
 +
 Gives users in your Salesforce Home org permission to access the associated MuleSoft Anypoint Platform org as an Anypoint Platform root xref:permissions-by-product.adoc#access-management[organization administrator]. This permission set includes the *Manage Anypoint Platform* permission, which can be used in other permission sets.
 
@@ -81,9 +81,9 @@ Select which environments to apply the permission to if it's enabled for the per
 The user now has the permissions you selected in the business groups and environments you specified.
 
 [[removing-permissions-from-user]]
-=== Remove Permissions for a User
+=== Remove Anypoint Platform-specific Permissions for a User
 
-You can remove user permissions for an individual user, but if those permissions are granted through an assigned team, you can remove them only by using the xref:teams.adoc[Teams] feature. You can't view or remove team-based permissions in the *Users* page.
+You can remove Anypoint Platform-specific user permissions for an individual user in Anypoint Platform, but if those permissions are granted through an assigned team, you can remove them only by using the xref:teams.adoc[Teams] feature. You can't view or remove team-based permissions in the *Users* page.
 
 To edit or remove permissions for an individual user:
 
