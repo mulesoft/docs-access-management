@@ -97,5 +97,14 @@ include::partial$include-nav-users.adoc[]
 The *Edit Permissions* dialog shows the permissions that are assigned to the user.
 . Deselect the permissions to remove from the user, and then click *Done*.
 
+== External Client Apps
+
+External client apps are managed in the Salesforce Home org. External client apps enable a third-party application to integrate with Salesforce using APIs and security protocols. External client apps provide single sign-on (SSO) and use OAuth protocols to authorize third-party apps. The third-party applications that are integrated with Salesforce can run on the customer success platform as well as other platforms, devices, or SaaS subscriptions.
+
+== See Also
+
+* xref:unified-identity-management.adoc[]
+* https://help.salesforce.com/s/articleView?id=xcloud.external_client_apps.htm&type=5[External Client Apps]
+
 
 

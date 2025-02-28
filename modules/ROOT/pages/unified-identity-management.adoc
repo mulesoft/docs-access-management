@@ -1,12 +1,19 @@
 = Unified Identity Management
 
-Unified identity management provides an established trusted relationship between a Salesforce org and Anypoint Platform org with no additional manual setup required. This established trust provides a Salesforce Home org where users are created and managed. The Salesforce org can be an existing or new Salesforce org, and the Anypoint Platform org is a _new_ org. 
+Unified identity management provides an established trusted relationship between your Salesforce org (the Salesforce Home org) and an Anypoint Platform org. Trust between the Salesforce Home org and Anypoint Platform org is automatic, so you can easily use MuleSoft assets from Salesforce, and use Salesforce capabilities in MuleSoft products with no additional manual setup. 
 
-Users in the Salesforce Home org who are assigned MuleSoft permissions by the Salesforce admin need only to log in to their Salesforce Home org with a single ID to seamlessly navigate to the connected Anypoint Platform org and use Anypoint Platform features. 
+The Salesforce Home org can be an existing or new Salesforce org, but the connected Anypoint Platform org must be a _new_ org. 
 
-The Salesforce Home org simplifies user management and reduces redundancy as users have only one user ID across both Salesforce and Anypoint Platform. All forms of authentication are managed in the Salesforce Home Org.
+Unified identity management provides these benefits:
+
+* Easy navigation between Anypoint Platform and Salesforce products with no additional authentication required.
+
+* The Salesforce Home org provides a centralized way to manage users and access, including external identity providers (IdP). This reduces redundancy because users have only one user ID across both Salesforce and Anypoint Platform. and all forms of authentication are managed in the Salesforce Home Org. 
+
+* All forms of authentication are managed in the Salesforce Home org, including the ability to provision and manage your Salesforce user identities across systems with the open standard System for Cross-Domain Identity Management (SCIM) and multi-factor authentication (MFA).
 
 Unified identity management ensures a seamless user experience, eliminates the need for multiple user accounts, and enhances security by centralizing identity management in the Salesforce Home org. 
+
 
 == Before you Begin
 
@@ -15,7 +22,9 @@ You must have the MuleSoft Integration Add-on license for your Salesforce org. I
 
 == See Also
 
+* xref:uiam-permission-management.adoc[]
 * xref:permissions-by-product.adoc[]
+
 
 
 
