@@ -1,6 +1,6 @@
 = Unified Identity Management
 
-Unified identity management provides an established trusted relationship between your Salesforce org (the Salesforce Home org) and an Anypoint Platform org. Trust between the Salesforce Home org and Anypoint Platform org is automatic, so you can easily use MuleSoft assets from Salesforce, and use Salesforce capabilities in MuleSoft products with no additional manual setup. 
+Unified identity management provides an established, trusted relationship between your Salesforce org (the Salesforce Home org) and an Anypoint Platform org. Trust between Salesforce Home and Anypoint Platform is automatic. This means you can easily use MuleSoft assets from Salesforce, and use Salesforce features in MuleSoft products without having to set up anything else. 
 
 The Salesforce Home org can be an existing or new Salesforce org, but the connected Anypoint Platform org must be a _new_ org. 
 
@@ -10,7 +10,7 @@ Unified identity management provides these benefits:
 
 * The Salesforce Home org provides a centralized way to manage users and access, including external identity providers (IdP). This reduces redundancy because users have only one user ID across both Salesforce and Anypoint Platform. and all forms of authentication are managed in the Salesforce Home Org. 
 
-* All forms of authentication are managed in the Salesforce Home org, including the ability to provision and manage your Salesforce user identities across systems with the open standard System for Cross-Domain Identity Management (SCIM) and multi-factor authentication (MFA).
+* The Salesforce Home org manages all forms of authentication. You can create and manage Salesforce user identities across systems using the open standard System for Cross-Domain Identity Management (SCIM) and multi-factor authentication (MFA).
 
 Unified identity management ensures a seamless user experience, eliminates the need for multiple user accounts, and enhances security by centralizing identity management in the Salesforce Home org. 
 
