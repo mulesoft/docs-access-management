@@ -69,7 +69,7 @@ When https://docs.microsoft.com/en-us/graph/api/application-post-applications?vi
 
 Client secrets (application password) use a string value in the Microsoft Entra application for authentication instead of a certificate for identity. 
 
-Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations and can't be reset in the Access Management UI.  
+Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations and the expiration date can't be reset. 
 
 You can create new client secrets in Anypoint Platform, but you must delete old or expired client secrets directly in your Microsoft account portal. It's best practice to remove expired secrets promptly. 
 
@@ -91,7 +91,6 @@ During token introspection, Anypoint Platform calls `https://graph.microsoft.com
 
 [NOTE]
 Use the token enforcement policy implementation version 1.7 and later so that during token introspection, Anypoint Platform calls `https://graph.microsoft.com/v1.0` directly, bypassing the internal Anypoint Platform component.
-
 
 To use this policy, follow the documentation on <<oauth2>> to generate supported tokens.
 
