@@ -69,7 +69,7 @@ When https://docs.microsoft.com/en-us/graph/api/application-post-applications?vi
 
 Client secrets (application password) use a string value in the Microsoft Entra application for authentication instead of a certificate for identity. 
 
-Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations and can't be reset.  
+Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations and can't be reset in the Access Management UI.  
 
 You can create new client secrets in Anypoint Platform, but you must delete old or expired client secrets directly in your Microsoft account portal. It's best practice to remove expired secrets promptly. 
 
