@@ -78,16 +78,20 @@ You can create new client secrets in Anypoint Platform, but you must delete old 
 
 === Microsoft National Clouds
 
-Anypoint Platform does not support Microsoft Azure client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet.
+Anypoint Platform doesn't support Microsoft Azure client providers deployed in Microsoft national clouds, such as Azure Government or Azure China 21Vianet.
 
 [[token-validation]]
 == Token Introspection
 
-Although Microsoft Entra ID doesn't provide an introspection endpoint out of the box, Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for you] when you configure Microsoft Entra ID as a client provider following the previous flow. 
+Microsoft Entra ID doesn't provide an introspection endpoint out of the box, but Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for you] when you configure Microsoft Entra ID as a client provider following the previous flow. 
 
 When you create your client provider following the OpenID Connect DCR for Microsoft Entra ID flow, Anypoint Platform populates an introspect URL. You can view the URL using `GET /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}`. 
 
-When token introspection happens, Anypoint Platform calls `https://graph.microsoft.com/v1.0` with your provided token. As long as the response to such a call isn't a failure, the token is determined to be valid.
+During token introspection, Anypoint Platform calls `https://graph.microsoft.com/v1.0` with your provided token. As long as the response to such a call isn't a failure, the token is determined to be valid.
+
+[NOTE]
+Use the token enforcement policy implementation version 1.7 and later so that during token introspection, Anypoint Platform calls `https://graph.microsoft.com/v1.0` directly, bypassing the internal Anypoint Platform component.
+
 
 To use this policy, follow the documentation on <<oauth2>> to generate supported tokens.
 
