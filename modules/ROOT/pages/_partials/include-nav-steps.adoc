@@ -1,1 +1,0 @@
-. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
