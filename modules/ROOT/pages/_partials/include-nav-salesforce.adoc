@@ -1,0 +1,4 @@
+// Navigation to the Salesforce page
+. Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
+. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
+. Select *Salesforce* from the navigation.

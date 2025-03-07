@@ -1,6 +1,8 @@
 = Organizations
+:page-aliases: manage-your-organization-and-business-groups.adoc
 
 When you create an Anypoint Platform account, a root organization (business group) is created, and you are assigned as the owner of the organization. A root organization is a single instance of Anypoint Platform that includes all the entitlements, features, and capabilities you purchased. The owner of the root organization automatically inherits the Organization Administrator permission.
+
 
 The organization name is the name you entered in the *Company* field in the initial Anypoint Platform signup form. You can change the name in the organization settings.
 

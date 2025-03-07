@@ -1,5 +1,4 @@
-. In the Access Management navigation menu, click *Business Groups*.
-. Click the name of the business group you want to access. 
+. In the Access Management navigation menu, select *Business Groups*.
+. Click the name of the business group. 
 +
 The *Settings* section appears, showing details about the root organization or business group.
- 

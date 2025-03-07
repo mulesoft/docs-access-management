@@ -1,1 +1,3 @@
+//Navigation to the Connected Apps page
+
 . In the Access Management navigation menu, click *Connected Apps*.

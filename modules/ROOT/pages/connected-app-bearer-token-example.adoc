@@ -1,0 +1,58 @@
+= Getting the Bearer Token for a Connected App Example
+
+This example demonstrates how to create a connected app that acts on its own behalf using client credentials to get the bearer token so you can invoke Anypoint Platform APIs. 
+
+[[create-connected-app]]
+== Create a Connected App
+
+To create a connected app, add Runtime Manager scopes, and deploy the app to CloudHub:
+
+include::partial$include-nav-connected-apps.adoc[]
+
+. In *Owned Apps*, click *Create App*.
+. In *Create App*, enter a unique name for the app, select *App acts on its own behalf (client credentials)*, and then click *Save*.
+. Click *Add Scopes*.
+. Select the scopes for the app from the *Runtime Manager* section, and then click *Next*. 
++
+For information about scopes and permissions for connected apps, see the xref:connected-apps-developers.adoc#endpoint-scopes[Endpoint Scopes].
+. Select the *Business Groups* the app has permission to access the assigned scopes in and click *Next*.
+. Select the *Environments* for the business groups and scopes you selected, and click *Next*. 
+. Review the scopes you added and click *Add Scopes*.
++
+image::bearer-token-example-review-scopes.png["Add scopes review with Runtime Manager scopes selected"]
+. In *Update App*, click *Save Changes*.
+
+[[get-bearer-token]]
+== Get the bearer token
+
+To get the bearer token for the app:
+
+include::partial$include-nav-connected-apps.adoc[]
+
+. In *Owned Apps*, click *Copy Id* and save the app's client ID in a secure location.
+. Repeat the previous step to copy the app's client secret. 
+. Run the following cURL command and replace `CLIENT_ID` and `CLIENT_SECRET` with your client ID and secret:
++
+[source,command]
+----
+curl --location --request POST https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token \
+--header 'Content-Type: application/x-www-form-urlencoded' \
+--data-urlencode 'client_id=<CLIENT_ID>' \
+--data-urlencode 'client_secret=<CLIENT_SECRET>' \
+--data-urlencode 'grant_type=client_credentials'
+----
++
+You receive the following response:
++ 
+----
+{
+    "access_token": "<bearer token>",
+    "token_type": "bearer"
+}
+----
++
+Now that you have the bearer token, you can use the connected app to invoke Anypoint Platform APIs. For more examples, see https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/pages/Connected%20App%20Examples/[Connected App Examples].
+
+== See Also
+
+* xref:connected-apps-developers.adoc[]

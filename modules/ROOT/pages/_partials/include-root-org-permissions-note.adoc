@@ -1,0 +1,3 @@
+//Apply this note to any permissions that can only be added at the root org level.
+
+This permission can be added only by an organization administrator at the root organization level.

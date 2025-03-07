@@ -1,36 +1,86 @@
 = Connected Apps for Organization Administrators
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 
-As an organization administrator at the root organization or business group level, you are the only user who can view and manage connected apps in Access Management. You can use authorization policies to dictate which apps can be authorized to access user data, and you can add apps that users want to use to an allowlist.
-To manage your connected apps, navigate to *Access Management* and select the *Connected Apps* tab. You can add apps in the *Owned Apps* section and manage app access in the *Authorizations* section.
-For more information about the *Owned Apps* section, see the documentation for xref:connected-apps-developers.adoc[app developers].
+As an organization administrator at the root organization or business group level, you are the only user who can view and manage connected apps in Access Management. You can use authorization policies to dictate which apps are authorized to access user data, and you can add apps to an allowlist.
+
+[[connected-app-ownership]]
+== Connected App Ownership
+
+Connected app ownership gets transferred to the root organization owner when the user who created the connected app:
+
+* Is deleted
+* Is removed from the root organization
+* Loses administrative privileges over the organization
+
+To maintain security, manually rotate the client secrets of all connected apps in the organization after the transfer. For more information about how to manually rotate client secrets, see <<modify-client-secret>>.
+
+You can also reset client secrets programmatically using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/%236918/[Access Management API]. 
+
+== Manage Owned Apps
 
 To maintain security, you can view and manage connected apps only if you have the Organization Administrator permission in the root organization or in the business group where the connected app resides.
 
-== Authorizations
+To manage your connected apps:
 
-You can use the *Authorizations* section to manage which apps are authorized to access your users' data. Click the *...* icon next to an application to view more details or to remove the app from your organization.
-When you revoke an app’s access, the app’s OAuth 2.0 access tokens and refresh tokens are revoked, and the app can no longer access user data.
+. Navigate to *Access Management* and select the *Connected Apps* tab. 
+. Add and edit apps in the *Owned Apps* section. 
+. Manage app access in the *Authorizations* section.
 
-You can configure one of two types of authorization policies for your users:
+=== Edit the App Owner
+
+Organization administrators can edit the owner of the connected app and transfer the ownership to other administrators:
+
+. In Access Management > *Connected Apps* > *Owned Apps*, click the app name. 
+. Make the changes and click *Save changes*.
+
+[[modify-client-secret]]
+=== Modify the Client Secret for a Connected App
+
+include::partial$include-nav-connected-apps.adoc[]
+
+. Click a connected app from the list to enable edit mode.
+. In the *Secret* field, enter a secret of your choice.
+. Click *Save*.
+
+image::connected-apps-edit-mode.png[Edit mode for a connected app]
+
+[calloutlist]
+. Name and username of the owner of the connected app
+. Name of the connected app
+. ID of the connected app
+. Client secret of the connected app
+
+=== View Authorizations
+
+. In the *Authorizations* tab, select the app.
+. Click the more actions menu (*...*) for the application and select *Show details*.
+
+=== Revoke Authorization 
+
+When you revoke an app’s access, the app’s OAuth 2.0 access tokens and refresh tokens are revoked, and the app can no longer access user data. This action can't be undone.
+
+. In the *Authorizations* tab, select the app.
+. Click the more actions menu (*...*) for the selected application and select *Remove*.
+. Click *Remove*. 
+
+== Configure Authorization Policies
+
+You can configure one of these types of authorization policies for your users:
 
 * Unrestricted
-
-  Organization members can authorize any connected app to act on their behalf.
-
++
+Organization members can authorize any connected app to act on their behalf.
 * Restricted
++
+Only connected apps that are added to an allowlist by an administrator are authorized by organization members to act on their behalf.
 
-  Only connected apps that are added to an allowlist by an administrator can be authorized by organization members to act on their behalf.
+By default, the *Unrestricted* policy is enabled. If you change the policy to *Restricted*, the application allowlist is enabled, and all existing application authorizations are added automatically.
 
-By default, the **Unrestricted** policy is enabled. If you change the policy to **Restricted**, the application allowlist is enabled, and all existing application authorizations are added automatically.
-When using the **Restricted** policy, you may disable auto-approval of all internal apps, in which case each internal app must be added to the allowlist like any other connected app.
+When using the *Restricted* policy, you can disable auto-approval of all internal apps, in which case you must add each internal app to the <<application-allowlist-admin,application allowlist>> like any other connected app.
 
 [[application-allowlist-admin]]
-== Application Allowlist
+=== Application Allowlist
 
-When the allowlist is enabled, organization users can use only applications that are on the allowlist. If a user attempts to authorize an app that is not on the allowlist, they are prompted to contact their organization administrator.
+When the allowlist is enabled, organization users can use only applications that are on the allowlist. If a user attempts to authorize an app that's not on the allowlist, they are prompted to contact their organization administrator.
 
 image::connected-apps-allowlist-blocked.png["The interface the user sees when an app is not on the allowlist", 50%,50%]
 
@@ -58,3 +108,9 @@ By default, connected apps are configured at the root organization level, not at
 When you create a connected app to act on its own behalf using client credentials, you can choose which root organization or business groups to enable it in after you choose scopes.
 
 A connected app that acts on behalf of a user receives its own access and permissions based on the scopes, organizations, and business groups to which the user has access.
+
+== See Also
+
+* xref:connected-apps-developers.adoc[]
+* xref:creating-connected-apps-dev.adoc[]
+

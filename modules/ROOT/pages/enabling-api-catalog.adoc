@@ -1,0 +1,32 @@
+= Enabling API Catalog
+
+Enable a connected Salesforce organization to access and sync Anypoint Platform APIs into API Catalog in Salesforce. This capability is enabled in Anypoint Platform Access Management by an Anypoint Platform organization administrator.  
+
+[[enable-disable-api-catalog]]
+== Enable or Disable API Catalog in Anypoint Platform
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Click *Salesforce*.
+. In the section for your connected Salesforce org, switch to *Enabled* for *You allow this Salesforce org to import APIs*.
+. In *Settings for Anypoint APIs in Salesforce*, click *Continue*.
+. In *Settings*, select the Anypoint Platform business groups that allow the Salesforce organization to import Anypoint Platform APIs into its API Catalog, and click *Save settings*.
++
+[NOTE]
+Within the selected business groups, you can sync only APIs from Exchange that have managed instances and meet the prerequisite conditions. For more information, see https://help.salesforce.com/s/articleView?id=platform.api_catalog.htm[API Catalog]. 
++
+image:connected-salesforce-org-api-catalog-enabled.png["Connected Salesforce organization with both Invocable Actions and API Catalog enabled"]
++
+The Salesforce organization administrator can then sync APIs into their catalog. 
++
+https://help.salesforce.com/s/articleView?id=platform.api_catalog.htm[API Catalog].
+. After the APIs are synced, the Salesforce administrator selects individual API instances and operations and converts them into invocable actions so Salesforce developers can access them.
++
+A client ID is created.
+. An access request for the Salesforce developers selected by the Salesforce administrator is sent to the Anypoint Platform owner of that API through API Manager.
++
+After the request is accepted, Salesforce developers can start using the API.
+
+== See Also
+
+xref:connecting-salesforce-orgs.adoc[]

@@ -1,15 +1,15 @@
 = Audit Logging
 
-The audit logging service provides a queryable history of actions performed within the Anypoint Platform. It keeps track of all users who have interacted with objects in the system, and timestamps those actions. It also provides mechanisms for querying the set of users who have performed actions, the set of objects that had actions performed on them, and other endpoints that enable the querying of log entries.
+The audit logging service provides a queryable history of actions performed within Anypoint Platform. It keeps track of all user interactions with objects in the system and timestamps those actions. Audit logging also provides mechanisms for querying the set of users who performed actions, the set of objects that had actions performed on them, and other endpoints that enable log entry querying.
 
-Audit logs have a default retention period of one year. If your organization was created before July 10, 2023 and you did not manually change the retention period, the retention period is six years. Users who have the Organization Administrator and Audit Log Config Manager permission can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically to maintain your log files for longer than the current retention period.
+Audit logs have a default retention period of one year. If your organization was created before July 10, 2023 and you didn't manually change the retention period, the retention period is six years. Users who have the Organization Administrator and Audit Log Config Manager permissions can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically to retain your log files for longer than the current retention period.
 
 You can access the data logs through the audit logging query API or through the audit logging UI.
 
 [[access-audit-logging]]
 == Access Audit Logging
 
-Users who have the Organization Administrator permission or the Audit Log Viewer permission on Anypoint Platform have access to both the UI and the Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
+Users who have Anypoint Platform Organization Administrator permission or the Audit Log Viewer permission have access to both the UI and the Audit Log Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
 
 The audit log UI is embedded in Access Management.
 
@@ -20,51 +20,52 @@ include::partial$include-nav-audit-logs.adoc[]
 The *Audit Logs* page displays the logs. You can:
 
 * Download audit logs.
-* Set a time period for audit logs to display.
+* Set a time period for showing audit logs.
 * Filter audit logs by product, type, and actions.
 * Search audit logs by environment, object, and user.
 
 [[export-audit-logs]]
 == Export Audit Logs
 
-You can use the xref:monitoring::telemetry-exporter.adoc[Telemetry Exporter feature] in Anypoint Monitoring to export audit logs to third-party analytics and observability apps. 
+If you have the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can use the xref:monitoring::telemetry-exporter.adoc[Telemetry Exporter feature] in Anypoint Monitoring to export audit logs to third-party analytics and observability apps. 
 
 include::monitoring::partial$telemetry-exporter-notes.adoc[tag=auditLogDuplicates]
 
-Telemetry Exporter for audit logs currently has the following data differences, limitations, and known issues:
+Telemetry Exporter for audit logs currently has these data differences, limitations, and known issues:
 
 include::monitoring::partial$telemetry-exporter-notes.adoc[tag=knownIssuesAL]
 
 [[audit-log-content]]
 == Audit Log Contents
 
-Activities represented in the log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload which can store application-specific information such as changed fields, environment information, etc.
+Activities in the audit log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload that can store application-specific information such as changed fields, environment information, and so on.
 
 Each log entry has a set of properties that provides information about the activity:
 
-* *Time*: The timestamp when the activity occurred.
-* *Product*: The product where the object resides, for example, `Access Management`
-* *Type*: The type of the object on which the action is performed, for example, `Organization`
-* *Action*: The action associated with the object, for example, `Create`
-* *Object*: The name of the object, for example, `foo`
-* *User Name*: The user who performed the action, for example, `johndoe`
+* *Time*: Timestamp when the activity occurred
+* *Product*: Product where the object resides, for example, `Access Management`
+* *Type*: Type of object the action is performed, for example, `Organization`
+* *Action*: Action associated with the object, for example, `Create`
+* *Object*: Name of the object, for example, `foo`
+* *User Name*: User who performed the action, for example, `johndoe`
 +
 [NOTE]
 --
-Occasionally, there are `Anypoint Staff` log entries. This log entry is made when the audit action was performed by a user who does not belong to your organization. +
-`Anypoint Staff` entries are created for when these events occur:
+Occasionally, there are `Anypoint Staff` log entries. This log entry is made when the audit action was performed by a user who doesn't belong to your organization. 
 
-* An internal or system process that is a routine part of Anypoint Platform operations is performed
+`Anypoint Staff` entries are created when these events occur:
+
+* An internal or system process that's a routine part of Anypoint Platform operations is performed
 * The MuleSoft procurement staff changes entitlements for your organization as a result of license grants
 * An action is performed by a MuleSoft employee on your behalf for other purposes, such as troubleshooting
 --
 
-* *Connected App*: Name of the connected app that takes an action on behalf of a user or itself. If a connected app did not execute the action, the payload is `N/A`.
+* *Connected App*: Name of the connected app that takes an action on behalf of itself or a user. If a connected app didn't execute the action, the payload is `N/A`.
 * *Environment*: Environment names for events from API Manager, Runtime Manager, CloudHub, Partner Manager, and MQ.
-* *Parent*: (Optional) The parent of the object (if any) on which the action is performed. Mainly relevant to APIs.
-* *Payload*: (Optional) More information about the log properties. For example, if an Organization was created, then the payload would contain information about the organization and the owner, such as IDs.
+* *Parent*: (Optional) Parent of the object (if any) the action is performed on. The mainly applies to APIs.
+* *Payload*: (Optional) More information about the log properties. For example, if an organization is created, the payload contains information about the organization and the owner, such as IDs.
 
-The following is a list of actions per product and object type that Anypoint Platform audits:
+This a list of actions per product and object type that Anypoint Platform audits:
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -453,508 +454,6 @@ Properties: SLA tier
 
 The `Create Application` and `Delete Application` actions are logged at the root organization level.
 
-[[api-governance]]
-== API Governance
-
-[%header,cols="25a,15a,15a,15a,15a,30a"]
-|===
-|User Action
-|Object Type
-|Object
-|Parent
-|Action
-|Payload
-
-|Create profile
-|Profile
-|Profile name
-|N/A
-|Create
-|Subaction: None +
-Properties: None
-
-|Update profile
-|Profile
-|Profile name
-|N/A
-|Update
-|Subaction: None +
-Properties: None
-
-|Delete profile
-|Profile
-|Profile name
-|N/A
-|Delete
-|Subaction: None +
-Properties: None
-
-|Activate profile
-|Profile
-|Profile name
-|N/A
-|Activate
-|Subaction: None +
-Properties: None
-|===
-
-[[api-designer-api]]
-== API Designer APIs
-
-[%header,cols="25a,15a,15a,15a,15a,30a"]
-|===
-|User Action
-|Object Type
-|Object
-|Parent
-|Action
-|Payload
-
-|Create project
-|Project
-|Project ID
-|N/A
-|Create project
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* projectName
-
-|Delete project
-|Project
-|Project ID
-|N/A
-|Delete project
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* projectName
-
-|Delete files
-|Files
-|Project ID
-|N/A
-|Delete files
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* projectName
-
-|Rename project
-|Project
-|Project ID
-|N/A
-|Rename project
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* newProjectName
-
-|Clean branch
-|Project
-|Project ID
-|N/A
-|Clean branch
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* branchName
-
-|Create branch
-|Project
-|Project ID
-|N/A
-|Create branch
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* branchName
-
-|Delete branch
-|Project
-|Project ID
-|N/A
-|Delete branch
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* branchName
-
-|Save branch
-|Project
-|Project ID
-|N/A
-|Save branch
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* branchName
-
-|Delete file
-|Project
-|Project ID
-|N/A
-|Delete file
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* File Path
-
-|Move file
-|Project
-|Project ID
-|N/A
-|Move file
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* targetFile
-
-|Import project
-|Project
-|Project ID
-|N/A
-|Import project
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* branchName
-
-|Publish to Exchange
-|Project
-|Project ID
-|N/A
-|Publish to Exchange
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* projectName
-
-|Publish to API Platform
-|Project
-|Project ID
-|N/A
-|Publish to API Platform
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* projectName
-
-|Add dependencies
-|Project
-|Project ID
-|N/A
-|Add dependencies
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* dependencies
-
-|Remove dependencies
-|Project
-|Project ID
-|N/A
-|Remove dependencies
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* dependencies
-
-|Change dependencies
-|Project
-|Project ID
-|N/A
-|Change dependencies
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* addDependencies
-* removeDependencies
-
-|Reload dependencies
-|Project
-|Project ID
-|N/A
-|Reload dependencies
-|Subaction:
-None +
-Properties:
-
-* orgID
-* userID
-* branchName
-
-|Merge Branch
-|Project
-|Project ID
-|N/A
-|Merge Branch
-|Subaction:
-None +
-Properties:
-
-* orgID
-* projectID
-* userID
-* branchName
-
-|Share project
-|Project
-|Project ID
-|N/A
-|Share project
-|Subaction:
-None +
-Properties:
-
-* orgID
-* projectID
-* userID
-* projectID
-
-|Sync with Github
-|Project
-|Project ID
-|N/A
-|Sync with Github
-|Subaction:
-None +
-Properties:
-
-* orgID
-* projectID
-* userID
-* repositoryName
-
-|Unsync with Github
-|Project
-|Project ID
-|N/A
-|Unsync with Github
-|Subaction:
-None +
-Properties:
-
-* orgID
-* projectID
-* userID
-* projectID
-
-|Modify organization settings
-|Project
-|Organization ID
-|N/A
-|Modify organization settings
-|Subaction:
-None +
-Properties:
-
-* orgID
-* projectID
-* userID
-* projectID
-
-|Rename branch
-|Project
-|Project ID
-|N/A
-|Rename branch
-|Subaction:
-None +
-Properties:
-
-* orgID
-* projectID
-* userID
-* branchName
-
-|Modify project settings
-|Project
-|Project ID
-|N/A
-|Modify project settings
-|Subaction:
-None +
-Properties:
-
-* orgID
-* projectID
-* userID
-* projectID
-|===
-
-=== Mocking Service
-
-[%header,cols="25a,15a,15a,15a,15a,30a"]
-|===
-|User Action
-|Object Type
-|Object
-|Parent
-|Action
-|Payload
-
-|Create link
-|Link
-|Link ID
-|N/A
-|Create
-|Subaction:
-Create Link +
-Properties: Link metadata
-
-|Delete link
-|Link
-|Link ID
-|N/A
-|Delete
-|Subaction:
-Delete Link +
-Properties: Link metadata
-|===
-
-=== Portals
-
-The following actions apply to API Manager v1.x portals.
-
-[%header,cols="25a,15a,15a,15a,15a,30a"]
-|===
-|User Action
-|Object Type
-|Object
-|Parent
-|Action
-|Payload
-|Create portal
-|Portal
-|Object 1: Portal ID +
-Object 2: API Version ID
-|N/A
-|Create
-|Subaction: None +
-Properties: None
-|Modify portal association
-|Portal
-|Object 1: Portal ID +
-Object 2: API version ID
-|N/A
-|Edit
-|Subaction: Change portal association +
-Properties: None
-|Delete portal
-|Portal
-|Portal ID
-|N/A
-|Delete
-|Subaction: None +
-Properties: None
-|Add portal page
-|Portal
-|Page ID
-|Portal ID
-|Edit
-|Subaction: Add portal page +
-Properties: Page content
-|Make portal page visible
-|Portal
-|Page ID
-|Portal ID
-|Edit
-|Subaction: Make page visible +
-Properties: Page content
-|Delete portal page
-|Portal
-|Page ID
-|Portal ID
-|Delete
-|Subaction: Delete portal page +
-Properties: Page content
-|Edit portal page
-|Portal
-|Page ID
-|Portal ID
-|Edit
-|Subaction: Edit portal page +
-Properties: Page content
-|Hide portal page
-|Portal
-|Page ID
-|Portal ID
-|Edit
-|Subaction: Hide portal page +
-Properties: Page content
-|Set portal theme
-|Portal
-|Portal ID
-|N/A
-|Edit
-|Subaction: Set portal theme +
-Properties: Theme settings
-|Modify portal theme
-|Portal
-|Portal ID
-|N/A
-|Edit
-|Subaction: Modify portal theme +
-Properties: Theme settings
-|Modify portal security
-|Portal
-|Portal ID
-|N/A
-|Edit
-|Subaction: Set security +
-Properties: Public / private state
-
-|===
-
 [[access-management]]
 == Access Management
 
@@ -1054,7 +553,7 @@ Properties: None
 
 * `Login` and `Logout` actions are logged only at the organization level.
 * `Login failure` actions are logged only against existing user accounts.
-* `Login failure` actions are not logged if you are using SSO configured with LDAP or OIDC, which includes login failures to Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+* `Login failure` actions aren't logged if you are using SSO configured with LDAP or OIDC, which includes login failures to Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
 
 ====
 
@@ -1630,6 +1129,552 @@ Properties:
 
 |===
 
+[[anypoint-mq]]
+== Anypoint MQ
+
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create/modify/delete/purge queue
+|Queue
+|queueID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Queue metadata
+|Create/modify/delete exchange
+|Exchange
+|exchangeID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Exchange metadata
+|Create/delete exchange binding
+|Binding
+|bindingID
+|N/A
+|Create/delete
+|Subaction: None +
+Properties: Exchange metadata
+
+|Create/delete/regenerate client
+|Client
+|clientID
+|N/A
+|Create/delete/regenerate
+|Subaction: None +
+Properties: Client metadata
+|===
+
+[[api-designer]]
+== API Designer APIs
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create project
+|Project
+|Project ID
+|N/A
+|Create project
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Delete project
+|Project
+|Project ID
+|N/A
+|Delete project
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Delete files
+|Files
+|Project ID
+|N/A
+|Delete files
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Rename project
+|Project
+|Project ID
+|N/A
+|Rename project
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* newProjectName
+
+|Clean branch
+|Project
+|Project ID
+|N/A
+|Clean branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Create branch
+|Project
+|Project ID
+|N/A
+|Create branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Delete branch
+|Project
+|Project ID
+|N/A
+|Delete branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Save branch
+|Project
+|Project ID
+|N/A
+|Save branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Delete file
+|Project
+|Project ID
+|N/A
+|Delete file
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* File Path
+
+|Move file
+|Project
+|Project ID
+|N/A
+|Move file
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* targetFile
+
+|Import project
+|Project
+|Project ID
+|N/A
+|Import project
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Publish to Exchange
+|Project
+|Project ID
+|N/A
+|Publish to Exchange
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Publish to API Platform
+|Project
+|Project ID
+|N/A
+|Publish to API Platform
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* projectName
+
+|Add dependencies
+|Project
+|Project ID
+|N/A
+|Add dependencies
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* dependencies
+
+|Remove dependencies
+|Project
+|Project ID
+|N/A
+|Remove dependencies
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* dependencies
+
+|Change dependencies
+|Project
+|Project ID
+|N/A
+|Change dependencies
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* addDependencies
+* removeDependencies
+
+|Reload dependencies
+|Project
+|Project ID
+|N/A
+|Reload dependencies
+|Subaction:
+None +
+Properties:
+
+* orgID
+* userID
+* branchName
+
+|Merge Branch
+|Project
+|Project ID
+|N/A
+|Merge Branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* branchName
+
+|Share project
+|Project
+|Project ID
+|N/A
+|Share project
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+
+|Sync with Github
+|Project
+|Project ID
+|N/A
+|Sync with Github
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* repositoryName
+
+|Unsync with Github
+|Project
+|Project ID
+|N/A
+|Unsync with Github
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+
+|Modify organization settings
+|Project
+|Organization ID
+|N/A
+|Modify organization settings
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+
+|Rename branch
+|Project
+|Project ID
+|N/A
+|Rename branch
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* branchName
+
+|Modify project settings
+|Project
+|Project ID
+|N/A
+|Modify project settings
+|Subaction:
+None +
+Properties:
+
+* orgID
+* projectID
+* userID
+* projectID
+|===
+
+=== Mocking Service
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create link
+|Link
+|Link ID
+|N/A
+|Create
+|Subaction:
+Create Link +
+Properties: Link metadata
+
+|Delete link
+|Link
+|Link ID
+|N/A
+|Delete
+|Subaction:
+Delete Link +
+Properties: Link metadata
+|===
+
+=== Portals
+
+These actions apply to API Manager v1.x portals:
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create portal
+|Portal
+|Object 1: Portal ID +
+Object 2: API Version ID
+|N/A
+|Create
+|Subaction: None +
+Properties: None
+|Modify portal association
+|Portal
+|Object 1: Portal ID +
+Object 2: API version ID
+|N/A
+|Edit
+|Subaction: Change portal association +
+Properties: None
+|Delete portal
+|Portal
+|Portal ID
+|N/A
+|Delete
+|Subaction: None +
+Properties: None
+|Add portal page
+|Portal
+|Page ID
+|Portal ID
+|Edit
+|Subaction: Add portal page +
+Properties: Page content
+|Make portal page visible
+|Portal
+|Page ID
+|Portal ID
+|Edit
+|Subaction: Make page visible +
+Properties: Page content
+|Delete portal page
+|Portal
+|Page ID
+|Portal ID
+|Delete
+|Subaction: Delete portal page +
+Properties: Page content
+|Edit portal page
+|Portal
+|Page ID
+|Portal ID
+|Edit
+|Subaction: Edit portal page +
+Properties: Page content
+|Hide portal page
+|Portal
+|Page ID
+|Portal ID
+|Edit
+|Subaction: Hide portal page +
+Properties: Page content
+|Set portal theme
+|Portal
+|Portal ID
+|N/A
+|Edit
+|Subaction: Set portal theme +
+Properties: Theme settings
+|Modify portal theme
+|Portal
+|Portal ID
+|N/A
+|Edit
+|Subaction: Modify portal theme +
+Properties: Theme settings
+|Modify portal security
+|Portal
+|Portal ID
+|N/A
+|Edit
+|Subaction: Set security +
+Properties: Public / private state
+
+|===
+
+[[api-governance]]
+== API Governance
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+
+|Create profile
+|Profile
+|Profile name
+|N/A
+|Create
+|Subaction: None +
+Properties: None
+
+|Update profile
+|Profile
+|Profile name
+|N/A
+|Update
+|Subaction: None +
+Properties: None
+
+|Delete profile
+|Profile
+|Profile name
+|N/A
+|Delete
+|Subaction: None +
+Properties: None
+
+|Activate profile
+|Profile
+|Profile name
+|N/A
+|Activate
+|Subaction: None +
+Properties: None
+|===
+
+
 
 [[exchange]]
 == Exchange
@@ -2081,6 +2126,114 @@ Properties: Review object
 |Update
 |Subaction: None +
 Properties: Review object
+|===
+
+[[idp]]
+== IDP
+
+[%header,cols="25a,15a,20a,10a,15a,30a"]
+|===
+| User action | Object type | Object | Parent | Action | Payload
+
+| Create Document Action
+| Document Action
+| Document Action Id
+|
+| Create
+a| Subaction: none +
+Properties: 
+
+* Document Action Id
+* Timestamp
+* User Id
+* Document Action Name
+
+| Update Document Action
+| Document Action
+| Document Action Id
+|
+| Update
+a| Subaction: none +
+Properties: 
+
+* Document Action Id
+* Timestamp
+* User Id
+* Document Action Name
+
+| Add/Delete reviewers to/from a Document Action
+| Document Action
+| Document Action Id
+|
+| Update
+a| Subaction: none +
+Properties: 
+
+* Document Action Id
+* Timestamp
+* User Id
+* Reviewer Ids
+
+| Delete Document Action
+| Document Action
+| Document Action Id
+|
+| Delete
+a| Subaction: none +
+Properties: 
+
+* Document Action Id
+* Timestamp
+* User Id
+* Document Action Name
+
+| Document Action Version Created
+| Document Action Version
+| Document Action Version Id
+|
+| Create
+a| Subaction: none +
+Properties: 
+
+* Document Action Id
+* Document Action Version Id
+* Timestamp
+* User Id
+* Document Action Name
+* Document Action Version Name
+
+| Document instance is reviewed
+| Document Action Execution
+| Document Action Execution Id
+|
+| Update
+a| Subaction: none +
+Properties: 
+
+* Document Action Execution Id
+* Document Action Id
+* Timestamp
+* User Id
+|===
+
+[[object-store-v2]]
+== Object Store v2
+
+[%header,cols="25a,15a,15a,15a,15a,30a"]
+|===
+|User Action
+|Object Type
+|Object
+|Parent
+|Action
+|Payload
+|Create/modify/delete store
+|Store
+|storeID
+|N/A
+|Create/modify/delete
+|Subaction: None +
+Properties: Store metadata
 |===
 
 [[rpa]]
@@ -3037,68 +3190,11 @@ Properties:
 
 |===
 
-[[anypoint-mq]]
-== Anypoint MQ
 
 
-[%header,cols="25a,15a,15a,15a,15a,30a"]
-|===
-|User Action
-|Object Type
-|Object
-|Parent
-|Action
-|Payload
-|Create/modify/delete/purge queue
-|Queue
-|queueID
-|N/A
-|Create/modify/delete
-|Subaction: None +
-Properties: Queue metadata
-|Create/modify/delete exchange
-|Exchange
-|exchangeID
-|N/A
-|Create/modify/delete
-|Subaction: None +
-Properties: Exchange metadata
-|Create/delete exchange binding
-|Binding
-|bindingID
-|N/A
-|Create/delete
-|Subaction: None +
-Properties: Exchange metadata
 
-|Create/delete/regenerate client
-|Client
-|clientID
-|N/A
-|Create/delete/regenerate
-|Subaction: None +
-Properties: Client metadata
-|===
 
-[[object-store-v2]]
-== Object Store v2
 
-[%header,cols="25a,15a,15a,15a,15a,30a"]
-|===
-|User Action
-|Object Type
-|Object
-|Parent
-|Action
-|Payload
-|Create/modify/delete store
-|Store
-|storeID
-|N/A
-|Create/modify/delete
-|Subaction: None +
-Properties: Store metadata
-|===
 
 [[secrets-manager]]
 == Secrets Manager
@@ -3200,10 +3296,10 @@ There is no mapping between `offset` and `cursor` values; And so when you run a 
 The cursor-based pagination API is not applicable to the CSV query. The query continues to use offset-based pagination.
 
 
-The following example shows a series of calls in a query loop for cursor based query.
+This example shows a series of calls in a query loop for cursor based query:
 
 
-. The first call does not have a cursor in the body and does not request the `total`. The response returns the following data:
+. The first call doesn't have a cursor in the body and doesn't request the `total`. The response returns this data:
 +
 [source,console]
 ----
@@ -3260,7 +3356,7 @@ Response:
 }
 ----
 
-. The third call is the final call in a loop. Because there are no more logs to be returned, the response does not have a cursor and contains no data.
+. The third call is the final call in a loop. Because there are no more logs to return, the response doesn't have a cursor and contains no data.
 +
 [source,console]
 ----
@@ -3287,7 +3383,7 @@ Response:
 }
 ----
 
-. The following example shows how to use a cursor and request the total:
+. This example shows how to use a cursor and request the total:
 +
 [source,console]
 ----
@@ -3318,7 +3414,7 @@ Response:
 
 === Access the API using CURL Commands
 
-The following are example `curl` commands for accessing the API (Windows users need to download `curl` before using these commands).
+These are example `curl` commands for accessing the API (Windows users need to download `curl` before using these commands).
 
 Get authorization information:
 
@@ -3336,7 +3432,9 @@ curl 'https://anypoint.mulesoft.com/audit/v2/organizations/<organization_id>/que
 
 === Rate Limit Policy for Audit Log Query Endpoint
 
-The Audit Log Query endpoint applies rate limits per IP in the three control planes: US, EU, and gov. The following table outlines the rate limits for each control plane:
+The Audit Log Query endpoint applies rate limits per IP in the three control planes: US, EU, and gov. 
+
+This table outlines the rate limits for each control plane:
 
 [%header,cols="15a,15a"]
 |===
@@ -3353,7 +3451,7 @@ The Audit Log Query endpoint applies rate limits per IP in the three control pla
 
 If a client exceeds the rate limit for a given control plane, the Audit Log Query endpoint returns a `503 Service Unavailable` status code until the minute expires. During this time, the service is unavailable to the client.
 
-We recommend that users of the Audit Log Query Endpoint monitor their request rates and adjust their usage accordingly to avoid exceeding the rate limit. Note that exceeding the rate limit may result in the endpoint being temporarily unavailable.
+It's best for Audit Log Query Endpoint users to monitor their request rates and adjust their usage accordingly to avoid exceeding the rate limit. Exceeding the rate limit can make the endpoint temporarily unavailable.
 
 
 == See Also

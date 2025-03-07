@@ -3,6 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, permissions, configuring
+:page-aliases: anypoint-platform-for-apis-administration.adoc
 
 Access Management enables you to xref:managing-your-account.adoc#how-to-create-your-account[create your Anypoint Platform account] and configure your user profile. 
 
