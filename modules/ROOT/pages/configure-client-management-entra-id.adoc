@@ -22,6 +22,7 @@ The *Add OIDC Microsoft Entra ID (Azure AD) client provider* page appears.
 .. *Tenant ID for Microsoft Entra ID*: The tenant ID from Microsoft Entra ID. For more information on obtaining your tenant ID, see https://learn.microsoft.com/en-us/entra/fundamentals/how-to-find-tenant[How to find your Microsoft Entra tenant ID].
 .. *Client ID*: The client ID for an existing client in your identity provider (IdP) that is capable of creating applications in Microsoft Entra ID.
 .. *Client Secret*: The client secret that corresponds to the client ID.
+.. *Client Secret Expiration Duration*: Duration the application secret is valid for. 180 days is the recommended value and is used by default if you don't make a selection. 
 . Expand the *Advanced Settings* section. The following selections are optional:
 .. *Disable server certificate validation*: Disables server certificate validation if your Microsoft Entra ID client management instance presents a self-signed certificate, or one signed by an internal certificate authority.
 .. *Enable client deletion in Anypoint Platform*: Enables the deletion of clients created with this integration.
