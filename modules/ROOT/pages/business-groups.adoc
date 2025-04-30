@@ -1,54 +1,57 @@
-= Business Groups
+= Organize Resources and Control Access with Business Groups
 
-Business groups are self-contained resource groups that contain Anypoint Platform resources such as applications and APIs. Business groups provide more fine-grained control over access to resources in Anypoint Platform. The level of access users have to various resources depends on their assigned roles and permissions. For example, one user might have permission to manage API alerts, while another user has permission only to view API alerts.
+Business groups are self-contained resource groups within Anypoint Platform that help organize and manage resources like applications and APIs. They provide granular control over access to these resources.
+ 
+When you create an Anypoint Platform account, a root organization (business group) is created, and you become its owner and have the Organization Administrator permission. A root organization is a single instance of Anypoint Platform that includes all the entitlements, features, and capabilities you purchased. The root organization can contain multiple business groups. Multiple users in the root organization can share resources, such as applications and environments. 
 
-When you create an Anypoint Platform account, a root organization (business group) is created, and you are assigned as the owner. A root organization is a single instance of Anypoint Platform that includes all the entitlements, features, and capabilities you purchased.
+Access to resources is determined by assigned user roles and permissions. For example, one user might be able to manage API alerts, while another can only view them.
 
 [NOTE]
 Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative. There is a limit of 100 business groups per organization.
 
-If you have the Organization Administrator permission and your organization is enabled for business group support, you can create and manage business groups within your organization.
+Within the root organization, business groups are arranged hierarchically. The root organization functions as the top-level business group, and each created business group has a single parent and can have multiple child business groups.
 
-Business groups reside within the root organization and are organized in a hierarchical tree where the top-level business group is the root. Each business group you create has one direct parent and can have multiple children.
-
+[[organization-owner]]
 == Organization Owner
 
-The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a permission that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The Organization Administrator permission is assigned to the organization owner by default and can't be removed from the organization owner. 
+The user who first signs up for an Anypoint Platform account is designated as the organization owner. This is not a permission that is assigned, rather it is an identifier for this single user (creator of the Anypoint Platform account). The organization owner is automatically granted the Organization Administrator permission.  
 
 When ownership of an organization is transferred to another user, the original organization owner retains the Organization Administrator permission unless you explicitly revoke it.
 
-Every business group created within the organization hierarchy must have an owner with the Organization Administrator permission assigned. Any organization administrator can assign and change owners of business groups. There can't be multiple owners for a business group. 
+[[business-group-ownership]]
+== Business Group Ownership
+
+Every business group created within the organization hierarchy must have an owner with the Organization Administrator permission assigned. Any organization administrator can assign and change owners of business groups. A business group can't have multiple owners. 
 
 [[creatingroles]]
 == Permissions and Roles in Business Groups
 
-Because business groups are hierarchical, the owner of a parent business group automatically has and retains administrator permissions for any child business group of that parent, even if they make another Organization Administrator user owner of a child business group.
+Because business groups are hierarchical, the owner of a parent business group automatically has and retains administrator permissions for any child business group of that parent, even if a different organization administrator owns the child business group.
 
-Conversely, owners of child business groups cannot:
+Conversely, owners of child business groups can't:
 
-* Access or modify the parent business group or root organization settings
+* Access or modify the parent business group's or root organization's settings
 * View the parent business group's client ID and client secret
 
 When you create a business group under another business group, only the redistributable entitlements, such as VPCs and load balancers, that were assigned to the parent business group can be allocated to the child business group.
 
-Permissions and roles are applied at the root organization level as well as at the business group level. However, each controls different resources. Permissions and roles assigned to a user in one particular business group are independent of the permissions and roles assigned to that same user in other business groups.
+Permissions and roles are applied at both the root organization and individual business group levels, but control access to different resources. Permissions and roles assigned to a user in one business group do not apply to that user's access in other business groups.
 
-To interact with a business group, you must be granted a permission within that business group, or be a member of a team that is granted permission within that business group. All users, regardless of which business groups they are in, belong to the root organization.
+To interact with a business group, a user must have a permission granted within that group or be a member of a team with permission in that group. All users belong to the root organization, regardless of business group membership.
 
 As a member of a business group, you are automatically granted permissions to view and access the business group, but to access certain resources, you must have the appropriate permissions or roles assigned to you. For example, to access APIs and CloudHub deployments in the business group, you must be assigned permissions that apply to that business group.
 
-For example, if you have the Organization Administrator permission in BusinessGroupA, you can grant users and teams access to APIs and CloudHub deployments in BusinessGroupA.
+For example:
 
-If you also have the Organization Administrator permission in BusinessGroupB, this does not mean that you can grant access to APIs and CloudHub deployments in BusinessGroupA to users in BusinessGroupB, and vice versa.
+*  If you have the Organization Administrator permission in BusinessGroupA, you can grant users and teams access to APIs and CloudHub deployments within BusinessGroupA.
+* That same permission in BusinessGroupB doesn't allow you to grant access to APIs and CloudHub deployments in BusinessGroupA.
 
 Resources that belong to the root organization require permissions specified at the root organization level.
 
-Users who are assigned the Organization Administrator permission at any level are automatically assigned that same permission in any child business group created within that level, so are automatically visible in the child. This does not apply retroactively to users who are assigned the Organization Administrator permission after a child is created.
+Users with Organization Administrator permission at any level automatically have that permission in any child business group created *within* that level. This permission inheritance is not retroactive; it doesn't apply to users who gain Organization Administrator permission *after* a child group is created.
 
 [[org-admin]]
-=== Organization Administrator
-
-The owner of the root organization automatically inherits the Organization Administrator permission.
+=== Organization Administrator Capabilities
 
 An Anypoint Platform user who has the Organization Administrator permission can perform these types of tasks:
 
