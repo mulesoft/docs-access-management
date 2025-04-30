@@ -1,4 +1,4 @@
-= Organize Resources and Control Access with Business Groups
+= Resource Organization and Access Control with Business Groups
 
 Business groups are self-contained resource groups within Anypoint Platform that help organize and manage resources like applications and APIs. They provide granular control over access to these resources.
  
