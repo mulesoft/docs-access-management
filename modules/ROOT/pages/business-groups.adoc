@@ -68,6 +68,7 @@ An Anypoint Platform user who has the Organization Administrator permission can 
 
 === See Also
 
+* xref:managing-business-groups.adoc[]
 * xref:teams.adoc[Teams]
 * xref:roles.adoc[Roles]
 * xref:users.adoc[Users]
