@@ -330,7 +330,7 @@ For more information on limits in Access Management, see xref:troubleshooting-an
 == See Also
 
 * xref:teams.adoc[Teams]
-* xref:organization.adoc[Organization]
+* xref:business-groups.adoc[]
 * xref:managing-permissions.adoc[Manage Permissions]
 * xref:design-center::index.adoc[Design Center]
 * xref:map-users-roles-teams.adoc[Map Users to Roles in an LDAP Group]
