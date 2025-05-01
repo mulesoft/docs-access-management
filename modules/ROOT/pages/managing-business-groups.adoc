@@ -200,29 +200,29 @@ include::partial$include-nav-organizations.adoc[]
 
 . Click the *Settings* tab.
 . Modify any of the following settings, then click *Save changes*.
-  * *Name*
-  +
-  This can be anything, for example, the name of the company.
-  * *Owner*
-  +
-  The owner of the business group. 
-  +
-  NOTE: Business groups are hierarchical. The owner of a parent business group automatically has and retains administrator permissions for any child business group of that parent, even if they make another Organization Administrator user owner of a child business group.
-  * *Organization domain*
-  +
-  Although multiple business groups can be created by different users using the same business group name, each business group must have a unique domain name.
-  +
-  [NOTE]
+* *Name* 
++
+This can be anything, for example, the name of the company.
+* *Owner* 
++
+The owner of the business group. 
++
+NOTE: Business groups are hierarchical. The owner of a parent business group automatically has and retains administrator permissions for any child business group of that parent, even if they make another Organization Administrator user owner of a child business group.
+* *Organization domain* 
++
+Although multiple business groups can be created by different users using the same business group name, each business group must have a unique domain name. 
++
+[NOTE]
 Changing the name or domain name of a business group changes the deep links to any existing API Portals in your business group.
-  * *Default session timeout*
-  +
-  Set the amount of time (in minutes) a user is inactive before they are automatically signed out of Anypoint Platform. The default is 60 minutes, the minimum is 15 minutes, and the maximum is 180 minutes.
-  * *Confidentiality Notification*
-  +
-  Create a custom popup that appears when users sign in to your business group. The character limit is 1000 alphanumeric characters and symbols: `@`, `:`, `?`, `!`, `,`, `.`, `;`, `'`, `_`, and `-`. You can also add line breaks using `\n` and tabs using `\t`. If you leave this field blank, users don't receive a notification at signin.
-  * *Runtime Manager*
-  +
-  The default region for Runtime Manager. 
+* *Default session timeout* 
++
+Set the amount of time (in minutes) a user is inactive before they are automatically signed out of Anypoint Platform. The default is 60 minutes, the minimum is 15 minutes, and the maximum is 180 minutes.
+* *Confidentiality Notification*
++
+Create a custom popup that appears when users sign in to your business group. The character limit is 1000 alphanumeric characters and symbols: `@`, `:`, `?`, `!`, `,`, `.`, `;`, `'`, `_`, and `-`. You can also add line breaks using `\n` and tabs using `\t`. If you leave this field blank, users don't receive a notification at signin.
+* *Runtime Manager*
++
+The default region for Runtime Manager. 
 
 You can also view the business group ID, client ID, and client secret. These values apply to the root business group and grant permissions for all of the business groups contained within.
 
