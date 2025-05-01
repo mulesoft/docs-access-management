@@ -1,7 +1,7 @@
 = Obtaining an API Bearer Token Using a SAML Assertion
 
 
-If you are using an identity provider configured to use SAML 2.0, federated users within your organization can access Anypoint Platform APIs using the bearer token .
+Exchange a SAML 2.0 assertion obtained from your identity provider (IdP) for an Anypoint Platform API bearer token. This process allows federated users or applications acting on their behalf to authenticate programmatically for API access, specifically using an IdP-initiated flow. Learn how to capture the SAML response and use it in a request to the Anypoint Platform token endpoint to receive the bearer token.
 
 [NOTE]
 Obtaining an API bearer token using a SAML assertion works only for IdP-initiated single signon. Service provider-initiated SSO does not support unsolicited assertions.

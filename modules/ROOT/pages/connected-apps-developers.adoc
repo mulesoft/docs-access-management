@@ -1,6 +1,6 @@
 = Connected Apps for Developers
 
-Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] to extend functionality.
+Leverage Anypoint Platform APIs securely by developing or using connected apps. Understand how connected apps use OAuth 2.0 and OpenID Connect to delegate access, enabling interactions like building CI/CD pipelines or integrating third-party services without exposing user credentials. Learn about authentication flows, token usage, and considerations like application allowlisting from a developer's perspective.
 
 The Connected Apps feature enables you to:
 
@@ -22,7 +22,7 @@ To make the authentication experience consistent for end users, third-party deve
 
 Organization administrators can enable an allowlist to control which apps can access the organization's user data.
 
-When your app is added to an allowlist, only the set of scopes associated with the app are reviewed and approved by the administrator. If you add new scopes to your app later, you’re unable to request those scopes from users until the admin reapproves your app.
+When your app is added to an allowlist, only the set of scopes associated with the app are reviewed and approved by the administrator. If you add new scopes to your app later, you're unable to request those scopes from users until the admin reapproves your app.
 Existing authorizations and new authorizations using the previously allowlisted set of scopes continue to work.
 
 For more information, see xref:connected-apps-org-admin.adoc#application-allowlist-admin[connected apps for administrators].

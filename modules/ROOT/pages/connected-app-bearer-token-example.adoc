@@ -1,6 +1,6 @@
 = Getting the Bearer Token for a Connected App Example
 
-This example demonstrates how to create a connected app that acts on its own behalf using client credentials to get the bearer token so you can invoke Anypoint Platform APIs. 
+Follow a step-by-step example to create a connected app that uses the client credentials grant type. Learn how to configure the necessary scopes and then retrieve an OAuth 2.0 bearer token for the app. Use this bearer token to securely invoke Anypoint Platform APIs for machine-to-machine interactions or automation tasks. 
 
 [[create-connected-app]]
 == Create a Connected App

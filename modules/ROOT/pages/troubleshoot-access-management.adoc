@@ -1,6 +1,6 @@
 = Troubleshoot Access Management
 
-These tips provide information on what to do if you encounter issues.
+Resolve common problems encountered within Anypoint Platform Access Management. Find potential solutions for issues related to signing in, such as unrecognized credentials or problems with external identity provider URLs. Address errors encountered during OpenID Connect client management or invitation link failures.
 
 == Problems with Accessing Anypoint Platform
 

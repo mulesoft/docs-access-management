@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-During verification of SAML information, if you determine that information must be changed, sign in to the MuleSoft Support Portal and submit a request.
+Confirm that your SAML 2.0 single sign-on (SSO) configuration within Anypoint Platform contains the correct information provided by your identity provider (IdP). Check key settings like the Group Attribute Name by navigating to the SAML 2.0 section in Access Management. If discrepancies are found that require modification by MuleSoft, contact support.
 
 . In Anypoint Platform, click Access Management > External Identity.
 . From Identity Management, select SAML 2.0.

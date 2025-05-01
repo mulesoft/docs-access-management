@@ -3,7 +3,7 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-After configuring your organization's external identity provider, test the integration. Obtain your organization's signin URL, for example: `+https:/anypoint.mulesoft.com/accounts/login/{organization-domain-name}+` by following these steps:
+Verify that your external identity provider (IdP) integration for single sign-on (SSO) is functioning correctly. Learn how to obtain your organization's specific sign-in URL from the Access Management settings. Test the complete login flow by navigating to this URL, authenticating with a test user via your IdP, and confirming successful redirection back to Anypoint Platform.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 

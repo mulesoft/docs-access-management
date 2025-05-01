@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, permissions, configuring, limits
 
+Find answers to common questions regarding access and administration within Anypoint Platform. Understand who can access specific features like Access Management or audit logs, and learn about platform limits for various resources like users, environments, and permissions. This guide also covers frequently asked questions about account management, invitations, and API access.
+
 [[access-IAM]]
 == Access and Administration
 

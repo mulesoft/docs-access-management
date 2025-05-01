@@ -1,12 +1,14 @@
 = Creating Connected Apps
 
+Create connected apps within Anypoint Platform to enable external applications or services to interact securely with platform APIs. Learn how to configure apps that act on behalf of a user (using grant types like Authorization Code or JWT Bearer) or apps that act on their own behalf (using Client Credentials). Understand the process of assigning appropriate scopes, which map to platform permissions, to control the level of access granted to the connected app.
+
 When you create connected apps, keep in mind: 
 
 * Your organization can own up to 2000 connected apps at the root organization or business group level.
 * Each connected app can have up to 1000 scopes.
 * All scopes in the endpoint correspond directly to permissions available in Anypoint Platform, except for exceptions noted in <<endpoint-scopes>>. Scopes determine the level of permissions to provide to the app. 
 * Your Anypoint Platform organization owns your app. Any organization administrator of the root organization or business group in which the app resides can control it.
-* A unique `clientID` is automatically assigned and can’t be changed. 
+* A unique `clientID` is automatically assigned and can't be changed. 
 * The `clientSecret` has no expiration date by default but you can change the expiration date.
 
 == Before You Begin
@@ -70,12 +72,12 @@ This is an example of the development flow:
 . The authorization server sends a temporary authorization code back to the specified redirect URI.
 . The app calls the authorization server with the temporary code to receive the access token.
 +
-The access token can now be used to call Anypoint Platform APIs on the user’s behalf.
+The access token can now be used to call Anypoint Platform APIs on the user's behalf.
 
 [[refresh-token]]
 === Refresh Token
 
-Use the `refresh_token` grant type to grant access to user data when the user isn’t signed in. Refresh tokens expire after 90 days. Access tokens expire after the user’s session expires.
+Use the `refresh_token` grant type to grant access to user data when the user isn't signed in. Refresh tokens expire after 90 days. Access tokens expire after the user's session expires.
 
 To work with OpenID Connect, apps exchange refresh tokens for new access tokens after the initial authorization to continue accessing user data.
 
@@ -86,10 +88,10 @@ To request a new access token, send a request to the token endpoint using the `r
 [[password]]
 === Password
 
-Use the `password` grant type when the application exchanges the user’s username and password for an access token.
+Use the `password` grant type when the application exchanges the user's username and password for an access token.
 
 [NOTE]
-This grant type isn’t recommended, as it reveals user credentials directly to the connected app. This type also precludes the use of additional security measures, such as multi-factor authentication.
+This grant type isn't recommended, as it reveals user credentials directly to the connected app. This type also precludes the use of additional security measures, such as multi-factor authentication.
 
 [[jwt-bearer]]
 === JWT Bearer Token
@@ -105,7 +107,7 @@ The `jwt_bearer` grant type is suitable for use with trusted clients to gain acc
 | Attribute | Description
 
 | `iss`
-| The issuer of the claim. This value must be same as the connected app’s `clientId`.
+| The issuer of the claim. This value must be same as the connected app's `clientId`.
 
 | `sub`
 a| The subject of the token, such as:
@@ -124,7 +126,7 @@ NOTE: At minimum, `identityProvider_id` and `username` are required for `sub`, a
 [[client-credentials]]
 === Client Credentials
 
-Use the `client_credentials` grant type for machine-to-machine authentication when a specific user’s permission to access data isn't required.
+Use the `client_credentials` grant type for machine-to-machine authentication when a specific user's permission to access data isn't required.
 
 The `client_credentials` grant type uses the `clientId` and `clientSecret` of the client to authorize and access protected data.
 
