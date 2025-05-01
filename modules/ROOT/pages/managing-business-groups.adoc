@@ -121,7 +121,7 @@ Only an organization administrator that belongs to a business group can delete i
 
 include::partial$include-nav-organizations.adoc[]
 
-. Click the *...* menu next to the business group to delete.
+. Click the *...* menu for the business group to delete.
 . In the confirmation dialog, enter the name of the business group and then click *Delete*.
 
 [[redistribute-resources]]
