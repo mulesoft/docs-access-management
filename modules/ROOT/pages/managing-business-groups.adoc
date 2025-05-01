@@ -127,7 +127,7 @@ include::partial$include-nav-organizations.adoc[]
 [[redistribute-resources]]
 == Redistribute Resources Between Existing Business Groups
 
-You can redistribute resources (such as vCores, VPCs, load balancers, Small or Large Managed Flex Gateways, and so on) between business groups at the business group level only, not at the root organization level. 
+You can redistribute resources (like vCores, VPCs, load balancers, small or large Managed Flex Gateways) between business groups at the business group level only, not at the root organization level. 
 
 You must have the Organization Administrator permission for the root organization to redistribute resources.
 
