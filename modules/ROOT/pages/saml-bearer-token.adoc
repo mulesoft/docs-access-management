@@ -8,7 +8,7 @@ Obtaining an API bearer token using a SAML assertion works only for IdP-initiate
 
 The bearer token provides access to the platform APIs a user has permission to access. Each bearer token is associated with a specific user who is granted roles and permissions for an API. If a user attempts to access an API that they do not have permissions to access the API returns a `401 Unauthorized` error.
 
-The validity of the bearer token is determined by the value defined for the Default Session Timeout property. This is configured in the root organization properties. See xref:organization.adoc#organization-settings[Organization Settings] for more information.
+The validity of the bearer token is determined by the value defined for the Default Session Timeout property. This is configured in the root organization properties. See xref:managing-business-groups.adoc#manage-root-org-settings[Manage Root Business Group Settings] for more information.
 
 To obtain an API bearer token using a SAML assertion:
 
@@ -45,6 +45,6 @@ curl -X GET \
 
 == See Also
 
-* xref:organization.adoc#organization-settings[Organization Settings]
+* xref:managing-business-groups.adoc[]
 * xref:anypoint-cli::index.adoc[Anypoint CLI]
 * xref:troubleshoot-saml-assertions-task.adoc[To view a SAML response in your Browser]
