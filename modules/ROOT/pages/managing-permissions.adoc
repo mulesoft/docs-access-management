@@ -5,7 +5,7 @@ endif::[]
 :keywords: anypoint platform, permissions, configuring, accounts, roles
 :page-aliases: managing-accounts-roles-and-permissions.adoc
 
-This section explains how permissions work across different products and APIs managed from the Anypoint Platform.
+Control user access across Anypoint Platform by understanding and managing permissions effectively. Assign appropriate capabilities through roles (deprecated) or the recommended Teams feature to regulate access to specific products, APIs, environments, and business groups. Properly configured permissions ensure users have the necessary access while maintaining security and compliance.
 
 
 To manage permissions, you must have the Organization Administrator permission in your organization, have the Organization Administrator permission over one of the business groups of your organization, or have API Version Owner permissions and want to manage user permissions for an API version, a business group or the entire organization.

@@ -4,6 +4,8 @@ include::_attributes.adoc[]
 endif::[]
 :keywords: anypoint platform, permissions, configuring, accounts
 
+Manage your Anypoint Platform user account settings and access. Learn how to create a new account, join an existing organization via invitation, or sign in using various methods including single sign-on (SSO). Keep your user profile information up-to-date and understand how account association impacts organization ownership.
+
 == Create an Anypoint Platform Account
 
 [NOTE]

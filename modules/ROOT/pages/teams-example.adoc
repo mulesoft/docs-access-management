@@ -1,6 +1,6 @@
 = Example Teams Structure
 
-Imagine that your organization, Acme, includes a team called Engineering that contains smaller teams that focus on building specific components. The Identity and DevOps teams are specialized teams within the larger Engineering team.
+Understand how to structure teams effectively using a practical example. See how a hypothetical organization, Acme, uses a main Engineering team with specialized Identity and DevOps sub-teams to manage permissions efficiently. This hierarchical approach helps delegate access based on specific roles and responsibilities.
 
 Using the Teams feature, you can structure your users and permissions in the following way:
 

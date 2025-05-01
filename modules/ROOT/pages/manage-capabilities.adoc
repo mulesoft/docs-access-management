@@ -1,6 +1,6 @@
 = Managing Capabilities for a Connected Salesforce Organization
 
-When you establish a tenant relationship and enable the connection between your Anypoint Platform organization and a trusted Salesforce organization, you can enable and disable capabilities associated with the Salesforce organization. 
+Control the integration between your Anypoint Platform and Salesforce organizations by managing specific capabilities. After establishing a trusted connection, selectively enable or disable features like Einstein Activity Capture or Invocable Actions based on your business needs. This ensures you only expose the necessary functionality for the integration.
 
 * xref:enabling-einstein.adoc[]
 * xref:enabling-invocable-actions.adoc[]
