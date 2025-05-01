@@ -1,6 +1,6 @@
 = SSO Prerequisites and Limitations
 
-When using SSO within Anypoint Platform, there are some prerequisites and limitations to be aware of.
+Prepare for a successful single sign-on (SSO) implementation by understanding the necessary prerequisites and potential limitations within Anypoint Platform. Ensure your identity provider (IdP) is correctly configured to send required user attributes and handle signed/encrypted SAML assertions. Be aware of specific client behaviors and limitations related to session timeouts, external identity scope, and user management when using SSO.
 
 == Before You Begin
 

@@ -1,6 +1,6 @@
 = Enabling or Disabling Invocable Actions in the Salesforce Org
 
-When the invocable actions capability is enabled by the Salesforce admin in Salesforce, MuleSoft automation developers can publish invocable actions directly from their Robotic Process Automations (RPA) and Composer flows to the connected Salesforce org.
+Allow MuleSoft automation developers to directly publish invocable actions from RPA and Composer flows into a connected Salesforce org. This capability is controlled by the Salesforce administrator within the Salesforce Setup interface. Enabling this feature streamlines the process of making MuleSoft automations available for use within Salesforce workflows.
 
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > MuleSoft Anypoint Platform*.
 . In *Your connected Anypoint Platform Organization*, click *View Connection Info*.

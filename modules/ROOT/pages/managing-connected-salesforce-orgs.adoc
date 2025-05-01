@@ -1,6 +1,6 @@
 = Managing Connected Salesforce Orgs
 
-As an Anypoint Platform organization administrator, you can enable, remove, and repair connections, and edit the name of Salesforce organizations.
+Maintain the connections between your Anypoint Platform organization and trusted Salesforce organizations. As an administrator, learn how to enable newly established tenant relationships to activate cross-platform features. You can also repair connections if Salesforce domain details change, edit the displayed Salesforce organization name for clarity, or permanently remove connections when they are no longer needed.
 
 [enable-disable-connection]
 == Enable the Connection in Anypoint Platform

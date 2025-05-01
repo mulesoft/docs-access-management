@@ -5,7 +5,7 @@ endif::[]
 :keywords: anypoint platform, permissions, configuring
 :page-aliases: anypoint-platform-for-apis-administration.adoc
 
-Access Management enables you to xref:managing-your-account.adoc#how-to-create-your-account[create your Anypoint Platform account] and configure your user profile. 
+Control user access, manage organizational structures, and configure security settings within Anypoint Platform using Access Management. Define how users authenticate via internal credentials or external identity providers (IdPs) using SAML/OIDC for single sign-on (SSO), and enforce multi-factor authentication (MFA). Organize resources and permissions through business groups, environments, and the Teams feature to ensure users and client applications have appropriate access levels.
 
 For organization owners and administrators, Access Management enables you to:
 
