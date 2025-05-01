@@ -9,7 +9,7 @@ In the Access Management *Business Groups* page, you can:
 * View a hierarchical tree of all of the business groups you have permissions to view. 
 * View and edit properties of a business group.
 +
-What you can view and edit depends on your permissions.
+Permissions determine What you can view and edit.
 * Add and delete business groups (if enabled at the root business group level).
 * View the Client ID and Client Secret for environments.
 
@@ -24,7 +24,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 [[create-business-group]]
 == Create a Business Group
 
-When you create a new business group under the top-level (root), business group, all the current users with the Organization Administrator permission in the root business group appear in the list of users in the newly created business group.
+When you create a new business group under the top-level (root) business group, all the current users with the Organization Administrator permission in the root business group appear in the list of users in the newly created business group.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -39,8 +39,7 @@ include::partial$include-nav-business-groups.adoc[]
   * Select *Can create Business Groups* to allow the owner to create child business groups under this business group.
   * Select *Can create environments* to allow the owner to create environments within this business group.
   * You can assign some or all of the redistributable resources (vCores, VPCs, and so on) that your organization owns to an individual business group. This ensures that the resources are used by the CloudHub deployments that belong to the business group. You can assign the resources when you create the business group, or edit these settings later.
-  * *Enable CloudHub global deployment*
-  +
+  * *Enable CloudHub global deployment* +
   This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the region you specified.
 * *Static IPs*
 +
@@ -98,23 +97,18 @@ You can view a list of users or teams that have access to a business group or en
 include::partial$include-nav-business-groups.adoc[]
 
 . Select the *Access Overview* tab. 
-+
-A list of users in the current business group is shown.
- 
 .. Select the business group or environment from the dropdown to view a list of users with access to the selected business group or environment.
-.. Select a permission from the dropdown to see a list of users who have the selected permission in the selected business group or environment. 
+.. Select a permission from the dropdown to see a list of users with the selected permission in the selected business group or environment. 
 . To see teams with access to the selected business group or environment, select *Teams* from the dropdown.
 . To see teams that have specific permissions assigned, select the permission from the dropdown. 
 +
 Permissions that are granted directly to users outside of the Teams feature aren't shown. 
 
-=== View Roles Associated With the Business Group
+=== View Roles Associated with the Business Group
 
 include::partial$include-nav-business-groups.adoc[]
 
 . Select the *Roles* tab. 
-+
-A list of roles in the current business group is shown. 
 
 [[delete-business-group]]
 == Delete a Business Group
@@ -152,7 +146,7 @@ The *Settings* section appears, showing details about the root organization or b
 
 The *Business Group Info* window includes a resource counter that shows a value representing available resources, the sum of those resources that are reassigned to child business groups, and resources currently in use by the selected business group.
 
-=== View Resource Utilization
+=== View Resource Usage
 
 To see resource utilization for the root organization, navigate to *Access Management > Subscription > Runtime Manage Subscription*.
 
@@ -176,7 +170,7 @@ include::partial$include-nav-environments.adoc[]
 . Click the name of the environment.
 . Next to the client secret, click *Show*.
 
-=== View the Client ID and Secret for Businesss Groups
+=== View the Client ID and Secret for Business Groups
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -329,7 +323,7 @@ Invited users must use the link they receive in the invitation email to join you
 
 If your business group is configured to use an external federated identity system, you don't need to invite users, as they are authenticated by the external identity provider.
 
-After a user joins your business group, they have access to the resources associated with the permissions or roles assigned to them. You can assign permissions to grant users access to different resources within the business group. A best practice is to assign permissions to the user at the time you invite them to join your business group so the roles are in effect when the user signs in for the first time. See xref:managing-permissions.adoc[Roles] for more information.
+After a user joins your business group, they have access to the resources associated with the permissions or roles assigned to them. You can assign permissions to grant users access to different resources within the business group. A best practice is to assign permissions to the user at the time you invite them to join your business group so the roles are in effect when the user signs in for the first time. 
 
 If your business group contains business groups, you can give users access to multiple business groups by granting them permissions within each group.
 
@@ -354,8 +348,8 @@ An email is generated and sent to the Composer organization admin that provides 
 
 == See Also
 
-* xref:business-groups.adoc[Business Groups]
-* xref:roles.adoc[Roles]
-* xref:teams.adoc[Teams]
-* xref:managing-permissions.adoc[Managing Permissions]
-* xref:environments.adoc[Environments]
+* xref:business-groups.adoc[]
+* xref:roles.adoc[]
+* xref:teams.adoc[]
+* xref:managing-permissions.adoc[]
+* xref:environments.adoc[]

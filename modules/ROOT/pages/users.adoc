@@ -20,6 +20,7 @@ Before getting started, ensure that you have:
 * The Organization Administrator permission
 * The API Version Owner permission if you plan to manage user permissions for your API version
 
+[[inviting-users]]
 == Invite a User to Anypoint Platform
 
 [NOTE]
