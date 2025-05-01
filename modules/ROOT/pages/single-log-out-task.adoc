@@ -1,34 +1,34 @@
-= Configuring Single Signout
+= Configuring Single Sign out
 ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-As Administrator, you can configure single signout if you use SAML. OpenID Connect doesn't support single signout. Using single signout, a user or user agent can sign out of an authenticated environment and ensure that both service providers and identity servers process the signout correctly.
+As Administrator, you can configure single sign-out if you use SAML. OpenID Connect doesn't support single sign-out. Using single sign-out, a user or user agent can sign out of an authenticated environment and verify that both service providers and identity servers process the sign-out correctly.
 
-The following procedure shows how to perform single signout and control where the user is redirected after signing out. 
+This procedure shows how to perform single sign-out and control where the user is redirected after signing out. 
 To redirect the user to a different page, set up the redirect in your PingFederate configuration by adding a `redirect_uri` query parameter to the SLO Service URL. Anypoint Platform routes the user to that page rather than to the Anypoint Platform sign-in page.
 
 . In PingFederate, for example, click the SP Configuration for the Anypoint Platform.
-. In *Browser SSO > Configure Browser SSO > SAML Profiles*, ensure that these fields are set:
+. In *Browser SSO > Configure Browser SSO > SAML Profiles*, verify that these fields are set:
 +
 * IdP-Initiated SSO
 * IdP-Initiated SLO
 * SP-Initiated SLO
 +
-. In *Protocol Settings > Configure Protocol Settings*, configure a SLO Service URL with the following values:
+. In *Protocol Settings > Configure Protocol Settings*, configure a SLO Service URL with these values:
 +
 * Binding: POST
 * Endpoint URL
 +
 Set `PARTNER_SP_ID` to the correct value: `+https://anypoint.mulesoft.com/accounts/logout/receive-id+`
 +
-. Redirect users to your sign-in page using the following URL:
+. Redirect users to your sign-in page using this URL:
 +
 ----
 https://anypoint.mulesoft.com/accounts/logout/receive-id?redirect_uri=https%3A%2F%2Fanypoint.mulesoft.com%2Faccounts%2Flogin%2Fyour-domain
 ----
 +
-Alternatively, redirect users to your portal page using the following URL:
+Alternatively, redirect users to your portal page using this URL:
 +
 ----
 https://anypoint.mulesoft.com/accounts/logout/receive-id?redirect_uri=https%3A%2F%2Fanypoint.mulesoft.com%2Fapiplatform%2Fyour-domain%2F%23%2Fportals
@@ -37,7 +37,7 @@ https://anypoint.mulesoft.com/accounts/logout/receive-id?redirect_uri=https%3A%2
 . In *Allowable SAML Bindings*, click *Redirect*.
 . In *Encryption Policy*, choose either *none* or *the entire assertions*, then save and exit Protocol Settings and Browser SSO.
 . When viewing the SP Configuration for Anypoint Platform, go to *Credentials > Configure Credentials*.
-. Set *Signature Verification Settings > Manage Signature Verification Settings > Trust Model to Unanchored*, and import the certificate from the following location:
+. Set *Signature Verification Settings > Manage Signature Verification Settings > Trust Model to Unanchored*, and import the certificate from this location:
 +
 `+http://docs.mulesoft.com/downloads/access-management/anypoint-platform-slo.pem+`
 +
