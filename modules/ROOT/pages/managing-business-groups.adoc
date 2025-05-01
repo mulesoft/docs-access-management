@@ -322,7 +322,7 @@ If you want to share resources with a user, you have to invite the user to join 
 
 [NOTE]
 --
-Because the business group name (often the company name) is not necessarily unique, it is not sufficient for the invited user to join the business group and use the company name associated with the root business group. The organization domain name you set in the business group information is what distinguishes your business group from other business groups.
+Because the business group name (often the company name) isn't necessarily unique, it isn't sufficient for the invited user to join the business group and use the company name associated with the root business group. The organization domain name you set in the business group information is what distinguishes your business group from other business groups.
 
 Invited users must use the link they receive in the invitation email to join your business group.
 --
