@@ -1,6 +1,6 @@
 = Private Cloud Edition Features
 
-Anypoint Platform Private Cloud Edition enables you to:
+Manage specific Access Management features unique to Anypoint Platform Private Cloud Edition (PCE). Configure essential components like LDAP for user management and an SMTP server for sending alerts directly from your private installation. You can also customize security settings with your own SSL certificates and add a disclaimer to the login page.
 
 . Configure xref:external-identity.adoc#user-management[User Management] using xref:external-identity.adoc#configure-ldap[LDAP].
 . Configure an <<SMTP,SMTP server>> to send API Manager alerts from your Anypoint Platform Private Cloud Edition installation.

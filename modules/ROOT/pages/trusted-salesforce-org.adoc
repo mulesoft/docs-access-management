@@ -1,6 +1,6 @@
 = Trusted Salesforce Organizations
 
-Enable cross-platform features between your Anypoint Platform organization and a trusted Salesforce organization (tenant) by establishing a connection between them. 
+Connect your Anypoint Platform organization with one or more trusted Salesforce organizations (tenants) to enable powerful cross-platform features. Establishing this tenant relationship allows seamless integration, such as syncing APIs via API Catalog, publishing invocable actions from RPA or Composer, and enhancing developer tools with Einstein. Manage these connections to control which features are active between the platforms.
 
 Establishing a tenant relationship between an Anypoint Platform organization and a Salesforce organization enables users in your organization to:
 

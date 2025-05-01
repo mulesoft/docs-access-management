@@ -1,6 +1,6 @@
 = Managing Users
 
-As an administrator of your root organization, you can enable, disable, or delete users, assign permissions to users, and edit a user's settings. 
+Manage user accounts within your Anypoint Platform root organization as an administrator. Learn how to invite new users, enable or disable existing accounts, and assign or revoke permissions individually or through teams/roles. Understand the implications of deleting users and how to manage pending invitations or reset user passwords.
 
 On the access management *Users* page, you can:
 
