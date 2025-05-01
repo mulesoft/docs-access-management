@@ -69,7 +69,9 @@ Users with the Organization Administrator permission can create environments wit
 * *Enable CloudHub global deployment*
 +
 This option is available only if global deployment is enabled on the parent business group. When global deployment is enabled, the region is auto-populated according to the region you specified.
-* *Static IPs*: This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses.
+* *Static IPs*:
++
+This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses.
 . Click *Add Business Group*. +
 The new business group appears in the parent business group hierarchy.
 
