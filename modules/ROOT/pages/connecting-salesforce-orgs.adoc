@@ -1,9 +1,6 @@
 = Establish a Tenant Relationship With a Trusted Salesforce Organization
 
-Ways to establish a tenant relationship include:
-
-* A Salesforce organization is provisioned with the tenant relationship with an Anypoint Platform organization already established. In this case, the Anypoint Platform organization administrator just needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the connection] in Anypoint Platform. 
-* The Anypoint Platform organization administrator initiates the tenant relationship in Anypoint Platform and the Salesforce organization administrator completes the setup in the Salesforce organization.   
+Establish a trusted tenant relationship between your Anypoint Platform organization and a Salesforce organization to enable cross-platform features. Learn the steps required by both Anypoint Platform administrators and Salesforce administrators to connect the two platforms. This process typically involves initiating the connection in Anypoint Platform using the Salesforce tenant key and completing it in Salesforce using the Anypoint Platform organization key.
 
 In some cases, the Anypoint Platform organization administrator and Salesforce organization administrator are different people, and in some cases, they are the same person.
 
