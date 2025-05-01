@@ -186,7 +186,7 @@ include::partial$include-nav-organizations.adoc[]
 [NOTE]
 --
 * For newer Anypoint Platform accounts, the client ID and secret apply to environments rather than business groups. See xref:environments.adoc[].
-* To change the client secret for an environment or business group, see https://help.mulesoft.com/s/article/How-to-set-or-reset-environment-client-secret-in-Anypoint-Platform[this help article], or contact your customer support representative.
+* To change the client secret for an environment or business group, see https://help.salesforce.com/s/articleView?id=001115221&type=1[How to Set Environment client_secret in Anypoint Platform], or contact your customer support representative.
 --
 
 [[manage-root-org-settings]]
