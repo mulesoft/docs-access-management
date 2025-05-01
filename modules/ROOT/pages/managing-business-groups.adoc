@@ -31,7 +31,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 include::partial$include-nav-business-groups.adoc[]
 
 . To create the root business group for your organization, click *Create business group*.
-. To create a child business group, click the *...* menu next to the business group that will be the parent.
+. To create a child business group, click the *...* menu for the parent business group.
 . Click *Create child group*.
 . In the dialog box, enter:
   * *Business Group name*: Name for the new business group.
