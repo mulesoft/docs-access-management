@@ -58,7 +58,7 @@ Allocating redistributable resources to a business group makes those resources a
 
 Create a business group hierarchy to help you better control user access to resources.
 
- . To create a child business group, click the *...* menu next to the business group that will be the parent.
+ . To create a child business group, click the *...* menu for the parent business group.
 . In the *Add Business Group* dialog, enter a *Business Group name* and *Owner*, then select from these options: +
 * *Owner can create Business Groups*
 +
