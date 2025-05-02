@@ -1,6 +1,8 @@
 = Configuring OpenID Connect Client Management
 
-MuleSoft supports client management by identity providers that implement the OpenID Connect Dynamic Client Registration open standard.  MuleSoft explicitly verifies support in Anypoint Platform for Salesforce, Okta, and OpenAM v14 Dynamic Client Registration.
+Configure an external OpenID Connect (OIDC) identity provider to handle client management for your Anypoint Platform APIs. Use providers supporting the OIDC Dynamic Client Registration (DCR) standard, such as Salesforce, Okta, or OpenAM. This allows API portals to dynamically register client applications with your chosen external IdP when access is requested.
+
+Anypoint Platform supports client management by identity providers that implement the OpenID Connect Dynamic Client Registration open standard. Salesforce, Okta, and OpenAM v14 Dynamic Client Registration are explicitly supported in Anypoint Platform.
 
 
 == Configuring Client Management
@@ -48,7 +50,7 @@ To use this option, you must also select the *Enable client deletion in Anypoint
 . In *Authentication Method*, complete the information for the type of authentication to use for this client provider:
 * *Authorization Header*
 +
-The header to provide credentials to authenticate with a server. This header is required if the provider restricts registration requests to authorized clients. 
+The HTTP authorization header provides a static token that doesn't expire to authenticate with a server. This header is required if the provider restricts registration requests to authorized clients. If you prefer to use short-lived bearer access tokens, use the OAuth 2.0 private key option instead. 
 +
 [%autowidth.spread]
 |===
@@ -59,14 +61,20 @@ The header to provide credentials to authenticate with a server. This header is 
 |===
 .. Click *Use OAuth2 private key jwt* to use a private key instead of and authorization header, and provide these values:
 * *Token Client ID*
++
+This is the JWT (JSON Web Token) that contains information about the authenticated user, used by OIDC to verify that the user is who they claim to be. 
 * *Token Client Private Key*
++
+This is the secret cryptographic key used by the client to authenticate itself to a server when requesting access tokens.
 * *Token Client API Scopes*
++
+The client API scopes define the specific permissions granted to an application when requesting access to a resource.
 . Enter the information for the *Token Introspection Client*:
 * *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
   *** For ForgeRock, this value should be a "Confidential" client.
   *** For Salesforce, this value should be a "Confidential" client.
-* ** *Client Secret*: The client secret that corresponds to the client ID.
+* *Client Secret*: The client secret that corresponds to the client ID.
 . Enter the information for *OpenID Connect Authorization URLs*:
 * *Authorize URL*
 +
@@ -79,7 +87,7 @@ URL that provides the user’s identity, encoded in a secure JSON Web Token.
 After this is successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IDP that acts as a token provider.
 
 [NOTE]
-For Okta, the Okta admin mustt assign the dynamically generated clients to a user or a group of users so they can receive access tokens by sending over the Client ID and Client Secret.
+For Okta, the Okta admin must assign the dynamically generated clients to a user or a group of users so they can receive access tokens by sending over the Client ID and Client Secret.
 
 == Client Application Updates and Deletes
 
@@ -130,7 +138,11 @@ Neither the `PUT` nor the `DELETE` are expected to work if the call is used dire
 
 === Pre-populated Grant Types in API Portal
 
-If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[this spec] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated prior to merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users.
+If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. 
+
+To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. 
+
+If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[RFC 8414, Obtaining Server Metadata] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated prior to merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users.
 
 === Update Grant Types
 
