@@ -37,6 +37,7 @@ The time that elapses before a client provider request times out. The minimum va
 +
 [NOTE]
 Anypoint Platform makes an HTTP call to the configured OIDC endpoints, and if there is no response after five seconds, the HTTP call times out.
++
 .. Select *Advanced Settings* for these options:
 * *Disable server certificate validation*
 +
