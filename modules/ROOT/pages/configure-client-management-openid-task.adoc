@@ -60,7 +60,7 @@ The HTTP authorization header provides a static token that doesn't expire to aut
 | ForgeRock | `Bearer ${api_token}`, where `api_token` is an API token created through ForgeRock.
 | Salesforce | `Bearer ${api_token}`, where `api_token` is an API token created through Salesforce.
 |===
-.. Select *Use OAuth2 private key jwt* to use a private key instead of and authorization header, and provide these values:
+.. Select *Use OAuth2 private key jwt* to use a private key instead of an authorization header, and provide these values:
 * *Token Client ID*
 +
 This is the unique identifier of the application (client ID) registered within your IdP. It's used to identify the calling application when requesting a bearer token from Anypoint Platform during client registration. 
