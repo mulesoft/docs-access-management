@@ -1,6 +1,6 @@
 = Configuring OpenID Connect Client Management
 
-Configure an external OpenID Connect (OIDC) identity provider to handle client management for your Anypoint Platform APIs. Use providers supporting the OIDC Dynamic Client Registration (DCR) standard, such as Salesforce, Okta, or OpenAM. This allows API portals to dynamically register client applications with your chosen external IdP when access is requested.
+Configure an external OpenID Connect (OIDC) identity provider (IdP) to handle client management for your Anypoint Platform APIs. Use providers supporting the OIDC Dynamic Client Registration (DCR) standard, such as Salesforce, Okta, or OpenAM. This allows API portals to dynamically register client applications with your chosen external IdP when requesting access.
 
 Anypoint Platform supports client management by identity providers that implement the OpenID Connect Dynamic Client Registration open standard. Salesforce, Okta, and OpenAM v14 Dynamic Client Registration are explicitly supported in Anypoint Platform.
 
@@ -12,13 +12,13 @@ include::partial$include-nav-steps-org-admin.adoc[]
 include::partial$include-nav-client-providers.adoc[]
 
 . Click *Add Client Provider*, and then select *OpenID Connect Dynamic Client Registration*.
-. After you have the values from your identity provider’s configuration, complete the information for your client provider, enter the information for *Dynamic Client Registration*:
+. After you have the values from your IdP’s configuration, complete the information for your client provider, enter the information for *Dynamic Client Registration*:
 * *Issuer*
 +
 URL that the OpenID provider asserts is its trusted issuer.
 * *Client Registration URL*
 +
-URL to dynamically register client applications as a client application for your identity provider.
+URL to dynamically register client applications as a client application for your IdP.
 +
 These are examples of client registration URLs, which are determined by your client provider, during registration:
 +
@@ -59,7 +59,7 @@ The HTTP authorization header provides a static token that doesn't expire to aut
 | ForgeRock | `Bearer ${api_token}`, where `api_token` is an API token created through ForgeRock.
 | Salesforce | `Bearer ${api_token}`, where `api_token` is an API token created through Salesforce.
 |===
-.. Click *Use OAuth2 private key jwt* to use a private key instead of and authorization header, and provide these values:
+.. Select *Use OAuth2 private key jwt* to use a private key instead of and authorization header, and provide these values:
 * *Token Client ID*
 +
 Create a JWT (JSON Web Token) and sign it using the private key. Use this as the client assertion when making the `/token` endpoint API call. 
@@ -71,9 +71,9 @@ This is the secret cryptographic key used by Anypoint Platform to sign the JWT. 
 The client API scopes define the specific permissions granted to the token client with the scopes to register new clients.  
 . Enter the information for the *Token Introspection Client*:
 * *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
-  *** For Okta, this value should be a "Confidential" client.
-  *** For ForgeRock, this value should be a "Confidential" client.
-  *** For Salesforce, this value should be a "Confidential" client.
+  *** For Okta, this value is a "Confidential" client.
+  *** For ForgeRock, this value is a "Confidential" client.
+  *** For Salesforce, this value is a "Confidential" client.
 * *Client Secret*: The client secret that corresponds to the client ID.
 . Enter the information for *OpenID Connect Authorization URLs*:
 * *Authorize URL*
@@ -91,7 +91,7 @@ For Okta, the Okta admin must assign the dynamically generated clients to a user
 
 == Client Application Updates and Deletes
 
-OKTA or another IDP may allow client modification and deletion independently, but this isn't supported on Anypoint Platform. Instead, Anypoint Platform provides and supports hooks so you can implement API calls that are particular to your IDP. 
+OKTA or another IdP might allow client modification and deletion independently, but this isn't supported on Anypoint Platform. Instead, Anypoint Platform provides and supports hooks so you can implement API calls that are particular to your IdP. 
 
 These examples show PUT and DELETE requests that Anypoint Platform makes.
 
@@ -114,7 +114,7 @@ Authorization: Bearer access-token
 }
 ----
 * The `Authorization:` header is included as part of the request only if the `Authorization Header` under *Advanced settings* is configured.
-* The `client_id` request parameter that is passed is the same as the `client_id` passed in the `PUT` request payload.
+* The `client_id` request parameter that's passed is the same as the `client_id` passed in the `PUT` request payload.
 * The `token_endpoint_auth_method` passed in the payload is always `client_secret_basic`.
 * Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client Provider*.
 +
@@ -131,34 +131,34 @@ Authorization: Bearer access-token
 ----
 
 [IMPORTANT]
-Neither the `PUT` nor the `DELETE` are expected to work if the call is used directly against an IDP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
+Neither the `PUT` nor the `DELETE` work if the call is used directly against an IdP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
 
 
 == Supported Grant Types
 
 === Pre-populated Grant Types in API Portal
 
-If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all of the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. 
+If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. 
 
 To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. 
 
-If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[RFC 8414, Obtaining Server Metadata] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated prior to merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users.
+If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[RFC 8414, Obtaining Server Metadata] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated before merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users.
 
 === Update Grant Types
 
-If the *Issuer* is set and the `/.well-known` URL is available, you can go to an existing client provider, save it again, and the grant types are updated based on the `grant_types_supported` from your `/.well-known` metadata. The system fetches the `/.well-known` metadata when you create or update a client provider.
+If the *Issuer* is set and the `/.well-known` URL is available, you can go to an existing client provider, and save it again to update the grant types based on the `grant_types_supported` from your `/.well-known` metadata. The system fetches the `/.well-known` metadata when you create or update a client provider.
 
 
 === Default Grant Types
 
-If the *Issuer* field isn't configured or the provider's discovery endpoint is unavailable, by default the Anypoint Platform UI lists the following grant types when registering an API client application in an xref:exchange::index.adoc[Anypoint Exchange API portal]:
+If the *Issuer* field isn't configured or the provider's discovery endpoint is unavailable, by default the Anypoint Platform UI lists these grant types when registering an API client application in an xref:exchange::index.adoc[Anypoint Exchange API portal]:
 
 - Implicit
 - Authorization
 - Refresh Token
 
 [NOTE]
-You can select the Refresh Token grant type only if you have also selected the authorization grant type.
+You can select the Refresh Token grant type only if you have also selected the Authorization grant type.
 
 
 == See Also
