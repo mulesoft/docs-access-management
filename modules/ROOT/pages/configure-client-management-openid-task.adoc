@@ -62,13 +62,13 @@ The HTTP authorization header provides a static token that doesn't expire to aut
 .. Click *Use OAuth2 private key jwt* to use a private key instead of and authorization header, and provide these values:
 * *Token Client ID*
 +
-This is the JWT (JSON Web Token) that contains information about the authenticated user, used by OIDC to verify that the user is who they claim to be. 
+Create a JWT (JSON Web Token) and sign it using the private key. Use this as the client assertion when making the `/token` endpoint API call. 
 * *Token Client Private Key*
 +
-This is the secret cryptographic key used by the client to authenticate itself to a server when requesting access tokens.
+This is the secret cryptographic key used by Anypoint Platform to sign the JWT. When the IdP reads the signed JWT and recognizes the signature, the IdP issue a token to Anypoint Platform. Anypoint Platform then uses that token to register the endpoint to create the client.
 * *Token Client API Scopes*
 +
-The client API scopes define the specific permissions granted to an application when requesting access to a resource.
+The client API scopes define the specific permissions granted to the token client with the scopes to register new clients.  
 . Enter the information for the *Token Introspection Client*:
 * *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
   *** For Okta, this value should be a "Confidential" client.
