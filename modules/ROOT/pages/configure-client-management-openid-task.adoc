@@ -63,10 +63,10 @@ The HTTP authorization header provides a static token that doesn't expire to aut
 .. Select *Use OAuth2 private key jwt* to use a private key instead of and authorization header, and provide these values:
 * *Token Client ID*
 +
-Create a JWT (JSON Web Token) and sign it using the private key. Use this as the client assertion when making the `/token` endpoint API call. 
+This is the unique identifier of the application (client ID) registered within your IdP. It's used to identify the calling application when requesting a bearer token from Anypoint Platform during client registration. 
 * *Token Client Private Key*
 +
-This is the secret cryptographic key used by Anypoint Platform to sign the JWT. When the IdP reads the signed JWT and recognizes the signature, the IdP issue a token to Anypoint Platform. Anypoint Platform then uses that token to register the endpoint to create the client.
+This is the cryptographic key in PEM format used by Anypoint Platform to sign the JWT for authenticating with the IdP. The corresponding public key must be stored in the IdP in advance. When the IdP reads the signed JWT and validates the signature, the IdP issues an access token used for Anypoint Platform to register a new client in the IdP.
 * *Token Client API Scopes*
 +
 The client API scopes define the specific permissions granted to the token client with the scopes to register new clients.  
