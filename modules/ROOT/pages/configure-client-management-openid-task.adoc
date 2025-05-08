@@ -5,7 +5,7 @@ Configure an external OpenID Connect (OIDC) identity provider (IdP) to handle cl
 Anypoint Platform supports client management by identity providers that implement the OpenID Connect Dynamic Client Registration open standard. Salesforce, Okta, and OpenAM v14 Dynamic Client Registration are explicitly supported in Anypoint Platform.
 
 
-== Configuring Client Management
+== Configure Client Management
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
