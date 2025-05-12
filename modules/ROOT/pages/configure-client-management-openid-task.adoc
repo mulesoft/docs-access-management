@@ -4,6 +4,8 @@ Configure an external OpenID Connect (OIDC) identity provider (IdP) to handle cl
 
 Anypoint Platform supports client management by identity providers that implement the OpenID Connect Dynamic Client Registration open standard. Salesforce, Okta, and OpenAM v14 Dynamic Client Registration are explicitly supported in Anypoint Platform.
 
+Anypoint Platform supports client authentication using an Authorization Header or by using the private key JSON Web Token (JWT) method. With the private key method, during dynamic client registration, Anypoint Platform signs a JWT with a user-provided private key and sends it to the IdP as a client assertion. The IdP validates the signature using a pre-registered public key and, if successful, issues a short-lived access token used solely to register a new client. This approach enhances security by allowing you to control the token lifespan and restrict scopes to only those that are necessary.
+
 
 == Configure Client Management
 
