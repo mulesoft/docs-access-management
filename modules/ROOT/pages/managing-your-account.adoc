@@ -12,6 +12,7 @@ You can use the same email address for multiple Anypoint Platform accounts, but 
 * *Username*
 + 
 Must be at least three characters and contain only: 
++
 ** Alphanumeric characters
 ** Dashes
 ** Underscores
@@ -56,7 +57,7 @@ You must use the email address the invitation email was sent to to sign up for a
 . Enter your information in the form.
 +
 If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation select either: 
-** <<use_existing_account,Use an Existing Account>> ,or
+** <<use_existing_account,Use an Existing Account>>, or
 ** <<create_new_account,Create a New Account Within an Existing Organization>>
 . Agree to the terms of service and privacy policy, then click *Accept and create account in <org>*.
 
@@ -81,7 +82,7 @@ An organization owner account for a different organization.
 After clicking the link in the invitation, you have one week to choose the account to use to join the organization.
 
 [NOTE]
-If the account you want to use is already associated with another root organization, an exclamation mark is shown next to the organization. Additional steps are needed before migrating the account to a new organization.
+If the account you want to use is already associated with another root organization, an exclamation mark is shown next to your account. Additional steps are needed before migrating the account to a new organization.
 
 
 == Sign in to Anypoint Platform
@@ -102,7 +103,7 @@ If your organization uses xref:access-management::external-identity.adoc[Single 
 . Click *Use custom domain*.
 . Enter your organization's domain name.
 +
-+ If you don't know your organization's domain name, a member of your organization can provide the organization domain name, which is accessible in their user profile.
+If you don't know your organization's domain name, a member of your organization can provide the organization domain name, which is accessible in their user profile.
 . Click *Continue*.
 +
 You're redirected to your identity provider.
@@ -141,7 +142,7 @@ After selecting this account and entering the password associated with it, you'r
 [[account-associated-org-owner]]
 == Account Associated as an Organization Owner
 
-A common scenario, is to create an account that's not associated with any existing organization. This automatically assigns your account to a new organization and makes your account an xref:roles.adoc#organization-owner[organization owner]. 
+A common scenario, is to create an account that's not associated with any existing organization. This automatically assigns your account to a new organization and makes your account an organization owner. 
 
 After selecting this account, entering its corresponding password, and clicking the *Sign In* button, if there are no other members in the organization you own:
 
@@ -170,8 +171,6 @@ include::partial$link-anypoint-platform-accounts.adoc[tag=profileLinking,levelof
 == Update User Information
 
 include::partial$include-nav-steps-to-profile.adoc[]
-
-image::managing-accounts-roles-and-permissions-98132.png[The access point for your user profile]
 
 You can modify your contact information, change your password, and see a list of the permissions assigned to your account.
 
