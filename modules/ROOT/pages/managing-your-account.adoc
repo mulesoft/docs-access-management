@@ -18,12 +18,11 @@ Must be at least three characters and contain only:
 ** Underscores
 * *Phone Number*
 +
-* Phone number
-+
 Phone number with area code.
 * *Password* 
 +
 Must be between 8 and 64 characters in length with at least one uppercase letter, one lowercase letter, and one number. Your password can contain only: 
++
 ** Upper and lower case characters
 ** Numbers
 ** Non-alphanumeric symbols
@@ -57,8 +56,9 @@ You must use the email address the invitation email was sent to to sign up for a
 . Enter your information in the form.
 +
 If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation select either: 
-** <<use_existing_account,Use an Existing Account>>, or
-** <<create_new_account,Create a New Account Within an Existing Organization>>
++
+* <<use_existing_account,Use an Existing Account>>, or
+* <<create_new_account,Create a New Account Within an Existing Organization>>
 . Agree to the terms of service and privacy policy, then click *Accept and create account in <org>*.
 
 [NOTE]
@@ -128,7 +128,7 @@ When an organization administrator deletes an account from the organization, the
 You can use an unattached account to join the *MuleSoft* organization with no further configurations needed. Select the account, enter its corresponding password, and click *Sign in*.
 
 [[use-admin-account]]
-== Use an Administrator Account
+== Use an Organization Administrator Account
 
 If your account is an organization administrator for a different organization (or business group within that organization), your username is shown with an exclamation mark next to it. 
 
@@ -136,7 +136,7 @@ You can use this account to join *MuleSoft*, however all existing references fro
 
 After selecting this account and entering the password associated with it, you're asked to confirm your decision. If you proceed:
 
-* If there are other members in the business group you're leaving behind, the organization administrator of the parent organization is automatically assigned as organization administrator for the business group.
+* If there are other members in the business group you're leaving, the organization administrator of the parent organization is automatically assigned as the organization administrator for the business group.
 * If there are no other members, the business group is deleted.
 
 [[account-associated-org-owner]]
@@ -146,20 +146,20 @@ A common scenario, is to create an account that's not associated with any existi
 
 After selecting this account, entering its corresponding password, and clicking the *Sign In* button, if there are no other members in the organization you own:
 
-* You are presented with a warning that all associations to the existing organization will be lost.
-* The organization you are leaving will be deleted. 
+* You get a warning that all associations to the existing organization will be lost.
+* The organization you're leaving will be deleted. 
 
 However, if the organization your account owns has other members, Anypoint Platform won't allow you to migrate to *MuleSoft*.
 
-To _free_ your account from the organization you own, open a support ticket at https://help.mulesoft.com[https://help.mulesoft.com]. Provide this information:
+To free your account from the organization you own, open a support ticket at https://help.mulesoft.com[https://help.mulesoft.com]. Provide this information:
 
-* The `userId` and `userName` of another user within the organization you own to promote to owner
+* The username of another user within the organization you own to promote to owner
 * The organization name and organization ID of the organization
 
 After support confirms the migration is complete, you can use your account to join MuleSoft.
 
 [NOTE]
-If you have a free trial account and want to migrate your user name to a new organization you need another organization administrator in your current organization to delete your organization owner account from the organization associated with your trial account.
+If you have a free trial account and want to migrate your username to a new organization you need another organization administrator in your current organization to delete your organization owner account from the organization associated with your trial account.
 
 // == Link Anypoint Platform Accounts
 
@@ -234,7 +234,7 @@ A link to create a new password is emailed to you.
 [[forgot-user-name]]
 == Forgot User Name
 
-. Navigate to the Anypoint Platform sign in page.
+. Navigate to the Anypoint Platform signin page.
 . Click the *Forgot your username or password* link.
 . In the *Forgot your credentials* form, enter the email address you used for your Anypoint Platform account, then click *Request credentials*. 
 +
