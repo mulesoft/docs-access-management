@@ -142,7 +142,7 @@ After selecting this account and entering the password associated with it, you'r
 [[account-associated-org-owner]]
 == Account Associated as an Organization Owner
 
-A common scenario, is to create an account that's not associated with any existing organization. This automatically assigns your account to a new organization and makes your account an organization owner. 
+A common scenario is to create an account that's not associated with any existing organization. This automatically assigns your account to a new organization and makes your account an organization owner. 
 
 After selecting this account, entering its corresponding password, and clicking the *Sign In* button, if there are no other members in the organization you own:
 
