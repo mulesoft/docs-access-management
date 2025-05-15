@@ -1,4 +1,4 @@
-= Connected Apps
+= Secure API Integration with Connected Apps
 
 Connected apps provide the framework for a safe way for external applications to integrate with your Anypoint Platform org using https://anypoint.mulesoft.com/exchange/portals/anypoint-platform[APIs] through OAuth 2.0 and OpenID Connect without giving the external apps full access to everything. Connected apps enable you to use secure authentication protocols and control an app’s access to user data.
 
