@@ -3,9 +3,7 @@
 When you establish a tenant relationship and enable the connection between your Anypoint Platform organization and a trusted Salesforce organization, you can enable and disable capabilities associated with the Salesforce organization. 
 
 * xref:enabling-einstein.adoc[]
-* xref:enabling-invocable-actions.adoc[]
-
-
+* xref:enabling-api-catalog.adoc[]
 
 == See Also
 

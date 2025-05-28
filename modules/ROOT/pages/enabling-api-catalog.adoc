@@ -1,4 +1,5 @@
 = Enabling API Catalog
+:page-aliases: access-management::enabling-invocable-actions.adoc
 
 Enable a connected Salesforce organization to access and sync Anypoint Platform APIs into API Catalog in Salesforce. This capability is enabled in Anypoint Platform Access Management by an Anypoint Platform organization administrator.  
 
