@@ -136,6 +136,14 @@ Authorization: Bearer access-token
 [IMPORTANT]
 Neither the `PUT` nor the `DELETE` work if the call is used directly against an IdP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
 
+=== Update External Clients Via the API
+
+The Access Management API call `PUT /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}/clients/{clientId}` has an optional `force` parameter that updates Anypoint Platform internal client application records, regardless of whether the update to the external IdP succeeds or fails. This ensures that Anypoint Platform's view of the client application is updated, even if there are issues communicating with the IdP.
+
+Before the introduction of the `force` parameter, when updating an external client application via the Anypoint Platform API, Anypoint Platform first attempted to update the Identity Provider (IdP). Anypoint Platform then updated its internal records only if the IdP update was successful.
+
+For more information, see https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/%237020/[Access Management API] documentation.
+
 
 == Supported Grant Types
 
