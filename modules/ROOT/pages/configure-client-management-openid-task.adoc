@@ -138,7 +138,7 @@ Neither the `PUT` nor the `DELETE` work if the call is used directly against an 
 
 === Update External Clients Via the API
 
-You can use the Access Management API call `PUT /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}/clients/{clientId}` to update external clients. Use the optional `force` parameter to update Anypoint Platform internal client application records, regardless of whether the update to the external IdP is successful. This ensures that Anypoint Platform's view of the client application is updated, even if there are issues communicating with the IdP.
+You can use the Access Management API call `PUT /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}/clients/{clientId}` to update external clients. Use the optional `force` parameter to update Anypoint Platform internal client application records, regardless of whether the update to the external IdP is successful. Using this parameter ensures that the view Anypoint Platform has of the client application is current, even if there are issues communicating with the IdP.
 
 If you don't use the `force` parameter, when updating an external client application via the Anypoint Platform API, Anypoint Platform first attempts to update the Identity Provider (IdP) and then updates its internal records only if the IdP update is successful.
 
