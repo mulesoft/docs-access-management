@@ -6,7 +6,8 @@ Use Microsoft Entra ID (formerly Azure AD) as a client provider to authenticate 
 [NOTE]
 include::partial$include-gov-cloud-note.adoc[tag=govcloud]
 
-== Configuration Walkthrough
+[[config-client-provider]]
+== Configure the Client Provider
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -17,7 +18,7 @@ include::partial$include-nav-client-providers.adoc[]
 The *Add OIDC Microsoft Entra ID (Azure AD) client provider* page appears.
 +
 . Enter a name and description for your client provider.
-. Enter the following values from your identity provider’s configuration:
+. Enter the values from your identity provider’s configuration:
 .. *Issuer*: URL that the OpenID provider asserts is its trusted issuer.
 .. *Tenant ID for Microsoft Entra ID*: The tenant ID from Microsoft Entra ID. For more information on obtaining your tenant ID, see https://learn.microsoft.com/en-us/entra/fundamentals/how-to-find-tenant[How to find your Microsoft Entra tenant ID].
 .. *Client ID*: The client ID for an existing client in your identity provider (IdP) that is capable of creating applications in Microsoft Entra ID.
@@ -70,7 +71,7 @@ When https://docs.microsoft.com/en-us/graph/api/application-post-applications?vi
 
 Client secrets (application password) use a string value in the Microsoft Entra application for authentication instead of a certificate for identity. 
 
-Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations and the expiration date can't be reset. 
+Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations. You can customize the expiration date when <<config-client-provider,configuring the client provider>>. 
 
 You can create new client secrets in Anypoint Platform, but you must delete old or expired client secrets directly in your Microsoft account portal. It's best practice to remove expired secrets promptly. 
 
@@ -95,7 +96,7 @@ Use the token enforcement policy implementation version 1.7 and later so that du
 
 To use this policy, follow the documentation on <<oauth2>> to generate supported tokens.
 
-=== Token has been Revoked Error
+=== Token Validation Fails
 
 When you attempt to enforce the OpenID Connect (OIDC) policy by invoking an Anypoint API using a valid token obtained from Microsoft Entra ID and get a `Token has been revoked` error, refer to <<oauth2>> to confirm that you obtained the token using a supported method. If the token validation still fails, contact Support.
 
