@@ -33,7 +33,7 @@ Monitoring Administrator
 View, create, modify, and delete content in Anypoint Monitoring.
 // end::permsAdminMonitoringDesc[]
 //
-// tag:permsAdminMonitoringNotes[]
+// tag::permsAdminMonitoringNotes[]
 &nbsp;
 // end::permsAdminMonitoringNotes[]
 //

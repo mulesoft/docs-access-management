@@ -2,6 +2,7 @@
 
 Create a new Anypoint Platform account, sign in to an existing Anypoint Platform organization through an invitation, use your current account to access a new organization, and set up a new account within an existing organization. You can also sign in to Anypoint Platform using single sign-on and allowlist URLs for uninterrupted access.
 
+[[create-new-account]]
 == Create an Anypoint Platform Account
 
 . Go to https://anypoint.mulesoft.com/login/signup[the signup page].
@@ -58,7 +59,7 @@ You must use the email address the invitation email was sent to to sign up for a
 If your email address is associated with more than one Anypoint Platform account, after clicking the link in the invitation select either: 
 +
 * <<use_existing_account,Use an Existing Account>>, or
-* <<create_new_account,Create a New Account Within an Existing Organization>>
+* <<create-new-account,Create a New Account Within an Existing Organization>>
 . Agree to the terms of service and privacy policy, then click *Accept and create account in <org>*.
 
 [NOTE]
