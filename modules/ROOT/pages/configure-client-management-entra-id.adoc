@@ -34,6 +34,13 @@ For an example of the `PATCH` payload, see the https://docs.microsoft.com/en-us/
 
 . Click *Create*.
 
+[NOTE]
+====
+To ensure the stability and support of your client management integration, avoid making manual edits to the application directly within the Azure portal.
+
+Modifying the application in Azure can interfere with operational flows managed by Anypoint Platform, such as client updates and secret resets. If you encounter issues, verify that no manual changes were made to the application in the Azure portal. 
+====
+
 [[microsoft-identity-platform-support]]
 == Microsoft Identity Platform Support
 
@@ -69,11 +76,11 @@ When https://docs.microsoft.com/en-us/graph/api/application-post-applications?vi
 [[client-secrets]]
 === Client Secrets
 
-Client secrets (application password) use a string value in the Microsoft Entra application for authentication instead of a certificate for identity. 
+Client secrets (application password) use a string value in the Microsoft Entra application for authentication instead of a certificate for identity.
 
-Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations. You can customize the expiration date when <<config-client-provider,configuring the client provider>>. 
+Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations. You can customize the expiration date when <<config-client-provider,configuring the client provider>>.
 
-You can create new client secrets in Anypoint Platform, but you must delete old or expired client secrets directly in your Microsoft account portal. It's best practice to remove expired secrets promptly. 
+You can create new client secrets in Anypoint Platform, but you must delete old or expired client secrets directly in your Microsoft account portal. It's best practice to remove expired secrets promptly.
 
 [[limitations]]
 == Limitations
@@ -85,9 +92,9 @@ Anypoint Platform doesn't support Microsoft Azure client providers deployed in M
 [[token-validation]]
 == Token Introspection
 
-Microsoft Entra ID doesn't provide an introspection endpoint out of the box, but Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for you] when you configure Microsoft Entra ID as a client provider following the previous flow. 
+Microsoft Entra ID doesn't provide an introspection endpoint out of the box, but Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for you] when you configure Microsoft Entra ID as a client provider following the previous flow.
 
-When you create your client provider following the OpenID Connect DCR for Microsoft Entra ID flow, Anypoint Platform populates an introspect URL. You can view the URL using `GET /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}`. 
+When you create your client provider following the OpenID Connect DCR for Microsoft Entra ID flow, Anypoint Platform populates an introspect URL. You can view the URL using `GET /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}`.
 
 During token introspection, Anypoint Platform calls `https://graph.microsoft.com/v1.0` with your provided token. As long as the response to such a call isn't a failure, the token is determined to be valid.
 
