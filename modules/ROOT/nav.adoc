@@ -45,6 +45,7 @@
  ** xref:manage-capabilities.adoc[]
  *** xref:enabling-api-catalog.adoc[]
  *** xref:enabling-einstein.adoc[]
+ *** xref:enabling-mulesoft-direct.adoc[]
 * xref:allowlisting-trusted-domains.adoc[]
 * xref:audit-logging.adoc[Audit Logs]
 * xref:troubleshooting-anypoint-platform-access.adoc[]
