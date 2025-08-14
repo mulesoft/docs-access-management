@@ -73,7 +73,7 @@ Enter the key for the additional parameter.
 ** *Value*
 +
 Enter the value for the additional parameter.
-** (Optional)*Hide value on Anypoint Platform*
+** (Optional) *Hide value on Anypoint Platform*
 +
 If you're deploying the integration to CloudHub 2.0, this option hides the parameter value on Anypoint Runtime Manager.
 ** Select *Add New* to add additional parameters.
