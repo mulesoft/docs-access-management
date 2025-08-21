@@ -1,3 +1,3 @@
-. In the Access Management navigation menu, click *Business Groups*.
-. Click the name of the organization you want to access.
-. Click the *Roles* tab.
+. In the Access Management navigation menu, Select *Business Groups*.
+. Select the name of the organization to access.
+. Select the *Roles* tab.
