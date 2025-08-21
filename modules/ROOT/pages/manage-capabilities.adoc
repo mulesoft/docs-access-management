@@ -4,6 +4,7 @@ When you establish a tenant relationship and enable the connection between your 
 
 * xref:enabling-einstein.adoc[]
 * xref:enabling-api-catalog.adoc[]
+* xref:enabling-integration-intelligence.adoc[]
 
 == See Also
 
