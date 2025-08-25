@@ -1,12 +1,12 @@
-= About Multi-Factor Authentication
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Anypoint Platform Multi-Factor Authentication
 
-Multi-factor authentication (MFA) provides an additional layer of verification for Anypoint Platform users.
+Use multi-factor authentication (MFA) as an additional layer of verification for Anypoint Platform users.
+
 MuleSoft requires MFA when users access Anypoint Platform, either directly with their Anypoint credentials or via single sign-on (SSO).
-MFA is enabled for direct signins and can’t be turned off at the organization level. However, a few service account types don’t require MFA. An organization administrator should waive MFA for these accounts so that existing integrations can continue without interruption.
-For SSO users, set up MFA through the identity provider.
+
+MFA is enabled by default for direct signins and can’t be turned off at the organization level. However, a few service account types don’t require MFA. An organization administrator should waive MFA for these accounts so that existing integrations can continue without interruption.
+
+For SSO users, set up MFA through the identity provider. Since MFA is managed on the IdP side, for SSO users, `n/a` is shown for multi-factor authentication in their Settings.
 
 When a user signs in with their Anypoint credentials, they must enter their password and then verify their identity with one of these verification methods:
 
@@ -41,15 +41,15 @@ These types of service accounts are exempt from the requirement to use MFA:
 * Robotic Process Automation (RPA) systems, such as Automation Anywhere
 
 [IMPORTANT]
-MuleSoft requires customers to use xref:connected-apps-org-admin.adoc[internal connected apps] instead of service accounts that make programmatic calls to Anypoint Platform. Connected apps provide more security and control than service accounts. If you’re having trouble switching to connected apps, reach out to Mulesoft for help. In the meantime, if you’re in this situation, you can temporarily waive MFA for your existing service accounts until they’re transitioned to connected apps.
+MuleSoft requires customers to use xref:connected-apps-org-admin.adoc[internal connected apps] instead of service accounts that make programmatic calls to Anypoint Platform. Connected apps provide more security and control than service accounts. If you’re having trouble switching to connected apps, reach out to MuleSoft for help. In the meantime, you can temporarily waive MFA for your existing service accounts until they’re transitioned to connected apps.
 
-To prevent service disruptions, waive MFA for valid MFA-exempt accounts in your organization. Note that after August 1, 2023, waiving MFA for user accounts isn’t permitted.
+To prevent service disruptions, waive MFA for valid MFA-exempt accounts in your organization. After August 1, 2023, waiving MFA for user accounts isn't permitted.
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
 include::partial$include-nav-mfa.adoc[]
 
-. Click your Anypoint identity provider.
+. Select your Anypoint identity provider.
 . In the *Exempt Accounts* section, add the accounts that are valid to exclude from MFA. +
 Only accounts that do not use single sign-on (SSO) appear in this list.
 . Click *Save*. +
