@@ -8,7 +8,7 @@ MFA is enabled by default for direct signins and can’t be turned off at the or
 
 [NOTE]
 ====
-For SSO users, set up MFA through the identity provider (IdP). Since MFA is managed by the IdP, multi-factor authentication is shown as `n/a` in user Settings for SSO users.
+For SSO users, set up MFA through the identity provider (IdP). Because MFA is managed by the IdP, multi-factor authentication is shown as `n/a` in user Settings for SSO users.
 ====
 
 When a user signs in with their Anypoint Platform credentials, they must enter their password and then verify their identity with one of these verification methods:
