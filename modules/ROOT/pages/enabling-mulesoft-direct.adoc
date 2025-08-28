@@ -34,69 +34,12 @@ After MuleSoft Direct is enabled in Anypoint Platform, the Salesforce organizati
 [[deploy-integration-assets]]
 === Deploy Integration Assets
 
-When you deploy an integration asset, an instance of the application is created and shown in *App instances* for the integration asset.
+When you deploy an integration asset, an application instance is created and shown in *App instances* for the integration asset.
 
-. Navigate to *Setup > MuleSoft > MuleSoft Direct*.
-. Select *Enable* for the integration asset to deploy.
-. In *Enable Integration*, enter or select the values for the integration asset, and then select *Next*:
-
-* *Display Name*
-+
-This is the name used to reference the integration asset in a Salesforce org.
-* *Application Name*
-+
-Accept the default value or enter a new value for the application name. Make sure that the app name is unique to your MuleSoft instance.
-* *Business Group*
-+
-Select the business group to enable the integration asset for.
-* *Environment*
-+
-Select the environment to enable the integration for.
-* *Deployment Target*
-+
-Select the deployment target to deploy the integration to.
-. In *Authenticate Connection to External System*, enter or select the authentication method for the integration asset:
-* *Authorization Protocol*
-** *Use a Saved Connection*
-+
-Use a saved connection.
-** *None*
-+
-Select this option to not use authentication when connecting to the external system.
-** *Client Credentials*
-** *JSON Web Tokens (JWT)*
-** *Basic Authentication*
-* (Optional)*Additional Parameters*
-** *Key*
-+
-Enter the key for the additional parameter.
-** *Value*
-+
-Enter the value for the additional parameter.
-** (Optional) *Hide value on Anypoint Platform*
-+
-If you're deploying the integration to CloudHub 2.0, this option hides the parameter value on Anypoint Runtime Manager.
-** Select *Add New* to add additional parameters.
-+
-To remove an additional parameter, select the delete icon next to *Value*.
-. Select *Proceed*.
-+
-A named credential is created for the enabled integration instance, and the deployed integration instance is available in the Applications menu of MuleSoft Runtime Manager. 
-
-You can extend the app in Anypoint Studio to meet your end-to-end business needs.
-
-[[delete-app-instance]]
-== Delete an App Instance
-
-Remove an app instance that you no longer need from your Salesforce org and MuleSoft Runtime Manager.
-
-. Navigate to *Setup > MuleSoft > MuleSoft Direct*.
-. Select the integration asset.
-. In *App instances*, select the app instance to delete.
-. Click the down arrow, and then select *Delete Instance*.
-. Select *Delete*.
+For information about enabling and deploying assets from the Salesforce org, see https://help.salesforce.com/s/articleView?id=ind.enable_integration_assets.htm&type=5[Enabling Integrations].
 
 
 == See Also
 
-xref:connecting-salesforce-orgs.adoc[]
+* xref:connecting-salesforce-orgs.adoc[]
+* https://help.salesforce.com/s/articleView?id=ind.industry_integration_delete_integration.htm&type=5[Delete an Integration Instance]
