@@ -12,17 +12,28 @@ Integration Intelligence gives you:
 * Improved monitoring with pre-built dashboards that display performance and usage metrics for all applications and APIs in a single location. You can also create custom dashboards tailored to your specific business needs. 
 * Troubleshooting assistance and insights with AI agents. 
 
-== Before you begin
+== Before You Begin
 
 Before enabling Integration Intelligence in your Anypoint Platform organization, you must:
 
 * Have administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
-* Have an Anypoint Platform organization that is linked to a Salesforce organization with a connected Data Cloud instance. 
+ 
 * Have administrative access to a Salesforce organization that has Integration Intelligence enabled.
+* xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization.
++
+[NOTE] The connected Salesforce organization must have a https://help.salesforce.com/s/articleView?id=ind.fsc_admin_data_cloud_connect_to_salesforce.htm&type=5connected[Data Cloud instance].
+
+== Set Up Integration Intelligence
+
+The Salesforce admin sets up Integration Intelligence in the Salesforce org. 
+
+.  
+
+
 
 == Enable Integration Intelligence in Anypoint Platform
 
-This feature is enabled in Anypoint Platform, not directly in Salesforce. The ability to turn on this feature is governed by the Integration Intelligence opt-in switch in Salesforce.
+An Anypoint Platform organization administrator enables seamless login for Integration Intelligence in Anypoint Platform. The Salesforce org admin must first opt in to Integration Intelligence in the Salesforce org. 
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -35,11 +46,10 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 Any subsequent changes made to Integration Intelligence in Access Management (for example, disabling trust or changing business groups) are automatically shared with the connected Salesforce organization.
 
-== Enable Seamless Sign-On for Anypoint PlatformUsers
+== Enable Seamless Login for Anypoint Platform Users
 
-Seamless sign-on lets Anypoint Platform users access Tableau Next dashboards in Salesforce without needing to create new credentials or perform additional login steps. 
+Seamless login lets Anypoint Platform users access Tableau Next dashboards in Salesforce without needing to create new credentials or perform additional login steps. 
 
 
 
 == Enable Integration Intelligence in Salesforce
-
