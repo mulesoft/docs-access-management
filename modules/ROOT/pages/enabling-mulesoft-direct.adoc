@@ -38,6 +38,16 @@ When you deploy an integration asset, an application instance is created and sho
 
 For information about enabling and deploying assets from the Salesforce org, see https://help.salesforce.com/s/articleView?id=ind.enable_integration_assets.htm&type=5[Enabling Integrations].
 
+== Delete an App Instance
+
+Remove an app instance that you no longer need from your Salesforce org and Anypoint Runtime Manager.
+
+. Navigate to *Setup > MuleSoft > MuleSoft Direct*.
+. Select the integration asset to delete.
+. In *App instances*, select the app instance to delete.
+. Click the down arrow, and then select *Delete Instance*.
+. Select *Delete*.
+
 
 == See Also
 
