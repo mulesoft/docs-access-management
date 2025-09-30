@@ -50,32 +50,6 @@ Each Salesforce organization shows the enabled and disabled Anypoint Platform ca
 .. Select *Settings* for the Salesforce organization that has Agentforce enabled. 
 .. In *Agentforce for Anypoint Platform Setting*, select the Salesforce organization and select *Save*.
 
-//// ////
-[[enable-einstein]]
-== Use the Anypoint Code Builder Trial Organization
-
-Anypoint Code Builder provides a free trial shared Salesforce organization to enable Einstein for Anypoint Code Builder only. 
-
-[NOTE]
-You can't use this trial organization if the default Salesforce organization is already set. 
-
-If you use this trial organization:
-
-* You can't store your Einstein generative AI audit and feedback data in Salesforce Data Cloud.
-* You are subject to the rate-limiting policies of the trial organization, which can sometimes result in the service being too busy to process Einstein requests.
-* You can use Einstein only for Anypoint Code Builder.
-+
-You can't use the Einstein capabilities that come with a connected Salesforce organization, such as IDP.
-
-include::partial$include-nav-steps-org-admin.adoc[]
-
-. Select *Salesforce*.
-. In *Enable Einstein for Anypoint Platform*, select *Accept*.
-. Accept the terms and conditions.
-+
-Einstein is enabled for limited use in Anypoint Code Builder.
-
-//// ////
 
 == Add the Agentforce Permissions for Users
 
