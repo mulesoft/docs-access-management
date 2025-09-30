@@ -1,0 +1,55 @@
+= Enabling MuleSoft Direct
+
+Enable MuleSoft Direct integrations in Anypoint Platform so Salesforce administrators can discover and deploy pre-built MuleSoft Direct integrations directly from the connected Salesforce organization. An integration is a prebuilt app or a configurable example. Integrations simplify the business workflow implementation by allowing external systems to easily integrate with the Salesforce Cloud apps. An integration can depend on several other apps that are necessary to complete a business use case.
+
+== Before You Begin
+
+Before enabling MuleSoft Direct in your Anypoint Platform organization, you must:
+
+* Have the root Organization Administrator permission and role.
+* Have administrative access to the connected Salesforce organization. 
+* xref:connecting-salesforce-orgs.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization. 
+
+== Enable MuleSoft Direct in Anypoint Platform
+
+After you establish a tenant relationship between your Anypoint Platform organization and a trusted Salesforce organization, the Anypoint Platform organization administrator enables MuleSoft Direct in Anypoint Platform.
+
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Select *Salesforce*.
+. In the section for the connected Salesforce organization to enable MuleSoft Direct for, select *Enable*.
+. Select *Continue*.
+. Select the business groups to enable MuleSoft Direct integrations for, and then select *Save settings*.
+
+[[access-mulesoft-direct]]
+== Access MuleSoft Direct in Salesforce Setup
+
+After MuleSoft Direct is enabled in Anypoint Platform, the Salesforce organization administrator can view and deploy available integration assets to the Salesforce organization.
+
+. The Salesforce organization administrator navigates to *Setup > MuleSoft >MuleSoft Direct*.
+. Select *Get Started*.
+. Accept the terms and conditions, and select *Save*.
+
+[[deploy-integration-assets]]
+=== Deploy Integration Assets
+
+When you deploy an integration asset, an application instance is created and shown in *App instances* for the integration asset.
+
+For information about enabling and deploying assets from the Salesforce org, see https://help.salesforce.com/s/articleView?id=ind.enable_integration_assets.htm&type=5[Enabling Integrations].
+
+== Delete an App Instance
+
+Remove an app instance that you no longer need from your Salesforce org and Anypoint Runtime Manager.
+
+. Navigate to *Setup > MuleSoft > MuleSoft Direct*.
+. Select the integration asset to delete.
+. In *App instances*, select the app instance to delete.
+. Click the down arrow, and then select *Delete Instance*.
+. Select *Delete*.
+
+
+== See Also
+
+* xref:connecting-salesforce-orgs.adoc[]
+* https://help.salesforce.com/s/articleView?id=ind.industry_integration_delete_integration.htm&type=5[Delete an Integration Instance]
