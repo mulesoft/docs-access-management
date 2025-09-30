@@ -1,4 +1,5 @@
 = Enabling or Disabling Agentforce for Anypoint Platform
+:page-aliases: access-management::enabling-einstein.adoc
 
 When you establish a tenant relationship with a Salesforce organization that has Agentforce enabled, you can enable Agentforce for your Anypoint Platform organization.
 
