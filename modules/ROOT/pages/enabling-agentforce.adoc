@@ -9,7 +9,6 @@ As an organization administrator, you can assign permission to the users in your
 * Anypoint Exchange
 * Intelligent Document Processing (IDP)
 
-
 == Before You Begin
 
 Before enabling Agentforce in your Anypoint Platform organization, you must:
@@ -48,7 +47,7 @@ The *Salesforce Orgs* section shows the orgs with xref:connecting-salesforce-org
 +
 Each Salesforce organization shows the enabled and disabled Anypoint Platform capabilities.
 . Select the Salesforce organization to use by default in your Anypoint Platform organization:
-.. Select *Settings* for the Salesforce organization that has Agentforce enabled. 
+.. Select *Settings* in *Enhance Anypoint Platform with Agentforce*. 
 .. In *Agentforce for Anypoint Platform Setting*, select the Salesforce organization and select *Save*.
 
 
