@@ -36,7 +36,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 |Anypoint Code Builder Developer | Create and use cloud IDE instances of Anypoint Code Builder.  | This permission does not apply to Anypoint Code Builder for Desktop. 
 
 include::partial$include-root-org-permissions-note.adoc[]
-|Mule Developer Generative AI User | Use natural language prompts to develop and generate flows using the Einstein for Anypoint Code Builder Generative Flows feature. |include::partial$include-root-org-permissions-note.adoc[]
+|Mule Developer Generative AI User | Use natural language prompts to develop and generate flows using Agentforce for Anypoint Code Builder Generative Flows. |include::partial$include-root-org-permissions-note.adoc[]
 |===
 
 
@@ -104,6 +104,14 @@ Users with this credential can't view application secrets and can't modify appli
 |API Creator| Create an API in the specified environment.|
 |API Versions Owner | View, modify, delete, and deprecate all API versions in the specified business group.|
 | Portals Viewer | View all portals in the specified business group.|
+|===
+
+== API Visualizer
+
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability to | Notes
+|Visualizer Editor | View, create, modify, and delete content in Anypoint Visualizer.|include::partial$include-root-org-permissions-note.adoc[]
 |===
 
 ////
@@ -692,12 +700,3 @@ In RPA Manager:
 |Required Permissions | Grants the Ability to | Notes
 | Usage Viewer| View usage reports.| include::partial$include-root-org-permissions-note.adoc[]
 |===
-
-== Visualizer
-
-[%header,cols="30a,50a,20a"]
-|===
-|Required Permissions | Grants the Ability to | Notes
-|Visualizer Editor | View, create, modify, and delete content in Anypoint Visualizer.|include::partial$include-root-org-permissions-note.adoc[]
-|===
-
