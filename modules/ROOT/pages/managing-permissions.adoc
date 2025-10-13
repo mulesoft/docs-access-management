@@ -12,11 +12,11 @@ To manage permissions, you must have the Organization Administrator permission i
 
 == How Permissions Work in Anypoint Platform
 
-In the Anypoint Platform, users belong to organizations and have sets of permissions. These permissions are assigned using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by xref:users.adoc#grant-user-permissions[granting permissions to users individually].
+In the Anypoint Platform, users belong to organizations and have sets of permissions. These permissions are assigned using xref:teams.adoc[teams] or xref:roles.adoc[roles], or by xref:users.adoc#grant-user-permissions[granting permissions to users individually].
 
 The Teams feature enables you to create groups of users and then assign the members of those groups certain permissions across multiple business groups. As an Organization Administrator, you can create and modify teams and assign cascading permissions according to organizational structure.
 
-Each role (deprecated) contains a list of permissions that define what a user with that role can do with the specific resources it scopes. +
+Each role contains a list of permissions that define what a user with that role can do with the specific resources it scopes. +
 Certain roles include a set of default permissions. As an organization administrator, you can create your customized roles and assign the permissions accordingly.
 
 Depending on the product, you can grant permissions directly to a specific user, without the need for roles or teams.
