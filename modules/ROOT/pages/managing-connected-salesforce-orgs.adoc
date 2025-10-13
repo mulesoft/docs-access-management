@@ -2,7 +2,7 @@
 
 As an Anypoint Platform organization administrator, you can enable, remove, and repair connections, and edit the name of Salesforce organizations.
 
-[enable-disable-connection]
+[[enable-disable-connection]]
 == Enable the Connection in Anypoint Platform
 
 Enable the connection to a Salesforce organization that has an established tenant relationship with your Anypoint Platform organization. 
@@ -33,7 +33,7 @@ To reestablish the connection between Anypoint Platform and removed Salesforce o
 
 An Anypoint Platform organization administrator can remove the connection between their Anypoint Platform organization and a connected Salesforce organization.
 
-When you remove a connection to a Salesforce organization, any capabilities associated with the Salesforce organization, such as Einstein and IDP, are removed. 
+When you remove a connection to a Salesforce organization, any capabilities associated with the Salesforce organization are removed. 
 
 To remove the connection to a Salesforce organization:
 

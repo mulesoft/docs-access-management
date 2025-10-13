@@ -36,7 +36,7 @@ You can now view your linked profile in the *Logged In Via* section of your user
 [[enable-profile-linking]]
 = Enabling Users to Link Anypoint Platform Profiles
 
-As an organization administrator, you can enable users to link multiple Anypoint Platform profiles that use the same email address to sign in. 
+As an organization administrator, you can enable users to link multiple Anypoint Platform profiles that use the same email address to sign in. The option to link profiles is available only when the SSO user signs in to their new Anypoint Platform account for the first time. 
 
 Anypoint Platform supports:
 

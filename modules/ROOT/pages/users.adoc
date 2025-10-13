@@ -20,6 +20,7 @@ Before getting started, ensure that you have:
 * The Organization Administrator permission
 * The API Version Owner permission if you plan to manage user permissions for your API version
 
+[[inviting-users]]
 == Invite a User to Anypoint Platform
 
 [NOTE]
@@ -35,7 +36,7 @@ include::partial$include-nav-users.adoc[]
 
 . Click *Invite user*.
 . Enter the email addresses of the users that you want to invite to your organization as a comma-separated list.
-. Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role (deprecated)] to assign permissions to these users.
+. Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role] to assign permissions to these users.
 . Click *Send Invitation*.
 
 The users you specify receive email invitations to join your organization. Invited users must use the link they receive in the invitation to join your organization. When they click the link, they are presented with a sign-up form that already has the *Company* field completed with the name of your organization.
@@ -69,7 +70,7 @@ include::partial$include-nav-users.adoc[]
 [[grant-user-permissions]]
 == Grant Permissions to Users
 
-Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles] (deprecated), or by granting permissions to users individually. Teams and roles functionality are mutually exclusive.
+Organization administrators manage user access using xref:teams.adoc[teams] or xref:roles.adoc[roles], or by granting permissions to users individually. Teams and roles functionality are mutually exclusive.
 
 For more information about configuring Teams, see xref:configure-teams.adoc#manage-team-permissions[Manage Team Permissions].
 
@@ -80,7 +81,7 @@ By default, in every new organization and business group, you can assign the fol
 * Assign API permissions: Select the name of the API you want to give access to, then pick a version and permission.
 * Assign Runtime Manager permissions: Select the name of the Runtime Manager environment to give access to, then pick a permission.
 * Assign teams: Select the name of the team to give access to.
-* Assign roles (deprecated): Select the name of the role to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
+* Assign roles: Select the name of the role to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
 
 To grant permissions to individual users: 
 
