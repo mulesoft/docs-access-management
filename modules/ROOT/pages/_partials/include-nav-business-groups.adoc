@@ -2,4 +2,3 @@
 . Click the name of the business group. 
 +
 The *Settings* section appears, showing details about the root organization or business group.
-

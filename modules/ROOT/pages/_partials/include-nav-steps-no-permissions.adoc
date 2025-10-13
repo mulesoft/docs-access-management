@@ -1,2 +1,2 @@
-. Log in to Anypoint Platform.
-. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
+. Sign in to Anypoint Platform.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
