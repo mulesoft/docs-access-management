@@ -1,6 +1,5 @@
 = Using Roles to Manage Permissions
 
-
 A _role_ is a set of predefined permissions controlling access to each product or feature within Anypoint Platform. Depending on the product, you can use predefined roles with standard permissions, or you can specify your own permissions for each role. Roles are set only for individual users. Use the xref:access-management::teams.adoc[Teams feature] for an access solution that works across business groups.
 
 To manage roles and permissions within Anypoint Platform, you must have the Organization Administrator permission. To manage user permissions for an API version, you must have the API Versions Owner permission.
