@@ -30,19 +30,16 @@ Some features in Access Management cannot be accessed using any connected app sc
 
 Access Management imposes the following limits on features in an organization:
 
-=== Organization limits:
+=== Organization Limits
 
 * Business groups per root organization: 100
 * Users per root organization: 10,000
 * Environments per root organization or business group: 150
-* API Manager clients per root organization
-** Managed by Anypoint Platform's internal client provider: 10,000
-** Managed by external client providers: 10,000
 * External access relations per root organization: 20
 * Permissions per external organization: 1000
 * Audit log retention period: Between 30 and 2190 days
 
-=== Teams, roles, and user permissions:
+=== Teams, Roles, and User Permissions Limits
 
 * Teams per root organization: 1000
 * Levels nested under parent teams: 10
@@ -54,23 +51,32 @@ Access Management imposes the following limits on features in an organization:
 * Roles per user: 700
 * External group mappings per team: 100
 
-=== Identity providers:
+=== Identity Providers Limits
 
 * Identity management provider keys per provider: 3
 * Identity management providers per root organization: 25
 
-=== Client providers:
+=== Client Providers Limits
 
 * Client management providers per root organization: 25
 
-=== Connected apps:
+=== Client Limits
+
+* Clients per root organization: 10,000
++
+The client limit applies to all Anypoint Platform clients in your org (for example, API Manager client applications, Runtime Manager clients, and other service clients). 
+
+Not all clients appear in the API Manager UI. To view the client count, use the Access Management API endpoint `GET https://anypoint.mulesoft.com/accounts/api/organizations/{orgId}/clients`.
+
+
+=== Connected Apps Limits
 
 * Authorized applications per user: 30
 * Connected apps accessible by external organizations: 20
 * Connected apps per root organization: 2000
 * Scope assignments per connected application: 1000
 
-=== User Token Limits:
+=== User Token Limits
 
 * Active tokens per user in Gov Cloud: 100
 * Active tokens per user in EU Region: 100
