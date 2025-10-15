@@ -46,6 +46,7 @@
  ** xref:manage-capabilities.adoc[]
  *** xref:enabling-api-catalog.adoc[]
  *** xref:enabling-agentforce.adoc[]
+ *** xref:enabling-integration-intelligence.adoc[]
  *** xref:enabling-mulesoft-direct.adoc[]
 * xref:allowlisting-trusted-domains.adoc[]
 * xref:audit-logging.adoc[Audit Logs]

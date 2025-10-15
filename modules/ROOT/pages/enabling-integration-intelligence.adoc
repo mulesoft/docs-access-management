@@ -1,0 +1,13 @@
+= Enabling Integration Intelligence
+
+Integration Intelligence enhances monitoring, analysis, and troubleshooting of MuleSoft integrations through AI-powered capabilities.
+
+== Before You Begin
+
+== Set Up Integration Intelligence in the Connected Salesforce Organization
+
+== Enable Integration Intelligence in Anypoint Platform
+
+== Enable Seamless Login for Anypoint Platform Users
+
+== Enable Integration Intelligence in Salesforce    
