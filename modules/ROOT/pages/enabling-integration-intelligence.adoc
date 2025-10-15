@@ -4,6 +4,8 @@ Integration Intelligence enhances monitoring, analysis, and troubleshooting of M
 
 == Before You Begin
 
+include::partial$include-integration-intelligence-setup.adoc[tag=prereqs]
+
 == Set Up Integration Intelligence in the Connected Salesforce Organization
 
 == Enable Integration Intelligence in Anypoint Platform

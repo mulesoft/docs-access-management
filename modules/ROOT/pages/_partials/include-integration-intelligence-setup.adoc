@@ -18,8 +18,8 @@ The Salesforce admin sets up Integration Intelligence in the Salesforce org.
 // tag::enable-ii-in-anypoint-platform[]
 An Anypoint Platform organization administrator enables seamless login for Integration Intelligence in Anypoint Platform. The Salesforce org admin must first opt in to Integration Intelligence in the Salesforce org. 
 
-include::partial$include-nav-steps-org-admin.adoc[]
-
+. Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
 . Select *Salesforce*.
 . Enable *Ingest Telemetry Data*.
 . Opt in to ingest telemetry data by selecting *I understand and agree to join the Beta program*.
@@ -35,4 +35,3 @@ Any subsequent changes made to Integration Intelligence in Access Management (fo
 Seamless login lets Anypoint Platform users access Tableau Next dashboards in Salesforce without needing to create new credentials or perform additional login steps. 
 
 // end::enable-seamless-login[]
-
