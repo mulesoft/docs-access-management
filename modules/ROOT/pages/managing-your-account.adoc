@@ -120,6 +120,8 @@ To ensure your sessions aren't blocked or interrupted by your organization's fir
 * `+https://clientstream.launchdarkly.com/*+`
 * `+https://www.gstatic.com/recaptcha/*+`
 * `+https://www.google.com/recaptcha/*+`
+* `https://npmcdn.com/*`
+* `https://cdnjs.cloudflare.com/*`
 
 [[use-unassociated-account]]
 == Use an Unassociated Account

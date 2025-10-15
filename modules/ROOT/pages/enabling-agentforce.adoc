@@ -1,0 +1,84 @@
+= Enabling or Disabling Agentforce for Anypoint Platform
+:page-aliases: access-management::enabling-einstein.adoc
+
+When you establish a tenant relationship with a Salesforce organization that has Agentforce enabled, you can enable Agentforce for your Anypoint Platform organization.
+
+As an organization administrator, you can assign permission to the users in your organization so they can use Agentforce with Anypoint Platform products that have Agentforce capabilities, including:
+
+* Anypoint Code Builder
+* Anypoint Exchange
+* Intelligent Document Processing (IDP)
+
+== Before You Begin
+
+Before enabling Agentforce in your Anypoint Platform organization, you must:
+ 
+* Have administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
+* Have the root Organization Administrator permission and role.
+* Have administrative access to a Salesforce organization that https://help.salesforce.com/s/articleView?id=sf.generative_ai_enable.htm&type=5[has Agentforce enabled]. 
+* xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization. 
+
+[[enable-einstein-salesforce]]
+== Enable Agentforce in the Salesforce Organization
+
+When the Salesforce administrator enables Agentforce for the connected Anypoint Platform organization, the connected Salesforce organization routes the Agentforce requests. The Salesforce organization handles tracking and billing. 
+
+. Log in to your Salesforce organization.
+. In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Anypoint Platform Setup*.
+. In *Your connected Anypoint Platform Organization*, select *Complete Connection*.
+. In *Connection to MuleSoft Anypoint Platform*, switch between *Enabled* or *Disabled* in *Enable Agentforce for MuleSoft Anypoint Platform*.
+. Click *Close*.
++
+After enabling Agentforce in the Salesforce organization, you see *Enabled in Salesforce* in Anypoint Platform for the connected Salesforce organization.
+
+[[enable-einstein-anypoint]]
+== Enable Agentforce for Your Anypoint Platform Organization
+
+When Agentforce is enabled in Anypoint Platform through a connected Saleforce organization, any Anypoint Platform feature running in that organization that supports Agentforce can use Agentforce.  
+
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Select *Salesforce*.
+. In *Enable Agentforce for Anypoint Platform*, select *Accept*.
+. Accept the terms and conditions.
++
+The *Salesforce Orgs* section shows the orgs with xref:connecting-salesforce-orgs.adoc[established tenant relationships] with your Anypoint Platform organization. 
++
+Each Salesforce organization shows the enabled and disabled Anypoint Platform capabilities.
+. Select the Salesforce organization to use by default in your Anypoint Platform organization:
+.. Select *Settings* in *Enhance Anypoint Platform with Agentforce*. 
+.. In *Agentforce for Anypoint Platform Setting*, select the Salesforce organization and select *Save*.
+
+
+== Add the Agentforce Permissions for Users
+
+When Agentforce is enabled for your Anypoint Platform organization, organization administrators are granted the required Agentforce permission automatically. 
+
+To enable Agentforce for users in your organization, assign the required permissions manually.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. xref:configure-teams.adoc[Create a team] for the users you are enabling to use Agentforce.
+. Select the *Permissions* tab.
+. In *Permissions*, select *Add permissions*.
+. Select the permissions to add and select *Next*.
+. Select the business groups to apply the permissions to. 
++
+Select which environments to apply the permission to if it's enabled for the permission. 
+. Select *Next*.
+. Review the permissions and the business groups and environments they apply to, and then select *Add Permissions*.
+
+[[disable-einstein]]
+== Disable Agentforce
+
+When you disable Agentforce for your Anypoint Platform organization, none of the users in your organization can use Agenforce in any of the features where it's enabled. 
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Select *Salesforce*.
+. In the *Capabilities managed in Salesforce* section, switch Agentforce to *Disabled*.
+
+== See Also
+
+* xref:anypoint-code-builder::int-ai-developing-integrations.adoc[]

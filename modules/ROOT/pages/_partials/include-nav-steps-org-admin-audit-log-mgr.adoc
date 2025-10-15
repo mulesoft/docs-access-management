@@ -1,3 +1,3 @@
 . Sign in to Anypoint Platform using an account that has the Organization Administrator and Audit Log Config Manager permissions.
-. In the navigation bar or the main Anypoint Platform page, click *Access Management*.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
 . In the *Business Groups* menu, select your root organization.

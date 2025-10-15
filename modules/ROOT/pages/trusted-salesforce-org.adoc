@@ -27,7 +27,7 @@ Salesforce admins can:
 * Complete the connection process to the Anypoint Platform organization.
 * Disconnect or reconnect an Anypoint Platform and Salesforce organization.
 * Remove the connection between the Anypoint Platform organization and the Salesforce organization.
-* Enable the connected Anypoint Platform organization to use the Salesforce organization's Einstein capability.
+* Enable the connected Anypoint Platform organization to use the Salesforce organization's Agentforce capability.
  
 For more information about initiating and maintaining a relationship with a Salesforce organization, see https://help.salesforce.com/s/articleView?id=platform.mulesoft_manage_your_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connections] in Salesforce Help.
 
