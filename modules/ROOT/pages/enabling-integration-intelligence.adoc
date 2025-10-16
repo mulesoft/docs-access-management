@@ -1,6 +1,6 @@
 = Enabling Integration Intelligence
 
-Integration Intelligence enhances monitoring, analysis, and troubleshooting of MuleSoft integrations through AI-powered capabilities.
+Integration Intelligence enhances monitoring, analysis, and troubleshooting of MuleSoft integrations through AI-powered capabilities. For more information about Integration Intelligence, see xref:monitoring::integration-intelligence.adoc[Integration Intelligence].
 
 [[before-you-begin]]
 == Before You Begin
@@ -13,11 +13,35 @@ include::partial$include-integration-intelligence-setup.adoc[tag=prereqs]
 include::partial$include-integration-intelligence-setup.adoc[tag=ii-salesforce-setup]
 
 [[set-up-data-cloud]]
-== Set up Data Cloud
+=== Set up Data Cloud
 
 include::partial$include-integration-intelligence-setup.adoc[tag=set-up-data-cloud]
 
+[[connect-with-anypoint-platform]]
+=== Complete the Connection with Anypoint Platform
 
-== Enable Seamless Login for Anypoint Platform Users
+include::partial$include-integration-intelligence-setup.adoc[tag=connect-with-anypoint-platform]
 
-== Enable Integration Intelligence in Salesforce    
+[[enable-telemetry-data]]
+=== Enable Telemetry Data
+include::partial$include-integration-intelligence-setup.adoc[tag=enable-telemetry-data]
+
+[[enable-seamless-login]]
+=== Enable Seamless Login for Anypoint Platform Users
+
+include::partial$include-integration-intelligence-setup.adoc[tag=enable-seamless-login]
+
+[[install-integration-intelligence]]
+=== Install Integration Intelligence
+
+include::partial$include-integration-intelligence-setup.adoc[tag=install-integration-intelligence]
+
+[[enable-ii-in-anypoint-platform]]
+=== Enable Integration Intelligence in Anypoint Platform
+
+include::partial$include-integration-intelligence-setup.adoc[tag=enable-ii-in-anypoint-platform]
+
+
+== See Also
+
+xref:monitoring::integration-intelligence.adoc[Integration Intelligence]

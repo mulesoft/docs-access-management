@@ -27,21 +27,71 @@ The Salesforce admin sets up Integration Intelligence in the Salesforce org.
 .. <<enable-telemetry-data,Enable Telemetry Data>>
 .. <<enable-seamless-login,Enable Seamless Login>>
 .. <<install-integration-intelligence,Install Integration Intelligence>>
+.. <<enable-ii-in-anypoint-platform,Enable Integration Intelligence in Anypoint Platform>>
 
 // end::ii-salesforce-setup[]
 
 // tag::set-up-data-cloud[]
 
-. Click *Setup* to connect with Data Cloud if your org isn't already connected to a Data Cloud instance.
+Connect your Salesforce organization to Data Cloud. 
+
+. In the Data Cloud section, click *Setup*.
 +
 For information about setting up Data Cloud see https://help.salesforce.com/s/articleView?id=data.c360_a_set_up.htm&type=5[Set up and Maintain Data Cloud]. 
-. Set up Data Cloud for Tableau Next.
-+
-For information about setting up Data Cloud for Tableau Next, see https://help.salesforce.com/s/articleView?id=analytics.tua_admin_setup_dc.htm&type=5[Set up Data Cloud for Tableau Next].
 
 // end::set-up-data-cloud[]
 
+// tag::connect-with-anypoint-platform[]
 
+Complete the connection between your Salesforce organization and Anypoint Platform.
+
+. In *Connect with Anypoint Platform*, click *Setup*.
+. On the *MuleSoft Anypoint Platform Setup* page, click *Complete Connection*.
+. Enter the Anypoint Platform organization key in *Anypoint Platform Organization ID*, and then click *Connect*.
++
+The format for the Anypoint Platform organization key is `cloud/env/org-id`. 
++ 
+If you don't have the Anypoint Platform organization key, contact the Anypoint Platform organization administrator.
++ 
+You return to the *MuleSoft Anypoint Platform Setup* page. The page shows the connected Anypoint Platform organization details.
+
+// end::connect-with-anypoint-platform[]    
+
+// tag::enable-telemetry-data[]
+
+Configure Data Cloud to ingest traces, logs, and metrics into the selected data spaces. 
+
+. In *Enable telemetry data ingestion in Data Cloud*, click *Setup*. 
+. In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > MuleSoft Observability*.
+. In *MuleSoft Observability*, switch *Telemetry Data Ingestion* to *Active*. 
+
+// end::enable-telemetry-data[]
+
+// tag::enable-seamless-login[]
+
+The Anypoint Platform organization administrator enables seamless login for Anypoint Platform users to access Tableau Next dashboards in Salesforce without needing to create new credentials or perform additional login steps.  
+
+. Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. Select *Salesforce*.
+. In the section for the connected Salesforce organization, switch the telemetry data option to *Enabled*.
+
+// end::enable-seamless-login[]
+
+// tag::install-integration-intelligence[]
+The Salesforce admin installs Integration Intelligence in the Salesforce org.
+
+. In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence (Beta)*.
+. In *Install Integration Intelligence*, click *Setup*.
+. In *Data Space*, select the data space to use for Integration Intelligence.
++
+This is the data space where your observability data will be stored and processed and must match the data space where telemetry data is ingested.
+. Click *Next*.
+. In *App Details*, enter a name and description for the Integration Intelligence app, then click *Install*.
++
+The name of the app is shown on a tab in the *Integration Intelligence Setup* page.  
+
+// end::install-integration-intelligence[]
 
 // tag::enable-ii-in-anypoint-platform[]
 
@@ -59,17 +109,3 @@ An Anypoint Platform organization administrator enables seamless login for Integ
 Any subsequent changes made to Integration Intelligence in Access Management (for example, disabling trust or changing business groups) are automatically shared with the connected Salesforce organization.    
 
 // end::enable-ii-in-anypoint-platform[]
-
-// tag::enable-telemetry-data[]
-
-
-TODO_TODO
-
-// end::enable-telemetry-data[]
-
-
-
-// tag::enable-seamless-login[]
-Seamless login lets Anypoint Platform users access Tableau Next dashboards in Salesforce without needing to create new credentials or perform additional login steps. 
-
-// end::enable-seamless-login[]
