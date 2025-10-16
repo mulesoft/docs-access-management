@@ -38,7 +38,7 @@ include::partial$include-integration-intelligence-setup.adoc[tag=enable-seamless
 include::partial$include-integration-intelligence-setup.adoc[tag=install-integration-intelligence]
 
 [[enable-ii-in-anypoint-platform]]
-=== Enable Integration Intelligence in Anypoint Platform
+== Enable Integration Intelligence in Anypoint Platform
 
 include::partial$include-integration-intelligence-setup.adoc[tag=enable-ii-in-anypoint-platform]
 
