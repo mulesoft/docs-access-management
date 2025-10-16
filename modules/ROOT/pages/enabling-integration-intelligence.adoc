@@ -2,13 +2,21 @@
 
 Integration Intelligence enhances monitoring, analysis, and troubleshooting of MuleSoft integrations through AI-powered capabilities.
 
+[[before-you-begin]]
 == Before You Begin
 
 include::partial$include-integration-intelligence-setup.adoc[tag=prereqs]
 
+[[ii-salesforce-setup]]
 == Set Up Integration Intelligence in the Connected Salesforce Organization
 
-== Enable Integration Intelligence in Anypoint Platform
+include::partial$include-integration-intelligence-setup.adoc[tag=ii-salesforce-setup]
+
+[[set-up-data-cloud]]
+== Set up Data Cloud
+
+include::partial$include-integration-intelligence-setup.adoc[tag=set-up-data-cloud]
+
 
 == Enable Seamless Login for Anypoint Platform Users
 
