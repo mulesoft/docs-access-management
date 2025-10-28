@@ -1,4 +1,6 @@
-= Establish a Tenant Relationship With a Trusted Salesforce Organization
+= Connect a Trusted Salesforce Organization to Anypoint Platform
+
+Connect a trusted Salesforce organization to your Anypoint Platform organization to establish a tenant relationship. This connection enables secure data sharing and lets administrators initiate the setup in Anypoint Platform and complete it in Salesforce. After the connection is established, you can manage capabilities and verify the linked organization details.
 
 Ways to establish a tenant relationship include:
 
