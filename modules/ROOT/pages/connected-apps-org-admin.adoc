@@ -29,7 +29,7 @@ To manage your connected apps:
 
 Organization administrators can edit the owner of the connected app and transfer the ownership to other administrators:
 
-. In Access Management > *Connected Apps* > *Owned Apps*, click the app name. 
+. In *Access Management* > *Connected Apps* > *Owned Apps*, click the app name. 
 . Make the changes and click *Save changes*.
 
 [[modify-client-secret]]
@@ -113,4 +113,3 @@ A connected app that acts on behalf of a user receives its own access and permis
 
 * xref:connected-apps-developers.adoc[]
 * xref:creating-connected-apps-dev.adoc[]
-
