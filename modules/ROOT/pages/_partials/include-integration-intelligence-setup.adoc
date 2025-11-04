@@ -27,9 +27,6 @@ The Salesforce admin sets up Integration Intelligence in the Salesforce org.
 .. <<enable-seamless-login,Enable Seamless Login>>
 .. <<install-integration-intelligence,Install Integration Intelligence>>
 
-This is the flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
-
-image:ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
 
 // end::ii-salesforce-setup[]
 
