@@ -9,9 +9,7 @@ Before enabling Integration Intelligence in your Anypoint Platform organization,
 +
 [NOTE]
 ====
-The connected Salesforce organization must have Data Cloud and Tableau Next enabled. For more information about setting up Data Cloud, see https://resources.docs.salesforce.com/rel1/doc/en-us/static/pdf/DataCloud_QuickStart_Guide.pdf[Data Cloud Quick Start Guide].
-
-For more information about setting up Tableau Next, see https://help.salesforce.com/s/articleView?id=analytics.tua_admin.htm&type=5[Enable Tableau Next].
+The connected Salesforce organization must have Data Cloud and Tableau Next enabled. For more information, see https://help.tableau.com/current/online/en-us/tableau_next_setup_guide.htm[Tableau Next Setup Guide].
 ====
 // end::prereqs[]
 
@@ -25,9 +23,9 @@ The Salesforce admin sets up Integration Intelligence in the Salesforce org.
 .. <<set-up-data-cloud,Set up Data Cloud>>
 .. <<connect-with-anypoint-platform,Connect with Anypoint Platform>>
 .. <<enable-telemetry-data,Enable Telemetry Data>>
+.. <<enable-ii-in-anypoint-platform,Enable Integration Intelligence in Anypoint Platform>>
 .. <<enable-seamless-login,Enable Seamless Login>>
 .. <<install-integration-intelligence,Install Integration Intelligence>>
-.. <<enable-ii-in-anypoint-platform,Enable Integration Intelligence in Anypoint Platform>>
 
 // end::ii-salesforce-setup[]
 
@@ -81,6 +79,9 @@ The Anypoint Platform organization administrator enables seamless login for Anyp
 // tag::install-integration-intelligence[]
 The Salesforce admin installs Integration Intelligence in the Salesforce org.
 
+[NOTE]
+This step is available only after the Anypoint organization administrator completes all the Anypoint Platform setup steps.
+
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence (Beta)*.
 . In *Install Integration Intelligence*, click *Setup*.
 . In *Data Space*, select the data space to use for Integration Intelligence.
@@ -95,17 +96,24 @@ The name of the app is shown on a tab in the *Integration Intelligence Setup* pa
 
 // tag::enable-ii-in-anypoint-platform[]
 
-An Anypoint Platform organization administrator enables seamless login for Integration Intelligence in Anypoint Platform. The Salesforce org admin must first opt in to Integration Intelligence in the Salesforce org. 
+An Anypoint Platform organization administrator must enable the Integration Intelligence feature in Anypoint Platform. Before these steps can be completed, the Salesforce org admin must first opt in to Integration Intelligence in the Salesforce org. 
 
 . Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
 . Select *Salesforce*.
 . Enable *Ingest Telemetry Data*.
 . Opt in to ingest telemetry data by selecting *I understand and agree to join the Beta program*.
-. In *Initial Ingestion*, select the time period for historical data ingestion. 
 . In *Business Group*, select one business group whose telemetry data will be brought to Data Cloud.
++
+[NOTE]
+The business group you select for data ingestion can't be changed after you save the settings.
 . Select *Save Settings*.
 
-Any subsequent changes made to Integration Intelligence in Access Management (for example, disabling trust or changing business groups) are automatically shared with the connected Salesforce organization.    
+Any subsequent changes made to Integration Intelligence in Access Management are automatically shared with the connected Salesforce organization. For example, turning off the Integration Intelligence feature in Anypoint Platform disables:
+
+* Trust with the connected Salesforce organization. Turning it back on restores trust and enables data ingestion for the selected business group. 
+* Seamless login for Anypoint Platform users to access Tableau Next dashboards in Salesforce. Turning it back on restores seamless login.
+
+   
 
 // end::enable-ii-in-anypoint-platform[]

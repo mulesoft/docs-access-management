@@ -27,6 +27,12 @@ include::partial$include-integration-intelligence-setup.adoc[tag=connect-with-an
 === Enable Telemetry Data
 include::partial$include-integration-intelligence-setup.adoc[tag=enable-telemetry-data]
 
+
+[[enable-ii-in-anypoint-platform]]
+== Enable Integration Intelligence in Anypoint Platform
+
+include::partial$include-integration-intelligence-setup.adoc[tag=enable-ii-in-anypoint-platform]
+
 [[enable-seamless-login]]
 === Enable Seamless Login for Anypoint Platform Users
 
@@ -36,11 +42,6 @@ include::partial$include-integration-intelligence-setup.adoc[tag=enable-seamless
 === Install Integration Intelligence
 
 include::partial$include-integration-intelligence-setup.adoc[tag=install-integration-intelligence]
-
-[[enable-ii-in-anypoint-platform]]
-== Enable Integration Intelligence in Anypoint Platform
-
-include::partial$include-integration-intelligence-setup.adoc[tag=enable-ii-in-anypoint-platform]
 
 
 == See Also
