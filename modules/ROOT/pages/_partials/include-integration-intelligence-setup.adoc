@@ -16,6 +16,10 @@ The connected Salesforce organization must have Data Cloud and Tableau Next enab
 // tag::ii-salesforce-setup[]
 The Salesforce admin sets up Integration Intelligence in the Salesforce org. 
 
+This diagram shows the high-level flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
+
+image::access-management::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
+
 . Log in to your Salesforce organization.
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence (Beta)*.
 . Read the beta service terms and agreements, and click *Got it*.
@@ -26,10 +30,7 @@ The Salesforce admin sets up Integration Intelligence in the Salesforce org.
 .. <<enable-ii-in-anypoint-platform,Enable Integration Intelligence in Anypoint Platform>>
 .. <<enable-seamless-login,Enable Seamless Login>>
 .. <<install-integration-intelligence,Install Integration Intelligence>>
-+
-This shows the high level flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
-+
-image::access-management::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
+
 
 // end::ii-salesforce-setup[]
 
