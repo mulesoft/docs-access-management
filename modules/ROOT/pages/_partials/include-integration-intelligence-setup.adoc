@@ -16,12 +16,6 @@ The connected Salesforce organization must have Data Cloud and Tableau Next enab
 // tag::ii-salesforce-setup[]
 The Salesforce admin sets up Integration Intelligence in the Salesforce org. 
 
-This shows the high level flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
-
-image::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
-
-=== Setup Steps
-
 . Log in to your Salesforce organization.
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence (Beta)*.
 . Read the beta service terms and agreements, and click *Got it*.
@@ -32,12 +26,16 @@ image::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integra
 .. <<enable-ii-in-anypoint-platform,Enable Integration Intelligence in Anypoint Platform>>
 .. <<enable-seamless-login,Enable Seamless Login>>
 .. <<install-integration-intelligence,Install Integration Intelligence>>
++
+This shows the high level flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
++
+image::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
 
 // end::ii-salesforce-setup[]
 
 // tag::set-up-data-cloud[]
 
-Connect your Salesforce organization to Data Cloud. 
+Connect your Salesforce organization to Data Cloud. Data Cloud is the storage and processing layer for Integration Intelligence. It ingests MuleSoft telemetry data from your selected business group into a Data Cloud data space.
 
 . In the *Data Cloud* section, click *Setup*.
 +
@@ -47,7 +45,7 @@ For information about setting up Data Cloud see https://help.salesforce.com/s/ar
 
 // tag::connect-with-anypoint-platform[]
 
-Complete the connection between your Salesforce organization and Anypoint Platform.
+Complete the connection between your Salesforce organization and Anypoint Platform so Salesforce can ingest MuleSofttelemetry data from your selected business group into Data Cloud.
 
 . In *Connect with Anypoint Platform*, click *Setup*.
 . On the *MuleSoft Anypoint Platform Setup* page, click *Complete Connection*.
@@ -63,7 +61,7 @@ You return to the *MuleSoft Anypoint Platform Setup* page. The page shows the co
 
 // tag::enable-telemetry-data[]
 
-Configure Data Cloud to ingest traces, logs, and metrics into the selected data spaces. 
+Configure Data Cloud to ingest logs and metrics into the selected data spaces. 
 
 . In *Enable telemetry data ingestion in Data Cloud*, click *Setup*. 
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > MuleSoft Observability*.
