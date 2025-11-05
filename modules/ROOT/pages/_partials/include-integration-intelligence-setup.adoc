@@ -29,7 +29,7 @@ The Salesforce admin sets up Integration Intelligence in the Salesforce org.
 +
 This shows the high level flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
 +
-image::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
+image::access-management::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
 
 // end::ii-salesforce-setup[]
 
@@ -74,7 +74,7 @@ Enable telemetry data so logs and metrics from your Mule apps and APIs are strea
 The Anypoint Platform organization administrator enables seamless login for Anypoint Platform users to access Tableau Next dashboards in Salesforce without needing to create new credentials or perform additional login steps.  
 
 . Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
-. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. Select *Access Management* from the image::access-management::gear.svg["gear icon",20] menu.
 . Select *Salesforce*.
 . In the section for the connected Salesforce organization, switch the telemetry data option to *Enabled*.
 
@@ -103,7 +103,7 @@ The name of the app is shown on a tab in the *Integration Intelligence Setup* pa
 An Anypoint Platform organization administrator must enable the Integration Intelligence feature in Anypoint Platform. Before these steps can be completed, the Salesforce org admin must first opt in to Integration Intelligence in the Salesforce org. 
 
 . Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
-. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. Select *Access Management* from the image::access-management::gear.svg["gear icon",20] menu.
 . Select *Salesforce*.
 . Enable *Ingest Telemetry Data*.
 . Opt in to ingest telemetry data by selecting *I understand and agree to join the Beta program*.
