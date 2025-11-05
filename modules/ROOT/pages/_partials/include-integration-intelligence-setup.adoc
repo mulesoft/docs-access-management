@@ -4,7 +4,7 @@
 Before enabling Integration Intelligence in your Anypoint Platform organization, you must:
 
 * Have administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
-* Have administrative access to a Salesforce organization that has Integration Intelligence enabled.
+* Have administrative access to a Salesforce organization.
 * xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization.
 +
 [NOTE]
@@ -15,6 +15,12 @@ The connected Salesforce organization must have Data Cloud and Tableau Next enab
 
 // tag::ii-salesforce-setup[]
 The Salesforce admin sets up Integration Intelligence in the Salesforce org. 
+
+This shows the high level flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
+
+image::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
+
+=== Setup Steps
 
 . Log in to your Salesforce organization.
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence (Beta)*.
@@ -27,17 +33,13 @@ The Salesforce admin sets up Integration Intelligence in the Salesforce org.
 .. <<enable-seamless-login,Enable Seamless Login>>
 .. <<install-integration-intelligence,Install Integration Intelligence>>
 
-This shows the flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
-
-image::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
-
 // end::ii-salesforce-setup[]
 
 // tag::set-up-data-cloud[]
 
 Connect your Salesforce organization to Data Cloud. 
 
-. In the Data Cloud section, click *Setup*.
+. In the *Data Cloud* section, click *Setup*.
 +
 For information about setting up Data Cloud see https://help.salesforce.com/s/articleView?id=data.c360_a_set_up.htm&type=5[Set up and Maintain Data Cloud]. 
 
