@@ -61,7 +61,7 @@ You return to the *MuleSoft Anypoint Platform Setup* page. The page shows the co
 
 // tag::enable-telemetry-data[]
 
-Configure Data Cloud to ingest logs and metrics into the selected data spaces. 
+Enable telemetry data so logs and metrics from your Mule apps and APIs are streamed into the selected Data Cloud data space. 
 
 . In *Enable telemetry data ingestion in Data Cloud*, click *Setup*. 
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > MuleSoft Observability*.
