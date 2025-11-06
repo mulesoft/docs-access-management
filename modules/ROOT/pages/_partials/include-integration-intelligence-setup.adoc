@@ -79,7 +79,7 @@ The Salesforce admin enables seamless login for Anypoint Platform users to acces
 . Switch the *Enable Seamless Login from Anypoint Platform* option to *Enabled*.
 +
 [NOTE]
-This option is available after the Anypoint Platform organization administrator completes all of their setup steps. 
+This option is available after the Anypoint Platform organization administrator completes all of their setup steps. If you don't see the option, contact your Anypoint Platform organization administrator.
 
 // end::enable-seamless-login[]
 
