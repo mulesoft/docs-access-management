@@ -62,13 +62,9 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . xref:configure-teams.adoc[Create a team] for the users you are enabling to use Agentforce.
 . Select the *Permissions* tab.
 . In *Permissions*, select *Add permissions*.
-. Select the permissions to add and select *Next*.
-+
-The required permissions depend on the Anypoint Platform features you want to use Agentforce with. For more information, see xref:permissions-by-product.adoc[].
-. Select the business groups to apply the permissions to. 
-+
-Select which environments to apply the permission to if it's enabled for the permission. 
-. Select *Next*.
+. Select the *Anypoint Code Builder > Mule Developer Generative AI User* permission and select *Next*. 
+. Select which environments to apply the permission to if enabled for the permission, then select *Next*.
+. Select the business groups to apply the permission to, then select *Next*.
 . Review the permissions and the business groups and environments they apply to, and then select *Add Permissions*.
 
 [[disable-einstein]]
