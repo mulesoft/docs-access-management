@@ -107,7 +107,7 @@ The name of the app is shown on a tab in the *Integration Intelligence Setup* pa
 An Anypoint Platform organization administrator must enable the Integration Intelligence feature in Anypoint Platform. Before these steps can be completed, the Salesforce org admin must first opt in to Integration Intelligence in the Salesforce org. 
 
 . Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
-. Select *Access Management* from the image::access-management::gear.svg["gear icon",20] menu.
+. Select *Access Management* from the image:access-management::gear.svg["gear icon",20] menu.
 . Select *Salesforce*.
 . Enable *Ingest Telemetry Data*.
 . Opt in to ingest telemetry data by selecting *I understand and agree to join the Beta program*.
