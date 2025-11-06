@@ -63,6 +63,8 @@ include::partial$include-nav-steps-org-admin.adoc[]
 . Select the *Permissions* tab.
 . In *Permissions*, select *Add permissions*.
 . Select the permissions to add and select *Next*.
++
+The required permissions depend on the Anypoint Platform features you want to use Agentforce with. For more information, see xref:permissions-by-product.adoc[].
 . Select the business groups to apply the permissions to. 
 +
 Select which environments to apply the permission to if it's enabled for the permission. 
