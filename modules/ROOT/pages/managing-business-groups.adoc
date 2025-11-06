@@ -6,7 +6,7 @@ Use business groups to delegate administrative responsibilities, control access 
 In the Access Management *Business Groups* page, you can:
 
 * Create business groups.
-* View a hierarchical tree of all of the business groups you have permissions to view. 
+* View a hierarchical tree of all the business groups you have permissions to view. 
 * View and edit properties of a business group.
 +
 Permissions determine What you can view and edit.
@@ -57,8 +57,9 @@ Allocating redistributable resources to a business group makes those resources a
 
 Create a business group hierarchy to help you better control user access to resources.
 
- . To create a child business group, click the *...* menu for the parent business group.
-. In the *Add Business Group* dialog, enter a *Business Group name* and *Owner*, then select from these options: +
+. To create a child business group, click the *...* menu for the parent business group.
+. In the *Add Business Group* dialog, enter a *Business Group name* and *Owner*, then select from these options: 
++
 * *Owner can create Business Groups*
 +
 Users with the Organization Administrator permission can create child business groups in a business group that they own.
@@ -71,7 +72,8 @@ This option is available only if global deployment is enabled on the parent busi
 * *Static IPs*:
 +
 This option is available only if the parent business group has static IPs assigned to it. This option enables the use of static IP addresses.
-. Click *Add Business Group*. +
+. Click *Add Business Group*. 
++
 The new business group appears in the parent business group hierarchy.
 
 [[navigate-business-groups]]
@@ -141,7 +143,7 @@ Additionally, the root organization or parent business group can't reclaim resou
 +
 The *Settings* section appears, showing details about the root organization or business group.
 . Click the *Settings* tab.
-. Enter the number of vCores you want the business group to have.
+. Enter the number of vCores for the business group.
 . Click *Save changes*.
 
 The *Business Group Info* window includes a resource counter that shows a value representing available resources, the sum of those resources that are reassigned to child business groups, and resources currently in use by the selected business group.
@@ -237,15 +239,15 @@ To view limits:
 
 include::partial$include-nav-business-groups.adoc[]
 
-. Click the business group for which you want to view limits.
+. Click the business group to view limits for.
 . Click the *Limits* tab.
 
-For more information on limits in access management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
+For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
 
 [[find-business-group-id]]
 == Find your Business Group ID
 
-Some operations require you to specify your business group (organization) ID, or _orgId_. You also need your business group ID to designate a business group or root business group when creating certain types of requests.
+For some operations, you need to specify your business group (organization) ID, or _orgId_. You also need your business group ID to designate a business group or root business group when creating certain types of requests.
 
 You can get your business group ID from your business group URL, executing an Anypoint CLI command, or using a token to invoke the Anypoint Platform REST API.
 
@@ -256,7 +258,7 @@ After signing in to Anypoint Platform, you can view your business group ID by ac
 
 include::partial$include-nav-steps-no-permissions.adoc[]
 
-. If you are using the new feature UI (Teams feature is enabled):
+. If you're using the new feature UI (Teams feature is enabled):
 .. In the Access Management navigation menu, click *Business Groups*.
 .. In the tree that contains the root business group, click the root business group name. 
 +
@@ -299,7 +301,7 @@ For example, when you execute the `account:business-group:list [flags]` command,
 In the example, the ID next to `Root` is the business group ID.
 
 [[anypoint-platform-rest-api]]
-== Anypoint Platform REST API
+== Invoke the Anypoint Platform REST API
 
 To get a token to invoke the Anypoint Platform REST API, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to generate your Authorization Bearer token for Anypoint Platform]. Then, invoke the URL `https://anypoint.mulesoft.com/accounts/api/me` using the token.
 
@@ -332,7 +334,7 @@ If your business group contains business groups, you can give users access to mu
 
 Business groups that use both MuleSoft Composer and Anypoint Platform can connect the two products.
 
-To link Composer to Anypoint Platform:
+To link MuleSoftComposer to Anypoint Platform:
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -344,7 +346,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 You can locate your Composer Organization ID by navigating to *Composer* > *Settings* > *Account* > *General Information*.
 +
-An email is generated and sent to the Composer organization admin that provides a link to sync Anypoint Platform to Composer.
+An email is generated and sent to the Composer organization admin, which provides a link to sync Anypoint Platform to Composer.
 
 == See Also
 
