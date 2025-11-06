@@ -46,7 +46,7 @@ For information about setting up Data Cloud see https://help.salesforce.com/s/ar
 
 // tag::connect-with-anypoint-platform[]
 
-Complete the connection between your Salesforce organization and Anypoint Platform so Salesforce can ingest MuleSofttelemetry data from your selected business group into Data Cloud.
+Complete the connection between your Salesforce organization and Anypoint Platform so Salesforce can ingest MuleSoft telemetry data from your selected business group into Data Cloud.
 
 . In *Connect with Anypoint Platform*, click *Setup*.
 . On the *MuleSoft Anypoint Platform Setup* page, click *Complete Connection*.
