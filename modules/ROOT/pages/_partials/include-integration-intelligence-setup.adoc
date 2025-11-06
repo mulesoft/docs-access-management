@@ -14,7 +14,7 @@ The connected Salesforce organization must have Data Cloud and Tableau Next enab
 // end::prereqs[]
 
 // tag::ii-salesforce-setup[]
-The Salesforce admin sets up Integration Intelligence in the Salesforce org. 
+After the Anypoint Platform organization administrator establishes a connection between the Anypoint Platform organization and the Salesforce organization, the Salesforce admin sets up Integration Intelligence in the Salesforce organization. 
 
 This diagram shows the high-level flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
 
@@ -72,12 +72,14 @@ Enable telemetry data so logs and metrics from your Mule apps and APIs are strea
 
 // tag::enable-seamless-login[]
 
-The Anypoint Platform organization administrator enables seamless login for Anypoint Platform users to access Tableau Next dashboards in Salesforce without needing to create new credentials or perform additional login steps.  
+The Salesforce admin enables seamless login for Anypoint Platform users to access Tableau Next dashboards in Salesforce without needing to create new credentials or perform additional login steps.  
 
-. Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
-. Select *Access Management* from the image::access-management::gear.svg["gear icon",20] menu.
-. Select *Salesforce*.
-. In the section for the connected Salesforce organization, switch the telemetry data option to *Enabled*.
+. Log in to your Salesforce organization.
+. In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Anypoint Platform Setup*.
+. Switch the *Enable Seamless Login from Anypoint Platform* option to *Enabled*.
++
+[NOTE]
+This option is available after the Anypoint Platform organization administrator completes all of their setup steps. 
 
 // end::enable-seamless-login[]
 
