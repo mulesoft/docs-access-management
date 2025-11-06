@@ -109,7 +109,7 @@ An Anypoint Platform organization administrator must enable the Integration Inte
 . Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
 . Select *Access Management* from the image:access-management::gear.svg["gear icon",20] menu.
 . Select *Salesforce*.
-. Enable *Ingest Telemetry Data*.
+. Enable *You can't bring telemetry data into Salesforce Data Cloud (Beta)*.
 . Opt in to ingest telemetry data by selecting *I understand and agree to join the Beta program*.
 . In *Business Group*, select one business group whose telemetry data will be brought to Data Cloud.
 +
