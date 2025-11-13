@@ -53,7 +53,7 @@ As a Salesforce organization administrator, you complete the connection between 
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
-. In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
+. In *Your connected Anypoint Platform Organization*, click *Complete the Connection*.
 . In *Connection to MuleSoft Anypoint Platform*, enter the Anypoint Platform organization key in *Anypoint Platform Organization ID*, and then click *Connect*.
 +
 The format for the Anypoint Platform organization key is `cloud/env/org-id`. 
