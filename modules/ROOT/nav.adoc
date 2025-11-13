@@ -48,7 +48,7 @@
  *** xref:enabling-mulesoft-direct.adoc[]
 * xref:managing-security-settings.adoc[]
  ** xref:multi-factor-authentication.adoc[]
- ** xref:managing-ip-restrictions.adoc[]
+ ** xref:managing-ip-allowlists.adoc[]
  ** xref:allowlisting-trusted-domains.adoc[]
 * xref:audit-logging.adoc[Audit Logs]
  ** xref:audit-log-retention.adoc[]

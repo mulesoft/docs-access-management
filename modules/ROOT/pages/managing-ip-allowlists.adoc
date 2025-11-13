@@ -7,9 +7,9 @@ Create IP allowlists in Access Management to restrict access to your Anypoint Pl
 This feature is available only for US and EU commercial clouds.
 --
 
-== Before you begin
+== Before You Begin
 
-* You must have the root Organization Administrator permission in your organization.
+* You must have the root Organization Administrator permission for your organization.
 
 [enable-disable-ip-allowlisting]
 == Enable or Disable IP Allowlisting
@@ -19,15 +19,15 @@ Enable or disable IP allowlisting for your organization’s signins in Access Ma
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
 . In the Access Management navigation menu, select *Security Settings*.
-. In *IP Allowlist*, enter the IP address CIDR blocks to allow. For example:
-* IP Address CIDR: 192.0.2.0/24
-* Description: NE office network
+. In *IP Allowlist*, enter the IP address CIDR blocks to allow to sign in. For example:
+* IP Address CIDR: `192.0.2.0/24`
+* Description: `NE office network`
 +
 [NOTE]
 Only IPv4 addresses are supported. All defined CIDR blocks apply to all users in your organization unless they are exempted.
 +
-.. Click *Add* to add additional CIDR blocks.
-.. Click *Remove* to remove a CIDR block.
+.. Click *Add* to add more CIDR blocks.
+.. Click *Remove* to delete a CIDR block.
 . Toggle the *Enforce IP restrictions for login* switch on or off to activate or deactivate defined IP restrictions for all users within your organization.
 . Click *Save*.
 
@@ -37,7 +37,7 @@ Only IPv4 addresses are supported. All defined CIDR blocks apply to all users in
 You can exempt specific users from the organization-wide IP allowlist restrictions.
 
 [NOTE]
-Organization Administrators are subject to IP enforcement unless explicitly exempted, and they are allowed to self-exempt.
+Organization Administrators are subject to IP enforcement unless explicitly exempted, and they're allowed to self-exempt.
 
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
@@ -52,7 +52,7 @@ Organization Administrators are subject to IP enforcement unless explicitly exem
 These actions are logged in the audit log:
 
 * Create, update, and delete actions performed by an Organization Administrator on the allowlist.
-* Login failures due to IP restrictions.
+* Signin failures due to IP restrictions.
 
 == See Also
 
