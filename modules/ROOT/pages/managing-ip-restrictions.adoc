@@ -1,0 +1,59 @@
+= Managing IP Allowlists in Access Management
+
+Create IP allowlists in Access Management to restrict access to your Anypoint Platform organization to trusted networks. Enforce signin and API access by CIDR blocks to reduce credential abuse and meet compliance needs.
+
+[NOTE]
+--
+This feature is available only for US and EU commercial clouds.
+--
+
+== Before you begin
+
+* You must have the root Organization Administrator permission in your organization.
+
+[enable-disable-ip-allowlisting]
+== Enable or Disable IP Allowlisting
+
+Enable or disable IP allowlisting for your organization’s signins in Access Management. When this feature is enabled, only signins from allowed CIDR blocks succeed. Sign attempts outside the IP allowlist are blocked and logged.  
+
+. Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. In the Access Management navigation menu, select *Security Settings*.
+. In *IP Allowlist*, enter the IP address CIDR blocks to allow. For example:
+* IP Address CIDR: 192.0.2.0/24
+* Description: NE office network
++
+[NOTE]
+Only IPv4 addresses are supported. All defined CIDR blocks apply to all users in your organization unless they are exempted.
++
+.. Click *Add* to add additional CIDR blocks.
+.. Click *Remove* to remove a CIDR block.
+. Toggle the *Enforce IP restrictions for login* switch on or off to activate or deactivate defined IP restrictions for all users within your organization.
+. Click *Save*.
+
+[ip-allowlist-exemptions]
+== Manage IP Allowlist Exemptions
+
+You can exempt specific users from the organization-wide IP allowlist restrictions.
+
+[NOTE]
+Organization Administrators are subject to IP enforcement unless explicitly exempted, and they are allowed to self-exempt.
+
+. Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. In the Access Management navigation menu, select *Users*.
+. Select the user to exempt and then select *Settings*. 
+. Check the box next to *Exempt user from IP restrictions*.
+. Click *Save* to apply the exemption.
+
+[audit-logging]
+== Audit Logging
+
+These actions are logged in the audit log:
+
+* Create, update, and delete actions performed by an Organization Administrator on the allowlist.
+* Login failures due to IP restrictions.
+
+== See Also
+
+* xref:managing-security-settings.adoc[Managing Security Settings]
