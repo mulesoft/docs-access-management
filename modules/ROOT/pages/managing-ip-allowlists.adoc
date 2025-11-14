@@ -25,10 +25,8 @@ Enable or disable IP allowlisting for your organization’s signins in Access Ma
 +
 [NOTE]
 Only IPv4 addresses are supported. All defined CIDR blocks apply to all users in your organization unless they are exempted.
-+
-.. Click *Add* to add more CIDR blocks.
-.. Click *Remove* to delete a CIDR block.
-. Toggle the *Enforce IP restrictions for login* switch on or off to activate or deactivate defined IP restrictions for all users within your organization.
+. (Optional) Click *Add* or *Remove* to add and remove CIDR blocks. 
+. Switch the *Enforce IP restrictions for login* switch on or off to activate or deactivate defined IP restrictions for all users within your organization.
 . Click *Save*.
 
 [ip-allowlist-exemptions]
@@ -43,17 +41,16 @@ Organization Administrators are subject to IP enforcement unless explicitly exem
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
 . In the Access Management navigation menu, select *Users*.
 . Select the user to exempt and then select *Settings*. 
-. Check the box next to *Exempt user from IP restrictions*.
-. Click *Save* to apply the exemption.
+. Select *Exempt user from IP restrictions*, and then click *Save* to apply the exemption.
 
 [audit-logging]
 == Audit Logging
 
 These actions are logged in the audit log:
 
-* Create, update, and delete actions performed by an Organization Administrator on the allowlist.
-* Signin failures due to IP restrictions.
+* Create, update, and delete actions performed by an Organization Administrator on the allowlist
+* Signin failures due to IP restrictions
 
 == See Also
 
-* xref:managing-security-settings.adoc[Managing Security Settings]
+* xref:managing-security-settings.adoc[]

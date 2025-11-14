@@ -4,12 +4,12 @@ Configure organization-wide security controls in Anypoint Platform to protect ac
 
 Manage these settings in Access Management:
 
-* xref:multi-factor-authentication.adoc[Multi-Factor Authentication]
-* xref:managing-ip-restrictions.adoc[Managing IP Restrictions]
-* xref:allowlisting-trusted-domains.adoc[Allowlisting Trusted Domains]
+* xref:multi-factor-authentication.adoc[]
+* xref:managing-ip-restrictions.adoc[]
+* xref:allowlisting-trusted-domains.adoc[]
 
 == See Also
 
-* xref:managing-your-account.adoc[Managing Your Account]
-* xref:managing-permissions.adoc[Managing Permissions]
-* xref:managing-business-groups.adoc[Managing Business Groups]
+* xref:managing-your-account.adoc[]
+* xref:managing-permissions.adoc[]
+* xref:managing-business-groups.adoc[]
