@@ -1,6 +1,6 @@
 = Managing IP Allowlists in Access Management
 
-Create IP allowlists in Access Management to restrict access to your Anypoint Platform organization to trusted networks. Enforce signin and API access by CIDR blocks to reduce credential abuse and meet compliance needs.
+Create IP allowlists in Access Management to restrict access to your Anypoint Platform organization to trusted networks. Enforce IP restrictions for Anypoint Platform signins by addingCIDR blocks to reduce credential abuse and meet compliance needs.
 
 [NOTE]
 --
@@ -14,7 +14,7 @@ This feature is available only for US and EU commercial clouds.
 [enable-disable-ip-allowlisting]
 == Enable or Disable IP Allowlisting
 
-Enable or disable IP allowlisting for your organization’s signins in Access Management. When this feature is enabled, only signins from allowed CIDR blocks succeed. Sign attempts outside the IP allowlist are blocked and logged.  
+Enable or disable IP allowlisting for your organization’s signins in Access Management. When this feature is enabled, only signins from IP addresses in allowed CIDR blocks succeed. Sign attempts outside the IP allowlist are blocked and logged.  
 
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
@@ -27,6 +27,8 @@ Enable or disable IP allowlisting for your organization’s signins in Access Ma
 Only IPv4 addresses are supported. All defined CIDR blocks apply to all users in your organization unless they are exempted.
 . (Optional) Click *Add* or *Remove* to add and remove CIDR blocks. 
 . Switch the *Enforce IP restrictions for login* switch on or off to activate or deactivate defined IP restrictions for all users within your organization.
++
+If there aren't any CIDR blocks configured, this option is disabled.
 . Click *Save*.
 
 [ip-allowlist-exemptions]
@@ -35,7 +37,7 @@ Only IPv4 addresses are supported. All defined CIDR blocks apply to all users in
 You can exempt specific users from the organization-wide IP allowlist restrictions.
 
 [NOTE]
-Organization Administrators are subject to IP enforcement unless explicitly exempted, and they're allowed to self-exempt.
+Root organization administrators are subject to IP enforcement unless explicitly exempted, and they're allowed to self-exempt.
 
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
