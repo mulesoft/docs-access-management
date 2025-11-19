@@ -1,6 +1,6 @@
 = Connect a Trusted Salesforce Organization to Anypoint Platform
 
-Connect a trusted Salesforce organization to your Anypoint Platform organization to establish a tenant relationship. This connection enables secure data sharing and lets administrators initiate the setup in Anypoint Platform and complete it in Salesforce. After the connection is established, you can manage capabilities and verify the linked organization details.
+Establish a tenant relationship between your Anypoint Platform organization and a trusted Salesforce organization to enable secure data sharing. Initiate the connection in Anypoint Platform and complete it in Salesforce using organization keys. After linking, you can manage capabilities and verify the connected organization details.
 
 Ways to establish a tenant relationship include:
 
@@ -11,10 +11,8 @@ In some cases, the Anypoint Platform organization administrator and Salesforce o
 
 == Before You Begin
 
-Anypoint Platform organization administrators must have:
-
-* Anypoint Platform organization administrators must have the Organization Administrator permission at the root organization level
-* Salesforce organization administrators must have theSalesforce administrator permission set.
+* Anypoint Platform organization administrators must have the *Organization Administrator* permission at the root organization level
+* Salesforce organization administrators must have the Salesforce administrator permission set.
 
 [[get-salesforce-tenant-key]]
 == Get the Salesforce Organization Tenant Key
@@ -27,7 +25,7 @@ include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 . Select the region for your Anypoint Platform organization and click *Go to Anypoint Platform*.
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission and continue to <<connect-orgs,Connect With a Salesforce Org in Anypoint Platform>>.
 
-[connect-orgs]
+[[connect-orgs]]
 == Connect With a Salesforce Org in Anypoint Platform
 
 As an Anypoint Platform organization administrator, you can start the process of connecting to a trusted Salesforce organization. 
