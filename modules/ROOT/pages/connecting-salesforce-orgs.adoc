@@ -1,6 +1,6 @@
 = Connect a Trusted Salesforce Organization to Anypoint Platform
 
-Connect a trusted Salesforce organization to your Anypoint Platform organization to establish a tenant relationship. This connection enables secure data sharing and lets administrators initiate the setup in Anypoint Platform and complete it in Salesforce. After the connection is established, you can manage capabilities and verify the linked organization details.
+Establish a tenant relationship between your Anypoint Platform organization and a trusted Salesforce organization to enable secure data sharing. Initiate the connection in Anypoint Platform and complete it in Salesforce using organization keys. After linking, you can manage capabilities and verify the connected organization details.
 
 Ways to establish a tenant relationship include:
 
@@ -11,21 +11,21 @@ In some cases, the Anypoint Platform organization administrator and Salesforce o
 
 == Before You Begin
 
-Anypoint Platform organization administrators must have:
+* Anypoint Platform organization administrators must have the *Organization Administrator* permission at the root organization level
+* Salesforce organization administrators must have the Salesforce administrator permission set.
 
-* Anypoint Platform Organization Administrator permission at the root organization level
-* Salesforce tenant key of the Salesforce organization to connect
-+
-The Anypoint Platform organization administrator can get the tenant key from the Salesforce organization administrator.
+[[get-salesforce-tenant-key]]
+== Get the Salesforce Organization Tenant Key
 
-Salesforce organization administrators must have:
+include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
-* Salesforce administrator permission set
-* Anypoint Platform organization key
-+
-The Salesforce organization administrator can get the Anypoint Platform organization key from the Anypoint Platform organization administrator. 
+. In *Your connected Anypoint Platform Organization*, click *Complete the Connection*.
+. In *Connection to MuleSoft Anypoint Platform*, copy the Salesforce org tenant key.
+. If you are signed in to the Salesforce organization as an admin, click *Go to Anypoint Platform*. 
+. Select the region for your Anypoint Platform organization and click *Go to Anypoint Platform*.
+. Sign in to Anypoint Platform using an account that has the root Organization Administrator permission and continue to <<connect-orgs,Connect With a Salesforce Org in Anypoint Platform>>.
 
-[connect-orgs]
+[[connect-orgs]]
 == Connect With a Salesforce Org in Anypoint Platform
 
 As an Anypoint Platform organization administrator, you can start the process of connecting to a trusted Salesforce organization. 
@@ -53,7 +53,7 @@ As a Salesforce organization administrator, you complete the connection between 
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
-. In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
+. In *Your connected Anypoint Platform Organization*, click *Complete the Connection*.
 . In *Connection to MuleSoft Anypoint Platform*, enter the Anypoint Platform organization key in *Anypoint Platform Organization ID*, and then click *Connect*.
 +
 The format for the Anypoint Platform organization key is `cloud/env/org-id`. 
@@ -61,14 +61,6 @@ The format for the Anypoint Platform organization key is `cloud/env/org-id`.
 If you don't have the Anypoint Platform organization key, contact the Anypoint Platform organization administrator.
 + 
 You return to the *Connection to MuleSoft Anypoint Platform* page. The page shows the connected Anypoint Platform organization details, including the enablement status of the capabilities associated with your Salesforce organization. 
-
-[[get-salesforce-tenant-key]]
-== Get the Salesforce Organization Tenant Key
-
-. In *Your connected Anypoint Platform Organization*, click *View Connection Info*.
-. In *Connection to MuleSoft Anypoint Platform*, click the action menu and select *Copy Salesforce Org Key*.
-. If you are signed in to the Salesforce organization as an admin, click *Manage in Salesforce* to continue setting up the connection in Salesforce.
-
 
 == See Also
 
