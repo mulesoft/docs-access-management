@@ -1,0 +1,15 @@
+= Managing Security Settings
+
+Configure organization-wide security controls in Anypoint Platform to protect access and reduce risk. Enforce multi-factor authentication, restrict sign-ins by IP address, and allowlist trusted domains to meet compliance requirements. Use centralized controls to harden account security for all users and integrations.
+
+Manage these settings in Access Management:
+
+* xref:multi-factor-authentication.adoc[]
+* xref:managing-ip-restrictions.adoc[]
+* xref:allowlisting-trusted-domains.adoc[]
+
+== See Also
+
+* xref:managing-your-account.adoc[]
+* xref:managing-permissions.adoc[]
+* xref:managing-business-groups.adoc[]
