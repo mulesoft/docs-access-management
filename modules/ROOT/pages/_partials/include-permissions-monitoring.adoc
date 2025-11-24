@@ -68,6 +68,8 @@ Telemetry Exporter Administrator
 //
 // tag::permsAdminTelemetryExporterNotes[]
 Assign this permission at the root organization level.
+
+Availability of this permission depends on your organization's subscription tier.
 // end::permsAdminTelemetryExporterNotes[]
 //
 
@@ -84,6 +86,6 @@ Telemetry Exporter Configurations Manager
 // end::permsManageTelemetryExporterConfigDesc[]
 //
 // tag::permsManageTelemetryExporterConfigNotes[]
-&nbsp;
+Availability of this permission depends on your organization's subscription tier.
 // end::permsManageTelemetryExporterConfigNotes[]
 //
