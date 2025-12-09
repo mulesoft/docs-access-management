@@ -1,8 +1,6 @@
 = Configuring SAML for SSO
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 :page-aliases: managing-users.adoc
+:page-notice-banner-message: Support for SHA-1 SAML configuration ends on March 15, 2026. To maintain access, contact your Identity Provider or organization administrator to update the configuration to SHA-2.
 
 Configure SAML to provide external authentication of users and Single Sign-on (SSO) capability so users don't need to provide additional credentials when they access Anypoint Platform.
 
