@@ -1,21 +1,42 @@
 = Connect a Trusted Salesforce Organization to Anypoint Platform
 
-Establish a tenant relationship between your Anypoint Platform organization and a trusted Salesforce organization to enable secure data sharing. Initiate the connection in Anypoint Platform and complete it in Salesforce using organization keys. After linking, you can manage capabilities and verify the connected organization details.
+Establish a tenant relationship between your Anypoint Platform organization and a trusted Salesforce organization to enable secure data sharing and centralized capability management. The connection uses two tenant keys (one from each org) and involves the Anypoint Platform organization administrator and the Salesforce organization administrator. Depending on whether one person holds both roles or two people split the roles, follow the appropriate scenario.
 
 Ways to establish a tenant relationship include:
 
-* A Salesforce organization is provisioned with the tenant relationship with an Anypoint Platform organization already established. In this case, the Anypoint Platform organization administrator just needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the connection] in Anypoint Platform. 
-* The Anypoint Platform organization administrator initiates the tenant relationship in Anypoint Platform and the Salesforce organization administrator completes the setup in the Salesforce organization.   
-
-In some cases, the Anypoint Platform organization administrator and Salesforce organization administrator are different people, and in some cases, they are the same person.
+* A Salesforce organization is provisioned with the tenant relationship to an Anypoint Platform organization already established. In this case, the Anypoint Platform organization administrator only needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the connection] in Anypoint Platform.
+* The Anypoint Platform organization administrator initiates the tenant relationship in Anypoint Platform and the Salesforce organization administrator completes the setup in Salesforce.
 
 == Before You Begin
 
 * Anypoint Platform organization administrators must have the *Organization Administrator* permission at the root organization level
 * Salesforce organization administrators must have the Salesforce administrator permission set.
 
+== Choose Your Scenario
+
+Pick the path that matches who is doing the work.
+
+=== One Person Manages Both Organizations
+
+If you are the organization administrator for both the Anypoint Platform and Salesforce organizations:
+
+. Start in Salesforce by <<get-salesforce-tenant-key,getting the Salesforce organization tenant key>>.
+. In Anypoint Platform, <<connect-orgs,connect with a Salesforce organization>>.
+. In Salesforce, <<complete-organization-connection,complete the organization connection process>>.
+
+=== Different People Manage the Organizations
+
+If different people manage the Anypoint Platform and Salesforce organizations:
+
+. The Salesforce org admin <<get-salesforce-tenant-key,gets the Salesforce organization tenant key>> and shares it with the Anypoint Platform org admin.
+. The Anypoint Platform org admin:
+.. Uses the Salesforce org's tenant key to <<connect-orgs,connect with a Salesforce organization in Anypoint Platform>>. 
+.. Copies the Anypoint Platform organization key and shares it with the Salesforce org admin.
+. The Salesforce org admin <<complete-organization-connection,completes the connection in Salesforce>> using the Anypoint Platform organization key.
+
 [[get-salesforce-tenant-key]]
 == Get the Salesforce Organization Tenant Key
+*Role:* Salesforce organization administrator
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
@@ -27,8 +48,9 @@ include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
 [[connect-orgs]]
 == Connect With a Salesforce Org in Anypoint Platform
+*Role:* Anypoint Platform organization administrator
 
-As an Anypoint Platform organization administrator, you can start the process of connecting to a trusted Salesforce organization. 
+Start the process of connecting to a trusted Salesforce organization in Anypoint Platform. 
 
 You must have the Salesforce organization's connection key (tenant key) before you can connect to a Salesforce organization. Contact the Salesforce organization admin to get the tenant key. 
 
@@ -39,7 +61,11 @@ include::partial$include-nav-salesforce.adoc[]
 +
 The format for the Salesforce tenant key is `cloud/env/org-id`.
 . In *Add the Salesforce Org*, verify the information and click *Add*. 
++
+Anypoint Platform generates and provides the organization key (or tenant key) in the format `cloud/env/org-id`.
 . Click *Copy* to copy the Anypoint Platform organization key. 
++
+The Salesforce organization administrator will enter the organization key (or tenant key) into the Salesforce org you are connecting to in Salesforce to complete the connection process.
 . If you are the admin for the Salesforce organization you are adding, click *Manage in Salesforce* to continue setting up the relationship in Salesforce. 
 +
 If you are not the Salesforce admin, provide the Anypoint Platform organization key to the Salesforce admin so they can finish the connection process in Salesforce.
@@ -48,8 +74,9 @@ When the connection process is complete, the Salesforce organization appears in 
 
 [[complete-organization-connection]]
 == Complete the Organization Connection in Salesforce
+*Role:* Salesforce organization administrator
 
-As a Salesforce organization administrator, you complete the connection between your organization and the Anypoint Platform organization when the connection process is initiated in Anypoint Platform. You must have the Anypoint Platform organization (tenant) key to complete the connection.
+Complete the connection between your organization and the Anypoint Platform organization after the connection process is initiated in Anypoint Platform. You must have the Anypoint Platform organization (tenant) key to complete the connection.
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
