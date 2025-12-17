@@ -63,7 +63,7 @@ The format for the Salesforce tenant key is `cloud/env/org-id`.
 Anypoint Platform generates and provides the organization key (or tenant key) in the format `cloud/env/org-id`.
 . Click *Copy* to copy the Anypoint Platform organization key. 
 +
-The Salesforce organization administrator will enter the organization key (or tenant key) into the Salesforce organization you are connecting to in Salesforce to complete the connection process.
+To complete the connection process, the Salesforce organization administrator enters this organization key (or tenant key) into the Salesforce organization you are connecting to in Salesforce.
 . If you are the admin for the Salesforce organization you are adding, click *Manage in Salesforce* to continue setting up the relationship in Salesforce. 
 +
 If you are not the Salesforce admin, provide the Anypoint Platform organization key to the Salesforce admin so they can finish the connection process in Salesforce.
