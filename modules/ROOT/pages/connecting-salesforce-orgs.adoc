@@ -4,7 +4,7 @@ Establish a tenant relationship between your Anypoint Platform organization and 
 
 Ways to establish a tenant relationship include:
 
-* A Salesforce organization is provisioned with the tenant relationship to an Anypoint Platform organization already established. In this case, the Anypoint Platform organization administrator only needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the connection] in Anypoint Platform.
+* A Salesforce organization is provisioned with the tenant relationship to an Anypoint Platform organization established. In this case, the Anypoint Platform organization administrator only needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the existingconnection] in Anypoint Platform.
 * The Anypoint Platform organization administrator initiates the tenant relationship in Anypoint Platform and the Salesforce organization administrator completes the setup in Salesforce.
 
 == Before You Begin
@@ -34,7 +34,7 @@ If different people manage the Anypoint Platform and Salesforce organizations:
 
 [[get-salesforce-tenant-key]]
 == Get the Salesforce Organization Tenant Key
-*Role:* Salesforce organization administrator
+Role: Salesforce organization administrator
 
 include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 
@@ -45,8 +45,8 @@ include::partial$include-salesforce-mulesoft-setup-nav.adoc[]
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission and continue to <<connect-orgs,Connect With a Salesforce Organization in Anypoint Platform>>.
 
 [[connect-orgs]]
-== Connect With a Salesforce Organization in Anypoint Platform
-*Role:* Anypoint Platform organization administrator
+== Connect with a Salesforce Organization in Anypoint Platform
+Role: Anypoint Platform organization administrator
 
 Start the process of connecting to a trusted Salesforce organization in Anypoint Platform. 
 
@@ -72,7 +72,7 @@ When the connection process is complete, the Salesforce organization appears in 
 
 [[complete-organization-connection]]
 == Complete the Organization Connection in Salesforce
-*Role:* Salesforce organization administrator
+Role: Salesforce organization administrator
 
 Complete the connection between your organization and the Anypoint Platform organization after the connection process is initiated in Anypoint Platform. You must have the Anypoint Platform organization (tenant) key to complete the connection.
 
