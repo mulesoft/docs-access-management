@@ -16,7 +16,7 @@ The connected Salesforce organization must have Data Cloud and Tableau Next enab
 // tag::ii-salesforce-setup[]
 After the Anypoint Platform organization administrator establishes a connection between the Anypoint Platform organization and the Salesforce organization, the Salesforce admin sets up Integration Intelligence in the Salesforce organization. 
 
-This diagram shows the high-level flow for the Salesforce admin to set up Integration Intelligence in the Salesforce org.
+This diagram shows the high-level flow for the Salesforce and Anypoint Platform organization administrators to set up Integration Intelligence in the Salesforce org.
 
 image::access-management::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
 
