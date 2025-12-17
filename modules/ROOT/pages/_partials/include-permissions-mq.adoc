@@ -6,7 +6,7 @@ View all client apps, including client app IDs and client secrets for each clien
 // View destinations, Clear destinations
 // tag::permsViewClearDestinations[]
 * View all destinations and each destination's settings (*ID*, *Type*, *Message TTL*, and *Message Lock Default TTL*).
-* View *In Queue* messages.
+* View *In Queue* message stats.
 * View *In Flight* message stats.
 // end::permsViewClearDestinations[]
 
@@ -19,7 +19,7 @@ View all client apps, including client app IDs and client secrets for each clien
 // Administer destinations
 // tag::permsAdministerDestinations[]
 * View all destinations and each destination's settings (*ID*, *Type*, *Message TTL*, and *Message Lock Default TTL*).
-* View *In Queue* messages.
+* View *In Queue* message stats.
 * View *In Flight* message stats.
 ** Create new queues, message exchanges, and bindings.
 ** Edit existing queues, message exchanges, and bindings.
@@ -29,7 +29,7 @@ View all client apps, including client app IDs and client secrets for each clien
 // Manage destinations
 // tag::permsManageDestinations[]
 * View all destinations and each destination's settings (*ID*, *Type*, *Message TTL*, and *Message Lock Default TTL*).
-* View *In Queue* messages.
+* View *In Queue* message stats.
 * View *In Flight* message stats.
 * Create new queues and message exchanges.
 * Edit existing queues and message exchange settings.
