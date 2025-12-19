@@ -70,3 +70,4 @@ Now, you can apply the OpenAM OAuth Token Enforcement policy to your APIs.
 
 * xref:api-manager::mule-oauth-provider-landing-page.adoc[About OAuth 2.0]
 * xref:api-manager::openam-oauth-token-enforcement-policy.adoc[OpenAM and PingFederate OAuth Token Enforcement Policies]
+* xref:api-manager::migrate-client-apps.adoc#migrate_with_external[Migrate Client Applications for APIs with External Client Providers in API Manager]
