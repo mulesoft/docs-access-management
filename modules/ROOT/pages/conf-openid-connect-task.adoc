@@ -1,7 +1,5 @@
 = Configuring OpenID Connect Identity Management
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+
 
 You can use one of these identity management procedures for client registration in OpenID Connect:
 
