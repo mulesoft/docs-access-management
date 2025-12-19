@@ -142,3 +142,4 @@ The location of the OpenID Provider. For most providers, `/.well-known/openid-co
 * https://backstage.forgerock.com/docs/am/5/oidc1-guide/index.html#openid-connect-examples[AM 5 OpenID Connect 1.0 Guide, Section 3.1. Authorizing OpenID Connect 1.0 Relying Parties]
 * https://documentation.pingidentity.com/pingfederate/pf84/index.shtml#concept_authorizationEndpoint.html#concept_authorizationEndpoint[PingFederate Authorization Endpoint]
 * https://documentation.pingidentity.com/pingfederate/pf84/index.shtml#adminGuide/concept/tokenEndpoint.html[PingFederate Token Endpoint]
+* xref:api-manager::migrate-client-apps.adoc#migrate_with_external[Migrate Client Applications for APIs with External Client Providers in API Manager]
