@@ -26,7 +26,7 @@ To successfully exchange a SAML assertion for an API bearer token, make sure you
 
 * Launch Anypoint Platform from your IdP's portal or use the IdP’s IdP-initiated SSO URL that's configured for the Anypoint Platform application.
 * Don't start the SSO flow from Anypoint Platform URLs such as `/accounts/login`, deep links, or bookmarks to Anypoint Platform services. Those paths won't produce an assertion that can be exchanged for a bearer token.
-* Check the `<samlp:Response>` element to ensure it doesn't include an `InResponseTo` attribute. IdP-initiated responses are unsolicited and must have an empty `InResponseTo`. If `InResponseTo` is present, the exchange fails with an error similar to: `Unauthorized: IDP-initiated SSO – InResponseTo: must be empty`.
+* Check the `<samlp:Response>` element to ensure it doesn't include an `InResponseTo` attribute. IdP-initiated responses are unsolicited and must have an empty `InResponseTo`, for example: 
 +
 [source,xml]
 ----
@@ -38,6 +38,8 @@ To successfully exchange a SAML assertion for an API bearer token, make sure you
     <!-- ... -->
 </samlp:Response>
 ----
++
+If `InResponseTo` is present, the exchange fails with an error similar to: `Unauthorized: IDP-initiated SSO – InResponseTo: must be empty`.
 
 == Obtain an API Bearer Token Using a SAML Assertion
 
@@ -77,5 +79,5 @@ curl -X GET \
 == See Also
 
 * xref:managing-business-groups.adoc[]
-* xref:anypoint-cli::index.adoc[Anypoint CLI]
-* xref:troubleshoot-saml-assertions-task.adoc[To view a SAML response in your Browser]
+* xref:anypoint-cli::index.adoc[Anypoint CLI Overview]
+* xref:troubleshoot-saml-assertions-task.adoc[]
