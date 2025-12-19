@@ -21,7 +21,7 @@ To successfully exchange a SAML assertion for an API bearer token, make sure you
 | InResponseTo | Required| Must be empty
 |Use case | User signs in on the Anypoint Platform signin page | CLI, scripts, automation
 | Result | Browser cookie | Bearer token
-|==
+|===
 
 
 * Launch Anypoint Platform from your IdP's portal or use the IdP’s IdP-initiated SSO URL that's configured for the Anypoint Platform application.
