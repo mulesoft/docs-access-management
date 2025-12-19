@@ -41,6 +41,7 @@ To successfully exchange a SAML assertion for an API bearer token, make sure you
 +
 If `InResponseTo` is present, the exchange fails with an error similar to: `Unauthorized: IDP-initiated SSO – InResponseTo: must be empty`.
 
+[[obtain-api-bearer-token-using-saml-assertion]]
 == Obtain an API Bearer Token Using a SAML Assertion
 
 Use an IdP-initiated SAML response to obtain an API bearer token for Anypoint Platform. Capture the Base64-encoded SAML response from your IdP and POST it to the Anypoint Platform token endpoint to receive the token.
