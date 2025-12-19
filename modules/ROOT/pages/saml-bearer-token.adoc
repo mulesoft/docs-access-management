@@ -1,7 +1,6 @@
 = Obtaining an API Bearer Token Using a SAML Assertion
 
-
-If you're using an identity provider configured to use SAML 2.0, federated users within your organization can access Anypoint Platform APIs using the bearer token.
+Use a SAML 2.0 IdP-initiated SSO assertion to obtain an API bearer token for Anypoint Platform APIs so federated users within your organization can use the token to access Anypoint Platform APIs.
 
 [NOTE]
 Obtaining an API bearer token using a SAML assertion works only for SSO flows that are initiated from an Identity Provider (IdP). Service provider-initiated SSO doesn't support unsolicited assertions. For more information, see <<idp-initiated-sso,Initiate the SSO Flow with an Identity Provider>>.
@@ -14,6 +13,16 @@ The validity of the bearer token is determined by the value defined for the Defa
 == Initiate the SSO Flow with an IdP
 
 To successfully exchange a SAML assertion for an API bearer token, make sure your SSO flow is initiated from the IdP and not the service provider (SP).
+
+[cols="1,1,1",options="header"]
+|===
+|  | SP-Initiated (Standard Login) | IdP-Initiated (Assertion Exchange)
+| Starting point | Anypoint Platform signin page | IdP portal or custom script
+| InResponseTo | Required| Must be empty
+|Use case | User signs in on the Anypoint Platform signin page | CLI, scripts, automation
+| Result | Browser cookie | Bearer token
+|==
+
 
 * Launch Anypoint Platform from your IdP's portal or use the IdP’s IdP-initiated SSO URL that's configured for the Anypoint Platform application.
 * Don't start the SSO flow from Anypoint Platform URLs such as `/accounts/login`, deep links, or bookmarks to Anypoint Platform services. Those paths won't produce an assertion that can be exchanged for a bearer token.
@@ -30,7 +39,9 @@ To successfully exchange a SAML assertion for an API bearer token, make sure you
 </samlp:Response>
 ----
 
-To obtain an API bearer token using a SAML assertion:
+== Obtain an API Bearer Token Using a SAML Assertion
+
+Use an IdP-initiated SAML response to obtain an API bearer token for Anypoint Platform. Capture the Base64-encoded SAML response from your IdP and POST it to the Anypoint Platform token endpoint to receive the token.
 
 . Obtain a SAML response for your identity provider as described in xref:troubleshoot-saml-assertions-task.adoc[View a SAML Response in Your Browser].
 +
