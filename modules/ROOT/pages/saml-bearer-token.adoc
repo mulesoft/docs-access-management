@@ -1,14 +1,34 @@
 = Obtaining an API Bearer Token Using a SAML Assertion
 
 
-If you are using an identity provider configured to use SAML 2.0, federated users within your organization can access Anypoint Platform APIs using the bearer token .
+If you're using an identity provider configured to use SAML 2.0, federated users within your organization can access Anypoint Platform APIs using the bearer token.
 
 [NOTE]
-Obtaining an API bearer token using a SAML assertion works only for IdP-initiated single signon. Service provider-initiated SSO does not support unsolicited assertions.
+Obtaining an API bearer token using a SAML assertion works only for SSO flows that are initiated from an Identity Provider (IdP). Service provider-initiated SSO doesn't support unsolicited assertions. For more information, see <<idp-initiated-sso,Initiate the SSO Flow with an Identity Provider>>.
 
 The bearer token provides access to the platform APIs a user has permission to access. Each bearer token is associated with a specific user who is granted roles and permissions for an API. If a user attempts to access an API that they do not have permissions to access the API returns a `401 Unauthorized` error.
 
 The validity of the bearer token is determined by the value defined for the Default Session Timeout property. This is configured in the root organization properties. See xref:managing-business-groups.adoc#manage-root-org-settings[Manage Root Business Group Settings] for more information.
+
+[[idp-initiated-sso]]
+== Initiate the SSO Flow with an IdP
+
+To successfully exchange a SAML assertion for an API bearer token, make sure your SSO flow is initiated from the IdP and not the service provider (SP).
+
+* Launch Anypoint Platform from your IdP's portal or use the IdP’s IdP-initiated SSO URL that's configured for the Anypoint Platform application.
+* Don't start the SSO flow from Anypoint Platform URLs such as `/accounts/login`, deep links, or bookmarks to Anypoint Platform services. Those paths won't produce an assertion that can be exchanged for a bearer token.
+* Check the `<samlp:Response>` element to ensure it doesn't include an `InResponseTo` attribute. IdP-initiated responses are unsolicited and must have an empty `InResponseTo`. If `InResponseTo` is present, the exchange fails with an error similar to: `Unauthorized: IDP-initiated SSO – InResponseTo: must be empty`.
++
+[source,xml]
+----
+<samlp:Response
+    xmlns:samlp="urn:oasis:names:tc:SAML:2.0:protocol"
+    xmlns:saml="urn:oasis:names:tc:SAML:2.0:assertion">
+    <!-- IdP-initiated example: note there is NO InResponseTo attribute on the Response -->
+    <saml:Issuer>https://idp.example.com</saml:Issuer>
+    <!-- ... -->
+</samlp:Response>
+----
 
 To obtain an API bearer token using a SAML assertion:
 
