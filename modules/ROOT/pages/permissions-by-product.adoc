@@ -667,6 +667,7 @@ In RPA Manager:
 | Read Servers | View server and Flex Gateway resources.|
 | Manage Application Flows | Update flows.|
 | Create Applications | Create applications in a specific environment.|
+| Restart Applications | Restart applications deployed to CloudHub 2.0 and Runtime Fabric in a specific environment.|
 |===
 
 == Secrets Manager
