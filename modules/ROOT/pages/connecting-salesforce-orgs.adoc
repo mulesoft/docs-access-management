@@ -10,7 +10,7 @@ Ways to establish a tenant relationship include:
 == Before You Begin
 
 * Anypoint Platform organization administrators must have the *Organization Administrator* permission at the root organization level
-* Salesforce organization administrators must have the Salesforce administrator permission set.
+* Salesforce organization administrators must have *System Administrator* user profile.
 
 == Choose Your Scenario
 
