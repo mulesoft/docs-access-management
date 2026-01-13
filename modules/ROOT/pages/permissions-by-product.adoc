@@ -32,10 +32,20 @@ This permission appears only if the organization has the modern UI enabled in ac
 [%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability to | Notes
-|Anypoint Monitoring: Monitoring Viewer | View monitoring data for agentic assets.|
-|Exchange: Exchange Viewer | View agentic assets.|
-|API Manager: View APIs Configuration | View API nodes and relationships.|
-|API Manager: View Policies | View policies for assets. |
+|Anypoint Monitoring: Monitoring Viewer
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewMonitorAgents] |
+
+|Exchange: Exchange Viewer
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewAgenticAssets] |
+
+
+|API Manager: View APIs Configuration
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewApiNodes] |
+
+
+|API Manager: View Policies
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewPoliciesForAssets] |
+
 |===
 
 
