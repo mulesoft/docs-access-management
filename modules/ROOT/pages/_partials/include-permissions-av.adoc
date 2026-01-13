@@ -1,0 +1,19 @@
+// View monitoring data
+// tag::permsViewMonitorAgents[]
+View monitoring data for agentic assets.
+// end::permsViewMonitorAgents[]
+
+// View agentic assets
+// tag::permsViewAgenticAssets[]
+View agentic assets.
+// end::permsViewAgenticAssets[]
+
+// View API nodes and relationships
+// tag::permsViewApiNodes[]
+View API nodes and relationships.
+// end::permsViewApiNodes[]
+
+// View policies for assets
+// tag::permsViewPoliciesForAssets[]
+View policies for assets.
+// end::permsViewPoliciesForAssets[]

@@ -27,6 +27,27 @@ This permission appears only if the organization has the modern UI enabled in ac
 |Audit Log Viewer | View audit logs in Access Management.| 
 |===
 
+== Agent Visualizer
+
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability to | Notes
+|Anypoint Monitoring: Monitoring Viewer
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewMonitorAgents] |
+
+|Exchange: Exchange Viewer
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewAgenticAssets] |
+
+
+|API Manager: View APIs Configuration
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewApiNodes] |
+
+
+|API Manager: View Policies
+|include::access-management::partial$include-permissions-av.adoc[tag=permsViewPoliciesForAssets] |
+
+|===
+
 
 == Anypoint Code Builder
 
