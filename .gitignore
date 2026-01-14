@@ -3,3 +3,4 @@
 .codegenie
 .vscode/
 .cursor
+node_modules/
