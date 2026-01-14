@@ -13,6 +13,7 @@
     "test:debug": "playwright test --debug"
   },
   "devDependencies": {
+    "@chromatic-com/playwright": "^0.12.8",
     "@playwright/test": "^1.56.0"
   }
 }
