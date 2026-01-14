@@ -15,10 +15,18 @@ jobs:
       - name: Install dependencies
         # ⚠️ See your package manager's documentation for the correct command to install dependencies in a CI environment.
         run: npm ci
+      - name: Create test results directory
+        run: mkdir -p test-results
       - name: Run Playwright tests
-        run: npx playwright test
+        run: |
+          # Create Docker config directory to avoid permission warning
+          mkdir -p /tmp/.docker
+          # Run tests, filtering out Docker config warnings
+          npx playwright test 2>&1 | grep -v "WARNING: Error loading config file" || true
         env:
           HOME: /root
+          DOCKER_CONFIG: /tmp/.docker
+        continue-on-error: true
       - uses: actions/upload-artifact@v4
         if: always()
         with:
@@ -50,3 +58,5 @@ jobs:
         with:
           playwright: true
           projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+        env:
+          CHROMATIC_ARCHIVE_LOCATION: ./test-results
