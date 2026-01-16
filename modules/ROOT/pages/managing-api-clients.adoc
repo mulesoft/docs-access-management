@@ -21,7 +21,7 @@ Dynamic Client Registration-compliant identity providers must conform to the htt
 
 You can configure more than one client provider and xref:environments.adoc#add-an-idp-to-an-existing-environment[associate the client providers with different environments].
 
-If you configure multiple client providers after you created environments, you can associate the new client providers with the environment. Review the existing client configuration before reassigning client providers to avoid any downtime with existing assets or APIs.
+If you configure multiple client providers after you create environments, you can associate the new client providers with the environment. Review the existing client configuration before reassigning client providers to avoid any downtime with existing assets or APIs.
 
 [[delete-client-provider]]
 == Delete a Client Provider
