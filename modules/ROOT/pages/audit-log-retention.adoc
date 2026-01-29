@@ -24,6 +24,8 @@ Your organization must also have *Try new features* or the Teams feature enabled
 [[configure-audit-log-retention]]
 == Configure Audit Log Retention Period
 
+Set the number of retention days for the audit log and schedule the date it takes effect. 
+
 include::partial$include-nav-steps-org-admin-audit-log-mgr.adoc[]
 
 . Click the *Settings* tab.
