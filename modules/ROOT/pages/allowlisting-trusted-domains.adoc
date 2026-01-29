@@ -4,15 +4,12 @@ Every HTTP request you make to external resources goes through the API Console p
 
 == Adding a New Trusted Domain
 
-To add a new trusted domain:
+The new domain must not duplicate an existing trusted domain and can't be a MuleSoft or Anypoint Platform domain or subdomain.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *Trusted domains*.
 . Click *Add domain*. 
-+
-The domain must not match with any existing trusted domain, and must not be any domain or subdomain of MuleSoft or Anypoint Platform. 
-+
 . In the dialog box, enter the domain name and click *Add domain*. 
 +
 You are redirected to the Trusted Domains page, where you can edit or delete domains. If you register a domain on a parent organization, it's also allowlisted on all business groups.
@@ -20,11 +17,13 @@ You are redirected to the Trusted Domains page, where you can edit or delete dom
 [[auto-registration-domains]]
 == Automatic Registration of Domains
 
-NOTE: Manual domain registration is required for public Anypoint Exchange assets and portals created before 2024 when automatic registration doesn't occur.
+Some domains are added automatically:
 
-When you publish an API specification to Exchange or send a request through the proxy, the implementation's base URI is automatically added to the list of trusted domains.
+* Publishing an API specification to Exchange adds the implementation base URI.
+* Sending a request through the proxy adds the implementation base URI.
+* Unauthenticated requests from public Exchange portals or Mocking Service shareable links are added.
 
-NOTE: Unauthenticated requests from public portals in Exchange or via shareable links in Mocking Service are automatically registered. 
+NOTE: Public Anypoint Exchange assets and portals created before 2024 might not auto-register. Manually register those domains. 
 
 
 == See Also
