@@ -1,15 +1,15 @@
-= Audit Logging
+= Audit Logging in Anypoint Platform
 
 The audit logging service provides a queryable history of actions performed within Anypoint Platform. It keeps track of all user interactions with objects in the system and timestamps those actions. Audit logging also provides mechanisms for querying the set of users who performed actions, the set of objects that had actions performed on them, and other endpoints that enable log entry querying.
 
 Audit logs have a default retention period of one year. If your organization was created before July 10, 2023 and you didn't manually change the retention period, the retention period is six years. Users who have the Organization Administrator and Audit Log Config Manager permissions can customize the retention period. For more information, see xref:audit-log-retention.adoc[]. Download your logs periodically to retain your log files for longer than the current retention period.
 
-You can access the data logs through the audit logging query API or through the audit logging UI.
+You can access audit logs through the Audit Log Query API or through the audit logging UI.
 
 [[access-audit-logging]]
 == Access Audit Logging
 
-Users who have Anypoint Platform Organization Administrator permission or the Audit Log Viewer permission have access to both the UI and the Audit Log Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
+Users who have the Anypoint Platform *Organization Administrator* permission or the *Audit Log Viewer* permission have access to both the UI and the Audit Log Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
 
 The audit log UI is embedded in Access Management.
 
@@ -26,6 +26,7 @@ The *Audit Logs* page displays the logs. You can:
 
 [[export-audit-logs]]
 == Export Audit Logs
+Export audit logs to external observability tools using Telemetry Exporter.
 
 If you have the Anypoint Integration Advanced package or a Titanium subscription to Anypoint Platform, you can use the xref:monitoring::telemetry-exporter.adoc[Telemetry Exporter feature] in Anypoint Monitoring to export audit logs to third-party analytics and observability apps. 
 
@@ -38,13 +39,13 @@ include::monitoring::partial$telemetry-exporter-notes.adoc[tag=knownIssuesAL]
 [[audit-log-content]]
 == Audit Log Contents
 
-Activities in the audit log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload that can store application-specific information such as changed fields, environment information, and so on.
+Activities in the audit log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload that can store application-specific information such as changed fields, and environment information.
 
 Each log entry has a set of properties that provides information about the activity:
 
 * *Time*: Timestamp when the activity occurred
 * *Product*: Product where the object resides, for example, `Access Management`
-* *Type*: Type of object the action is performed, for example, `Organization`
+* *Type*: Type of object the action is performed on, for example, `Organization`
 * *Action*: Action associated with the object, for example, `Create`
 * *Object*: Name of the object, for example, `foo`
 * *User Name*: User who performed the action, for example, `johndoe`
@@ -62,10 +63,10 @@ Occasionally, there are `Anypoint Staff` log entries. This log entry is made whe
 
 * *Connected App*: Name of the connected app that takes an action on behalf of itself or a user. If a connected app didn't execute the action, the payload is `N/A`.
 * *Environment*: Environment names for events from API Manager, Runtime Manager, CloudHub, Partner Manager, and MQ.
-* *Parent*: (Optional) Parent of the object (if any) the action is performed on. The mainly applies to APIs.
+* *Parent*: (Optional) Parent of the object (if any) the action is performed on. This mainly applies to APIs.
 * *Payload*: (Optional) More information about the log properties. For example, if an organization is created, the payload contains information about the organization and the owner, such as IDs.
 
-This a list of actions per product and object type that Anypoint Platform audits:
+This is a list of actions per product and object type that Anypoint Platform audits:
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -457,6 +458,8 @@ The `Create Application` and `Delete Application` actions are logged at the root
 [[access-management]]
 == Access Management
 
+Audited actions for Access Management entities, including users, roles, permissions, identity providers, organizations, environments, and connected apps.
+
 === Users
 
 
@@ -553,7 +556,7 @@ Properties: None
 
 * `Login` and `Logout` actions are logged only at the organization level.
 * `Login failure` actions are logged only against existing user accounts.
-* `Login failure` actions aren't logged if you are using SSO configured with LDAP or OIDC, which includes login failures to Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+* `Login failure` actions aren't logged if you're using SSO configured with LDAP or OIDC, which includes login failures to Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
 
 ====
 
@@ -804,7 +807,7 @@ Properties: Environment name
 
 [NOTE]
 
-Environments that are created automatically when you create an organization or business group do not have audit log entries. As Anypoint Platform has evolved, the default environments created have also changed over time. Currently, `Sandbox` and `Design` are created automatically and do not have audit log entries.
+Environments that are created automatically when you create an organization or business group don't have audit log entries. As Anypoint Platform has evolved, the default environments have also changed over time. Currently, `Sandbox` and `Design` are created automatically and don't have audit log entries.
 
 |===
 
@@ -1097,6 +1100,8 @@ Properties:
 [[anypoint-data-graph]]
 == Anypoint DataGraph
 
+Audited actions related to DataGraph operations, such as adding, updating, and removing APIs from unified schemas.
+
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
 |User Action
@@ -1132,6 +1137,7 @@ Properties:
 [[anypoint-mq]]
 == Anypoint MQ
 
+Audited actions for messaging components, including queues, exchanges, bindings, and clients.
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -1174,6 +1180,8 @@ Properties: Client metadata
 
 [[api-designer]]
 == API Designer APIs
+
+Audited actions for Design Center projects and API design activities, including project lifecycle and asset publication.
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -1632,6 +1640,8 @@ Properties: Public / private state
 [[api-governance]]
 == API Governance
 
+Audited actions for governance profiles and enforcement activities across your APIs.
+
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
 |User Action
@@ -1678,6 +1688,8 @@ Properties: None
 
 [[exchange]]
 == Exchange
+
+Audited actions for Exchange assets, portals, metadata, and sharing operations.
 
 === Assets
 
@@ -2131,6 +2143,8 @@ Properties: Review object
 [[idp]]
 == IDP
 
+Audited actions for Intelligent Document Processing (IDP), including document actions, versions, executions, and reviewer updates.
+
 [%header,cols="25a,15a,20a,10a,15a,30a"]
 |===
 | User action | Object type | Object | Parent | Action | Payload
@@ -2219,6 +2233,8 @@ Properties:
 [[object-store-v2]]
 == Object Store v2
 
+Audited actions for Object Store v2 resources, including stores and related operations.
+
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
 |User Action
@@ -2238,6 +2254,8 @@ Properties: Store metadata
 
 [[rpa]]
 == RPA 
+
+Audited actions across MuleSoft RPA, including run configurations, processes, bots, credentials, and variables.
 
 
 [NOTE]
@@ -2777,6 +2795,8 @@ Properties:
 [[runtime-manager]]
 == Runtime Manager
 
+Audited actions for applications, deployments, infrastructure resources, and runtime configuration changes.
+
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -3191,13 +3211,10 @@ Properties:
 |===
 
 
-
-
-
-
-
 [[secrets-manager]]
 == Secrets Manager
+
+Audited actions for secrets and secret groups, including creation, updates, and deletions.
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -3272,6 +3289,8 @@ Properties:
 [[audit-log-rest-api-access]]
 == Audit Log REST API Access
 
+The Audit Log Query API includes pagination options and examples.
+
 You can access the
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API and its
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.9/files/fat-raml/zip[RAML].
@@ -3283,17 +3302,19 @@ The https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizatio
 
 
 The latest version of the API uses pagination with cursors, so you can initiate query loops using cursors. Setting the `cursorPagination` query parameter to `true` enables you to use cursor paging.
-When you use cursor pagination, each response returns a cursor. The cursor corresponds to the last data entry in the response data set. The subsequent request in the query loop should use the cursor value that was returned in the previous response, and so on.
-When the data set is empty in response, you have reached the end of the query loop, and there is no more data to query for that time window. At that point, stop the query loop. When the data set is empty in the response, no cursor is returned.
-When you use cursor pagination, `total` is not returned by default, because the query loop is not dependent on the offset or the number of total rows.
-If you want to see the total when you use cursor paging, set the `doIncludeTotal` query parameter to true.
+
+When you use cursor pagination, each response returns a cursor. The cursor corresponds to the last data entry in the response dataset. The subsequent request in the query loop should use the cursor value that was returned in the previous response.
+
+When the dataset is empty in response, you have reached the end of the query loop, and there is no more data to query for that time window. At that point, stop the query loop. When the dataset is empty in the response, no cursor is returned.
+
+When you use cursor pagination, `total` isn't returned by default, because the query loop isn't dependent on the offset or the number of total rows.
+To see the total when you use cursor paging, set the `doIncludeTotal` query parameter to true.
 
 When the `cursorPagination` query parameter is true and you use `offset` and `cursor` in the query body, `cursor` is prioritized, and `offset` is ignored.
 
+There is no mapping between `offset` and `cursor` values; so when you run a query loop over a time window, you can't switch to the new parameter somewhere in the middle by using the `cursorPagination` and continue the loop. This is because when using `cursorPagination`, `offset` is ignored and the loop restarts from the beginning.
 
-There is no mapping between `offset` and `cursor` values; And so when you run a query loop over a time window, you cannot switch to the new param somewhere in the middle by using the `cursorPagination` and continue the loop. This is because when using `cursorPagination`, `offset` is ignored and so the loop will be start from the beginning.
-
-The cursor-based pagination API is not applicable to the CSV query. The query continues to use offset-based pagination.
+The cursor-based pagination API isn't applicable to the CSV query. The query continues to use offset-based pagination.
 
 
 This example shows a series of calls in a query loop for cursor based query:
@@ -3414,7 +3435,7 @@ Response:
 
 === Access the API using CURL Commands
 
-These are example `curl` commands for accessing the API (Windows users need to download `curl` before using these commands).
+These are example `curl` commands for accessing the API (Windows users must download `curl` before using these commands).
 
 Get authorization information:
 

@@ -1,12 +1,12 @@
-= Secure API Integration with Connected Apps
+= Connected Apps in Anypoint Platform
 
-Connected apps provide the framework for a safe way for external applications to integrate with your Anypoint Platform org using https://anypoint.mulesoft.com/exchange/portals/anypoint-platform[APIs] through OAuth 2.0 and OpenID Connect without giving the external apps full access to everything. Connected apps enable you to use secure authentication protocols and control an app’s access to user data.
+Connected apps provide OAuth 2.0 and OpenID Connect–based integration for external applications with restricted access to your Anypoint Platform organization. They enforce least‑privilege and provide administrative control over each app’s permissions and data exposure.
 
 Connected apps:
 
 * Establish a trusted relationship with the external application.
-* Manage and enforce the specific permissions granted to that external application.
-* Provide secure and temporary access to your Anypoint Platform resources without exposing your sensitive information.
+* Manage and enforce the specific permissions granted to the external application.
+* Provide secure and temporary access to your Anypoint Platform resources without exposing sensitive information.
 
 Actions taken by connected apps are audited, and you can revoke access at any time. 
 
@@ -27,7 +27,7 @@ Use connected apps to create a seamless authentication experience for end users.
 * An xref:connected-apps-developers.adoc#developers[organization administrator who is developing a connected app] can register new (and manage existing) apps at the root organization or business group level.
 * An xref:connected-apps-end-users.adoc#end-users[end user] can authorize apps to access particular information, such as viewing assets in Anypoint Exchange.
 
-There are two types of connected apps supporting different grant types:
+There are two types of connected apps, each supporting different grant types:
 
 |===
 | Type | Description | Supported grant types | Example use cases

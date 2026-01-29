@@ -1,12 +1,12 @@
-= Configuring SAML for SSO
+= Configuring SAML SSO for Anypoint Platform
 :page-aliases: managing-users.adoc
 :page-notice-banner-message: Support for SHA-1 SAML configuration ends on March 15, 2026. To maintain access, contact your Identity Provider or organization administrator to update the configuration to SHA-2.
 
-Configure SAML to provide external authentication of users and Single Sign-on (SSO) capability so users don't need to provide additional credentials when they access Anypoint Platform.
+Use SAML 2.0 with your external identity provider (IdP) to authenticate users and enable Single Sign-on (SSO) to Anypoint Platform. Provide issuer, sign‑on/sign‑off URLs, certificate, and audience, then save and test the connection.
 
 Configuring SAML for SSO involves:
 
-* Beginning with a configured SAML identity provider (IdP)
+* Beginning with a configured SAML IdP
 * Navigating to and completing the *External Identity - Identity Management SAML 2.0* form in Anypoint Platform, and optionally configuring some advanced settings
 * Saving and testing your new configuration
 
@@ -42,11 +42,11 @@ URL to redirect signout requests, so users both sign out of the Anypoint Platfor
 +
 * *Issuer*
 +
-ID of the identity provider instance that sends SAML assertions.
+The SAML IdP EntityID (Issuer) URI of the identity provider that sends SAML assertions. This must match the `<EntityID>` value in the IdP’s SAML metadata and the Issuer in its SAML assertions.
 +
 * *Public Key*
 +
-Public key provided by the identity provider, which is used to sign the SAML assertion. It is the "X509Certificate" value in the SAML Response. 
+Public key provided by the IdP, which is used to sign the SAML assertion. It's the "X509Certificate" value in the SAML Response. 
 +
 * *Audience*
 +
