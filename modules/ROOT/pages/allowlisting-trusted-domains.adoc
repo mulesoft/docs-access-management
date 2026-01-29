@@ -1,8 +1,8 @@
-= Allowlist Trusted Domains in Anypoint Platform
+= Allowlisting Trusted Domains in Anypoint Platform
 
 Every HTTP request you make to external resources goes through the API Console proxy. For security reasons, you must register the target domain as a trusted domain in Anypoint Platform to enable secure calls to third‑party services in Anypoint Platform.
 
-== Adding a New Trusted Domain
+== Add a New Trusted Domain
 
 The new domain must not duplicate an existing trusted domain and can't be a MuleSoft or Anypoint Platform domain or subdomain.
 
