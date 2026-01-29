@@ -34,7 +34,7 @@ If you were invited to join an existing organization, the company name is alread
 +
 Anypoint Platform creates a new root organization (business group) using the company name you entered and makes you the administrator of that organization. An Anypoint Platform account is associated with only one root organization.
 . Click the terms of service link to read the Anypoint Platform Trial License agreement, then check the box to agree to the terms of service.
-. Click the *I'm not a Robot* Captcha's checkmark and wait for validation.
+. Click the *I'm not a Robot* CAPTCHA checkmark and wait for validation.
 +
 [NOTE]
 You might be prompted to perform a small test before proceeding.

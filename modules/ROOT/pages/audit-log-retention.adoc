@@ -1,4 +1,4 @@
-= Configure Audit Log Retention in Access Management
+= Configure Audit Log Retention in Anypoint Platform
 
 Control how long audit logs are kept to meet compliance and storage requirements. New organizations default to one year. Organizations created before July 10, 2023, default to six years unless changed. Users with *Audit Log Config Manager* and *Organization Administrator* permissions can configure retention in Access Management.
 
