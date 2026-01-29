@@ -1,9 +1,9 @@
-= Audit Log Retention Period
+= Configure Audit Log Retention in Access Management
 
-xref:audit-logging.adoc[Audit logs] have a default retention period of one year. If your organization was created before July 10, 2023 and you did not manually change the retention period, the retention period is six years. Users who have Audit Log Config Manager and Organization Administrator permissions can configure the retention period for the audit logs in their organization. 
+Control how long audit logs are kept to meet compliance and storage requirements. New organizations default to one year. Organizations created before July 10, 2023, default to six years unless changed. Users with *Audit Log Config Manager* and *Organization Administrator* permissions can configure retention in Access Management.
 
-Download your logs periodically if you want to maintain your log files for longer than six years.
-To check the audit log retention period for your organization, check the retention period in your root organization's settings, or use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23341/[Audit Logging API^].
+Download your logs periodically to maintain your log files for longer than six years.
+To find your organization's audit log retention period, view the retention setting in your root organization's settings, or use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23341/[Audit Logging API^].
 
 When you configure a retention period:
 
@@ -14,10 +14,10 @@ When you configure a retention period:
 [[before-you-begin]]
 == Before You Begin
 
-Before getting started, ensure that you have an account that has the following permissions:
+Before getting started, make sure your account has these permissions:
 
-* Audit log config manager
-* Organization administrator (required only if you are using the user interface to set retention. You do not need this permission if you are using the API.)
+* *Audit Log Config Manager*
+* *Organization Administrator* (required only if you're using the user interface to set retention. You don't need this permission if you're using the API.)
 
 Your organization must also have *Try new features* or the Teams feature enabled in Access Management. 
 
@@ -29,12 +29,12 @@ include::partial$include-nav-steps-org-admin-audit-log-mgr.adoc[]
 . Click the *Settings* tab.
 . Next to *Audit Log Retention Period*, click the pencil icon.
 . In the *Days* field, enter a value between 30 and 2190.
-. In the *Date Effective* field, select the date on which you want the new retention period to start.
+. In the *Date Effective* field, select the date to start the new retention period on.
 . Click *Save Changes*. +
 A warning appears, confirming your new retention period and effective date.
 +
 . Click *Confirm*. +
-The new audit log retention period takes effect on the date you specified at 0:0:00 UTC. 
+The new audit log retention period takes effect on the date you specified at 00:00:00 UTC. 
 
 == See Also
 
