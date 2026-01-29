@@ -3305,7 +3305,7 @@ The latest version of the API uses pagination with cursors, so you can initiate 
 
 When you use cursor pagination, each response returns a cursor. The cursor corresponds to the last data entry in the response dataset. The subsequent request in the query loop should use the cursor value that was returned in the previous response.
 
-When the dataset is empty in response, you have reached the end of the query loop, and there is no more data to query for that time window. At that point, stop the query loop. When the dataset is empty in the response, no cursor is returned.
+When the dataset is empty in the response, you have reached the end of the query loop, and there is no more data to query for that time window. At that point, stop the query loop. When the dataset is empty in the response, no cursor is returned.
 
 When you use cursor pagination, `total` isn't returned by default, because the query loop isn't dependent on the offset or the number of total rows.
 To see the total when you use cursor paging, set the `doIncludeTotal` query parameter to true.
