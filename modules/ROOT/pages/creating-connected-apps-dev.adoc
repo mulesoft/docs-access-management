@@ -1,4 +1,6 @@
-= Creating Connected Apps
+= Creating Connected Apps in Anypoint Platform
+
+Create connected apps to integrate external or internal applications with Anypoint Platform using OAuth 2.0 and OpenID Connect. Configure app type and grant types, define redirect URIs and scopes, and manage credentials for least‑privilege access.
 
 When you create connected apps, keep in mind: 
 
@@ -25,7 +27,7 @@ include::partial$include-create-connected-apps.adoc[]
 * Password
 * JWT Bearer
 +
-Note: Based on the grant type you select, additional information might be requested. For more information about grant types, see <<grant-types-and-token-flow>>.
+NOTE: Based on the grant type you select, additional information might be requested. For more information about grant types, see <<grant-types-and-token-flow>>.
 . In *Website URL* , enter the URL where users go to learn more about the app.
 . In *Redirect URIs*, configure which URIs users are directed to after authorization. 
 +
@@ -40,7 +42,7 @@ include::partial$include-add-scopes.adoc[]
 
 include::partial$include-create-connected-apps.adoc[]
 
-. Select *App acts on it's own behalf (client credentials)*.
+. Select *App acts on its own behalf (client credentials)*.
 include::partial$include-add-scopes.adoc[]
 
 [[grant-types-and-token-flow]]
@@ -113,7 +115,9 @@ a| The subject of the token, such as:
 {version}\|{identityProviderId}\|{username}\|{firstname}\|{lastname}\|email\|externalgroups
 ----
 
-NOTE: At minimum, `identityProvider_id` and `username` are required for `sub`, as these subjects identify the user in the system.
+NOTE: At minimum, `identityProviderId` and `username` are required for `sub`, as these subjects identify the user in the system.
+// Standardize identifier casing to match earlier placeholders
+// identityProvider_id -> identityProviderId
 
 | `aud`
 | The authentication server. For example, the authentication server for the US region is `https://anypoint.mulesoft.com/accounts/api/v2/oauth2/token`.
@@ -128,7 +132,7 @@ Use the `client_credentials` grant type for machine-to-machine authentication wh
 
 The `client_credentials` grant type uses the `clientId` and `clientSecret` of the client to authorize and access protected data.
 
-To prevent service disruptions, configure CI/CD pipelines using service accounts to programmatically call Anypoint Platform to use connected apps when configuring xref:multi-factor-authentication.adoc[multi-factor authentication].
+To prevent service disruptions, configure CI/CD pipelines to use service accounts that call Anypoint Platform with connected apps, especially when enabling xref:multi-factor-authentication.adoc[multi-factor authentication].
 
 [[endpoint-scopes]]
 == Endpoint Scopes
@@ -175,7 +179,7 @@ include::partial$include-nav-connected-apps.adoc[]
 
 You can filter and sort the contents of the *Scopes Documentation* page, and you can also click a scope name to view namespaces, methods, and actions.
 
-== Sign in With the Anypoint Platform Widget
+== Sign In with the Anypoint Platform Widget
 
 For seamless implementation, you can integrate a button into the front end of your apps with a prebuilt template and set of components. 
 

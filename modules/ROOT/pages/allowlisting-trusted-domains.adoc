@@ -1,23 +1,33 @@
-= Allowlisting Trusted Domains
+= Allowlisting Trusted Domains in Anypoint Platform
 
-Every HTTP request you make to an external resource goes through the API Console Proxy. For security reasons, you need to register the domain as a trusted domain in Anypoint Platform.
+Every HTTP request you make to external resources goes through the API Console proxy. For security reasons, you must register the target domain as a trusted domain in Anypoint Platform to enable secure calls to third‑party services in Anypoint Platform.
 
-To add a new domain:
+== Add a New Trusted Domain
+
+The new domain must not duplicate an existing trusted domain and can't be a MuleSoft or Anypoint Platform domain or subdomain.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
 . Click *Trusted domains*.
-. Click *Add domain*. +
-The domain must not match with any existing trusted domain, and must not be any domain or subdomain of MuleSoft or Anypoint Platform. 
+. Click *Add domain*. 
+. In the dialog box, enter the domain name and click *Add domain*. 
 +
-. In the dialog box that appears, type the domain name and click *Add domain*. +
-_Result_: The domain has been added to your list of trusted domains. You are redirected to the trusted domains page, where you can edit or delete your domains. If you register a domain on a parent organization, it is also allowlisted on all your business groups.
+You are redirected to the Trusted Domains page, where you can edit or delete domains. If you register a domain on a parent organization, it's also allowlisted on all business groups.
 
 [[auto-registration-domains]]
 == Automatic Registration of Domains
 
-NOTE: Manual domain registration can be required for public Exchange assets and portals created before 2024.
+Some domains are added automatically:
 
-When you publish an API specification to Exchange or send a request through the proxy, the base URI of the implementation is automatically added to the list of trusted domains.
+* Publishing an API specification to Exchange adds the implementation base URI.
+* Sending a request through the proxy adds the implementation base URI.
+* Unauthenticated requests from public Exchange portals or Mocking Service shareable links are added.
 
-NOTE: Non-authenticated requests from public portals in Exchange or via shareable links in Mocking Service are automatically registered. 
+NOTE: Public Anypoint Exchange assets and portals created before 2024 might not auto-register. Manually register those domains. 
+
+
+== See Also
+
+* xref:managing-ip-allowlists.adoc[]
+* xref:managing-security-settings.adoc[]
+* xref:managing-your-account.adoc#allowlist-urls[Allowlist URLs to Sign in to and Use Anypoint Platform]

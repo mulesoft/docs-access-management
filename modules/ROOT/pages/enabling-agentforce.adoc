@@ -1,7 +1,7 @@
 = Enabling or Disabling Agentforce for Anypoint Platform
 :page-aliases: access-management::enabling-einstein.adoc
 
-Connect a trusted Salesforce organization and enable Agentforce for your Anypoint Platform organization. Enabling Agentforce unlocks AI assistance across supported MuleSoft products while routing tracking and billing through Salesforce. Administrators can grant user permissions and set the default Salesforce organization used by Agentforce.
+Connect a trusted Salesforce organization and enable Agentforce (formerly Einstein) for your Anypoint Platform organization. Enabling Agentforce unlocks AI assistance across supported MuleSoft products while routing tracking and billing through Salesforce. Administrators can grant user permissions and set the default Salesforce organization used by Agentforce.
 
 As an organization administrator, you can assign permission to the users in your organization so they can use Agentforce with Anypoint Platform products that have Agentforce capabilities, including:
 
