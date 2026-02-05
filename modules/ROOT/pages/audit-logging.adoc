@@ -463,6 +463,21 @@ Audited actions for Access Management entities, including users, roles, permissi
 
 === Users
 
+Audit logging for login activities follows these rules:
+
+* Organization Scope
++
+Login and logout actions are logged only at the organization level.
+* Anypoint Platform Accounts
++
+Login failures are logged only for existing user accounts.
+* SSO via SAML
++
+Login failures are recorded in the audit log.
+* SSO via LDAP or OIDC
++
+Login failures are not recorded in the audit log. This applies to both Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -552,26 +567,7 @@ Properties: None
 
 |===
 
-[NOTE]
-====
-Audit logging for login activities follows these rules:
-
-* Organization Scope
-+
-Login and logout actions are logged only at the organization level.
-* Anypoint Platform Accounts
-+
-Login failures are logged only for existing user accounts.
-* SSO via SAML
-+
-Login failures are recorded in the audit log.
-* SSO via LDAP or OIDC
-+
-Login failures are not recorded in the audit log. This applies to both Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
-====
-
 === Roles
-
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
