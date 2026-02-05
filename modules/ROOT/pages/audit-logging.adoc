@@ -8,6 +8,7 @@ You can access audit logs through the Audit Log Query API or through the audit l
 
 [[access-audit-logging]]
 == Access Audit Logging
+Access audit logs in the UI and via the Audit Log Query API, scoped to your business group.
 
 Users who have the Anypoint Platform *Organization Administrator* permission or the *Audit Log Viewer* permission have access to both the UI and the Audit Log Query API. The audit log service is business-group aware, which means you see only logs that are relevant to your own business group.
 
@@ -39,7 +40,7 @@ include::monitoring::partial$telemetry-exporter-notes.adoc[tag=knownIssuesAL]
 [[audit-log-content]]
 == Audit Log Contents
 
-Activities in the audit log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload that can store application-specific information such as changed fields, and environment information.
+Activities in the audit log are actions that occur at a particular time, involve one or more objects, have an action type (such as `delete` or `approve`) associated with the objects, and optionally a payload that can store application-specific information such as changed fields and environment information.
 
 Each log entry has a set of properties that provides information about the activity:
 
@@ -462,6 +463,21 @@ Audited actions for Access Management entities, including users, roles, permissi
 
 === Users
 
+Audit logging for login activities follows these rules:
+
+* Organization Scope
++
+Login and logout actions are logged only at the organization level.
+* Anypoint Platform Accounts
++
+Login failures are logged only for existing user accounts.
+* SSO via SAML
++
+Login failures are recorded in the audit log.
+* SSO via LDAP or OIDC
++
+Login failures are not recorded in the audit log. This applies to both Anypoint Platform and Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
+
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -551,17 +567,7 @@ Properties: None
 
 |===
 
-[NOTE]
-====
-
-* `Login` and `Logout` actions are logged only at the organization level.
-* `Login failure` actions are logged only against existing user accounts.
-* `Login failure` actions aren't logged if you're using SSO configured with LDAP or OIDC, which includes login failures to Anypoint Platform Private Cloud Edition (Anypoint Platform PCE).
-
-====
-
 === Roles
-
 
 [%header,cols="25a,15a,15a,15a,15a,30a"]
 |===
@@ -3296,7 +3302,7 @@ https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4
 https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.9/files/fat-raml/zip[RAML].
 
 [[paginated-logs]]
-=== Use a Query Loop to make Requests in Audit Logs
+=== Use a Query Loop to Make Requests in Audit Logs
 
 The https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/organizations/8bfc8bbf-5508-419e-aadc-77dfe18a8172/assets/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/1.0.9/files/fat-raml/zip[latest version of the query API] uses cursor pagination for efficiency, but you can continue to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23245/[previous version of the query API], which uses offset pagination and returns the total number of records.
 
@@ -3433,7 +3439,7 @@ Response:
 }
 ----
 
-=== Access the API using CURL Commands
+=== Access the API Using curl Commands
 
 These are example `curl` commands for accessing the API (Windows users must download `curl` before using these commands).
 
@@ -3478,5 +3484,5 @@ It's best for Audit Log Query Endpoint users to monitor their request rates and 
 == See Also
 
 * xref:audit-log-retention.adoc[]
-* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api[Audit Logging Query API]
+* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api[Audit Log Query API]
 * xref:mq::mq-audit-logs.adoc[Anypoint MQ Audit Logs]
