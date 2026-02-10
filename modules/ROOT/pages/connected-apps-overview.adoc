@@ -17,7 +17,7 @@ OAuth (Open Authorization) is an open protocol that provides secure API authoriz
 OAuth can authorize access to resources without revealing user credentials to apps.
 OpenID Connect identifies the end user and obtains information to pass to OAuth 2.0 connected apps.
 
-For more information, see https://oauth.net/2/[OAuth 2.0] and https://openid.net/connect/[OpenID Connect].
+For more information, see https://oauth.net/2/[OAuth 2.0] and [OpenID Connect].
 
 == Access and Authorization
 

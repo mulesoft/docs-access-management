@@ -27,4 +27,4 @@ In the following example of a SAML assertion, the group_attribute is "memberOf":
 
 == See Also
 
-https://www.mulesoft.com/support-login[MuleSoft Support Portal]
+[MuleSoft Support Portal]

@@ -159,7 +159,7 @@ Read-only access to the user's email.
 Access to the user's data when they're not signed in.
 * `openid:google_wif`
 +
-`id_token` and an access token used to configure Anypoint Platform as an IdP for Google Cloud during the OAuth2 token flow for `client_credentials` connected apps. This ID token conforms to the IdP requirements as outlined in the https://cloud.google.com/iam/docs/workload-identity-federation-with-other-providers[GCP's WIF requirements].
+`id_token` and an access token used to configure Anypoint Platform as an IdP for Google Cloud during the OAuth2 token flow for `client_credentials` connected apps. This ID token conforms to the IdP requirements as outlined in the [GCP's WIF requirements].
 
 [NOTE]
 Apps that use the `client_credentials` grant type always have the `profile` scope assigned to them implicitly. The data returned by queries uses the scope that corresponds to the user who created the connected app.
