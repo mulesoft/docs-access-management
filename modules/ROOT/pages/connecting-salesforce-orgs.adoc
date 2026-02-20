@@ -1,4 +1,4 @@
-= Connect a Trusted Salesforce Organization to Anypoint Platform
+= Connecting a Trusted Salesforce Organization to Anypoint Platform
 
 Establish a tenant (organization to organization) trust relationship between your Anypoint Platform organization and a Salesforce organization to enable secure data sharing and centralized capability management. After you establish this link between organizations, the two environments trust each other and can share permissions.
 
