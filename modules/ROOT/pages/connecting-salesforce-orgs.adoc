@@ -32,7 +32,7 @@ If you're the organization administrator for both the Anypoint Platform and Sale
 
 This diagram shows the high-level flow for connecting Salesforce and Anypoint Platform organizations when the process involves separate administrators for the Salesforce and Anypoint Platform organizations. 
 
-image::access-management::ii-salesforce-admin-flow.png[Salesforce admin and Anypoint Platform flow for connecting organizations]
+image::access-management::connect-salesforce-anypoint-platform-orgs.png[Salesforce admin and Anypoint Platform flow for connecting organizations]
 
 . The Salesforce organization administrator <<get-salesforce-tenant-key,gets the Salesforce organization tenant key>>.
 . The Salesforce organization administrator shares the tenant key with the Anypoint Platform organization administrator.
