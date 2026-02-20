@@ -1,20 +1,24 @@
-= Connect a Trusted Salesforce Organization to Anypoint Platform
+= Connecting a Trusted Salesforce Organization to Anypoint Platform
 
-Establish a tenant relationship between your Anypoint Platform organization and a trusted Salesforce organization to enable secure data sharing and centralized capability management. The connection uses two tenant keys (one from each organization) and involves the Anypoint Platform organization administrator and the Salesforce organization administrator. Depending on whether one person holds both roles or two people split the roles, follow the appropriate scenario.
+Establish a tenant (organization to organization) trust relationship between your Anypoint Platform organization and a Salesforce organization to enable secure data sharing and centralized capability management. After you establish this link between organizations, the two environments trust each other and can share permissions.
+
+The connection process uses two unique tenant keys (one from each organization) and involves the Anypoint Platform organization administrator and the Salesforce organization administrator. After you complete the connection process, you can enable features like MuleSoft API Catalog for Salesforce and Integration Intelligence. 
 
 Ways to establish a tenant relationship include:
 
 * A Salesforce organization is provisioned with the tenant relationship to an Anypoint Platform organization established. In this case, the Anypoint Platform organization administrator only needs to xref:managing-connected-salesforce-orgs.adoc#enable-disable-connection[enable the existing connection] in Anypoint Platform.
 * The Anypoint Platform organization administrator initiates the tenant relationship in Anypoint Platform and the Salesforce organization administrator completes the setup in Salesforce.
 
+[[before-you-begin]]
 == Before You Begin
 
 * Anypoint Platform organization administrators must have the *Organization Administrator* permission at the root organization level.
 * Salesforce organization administrators must have the *System Administrator* user profile.
 
+[[connecting-orgs-scenarios]]
 == Choose Your Scenario
 
-Pick the path that matches who is doing the work.
+Depending on whether one person holds both the Anypoint Platform and Salesforce organization administrator roles or two people split the roles, follow the appropriate scenario.
 
 === One Person Manages Both Organizations
 
@@ -26,11 +30,15 @@ If you're the organization administrator for both the Anypoint Platform and Sale
 
 === Different People Manage the Organizations
 
-If different people manage the Anypoint Platform and Salesforce organizations:
+This diagram shows the high-level flow for connecting Salesforce and Anypoint Platform organizations when the process involves separate administrators for the Salesforce and Anypoint Platform organizations. 
 
-. The Salesforce organization administrator <<get-salesforce-tenant-key,gets the Salesforce organization tenant key>> and shares it with the Anypoint Platform organization administrator.
+image::access-management::connect-salesforce-anypoint-platform-orgs.png[Salesforce admin and Anypoint Platform flow for connecting organizations]
+
+. The Salesforce organization administrator <<get-salesforce-tenant-key,gets the Salesforce organization tenant key>>.
+. The Salesforce organization administrator shares the tenant key with the Anypoint Platform organization administrator.
 . The Anypoint Platform organization administrator uses the Salesforce organization's tenant key to <<connect-orgs,connect with a Salesforce organization in Anypoint Platform>>, and then copies the Anypoint Platform organization key and shares it with the Salesforce organization administrator.
 . The Salesforce organization administrator <<complete-organization-connection,completes the connection in Salesforce>> using the Anypoint Platform organization key.
+
 
 [[get-salesforce-tenant-key]]
 == Get the Salesforce Organization Tenant Key
