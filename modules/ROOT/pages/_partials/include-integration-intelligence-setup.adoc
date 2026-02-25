@@ -11,6 +11,7 @@ Before enabling Integration Intelligence in your Anypoint Platform organization,
 ====
 The connected Salesforce organization must have Data Cloud and Tableau Next enabled. For more information, see https://help.tableau.com/current/online/en-us/tableau_next_setup_guide.htm[Tableau Next Setup Guide].
 ====
+* Enable Agentforce in the connectedSalesforce organization and your Anypoint Platform organization. For more information, see xref:enabling-agentforce.adoc[].
 // end::prereqs[]
 
 // tag::ii-salesforce-setup[]
@@ -21,8 +22,7 @@ This diagram shows the high-level flow for the Salesforce and Anypoint Platform 
 image::access-management::ii-salesforce-admin-flow.png[Salesforce admin flow for setting up Integration Intelligence]
 
 . Log in to your Salesforce organization.
-. In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence (Beta)*.
-. Read the beta service terms and agreements, and click *Got it*.
+. In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence*.
 . On the *Integration Intelligence Setup Assistant* page, follow the setup steps in order:
 .. <<set-up-data-cloud,Set up Data Cloud>>
 .. <<connect-with-anypoint-platform,Connect with Anypoint Platform>>
