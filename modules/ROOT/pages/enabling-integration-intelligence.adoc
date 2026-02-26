@@ -18,7 +18,7 @@ include::partial$include-integration-intelligence-setup.adoc[tag=prereqs]
 include::partial$include-integration-intelligence-setup.adoc[tag=ii-salesforce-setup]
 
 [[set-up-data-cloud]]
-=== Set up Data Cloud
+=== Set up Data 360
 
 include::partial$include-integration-intelligence-setup.adoc[tag=set-up-data-cloud]
 
