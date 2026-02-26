@@ -9,7 +9,7 @@ Before enabling Integration Intelligence in your Anypoint Platform organization,
 +
 [NOTE]
 ====
-The connected Salesforce organization must have Data Cloud and Tableau Next enabled. For more information, see https://help.tableau.com/current/online/en-us/tableau_next_setup_guide.htm[Tableau Next Setup Guide].
+The connected Salesforce organization must have Data 360 and Tableau Next enabled. For more information, see https://help.tableau.com/current/online/en-us/tableau_next_setup_guide.htm[Tableau Next Setup Guide].
 ====
 * Enable Agentforce in the connected Salesforce organization and your Anypoint Platform organization. For more information, see xref:enabling-agentforce.adoc[].
 // end::prereqs[]
@@ -24,7 +24,7 @@ image::access-management::ii-salesforce-admin-flow.png[Salesforce admin flow for
 . Log in to your Salesforce organization.
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence*.
 . On the *Integration Intelligence Setup Assistant* page, follow the setup steps in order:
-.. <<set-up-data-cloud,Set up Data Cloud>>
+.. <<set-up-data-cloud,Set up Data 360>>
 .. <<connect-with-anypoint-platform,Connect with Anypoint Platform>>
 .. <<enable-telemetry-data,Enable Telemetry Data>>
 . The Anypoint Platform organization administrator now completes the setup steps to enable Integration Intelligence in  <<enable-ii-in-anypoint-platform,Anypoint Platform>>.
@@ -37,17 +37,17 @@ image::access-management::ii-salesforce-admin-flow.png[Salesforce admin flow for
 
 // tag::set-up-data-cloud[]
 
-Connect your Salesforce organization to Data Cloud. Data Cloud is the storage and processing layer for Integration Intelligence. It ingests MuleSoft telemetry data from your selected business group into a Data Cloud data space.
+Connect your Salesforce organization to Data 360. Data 360 is the storage and processing layer for Integration Intelligence. It ingests MuleSoft telemetry data from your selected business group into a Data 360 data space.
 
 . In the *Data Cloud* section, click *Setup*.
 +
-For information about setting up Data Cloud see https://help.salesforce.com/s/articleView?id=data.c360_a_set_up.htm&type=5[Set up and Maintain Data Cloud]. 
+For information about setting up Data Cloud see https://help.salesforce.com/s/articleView?id=data.c360_a_set_up.htm&type=5[Set up and Maintain]. 
 
 // end::set-up-data-cloud[]
 
 // tag::connect-with-anypoint-platform[]
 
-Complete the connection between your Salesforce organization and Anypoint Platform so Salesforce can ingest MuleSoft telemetry data from your selected business group into Data Cloud.
+Complete the connection between your Salesforce organization and Anypoint Platform so Salesforce can ingest MuleSoft telemetry data from your selected business group into Data 360.
 
 . In *Connect with Anypoint Platform*, click *Setup*.
 . On the *MuleSoft Anypoint Platform Setup* page, click *Complete Connection*.
@@ -63,10 +63,10 @@ You return to the *MuleSoft Anypoint Platform Setup* page. The page shows the co
 
 // tag::enable-telemetry-data[]
 
-Enable telemetry data so logs and metrics from your Mule apps and APIs are streamed into the selected Data Cloud data space. 
+Enable telemetry data so logs and metrics from your Mule apps and APIs are streamed into the selected Data 360 data space. 
 
 
-. Before enabling telemetry data, you must enable the Data Cloud Connectors feature:
+. Before enabling telemetry data, you must enable the Data 360 Connectors feature:
 .. In Salesforce Setup, enter `Feature Manager` in the *Quick Find* box, then select *Data Cloud > Connectors (Beta)*.
 .. Select *Enable*.
 . In the *Quick Find* box, enter `MuleSoft`, then select *MuleSoft > Integration Intelligence (Beta)*.
@@ -116,7 +116,7 @@ An Anypoint Platform organization administrator must enable the Integration Inte
 . Select *Salesforce*.
 . Enable *You can't bring telemetry data into Salesforce Data Cloud (Beta)*.
 . Opt in to ingest telemetry data by selecting *I understand and agree to join the Beta program*.
-. In *Business Group*, select one business group whose telemetry data will be brought to Data Cloud.
+. In *Business Group*, select the business group that sends telemetry data to Data 360.
 +
 [NOTE]
 The business group you select for data ingestion can't be changed after you save the settings.

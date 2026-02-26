@@ -2,6 +2,11 @@
 
 Integration Intelligence enhances monitoring, analysis, and troubleshooting of MuleSoft integrations through AI-powered capabilities. For more information about Integration Intelligence, see xref:monitoring::integration-intelligence.adoc[Integration Intelligence].
 
+[NOTE]
+====
+As of October 14, 2025, Data Cloud has been rebranded to Data 360. During this transition, you may see references to Data Cloud in our application and documentation. While the name is new, the functionality and content remains unchanged.
+====
+
 [[before-you-begin]]
 == Before You Begin
 
