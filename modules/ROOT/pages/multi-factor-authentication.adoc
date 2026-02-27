@@ -1,8 +1,6 @@
-= Anypoint Platform Multi-Factor Authentication
+= Enabling and Managing Multi-Factor Authentication in Anypoint Platform
 
-Use multi-factor authentication (MFA) as an additional layer of verification for Anypoint Platform users.
-
-MuleSoft requires MFA when users access Anypoint Platform, either directly with their Anypoint Platform credentials or via single sign-on (SSO).
+Anypoint Platform multi-factor authentication (MFA) adds a second verification step when users sign in with their Anypoint Platform credentials or via single sign-on (SSO). MuleSoft requires MFA for all users. You can also register authenticator apps, security keys, or built-in device authentication. Organization administrators configure exempt service accounts and reset MFA for individual users when needed.
 
 MFA is enabled by default for direct signins and can’t be turned off at the organization level. However, a few service account types don’t require MFA. An organization administrator can waive MFA for these accounts so that existing integrations can continue without interruption.
 
@@ -18,14 +16,16 @@ When a user signs in with their Anypoint Platform credentials, they must enter t
 * Security key
 * Salesforce Authenticator
 
+[[mfa-requirements-salesforce-mulesoft]]
 == Multi-Factor Authentication Requirements for Salesforce and MuleSoft Products
 
-* Effective February 1, 2022, MFA must be enabled for all of your Anypoint Platform users. To learn more about this contractual requirement, see the https://help.salesforce.com/s/articleView?id=Salesforce-Multi-Factor-Authentication-FAQ&language=en_US&type=1[Salesforce Multi-Factor Authentication FAQ]
+* Effective February 1, 2022, MFA must be enabled for all of your Anypoint Platform users. To learn more about this contractual requirement, see the https://help.salesforce.com/s/articleView?id=Salesforce-Multi-Factor-Authentication-FAQ&language=en_US&type=1[Salesforce Multi-Factor Authentication FAQ].
 * As of October 29, 2022, all non-SSO accounts that don't have MFA configured are prompted to register for an MFA verification method and use it to sign in to Anypoint Platform.
 
+[[mfa-verification-methods]]
 == Multi-Factor Authentication Verification Methods
 
-You can configure at least one of the following verification methods to comply with multi-factor authentication requirements:
+You can configure at least one of these verification methods to comply with multi-factor authentication requirements:
 
 Third-party TOTP authenticator app:: Registers an authenticator app to create verification codes that you provide when you sign in to Anypoint Platform.
 
@@ -60,6 +60,7 @@ The exempt accounts appear in the *Exempt Accounts* section.
 
 You can later remove user accounts from the *Exempt Accounts* list by clicking *X* next to their account names.
 
+[[manage-mfa-for-your-account]]
 == Manage Multi-Factor Authentication for Your Account
 
 You can modify the verification methods that you use to sign in. You must register at least one method to use MFA.
@@ -68,8 +69,7 @@ To modify verification methods in your account:
 
 include::partial$include-nav-steps-to-profile.adoc[]
 
-. Select *Configure multi-factor authentication (MFA)*. +
-The *Manage Your Verification Methods* interface appears.
+. Select *Configure multi-factor authentication (MFA)*. 
 . To register an additional verification method:
 .. Next to the verification method to configure, click *Add*.
 .. Follow the instructions to configure your preferred verification method.
@@ -81,12 +81,13 @@ The *Manage Your Verification Methods* interface appears.
 .. Click *Done*. +
 . To remove a verification method:
 .. Next to the verification method to remove, select the bin icon.
-.. Click *Yes*
+.. Click *Yes*.
 .. Click *Done*.  +
 [NOTE]
 If you removed all verification methods, you must configure at least one verification method before you save your changes.
 . Click *Save*.
 
+[[reset-mfa-for-individual-users]]
 == Reset Multi-Factor Authentication for Individual Users
 
 You can reset multi-factor authentication for individual users if a device is compromised or lost. If you're the only organization member with Organization Administrator permission and have lost access to your verification methods, contact customer support.
@@ -97,7 +98,13 @@ include::partial$include-nav-steps-org-admin-bg.adoc[]
 
 include::partial$include-nav-users.adoc[]
 
-. Select the user to reset multi-factor authentication for. +
-. Select *Reset multi-factor authentication*.
-. Click *Confirm reset MFA*. +
+. Select the user to reset multi-factor authentication for. 
+. From the actions menu (*...*), select *Reset multi-factor authentication*.
+. Click *Confirm reset MFA*. 
++
 Next time the user signs in to Anypoint Platform, they're prompted to configure a new verification method.
+
+== See Also
+
+* xref:managing-security-settings.adoc[]
+* xref:managing-your-account.adoc[]
