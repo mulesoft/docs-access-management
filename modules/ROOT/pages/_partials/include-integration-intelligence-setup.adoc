@@ -58,7 +58,7 @@ For information about setting up Data Cloud see https://help.salesforce.com/s/ar
 Complete the connection between your Salesforce organization and Anypoint Platform so Salesforce can ingest MuleSoft telemetry data from your selected business group into Data 360.
 
 . From *Setup*, in the Quick Find box, enter `MuleSoft`, and then select *MuleSoft > Anypoint Platform Setup*.
-. On the *MuleSoft Anypoint Platform Setup* page, click *Complete Connection*.
+. On the *MuleSoft Anypoint Platform Setup* page, click *Complete the Connection*.
 . Copy your Salesforce org tenant key. 
 +
 The format for the Salesforce tenant key is `cloud/env/org-id`.
@@ -83,21 +83,21 @@ You return to the *MuleSoft Anypoint Platform Setup* page. The page shows the co
 Enable telemetry data so logs and metrics from your Mule apps and APIs are streamed into the selected Data 360 data space. 
 
 . In the *Quick Find* box, enter `MuleSoft`, then select *MuleSoft Observability*. 
-. In *MuleSoft Observability*, switch *Telemetry Data Ingestion* to *Active*. 
+. In *MuleSoft Observability*, switch *Telemetry Data Ingestion for Integration Intelligence* to *Active*. 
 . Return to Anypoint Platform *Access Management > Salesforce*. 
 . In *Capability enablement* for the connected Salesforce organization, switch *You can't bring telemetry data into Salesforce Data Cloud* to *Enabled*.
-. In *Enable Telemetry Data Ingestion*, select the business group that will send telemetry data to Data 360.
+. In *Enable Telemetry Data Ingestion*, select the business group that contains the apps that will send telemetry data to Data 360, then click *Next*.
 +
 [NOTE]
 The business group you select for data ingestion can't be changed after you save the settings.
-. Click *Next*.
 . In *Select Applications*, select the environment.
 + 
 A list of applications in the selected environment is shown.
 . Select the applications to ingest telemetry data for, and click *Enable Data Ingestion*.
 +
 You can search for applications by name and you can also select *Show only applications available for selection* to filter the list and show only applications that use the latest runtime versions. 
-. Select *Save Settings*.
++
+The settings are saved.
 +
 Any subsequent changes made to Integration Intelligence in Access Management are automatically shared with the connected Salesforce organization. For example, turning off the Integration Intelligence feature in Anypoint Platform disables:
 
@@ -115,7 +115,7 @@ The Salesforce admin enables seamless login for Anypoint Platform users to acces
 . Switch the *Enable Seamless Login from Anypoint Platform* option to *Enabled*.
 +
 [NOTE]
-This option is available after the Anypoint Platform organization administrator completes all of their setup steps. If you don't see the option, contact your Anypoint Platform organization administrator.
+This option is available after the Anypoint Platform organization administrator completes all their setup steps in Anypoint Platform. If you don't see the option, contact your Anypoint Platform organization administrator.
 
 // end::enable-seamless-login[]
 
@@ -128,7 +128,7 @@ This step is available only after the Anypoint organization administrator comple
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence Setup Assistant*.
 . In *Install Integration Intelligence*, click *Setup*.
 +
-The setup steps are shown. If a step isn't complete, click *Setup* to complete it. They should all be completed by the time you get to the *Install Integration Intelligence* step.
+The setup steps are shown. If a step isn't complete, click *Setup* to complete it. All the steps must be completed before you can install Integration Intelligence.
 . Select *Setup* for *Install Integration Intelligence*.
 . In *Data Space*, select the data space to use for Integration Intelligence.
 +
@@ -139,5 +139,3 @@ This is the data space where your observability data will be stored and processe
 After the Integration Intelligence app is successfully installed, you see a *Success* status and the name of the app is shown on a tab in the *Integration Intelligence Setup* page.  
 
 // end::install-integration-intelligence[]
-
-
