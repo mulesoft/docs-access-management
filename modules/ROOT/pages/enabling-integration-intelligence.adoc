@@ -22,6 +22,10 @@ include::partial$include-integration-intelligence-setup.adoc[tag=ii-salesforce-s
 
 include::partial$include-integration-intelligence-setup.adoc[tag=set-up-data-cloud]
 
+=== Enable Data 360 Connectors
+
+include::partial$include-integration-intelligence-setup.adoc[tag=enable-data-360-connectors]
+
 [[connect-with-anypoint-platform]]
 === Complete the Connection with Anypoint Platform
 
@@ -31,11 +35,6 @@ include::partial$include-integration-intelligence-setup.adoc[tag=connect-with-an
 === Enable Telemetry Data
 include::partial$include-integration-intelligence-setup.adoc[tag=enable-telemetry-data]
 
-
-[[enable-ii-in-anypoint-platform]]
-== Enable Integration Intelligence in Anypoint Platform
-
-include::partial$include-integration-intelligence-setup.adoc[tag=enable-ii-in-anypoint-platform]
 
 [[enable-seamless-login]]
 === Enable Seamless Login for Anypoint Platform Users
