@@ -3,6 +3,7 @@
 // tag::prereqs[]
 Before enabling Integration Intelligence in your Anypoint Platform organization, you must:
 
+* Have an Anypoint Platform Integration Advanced or legacy Titanium package and Salesforce Unlimited edition.
 * Have administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
 * Have administrative access to a Salesforce organization.
 * xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization.
