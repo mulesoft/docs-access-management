@@ -1,8 +1,6 @@
 = Configuring OpenID Connect Client Management
 
-Configure an external OpenID Connect (OIDC) identity provider (IdP) to handle client management for your Anypoint Platform APIs. Use providers supporting the OIDC Dynamic Client Registration (DCR) standard, such as Salesforce, Okta, or OpenAM. This allows API portals to dynamically register client applications with your chosen external IdP when requesting access.
-
-Anypoint Platform supports client management by identity providers that implement the OpenID Connect Dynamic Client Registration open standard. Salesforce, Okta, and OpenAM v14 Dynamic Client Registration are explicitly supported in Anypoint Platform.
+Configure an external OpenID Connect (OIDC) identity provider (IdP) to handle client management for your Anypoint Platform APIs. Anypoint Platform supports IdPs that implement the OpenID Connect Dynamic Client Registration (DCR) standard; Salesforce, Okta, and OpenAM (v14 for OpenAM) are explicitly supported. This allows API portals to dynamically register client applications with your chosen external IdP when requesting access.
 
 Anypoint Platform supports client authentication using an Authorization Header or by using the private key JSON Web Token (JWT) method. With the private key method, during dynamic client registration, Anypoint Platform signs a JWT with a user-provided private key and sends it to the IdP as a client assertion. The IdP validates the signature using a pre-registered public key and, if successful, issues a short-lived access token used solely to register a new client. This approach enhances security by allowing you to control the token lifespan and restrict scopes to only those that are necessary.
 
@@ -49,7 +47,10 @@ Disables server certificate validation if your OpenID client management instance
 Enables deletion of clients created with this integration.
 * *Enable client deletion and updates in IdP*
 +
-To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`. 
+To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`.
+* *Use registration credentials for client management*
++
+For IdPs that support the RFC 7592 web standard (such as ForgeRock), check this box to enable direct updates and deletions of dynamically registered client applications through Anypoint Platform. See <<enable-direct-client-management>> for steps to enable this after your client provider is configured.
 . In *Authentication Method*, complete the information for the type of authentication to use for this client provider:
 * *Authorization Header*
 +
@@ -73,10 +74,7 @@ This is the cryptographic key in PEM format used by Anypoint Platform to sign th
 +
 The client API scopes define the specific permissions granted to the token client with the scopes to register new clients.  
 . Enter the information for the *Token Introspection Client*:
-* *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients.
-  *** For Okta, this value is a "Confidential" client.
-  *** For ForgeRock, this value is a "Confidential" client.
-  *** For Salesforce, this value is a "Confidential" client.
+* *Client ID*: The client ID for an existing client in your IdP capable of introspection of _all_ tokens from all clients. For Okta, ForgeRock, and Salesforce, this must be a Confidential client.
 * *Client Secret*: The client secret that corresponds to the client ID.
 . Enter the information for *OpenID Connect Authorization URLs*:
 * *Authorize URL*
@@ -87,16 +85,36 @@ URL where the user authenticates and grants OpenID Connect client applications a
 URL that provides the user’s identity, encoded in a secure JSON Web Token.
 . Click *Create*.
 
-After this is successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IDP that acts as a token provider.
+After this is successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IdP that acts as a token provider.
 
 [NOTE]
 For Okta, the Okta admin must assign the dynamically generated clients to a user or a group of users so they can receive access tokens by sending over the Client ID and Client Secret.
 
-== Client Application Updates and Deletes
+[[manage-dynamic-client-registration-and-lifecycle-updates]]
+== Manage Dynamic Client Registration and Lifecycle Updates
 
-OKTA or another IdP might allow client modification and deletion independently, but this isn't supported on Anypoint Platform. Instead, Anypoint Platform provides and supports hooks so you can implement API calls that are particular to your IdP. 
+Anypoint Platform supports lifecycle management (create, update, and delete) of dynamically registered OAuth2 clients for any IdP that supports the RFC 7592 web standard (such as ForgeRock). For these IdPs, Platform supports and persists the per-client registration token (for example, `registration_access_token` and `registration_client_uri`) returned by the IdP for each newly created client, so you can update and delete those clients directly through Anypoint Platform. This capability is optional; you can use it or keep existing behavior (for example, hooks). Backward compatibility is maintained.
 
-These examples show PUT and DELETE requests that Anypoint Platform makes.
+For IdPs that do not support RFC 7592, Anypoint Platform provides hooks so you can implement API calls that are particular to your IdP.
+
+[[enable-direct-client-management]]
+=== Enable Direct Client Management
+
+To enable direct client updates and deletions for RFC 7592-compliant IdPs:
+
+. Navigate to *Access Management* and click *Client Providers*.
+. Select your configured client provider.
+. Under the *Advanced settings* section, check the box for *Use registration credentials for client management*.
+. Click *Save*.
+
+[IMPORTANT]
+Direct update and delete only apply to clients created *after* you enable this feature. Clients created before that do not have the required registration data and cannot be updated or deleted directly through Anypoint Platform.
+
+=== Implementing Hooks for Non-Supported IdPs
+
+For IdPs that don't support RFC 7592 (for example, Okta), Anypoint Platform provides hooks so you can intercept outbound calls and implement your own update and delete API logic. Point the client registration URL to an application under your control rather than directly at the IdP.
+
+These examples show the PUT and DELETE requests that Anypoint Platform makes.
 
 This is an example of the payload for a PUT (update) request:
 ----
@@ -119,13 +137,9 @@ Authorization: Bearer access-token
 * The `Authorization:` header is included as part of the request only if the `Authorization Header` under *Advanced settings* is configured.
 * The `client_id` request parameter that's passed is the same as the `client_id` passed in the `PUT` request payload.
 * The `token_endpoint_auth_method` passed in the payload is always `client_secret_basic`.
-* Only the `Client Registration URL` and `Authorization Header` come from what is configured in OIDC *Client Provider*.
-+
-[NOTE]
-`client_name` in the request maps to `name` on the inbound side. +
-The authorization method depends on the grant type. For example, if the grant type is `implicit`, the `id_token` and `token` are returned.
+* Only the *Client Registration URL* and *Authorization Header* come from what is configured in the OIDC *Client Provider*. The `client_name` in the request maps to `name` on the inbound side. The authorization method depends on the grant type (for example, if the grant type is `implicit`, the `id_token` and `token` are returned).
 
-This example shows another DELETE request header:
+This example shows the DELETE request header:
 
 ----
 DELETE /oauth2/connect/register/{{client_id}}
@@ -134,13 +148,15 @@ Authorization: Bearer access-token
 ----
 
 [IMPORTANT]
-Neither the `PUT` nor the `DELETE` work if the call is used directly against an IdP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for their particular provider.
+Neither the `PUT` nor the `DELETE` work if the call is used directly against an IdP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for a particular provider.
 
 === Update External Clients Via the API
 
-You can use the Access Management API call `PUT /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}/clients/{clientId}` to update external clients. Use the optional `force` parameter to update Anypoint Platform internal client application records, regardless of whether the update to the external IdP is successful. Using this parameter ensures that the view Anypoint Platform has of the client application is current, even if there are issues communicating with the IdP.
+You can use the Access Management API call `PUT /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}/clients/{clientId}` to update external clients.
 
-If you don't use the `force` parameter, when updating an external client application via the Anypoint Platform API, Anypoint Platform first attempts to update the Identity Provider (IdP) and then updates its internal records only if the IdP update is successful.
+Use the optional `force` parameter to update Anypoint Platform internal client application records, regardless of whether the outbound update to the external IdP (or your interception application) is successful. Using this parameter ensures that the view Anypoint Platform has of the client application is current, even if there are communication issues.
+
+If you don't use the `force` parameter, when updating an external client application via the Anypoint Platform API, Anypoint Platform first attempts the outbound update (either directly to the IdP or to your interception application) and then updates its internal records only if that outbound update is successful.
 
 For more information, see https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/%237020/[Access Management API] documentation.
 
@@ -151,9 +167,9 @@ For more information, see https://anypoint.mulesoft.com/exchange/portals/anypoin
 
 If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. 
 
-To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `_$ISSUER_` is the issuer configured as the provider. 
+To verify the grant types your provider supports, check the provider's discovery endpoint using `$ISSUER/.well-known/openid-configuration`, where `$ISSUER` is the issuer configured as the provider. 
 
-If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[RFC 8414, Obtaining Server Metadata] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated before merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users.
+If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[RFC 8414, Obtaining Server Metadata] on the `$ISSUER/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated before merging grant types with `$ISSUER/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users.
 
 === Update Grant Types
 
