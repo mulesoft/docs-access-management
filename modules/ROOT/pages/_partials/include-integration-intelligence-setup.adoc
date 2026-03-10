@@ -1,18 +1,20 @@
 // Used in Access Management Enabling Integration Intelligence and in Anypoint Monitoring Integration Intelligence
 
 // tag::prereqs[]
-Before enabling Integration Intelligence in your Anypoint Platform organization, you must:
+Before enabling Integration Intelligence in your Anypoint Platform organization, you must have:
 
-* Have an Anypoint Platform Integration Advanced or legacy Titanium package and Salesforce Unlimited edition.
-* Have administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
-* Have administrative access to a Salesforce organization.
-* xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization.
+* An Anypoint Platform Integration Advanced or legacy Titanium package.
+* Salesforce Enterprise, Performance, or Unlimited edition.
+* A Tableau Next license.
+* Administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
+* Administrative access to a Salesforce organization.
+* xref:access-management::trusted-salesforce-org.adoc[A tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization established.
 +
 [NOTE]
 ====
 The connected Salesforce organization must have Data 360 and Tableau Next enabled. For more information, see https://help.tableau.com/current/online/en-us/tableau_next_setup_guide.htm[Tableau Next Setup Guide].
 ====
-* Enable Agentforce in the connected Salesforce organization and your Anypoint Platform organization. For more information, see xref:enabling-agentforce.adoc[].
+* Agentforce enabled in the connected Salesforce organization and your Anypoint Platform organization. For more information, see xref:enabling-agentforce.adoc[].
 // end::prereqs[]
 
 // tag::ii-salesforce-setup[]
@@ -94,6 +96,9 @@ The business group you select for data ingestion can't be changed after you save
 . In *Select Applications*, select the environment.
 + 
 A list of applications in the selected environment is shown.
++
+[NOTE]
+Applications that aren't running on the latest version of Mule runtime and that are deployed on CloudHub, Mule Gateway, or Flex Gateway aren't shown in the list. Data is automatically ingested for those applications and they aren't available for selection.  
 . Select the applications to ingest telemetry data for, and click *Enable Data Ingestion*.
 +
 You can search for applications by name and you can also select *Show only applications available for selection* to filter the list and show only applications that use the latest runtime versions. 
