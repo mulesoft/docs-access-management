@@ -69,7 +69,7 @@ The format for the Salesforce tenant key is `cloud/env/org-id`.
 . Select *Access Management* from the image::access-management::gear.svg["gear icon",20] menu.
 . Select *Salesforce*.
 . Click *Add Salesforce Org*.
-. In *Add the Salesforce Org*, paste the Salesforce org tenant key and click *Add*.
+. In *Add the Salesforce Org*, paste the Salesforce org tenant key, and click *Add*.
 . Enter the name of the Salesforce org in *Name Used in Anypoint Platform*, and click *Add*.
 +
 Anypoint Platform generates and provides the organization key (or tenant key) in the format `cloud/env/org-id`.
@@ -85,11 +85,11 @@ You return to the *MuleSoft Anypoint Platform Setup* page. The page shows the co
 
 Enable telemetry data to stream logs and metrics from your Mule apps and APIs into the selected Data 360 data space. 
 
-. In the *Quick Find* box, enter `MuleSoft`, then select *MuleSoft Observability*. 
+. In the *Quick Find* box, enter `MuleSoft`, and select *MuleSoft Observability*. 
 . In *MuleSoft Observability*, switch *Telemetry Data Ingestion for Integration Intelligence* to *Active*. 
 . Return to Anypoint Platform *Access Management > Salesforce*. 
 . In *Capability enablement* for the connected Salesforce organization, switch *You can't bring telemetry data into Salesforce Data Cloud* to *Enabled*.
-. In *Enable Telemetry Data Ingestion*, select the business group that contains the apps that will send telemetry data to Data 360, then click *Next*.
+. In *Enable Telemetry Data Ingestion*, select the business group that contains the apps that will send telemetry data to Data 360, and then click *Next*.
 +
 [NOTE]
 The business group you select for data ingestion can't be changed after you save the settings.
@@ -140,7 +140,7 @@ The setup steps appear. If a step isn't complete, click *Setup* to complete it. 
 +
 This is the data space where your observability data will be stored and processed and must match the data space where telemetry data is ingested.
 . Click *Next*.
-. In *App Details*, enter a name and description for the Integration Intelligence app, then click *OK*.
+. In *App Details*, enter a name and description for the Integration Intelligence app, and then click *OK*.
 +
 After the Integration Intelligence app is successfully installed, you see a *Success* status and the name of the app is shown on a tab in the *Integration Intelligence Setup* page.  
 
