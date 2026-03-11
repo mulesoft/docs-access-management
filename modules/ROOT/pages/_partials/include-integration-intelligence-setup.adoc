@@ -98,7 +98,7 @@ The business group you select for data ingestion can't be changed after you save
 A list of applications in the selected environment is shown.
 +
 [NOTE]
-Applications that aren't running on the latest version of Mule runtime and that are deployed on CloudHub, Mule Gateway, or Flex Gateway aren't shown in the list. Data is automatically ingested for those applications and they aren't available for selection.  
+Applications that aren't running on Mule runtime 4.11 or later and that are deployed on CloudHub, Mule Gateway, or Flex Gateway aren't shown in the list. Data is automatically ingested for those applications and they aren't available for selection.  
 . Select the applications to ingest telemetry data for, and click *Enable Data Ingestion*.
 +
 You can search for applications by name and you can also select *Show only applications available for selection* to filter the list and show only applications that use the latest runtime versions. 
