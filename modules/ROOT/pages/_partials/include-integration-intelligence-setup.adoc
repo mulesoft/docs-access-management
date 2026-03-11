@@ -83,7 +83,7 @@ You return to the *MuleSoft Anypoint Platform Setup* page. The page shows the co
 
 // tag::enable-telemetry-data[]
 
-Enable telemetry data so logs and metrics from your Mule apps and APIs are streamed into the selected Data 360 data space. 
+Enable telemetry data to stream logs and metrics from your Mule apps and APIs into the selected Data 360 data space. 
 
 . In the *Quick Find* box, enter `MuleSoft`, then select *MuleSoft Observability*. 
 . In *MuleSoft Observability*, switch *Telemetry Data Ingestion for Integration Intelligence* to *Active*. 
@@ -95,7 +95,7 @@ Enable telemetry data so logs and metrics from your Mule apps and APIs are strea
 The business group you select for data ingestion can't be changed after you save the settings.
 . In *Select Applications*, select the environment.
 + 
-A list of applications in the selected environment is shown.
+A list of applications in the selected environment appears.
 +
 [NOTE]
 You can select telemetry data ingestion for Mule 4.11 and later apps on CloudHub 2.0 or Runtime Fabric. For all other deployments (CloudHub, Mule Gateway, Flex Gateway, or earlier runtimes), telemetry data ingestion is automatically enabled and excluded from the selection list.  
@@ -116,7 +116,7 @@ Any subsequent changes made to Integration Intelligence in Access Management are
 
 The Salesforce admin enables seamless login for Anypoint Platform users to access Tableau Next dashboards in Salesforce without needing to create new credentials or perform additional login steps.   
 
-. Log in to your Salesforce organization if you're not already logged in.
+. If you aren't logged in, log in to Salesforce.
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Anypoint Platform Setup*.
 . Switch the *Enable Seamless Login from Anypoint Platform* option to *Enabled*.
 +
@@ -134,7 +134,7 @@ This step is available only after the Anypoint organization administrator comple
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence Setup Assistant*.
 . In *Install Integration Intelligence*, click *Setup*.
 +
-The setup steps are shown. If a step isn't complete, click *Setup* to complete it. All the steps must be completed before you can install Integration Intelligence.
+The setup steps appear. If a step isn't complete, click *Setup* to complete it. All the steps must be completed before you can install Integration Intelligence.
 . Select *Setup* for *Install Integration Intelligence*.
 . In *Data Space*, select the data space to use for Integration Intelligence.
 +
