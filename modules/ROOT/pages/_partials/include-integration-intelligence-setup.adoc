@@ -66,7 +66,7 @@ Complete the connection between your Salesforce organization and Anypoint Platfo
 +
 The format for the Salesforce tenant key is `cloud/env/org-id`.
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
-. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. Select *Access Management* from the image::access-management::gear.svg["gear icon",20] menu.
 . Select *Salesforce*.
 . Click *Add Salesforce Org*.
 . In *Add the Salesforce Org*, paste the Salesforce org tenant key and click *Add*.
