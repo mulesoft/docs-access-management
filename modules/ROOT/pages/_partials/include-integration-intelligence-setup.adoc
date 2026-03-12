@@ -14,7 +14,7 @@ Before enabling Integration Intelligence in your Anypoint Platform organization,
 ====
 The connected Salesforce organization must have Data 360 and Tableau Next enabled. For more information, see https://help.tableau.com/current/online/en-us/tableau_next_setup_guide.htm[Tableau Next Setup Guide].
 ====
-* Agentforce enabled in the connected Salesforce organization and your Anypoint Platform organization. For more information, see xref:enabling-agentforce.adoc[].
+* Agentforce enabled in the connected Salesforce organization and your Anypoint Platform organization. For more information, see xref:access-management::enabling-agentforce.adoc[].
 // end::prereqs[]
 
 // tag::ii-salesforce-setup[]
