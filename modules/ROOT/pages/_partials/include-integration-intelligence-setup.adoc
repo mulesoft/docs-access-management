@@ -48,6 +48,7 @@ For information about setting up Data Cloud see https://help.salesforce.com/s/ar
 
 // end::set-up-data-cloud[]
 
+//// ////
 // tag::enable-data-360-connectors[]
 . Before enabling telemetry data, you must enable the Data 360 Connectors feature:
 .. In Salesforce Setup, enter `Feature Manager` in the *Quick Find* box, then select *Feature Manager > Connectors (Beta)*.
@@ -55,6 +56,7 @@ For information about setting up Data Cloud see https://help.salesforce.com/s/ar
 .. Opt in to the beta terms by selecting the box, and then click *Enable*.
 
 // end::enable-data-360-connectors[]
+//// ////
 
 // tag::connect-with-anypoint-platform[]
 

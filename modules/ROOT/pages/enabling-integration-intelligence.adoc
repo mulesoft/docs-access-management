@@ -22,9 +22,6 @@ include::partial$include-integration-intelligence-setup.adoc[tag=ii-salesforce-s
 
 include::partial$include-integration-intelligence-setup.adoc[tag=set-up-data-cloud]
 
-== Enable Data 360 Connectors
-
-include::partial$include-integration-intelligence-setup.adoc[tag=enable-data-360-connectors]
 
 [[connect-with-anypoint-platform]]
 == Complete the Connection with Anypoint Platform
