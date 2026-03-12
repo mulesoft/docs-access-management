@@ -30,7 +30,7 @@ image::access-management::ii-salesforce-admin-flow.png[Salesforce admin flow for
 .. <<set-up-data-cloud,Set up Data 360>>
 .. <<connect-with-anypoint-platform,Connect with Anypoint Platform>>
 .. <<enable-telemetry-data,Enable Telemetry Data>>
-. The Anypoint Platform organization administrator now completes the setup steps to enable Integration Intelligence in  <<enable-ii-in-anypoint-platform,Anypoint Platform>>.
+. The Anypoint Platform organization administrator now completes the setup steps to enable Integration Intelligence in Anypoint Platform.
 . After the Anypoint Platform organization administrator completes the setup steps in Anypoint Platform, the Salesforce admin completes the rest of the Integration Intelligence setup in the Salesforce org.  
 .. <<enable-seamless-login,Enable Seamless Login>> for Anypoint Platform users to access Tableau Next dashboards in Salesforce.
 .. <<install-integration-intelligence,Install Integration Intelligence>>
