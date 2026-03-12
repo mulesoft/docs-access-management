@@ -83,10 +83,13 @@ You return to the *MuleSoft Anypoint Platform Setup* page. The page shows the co
 
 // tag::enable-telemetry-data[]
 
-Enable telemetry data to stream logs and metrics from your Mule apps and APIs into the selected Data 360 data space. 
+Enable telemetry data to stream logs and metrics from your Mule apps and APIs into the default Data 360 data space. 
 
 . In the *Quick Find* box, enter `MuleSoft`, and select *MuleSoft Observability*. 
 . In *MuleSoft Observability*, switch *Telemetry Data Ingestion for Integration Intelligence* to *Active*. 
++
+[NOTE]
+You can only select the default Data 360 data space for telemetry data ingestion.
 . Return to Anypoint Platform *Access Management > Salesforce*. 
 . In *Capability enablement* for the connected Salesforce organization, switch *You can't bring telemetry data into Salesforce Data Cloud* to *Enabled*.
 . In *Enable Telemetry Data Ingestion*, select the business group that contains the apps that will send telemetry data to Data 360, and then click *Next*.
