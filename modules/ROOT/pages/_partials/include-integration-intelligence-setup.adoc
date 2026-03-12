@@ -27,13 +27,13 @@ image::access-management::ii-salesforce-admin-flow.png[Salesforce admin flow for
 . Log in to your Salesforce organization.
 . In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Integration Intelligence*.
 . On the *Integration Intelligence Setup Assistant* page, follow the setup steps in order:
-.. <<set-up-data-cloud,Set up Data 360>>
-.. <<connect-with-anypoint-platform,Connect with Anypoint Platform>>
-.. <<enable-telemetry-data,Enable Telemetry Data>>
+.. <<set-up-data-cloud,Set up Data 360>>.
+.. <<connect-with-anypoint-platform,Connect with Anypoint Platform>>.
+.. <<enable-telemetry-data,Enable Telemetry Data>>.
 . The Anypoint Platform organization administrator now completes the setup steps to enable Integration Intelligence in Anypoint Platform.
 . After the Anypoint Platform organization administrator completes the setup steps in Anypoint Platform, the Salesforce admin completes the rest of the Integration Intelligence setup in the Salesforce org.  
 .. <<enable-seamless-login,Enable Seamless Login>> for Anypoint Platform users to access Tableau Next dashboards in Salesforce.
-.. <<install-integration-intelligence,Install Integration Intelligence>>
+.. <<install-integration-intelligence,Install Integration Intelligence>>.
 
 
 // end::ii-salesforce-setup[]
