@@ -155,7 +155,7 @@ After selecting this account, entering its corresponding password, and clicking 
 
 However, if the organization your account owns has other members, Anypoint Platform won't allow you to migrate to *MuleSoft*.
 
-To free your account from the organization you own, open a support ticket at https://help.mulesoft.com[https://help.mulesoft.com]. Provide this information:
+To free your account from the organization you own, open a support ticket at https://help.salesforce.com[https://help.salesforce.com]. Provide this information:
 
 * The username of another user within the organization you own to promote to owner
 * The organization name and organization ID of the organization
