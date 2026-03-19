@@ -44,7 +44,7 @@ Connect your Salesforce organization to Data 360. Data 360 is the storage and pr
 
 . In the *Data Cloud* section, click *Setup*.
 +
-For information about setting up Data Cloud see https://help.salesforce.com/s/articleView?id=data.c360_a_set_up.htm&type=5[Set up and Maintain]. 
+For information about setting up Data 360, see https://help.salesforce.com/s/articleView?id=data.c360_a_set_up.htm&type=5[Set up and Maintain]. 
 
 // end::set-up-data-cloud[]
 
@@ -87,7 +87,7 @@ You return to the *MuleSoft Anypoint Platform Setup* page. The page shows the co
 
 Enable telemetry data to stream logs and metrics from your Mule apps and APIs into the selected Data 360 data space. 
 
-. In the *Quick Find* box, enter `MuleSoft`, and select *MuleSoft Observability*. 
+. In Salesforce Setup, in the *Quick Find* box, enter `MuleSoft`, then select *MuleSoft Observability*. 
 . In *MuleSoft Observability*, switch *Telemetry Data Ingestion for Integration Intelligence* to *Active*. 
 . Return to Anypoint Platform *Access Management > Salesforce*. 
 . In *Capability enablement* for the connected Salesforce organization, switch *You can't bring telemetry data into Salesforce Data Cloud* to *Enabled*.
