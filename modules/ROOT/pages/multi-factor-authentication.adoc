@@ -19,7 +19,7 @@ When a user signs in with their Anypoint Platform credentials, they must enter t
 [[mfa-requirements-salesforce-mulesoft]]
 == Multi-Factor Authentication Requirements for Salesforce and MuleSoft Products
 
-* Effective February 1, 2022, MFA must be enabled for all of your Anypoint Platform users. To learn more about this contractual requirement, see the https://help.salesforce.com/s/articleView?id=Salesforce-Multi-Factor-Authentication-FAQ&language=en_US&type=1[Salesforce Multi-Factor Authentication FAQ].
+* Effective February 1, 2022, MFA must be enabled for all of your Anypoint Platform users. To learn more about this contractual requirement, see the https://help.salesforce.com/s/articleView?id=000396727&type=1[Salesforce Multi-Factor Authentication FAQ].
 * As of October 29, 2022, all non-SSO accounts that don't have MFA configured are prompted to register for an MFA verification method and use it to sign in to Anypoint Platform.
 
 [[mfa-verification-methods]]
