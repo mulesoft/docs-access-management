@@ -95,7 +95,7 @@ For Okta, the Okta admin must assign the dynamically generated clients to a user
 
 Anypoint Platform supports lifecycle management (create, update, and delete) of dynamically registered OAuth2 clients for any IdP that supports the RFC 7592 web standard (such as ForgeRock). For these IdPs, Platform supports and persists the per-client registration token (for example, `registration_access_token` and `registration_client_uri`) returned by the IdP for each newly created client, so you can update and delete those clients directly through Anypoint Platform. This capability is optional; you can use it or keep existing behavior (for example, hooks). Backward compatibility is maintained.
 
-For IdPs that do not support RFC 7592, Anypoint Platform provides hooks so you can implement API calls that are particular to your IdP.
+For IdPs that don't support RFC 7592, Anypoint Platform provides hooks so you can implement API calls that are particular to your IdP.
 
 [[enable-direct-client-management]]
 === Enable Direct Client Management
@@ -108,9 +108,9 @@ To enable direct client updates and deletions for RFC 7592-compliant IdPs:
 . Click *Save*.
 
 [IMPORTANT]
-Direct update and delete only apply to clients created *after* you enable this feature. Clients created before that do not have the required registration data and cannot be updated or deleted directly through Anypoint Platform.
+Direct update and delete only apply to clients created *after* you enable this feature. Clients created before that don't have the required registration data and can't be updated or deleted directly through Anypoint Platform.
 
-=== Implementing Hooks for Non-Supported IdPs
+=== Implement Hooks for Non-Supported IdPs
 
 For IdPs that don't support RFC 7592 (for example, Okta), Anypoint Platform provides hooks so you can intercept outbound calls and implement your own update and delete API logic. Point the client registration URL to an application under your control rather than directly at the IdP.
 
