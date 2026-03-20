@@ -3,7 +3,7 @@
 Configure up to 25 external client providers in Anypoint Platform to authorize API client applications. Apply OAuth 2.0 policies to protect your APIs, using your chosen OAuth 2.0 provider. This lets you centralize and scale client authorization across environments.
 
 [[supported-oauth-2-0-providers]]
-== SupportedOAuth 2.0 Providers
+== Supported OAuth 2.0 Providers
 
 To configure client management on Anypoint Platform for supported providers, you must have an identity provider (IdP) account with the provider to use.
 
@@ -43,7 +43,7 @@ include::partial$include-nav-client-providers.adoc[]
 == See Also
 
 * https://openid.net/specs/openid-connect-registration-1_0.html[OpenID Connect Client Registration 1.0 incorporating errata set 1]
-* xref:conf-client-mgmt-openam-task.adoc[Configure Client Management by OpenAM]
+* xref:conf-client-mgmt-openam-task.adoc[Configuring OpenAM Client Providers in Access Management]
 * xref:conf-client-mgmt-pf-task.adoc[Configure Client Management by PingFederate]
 * xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management]
 * xref:api-manager::migrate-client-apps.adoc#migrate_with_external[Migrate Client Applications for APIs with External Client Providers in API Manager]
