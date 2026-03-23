@@ -1,4 +1,9 @@
-= Configuring Client Management with OpenAM
+= Configuring OpenAM Client Providers in Access Management
+
+Register API clients through OpenAM 14 by configuring an OpenAM client provider in Anypoint Platform. You map OAuth2 authorization, token, validation, and client management endpoints and admin token credentials to your deployment. Your organization keeps client provisioning in OpenAM and applies the OpenAM OAuth token enforcement policy to APIs through API Manager.
+
+[NOTE]
+Anypoint Platform doesn't show plaintext client secrets or static authorization header values for API clients registered through external client providers. A *Show* control appears, but values remain masked. View your credentials in the external client provider. 
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 
@@ -8,7 +13,7 @@ include::partial$include-nav-client-providers.adoc[]
 +
 The *Add OpenAM client provider* page appears.
 +
-. Fill in the following required fields:
+. Fill in these required fields:
 +
 * Version
 +
