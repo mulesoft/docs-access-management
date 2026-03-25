@@ -81,8 +81,8 @@ Password of user with privileges for creating new clients within the target Ping
 
 == See Also
 
-* https://docs.pingidentity.com/bundle/pingfederate-80/page/adminGuide/concept/oAuth2_0Endpoints.html[PingFederate 8.0 OAuth 2.0 Endpoints]
-* https://docs.pingidentity.com/bundle/pingfederate-80/page/adminGuide/concept/webServiceInterfaces.html[PingFederate 8.0 Web Service Interfaces]
+* https://docs.pingidentity.com/pingfederate/latest/developers_reference_guide/pf_oauth_20_endpoints.html[PingFederate OAuth 2.0 Endpoints]
+* https://docs.pingidentity.com/pingfederate/latest/developers_reference_guide/pf_web_service_interface_api.html[PingFederate Web Service Interfaces and APIs]
 * xref:api-manager::mule-oauth-provider-landing-page.adoc[About OAuth 2.0]
 * xref:api-manager::openam-oauth-token-enforcement-policy.adoc[OpenAM and PingFederate OAuth Token Enforcement Policies]
 * xref:api-manager::migrate-client-apps.adoc#migrate_with_external[Migrate Client Applications for APIs with External Client Providers in API Manager]

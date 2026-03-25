@@ -1,10 +1,11 @@
 = Managing IP Allowlists in Access Management
 
-Create IP allowlists in Access Management to restrict access to your Anypoint Platform organization to trusted networks. Enforce IP restrictions for Anypoint Platform signins by addingCIDR blocks to reduce credential abuse and meet compliance needs.
+Create IP allowlists in Access Management to restrict access to your Anypoint Platform organization to trusted networks. Enforce IP restrictions for Anypoint Platform signins by adding CIDR blocks to reduce credential abuse and meet compliance needs.
 
 [NOTE]
 --
-This feature is available only for US and EU commercial clouds.
+* This feature is available only for US and EU commercial clouds.
+* IP allowlisting applies only to users who sign in with Anypoint Platform credentials. It doesn't apply to users who authenticate through an external identity provider (IdP) using SSO.
 --
 
 == Before You Begin
@@ -24,7 +25,7 @@ Enable or disable IP allowlisting for your organization’s signins in Access Ma
 * Description: `NE office network`
 +
 [NOTE]
-Only IPv4 addresses are supported. All defined CIDR blocks apply to all users in your organization unless they are exempted.
+Only IPv4 addresses are supported. All defined CIDR blocks apply to all users in your organization unless they're exempted. 
 . (Optional) Click *Add* or *Remove* to add and remove CIDR blocks. 
 . Switch the *Enforce IP restrictions for login* switch on or off to activate or deactivate defined IP restrictions for all users within your organization.
 +
