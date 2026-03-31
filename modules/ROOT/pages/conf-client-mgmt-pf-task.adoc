@@ -1,7 +1,5 @@
 = Configuring Client Management with PingFederate
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+:page-notice-banner-message: Anypoint Platform support for PingFederate versions 6 through 8 ends on June 30, 2026. Use OpenID Connect or Microsoft Entra ID instead.
 
 Anypoint Platform supports only PingFederate versions 6 through 8. For versions 9 or later, you can configure the PingFederate client provider as an OIDC provider by following the instructions in xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management].
 
