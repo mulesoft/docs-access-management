@@ -12,7 +12,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 include::partial$include-nav-client-providers.adoc[]
 
 . Click *Add Client Provider*, and then select *OpenID Connect Dynamic Client Registration*.
-. After you have the values from your IdP’s configuration, complete the information for your client provider, enter the information for *Dynamic Client Registration*:
+. Enter information for *Dynamic Client Registration*:
 * *Issuer*
 +
 URL that the OpenID provider asserts is its trusted issuer.
@@ -36,7 +36,7 @@ These are examples of client registration URLs, which are determined by your cli
 The time that elapses before a client provider request times out. The minimum value is five seconds. The maximum value is 20 seconds.
 +
 [NOTE]
-Anypoint Platform makes an HTTP call to the configured OIDC endpoints, and if there is no response after five seconds, the HTTP call times out.
+Anypoint Platform makes an HTTP call to the configured OIDC endpoints. If there is no response within the configured timeout period, the HTTP call times out.
 +
 .. Select *Advanced Settings* for these options:
 * *Disable server certificate validation*
@@ -50,7 +50,7 @@ Enables deletion of clients created with this integration.
 To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`.
 * *Use registration credentials for client management*
 +
-Check this box to enable lifecycle management (update and delete) of dynamically registered client applications through Anypoint Platform. When enabled, the system automatically adapts to your IdP's capabilities. If the IdP returns `registration_access_token` and `registration_client_uri` (per RFC 7592), these credentials are used for direct client management. Otherwise, the existing mechanism is used. See <<enable-client-management>> for configuration steps.
+Enables lifecycle management (update and delete) of dynamically registered client applications through Anypoint Platform. When enabled, Anypoint Platform automatically adapts to your IdP's capabilities. If the IdP returns `registration_access_token` and `registration_client_uri` (per RFC 7592), these credentials are used for direct client management. Otherwise, the existing mechanism is used.
 . In *Authentication Method*, complete the information for the type of authentication to use for this client provider:
 * *Authorization Header*
 +
@@ -108,7 +108,7 @@ To enable lifecycle management for dynamically registered clients:
 
 . Navigate to *Access Management* and click *Client Providers*.
 . Select your configured client provider.
-. Under the *Advanced settings* section, check the box for *Use registration credentials for client management*.
+. Under the *Advanced settings* section, select *Use registration credentials for client management*.
 . Click *Save*.
 
 [IMPORTANT]
@@ -128,6 +128,7 @@ If your IdP doesn't return RFC 7592 registration credentials (such as Okta), you
 
 *Example PUT (update) request that Anypoint Platform sends:*
 
+[source,http]
 ----
 PUT /oauth2/connect/register/{{client_id}}
 Accept: application/json
@@ -148,6 +149,7 @@ Authorization: Bearer access-token
 
 This is an example of the DELETE request that Anypoint Platform sends:
 
+[source,http]
 ----
 DELETE /oauth2/connect/register/{{client_id}}
 Host: identity.example.com
@@ -208,5 +210,5 @@ You can select the Refresh Token grant type only if you have also selected the A
 * https://docs.pingidentity.com/archive/[OpenAM 13.5 Developer's Guide, Procedure 14.4 To Register a Relying Party Dynamically]
 * https://developer.okta.com/docs/api/openapi/okta-oauth/oauth/tag/Client/[Okta OpenID Connect, Dynamic Client Registration]
 * https://developer.okta.com/docs/api/openapi/okta-oauth/guides/overview/[Okta OpenID Connect & OAuth 2.0 API]
-* https://docs.pingidentity.com/archive/[AM 5 OAuth 2.0 Guide, 3.1. OAuth 2.0 Client and Resource Server Endpoints]
+* https://backstage.forgerock.com/docs/am/5/oauth2-guide/#rest-api-oauth2-client-endpoint[AM 5 OAuth 2.0 Guide, 3.1. OAuth 2.0 Client and Resource Server Endpoints]
 * https://help.salesforce.com/s/articleView?id=001115835&type=1[How to reset secrets for client applications when using external client management]
