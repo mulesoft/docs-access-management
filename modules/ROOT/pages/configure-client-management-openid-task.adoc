@@ -50,7 +50,7 @@ Enables deletion of clients created with this integration.
 To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`.
 * *Use registration credentials for client management*
 +
-For IdPs that support the RFC 7592 web standard (such as ForgeRock), check this box to enable direct updates and deletions of dynamically registered client applications through Anypoint Platform. See <<enable-direct-client-management>> for steps to enable this after your client provider is configured.
+Check this box to enable lifecycle management (update and delete) of dynamically registered client applications through Anypoint Platform. When enabled, the system automatically adapts to your IdP's capabilities. If the IdP returns `registration_access_token` and `registration_client_uri` (per RFC 7592), these credentials are used for direct client management. Otherwise, the existing mechanism is used. See <<enable-client-management>> for configuration steps.
 . In *Authentication Method*, complete the information for the type of authentication to use for this client provider:
 * *Authorization Header*
 +
@@ -93,14 +93,18 @@ For Okta, the Okta admin must assign the dynamically generated clients to a user
 [[manage-dynamic-client-registration-and-lifecycle-updates]]
 == Manage Dynamic Client Registration and Lifecycle Updates
 
-Anypoint Platform supports lifecycle management (create, update, and delete) of dynamically registered OAuth2 clients for any IdP that supports the RFC 7592 web standard (such as ForgeRock). For these IdPs, Platform supports and persists the per-client registration token (for example, `registration_access_token` and `registration_client_uri`) returned by the IdP for each newly created client, so you can update and delete those clients directly through Anypoint Platform. This capability is optional; you can use it or keep existing behavior (for example, hooks). Backward compatibility is maintained.
+Anypoint Platform supports lifecycle management (create, update, and delete) of dynamically registered OAuth2 clients. When you enable the *Use registration credentials for client management* option, Anypoint Platform automatically adapts to your IdP's capabilities:
 
-For IdPs that don't support RFC 7592, Anypoint Platform provides hooks so you can implement API calls that are particular to your IdP.
+* If your IdP returns `registration_access_token` and `registration_client_uri` (as specified in RFC 7592), Anypoint Platform persists these credentials and uses them for direct client updates and deletions through the standard RFC 7592 endpoints.
 
-[[enable-direct-client-management]]
-=== Enable Direct Client Management
+* If your IdP doesn't return these registration credentials, Anypoint Platform uses the existing client management mechanism, which allows you to intercept and handle update and delete requests according to your IdP's specific API requirements.
 
-To enable direct client updates and deletions for RFC 7592-compliant IdPs:
+This adaptive approach ensures that client management works regardless of whether your IdP fully implements the RFC 7592 standard. Backward compatibility is maintained for existing configurations.
+
+[[enable-client-management]]
+=== Enable Client Management
+
+To enable lifecycle management for dynamically registered clients:
 
 . Navigate to *Access Management* and click *Client Providers*.
 . Select your configured client provider.
@@ -108,15 +112,22 @@ To enable direct client updates and deletions for RFC 7592-compliant IdPs:
 . Click *Save*.
 
 [IMPORTANT]
-Direct update and delete only apply to clients created *after* you enable this feature. Clients created before that don't have the required registration data and can't be updated or deleted directly through Anypoint Platform.
+Client management only applies to clients created *after* you enable this feature. Clients created before enabling this setting don't have the required registration data and can't be updated or deleted through Anypoint Platform.
 
-=== Implement Hooks for Non-Supported IdPs
+=== How Client Management Works
 
-For IdPs that don't support RFC 7592 (for example, Okta), Anypoint Platform provides hooks so you can intercept outbound calls and implement your own update and delete API logic. Point the client registration URL to an application under your control rather than directly at the IdP.
+When you enable client management, Anypoint Platform handles update and delete operations based on what your IdP provides during client registration.
 
-These examples show the PUT and DELETE requests that Anypoint Platform makes.
+* *For IdPs that support RFC 7592:*
++
+If your IdP returns `registration_access_token` and `registration_client_uri` during client registration (such as ForgeRock), Anypoint Platform automatically uses these credentials to make direct RFC 7592-compliant API calls for updates and deletions.
 
-This is an example of the payload for a PUT (update) request:
+* *For IdPs with custom APIs:*
++
+If your IdP doesn't return RFC 7592 registration credentials (such as Okta), you can implement custom logic by pointing the *Client Registration URL* to an application under your control. This application can intercept Anypoint Platform's outbound calls and translate them to your IdP's specific API format.
+
+*Example PUT (update) request that Anypoint Platform sends:*
+
 ----
 PUT /oauth2/connect/register/{{client_id}}
 Accept: application/json
@@ -134,12 +145,8 @@ Authorization: Bearer access-token
      "client_name": "test-client-name"
 }
 ----
-* The `Authorization:` header is included as part of the request only if the `Authorization Header` under *Advanced settings* is configured.
-* The `client_id` request parameter that's passed is the same as the `client_id` passed in the `PUT` request payload.
-* The `token_endpoint_auth_method` passed in the payload is always `client_secret_basic`.
-* Only the *Client Registration URL* and *Authorization Header* come from what is configured in the OIDC *Client Provider*. The `client_name` in the request maps to `name` on the inbound side. The authorization method depends on the grant type (for example, if the grant type is `implicit`, the `id_token` and `token` are returned).
 
-This example shows the DELETE request header:
+This is an example of the DELETE request that Anypoint Platform sends:
 
 ----
 DELETE /oauth2/connect/register/{{client_id}}
@@ -147,16 +154,21 @@ Host: identity.example.com
 Authorization: Bearer access-token
 ----
 
-[IMPORTANT]
-Neither the `PUT` nor the `DELETE` work if the call is used directly against an IdP. It's intended for interception by pointing to an application under your control, so you can implement the correct deletion and update APIs for a particular provider.
+* The `Authorization:` header is included only if you configured the *Authorization Header* under Advanced settings.
+* The `client_id` request parameter matches the `client_id` in the PUT request payload.
+* The `token_endpoint_auth_method` is always `client_secret_basic`.
+* Only the *Client Registration URL* and *Authorization Header* come from your OIDC Client Provider configuration.
+* The `client_name` in the request maps to the `name` field on the inbound side.
+
+Your interception application receives these requests and translates them to the appropriate API calls for your specific IdP.
 
 === Update External Clients Via the API
 
 You can use the Access Management API call `PUT /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}/clients/{clientId}` to update external clients.
 
-Use the optional `force` parameter to update Anypoint Platform internal client application records, regardless of whether the outbound update to the external IdP (or your interception application) is successful. Using this parameter ensures that the view Anypoint Platform has of the client application is current, even if there are communication issues.
+Use the optional `force` parameter to update Anypoint Platform's internal client application records, regardless of whether the outbound update to the external IdP (or your interception application) is successful. Using this parameter ensures that Anypoint Platform's view of the client application is current, even if there are communication issues.
 
-If you don't use the `force` parameter, when updating an external client application via the Anypoint Platform API, Anypoint Platform first attempts the outbound update (either directly to the IdP or to your interception application) and then updates its internal records only if that outbound update is successful.
+If you don't use the `force` parameter, Anypoint Platform first attempts the outbound update (either directly to the IdP or to your interception application via the configured Client Registration URL) and then updates its internal records only if that outbound update is successful.
 
 For more information, see https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/%237020/[Access Management API] documentation.
 
