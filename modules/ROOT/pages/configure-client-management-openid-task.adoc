@@ -1,6 +1,6 @@
 = Configuring OpenID Connect Client Management
 
-Configure an external OpenID Connect (OIDC) identity provider (IdP) to handle client management for your Anypoint Platform APIs. Anypoint Platform supports IdPs that implement the OpenID Connect Dynamic Client Registration (DCR) standard; Salesforce, Okta, and OpenAM (v14 for OpenAM) are explicitly supported. This allows API portals to dynamically register client applications with your chosen external IdP when requesting access.
+Configure an external OpenID Connect (OIDC) identity provider (IdP) to handle client management for your Anypoint Platform APIs. Anypoint Platform supports IdPs that implement the OpenID Connect Dynamic Client Registration (DCR) standard, including Salesforce, Okta, and OpenAM (v14 for OpenAM). This allows API portals to dynamically register client applications with your chosen external IdP when requesting access.
 
 Anypoint Platform supports client authentication using an Authorization Header or by using the private key JSON Web Token (JWT) method. With the private key method, during dynamic client registration, Anypoint Platform signs a JWT with a user-provided private key and sends it to the IdP as a client assertion. The IdP validates the signature using a pre-registered public key and, if successful, issues a short-lived access token used solely to register a new client. This approach enhances security by allowing you to control the token lifespan and restrict scopes to only those that are necessary.
 
@@ -85,7 +85,7 @@ URL where the user authenticates and grants OpenID Connect client applications a
 URL that provides the user’s identity, encoded in a secure JSON Web Token.
 . Click *Create*.
 
-After this is successfully configured, you can apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways through API Manager. Requesting API access through API portals dynamically generates client applications in the configured IdP that acts as a token provider.
+After this is successfully configured, you can use API Manager to apply the OpenID Connect OAuth Token Enforcement policy to your API Gateways. Requesting API access through API portals dynamically generates client applications in the configured IdP that acts as a token provider.
 
 [NOTE]
 For Okta, the Okta admin must assign the dynamically generated clients to a user or a group of users so they can receive access tokens by sending over the Client ID and Client Secret.
@@ -112,7 +112,7 @@ To enable lifecycle management for dynamically registered clients:
 . Click *Save*.
 
 [IMPORTANT]
-Client management only applies to clients created *after* you enable this feature. Clients created before enabling this setting don't have the required registration data and can't be updated or deleted through Anypoint Platform.
+Client management only applies to clients created after you enable this feature. Clients created before enabling this setting don't have the required registration data and can't be updated or deleted through Anypoint Platform.
 
 === How Client Management Works
 
