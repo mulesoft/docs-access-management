@@ -181,9 +181,9 @@ For more information, see https://anypoint.mulesoft.com/exchange/portals/anypoin
 
 If you configure the optional *Issuer* field while setting up the OIDC Dynamic Client registration provider, Anypoint Platform autopopulates its UI with all the OIDC grant types supported by the provider, such as `client credentials`, `password`, and more. 
 
-To verify the grant types your provider supports, check the provider's discovery endpoint using `$ISSUER/.well-known/openid-configuration`, where `$ISSUER` is the issuer configured as the provider. 
+To verify the grant types your provider supports, check the provider's discovery endpoint using `__$ISSUER__/.well-known/openid-configuration`, where `__$ISSUER__` is the issuer configured as the provider. 
 
-If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[RFC 8414, Obtaining Server Metadata] on the `$ISSUER/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated before merging grant types with `$ISSUER/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users.
+If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#section-3[RFC 8414, Obtaining Server Metadata] on the `__$ISSUER__/.well-known/oauth-authorization-server` endpoint, the endpoint is discovered and validated before merging grant types with `__$ISSUER__/.well-known/openid-configuration`. This process also enables the use of the Client Credentials grant type for Okta users.
 
 === Update Grant Types
 
