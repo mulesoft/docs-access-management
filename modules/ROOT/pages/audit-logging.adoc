@@ -2980,6 +2980,22 @@ Properties: Application metadata
 |Modify
 |Subaction: None +
 Properties: Application metadata
+|Trigger heap dump
+|Application
+|AppID
+|N/A
+|Trigger Action
+|Subaction: MULE_DIAGNOSTICS_REPORT +
+Properties: Application metadata +
+Note: Actions performed by MuleSoft support or engineering teams are logged with the User Name `Anypoint Staff`.
+|Trigger thread dump
+|Application
+|AppID
+|N/A
+|Trigger Action
+|Subaction: MULE_DIAGNOSTICS_REPORT +
+Properties: Application metadata +
+Note: Actions performed by MuleSoft support or engineering teams are logged with the User Name `Anypoint Staff`.
 |LoadBalancer Create/modify/delete
 |LoadBalancer
 |LoadBalancerID
