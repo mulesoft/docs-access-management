@@ -15,7 +15,7 @@ When deleting a user from the root organization, all of the user's permissions a
 
 == Before You Begin
 
-Before getting started, ensure that you have:
+Before getting started, make sure you have:
 
 * The Organization Administrator permission
 * The API Version Owner permission if you plan to manage user permissions for your API version
@@ -28,7 +28,7 @@ Before getting started, ensure that you have:
 This feature is not available in Anypoint Platform Private Cloud Edition, Government Cloud, or for organizations that use external identity providers for single sign-on (SSO) and have xref:external-identity-index.adoc#account-creation-changes[disabled account creation]. You must manage users, including invitations for new users, through your third-party IdP or LDAP.
 --
 
-As an organization administrator of a root organization, you can invite new users and manage existing users for your organization.
+As an organization administrator of a business group, you can invite new users and manage existing users for your organization.
 
 To invite new users to your organization:
 
