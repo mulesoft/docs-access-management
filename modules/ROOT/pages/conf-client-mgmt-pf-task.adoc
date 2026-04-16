@@ -1,7 +1,6 @@
-= Configuring Client Management with PingFederate
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Configuring PingFederate Client Management in Anypoint Platform
+
+Configure PingFederate versions 6 through 8 as a client provider in Anypoint Platform to manage OAuth 2.0 client authentication. Map authorization, token, and client management endpoints to your PingFederate deployment.
 
 Anypoint Platform supports only PingFederate versions 6 through 8. For versions 9 or later, you can configure the PingFederate client provider as an OIDC provider by following the instructions in xref:configure-client-management-openid-task.adoc[Configure OpenID Connect Client Management].
 
@@ -16,7 +15,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 include::partial$include-nav-client-providers.adoc[]
 
 . Click the name of the PingFederate client to edit. 
-. Edit the following fields:
+. Edit these fields:
 +
 * OAuth2 Authorization Provider, Authorize URL
 +
@@ -74,7 +73,7 @@ Name of user with privileges for creating new clients within the target PingFede
 +
 Password of user with privileges for creating new clients within the target PingFederate system.
 +
-. Check Bypass approval page if you already have approval.
+. Select *Bypass approval page* if you already have approval.
 . Click *Save*.
 
 
