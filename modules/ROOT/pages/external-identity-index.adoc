@@ -1,7 +1,6 @@
-= Managing External Identity Providers
+= Managing External Identity Providers in Anypoint Platform
 
-Configure up to 25 external identity providers (IdPs) to enable single sign-on (SSO) for users in your organization.
-Anypoint Platform currently supports SAML 2.0 and OpenID Connect (OIDC) configurations for SSO providers.
+Configure up to 25 external identity providers (IdPs) in Anypoint Platform to enable single sign-on (SSO) for your organization. Anypoint Platform supports SAML 2.0 and OpenID Connect (OIDC) configurations for SSO providers.
 
 If you are using the Access Management API, note the following:
 

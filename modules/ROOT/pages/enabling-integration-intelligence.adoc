@@ -1,6 +1,6 @@
-= Enabling Integration Intelligence
+= Enabling Integration Intelligence for Anypoint Platform
 
-Integration Intelligence enhances monitoring, analysis, and troubleshooting of MuleSoft integrations through AI-powered capabilities. For more information about Integration Intelligence, see xref:monitoring::integration-intelligence.adoc[Integration Intelligence].
+Integration Intelligence uses AI to enhance monitoring, analysis, and troubleshooting of MuleSoft integrations. Anypoint Platform organization administrators enable this feature to unlock AI-powered insights across integration environments. For more information, see xref:monitoring::integration-intelligence.adoc[Integration Intelligence].
 
 [NOTE]
 ====
