@@ -1,6 +1,8 @@
-= Enabling MuleSoft Direct
+= Enabling MuleSoft Direct in Anypoint Platform
 
-Enable MuleSoft Direct integrations in Anypoint Platform so Salesforce administrators can discover and deploy pre-built MuleSoft Direct integrations directly from the connected Salesforce organization. An integration is a prebuilt app or a configurable example. Integrations simplify the business workflow implementation by allowing external systems to easily integrate with the Salesforce Cloud apps. An integration can depend on several other apps that are necessary to complete a business use case.
+Enable MuleSoft Direct in Anypoint Platform so Salesforce administrators can discover and deploy pre-built integrations directly from the connected Salesforce organization. Organization administrators configure this after establishing a tenant relationship between Anypoint Platform and Salesforce.
+
+An integration is a prebuilt app or a configurable example that simplifies business workflow implementation by allowing external systems to integrate with Salesforce Cloud apps. An integration can depend on several other apps required to complete a business use case.
 
 == Before You Begin
 
@@ -27,7 +29,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 After MuleSoft Direct is enabled in Anypoint Platform, the Salesforce organization administrator can view and deploy available integration assets to the Salesforce organization.
 
-. The Salesforce organization administrator navigates to *Setup > MuleSoft >MuleSoft Direct*.
+. The Salesforce organization administrator navigates to *Setup > MuleSoft > MuleSoft Direct*.
 . Select *Get Started*.
 . Accept the terms and conditions, and select *Save*.
 
@@ -45,7 +47,7 @@ Remove an app instance that you no longer need from your Salesforce org and Anyp
 . Navigate to *Setup > MuleSoft > MuleSoft Direct*.
 . Select the integration asset to delete.
 . In *App instances*, select the app instance to delete.
-. Click the down arrow, and then select *Delete Instance*.
+. Select the down arrow, and then select *Delete Instance*.
 . Select *Delete*.
 
 
