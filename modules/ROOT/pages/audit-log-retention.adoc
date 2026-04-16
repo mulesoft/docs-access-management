@@ -1,6 +1,6 @@
 = Configure Audit Log Retention in Anypoint Platform
 
-Control how long audit logs are kept to meet compliance and storage requirements. New organizations default to one year. Organizations created before July 10, 2023, default to six years unless changed. Users with *Audit Log Config Manager* and *Organization Administrator* permissions can configure retention in Access Management.
+Control how long audit logs are kept to meet compliance and storage requirements. New organizations default to one year. Organizations created before July 10, 2023, default to six years. Users with *Audit Log Config Manager* and *Organization Administrator* permissions can configure the retention period in Access Management.
 
 Download your logs periodically to maintain your log files for longer than six years.
 To find your organization's audit log retention period, view the retention setting in your root organization's settings, or use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23341/[Audit Logging API^].
@@ -14,7 +14,7 @@ When you configure a retention period:
 [[before-you-begin]]
 == Before You Begin
 
-Before getting started, make sure your account has these permissions:
+Make sure your account has these permissions:
 
 * *Audit Log Config Manager*
 * *Organization Administrator* (required only if you're using the user interface to set retention. You don't need this permission if you're using the API.)
