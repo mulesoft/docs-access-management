@@ -50,7 +50,7 @@ Enables deletion of clients created with this integration.
 To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`.
 * *Use registration credentials for client management*
 +
-Enables lifecycle management (update and delete) of dynamically registered client applications through Anypoint Platform. When enabled, Anypoint Platform automatically adapts to your IdP's capabilities. If the IdP returns `registration_access_token` and `registration_client_uri` (per RFC 7592), these credentials are used for direct client management. Otherwise, the existing mechanism is used.
+When enabled, Anypoint Platform automatically uses RFC 7592 registration credentials if your IdP provides them during client registration. If the IdP returns `registration_access_token` and `registration_client_uri`, these credentials are used for direct client management. Otherwise, the existing client management mechanism is used.
 . In *Authentication Method*, complete the information for the type of authentication to use for this client provider:
 * *Authorization Header*
 +
@@ -95,7 +95,7 @@ For Okta, the Okta admin must assign the dynamically generated clients to a user
 
 Anypoint Platform supports lifecycle management (create, update, and delete) of dynamically registered OAuth2 clients. When you enable the *Use registration credentials for client management* option, Anypoint Platform automatically adapts to your IdP's capabilities:
 
-* If your IdP returns `registration_access_token` and `registration_client_uri` (as specified in RFC 7592), Anypoint Platform persists these credentials and uses them for direct client updates and deletions through the standard RFC 7592 endpoints.
+* If your IdP returns `registration_access_token` and `registration_client_uri` (as specified in RFC 7592), Anypoint Platform persists these credentials and uses them for direct client updates and deletions through the standard RFC 7592 endpoints. For more information, see https://www.rfc-editor.org/rfc/rfc7592.html[OAuth 2.0 Dynamic Client Registration Management Protocol].
 
 * If your IdP doesn't return these registration credentials, Anypoint Platform uses the existing client management mechanism, which allows you to intercept and handle update and delete requests according to your IdP's specific API requirements.
 
