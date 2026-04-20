@@ -1,6 +1,6 @@
 = Allowlisting Trusted Domains in Anypoint Platform
 
-Every HTTP request you make to external resources goes through the API Console proxy. For security reasons, you must register the target domain as a trusted domain in Anypoint Platform to enable secure calls to third‑party services in Anypoint Platform.
+Register trusted domains to allow HTTP requests to external resources through the API Console proxy. Anypoint Platform requires domain registration before making secure calls to third-party services.
 
 == Add a New Trusted Domain
 

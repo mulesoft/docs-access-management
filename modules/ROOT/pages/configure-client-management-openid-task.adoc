@@ -1,6 +1,6 @@
-= Configuring OpenID Connect Client Management
+= Configuring OpenID Connect Client Management in Anypoint Platform
 
-Configure an external OpenID Connect (OIDC) identity provider (IdP) to handle client management for your Anypoint Platform APIs. Anypoint Platform supports IdPs that implement the OpenID Connect Dynamic Client Registration (DCR) standard, including Salesforce, Okta, and OpenAM (v14 for OpenAM). This allows API portals to dynamically register client applications with your chosen external IdP when requesting access.
+Configure an external OpenID Connect (OIDC) identity provider (IdP) to handle client management for your Anypoint Platform APIs. Use providers supporting the OIDC Dynamic Client Registration (DCR) standard, such as Salesforce, Okta, or OpenAM. API portals dynamically register client applications with your chosen external IdP when requesting access.
 
 Anypoint Platform supports client authentication using an Authorization Header or by using the private key JSON Web Token (JWT) method. With the private key method, during dynamic client registration, Anypoint Platform signs a JWT with a user-provided private key and sends it to the IdP as a client assertion. The IdP validates the signature using a pre-registered public key and, if successful, issues a short-lived access token used solely to register a new client. This approach enhances security by allowing you to control the token lifespan and restrict scopes to only those that are necessary.
 
@@ -12,7 +12,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 include::partial$include-nav-client-providers.adoc[]
 
 . Click *Add Client Provider*, and then select *OpenID Connect Dynamic Client Registration*.
-. Enter information for *Dynamic Client Registration*:
+. Enter the values from your IdP’s configuration for *Dynamic Client Registration*:
 * *Issuer*
 +
 URL that the OpenID provider asserts is its trusted issuer.
@@ -114,7 +114,7 @@ To enable lifecycle management for dynamically registered clients:
 [IMPORTANT]
 Client management only applies to clients created after you enable this feature. Clients created before enabling this setting don't have the required registration data and can't be updated or deleted through Anypoint Platform.
 
-=== How Client Management Works
+Okta or another IdP might allow client modification and deletion independently, but this isn't supported on Anypoint Platform. Instead, Anypoint Platform provides and supports hooks so you can implement API calls that are particular to your IdP. 
 
 When you enable client management, Anypoint Platform handles update and delete operations based on what your IdP provides during client registration.
 
@@ -174,7 +174,6 @@ If you don't use the `force` parameter, Anypoint Platform first attempts the out
 
 For more information, see https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/%237020/[Access Management API] documentation.
 
-
 == Supported Grant Types
 
 === Pre-populated Grant Types in API Portal
@@ -189,7 +188,6 @@ If the client provider supports https://datatracker.ietf.org/doc/html/rfc8414#se
 
 If the *Issuer* is set and the `/.well-known` URL is available, you can go to an existing client provider, and save it again to update the grant types based on the `grant_types_supported` from your `/.well-known` metadata. The system fetches the `/.well-known` metadata when you create or update a client provider.
 
-
 === Default Grant Types
 
 If the *Issuer* field isn't configured or the provider's discovery endpoint is unavailable, by default the Anypoint Platform UI lists these grant types when registering an API client application in an xref:exchange::index.adoc[Anypoint Exchange API portal]:
@@ -201,14 +199,13 @@ If the *Issuer* field isn't configured or the provider's discovery endpoint is u
 [NOTE]
 You can select the Refresh Token grant type only if you have also selected the Authorization grant type.
 
-
 == See Also
 
 * xref:api-manager::openam-oauth-token-enforcement-policy.adoc[About OpenAM, OpenID Connect, or PingFederate OAuth Token Enforcement Policies]
 * xref:api-manager::mule-oauth-provider-landing-page.adoc[About OAuth 2.0]
 * https://learn.microsoft.com/en-us/entra/fundamentals/how-to-find-tenant[How to find your Microsoft Entra ID tenant ID].
-* https://docs.pingidentity.com/archive/[OpenAM 13.5 Developer's Guide, Procedure 14.4 To Register a Relying Party Dynamically]
+* https://cdn-docs.pingidentity.com/archive/pdf/openam/13.5/OpenAM-13.5-Admin-Guide.pdf[OpenAM 13.5 Administration Guide, Procedure 14.5 To Register a Relying Party Dynamically]
 * https://developer.okta.com/docs/api/openapi/okta-oauth/oauth/tag/Client/[Okta OpenID Connect, Dynamic Client Registration]
 * https://developer.okta.com/docs/api/openapi/okta-oauth/guides/overview/[Okta OpenID Connect & OAuth 2.0 API]
-* https://backstage.forgerock.com/docs/am/5/oauth2-guide/#rest-api-oauth2-client-endpoint[AM 5 OAuth 2.0 Guide, 3.1. OAuth 2.0 Client and Resource Server Endpoints]
+* https://cdn-docs.pingidentity.com/archive/pdf/am/5/AM-5-Oauth2-Guide.pdf?_gl=1*1vvi2cj*_gcl_au*MjAxNDYzMjg5Ni4xNzc2MzcxMDA3*_ga*MTYwNDgyOTczOC4xNzc2MzcwOTk5*_ga_V94KKVLZPT*czE3NzYzNzA5OTkkbzEkZzEkdDE3NzYzNzE0MDAkajYwJGwwJGg4OTk1NTUwMDI[AM 5 OAuth 2.0 Guide, 3.1. OAuth 2.0 Client and Resource Server Endpoints]
 * https://help.salesforce.com/s/articleView?id=001115835&type=1[How to reset secrets for client applications when using external client management]

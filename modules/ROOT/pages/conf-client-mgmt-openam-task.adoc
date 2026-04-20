@@ -1,6 +1,6 @@
-= Configuring OpenAM Client Providers in Access Management
+= Configuring OpenAM Client Providers in Anypoint Platform
 
-Register API clients through OpenAM 14 by configuring an OpenAM client provider in Anypoint Platform. You map OAuth2 authorization, token, validation, and client management endpoints and admin token credentials to your deployment. Your organization keeps client provisioning in OpenAM and applies the OpenAM OAuth token enforcement policy to APIs through API Manager.
+Register API clients through OpenAM 14 by configuring an OpenAM client provider in Anypoint Platform. Map OAuth2 authorization, token, validation, and client management endpoints along with admin token credentials to your deployment. Apply the OpenAM OAuth token enforcement policy to APIs through API Manager.
 
 [NOTE]
 Anypoint Platform doesn't show plaintext client secrets or static authorization header values for API clients registered through external client providers. A *Show* control appears, but values remain masked. View your credentials in the external client provider. 
@@ -69,10 +69,8 @@ Default OAuth capabilities to use in the event the client app does not specify a
 +
 . Save your configuration.
 
-Now, you can apply the OpenAM OAuth Token Enforcement policy to your APIs.
-
 == See Also
 
-* xref:api-manager::mule-oauth-provider-landing-page.adoc[About OAuth 2.0]
-* xref:api-manager::openam-oauth-token-enforcement-policy.adoc[OpenAM and PingFederate OAuth Token Enforcement Policies]
+* xref:api-manager::mule-oauth-provider-landing-page.adoc[]
+* xref:api-manager::openam-oauth-token-enforcement-policy.adoc[Apply the OpenAM OAuth Token Enforcement Policy to Your APIs]
 * xref:api-manager::migrate-client-apps.adoc#migrate_with_external[Migrate Client Applications for APIs with External Client Providers in API Manager]
