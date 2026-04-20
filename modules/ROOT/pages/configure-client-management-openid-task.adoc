@@ -104,7 +104,7 @@ This adaptive approach ensures that client management works regardless of whethe
 [[enable-client-management]]
 === Enable Client Management
 
-To enable lifecycle management for dynamically registered clients:
+To enable the registration credentials option:
 
 . Navigate to *Access Management* and click *Client Providers*.
 . Select your configured client provider.
@@ -112,11 +112,15 @@ To enable lifecycle management for dynamically registered clients:
 . Click *Save*.
 
 [IMPORTANT]
-Client management only applies to clients created after you enable this feature. Clients created before enabling this setting don't have the required registration data and can't be updated or deleted through Anypoint Platform.
+====
+For consistent client management behavior, create a new client provider when using the *Use registration credentials for client management* option. 
+
+Anypoint Platform captures and saves registration credentials only for clients created after you enable this option. Clients created before enabling this option continue using the existing client management mechanism, while new clients automatically use RFC 7592 credentials if your IdP provides them. This can result in different management behaviors within the same client provider.
+====
 
 Okta or another IdP might allow client modification and deletion independently, but this isn't supported on Anypoint Platform. Instead, Anypoint Platform provides and supports hooks so you can implement API calls that are particular to your IdP. 
 
-When you enable client management, Anypoint Platform handles update and delete operations based on what your IdP provides during client registration.
+When you enable the *Use registration credentials for client management* option, Anypoint Platform uses the `registration_access_token` and `registration_client_uri` credentials if your IdP returns them during client registration. If your IdP doesn't return these credentials, Anypoint Platform uses the existing client management mechanism.
 
 * *For IdPs that support RFC 7592:*
 +
