@@ -1,4 +1,6 @@
-= Connected Apps for Developers
+= Anypoint Platform Connected Apps for Developers
+
+Use Anypoint Platform Connected Apps to delegate access to applications, build CI/CD pipelines, and extend platform functionality using OAuth 2.0 and OpenID Connect. Developers can allow users to sign in with Anypoint Platform and control client access through an application allowlist.
 
 Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] to extend functionality.
 
@@ -10,9 +12,9 @@ The Connected Apps feature enables you to:
 
 == Authentication
 
-The Connected Apps feature supports OAuth 2.0 and OpenID Connect, so you must ensure your app can use tokens to request access to user data.
+The Connected Apps feature supports OAuth 2.0 and OpenID Connect, so make sure your app can use tokens to request access to user data.
 
-See the information in the Open ID configuration https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint] to find the supported OpenID Connect capabilities. 
+See the information in the OpenID configuration https://anypoint.mulesoft.com/accounts/api/v2/oauth2/.well-known/openid-configuration[discovery endpoint] to find the supported OpenID Connect capabilities. 
 
 To make the authentication experience consistent for end users, third-party developers with their own websites or web apps can allow users to sign in using the *Sign in with Anypoint Platform* option.
 

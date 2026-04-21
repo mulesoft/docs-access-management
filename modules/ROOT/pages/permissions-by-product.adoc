@@ -270,6 +270,7 @@ Use this permission to invite a user outside of your business group to view, dow
 Users with this permission have the same access as users with the Exchange Administrator permission, but on only a single asset. This permission is assigned by default to an asset creator. 
 
 Use this permission to extend administrator permissions for an asset to an additional user.
+| Generate Asset Documentation with AI | Generates documentation for existing asset versions within a business group using generative AI features. |
 |===
 
 == IDP

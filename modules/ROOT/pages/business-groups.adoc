@@ -1,6 +1,6 @@
-= Resource Organization and Access Control with Business Groups
+= Anypoint Platform Business Groups
 
-Business groups are self-contained resource groups within Anypoint Platform that help organize and manage resources like applications and APIs. They provide granular control over access to these resources.
+Use business groups to organize resources like applications and APIs into self-contained groups within Anypoint Platform. Business groups provide granular control over user access to those resources.
  
 When you create an Anypoint Platform account, a root organization (business group) is created, and you become its owner and have the Organization Administrator permission. A root organization is a single instance of Anypoint Platform that includes all the entitlements, features, and capabilities you purchased. The root organization can contain multiple business groups. Multiple users in the root organization can share resources, such as applications and environments. 
 

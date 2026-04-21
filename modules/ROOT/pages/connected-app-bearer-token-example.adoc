@@ -1,6 +1,6 @@
-= Getting the Bearer Token for a Connected App Example
+= Getting the Bearer Token for a Connected App in Anypoint Platform
 
-This example demonstrates how to create a connected app that acts on its own behalf using client credentials to get the bearer token so you can invoke Anypoint Platform APIs. 
+Use this example as a reference for creating a connected app with client credentials, adding Runtime Manager scopes, and retrieving a bearer token to invoke Anypoint Platform APIs. The example includes deploying the app to CloudHub and using the Access Management API to obtain the token.
 
 [[create-connected-app]]
 == Create a Connected App

@@ -48,19 +48,9 @@ a|
 | Automation scenarios such as building or accessing CI/CD pipelines without user intervention.
 |===
 
-== Example
+== How Connected Apps Work
 
-A connected app acts like a doorman for your building. You, as the owner, can configure this doorman to:
-
-* Identify the external app. 
-+
-You register the external application with Anypoint Platform, giving it a unique identity (like an ID card for the doorman to recognize).
-* Define the permissions for which rooms are accessible to the visitor. 
-+
-You specify exactly which APIs and data the external app has permission to use. 
-* Issue a temporary access pass (OAuth 2.0 tokens). 
-+
-When the external app wants to access something, the connected app (the doorman) verifies its identity and, if authorized, issues a temporary access pass (an OAuth 2.0 token). This pass allows the external app to access only the permitted resources for a limited time, without ever needing your direct login credentials.
+When you register an external application with Anypoint Platform, it receives a unique client identity. You then specify exactly which APIs and data the app has permission to access. When the external app requests access, Anypoint Platform verifies its identity and issues a temporary OAuth 2.0 token. This token grants access only to the permitted resources for a limited time, without exposing user credentials.
 
 == See Also
 

@@ -1,7 +1,7 @@
-= Configuring Microsoft Entra ID Client Management
+= Configuring Microsoft Entra ID Client Management in Anypoint Platform
 :page-aliases: access-management::configure-client-management-azure.adoc
 
-Authenticate and authorize API consumers by using Microsoft Entra ID (formerly Azure AD) as a client provider in Anypoint Platform. Use dynamic client registration to configure Microsoft Entra ID client management with Anypoint Platform. Microsoft Entra ID configuration in Anypoint Platform also provides a stateless microservice to convert OAuth 2.0 client application registration requests to requests supported by Microsoft Entra ID.
+Authenticate and authorize API consumers by using Microsoft Entra ID (formerly Azure AD) as a client provider in Anypoint Platform. Use dynamic client registration to configure Microsoft Entra ID client management and convert OAuth 2.0 client application registration requests to requests supported by Microsoft Entra ID.
 
 [NOTE]
 include::partial$include-gov-cloud-note.adoc[tag=govcloud]
@@ -41,7 +41,7 @@ For an example of the `PATCH` payload, see the https://learn.microsoft.com/en-us
 
 [NOTE]
 ====
-To ensure the stability and support of your client management integration, avoid making manual edits to the application directly within the Azure portal.
+To make sure your client management integration remains stable and supported, avoid making manual edits to the application directly within the Azure portal.
 
 Modifying the application in Azure can interfere with operational flows managed by Anypoint Platform, such as client updates and secret resets. If you encounter issues, verify that no manual changes were made to the application in the Azure portal. 
 ====
@@ -82,9 +82,9 @@ When https://learn.microsoft.com/en-us/graph/api/application-post-applications?v
 
 Client secrets (application passwords) use a string value in the Microsoft Entra ID application for authentication instead of a certificate for identity.
 
-Client secrets are set to expire six months from the date of creation per Microsoft's security recommendations. You can customize the expiration date when <<config-client-provider,configuring the client provider>>.
+Client secrets are set to expire six months from the date of creation, following Microsoft's security recommendations. You can customize the expiration date when <<config-client-provider,configuring the client provider>>.
 
-You can create new client secrets in Anypoint Platform, but you must delete old or expired client secrets directly in your Microsoft account portal. It's best practice to remove expired secrets promptly.
+You can create new client secrets in Anypoint Platform, but you must delete old or expired client secrets directly in your Microsoft account portal. Remove expired secrets promptly.
 
 [[token-validation]]
 === Token Introspection
