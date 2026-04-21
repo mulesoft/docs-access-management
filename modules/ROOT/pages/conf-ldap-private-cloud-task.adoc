@@ -1,9 +1,6 @@
-= Configuring LDAP in Anypoint Platform Private Cloud
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Configuring LDAP in Anypoint Platform Private Cloud Edition
 
-Configure user management using LDAP version 3 for Anypoint Platform Private Cloud Edition (Anypoint PCE). User management through LDAP is available only for Anypoint PCE.
+Configure user management for Anypoint Platform Private Cloud Edition (Anypoint PCE) using LDAP version 3. LDAP configuration is available only for Anypoint PCE deployments.
 
 . From Anypoint Platform, click *Access Management > External Identity*.
 +
@@ -13,7 +10,7 @@ A form for configuring LDAP appears.
 +
 * Host
 +
-The host name of your LDAP server. If you are using TLS in your ldap server, use `ldaps://mulesoft.com` use this host name: `ldap://mulesoft.com`
+The host name of your LDAP server. If you're using TLS, use `ldaps://` as the prefix. Otherwise, use `ldap://`.
 +
 * Port
 +
@@ -21,11 +18,11 @@ The port used to communicate to your LDAP server. The default ldap port is `389`
 +
 * Self-Signed Cert
 +
-Mark this check box if you are using a self-signed certificate on your LDAP server. Use a Self-Signed certificate for testing your connection to the LDAP server.
+Select this checkbox if you're using a self-signed certificate on your LDAP server. Use a self-signed certificate for testing your connection to the LDAP server.
 +
 * Bind DN
 +
-The distinguished names for the user making the LDAP queries. For example, `uid=admin,ou=people,dc=mulesoft,dc=com`.
+The distinguished name for the user making the LDAP queries. For example, `uid=admin,ou=people,dc=mulesoft,dc=com`.
 +
 * Password
 +
@@ -45,7 +42,7 @@ The timeout frame (in milliseconds) for an operation. For example, `30000`.
 +
 The base level for your user search base object. For example, `uid=admin,dc=mulesoft,dc=com`.
 +
-Group
+* Group
 +
 The base level for your groups search base object. For example, `ou=groups,dc=mulesoft,dc=com`.
 +
@@ -74,7 +71,7 @@ The search filter to find groups by groupName. For example, `(&(objectClass=grou
 +
 ** User's Groups by Username
 +
-The search filter to find user groups by userName. For example, `(&objectClass=GroupOfNames)(member=uid={{username}},ou=people,dc=mulesoft,dc=com))`.
+The search filter to find user groups by userName. For example, `(&(objectClass=GroupOfNames)(member=uid={{username}},ou=people,dc=mulesoft,dc=com))`.
 +
 . Map the User fields
 * Username
@@ -89,7 +86,7 @@ Field that represents the email. For example, `mail`.
 +
 Field that represents the first name. For example, `givenName`.
 +
-Last Name
+* Last Name
 +
 Field that represents the last name. For example, `sn`.
 +

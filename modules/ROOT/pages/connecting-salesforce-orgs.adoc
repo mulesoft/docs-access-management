@@ -2,7 +2,7 @@
 
 Establish a tenant (organization to organization) trust relationship between your Anypoint Platform organization and a Salesforce organization to enable secure data sharing and centralized capability management. After you establish this link between organizations, the two environments trust each other and can share permissions.
 
-The connection process uses two unique tenant keys (one from each organization) and involves the Anypoint Platform organization administrator and the Salesforce organization administrator. After you complete the connection process, you can enable features like MuleSoft API Catalog for Salesforce and Integration Intelligence. 
+The connection process uses two unique tenant keys (one from each organization) and involves the Anypoint Platform organization administrator and the Salesforce organization administrator. After you complete the connection process, you can enable features such as MuleSoft API Catalog for Salesforce and Integration Intelligence. 
 
 Ways to establish a tenant relationship include:
 

@@ -1,6 +1,6 @@
-= Configuring Teams
+= Configuring Teams in Anypoint Platform
 
-Create child teams under the root team and configure those teams to have different sets of permissions based on the needs of the respective team members. Every user in your organization is automatically a member of the root team and each inherits all the permissions of the root team. When you configure permissions in your organization, assign only permissions you want every user in the root team to have.
+Create child teams under the root team and configure those teams to have different sets of permissions based on the needs of the respective team members. Every user in your organization is automatically a member of the root team and each member inherits all the permissions of the root team. When you configure permissions in your organization, assign only permissions you want every user in the root team to have.
 
 After you create child teams and assign permissions, you can add users to each of your teams according to what permissions the users in the team need. 
 
