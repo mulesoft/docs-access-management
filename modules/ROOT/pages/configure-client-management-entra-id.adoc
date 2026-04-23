@@ -89,7 +89,7 @@ You can create new client secrets in Anypoint Platform, but you must delete old 
 [[token-validation]]
 === Token Introspection
 
-Microsoft Entra ID doesn't provide an introspection endpoint out of the box, but Anypoint Platform has a xref:policies::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for you] when you configure Microsoft Entra ID as a client provider following the previous flow.
+Microsoft Entra ID doesn't provide an introspection endpoint out of the box, but Anypoint Platform has a xref:mule-gateway::policies-included-openid-token-enforcement.adoc#token-validation-endpoint-authentication[policy that implements token introspection for you] when you configure Microsoft Entra ID as a client provider following the previous flow.
 
 When you create your client provider following the OpenID Connect DCR for Microsoft Entra ID flow, Anypoint Platform populates an introspect URL. You can view the URL using `GET /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}`.
 
