@@ -45,7 +45,7 @@ Connect your Salesforce organization to Data 360. Data 360 is the storage and pr
 
 . In the *Data Cloud* section, click *Setup*.
 +
-For information about setting up Data 360, see https://help.salesforce.com/s/articleView?id=data.c360_a_set_up.htm&type=5[Set up and Maintain]. 
+For information about setting up Data 360, see https://help.salesforce.com/s/articleView?id=data.c360_a_product_considerations.htm&type=5[Get Started with Data 360]. 
 
 // end::set-up-data-cloud[]
 
