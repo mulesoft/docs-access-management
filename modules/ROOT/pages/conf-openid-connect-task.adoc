@@ -14,7 +14,9 @@ Anypoint Platform supports the following registrations:
 
 MuleSoft has officially tested the integration with these identity providers. Because Anypoint Platform supports the OpenID Connect Protocol, any identity provider that supports the protocol can integrate unless they diverge from the https://openid.net/specs/openid-connect-core-1_0.html[specification].
 
-If you already configured Anypoint Platform as a client application in your identity provider, perform manual registration. Otherwise, if your identity provider supports dynamic client registration, perform dynamic registration. During registration, you need to provide several URLs. The following table contains examples of the URLs you need to provide, depending on your provider, during registration.
+If you already configured Anypoint Platform as a client application in your identity provider, perform manual registration. Otherwise, if your identity provider supports dynamic client registration, perform dynamic registration. During registration, provide several URLs. 
+
+The following table contains examples of the URLs to provide, depending on your provider, during registration.
 
 [cols="5*",options="header"]
 |===
@@ -66,14 +68,14 @@ The URL that returns user profile information to Anypoint.
 +
 . Save your configuration.
 +
-. Sign out and navigate to your organization’s SSO URL, for example:
+. Log out and navigate to your organization’s SSO URL, for example:
 +
 `+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
 +
-. Sign in through your identity provider to test the configuration.
+. Log in through your identity provider to test the configuration.
 
 [NOTE]
-The dynamically registered application at the identity provider has only default settings. If you want to configure additional functionalities (such as group mappings), you must update the settings on the provider side. Anypoint Platform doesn't support configuring dynamically registered applications.
+The dynamically registered application at the identity provider has only default settings. If you want to configure additional functionalities (such as group mappings), update the settings on the provider side. Anypoint Platform doesn't support configuring dynamically registered applications.
 
 [[configure-openid-connect-manually]]
 == Configure OpenID Connect Manually
@@ -92,7 +94,7 @@ The External Identity - Identity Management OpenID Connect form appears.
 ** Inside your Identity Provider, make sure that your client's supported scopes include `openid`, `profile`, and `email`.
 ** Inside your Identity Provider, make sure that your client uses the `authorization_code` grant type.
 ** Store your Client ID and Client Secret values in a secure place and enter these values in the next step.
-. Fill in the following required fields after obtaining them from your identity provider’s configuration:
+. Fill in the required fields after obtaining them from your identity provider’s configuration:
 +
 * Client ID
 +
@@ -120,11 +122,11 @@ The location of the OpenID Provider. For most providers, `/.well-known/openid-co
 +
 . Save your configuration.
 +
-. Sign out and navigate to your organization’s SSO URL, for example:
+. Log out and navigate to your organization’s SSO URL, for example:
 +
 `+https://anypoint.mulesoft.com/accounts/login/{yourOrgDomain}+`
 +
-. Sign in through your identity provider to test the configuration.
+. Log in through your identity provider to test the configuration.
 
 == See Also
 

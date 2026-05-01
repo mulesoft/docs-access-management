@@ -1,6 +1,6 @@
 = Managing IP Allowlists in Access Management
 
-Create IP allowlists in Access Management to restrict access to your Anypoint Platform organization to trusted networks. Enforce IP restrictions for Anypoint Platform signins by adding CIDR blocks to reduce credential abuse and meet compliance needs.
+Create IP allowlists in Access Management to restrict access to your Anypoint Platform organization to trusted networks. Enforce IP restrictions for Anypoint Platform logins by adding CIDR blocks to reduce credential abuse and meet compliance needs.
 
 [NOTE]
 --
@@ -10,17 +10,17 @@ Create IP allowlists in Access Management to restrict access to your Anypoint Pl
 
 == Before You Begin
 
-* You must have the root Organization Administrator permission for your organization.
+* Have the root Organization Administrator permission for your organization.
 
 [enable-disable-ip-allowlisting]
 == Enable or Disable IP Allowlisting
 
-Enable or disable IP allowlisting for your organization’s signins in Access Management. When this feature is enabled, only signins from IP addresses in allowed CIDR blocks succeed. Sign attempts outside the IP allowlist are blocked and logged.  
+Enable or disable IP allowlisting for your organization’s logins in Access Management. When this feature is enabled, only logins from IP addresses in allowed CIDR blocks succeed. Login attempts outside the IP allowlist are blocked and logged.
 
-. Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
+. Log in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
 . In the Access Management navigation menu, select *Security Settings*.
-. In *IP Allowlist*, enter the IP address CIDR blocks to allow to sign in. For example:
+. In *IP Allowlist*, enter the IP address CIDR blocks to allow to log in. For example:
 * IP Address CIDR: `192.0.2.0/24`
 * Description: `NE office network`
 +
@@ -40,7 +40,7 @@ You can exempt specific users from the organization-wide IP allowlist restrictio
 [NOTE]
 Root organization administrators are subject to IP enforcement unless explicitly exempted, and they're allowed to self-exempt.
 
-. Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
+. Log in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
 . In the Access Management navigation menu, select *Users*.
 . Select the user to exempt and then select *Settings*. 

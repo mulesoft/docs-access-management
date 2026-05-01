@@ -1,6 +1,6 @@
 = Client Management in Anypoint Platform
 
-Configure up to 25 external client providers in Anypoint Platform to authorize API client applications. Apply OAuth 2.0 policies to protect your APIs, using your chosen OAuth 2.0 provider. This lets you centralize and scale client authorization across environments.
+Configure up to 25 external client providers in Anypoint Platform to authorize API client applications. Apply OAuth 2.0 policies to protect your APIs, using your chosen OAuth 2.0 provider. This enables you to centralize and scale client authorization across environments.
 
 [[supported-oauth-2-0-providers]]
 == Supported OAuth 2.0 Providers
@@ -29,7 +29,7 @@ If you configure multiple client providers after you create environments, you ca
 When you delete a client provider from your root organization, the client provider is no longer available in environments that used it. Also, assets or APIs that used the client provider can no longer authorize users who want to access them.
 
 [WARNING]
-Before you delete a client provider, ensure that you don't have APIs, assets, or environments that depend on the client provider or you will lose functionality. For example, any APIs that depend on the client provider can no longer authenticate user access.
+Before you delete a client provider, make sure that you don't have APIs, assets, or environments that depend on the client provider or you will lose functionality. For example, any APIs that depend on the client provider can no longer authenticate user access.
 
 include::partial$include-nav-steps-org-admin-bg.adoc[]
 

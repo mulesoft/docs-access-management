@@ -23,7 +23,7 @@ Some domains are added automatically:
 * Sending a request through the proxy adds the implementation base URI.
 * Unauthenticated requests from public Exchange portals or Mocking Service shareable links are added.
 
-NOTE: Public Anypoint Exchange assets and portals created before 2024 might not auto-register. Manually register those domains. 
+NOTE: Public Anypoint Exchange assets and portals created before 2024 aren't always automatically registered. Manually register those domains.
 
 
 == See Also

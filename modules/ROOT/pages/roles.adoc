@@ -10,7 +10,7 @@ Anypoint Platform provides two types of roles:
 
 * *Custom roles*: You can create and delete custom roles. You can assign users and add permissions to a custom role, as well as associate a custom role with specific Anypoint Platform products. For example, you can create a custom role called "Application Designer" and then grant Design Center permissions to the role so users assigned the Application Designer role can access Design Center.
 
-Roles are business group specific, so ensure that you are in the correct business group for which to manage roles by clicking the menu next to your username on the top-right of the screen.
+Roles are business group specific, so make sure that you are in the correct business group for which to manage roles by clicking the menu next to your username on the top-right of the screen.
 
 == Access Roles
 
@@ -132,7 +132,7 @@ When editing role names and descriptions, use the 'Enter' key to save changes. C
 [[custom-roles]]
 == Custom Roles
 
-As an organization administrator, you can create custom roles by combining API or applications, permissions, and users. Depending on the product to which the role is associated, these options may vary. For example, API roles cannot be removed and their permissions cannot be modified, however you can add a description and add users to that role.
+As an organization administrator, you can create custom roles by combining API or applications, permissions, and users. Depending on the product to which the role is associated, these options vary. For example, API roles cannot be removed and their permissions cannot be modified, however you can add a description and add users to that role.
 
 
 [NOTE]

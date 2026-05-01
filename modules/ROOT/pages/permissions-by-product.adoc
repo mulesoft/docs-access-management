@@ -1,10 +1,10 @@
 = Permissions by Product in Anypoint Platform
 
-Find and assign Anypoint Platform permissions by product for teams and users. Review cross‑product dependencies and where to grant each permission. Ensure users have the exact access required for their roles.
+Find and assign Anypoint Platform permissions by product for teams and users. Review cross‑product dependencies and where to grant each permission. Make sure users have the exact access required for their roles.
 
 Some products require permissions from other products to use them properly. For example, Anypoint Monitoring requires users to have certain Runtime Manager permissions in addition to Anypoint Monitoring-related permissions. See each product's documentation to determine which permissions your users need and how to set them.
 
-Depending on your organization, its licensing, and its entitlements, you might not see all of these permissions during configuration. 
+Depending on your organization's licensing and entitlements, not all of these permissions are available during configuration.
 
 == Access Management
 

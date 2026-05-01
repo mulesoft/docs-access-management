@@ -4,7 +4,7 @@ Use business groups to organize resources like applications and APIs into self-c
  
 When you create an Anypoint Platform account, a root organization (business group) is created, and you become its owner and have the Organization Administrator permission. A root organization is a single instance of Anypoint Platform that includes all the entitlements, features, and capabilities you purchased. The root organization can contain multiple business groups. Multiple users in the root organization can share resources, such as applications and environments. 
 
-Access to resources is determined by assigned user roles and permissions. For example, one user might be able to manage API alerts, while another can only view them.
+Access to resources is determined by assigned user roles and permissions. For example, one user can manage API alerts, while another can only view them.
 
 [NOTE]
 Business groups are not enabled by default in a new Anypoint Platform account. To activate business groups in your organization, contact your MuleSoft representative. Organizations can have a maximum of 100 business groups. 
