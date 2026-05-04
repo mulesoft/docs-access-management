@@ -3,13 +3,13 @@ ifndef::env-site,env-github[]
 include::_attributes.adoc[]
 endif::[]
 
-As Administrator, you can configure single signout if you use SAML. OpenID Connect doesn't support single signout. Using single signout, a user or user agent can sign out of an authenticated environment and ensure that both service providers and identity servers process the signout correctly.
+As Administrator, you can configure single signout if you use SAML. OpenID Connect doesn't support single signout. Using single signout, a user or user agent can sign out of an authenticated environment and make sure that both service providers and identity servers process the signout correctly.
 
 The following procedure shows how to perform single signout and control where the user is redirected after signing out. 
 To redirect the user to a different page, set up the redirect in your PingFederate configuration by adding a `redirect_uri` query parameter to the SLO Service URL. Anypoint Platform routes the user to that page rather than to the Anypoint Platform sign-in page.
 
 . In PingFederate, for example, click the SP Configuration for the Anypoint Platform.
-. In *Browser SSO > Configure Browser SSO > SAML Profiles*, ensure that these fields are set:
+. In *Browser SSO > Configure Browser SSO > SAML Profiles*, make sure that these fields are set:
 +
 * IdP-Initiated SSO
 * IdP-Initiated SLO

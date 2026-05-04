@@ -52,7 +52,7 @@ image::on-prem-features-5f98d.png["A form with fields to upload a certificate an
 +
 image::on-premises-features-3120e.png["A form with fields for a certificate, private key, ciphers, and DH group"]
 
-. Uncheck *Use default ciphers and DH Group*.
+. Deselect *Use default ciphers and DH Group*.
 .. Enter the cipher you want to use, for example, `ECDHE-RSA-AES128-SHA256`.
 .. Upload a DH Group.
 

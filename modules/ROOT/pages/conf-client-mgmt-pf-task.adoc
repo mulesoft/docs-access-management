@@ -57,7 +57,7 @@ The URL at which the PingFederate client management API resources are served. Fo
 +
 `+https://ec2-55-88-144-83.us-west-2.compute.amazonaws.com:9031/pf-ws/rest/oauth/clients+`
 +
-The base URL could be the base URL for your server. Confirm this with your PingFederate administrator.
+The base URL is the base URL for your server. Confirm this with your PingFederate administrator.
 +
 ** Delete URL
 +
