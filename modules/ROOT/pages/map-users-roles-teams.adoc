@@ -27,7 +27,7 @@ The SSO users associated with the group you mapped are assigned to the team.
 
 == Configure Multiple Group Mappings for Single Sign-On Using SAML
 
-If your organization uses single sign-on but also requires you to obtain permissions from multiple groups, you can configure an attribute that contains all of the groups from which you want to obtain individual access permission. In many cases, you can create an array of groups.
+If your organization uses single sign-on but requires permissions from multiple groups, configure an attribute that contains all the groups for individual access permission. You can also create an array of groups.
 
 For example, if your IDP provides your groups in this format, you must create an attribute that encompasses multiple group mappings to prevent security vulnerabilities:
 

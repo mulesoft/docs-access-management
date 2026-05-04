@@ -10,7 +10,7 @@ Anypoint Platform provides two types of roles:
 
 * *Custom roles*: You can create and delete custom roles. You can assign users and add permissions to a custom role, as well as associate a custom role with specific Anypoint Platform products. For example, you can create a custom role called "Application Designer" and then grant Design Center permissions to the role so users assigned the Application Designer role can access Design Center.
 
-Roles are business group specific, so make sure that you are in the correct business group for which to manage roles by clicking the menu next to your username on the top-right of the screen.
+Roles are business group specific, so make sure you're in the correct business group when managing roles by clicking the menu next to your username.
 
 == Access Roles
 
@@ -99,12 +99,10 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** View and consume Exchange assets
 ** Manage own reviews, including the ability to add, edit, and delete
 
-* **Portals Viewer**: (Deprecated in API Manager 2.0) The ability to view an API Portal does not automatically give a user access to the API. You cannot grant Portal Viewer permissions unless the API has an API Portal. This role has the following permission scopes:
-+
-** From the Developer Portal, view API Portals, including private API portals for which they have Portal Viewer permissions
+* **Portals Viewer**: (Deprecated in API Manager 2.0) The ability to view an API Portal doesn't automatically give a user access to the API. You can't grant Portal Viewer permissions unless the API has an API Portal. Users with this role can view API Portals from the Developer Portal, including private API portals where they have Portal Viewer permissions.
 
 [NOTE]
-If you are using API Manager 2.0, users with the Portals Viewer role are not able to view private APIs. For API Manager 2.0, assign the user at least the Exchange Viewers role to allow the user access to all Exchange assets within the business group in which you have assigned the permission. +
+If you're using API Manager 2.0, users with the Portals Viewer role aren't able to view private APIs. For API Manager 2.0, assign the user at least the Exchange Viewers role to allow the user access to all Exchange assets within the business group where you assigned the permission. +
 To control access for a single private API, don't assign the Exchange Viewers role to the user for the business group where the private API resides. Instead, use the share asset feature in Exchange. See xref:exchange::to-share-an-asset.adoc[Share an Asset]. Only users with the Exchange Administrators role can share an asset with another user.
 
 === Add Users to a Default Role
@@ -132,7 +130,7 @@ When editing role names and descriptions, use the 'Enter' key to save changes. C
 [[custom-roles]]
 == Custom Roles
 
-As an organization administrator, you can create custom roles by combining API or applications, permissions, and users. Depending on the product to which the role is associated, these options vary. For example, API roles cannot be removed and their permissions cannot be modified, however you can add a description and add users to that role.
+As an organization administrator, you can create custom roles by combining APIs or applications, permissions, and users. Available options vary by product. For example, API roles can't be removed and their permissions can't be modified, but you can add a description and assign users to the role.
 
 
 [NOTE]
@@ -162,7 +160,7 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the name of the custom role to which to add users.
+. Click the name of the custom role you want to add users to.
 . Click the *Users* tab, then enter a username or email in the search field.
 . Select the user, then click the *+* icon.
 
@@ -174,7 +172,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the name of the custom role to which to add permission scopes.
+. Click the name of the custom role you want to add permission scopes to.
 . Select the *Permissions* tab, and click *Add Permissions*.
 . Select the permissions to add and click *Next*.
 +
@@ -193,7 +191,7 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the name of the custom role to which to add users.
+. Click the name of the custom role you want to add users to.
 . Click *Permissions*, then click *Add permissions*.
 . In the Design Center section, next to each permission you want to grant the user, select the checkbox.
 . Click *Next* and then click *Add permissions* to add the permission.
@@ -209,7 +207,7 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the name of the custom role to which to grant access to an API.
+. Click the name of the custom role you want to grant API access to.
 +
 Custom roles have a radial button next to them.
 +
@@ -230,7 +228,7 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the name of the custom role to which to grant access to an API.
+. Click the name of the custom role you want to grant API access to.
 +
 Custom roles have a radial button next to them.
 +
@@ -290,7 +288,7 @@ include::partial$include-nav-roles.adoc[]
 You can use alphanumeric characters, hyphens, and spaces in your team name.
 +
 . Select a parent team. +
-Note that the team you are creating also inherits permissions from the parent team that you select.
+The team you're creating also inherits permissions from the parent team you select.
 +
 . Click *Convert to Team*.
 +
@@ -306,20 +304,20 @@ include::partial$include-nav-roles.adoc[]
 
 . Next to the role that you want to convert, click the *...* menu.
 . Click *Merge with team...*.
-. Select the team with which you want to merge the members who have the role.
+. Select the team to merge the role members with.
 . Click *Merge with Team*.
 +
 The users who previously had the role are added to the selected team along with the role permissions, and the role is deleted. Any external names formerly associated with the role are associated with the selected team.
 
 == View Limits for a Role
 
-Each role has a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform. Note that this feature is available only if you are using the new Access Management user interface.
+Each role has a *Limits* section that shows how close it is to hitting limits imposed by Anypoint Platform. This feature is available only in the new Access Management user interface.
 
 To view limits:
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the role for which you want to view limits.
+. Click the role whose limits you want to view.
 . Click the *Limits* tab.
 
 For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
