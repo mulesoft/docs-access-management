@@ -1,7 +1,11 @@
-= Enabling Integration Intelligence
-:page-notice-banner-message: Beta Release: Integration Intelligence is in beta. Any use of features in the beta state is subject to the applicable beta services terms and conditions.
+= Enabling Integration Intelligence for Anypoint Platform
 
-Integration Intelligence enhances monitoring, analysis, and troubleshooting of MuleSoft integrations through AI-powered capabilities. For more information about Integration Intelligence, see xref:monitoring::integration-intelligence.adoc[Integration Intelligence].
+Integration Intelligence uses AI to enhance monitoring, analysis, and troubleshooting of MuleSoft integrations. Anypoint Platform organization administrators enable this feature to unlock AI-powered insights across integration environments. For more information, see xref:monitoring::integration-intelligence.adoc[Integration Intelligence].
+
+[NOTE]
+====
+As of October 14, 2025, Data Cloud has been rebranded to Data 360. During this transition, you may see references to Data Cloud in our application and documentation. While the name is new, the functionality and content remain unchanged.
+====
 
 [[before-you-begin]]
 == Before You Begin
@@ -9,37 +13,33 @@ Integration Intelligence enhances monitoring, analysis, and troubleshooting of M
 include::partial$include-integration-intelligence-setup.adoc[tag=prereqs]
 
 [[ii-salesforce-setup]]
-== Set Up Integration Intelligence in the Connected Salesforce Organization
+== Integration Intelligence High-Level Flow
 
 include::partial$include-integration-intelligence-setup.adoc[tag=ii-salesforce-setup]
 
 [[set-up-data-cloud]]
-=== Set up Data Cloud
+== Set up Data 360
 
 include::partial$include-integration-intelligence-setup.adoc[tag=set-up-data-cloud]
 
+
 [[connect-with-anypoint-platform]]
-=== Complete the Connection with Anypoint Platform
+== Complete the Connection with Anypoint Platform
 
 include::partial$include-integration-intelligence-setup.adoc[tag=connect-with-anypoint-platform]
 
 [[enable-telemetry-data]]
-=== Enable Telemetry Data
+== Enable Telemetry Data
 include::partial$include-integration-intelligence-setup.adoc[tag=enable-telemetry-data]
 
 
-[[enable-ii-in-anypoint-platform]]
-== Enable Integration Intelligence in Anypoint Platform
-
-include::partial$include-integration-intelligence-setup.adoc[tag=enable-ii-in-anypoint-platform]
-
 [[enable-seamless-login]]
-=== Enable Seamless Login for Anypoint Platform Users
+== Enable Seamless Login for Anypoint Platform Users
 
 include::partial$include-integration-intelligence-setup.adoc[tag=enable-seamless-login]
 
 [[install-integration-intelligence]]
-=== Install Integration Intelligence
+== Install Integration Intelligence
 
 include::partial$include-integration-intelligence-setup.adoc[tag=install-integration-intelligence]
 

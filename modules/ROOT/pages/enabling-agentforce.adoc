@@ -34,8 +34,7 @@ After enabling Agentforce in the Salesforce organization, you see *Enabled in Sa
 [[enable-einstein-anypoint]]
 == Enable Agentforce for Your Anypoint Platform Organization
 
-When Agentforce is enabled in Anypoint Platform through a connected Saleforce organization, any Anypoint Platform feature running in that organization that supports Agentforce can use Agentforce.  
-
+When Agentforce is enabled in Anypoint Platform through a connected Salesforce organization, any Anypoint Platform feature in that organization that supports Agentforce is enabled to use it.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -72,7 +71,7 @@ Select which environments to apply the permission to if it's enabled for the per
 [[disable-einstein]]
 == Disable Agentforce
 
-When you disable Agentforce for your Anypoint Platform organization, none of the users in your organization can use Agenforce in any of the features where it's enabled. 
+When you disable Agentforce for your Anypoint Platform organization, none of the users in your organization can use Agentforce in any of the features where it's enabled.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 

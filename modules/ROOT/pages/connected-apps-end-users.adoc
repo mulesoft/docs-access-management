@@ -1,4 +1,4 @@
-= Connected Apps for End Users
+= Anypoint Platform Connected Apps for End Users
 
 Delegate API access and sign in to third-party applications using your Anypoint Platform credentials. You can also view connected apps created in your root organization or business groups.
 
@@ -13,7 +13,7 @@ You can see which organization is requesting access to data and how the data is 
 +
 image::connected-apps-authorize.png["App authorization with username and a list of permissions granted to the app", 60%,60%]
 
-== Managing Third-party Apps
+== Manage Third-Party Apps
 
 You can manage authorized third-party apps in your profile settings: 
 
@@ -28,3 +28,8 @@ The *Scopes* column lists the token granted to the app and the permissions the c
 If an organization administrator blocks an app, you can't authorize the app to access your information.
 
 Because most applications are developed by third parties, MuleSoft is not liable for how an app uses the data it's requesting access to. You can navigate to the developer information link and contact the application's admin if you have questions or concerns about the application.
+
+== See Also
+
+* xref:connected-apps-developers.adoc[]
+* xref:connected-apps-org-admin.adoc[]

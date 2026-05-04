@@ -303,7 +303,7 @@ In the example, the ID next to `Root` is the business group ID.
 [[anypoint-platform-rest-api]]
 == Invoke the Anypoint Platform REST API
 
-To get a token to invoke the Anypoint Platform REST API, see https://help.mulesoft.com/s/article/How-to-generate-your-Authorization-Bearer-token-for-Anypoint-Platform[How to generate your Authorization Bearer token for Anypoint Platform]. Then, invoke the URL `https://anypoint.mulesoft.com/accounts/api/me` using the token.
+To get a token to invoke the Anypoint Platform REST API, see https://help.salesforce.com/s/articleView?id=001115323&type=1[How to generate your Authorization Bearer token for Anypoint Platform]. Then, invoke the URL `https://anypoint.mulesoft.com/accounts/api/me` using the token.
 
 For example:
 

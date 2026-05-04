@@ -1,8 +1,8 @@
-= External Organization Access
+= Anypoint Platform External Organization Access
 
-The External Access feature enables separate organizations to collaborate in Anypoint Platform. For example, organizations can share API specifications, connectors, and other assets in Anypoint Exchange with each other, without making them public. Additionally, you can establish a connection with a trusted Salesforce organization.
+External organization access in Anypoint Platform lets separate organizations collaborate by sharing assets in Anypoint Exchange without making them public. Organization administrators control which organizations their users can collaborate with by maintaining a list of trusted organizations in Access Management.
 
-Anypoint Platform organization administrators control which organizations their users can collaborate with by maintaining a list of trusted organizations in Access Management. Adding an entry to this list means that you trust the other organization and its users, and you acknowledge that you are enabling your users to grant permission to and be granted permissions by the other organization.
+Anypoint Platform organization administrators control which organizations their users can collaborate with by maintaining a list of trusted organizations in Access Management. Adding an entry to this list means that you trust the other organization and its users, and you acknowledge that you're enabling your users to grant permission to and be granted permissions by the other organization.
 
 Using the External Access functionality in Access Management, you can:
 

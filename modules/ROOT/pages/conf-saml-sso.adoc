@@ -2,7 +2,7 @@
 :page-aliases: managing-users.adoc
 :page-notice-banner-message: Support for SHA-1 SAML configuration ends on March 15, 2026. To maintain access, contact your Identity Provider or organization administrator to update the configuration to SHA-2.
 
-Use SAML 2.0 with your external identity provider (IdP) to authenticate users and enable Single Sign-on (SSO) to Anypoint Platform. Provide issuer, sign‑on/sign‑off URLs, certificate, and audience, then save and test the connection.
+Use SAML 2.0 with your external identity provider (IdP) to authenticate users and enable single sign-on (SSO) to Anypoint Platform. Configure issuer details, sign-on and sign-off URLs, public key, and audience in the Identity Management form, then test the connection.
 
 Configuring SAML for SSO involves:
 
@@ -134,7 +134,7 @@ The key you uploaded appears in the list of keys.
 === Rotate the Primary Key
 
 Because you can store up to three keys, you must designate a _primary key_ to be used for signing requests from Anypoint Platform.
-Before reassigning the primary key, ensure your IdP can access the key that you intend to use.
+Before reassigning the primary key, make sure your IdP can access the key that you intend to use.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -148,7 +148,7 @@ include::partial$include-nav-identity-providers.adoc[]
 === Revoke a Key
 
 To help ensure security, revoke a key that you have already used as the primary key.
-Before you revoke a key, ensure your IdP is not using the key.
+Before you revoke a key, make sure your IdP is not using the key.
 Note that when you revoke a public key, Anypoint Platform also revokes the corresponding private key. For security purposes, you cannot retrieve a key that has been revoked.
 
 include::partial$include-nav-steps-org-admin.adoc[]
@@ -163,7 +163,7 @@ include::partial$include-nav-identity-providers.adoc[]
 [[import-saml-metadata]]
 == Import SAML Metadata
 
-When creating a new SAML 2.0 configuration, you can upload an XML file containing your identity provider's SAML 2.0 metadata to Anypoint Platform using the *Import IdP Metadata* link. Once uploaded, the XML file's values automatically populate the *Identity Management SAML 2.0* form.
+When creating a new SAML 2.0 configuration, you can upload an XML file containing your identity provider's SAML 2.0 metadata to Anypoint Platform using the *Import IdP Metadata* link. After you upload the file, its values automatically populate the *Identity Management SAML 2.0* form.
 
 When you upload an XML file to import your metadata:
 
@@ -201,9 +201,9 @@ In these cases, a user with the Organization Administrator permission is redirec
 Users who do not have the Organization Administrator permission are directed to Anypoint Exchange.
 
 [[updating-saml-identity-provider]]
-== Updating a SAML Identity Provider 
+== Update a SAML Identity Provider
 
-Organization administrators can update existing SAML providers. However, when you update `Issuer` or `Audience`, you will effectively switch to a different IdP, which can cause issues such as unwanted user duplication. For more information, see https://help.mulesoft.com/s/article/External-identity-migration-How-to-prevent-duplicate-users-being-created[the Help article on preventing user duplication].
+Organization administrators can update existing SAML providers. However, when you update `Issuer` or `Audience`, you effectively switch to a different IdP, which can cause issues such as unwanted user duplication. For more information, see https://help.salesforce.com/s/articleView?id=001116895&type=1[External identity migration - How to prevent duplicate users being created].
 
 [[view-limits-saml-identity-provider]]
 == View Limits for a SAML Identity Provider

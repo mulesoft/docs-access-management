@@ -1,10 +1,7 @@
-= Environments
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
+= Anypoint Platform Environments
 :page-aliases: managing-cloudhub-environments.adoc
 
-Anypoint Platform enables you to create and manage separate deployment environments for APIs and applications.  These environments are independent from each other and enable you to test your applications under the same conditions as your production environment.
+Anypoint Platform lets you create and manage separate deployment environments for APIs and applications. Environments are independent from each other, so you can test applications under the same conditions as your production environment.
 
 == Types of Environments
 
@@ -76,7 +73,7 @@ include::partial$include-nav-environments.adoc[]
 
 [NOTE]
 --
-To change the client secret for an environment, see https://help.mulesoft.com/s/article/How-to-set-or-reset-environment-client-secret-in-Anypoint-Platform[this help article], or contact your customer support representative.
+To change the client secret for an environment, see https://help.salesforce.com/s/articleView?id=001115221&type=1[How to set or reset environment client_secret in Anypoint Platform], or contact your customer support representative.
 --
 
 [[add-an-idp-to-an-existing-environment]]

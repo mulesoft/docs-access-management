@@ -1,8 +1,9 @@
-= Configuring Identity Management
+= Configuring Identity Management in Anypoint Platform
 :page-aliases: change-id-mgmt-conf-about.adoc, setting-up-external-identity.adoc
 
+As an Anypoint Platform organization administrator, you can configure identity management to enable single sign-on (SSO) for your organization's users. Anypoint Platform supports OpenID Connect for end-user identity verification and SAML 2.0 for web-based authorization, and allows up to 25 external identity providers (IdPs).
 
-As the Anypoint Platform organization administrator, you can configure identity management in Anypoint Platform to set up users for single sign-on (SSO). An organization can have up to 25 external identity providers, or _IdPs_, configured for SSO. Configure identity management using one of the following single sign-on standards:
+Configure identity management using one of these single sign-on standards:
 
 * OpenID Connect: End user identity verification by an authorization server including SSO
 +
@@ -14,14 +15,14 @@ image::external-identity-decbd.png["A diagram showing the SAML identity manageme
 
 Before configuring OpenID Connect or SAML 2.0, select an OpenID Connect-compliant provider, such as PingFederate, OpenAM, or Okta. If you are not using OpenID Connect, select any SAML 2.0-compliant provider.
 
-The following SAML providers are fully supported:
+Anypoint Platform fully supports these SAML providers:
 
 * Salesforce
 * PingFederate (versions: 6, 7, 8)
 * OpenAM (version: 14)
 * Okta
 
-The following SAML providers are known to work, but aren't actively tested:
+These SAML providers are known to work, but aren't actively tested:
 
 * Active Directory Federation Services (AD FS)
 * Shibboleth
@@ -30,7 +31,7 @@ The following SAML providers are known to work, but aren't actively tested:
 * SecureAuth
 
 
-The following providers are fully supported to work with OpenID Connect:
+Anypoint Platform fully supports these OpenID Connect providers:
 
 * Salesforce
 * PingFederate (versions: 6, 7, 8)

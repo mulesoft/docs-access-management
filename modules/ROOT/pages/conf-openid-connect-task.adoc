@@ -1,5 +1,6 @@
-= Configuring OpenID Connect Identity Management
+= Configuring OpenID Connect Identity Management in Anypoint Platform
 
+Configure OpenID Connect identity management in Anypoint Platform using dynamic or manual client registration. Anypoint Platform supports integration with Okta, Salesforce, OpenAM, and PingFederate, as well as any identity provider that follows the OpenID Connect specification.
 
 You can use one of these identity management procedures for client registration in OpenID Connect:
 
@@ -72,7 +73,7 @@ The URL that returns user profile information to Anypoint.
 . Sign in through your identity provider to test the configuration.
 
 [NOTE]
-The dynamically registered application at the identity provider has only default settings. If you want to configure additional functionalities (such as group mappings), you must update the settings on the provider side. Configuring dynamically registered applications is not currently supported. 
+The dynamically registered application at the identity provider has only default settings. If you want to configure additional functionalities (such as group mappings), you must update the settings on the provider side. Anypoint Platform doesn't support configuring dynamically registered applications.
 
 [[configure-openid-connect-manually]]
 == Configure OpenID Connect Manually
@@ -81,15 +82,15 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-identity-providers.adoc[]
 
-. From Identity Management, select OpenId Connect.
+. From Identity Management, select *OpenID Connect*.
 +
 The External Identity - Identity Management OpenID Connect form appears.
 +
-. Click `Use manual registration` under Client Registration URL.
+. Click *Use manual registration* under Client Registration URL.
 . Create a client application for the Anypoint Platform inside your Identity Provider.
-** Your Identity Provider requires a redirect URI for redirecting authenticated users. Use the automatically generated redirect URI above the Client ID field.
-** Inside your Identity Provider, ensure that your client's supported scopes include `openid`, `profile`, and `email`.
-** Inside your Identity Provider, ensure that your client uses the `authorization_code` grant type.
+** Your Identity Provider requires a redirect URI for redirecting authenticated users. Use the automatically generated redirect URI.
+** Inside your Identity Provider, make sure that your client's supported scopes include `openid`, `profile`, and `email`.
+** Inside your Identity Provider, make sure that your client uses the `authorization_code` grant type.
 ** Store your Client ID and Client Secret values in a secure place and enter these values in the next step.
 . Fill in the following required fields after obtaining them from your identity provider’s configuration:
 +

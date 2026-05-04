@@ -1,6 +1,6 @@
 = Creating Connected Apps in Anypoint Platform
 
-Create connected apps to integrate external or internal applications with Anypoint Platform using OAuth 2.0 and OpenID Connect. Configure app type and grant types, define redirect URIs and scopes, and manage credentials for least‑privilege access.
+Create connected apps to integrate external or internal applications with Anypoint Platform using OAuth 2.0 and OpenID Connect. Configure app type and grant types, define redirect URIs and scopes, and manage credentials for least-privilege access.
 
 When you create connected apps, keep in mind: 
 
