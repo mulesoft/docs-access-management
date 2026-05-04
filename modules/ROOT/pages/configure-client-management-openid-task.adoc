@@ -172,6 +172,8 @@ You can select the Refresh Token grant type only if you have also selected the A
 * xref:api-manager::openam-oauth-token-enforcement-policy.adoc[About OpenAM, OpenID Connect, or PingFederate OAuth Token Enforcement Policies]
 * xref:api-manager::mule-oauth-provider-landing-page.adoc[About OAuth 2.0]
 * https://learn.microsoft.com/en-us/entra/fundamentals/how-to-find-tenant[How to find your Microsoft Entra ID tenant ID].
+* https://docs.pingidentity.com/archive/[OpenAM 13.5 Developer's Guide, Procedure 14.4 To Register a Relying Party Dynamically]
+* https://developer.okta.com/docs/api/openapi/okta-oauth/oauth/client[Okta OpenID Connect, Dynamic Client Registration]
 * https://cdn-docs.pingidentity.com/archive/pdf/openam/13.5/OpenAM-13.5-Admin-Guide.pdf[OpenAM 13.5 Administration Guide, Procedure 14.5 To Register a Relying Party Dynamically]
 * https://developer.okta.com/docs/api/openapi/okta-oauth/oauth/tag/Client/[Okta OpenID Connect, Dynamic Client Registration]
 * https://developer.okta.com/docs/api/openapi/okta-oauth/guides/overview/[Okta OpenID Connect & OAuth 2.0 API]

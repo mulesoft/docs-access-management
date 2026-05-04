@@ -131,9 +131,9 @@ The location of the OpenID Provider. For most providers, `/.well-known/openid-co
 == See Also
 
 * https://developer.okta.com/docs/api/openapi/okta-oauth/guides/overview/[Okta OpenID Connect]
-* https://developer.okta.com/docs/api/openapi/okta-oauth/oauth/tag/Client/[Dynamic Client Registration]
+* https://developer.okta.com/docs/api/openapi/okta-oauth/oauth/client[Dynamic Client Registration]
 * https://developer.okta.com/docs/guides/create-an-api-token/[Getting a Token]
-* https://developer.okta.com/docs/api/openapi/okta-management/management/tag/User/[Get a User]
+* https://developer.okta.com/docs/api/openapi/okta-management/management/tags/user[Get a User]
 * https://help.salesforce.com/s/articleView?language=en_US&id=remoteaccess_oauth_web_server_flow.htm[Salesforce OAuth 2.0 Web Server Authentication Flow]
 * https://help.salesforce.com/s/articleView?language=en_US&id=sso_provider_openid_connect.htm[Salesforce OpenID Connect, Authentication Request]
 * https://developer.salesforce.com/docs/atlas.en-us.api_rest.meta/api_rest/intro_oauth_and_connected_apps.htm[Salesforce OAuth Refresh Token Process]
