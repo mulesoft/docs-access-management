@@ -160,7 +160,7 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the name of the custom role you want to add users to.
+. Click the name of the custom role to add users to.
 . Click the *Users* tab, then enter a username or email in the search field.
 . Select the user, then click the *+* icon.
 
@@ -172,7 +172,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the name of the custom role you want to add permission scopes to.
+. Click the name of the custom role to add permission scopes to.
 . Select the *Permissions* tab, and click *Add Permissions*.
 . Select the permissions to add and click *Next*.
 +
@@ -207,7 +207,7 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the name of the custom role you want to grant API access to.
+. Click the name of the custom role to grant API access to.
 +
 Custom roles have a radial button next to them.
 +
@@ -228,7 +228,7 @@ include::partial$include-nav-steps-no-permissions.adoc[]
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the name of the custom role you want to grant API access to.
+. Click the name of the custom role to grant API access to.
 +
 Custom roles have a radial button next to them.
 +
@@ -317,7 +317,7 @@ To view limits:
 
 include::partial$include-nav-roles.adoc[]
 
-. Click the role whose limits you want to view.
+. Click the role with the limits you want to view.
 . Click the *Limits* tab.
 
 For more information on limits in Access Management, see xref:troubleshooting-anypoint-platform-access.adoc#access-management-limits[Limits].
