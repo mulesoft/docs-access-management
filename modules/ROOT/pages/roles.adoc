@@ -26,18 +26,18 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 
 === Default Roles and Permission Scopes
 
-* **API Creators**: Enables a user to create and manage an API in Anypoint Platform. Members of the API Creator role can add new APIs to the platform on the API administration page. This role does not grant privileges for Runtime Manager. This role has the following permission scopes:
+* **API Creators**: Enables a user to create and manage an API in Anypoint Platform. Members of the API Creator role can add new APIs to the platform on the API administration page. This role doesn't grant privileges for Runtime Manager. This role has the following permission scopes:
 +
 ** Create/Import an API
 
-* **API Versions Owner**: Enables a user to manage, delete, and deprecate any API in the organization. They can edit the portal of any API in the organization. However, this role does not enable a user to create a new version of an existing API. This role has the following permission scopes:
+* **API Versions Owner**: Enables a user to manage, delete, and deprecate any API in the organization. They can edit the portal of any API in the organization. However, this role doesn't enable a user to create a new version of an existing API. This role has the following permission scopes:
 +
 ** Manage any API Version in the organization
 ** Delete any API Version in the organization
 ** Deprecate any API Version in the organization
 ** Edit the Portal of any API version in the organization
 
-* **Audit Log Viewers**: Enables a user to access to the UI for the Audit Log under Access Management. This role has the following permission scopes:
+* **Audit Log Viewers**: Enables a user to access the UI for the Audit Log under Access Management. This role has the following permission scopes:
 +
 ** Visualize logs in the xref:audit-logging.adoc[Audit Logs] section.
 
@@ -91,7 +91,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 * **Exchange Contributors**: This role has the following permission scopes:
 +
 ** Create content
-** Manage own content, including the ability to add a new version and edit your own version content, but you cannot delete your own version.
+** Manage own content, including the ability to add a new version and edit your own version content, but you can't delete your own version.
 ** Manage own reviews, including the ability to add, edit, and delete
 
 * **Exchange Viewers**: Enables a user to view and consume Exchange assets. This role has the following permission scopes:
@@ -115,7 +115,7 @@ include::partial$include-nav-roles.adoc[]
 
 . Click the name of the default role.
 +
-Default roles do not have a radial button next to them.
+Default roles don't have a radial button next to them.
 . Enter the user's name in the search box.
 . Select the user from the drop-down list of results, then click the blue plus sign on the right of the search box.
 . To change the role's description:
@@ -166,7 +166,7 @@ include::partial$include-nav-roles.adoc[]
 
 === Assign Permission Scopes to a Custom Role
 
-After creating a custom role, you can assign permissions to the role. Some permissions within a role can be applied to specific environments. If these environments belong to a business group rather than the root organization, they are available only when creating a role in that same business group.
+After creating a custom role, you can assign permissions to the role. Some permissions within a role can be applied to specific environments. If these environments belong to a business group rather than the root organization, they're available only when creating a role in that same business group.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -262,7 +262,7 @@ When you convert or merge a role, the role is deleted.
 When you convert roles to permissions, users keep the same permissions that they previously received with roles.
 
 [WARNING]
-When you convert a role to permissions, the users that belonged to the role are no longer grouped according to their permissions and must be managed individually. Additionally, roles that can now be applied as (or converted to) permissions, such as the Exchange Contributors permission, can be managed only while you are using the Teams feature.
+When you convert a role to permissions, the users who previously belonged to the role are no longer grouped according to their permissions and must be managed individually. Additionally, roles that can now be applied as (or converted to) permissions, such as the Exchange Contributors permission, can be managed only while you're using the Teams feature.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -276,7 +276,7 @@ The users who previously had the role are granted the same permissions that the 
 
 === Convert a Role to a Team
 
-When you convert a role to a team, you create a new team that contains the users who previously held the converted role. The team you create also inherits permissions from the parent team under which you create it.
+When you convert a role to a team, you create a new team that contains the users who previously held the converted role. The team you create also inherits permissions from the parent team you create it under.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
@@ -296,7 +296,7 @@ The users who previously had the role are added to a new team that has the same 
 
 === Merge a Role with a Team
 
-When you merge a role with a team, the users that previously had the role keep the permissions granted by that role and also obtain permissions included in the team they have joined.
+When you merge a role with a team, the users who previously had the role keep the permissions granted by that role and also obtain permissions included in the team they have joined.
 
 include::partial$include-nav-steps-org-admin.adoc[]
 
