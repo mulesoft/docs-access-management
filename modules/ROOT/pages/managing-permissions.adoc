@@ -7,7 +7,7 @@ endif::[]
 
 Permissions in Anypoint Platform control what users can do with specific resources. Assign permissions using teams, roles, or by granting them directly to individual users.
 
-To manage permissions, you must have the Organization Administrator permission in your organization, have the Organization Administrator permission over one of the business groups of your organization, or have API Version Owner permissions and want to manage user permissions for an API version, a business group or the entire organization.
+To manage permissions, your account needs the Organization Administrator permission for your organization or one of its business groups, or the API Version Owner permission for a specific API version, business group, or the entire organization.
 
 == How Permissions Work in Anypoint Platform
 
@@ -47,7 +47,7 @@ For more information about these specific scopes, see xref:roles.adoc#permission
 * Default permissions for each API managed from API Manager grant permission to access a specific environment and a specific resource (policies, alerts, and so on). If a permission to an environment is granted to a user, it gives the user access to that environment immediately. For example, if you want to grant a user permission to create and edit alerts, you assign them the Manage Alerts permission.
 * To create an API in Exchange, users need either the Exchange Admin permission or Exchange Contributor permission.
 
-Since _API versions_ and _Products deployment environments_ are grouped under organizations (and optionally under business groups too), to access them you must have an account that owns the necessary permissions and that belongs to its corresponding organization or business group (if such resource exists).
+Because _API versions_ and _Products deployment environments_ are grouped under organizations and optionally under business groups, accessing them requires an account with the necessary permissions that belongs to the corresponding organization or business group.
 
 Roles assigned at the root organization level can reference only resources that are at the root organization level, and roles that belong to a business group can reference only resources within that business group.
 
