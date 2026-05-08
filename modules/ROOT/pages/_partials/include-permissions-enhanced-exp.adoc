@@ -1,0 +1,100 @@
+// Shared Permissions Table
+// tag::experiencePermissionsTable[]
+
+[cols="~,~,~",options="header"]
+|===
+|Required Permissions |Grants the Ability to |Notes
+
+a|
+Any of these permissions:
+
+* Exchange Viewer
+* Exchange Contributor
+* Exchange Administrator
+|View service
+a|Users can view services under the portfolio and open the catalog overview in Anypoint Exchange.
+
+a|
+Any of these permissions:
+
+* Exchange Contributor
+* Exchange Administrator
+* Exchange Creator
+|Create service
+a|Users can use Add workflows to register MCP servers, agents, LLMs, or APIs.
+
+a|
+* API Creator
+|Create instance
+a|Users can run the create-instance workflow and create or add instances.
+
+a|
+* View APIs Configuration
+|View instance
+a|Users can view instances for services and open the Instances tab.
+
+a|
+* Edit APIs Configuration
+|Edit instance
+a|Users can edit instances for services.
+
+a|
+* Exchange Administrator
+|Create scanners
+a|Users can create scanners from *Providers* and through Add MCP, Agent, or API when the organization enables the matching scanner capabilities.
+
+a|
+Any of these permissions:
+
+* Monitoring Viewer
+* Monitoring Administrator
+|View monitoring
+a|Users can open the monitoring tab at the service and instance levels and see monitoring in navigation.
+
+a|
+* View Policies
+|View policies
+a|Users can view and apply policies on instances and use the Governance tab for policy access.
+
+a|
+* Manage Policies
+|Apply policies
+a|Users can edit policy configurations and add policies.
+
+a|
+* Mule Developer Generative AI User
+|Send prompts to agent
+a|Users can use the native agent in the new experience.
+
+a|
+* Governance Administrator
+|Create governance strategy
+a|Users can create governance strategies.
+
+a|
+Any of these permissions:
+
+* Governance Viewer
+* Governance Administrator
+|View governance report
+a|Users can view governance reports at the service and governance-strategy level.
+
+a|
+Any of these permissions:
+
+* *API Manager* > *View API Alerts*
+* *Runtime Manager* > *Read Alerts*
+|View alerts
+a|Users can view API alerts in API Manager and read alerts in Runtime Manager.
+
+a|
+Any of these permissions:
+
+* *API Manager* > Manage API Alerts
+* *Runtime Manager* > Manage Alerts
+|Manage alerts
+a|Users can manage API alerts in API Manager and manage alerts in Runtime Manager.
+
+|===
+
+// end::experiencePermissionsTable[]
