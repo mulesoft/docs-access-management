@@ -62,7 +62,7 @@ Occasionally, there are `Anypoint Staff` log entries. This log entry is made whe
 * An action is performed by a MuleSoft employee on your behalf for other purposes, such as troubleshooting
 --
 
-* *Connected App*: Name of the connected app that takes an action on behalf of itself or a user. If a connected app didn't execute the action, the payload is `N/A`.
+* *Connected App*: Name of the connected app that takes an action on behalf of itself or a user. If a connected app didn't run the action, the payload is `N/A`.
 * *Environment*: Environment names for events from API Manager, Runtime Manager, CloudHub, Partner Manager, and MQ.
 * *Parent*: (Optional) Parent of the object (if any) the action is performed on. This mainly applies to APIs.
 * *Payload*: (Optional) More information about the log properties. For example, if an organization is created, the payload contains information about the organization and the owner, such as IDs.
@@ -3317,7 +3317,7 @@ The https://exchange-files.anypoint.mulesoft.com/f1e97bc6-315a-4490-82a7-23abe03
 
 The latest version of the API uses pagination with cursors, so you can initiate query loops using cursors. Setting the `cursorPagination` query parameter to `true` enables you to use cursor paging.
 
-When you use cursor pagination, each response returns a cursor. The cursor corresponds to the last data entry in the response dataset. The subsequent request in the query loop should use the cursor value that was returned in the previous response.
+When you use cursor pagination, each response returns a cursor. The cursor corresponds to the last data entry in the response dataset. The subsequent request in the query loop uses the cursor value that was returned in the previous response.
 
 When the dataset is empty in the response, you have reached the end of the query loop, and there is no more data to query for that time window. At that point, stop the query loop. When the dataset is empty in the response, no cursor is returned.
 

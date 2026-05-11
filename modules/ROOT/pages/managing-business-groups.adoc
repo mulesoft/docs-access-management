@@ -1,4 +1,4 @@
-= Managing Business Groups
+= Managing Business Groups in Anypoint Platform
 :page-aliases: organization.adoc
 
 Use business groups to delegate administrative responsibilities, control access to resources, and structure your organization's access management.
@@ -85,8 +85,8 @@ image::switch-suborg.png["A business group and a list of its sub-groups"]
 
 [NOTE]
 --
-When you create a business group, sign out and sign in to Anypoint Platform to see newly-created business groups in the business group navigation menu.
-When you sign in to Anypoint Platform, you return to the business group where you were last active when you signed out of Anypoint Platform.
+When you create a business group, log out and log in to Anypoint Platform to see newly-created business groups in the business group navigation menu.
+When you log in to Anypoint Platform, you return to the business group where you were last active when you logged out of Anypoint Platform.
 --
 
 If you don't have the Organization Administrator permission, you can view only the business groups that you have permissions to view. In the *Organization* tab, your organization tree displays only the business groups to which you belong.
@@ -221,7 +221,7 @@ Changing the name or domain name of a business group changes the deep links to a
 Set the amount of time (in minutes) a user is inactive before they are automatically signed out of Anypoint Platform. The default is 60 minutes, the minimum is 15 minutes, and the maximum is 180 minutes.
 * *Confidentiality Notification*
 +
-Create a custom popup that appears when users sign in to your business group. The character limit is 1000 alphanumeric characters and symbols: `@`, `:`, `?`, `!`, `,`, `.`, `;`, `'`, `_`, and `-`. You can also add line breaks using `\n` and tabs using `\t`. If you leave this field blank, users don't receive a notification at signin.
+Create a custom window that appears when users log in to your business group. The character limit is 1000 alphanumeric characters and symbols: `@`, `:`, `?`, `!`, `,`, `.`, `;`, `'`, `_`, and `-`. You can also add line breaks using `\n` and tabs using `\t`. If you leave this field blank, users don't receive a notification at signin.
 * *Runtime Manager*
 +
 The default region for Runtime Manager. 
@@ -247,7 +247,7 @@ For more information on limits in Access Management, see xref:troubleshooting-an
 [[find-business-group-id]]
 == Find your Business Group ID
 
-For some operations, you need to specify your business group (organization) ID, or _orgId_. You also need your business group ID to designate a business group or root business group when creating certain types of requests.
+For some operations, it's necessary to specify your business group (organization) ID, or _orgId_. You also need your business group ID to designate a business group or root business group when creating certain types of requests.
 
 You can get your business group ID from your business group URL, executing an Anypoint CLI command, or using a token to invoke the Anypoint Platform REST API.
 
@@ -279,7 +279,7 @@ The business group ID appears in the *Business Group Id* field.
 
 If you have the xref:anypoint-cli::account.adoc[Anypoint CLI (command-line interface) tool] installed, you can use it to get a list of the business groups, their types, and the business group ID. 
 
-For example, when you execute the `account:business-group:list [flags]` command, your business group information appears in the following format:
+For example, when you run the `account:business-group:list [flags]` command, your business group information appears in the following format:
 
 [cols="1,1,2"]
 |===
@@ -314,7 +314,7 @@ For example:
 
 All API versions and CloudHub environments that you create in a business group are accessible only to users within the business group.
 
-If you want to share resources with a user, you have to invite the user to join your business group, and the user must accept the invitation and join the business group you sent the invitation from. See xref:users.adoc#inviting-users[Inviting Users] for more information.
+To share resources with a user, invite the user to join your business group, and the user must accept the invitation and join the business group you sent the invitation from. See xref:users.adoc#inviting-users[Inviting Users] for more information.
 
 [NOTE]
 --
@@ -323,7 +323,7 @@ Because the business group name (often the company name) isn't necessarily uniqu
 Invited users must use the link they receive in the invitation email to join your business group.
 --
 
-If your business group is configured to use an external federated identity system, you don't need to invite users, as they are authenticated by the external identity provider.
+If your business group is configured to use an external federated identity system, inviting users is unnecessary because they are authenticated by the external identity provider.
 
 After a user joins your business group, they have access to the resources associated with the permissions or roles assigned to them. You can assign permissions to grant users access to different resources within the business group. A best practice is to assign permissions to the user at the time you invite them to join your business group so the roles are in effect when the user signs in for the first time. 
 

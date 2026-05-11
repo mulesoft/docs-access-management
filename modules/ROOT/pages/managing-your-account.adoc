@@ -93,12 +93,12 @@ If the account you want to use is already associated with another root organizat
 . Click *Sign in*.
 
 [NOTE]
-If you try to sign in and Anypoint Platform rejects your valid credentials, your organization might use an xref:access-management::external-identity.adoc[external identity provider] to initiate the sign-in process. Either navigate to your external identity provider's interface to sign in, or xref:access-management::managing-your-account.adoc#use-CustomDomainLogin[enter your organization's domain name] before reentering your credentials.
+If Anypoint Platform rejects your valid credentials, your organization uses an xref:access-management::external-identity.adoc[external identity provider] to initiate the sign-in process. Navigate to your external identity provider to sign in, or xref:access-management::managing-your-account.adoc#use-CustomDomainLogin[enter your organization's domain name] before reentering your credentials.
 
 [[use-CustomDomainLogin]]
 == Sign in to Anypoint Platform Using Single Sign-on
 
-If your organization uses xref:access-management::external-identity.adoc[Single Sign-on], you must provide your organization's domain name as part of the sign-in process.
+If your organization uses xref:access-management::external-identity.adoc[Single Sign-on], provide your organization's domain name as part of the sign-in process.
 
 . Navigate to the Anypoint Platform signin screen.
 . Click *Use custom domain*.
@@ -112,7 +112,7 @@ You're redirected to your identity provider.
 [[allowlist-urls]]
 == Allowlist URLs to Sign in to and Use Anypoint Platform
 
-To ensure your sessions aren't blocked or interrupted by your organization's firewall or proxy if you use a restricted environment, such as a virtual machine, or have proxy requirements preventing you from signing in to Anypoint Platform, add these URLs to your allowlists:
+To make sure your sessions aren't blocked or interrupted by your organization's firewall or proxy if you use a restricted environment, such as a virtual machine, or have proxy requirements preventing you from signing in to Anypoint Platform, add these URLs to your allowlists:
 
 * `+https://*.mulesoft.com/*+`
 * `+https://*.salesforce.com/*+`
@@ -148,7 +148,7 @@ After selecting this account and entering the password associated with it, you'r
 
 A common scenario is to create an account that's not associated with any existing organization. This automatically assigns your account to a new organization and makes your account an organization owner. 
 
-After selecting this account, entering its corresponding password, and clicking the *Sign In* button, if there are no other members in the organization you own:
+After selecting this account, entering its corresponding password, and clicking the *Sign in* button, if there are no other members in the organization you own:
 
 * You get a warning that all associations to the existing organization will be lost.
 * The organization you're leaving will be deleted. 
@@ -163,7 +163,7 @@ To free your account from the organization you own, open a support ticket at htt
 After support confirms the migration is complete, you can use your account to join MuleSoft.
 
 [NOTE]
-If you have a free trial account and want to migrate your username to a new organization you need another organization administrator in your current organization to delete your organization owner account from the organization associated with your trial account.
+If you have a trial account at no additional cost and want to migrate your username to a new organization, another organization administrator in your current organization must delete your organization owner account from the organization associated with your trial account.
 
 // == Link Anypoint Platform Accounts
 
@@ -184,12 +184,12 @@ For enhanced security, Access Management might prompt you to reauthenticate befo
 
 include::partial$include-reauthentication-conditions.adoc[]
 
-Connected apps and clients are exempt from reauthentication. If you have a script that makes an API call to change your email address, it might need to accommodate reauthentication.
+Connected apps and clients are exempt from reauthentication. If you have a script that makes an API call to change your email address, update it to accommodate reauthentication if necessary.
 
 === Verify Your Email Address
 
 As of October 10, 2022, non-SSO users must verify their Anypoint Platform email addresses. If you haven't verified your email address, an email verification request prompt appears each time you sign in.
-You can verify your email using the signin prompt, or you can verify your email in your user profile.
+You can verify your email using the sign in prompt, or you can verify your email in your user profile.
 SSO users can't verify their email addresses through Anypoint Platform and don't receive verification prompts.
 
 include::partial$include-nav-steps-to-profile.adoc[]
@@ -229,7 +229,7 @@ You can't reuse any of your previous three passwords.
 
 . Navigate to the Anypoint Platform signin page.
 . Click the *Forgot your username or password* link.
-. In the *Forgot your credentials* form, enter your username. 
+. In the *Forgot your credentials* form, enter your username.
 +
 A link to create a new password is emailed to you.
 . Click the reset password link in the email.
