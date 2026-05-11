@@ -224,6 +224,11 @@ Assign this permission to those who consume your project in a specific business 
 
 // where did the project-level permissions go?
 
+
+== Enhanced MuleSoft Experience
+
+include::access-management::partial$include-permissions-enhanced-exp.adoc[tag=experiencePermissionsTable]
+
 == Exchange
 
 [%header,cols="30a,50a,20a"]
