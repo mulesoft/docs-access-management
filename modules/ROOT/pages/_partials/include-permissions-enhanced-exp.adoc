@@ -34,7 +34,7 @@ API Manager: View APIs Configuration
 a|View instances for services and open the *Instances* tab.
 
 a|
-* API Manager: Edit APIs Configuration
+API Manager: Edit APIs Configuration
 |Edit instances
 a|Edit instances for services.
 
