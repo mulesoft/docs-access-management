@@ -71,7 +71,7 @@ a|Edit policy configurations and add policies.
 a|
 All of these permissions:
 
-* *API Manager* > Manage Policies
+* API Manager: Manage Policies
 * *API Manager* > View APIs Configuration
 * *API Manager* > View Policies
 * *Anypoint Monitoring* > Monitoring Viewer
