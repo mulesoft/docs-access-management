@@ -75,7 +75,7 @@ All of these permissions:
 * API Manager: View APIs Configuration
 * API Manager: View Policies
 * Anypoint Monitoring: Monitoring Viewer
-* *Exchange* > Exchange Viewer
+* Exchange: Exchange Viewer
 |Use cost the *Cost Management* tab
 a|Apply optimization strategies using policies, view policies, view Exchange assets, and query metrics.
 
