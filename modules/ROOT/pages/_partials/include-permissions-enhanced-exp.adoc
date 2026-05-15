@@ -64,12 +64,12 @@ API Manager: View Policies
 a|View and apply policies on instances, and access policies from the *Governance* tab.
 
 a|
-* API Manager: Manage Policies
+API Manager: Manage Policies
 |Apply policies
 a|Edit policy configurations and add policies.
 
 a|
-All of these permissions:
+These permissions:
 
 * API Manager: Manage Policies
 * API Manager: View APIs Configuration
@@ -80,7 +80,7 @@ All of these permissions:
 a|Apply optimization strategies using policies, view policies, view Exchange assets, and query metrics.
 
 a|
-* Anypoint Code Builder: Mule Developer Generative AI User
+Anypoint Code Builder: Mule Developer Generative AI User
 |Send prompts to agent
 a|Use the native agent.
 
