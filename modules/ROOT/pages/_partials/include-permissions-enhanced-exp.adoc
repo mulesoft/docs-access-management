@@ -59,7 +59,7 @@ Any of these permissions:
 a|Open the *Monitoring* tab at the service and instance levels, and view *Monitoring* in the navigation bar.
 
 a|
-* API Manager: View Policies
+API Manager: View Policies
 |View policies
 a|View and apply policies on instances, and access policies from the *Governance* tab.
 
