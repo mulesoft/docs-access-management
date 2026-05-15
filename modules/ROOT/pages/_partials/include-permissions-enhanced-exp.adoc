@@ -107,7 +107,7 @@ To see the conformance badge and whether rulesets passed or failed, you need the
 a|
 Any of these permissions:
 
-* *API Manager* > *View API Alerts*
+* API Manager: View API Alerts
 * *Runtime Manager* > *Read Alerts*
 |View alerts
 a|View API alerts in API Manager and read alerts in Runtime Manager.
