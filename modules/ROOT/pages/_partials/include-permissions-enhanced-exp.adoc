@@ -115,7 +115,7 @@ a|View API alerts in API Manager and read alerts in Runtime Manager.
 a|
 Any of these permissions:
 
-* *API Manager* > Manage API Alerts
+* API Manager: Manage API Alerts
 * *Runtime Manager* > Manage Alerts
 |Manage alerts
 a|Manage API alerts in API Manager and alerts in Runtime Manager.
