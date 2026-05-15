@@ -72,7 +72,7 @@ a|
 All of these permissions:
 
 * API Manager: Manage Policies
-* *API Manager* > View APIs Configuration
+* API Manager: View APIs Configuration
 * *API Manager* > View Policies
 * *Anypoint Monitoring* > Monitoring Viewer
 * *Exchange* > Exchange Viewer
