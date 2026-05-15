@@ -24,7 +24,7 @@ Any of these permissions:
 a|Register MCP servers, agents, LLMs, or APIs.
 
 a|
-* API Manager: API Creator
+API Manager: API Creator
 |Create instances
 a|Create or add instances.
 
