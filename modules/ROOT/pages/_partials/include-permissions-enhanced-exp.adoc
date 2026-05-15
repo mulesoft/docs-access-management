@@ -8,92 +8,117 @@
 a|
 Any of these permissions:
 
-* Exchange Viewer
-* Exchange Contributor
-* Exchange Administrator
-|View service
-a|Users can view services under the portfolio and open the catalog overview in Anypoint Exchange.
+* Exchange: Exchange Viewer
+* Exchange: Exchange Contributor
+* Exchange: Exchange Administrator
+|View services
+a|View services in the portfolio and open the catalog overview in Anypoint Exchange.
 
 a|
 Any of these permissions:
 
-* Exchange Contributor
-* Exchange Administrator
-* Exchange Creator
-|Create service
-a|Users can use Add workflows to register MCP servers, agents, LLMs, or APIs.
+* Exchange: Exchange Contributor
+* Exchange: Exchange Administrator
+* Exchange: Exchange Creator
+|Create services
+a|Register MCP servers, agents, LLMs, or APIs.
 
 a|
-* API Creator
-|Create instance
-a|Users can run the create-instance workflow and create or add instances.
+API Manager: API Creator
+|Create instances
+a|Create or add instances.
 
 a|
-* View APIs Configuration
-|View instance
-a|Users can view instances for services and open the Instances tab.
+API Manager: View APIs Configuration
+|View instances
+a|View instances for services and open the *Instances* tab.
 
 a|
-* Edit APIs Configuration
-|Edit instance
-a|Users can edit instances for services.
+API Manager: Edit APIs Configuration
+|Edit instances
+a|Edit instances for services.
 
 a|
-* Exchange Administrator
+Any of these permissions:
+
+* Exchange: Exchange Administrator
+* Exchange: Exchange Contributor
+* API Manager: API Creator
+* API Manager: Manage Policies
 |Create scanners
-a|Users can create scanners from *Providers* and through Add MCP, Agent, or API when the organization enables the matching scanner capabilities.
+a|Create scanners from *Providers* using *Add MCP Server*, *Add Agent*, or *Add API* if your organization enables matching scanner capabilities.
+
+To view the *Providers* section, you need these permissions or the required scanner entitlements for API, MCP, or agent scanners.
 
 a|
 Any of these permissions:
 
-* Monitoring Viewer
-* Monitoring Administrator
+* Anypoint Monitoring: Monitoring Viewer
+* Anypoint Monitoring: Monitoring Administrator
 |View monitoring
-a|Users can open the monitoring tab at the service and instance levels and see monitoring in navigation.
+a|Open the *Monitoring* tab at the service and instance levels, and view *Monitoring* in the navigation bar.
 
 a|
-* View Policies
+API Manager: View Policies
 |View policies
-a|Users can view and apply policies on instances and use the Governance tab for policy access.
+a|View and apply policies on instances, and access policies from the *Governance* tab.
 
 a|
-* Manage Policies
+API Manager: Manage Policies
 |Apply policies
-a|Users can edit policy configurations and add policies.
+a|Edit policy configurations and add policies.
 
 a|
-* Mule Developer Generative AI User
+These permissions:
+
+* API Manager: Manage Policies
+* API Manager: View APIs Configuration
+* API Manager: View Policies
+* Anypoint Monitoring: Monitoring Viewer
+* Exchange: Exchange Viewer
+|Use the *Cost Management* experience
+a|Apply optimization strategies using policies, view policies, view Exchange assets, and query metrics.
+
+a|
+Anypoint Code Builder: Mule Developer Generative AI User
 |Send prompts to agent
-a|Users can use the native agent in the new experience.
-
-a|
-* Governance Administrator
-|Create governance strategy
-a|Users can create governance strategies.
+a|Use the native agent.
 
 a|
 Any of these permissions:
 
-* Governance Viewer
-* Governance Administrator
-|View governance report
-a|Users can view governance reports at the service and governance-strategy level.
+* API Governance: Governance Administrator
+* API Manager: Manage Policies
+|Create governance strategies
+a|Create governance strategies.
+
+To view and create governance strategies, you need the Governance Administrator permission for *Control* types, or the Manage Policies permission for *Automated Policy* types.
 
 a|
 Any of these permissions:
 
-* *API Manager* > *View API Alerts*
-* *Runtime Manager* > *Read Alerts*
+* API Governance: Governance Viewer
+* API Governance: Governance Administrator
+|View governance reports
+a|View governance reports at the service and governance strategy levels.
+
+To see the conformance badge and whether rulesets passed or failed, you need the Exchange Viewer permission. To view or export detailed governance reports, including violations, warnings, and rule breakdowns, you need the Governance Viewer permission.
+
+a|
+Any of these permissions:
+
+* API Manager: View API Alerts
+* Runtime Manager: Read Alerts
 |View alerts
-a|Users can view API alerts in API Manager and read alerts in Runtime Manager.
+a|View API alerts in API Manager and read alerts in Runtime Manager.
 
 a|
 Any of these permissions:
 
-* *API Manager* > Manage API Alerts
-* *Runtime Manager* > Manage Alerts
+* API Manager: Manage API Alerts
+* Runtime Manager: Manage Alerts
 |Manage alerts
-a|Users can manage API alerts in API Manager and manage alerts in Runtime Manager.
+a|Manage API alerts in API Manager and alerts in Runtime Manager.
 
 |===
 
