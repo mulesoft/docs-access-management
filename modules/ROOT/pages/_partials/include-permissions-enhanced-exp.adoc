@@ -39,9 +39,16 @@ a|
 a|Users can edit instances for services.
 
 a|
+Any of these permissions:
+
 * Exchange Administrator
+* Exchange Contributor
+* API Creator
+* Manage Policies
 |Create scanners
 a|Users can create scanners from *Providers* and through Add MCP, Agent, or API when the organization enables the matching scanner capabilities.
+
+The *Providers* section and tab are hidden if the user does not have these permissions OR the required scanner entitlements (API Scanner and MCP/Agent Scanner).
 
 a|
 Any of these permissions:
@@ -67,9 +74,14 @@ a|
 a|Users can use the native agent in the new experience.
 
 a|
+Any of these permissions:
+
 * Governance Administrator
+* Manage Policies
 |Create governance strategy
 a|Users can create governance strategies.
+
+During the first step of creating a governance strategy, users must have *Governance Administrator* permission to create strategies of type "Control" OR *Manage Policies* permission to create strategies of type "Policy" (automated policies).
 
 a|
 Any of these permissions:
@@ -78,6 +90,8 @@ Any of these permissions:
 * Governance Administrator
 |View governance report
 a|Users can view governance reports at the service and governance-strategy level.
+
+Users with *Exchange Viewer* can see the conformance badge and whether rulesets passed or failed. However, viewing detailed governance reports (including violations, warnings, and rule breakdowns) OR exporting reports requires *Governance Viewer* permission.
 
 a|
 Any of these permissions:
