@@ -21,17 +21,17 @@ Any of these permissions:
 * Exchange Administrator
 * Exchange Creator
 |Create services
-a|Use Add workflows to register MCP servers, agents, LLMs, or APIs.
+a|Register MCP servers, agents, LLMs, or APIs.
 
 a|
 * API Creator
 |Create instances
-a|Run the create-instance workflow and create or add instances.
+a|Create or add instances.
 
 a|
 * View APIs Configuration
 |View instances
-a|View instances for services and open the Instances tab.
+a|View instances for services and open the *Instances* tab.
 
 a|
 * Edit APIs Configuration
@@ -46,9 +46,9 @@ Any of these permissions:
 * API Creator
 * Manage Policies
 |Create scanners
-a|Create scanners from *Providers* and through Add MCP, Agent, or API when the organization enables the matching scanner capabilities.
+a|Create scanners from *Providers* using *Add MCP Server*, *Add Agent*, or *Add API* if your organization enables matching scanner capabilities.
 
-The *Providers* section and tab are hidden if the user does not have these permissions or the required scanner entitlements (API Scanner and MCP/Agent Scanner).
+To view the *Providers* section, you need these permissions or the required scanner entitlements for API, MCP, or agent scanners.
 
 a|
 Any of these permissions:
@@ -56,12 +56,12 @@ Any of these permissions:
 * Monitoring Viewer
 * Monitoring Administrator
 |View monitoring
-a|Open the monitoring tab at the service and instance levels, and see monitoring in navigation.
+a|Open the *Monitoring* tab at the service and instance levels, and view *Monitoring* in the navigation bar.
 
 a|
 * View Policies
 |View policies
-a|View and apply policies on instances, and use the Governance tab for policy access.
+a|View and apply policies on instances, and access policies from the *Governance* tab.
 
 a|
 * Manage Policies
@@ -69,9 +69,20 @@ a|
 a|Edit policy configurations and add policies.
 
 a|
+All of these permissions:
+
+* *API Manager* > Manage Policies
+* *API Manager* > View APIs Configuration
+* *API Manager* > View Policies
+* *Anypoint Monitoring* > Monitoring Viewer
+* *Exchange* > Exchange Viewer
+|Use cost the *Cost Management* tab
+a|Apply optimization strategies using policies, view policies, view Exchange assets, and query metrics.
+
+a|
 * Mule Developer Generative AI User
 |Send prompts to agent
-a|Use the native agent in the new experience.
+a|Use the native agent.
 
 a|
 Any of these permissions:
@@ -81,7 +92,7 @@ Any of these permissions:
 |Create governance strategies
 a|Create governance strategies.
 
-In the first step of creating a governance strategy, users must have *Governance Administrator* permission to create strategies of type "Control" or *Manage Policies* permission to create strategies of type "Policy" (automated policies).
+To view and create governance strategies, you need the Governance Administrator permission for *Control* types, or the Manage Policies permission for *Automated Policy* types.
 
 a|
 Any of these permissions:
@@ -89,9 +100,9 @@ Any of these permissions:
 * Governance Viewer
 * Governance Administrator
 |View governance reports
-a|View governance reports at the service and governance-strategy level.
+a|View governance reports at the service and governance strategy levels.
 
-Users with *Exchange Viewer* can see the conformance badge and whether rulesets passed or failed. However, viewing detailed governance reports (including violations, warnings, and rule breakdowns) or exporting reports requires *Governance Viewer* permission.
+To see the conformance badge and whether rulesets passed or failed, you need the Exchange Viewer permission. To view or export detailed governance reports, including violations, warnings, and rule breakdowns, you need the Governance Viewer permission.
 
 a|
 Any of these permissions:
