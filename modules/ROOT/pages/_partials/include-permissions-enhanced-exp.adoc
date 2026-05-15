@@ -29,7 +29,7 @@ API Manager: API Creator
 a|Create or add instances.
 
 a|
-* API Manager: View APIs Configuration
+API Manager: View APIs Configuration
 |View instances
 a|View instances for services and open the *Instances* tab.
 
