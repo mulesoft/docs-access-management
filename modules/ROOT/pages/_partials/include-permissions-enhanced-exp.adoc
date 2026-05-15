@@ -8,43 +8,43 @@
 a|
 Any of these permissions:
 
-* Exchange Viewer
-* Exchange Contributor
-* Exchange Administrator
+* Exchange: Exchange Viewer
+* Exchange: Exchange Contributor
+* Exchange: Exchange Administrator
 |View services
 a|View services in the portfolio and open the catalog overview in Anypoint Exchange.
 
 a|
 Any of these permissions:
 
-* Exchange Contributor
-* Exchange Administrator
-* Exchange Creator
+* Exchange: Exchange Contributor
+* Exchange: Exchange Administrator
+* Exchange: Exchange Creator
 |Create services
 a|Register MCP servers, agents, LLMs, or APIs.
 
 a|
-* API Creator
+* API Manager: API Creator
 |Create instances
 a|Create or add instances.
 
 a|
-* View APIs Configuration
+* API Manager: View APIs Configuration
 |View instances
 a|View instances for services and open the *Instances* tab.
 
 a|
-* Edit APIs Configuration
+* API Manager: Edit APIs Configuration
 |Edit instances
 a|Edit instances for services.
 
 a|
 Any of these permissions:
 
-* Exchange Administrator
-* Exchange Contributor
-* API Creator
-* Manage Policies
+* Exchange: Exchange Administrator
+* Exchange: Exchange Contributor
+* API Manager: API Creator
+* API Manager: Manage Policies
 |Create scanners
 a|Create scanners from *Providers* using *Add MCP Server*, *Add Agent*, or *Add API* if your organization enables matching scanner capabilities.
 
@@ -53,18 +53,18 @@ To view the *Providers* section, you need these permissions or the required scan
 a|
 Any of these permissions:
 
-* Monitoring Viewer
-* Monitoring Administrator
+* Anypoint Monitoring: Monitoring Viewer
+* Anypoint Monitoring: Monitoring Administrator
 |View monitoring
 a|Open the *Monitoring* tab at the service and instance levels, and view *Monitoring* in the navigation bar.
 
 a|
-* View Policies
+* API Manager: View Policies
 |View policies
 a|View and apply policies on instances, and access policies from the *Governance* tab.
 
 a|
-* Manage Policies
+* API Manager: Manage Policies
 |Apply policies
 a|Edit policy configurations and add policies.
 
@@ -80,15 +80,15 @@ All of these permissions:
 a|Apply optimization strategies using policies, view policies, view Exchange assets, and query metrics.
 
 a|
-* Mule Developer Generative AI User
+* Anypoint Code Builder: Mule Developer Generative AI User
 |Send prompts to agent
 a|Use the native agent.
 
 a|
 Any of these permissions:
 
-* Governance Administrator
-* Manage Policies
+* API Governance: Governance Administrator
+* API Manager: Manage Policies
 |Create governance strategies
 a|Create governance strategies.
 
@@ -97,8 +97,8 @@ To view and create governance strategies, you need the Governance Administrator 
 a|
 Any of these permissions:
 
-* Governance Viewer
-* Governance Administrator
+* API Governance: Governance Viewer
+* API Governance: Governance Administrator
 |View governance reports
 a|View governance reports at the service and governance strategy levels.
 
