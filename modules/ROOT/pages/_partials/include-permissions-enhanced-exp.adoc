@@ -11,8 +11,8 @@ Any of these permissions:
 * Exchange Viewer
 * Exchange Contributor
 * Exchange Administrator
-|View service
-a|Users can view services under the portfolio and open the catalog overview in Anypoint Exchange.
+|View services
+a|View services in the portfolio and open the catalog overview in Anypoint Exchange.
 
 a|
 Any of these permissions:
@@ -20,23 +20,23 @@ Any of these permissions:
 * Exchange Contributor
 * Exchange Administrator
 * Exchange Creator
-|Create service
-a|Users can use Add workflows to register MCP servers, agents, LLMs, or APIs.
+|Create services
+a|Use Add workflows to register MCP servers, agents, LLMs, or APIs.
 
 a|
 * API Creator
-|Create instance
-a|Users can run the create-instance workflow and create or add instances.
+|Create instances
+a|Run the create-instance workflow and create or add instances.
 
 a|
 * View APIs Configuration
-|View instance
-a|Users can view instances for services and open the Instances tab.
+|View instances
+a|View instances for services and open the Instances tab.
 
 a|
 * Edit APIs Configuration
-|Edit instance
-a|Users can edit instances for services.
+|Edit instances
+a|Edit instances for services.
 
 a|
 Any of these permissions:
@@ -46,9 +46,9 @@ Any of these permissions:
 * API Creator
 * Manage Policies
 |Create scanners
-a|Users can create scanners from *Providers* and through Add MCP, Agent, or API when the organization enables the matching scanner capabilities.
+a|Create scanners from *Providers* and through Add MCP, Agent, or API when the organization enables the matching scanner capabilities.
 
-The *Providers* section and tab are hidden if the user does not have these permissions OR the required scanner entitlements (API Scanner and MCP/Agent Scanner).
+The *Providers* section and tab are hidden if the user does not have these permissions or the required scanner entitlements (API Scanner and MCP/Agent Scanner).
 
 a|
 Any of these permissions:
@@ -56,42 +56,42 @@ Any of these permissions:
 * Monitoring Viewer
 * Monitoring Administrator
 |View monitoring
-a|Users can open the monitoring tab at the service and instance levels and see monitoring in navigation.
+a|Open the monitoring tab at the service and instance levels, and see monitoring in navigation.
 
 a|
 * View Policies
 |View policies
-a|Users can view and apply policies on instances and use the Governance tab for policy access.
+a|View and apply policies on instances, and use the Governance tab for policy access.
 
 a|
 * Manage Policies
 |Apply policies
-a|Users can edit policy configurations and add policies.
+a|Edit policy configurations and add policies.
 
 a|
 * Mule Developer Generative AI User
 |Send prompts to agent
-a|Users can use the native agent in the new experience.
+a|Use the native agent in the new experience.
 
 a|
 Any of these permissions:
 
 * Governance Administrator
 * Manage Policies
-|Create governance strategy
-a|Users can create governance strategies.
+|Create governance strategies
+a|Create governance strategies.
 
-During the first step of creating a governance strategy, users must have *Governance Administrator* permission to create strategies of type "Control" OR *Manage Policies* permission to create strategies of type "Policy" (automated policies).
+In the first step of creating a governance strategy, users must have *Governance Administrator* permission to create strategies of type "Control" or *Manage Policies* permission to create strategies of type "Policy" (automated policies).
 
 a|
 Any of these permissions:
 
 * Governance Viewer
 * Governance Administrator
-|View governance report
-a|Users can view governance reports at the service and governance-strategy level.
+|View governance reports
+a|View governance reports at the service and governance-strategy level.
 
-Users with *Exchange Viewer* can see the conformance badge and whether rulesets passed or failed. However, viewing detailed governance reports (including violations, warnings, and rule breakdowns) OR exporting reports requires *Governance Viewer* permission.
+Users with *Exchange Viewer* can see the conformance badge and whether rulesets passed or failed. However, viewing detailed governance reports (including violations, warnings, and rule breakdowns) or exporting reports requires *Governance Viewer* permission.
 
 a|
 Any of these permissions:
@@ -99,7 +99,7 @@ Any of these permissions:
 * *API Manager* > *View API Alerts*
 * *Runtime Manager* > *Read Alerts*
 |View alerts
-a|Users can view API alerts in API Manager and read alerts in Runtime Manager.
+a|View API alerts in API Manager and read alerts in Runtime Manager.
 
 a|
 Any of these permissions:
@@ -107,7 +107,7 @@ Any of these permissions:
 * *API Manager* > Manage API Alerts
 * *Runtime Manager* > Manage Alerts
 |Manage alerts
-a|Users can manage API alerts in API Manager and manage alerts in Runtime Manager.
+a|Manage API alerts in API Manager and alerts in Runtime Manager.
 
 |===
 
