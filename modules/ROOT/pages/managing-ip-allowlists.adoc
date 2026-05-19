@@ -7,7 +7,7 @@ Restrict access to your Anypoint Platform organization to trusted networks by co
 * IP allowlisting for user sign-ins applies only to users who sign in with Anypoint Platform credentials. It doesn't apply to users who authenticate through an external identity provider (IdP) using SSO.
 * IP allowlisting is configured at the root organization level and applies to all connected apps created under the root organization and its business groups.
 * Only IPv4 addresses are supported.
-* Your root organization can define up to 25 CIDR blocks total.
+* Your root organization can define up to 25 CIDR blocks total, shared across both the user sign-in and connected app token minting policies.
 --
 
 == Before You Begin
@@ -71,7 +71,7 @@ Restrict which IP addresses can mint OAuth 2.0 tokens for connected apps by assi
 
 Connected apps used by CI/CD pipelines, Anypoint MQ Connector, Object Store v2, and other programmatic integrations send token requests from the IP address of the infrastructure they run on. Before assigning CIDR blocks to the Connected Apps policy, identify the outbound IP address behavior for every connected app in your organization.
 
-[WARNING]
+[IMPORTANT]
 ====
 Before enabling this feature, identify the outbound IP address behavior for every connected app in your organization, including those used for Object Store and Anypoint MQ flows. Connected apps running on CloudHub without static IPs or on CloudHub 2.0 Shared Space use dynamic or shared IPs and must be exempted. Enabling enforcement without exempting these apps blocks token minting requests for those integrations.
 ====

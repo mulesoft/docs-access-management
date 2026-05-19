@@ -119,7 +119,7 @@ To enable IP allowlisting for connected apps or to understand which deployment m
 
 === Exempt a Connected App from IP Enforcement
 
-Exempt a connected app when it runs on infrastructure where the outbound IP is dynamic, unpredictable, or shared with other tenants. Apps running on CloudHub without static IPs and CloudHub 2.0 Shared Space require exemption.
+Exempt a connected app when it runs on infrastructure where the outbound IP is dynamic, unknown, or shared with other tenants. You must exempt connected apps running on CloudHub without static IPs or CloudHub 2.0 Shared Space from IP enforcement.
 
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.

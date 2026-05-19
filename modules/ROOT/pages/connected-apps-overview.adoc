@@ -54,7 +54,7 @@ When you register an external application with Anypoint Platform, it receives a 
 
 == IP Allowlisting for Connected Apps
 
-Organization administrators can restrict which IP addresses are allowed to request OAuth 2.0 tokens for connected apps. For configuration steps, deployment model guidance, and per-app exemption instructions, see xref:connected-apps-org-admin.adoc#configure-ip-allowlisting-connected-apps[IP Allowlisting for Connected Apps].
+Organization administrators can restrict which IP addresses are allowed to request OAuth 2.0 tokens for connected apps. For configuration steps, deployment model guidance, and per-app exemption instructions, see xref:managing-ip-allowlists.adoc#configure-ip-allowlisting-connected-apps[Configure IP Allowlisting for Connected Apps].
 
 == See Also
 
