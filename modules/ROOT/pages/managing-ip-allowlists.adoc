@@ -13,7 +13,7 @@ Restrict access to your Anypoint Platform organization to trusted networks by co
 
 == Before You Begin
 
-* Have the root Organization Administrator permission for your organization.
+* Make sure you have the root Organization Administrator permission for your organization.
 
 [enable-disable-ip-allowlisting]
 == Configure IP Allowlisting for User Sign-ins
@@ -34,6 +34,8 @@ All defined CIDR blocks apply to all users in your organization unless they're e
 +
 If there aren't any CIDR blocks configured, this option is disabled.
 . Click *Save*.
++
+After you enable enforcement, users attempting to sign in from an unauthorized IP address receive a `403 Forbidden` error with the message `IP address not allowed for this organization`.
 
 [ip-allowlist-exemptions]
 == Exempt Users from IP Restrictions
@@ -45,9 +47,9 @@ Root organization administrators are subject to IP enforcement unless explicitly
 
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
-. In the Access Management navigation menu, select *Users*.
+. Select *Users*.
 . Select the user to exempt and then select *Settings*.
-. Select *Exempt user from IP restrictions*, and then click *Save* to apply the exemption.
+. Select *Exempt user from IP restrictions*, and then click *Save*.
 
 [configure-ip-allowlisting-connected-apps]
 == Configure IP Allowlisting for Connected Apps
