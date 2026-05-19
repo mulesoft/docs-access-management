@@ -4,38 +4,51 @@ Restrict access to your Anypoint Platform organization to trusted networks by co
 
 [NOTE]
 --
-* This feature is available only for US and EU commercial clouds.
 * IP allowlisting for user sign-ins applies only to users who sign in with Anypoint Platform credentials. It doesn't apply to users who authenticate through an external identity provider (IdP) using SSO.
-* IP allowlisting for connected apps applies at the root organization level and covers all sub-organizations.
+* IP allowlisting is configured at the root organization level and applies to all connected apps created under the root organization and its business groups.
 * Only IPv4 addresses are supported.
-* Your organization can define up to 25 CIDR blocks total, shared across both the user sign-in and connected app token request policies.
+* Your root organization can define up to 25 CIDR blocks total.
 --
 
 == Before You Begin
 
 * Make sure you have the root Organization Administrator permission for your organization.
 
-[enable-disable-ip-allowlisting]
-== Configure IP Allowlisting for User Sign-ins
+[configure-cidr-blocks]
+== Add CIDR Blocks to the IP Allowlist
 
-Enable or disable IP allowlisting for your organization's user sign-ins in Access Management. When this feature is enabled, only sign-ins from IP addresses in allowed CIDR blocks succeed. Sign-in attempts outside the IP allowlist are blocked and logged.
+Add the IP address CIDR blocks that your organization trusts, and assign each block to one or both restriction policies: *User Login*, *Connected Apps*, or both. A CIDR block restricts only the workflows it is assigned to. If no CIDR blocks are assigned to a policy, enabling IP restrictions has no effect on that workflow.
 
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
 . In the Access Management navigation menu, select *Security Settings*.
-. In *IP Allowlist*, enter the IP address CIDR blocks to allow to sign in. For example:
-* IP Address CIDR: `192.0.2.0/24`
-* Description: `NE office network`
-+
+. In *IP Allowlist*, click *+* to add a new row.
+. Enter the IP address CIDR block and an optional description. For example:
+* *IP Address CIDR*: `192.0.2.0/24`
+* *Description*: `NE office network`
+. Under *Restriction Policy*, select the policies to assign to this CIDR block:
+* *User Login* — restricts user sign-ins to this CIDR block
+* *Connected Apps* — restricts connected app token minting requests to this CIDR block
+. Repeat for each CIDR block you want to add.
+. Click *Save*.
+
 [NOTE]
-All defined CIDR blocks apply to all users in your organization unless they're exempted.
-. (Optional) Click *Add* or *Remove* to add and remove CIDR blocks.
-. Switch the *Enforce IP restrictions for login* switch on or off to activate or deactivate defined IP restrictions for all users within your organization.
+All defined CIDR blocks apply to all users and connected apps in your organization unless they are individually exempted.
+
+[enable-disable-ip-allowlisting]
+== Enable or Disable IP Restrictions
+
+After configuring your CIDR blocks and assigning restriction policies, enable the *Enforce IP restrictions* toggle to activate enforcement across all assigned policies.
+
+. Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. In the Access Management navigation menu, select *Security Settings*.
+. Switch the *Enforce IP restrictions* toggle on or off to activate or deactivate IP restrictions for your organization.
 +
-If there aren't any CIDR blocks configured, this option is disabled.
+If no CIDR blocks are configured, this option is disabled.
 . Click *Save*.
 +
-After you enable enforcement, users attempting to sign in from an unauthorized IP address receive a `403 Forbidden` error with the message `IP address not allowed for this organization`.
+After you enable enforcement, users attempting to sign in from an IP address not covered by a User Login-assigned CIDR block receive a `403 Forbidden` error with the message `IP address not allowed for this organization`.
 
 [ip-allowlist-exemptions]
 == Exempt Users from IP Restrictions
@@ -54,19 +67,19 @@ Root organization administrators are subject to IP enforcement unless explicitly
 [configure-ip-allowlisting-connected-apps]
 == Configure IP Allowlisting for Connected Apps
 
-Restrict which IP addresses can request OAuth 2.0 tokens for connected apps in your organization. When this feature is enabled, any `POST /api/v2/oauth2/token` request that originates from an IP address outside the allowlist is blocked and logged.
+Restrict which IP addresses can mint OAuth 2.0 tokens for connected apps by assigning CIDR blocks to the *Connected Apps* restriction policy. When enforcement is enabled, any `POST /api/v2/oauth2/token` request that originates from an IP address not covered by a Connected Apps-assigned CIDR block is blocked and logged.
 
-Connected apps using client credentials are used by CI/CD pipelines, Anypoint MQ Connector, Object Store v2, and other programmatic integrations. Before you enable this feature, identify where each connected app runs and whether its outbound IP address is static and uniquely yours.
+Connected apps used by CI/CD pipelines, Anypoint MQ Connector, Object Store v2, and other programmatic integrations send token requests from the IP address of the infrastructure they run on. Before assigning CIDR blocks to the Connected Apps policy, identify the outbound IP address behavior for every connected app in your organization.
 
 [WARNING]
 ====
-Enabling IP allowlisting for connected apps can break running integrations if the outbound IP address of the Mule runtime is dynamic or shared with other tenants. Review the deployment model guidance below before enabling enforcement.
+Before enabling this feature, identify the outbound IP address behavior for every connected app in your organization, including those used for Object Store and Anypoint MQ flows. Connected apps running on CloudHub without static IPs or on CloudHub 2.0 Shared Space use dynamic or shared IPs and must be exempted. Enabling enforcement without exempting these apps blocks token minting requests for those integrations.
 ====
 
 [connected-app-deployment-models]
 === Identify Your Deployment Model
 
-Use the following table to determine the recommended action for each deployment model before enabling connected app IP allowlisting.
+Use the following table to determine the recommended action for each deployment model before assigning CIDR blocks to the Connected Apps restriction policy.
 
 [%header,cols="25,35,40a"]
 |===
@@ -80,9 +93,9 @@ Use the following table to determine the recommended action for each deployment 
 | Egress IPs are shared across all customers in that space and aren't static. Allowlisting them provides no meaningful security isolation.
 | Exempt the connected app from IP enforcement. These IPs aren't unique to your organization.
 
-| CloudHub  with static IP enabled
+| CloudHub with static IP enabled
 | Fixed IP address; you opt in through Runtime Manager app settings on the *Static IPs* tab
-| Add those static IPs to the allowlist. You can allowlist up to 2× your production vCores allocation.
+| Add those static IPs to the allowlist and assign them to the Connected Apps policy.
 
 | CloudHub 2.0 Private Space
 | Static egress IPs assigned to the Private Space; unique to your organization
@@ -101,24 +114,23 @@ Use the following table to determine the recommended action for each deployment 
 | Your network team knows these IPs. Add them to the allowlist.
 |===
 
-[NOTE]
-MuleSoft-managed platform services (internal connected apps) are automatically exempt from connected app IP enforcement. You can't change this exemption.
-
 === Enable or Disable IP Allowlisting for Connected Apps
+
+IP allowlisting for connected apps uses the same *Enforce IP restrictions* toggle as user sign-in enforcement. What determines whether connected apps are restricted is whether any CIDR blocks are assigned to the *Connected Apps* restriction policy.
 
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
 . In the Access Management navigation menu, select *Security Settings*.
-. In *IP Allowlist*, confirm that at least one CIDR block is defined. CIDR blocks are shared between the user sign-in and connected app token request policies.
-. Switch the *Enforce IP restrictions for connected app token requests* switch on or off to activate or deactivate IP restrictions for all connected apps in your organization.
+. In *IP Allowlist*, confirm that at least one CIDR block is assigned to the *Connected Apps* restriction policy. If none are assigned, enabling the toggle has no effect on connected app token minting.
+. Switch the *Enforce IP restrictions* toggle on to activate IP restrictions for your organization.
 +
-If there aren't any CIDR blocks configured, this option is disabled.
+If no CIDR blocks are configured, this option is disabled.
 . Click *Save*.
 
 [connected-app-exemptions]
 === Exempt a Connected App from IP Enforcement
 
-If a connected app runs on infrastructure where the outbound IP address is dynamic or shared, such as CloudHub without static IPs or CloudHub 2.0 Shared Space, exempt that app from IP enforcement rather than trying to allowlist unpredictable IPs.
+Exempt a connected app when it runs on infrastructure where the outbound IP is dynamic, unknown, or shared with other tenants, such as CloudHub without static IPs or CloudHub 2.0 Shared Space.
 
 . Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
 . Select *Access Management* from the image:gear.svg["gear icon",20] menu.
@@ -133,7 +145,7 @@ These actions are logged in the audit log:
 
 * Create, update, and delete actions performed by an organization administrator on the allowlist
 * Sign-in failures due to IP restrictions
-* Blocked connected app token requests due to IP restrictions
+* Blocked connected app token minting requests due to IP restrictions
 
 == See Also
 
