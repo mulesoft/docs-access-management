@@ -1,6 +1,6 @@
 = Managing IP Allowlists in Access Management
 
-Restrict access to your Anypoint Platform organization to trusted networks by configuring IP allowlists in Access Management. You can enforce IP restrictions for both user sign-ins and connected app token requests to reduce credential abuse, prevent unauthorized automation, and meet compliance requirements.
+Restrict access to your Anypoint Platform organization to trusted networks by configuring IP allowlists in Access Management. You can enforce IP restrictions for both user sign-ins and connected app token minting to reduce credential abuse, prevent unauthorized automation, and meet compliance requirements.
 
 [NOTE]
 --
@@ -67,7 +67,7 @@ Root organization administrators are subject to IP enforcement unless explicitly
 [configure-ip-allowlisting-connected-apps]
 == Configure IP Allowlisting for Connected Apps
 
-Restrict which IP addresses can mint OAuth 2.0 tokens for connected apps by assigning CIDR blocks to the *Connected Apps* restriction policy. When enforcement is enabled, any `POST /api/v2/oauth2/token` request that originates from an IP address not covered by a Connected Apps-assigned CIDR block is blocked and logged.
+Restrict which IP addresses can mint OAuth 2.0 tokens for connected apps by assigning CIDR blocks to the *Connected Apps* restriction policy. When enforcement is enabled, any `POST /api/v2/oauth2/token` request that originates from an IP address not covered by a Connected Apps-assigned CIDR block is blocked and audit logged.
 
 Connected apps used by CI/CD pipelines, Anypoint MQ Connector, Object Store v2, and other programmatic integrations send token requests from the IP address of the infrastructure they run on. Before assigning CIDR blocks to the Connected Apps policy, identify the outbound IP address behavior for every connected app in your organization.
 
