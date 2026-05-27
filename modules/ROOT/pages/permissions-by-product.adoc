@@ -690,8 +690,8 @@ In RPA Manager:
 | Manage Tenants | Create, update, and delete application tenants in a specific environment.|
 | Read Alerts | View alerts in a specific environment.|
 | Read Applications | View applications in a specific environment.|
-| Manage Servers | Create, update, and delete server and Flex Gateway resources.|
-| Read Servers | View server and Flex Gateway resources.|
+| Manage Servers | Create, update, and delete server and Omni Gateway resources.|
+| Read Servers | View server and Omni Gateway resources.|
 | Manage Application Flows | Update flows.|
 | Create Applications | Create applications in a specific environment.|
 | Restart Applications | Restart applications deployed to Runtime Fabric in a specific environment.|

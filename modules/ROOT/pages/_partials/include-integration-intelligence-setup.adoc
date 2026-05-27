@@ -101,7 +101,7 @@ The business group you select for data ingestion can't be changed after you save
 A list of applications in the selected environment appears.
 +
 [NOTE]
-The application selection list includes specific versions of Mule on CloudHub 2.0 and Runtime Fabric. The list of selectable apps isn't inclusive of all the apps in the selected business groups. For other deployments (CloudHub, Mule Gateway, Flex Gateway), or some earlier versions of Mule, telemetry data ingestion is automatically enabled and excluded from the selection list.  
+The application selection list includes specific versions of Mule on CloudHub 2.0 and Runtime Fabric. The list of selectable apps isn't inclusive of all the apps in the selected business groups. For other deployments (CloudHub, Mule Gateway, Omni Gateway), or some earlier versions of Mule, telemetry data ingestion is automatically enabled and excluded from the selection list.  
 . Select the applications to ingest telemetry data for, and click *Enable Data Ingestion*.
 +
 You can search for applications by name and you can also select *Show only applications available for selection* to filter the list and show only applications that use the latest runtime versions. 
