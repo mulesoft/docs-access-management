@@ -13,7 +13,7 @@ Connected app ownership gets transferred to the root organization owner when the
 
 To maintain security, manually rotate the client secrets of all connected apps in the organization after the transfer. For more information about how to manually rotate client secrets, see <<modify-client-secret>>.
 
-You can also reset client secrets programmatically using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/%236918/[Access Management API]. 
+You can also reset client secrets programmatically using the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/%236918/[Access Management API].
 
 == Manage Owned Apps
 
@@ -21,15 +21,15 @@ To maintain security, you can view and manage connected apps only if you have th
 
 To manage your connected apps:
 
-. Navigate to *Access Management* and select the *Connected Apps* tab. 
-. Add and edit apps in the *Owned Apps* section. 
+. Navigate to *Access Management* and select the *Connected Apps* tab.
+. Add and edit apps in the *Owned Apps* section.
 . Manage app access in the *Authorizations* section.
 
 === Edit the App Owner
 
 Organization administrators can edit the owner of the connected app and transfer the ownership to other administrators:
 
-. In *Access Management* > *Connected Apps* > *Owned Apps*, click the app name. 
+. In *Access Management* > *Connected Apps* > *Owned Apps*, click the app name.
 . Make the changes and click *Save changes*.
 
 [[modify-client-secret]]
@@ -54,14 +54,15 @@ image::connected-apps-edit-mode.png[Edit mode for a connected app]
 . In the *Authorizations* tab, select the app.
 . Click the more actions menu (*...*) for the application and select *Show details*.
 
-=== Revoke Authorization 
+=== Revoke Authorization
 
 When you revoke an app’s access, the app’s OAuth 2.0 access tokens and refresh tokens are revoked, and the app can no longer access user data. This action can't be undone.
 
 . In the *Authorizations* tab, select the app.
 . Click the more actions menu (*...*) for the selected application and select *Remove*.
-. Click *Remove*. 
+. Click *Remove*.
 
+[[configure-authorization-policies]]
 == Configure Authorization Policies
 
 You can configure one of these types of authorization policies for your users:
