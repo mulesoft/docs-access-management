@@ -112,4 +112,4 @@ A connected app that acts on behalf of a user receives its own access and permis
 == See Also
 
 * xref:connected-apps-developers.adoc[]
-* xref:creating-connected-apps.adoc[]
+* xref:creating-connected-apps-dev.adoc[]
