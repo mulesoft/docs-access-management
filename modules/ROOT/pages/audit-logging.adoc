@@ -3306,8 +3306,7 @@ Properties:
 The Audit Log Query API includes pagination options and examples.
 
 You can access the
-https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API and its
-https://exchange-files.anypoint.mulesoft.com/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/ed7300b664308faafbb61765b35004e3a0c6a08b713784704686cfa984aa7dc7.zip?response-content-disposition=attachment%3B%20filename%3Daudit-log-query-api-1.0.9-raml.zip&Expires=1771053160&Key-Pair-Id=APKAJ3T3QD2CMFEXRAJA&Signature=M5k9Sc42FNnEx3c3slWW-nDIWQPKrGdGTtMg3bL3fF6Cb4~0JqiXPJ1XeZrTjV7bG~uEhMFzCeXwi7BNalYkZDmFRWPemnTdVCMa1UE2dS0rTcLIt051K1ZDhRjzPa2Unels1Ox2FQpGfGOK~~z-04~bTF0AZkGeNlEmrWGIPdSgq7h~TA726oFYI6RnrY6Jv56EeEDOg6hcKccPt8vF1TQY6jDL4dQY3sh6prbtNOslt~hEZZ492k7jwe5ZKDGgUTxAVFcQrjX9n9~rpdP2UQCVvzXYIlopQAg~A1LgvxDW9XSIkDF8mum-6hUIJg5i1cnIRrJxgkhrscosGi4jyw__[RAML].
+https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API.
 
 [[paginated-logs]]
 === Use a Query Loop to Make Requests in Audit Logs
