@@ -1,11 +1,13 @@
-= Trusted Salesforce Organizations
+= Salesforce Organization Connections in Anypoint Platform
 
 Enable cross-platform features between your Anypoint Platform organization and a trusted Salesforce organization (tenant) by establishing a connection between them. 
 
-Establishing a tenant relationship between an Anypoint Platform organization and a Salesforce organization enables users in your organization to:
+After you establish a tenant relationship between your Anypoint Platform organization and a Salesforce organization, users in your organization can:
 
-* Enable API Catalog for a connected Salesforce organization to view a catalog of MuleSoft APIs that are available for use in the connected Salesforce organization and sync APIs to get the latest changes and updates.
-* Enhance Anypoint Code Builder and Intelligent Document Processing (IDP) developer experiences with Einstein. 
+* Enable API Catalog to view and sync MuleSoft APIs and MCP servers available in the connected Salesforce organization.
+* Enable Agentforce capabilities in Anypoint Code Builder, Anypoint Exchange, and Intelligent Document Processing (IDP).
+* Enable MuleSoft Direct so Salesforce administrators can discover and deploy pre-built integrations directly from the connected Salesforce organization.
+* Enable Integration Intelligence to use AI-powered insights for monitoring, analysis, and troubleshooting of MuleSoft integrations.
 
 When you establish the tenant relationship, you can initiate, complete, and manage the tenant relationships. You can also enable, disable, and remove connections. 
 
