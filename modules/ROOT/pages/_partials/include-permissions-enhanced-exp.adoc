@@ -76,8 +76,9 @@ These permissions:
 * API Manager: View Policies
 * Anypoint Monitoring: Monitoring Viewer
 * Exchange: Exchange Viewer
+* Anypoint Code Builder: Mule Developer Generative AI User
 |Use the *Cost Management* experience
-a|Apply optimization strategies using policies, view policies, view Exchange assets, and query metrics.
+a|Apply optimization strategies using policies, view policies, view Exchange assets, and query metrics. The Mule Developer Generative AI User permission is required to enable AI features.
 
 a|
 Anypoint Code Builder: Mule Developer Generative AI User
