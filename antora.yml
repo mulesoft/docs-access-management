@@ -3,3 +3,6 @@ title: Access Management
 version: 'master'
 nav:
 - modules/ROOT/nav.adoc
+asciidoc:
+  attributes:
+    page-component-desc: Manages users, teams, roles, permissions, environments, business groups, identity providers, and Salesforce org connections.
