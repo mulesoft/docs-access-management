@@ -2,7 +2,7 @@
 
 Use Anypoint Platform Connected Apps to delegate access to applications, build CI/CD pipelines, and extend platform functionality using OAuth 2.0 and OpenID Connect. Developers can allow users to sign in with Anypoint Platform and control client access through an application allowlist.
 
-Anypoint Platform provides a https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/[comprehensive set of APIs] to extend functionality.
+Anypoint Platform provides a https://dev-portal.mulesoft.com/apis/access-management.html[comprehensive set of APIs] to extend functionality.
 
 The Connected Apps feature enables you to:
 
@@ -31,6 +31,6 @@ For more information, see xref:connected-apps-org-admin.adoc#application-allowli
 
 == See Also
 
-* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/pages/Connected%20App%20Examples/[Access Management API - Connected App Examples]
+* https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API]
 * xref:creating-connected-apps-dev.adoc[]
 * xref:connected-apps-org-admin.adoc[]
