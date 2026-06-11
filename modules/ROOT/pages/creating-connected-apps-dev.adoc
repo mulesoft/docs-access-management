@@ -58,7 +58,7 @@ Anypoint Platform supports these grant types:
 * <<jwt-bearer>>
 * <<client-credentials>>
 
-For more information and examples on how to use each grant type, see the https://dev-portal.mulesoft.com/apis/access-management.html[Connected App Examples] in the Access Management API.
+For more information and examples on how to use each grant type, see the https://dev-portal.mulesoft.com/apis/access-management.html[Connected App Examples] in the Access Management API documentation.
 
 [[auth-code]]
 === Authorization Code

@@ -51,7 +51,7 @@ You receive the following response:
 }
 ----
 +
-Now that you have the bearer token, you can use the connected app to invoke Anypoint Platform APIs. For more examples, see https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API].
+Now that you have the bearer token, you can use the connected app to invoke Anypoint Platform APIs. For more examples, see the https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API documentation].
 
 == See Also
 
