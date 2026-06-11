@@ -11,18 +11,18 @@ Organization owners and administrators can use Access Management to:
 * xref:users.adoc[Invite and manage users] in your organization.
 * Create xref:business-groups.adoc[business groups] to contain your Anypoint Platform resources such as apps and APIs.
 * Create xref:environments.adoc[environments] to manage app and API deployment.
-* xref:managing-permissions.adoc[Assign permissions to individual users] or setup hierarchal user management by using the xref:teams.adoc[Teams] feature to manage access to assets and areas of your organization.
+* xref:managing-permissions.adoc[Assign permissions to individual users] or set up hierarchical user management by using the xref:teams.adoc[Teams] feature to manage access to assets and areas of your organization.
 * Manage user identity and configure single sign-on (SSO) by using xref:external-identity.adoc[external identity providers (IdPs)].
 * Protect your organization from unauthorized access by using xref:multi-factor-authentication.adoc[multi-factor authentication].
 * Authorize client applications by configuring xref:managing-api-clients.adoc[external client providers].
 * View user and connected app activity by using xref:audit-logging.adoc[audit logs].
-* Develop and configure xref:connected-apps-overview.adoc[connected apps] to delegate access to the platform.
-* Allow xref:external-organization-access.adoc[external organization access] to facilitate collaboration with other Anypoint Platform organizations.
+* Develop and configure xref:connected-apps-overview.adoc[connected apps] to delegate access to Anypoint Platform.
+* Grant xref:external-organization-access.adoc[external organizations] access to your resources to enable cross-organization collaboration.
 
 Access Management also provides a REST API for you to programmatically access the resources related to user and client management, organizations and business groups, and roles and permissions.
 To use the Access Management API, see the https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API Portal].
 
-Depending on your xref:hosting-home::index.adoc[Anypoint Platform deployment type], some Access Management features may be unavailable to your organization. For example, account creation and user invitation from the platform is not available for Anypoint Platform Private Cloud Edition. Certain features are also unavailable for MuleSoft Government Cloud.
+Depending on your xref:hosting-home::index.adoc[Anypoint Platform deployment type], some Access Management features may be unavailable to your organization. For example, account creation and user invitation from Anypoint Platform isn't available for Anypoint Platform Private Cloud Edition. Certain features are also unavailable for MuleSoft Government Cloud.
 
 Organization administrators can contact your MuleSoft Account Team for help with your account. If you're not an administrator, contact your organization administrator.
 
