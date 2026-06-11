@@ -140,7 +140,7 @@ You can use the Access Management API call `PUT /accounts/api/organizations/{org
 
 If you don't use the `force` parameter, when updating an external client application via the Anypoint Platform API, Anypoint Platform first attempts to update the Identity Provider (IdP) and then updates its internal records only if the IdP update is successful.
 
-For more information, see https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/access-management-api/minor/1.0/console/method/%237020/[Access Management API] documentation.
+For more information, see https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API] documentation.
 
 == Supported Grant Types
 

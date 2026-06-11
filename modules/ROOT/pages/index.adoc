@@ -1,7 +1,4 @@
 = Access Management Overview
-ifndef::env-site,env-github[]
-include::_attributes.adoc[]
-endif::[]
 :keywords: anypoint platform, permissions, configuring
 :page-aliases: anypoint-platform-for-apis-administration.adoc
 
@@ -21,7 +18,7 @@ For organization owners and administrators, Access Management enables you to:
 * Allow xref:external-organization-access.adoc[external organization access] to facilitate collaboration with other Anypoint Platform organizations.
 
 Access Management also provides a REST API for you to programmatically access the resources related to user and client management, organizations and business groups, and roles and permissions.
-To use this API, use the https://anypoint.mulesoft.com/apiplatform/anypoint-platform/#/portals/organizations/68ef9520-24e9-4cf2-b2f5-620025690913/apis/11270/versions/11646/pages/11244[Access Management API Portal].
+To use this API, use the https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API Portal].
 
 Depending on your xref:hosting-home::index.adoc[control plane], some Access Management features may be unavailable to your organization. For example, account creation and user invitation from the platform is not available for Anypoint Platform Private Cloud Edition. Certain features are also unavailable for Mulesoft Government Cloud.
 
