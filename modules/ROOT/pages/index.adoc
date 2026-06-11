@@ -29,8 +29,8 @@ Organization administrators can contact your MuleSoft Account Team for help with
 == See Also
 
 * xref:managing-your-account.adoc#how-to-create-your-account[Create Your Account]
-* xref:users.adoc[Users]
-* xref:managing-permissions.adoc[Manage Permissions]
-* xref:teams.adoc[Teams]
-* xref:roles.adoc[Roles]
+* xref:users.adoc[]
+* xref:managing-permissions.adoc[]
+* xref:teams.adoc[]
+* xref:roles.adoc[]
 * https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API Portal]
