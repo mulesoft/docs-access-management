@@ -3306,7 +3306,7 @@ Properties:
 The Audit Log Query API includes pagination options and examples.
 
 You can access the
-https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/[Audit Log REST API] from the Audit Logging Query API.
+https://dev-portal.mulesoft.com/apis/audit-log-query.html[Audit Log REST API] from the Audit Log Query API.
 
 [NOTE]
 --
@@ -3316,10 +3316,7 @@ Recent events may not appear immediately in Audit Logging Query API results. To 
 [[paginated-logs]]
 === Use a Query Loop to Make Requests in Audit Logs
 
-The https://exchange-files.anypoint.mulesoft.com/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/ed7300b664308faafbb61765b35004e3a0c6a08b713784704686cfa984aa7dc7.zip?response-content-disposition=attachment%3B%20filename%3Daudit-log-query-api-1.0.9-raml.zip&Expires=1771053160&Key-Pair-Id=APKAJ3T3QD2CMFEXRAJA&Signature=M5k9Sc42FNnEx3c3slWW-nDIWQPKrGdGTtMg3bL3fF6Cb4~0JqiXPJ1XeZrTjV7bG~uEhMFzCeXwi7BNalYkZDmFRWPemnTdVCMa1UE2dS0rTcLIt051K1ZDhRjzPa2Unels1Ox2FQpGfGOK~~z-04~bTF0AZkGeNlEmrWGIPdSgq7h~TA726oFYI6RnrY6Jv56EeEDOg6hcKccPt8vF1TQY6jDL4dQY3sh6prbtNOslt~hEZZ492k7jwe5ZKDGgUTxAVFcQrjX9n9~rpdP2UQCVvzXYIlopQAg~A1LgvxDW9XSIkDF8mum-6hUIJg5i1cnIRrJxgkhrscosGi4jyw__[latest version of the query API] uses cursor pagination for efficiency, but you can continue to use the https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api/minor/1.0/console/method/%23245/[previous version of the query API], which uses offset pagination and returns the total number of records.
-
-
-The latest version of the API uses pagination with cursors, so you can initiate query loops using cursors. Setting the `cursorPagination` query parameter to `true` enables you to use cursor paging.
+The https://dev-portal.mulesoft.com/apis/audit-log-query.html[Audit Log Query API] uses pagination with cursors, so you can initiate query loops using cursors. Setting the `cursorPagination` query parameter to `true` enables you to use cursor paging.
 
 When you use cursor pagination, each response returns a cursor. The cursor corresponds to the last data entry in the response dataset. The subsequent request in the query loop uses the cursor value that was returned in the previous response.
 
@@ -3496,5 +3493,5 @@ It's best for Audit Log Query Endpoint users to monitor their request rates and 
 == See Also
 
 * xref:audit-log-retention.adoc[]
-* https://anypoint.mulesoft.com/exchange/portals/anypoint-platform/f1e97bc6-315a-4490-82a7-23abe036327a.anypoint-platform/audit-log-query-api[Audit Log Query API]
+* https://dev-portal.mulesoft.com/apis/audit-log-query.html[Audit Log Query API]
 * xref:mq::mq-audit-logs.adoc[Anypoint MQ Audit Logs]
