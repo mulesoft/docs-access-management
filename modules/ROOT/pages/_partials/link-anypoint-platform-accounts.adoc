@@ -2,7 +2,7 @@
 [[profile-linking-context-users]]
 = Link Your Anypoint Platform Profiles
 
-When you sign in to Anypoint Platform for the first time using an external identity provider (IdP), Anypoint Platform locates potential user accounts that match the email address associated with your IdP profile. Your options for linking profiles vary based on whether the profiles use the Anypoint identity provider (IdP) or an external IdP that uses single sign-on (SSO). Anypoint Platform supports:
+When you sign in to Anypoint Platform for the first time using an external identity provider (IdP), Anypoint Platform locates potential user accounts that match the email address associated with your IdP profile. Your options for linking profiles vary based on whether the profiles use the Anypoint Platform IdP or an external IdP that uses single sign-on (SSO). Anypoint Platform supports:
 
 * Linking an SSO signin to a local profile by using credentials (signin managed by Anypoint IdP)
 * Linking an SSO signin to another SSO signin that uses a different IdP to sign in
@@ -16,19 +16,19 @@ Anypoint Platform doesn't support linking multiple profiles that use the same Id
 [[profile-linking]]
 = Link a New SSO Signin to Existing Profiles
 
-When you attempt to sign in using SSO for the first time and there are additional user profiles that share the same email address but use different identity providers (IdPs) to sign in, you are prompted to link the profiles. You cannot link profiles that use the same IdP.
+When you sign in using SSO for the first time and there are additional user profiles that share the same email address but use different identity providers (IdPs), Anypoint Platform prompts you to link the profiles. You can't link profiles that use the same IdP.
 
 . In the Anypoint Platform signin page, click *Sign in with <your identity provider>*.
 . If prompted, enter your credentials for your IdP. +
-If your SSO credentials share an email address with additional profiles in the same organization, you are prompted to select one of the profiles and sign in with those credentials to link your profiles. 
+If your SSO credentials share an email address with additional profiles in the same organization, you are prompted to select one of the profiles and sign in with those credentials to link your profiles.
 +
 . In the *Link your Account* page, select the profile you want to link. +
-You can hover over each profile to see which identity provider it uses.
+Hover over each profile to see which identity provider it uses.
 +
 . Click *Link Accounts*.
 . Enter your credentials for the profile you chose.
 +
-You can now view your linked profile in the *Logged In Via* section of your user profile.
+Your linked profile now appears in the *Logged In Via* section of your user profile.
 
 // end::profileLinking[]
 
@@ -36,7 +36,7 @@ You can now view your linked profile in the *Logged In Via* section of your user
 [[enable-profile-linking]]
 = Enable Users to Link Anypoint Platform Profiles
 
-As an organization administrator, you can enable users to link multiple Anypoint Platform profiles that use the same email address to sign in. The option to link profiles is available only when the SSO user signs in to their new Anypoint Platform account for the first time. 
+As an organization administrator, you can enable users to link multiple Anypoint Platform profiles that use the same email address to sign in. The option to link profiles is available only when the SSO user signs in to their new Anypoint Platform account for the first time.
 
 Anypoint Platform supports:
 
@@ -44,14 +44,13 @@ Anypoint Platform supports:
 * Linking an SSO signin to another SSO signin that uses a different IdP
 * Linking an SSO signin to multiple other profiles that use different IdPs
 
-Anypoint Platform does not support linking multiple profiles that use the same IdP. Only OpenID Connect (OIDC) IdPs are supported.
+Anypoint Platform doesn't support linking multiple profiles that use the same IdP. Anypoint Platform supports only OpenID Connect (OIDC) IdPs.
 
-include::partial$include-nav-steps-org-admin.adoc[]
-
-include::partial$include-nav-identity-providers.adoc[]
-
-. In the *Link Multiple SSO Profiles* section, click *Enabled*. 
-. Click *Save Changes*. 
+. Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. In the Access Management navigation menu, click *Identity Providers*.
+. In the *Link Multiple SSO Profiles* section, click *Enabled*.
+. Click *Save Changes*.
 +
 Users in your organization can now link their SSO logins with other IdP profiles that share the same email address.
 
@@ -59,24 +58,22 @@ Users in your organization can now link their SSO logins with other IdP profiles
 
 // tag::deleteLinkedProfilesAdmin[]
 [[remove-linked-profile-org-admin]]
-= Remove a Linked Profile From a User Account 
+= Remove a Linked Profile From a User Account
 
-Organization administrators can remove a linked profile from a user account by making a `DELETE` call to `/accounts/api/organizations/:orgId/users/:userId/identityProviderProfiles`. For details, see the https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API documentation]. 
+To remove a linked profile from a user account, organization administrators make a `DELETE` call to `/accounts/api/organizations/:orgId/users/:userId/identityProviderProfiles`. For details, see the https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API documentation].
 
 // end::deleteLinkedProfilesAdmin[]
 
 // tag::requireProfileLinkingForAdmins[]
 [[require-profile-linking]]
 = Require Users to Link Anypoint Platform Profiles
-// DO NOT USE THIS SECTION YET - NOT YET SUPPORTED 
+// DO NOT USE THIS SECTION YET - NOT YET SUPPORTED
 
-If your organization has xref:external-identity-index.adoc#enable-profile-linking[enabled the *Link Multiple SSO Profiles* setting], organization administrators can require all users to link available Anypoint Platform profiles.
+If your organization has xref:external-identity-index.adoc#enable-profile-linking[enabled the *Link Multiple SSO Profiles* setting], you can require all users to link their Anypoint Platform profiles.
 
-include::partial$include-nav-steps-org-admin.adoc[]
-
-include::partial$include-nav-identity-providers.adoc[]
-
-. In the *Link Multiple SSO Profiles* section, click *Required* so that users must link their user profiles when logging in to Anypoint Platform. 
-
+. Sign in to Anypoint Platform using an account that has the Organization Administrator permission.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. In the Access Management navigation menu, click *Identity Providers*.
+. In the *Link Multiple SSO Profiles* section, click *Required* so that users must link their profiles when they log in to Anypoint Platform.
 
 // end::requireProfileLinkingForAdmins[]
