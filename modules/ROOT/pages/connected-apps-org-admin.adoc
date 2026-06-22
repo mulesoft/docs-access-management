@@ -15,6 +15,7 @@ To maintain security, manually rotate the client secrets of all connected apps i
 
 You can also reset client secrets programmatically using the https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API]. 
 
+[[manage-owned-apps]]
 == Manage Owned Apps
 
 To maintain security, you can view and manage connected apps only if you have the Organization Administrator permission in the root organization or in the business group where the connected app resides.
@@ -48,6 +49,13 @@ image::connected-apps-edit-mode.png[Edit mode for a connected app]
 . Name of the connected app
 . ID of the connected app
 . Client secret of the connected app
+
+The `credentialsUpdatedAt` timestamp records when the connected app's client secret was last updated. It updates only when the client secret changes, such as when you reset the secret, but not when you modify other app details like the name or redirect URIs.
+
+[NOTE]
+--
+This field was added without a historical backfill, so the timestamp doesn't reflect secret changes made before June 4, 2026. Connected apps whose secret hasn't changed since then return the app's creation date as a fallback instead of an actual rotation timestamp.
+--
 
 === View Authorizations
 
