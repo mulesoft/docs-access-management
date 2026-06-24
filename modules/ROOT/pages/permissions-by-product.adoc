@@ -305,12 +305,12 @@ include::access-management::partial$include-permissions-monitoring.adoc[tag=perm
 
 == MQ
 
-include::access-management::partial$include-permissions-mq.adoc[tag=mqPermissionsTable]
+include::mq::partial$include-permissions-mq.adoc[tag=mqPermissionsTable]
 
 
 == Object Store v2
 
-include::access-management::partial$include-permissions-osv2.adoc[tag=osv2PermissionsTable]
+include::object-store::partial$include-permissions-osv2.adoc[tag=osv2PermissionsTable]
 
 == Partner Manager
 
