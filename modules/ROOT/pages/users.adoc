@@ -1,10 +1,10 @@
 = Managing Users
 
-As an administrator of your organization, you can enable, disable, or delete users, assign permissions to users, and edit a user's settings.
+Control who has access to your Anypoint Platform organization by managing user accounts. As an organization administrator, you can invite users, assign permissions, update user settings, enable and disable users, and remove users when needed.
 
 == Before You Begin
 
-Verify that you have the required permissions:
+Make sure that you have the required permissions:
 
 * Organization Administrator permission (required for all user management tasks)
 * API Version Owner permission (required only if you manage user permissions for your API version)
@@ -48,9 +48,9 @@ The user's *Settings* page is where you can edit the user's first and last name,
 
 include::partial$include-nav-users.adoc[]
 
-. There are three ways to access the user's *Settings* page:
+. Access the user's *Settings* page:
 * Click the user's name in the *Name* column.
-* Click the username of the user in the *Username* column.
+* Click the username in the *Username* column.
 * Click the more actions menu (*...*) in the user's row, and select *Manage User*.
 . Click the *Settings* tab. 
 
@@ -63,12 +63,12 @@ For more information about configuring Teams, see xref:configure-teams.adoc#mana
 
 In the *Users* page, click a user name to access more information about that user, manage and view permissions, manage and view teams, or reset their password.
 
-By default, in every new organization and business group, you can assign the following:
+You can assign permissions in these areas:
 
-* Assign API permissions: Select the name of the API you want to give access to, then pick a version and permission.
-* Assign Runtime Manager permissions: Select the name of the Runtime Manager environment to give access to, then pick a permission.
-* Assign teams: Select the name of the team to give access to.
-* Assign roles: Select the name of the role to grant. Check the xref:roles.adoc[roles] section for a description of the default roles within an organization and business group.
+* *API permissions*: Grant access to specific APIs by selecting the API name, version, and permission level.
+* *Runtime Manager permissions*: Grant access to Runtime Manager environments by selecting the environment and permission level.
+* *Teams*: Add users to teams with predefined permission sets.
+* *Roles*: Assign predefined roles that bundle multiple permissions. See xref:roles.adoc[Roles] for descriptions of default roles.
 
 To grant permissions to individual users: 
 
@@ -79,11 +79,9 @@ include::partial$include-nav-users.adoc[]
 . Click the name of the user to assign permissions to.
 . Click the *Permissions* tab and click *Add permissions*.
 . Select the permissions to add and click *Next*.
-+
-The list of *Permissions* includes all permissions, even if they are already assigned to users. If you add a permission that's already assigned, there is no effect.
 . Select the business groups to apply the permissions to.
 +
-Select which environments to apply the permission to if it's enabled for the permission. 
+If environment-level permissions are available, select which environments to apply the permission to. 
 . Click *Next*.
 . Review the permissions and the business groups and environments they apply to, and then click *Add Permissions*.
 +
