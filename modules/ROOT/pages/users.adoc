@@ -1,31 +1,20 @@
 = Managing Users
 
-As an administrator of your root organization, you can enable, disable, or delete users, assign permissions to users, and edit a user's settings. 
-
-On the access management *Users* page, you can:
-
-* Invite users to join your organization.
-* Enable and disable users. 
-+
-When you disable a user, they are no longer able to sign in to your organization.
-* Delete users. 
-+
-When deleting a user from the root organization, all of the user's permissions are removed, and the user becomes unattached. 
-* Send a request to a user to reset their password.
+As an administrator of your organization, you can enable, disable, or delete users, assign permissions to users, and edit a user's settings.
 
 == Before You Begin
 
-Before getting started, make sure you have:
+Verify that you have the required permissions:
 
-* The Organization Administrator permission
-* The API Version Owner permission if you plan to manage user permissions for your API version
+* Organization Administrator permission (required for all user management tasks)
+* API Version Owner permission (required only if you manage user permissions for your API version)
 
 [[inviting-users]]
 == Invite a User to Anypoint Platform
 
 [NOTE]
 --
-This feature is not available in Anypoint Platform Private Cloud Edition, Government Cloud, or for organizations that use external identity providers for single sign-on (SSO) and have xref:external-identity-index.adoc#account-creation-changes[disabled account creation]. You must manage users, including invitations for new users, through your third-party IdP or LDAP.
+This feature isn't available in Anypoint Platform Private Cloud Edition, Government Cloud, or for organizations that use external identity providers for single sign-on (SSO) and have xref:external-identity-index.adoc#account-creation-changes[disabled account creation]. You must manage users, including invitations for new users, through your third-party IdP or LDAP.
 --
 
 As an organization administrator of a business group, you can invite new users and manage existing users for your organization.
@@ -39,9 +28,7 @@ include::partial$include-nav-users.adoc[]
 . Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role] to assign permissions to these users.
 . Click *Send Invitation*.
 
-The users you specify receive email invitations to join your organization. Invited users must use the link they receive in the invitation to join your organization. When they click the link, they are presented with a sign-up form that already has the *Company* field completed with the name of your organization.
-
-The email link expires in one week.
+The users you specify receive email invitations to join your organization. The email link expires in one week. When they click the link, they are presented with a sign-up form that already has the *Company* field completed with the name of your organization.
 
 Invited users have access to the same set of resources as you (although they may have different permissions that restrict what they can view or do).
 
@@ -64,7 +51,7 @@ include::partial$include-nav-users.adoc[]
 . There are three ways to access the user's *Settings* page:
 * Click the user's name in the *Name* column.
 * Click the username of the user in the *Username* column.
-* Click the more actions menu (*...*) in the user's row, and select *Manage User*. 
+* Click the more actions menu (*...*) in the user's row, and select *Manage User*.
 . Click the *Settings* tab. 
 
 [[grant-user-permissions]]
@@ -94,7 +81,7 @@ include::partial$include-nav-users.adoc[]
 . Select the permissions to add and click *Next*.
 +
 The list of *Permissions* includes all permissions, even if they are already assigned to users. If you add a permission that's already assigned, there is no effect.
-. Select the business groups to apply the permissions to. 
+. Select the business groups to apply the permissions to.
 +
 Select which environments to apply the permission to if it's enabled for the permission. 
 . Click *Next*.
@@ -137,13 +124,13 @@ For more information on limits in Access Management, see xref:troubleshooting-an
 
 == Manage Deleted Users
 
-When you delete a user from your root organization, the user is _soft deleted_. The deleted user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs. 
+When you delete a user from your root organization, the user is _soft deleted_. The deleted user can no longer access the root organization or business groups but maintains an Anypoint Platform account and can later be associated with another organization. Anypoint Platform maintains a record of such users for the purposes of audit logs.
 
 Deleting a user does not affect the assets created by that user. For instance, deleting a user who has created an API in Exchange, an API in API Manager, or an application in Runtime Manager does not have any impact on the assets they created.
 
-An Anypoint Platform user can't sign into an organization they were removed from. If a user tries to sign in to an organization they were removed from, they are added to a new trial organization as an administrator.  
+An Anypoint Platform user can't sign into an organization they were removed from. If a user tries to sign in to an organization they were removed from, they are added to a new trial organization as an administrator.
 
-An organization administrator can invite a user to rejoin the organization they were previously removed from, but the user must create a new username. 
+An organization administrator can invite a user to rejoin the organization they were previously removed from, but the user must create a new username.
 
 A deleted federated user appears in the organization as a disabled account. An organization administrator can reenable this user.
 
