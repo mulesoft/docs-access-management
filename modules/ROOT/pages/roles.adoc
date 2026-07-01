@@ -53,6 +53,8 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 ** Manage Servers
 ** Manage Settings
 ** Read Applications
++
+When you create an environment under a business group, Anypoint Platform automatically creates a *CloudHub Admin (<environment name>)* role for that environment. All users with the Organization Administrator permission on that business group are automatically added to this role. To remove users from this role, go to *Access Management* > *Business Groups* > *Roles* after creating the environment.
 
 * **CloudHub Developer**: *(Deprecated)* Provides access to all Runtime Manager functionality, except organization and billing settings. This role has the following permission scopes:
 +
