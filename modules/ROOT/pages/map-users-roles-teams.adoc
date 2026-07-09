@@ -179,9 +179,16 @@ include::partial$include-nav-teams.adoc[]
 If you select *Maintainer*, users who have that group name become team maintainers for this team. If you select *Member*, users who have this group name become team members.
 . In the *Provider Name* drop-down, select the IdP associated with the mapping.
 . Click *Add*.
-. Click *Save Changes*. 
+. Click *Save Changes*.
 +
 The SSO users associated with the group you designated are assigned to the team.
+
+=== API Access to Team Group Mappings
+
+To access team external IdP group mappings using the Access Management API (for example, `GET /organizations/{orgId}/teams/{teamId}/groupmappings`), have one of these permissions:
+
+* *Access Controls Viewer* (`view:access_controls`) - View team group mappings via API
+* *Access Controls Admin* (`admin:access_controls`) - Create, update, or delete team group mappings via API
 
 [[map-sso-users-to-roles]]
 == Map SSO Users to Roles
