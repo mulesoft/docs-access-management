@@ -170,26 +170,29 @@ When you upload an XML file to import your metadata:
 * The file must be smaller than 16 KB.
 * If you upload an XML file that contains more than one entry, Anypoint Platform uses the first identity provider configuration.
 * Anypoint Platform does not check the validity of the values in the XML that you upload. +
-Verify that your identity configuration is correct before creating the identity provider configuration.
+Verify that your identity configuration is correct before creating the IdP configuration.
 
 [[export-saml-metadata]]
 == Export SAML Metadata
 
-If your identity provider supports uploading service-provider metadata, you can click the *Anypoint service provider metadata* link to download your SAML configuration settings in an XML file. You can then upload this file to your identity provider to configure Anypoint Platform. Note that you must have a SAML 2.0 identity configuration to export this data.
+If your IdP supports uploading service-provider metadata, click the *Anypoint service provider metadata* link to download your SAML configuration settings in an XML file. You can then upload this file to your IdP to configure Anypoint Platform. You must have a SAML 2.0 identity configuration to export this data.
 
 [[sso-redirect-using-cookies]]
 == SSO Redirect Process Using Cookies
 
-Anypoint Platform uses cookies to ensure that SSO users are redirected to the same location from which they initiated their signin.
+Anypoint Platform uses cookies to make sure that SSO users are redirected to the same location from which they initiated their signin.
 
 . When a user signs in to Anypoint Platform, a cookie is created for the signin session: `mulesoft.sess=xxxxx`.
 +
-The cookie contains the location, such as a public portal, where the user initiated the signin.
+The cookie contains the location where the user initiated the signin, such as the Anypoint Platform page where the user began signing in.
 . The cookie is passed to the user's browser.
 . The user is directed to their SSO provider for authentication.
 . After the user is authenticated using SSO, the provider directs the user back to Anypoint Platform with the authorization decision SAML response.
 . The session cookie, `mulesoft.sess=xxxxx`, is passed from the browser, which redirects the user back to the location where they initiated the signin process.
 . After the user successfully signs in to Anypoint Platform, the `mulesoft.sess` cookie returns to its default value, based on the OWASP standard.
+
+[NOTE]
+If a user initiates SSO from an Anypoint Exchange public portal, they are directed to Anypoint Exchange after signing in. Returning to the originating public portal after SSO isn't currently supported.
 
 Users can also be redirected based on their permissions. This occurs when:
 
@@ -198,7 +201,7 @@ Users can also be redirected based on their permissions. This occurs when:
 * The cookie is set to the default value.
 
 In these cases, a user with the Organization Administrator permission is redirected to the Anypoint Platform landing page.
-Users who do not have the Organization Administrator permission are directed to Anypoint Exchange.
+Users who don't have the Organization Administrator permission are directed to Anypoint Exchange.
 
 [[updating-saml-identity-provider]]
 == Update a SAML Identity Provider
