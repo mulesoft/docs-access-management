@@ -15,13 +15,13 @@ Any of these permissions:
 a|View services in the portfolio and open the catalog overview in Anypoint Exchange.
 
 a|
-Any of these permissions:
+One of these Exchange permissions:
 
 * Exchange: Exchange Contributor
 * Exchange: Exchange Administrator
 * Exchange: Exchange Creator
 |Create services
-a|Register MCP servers, agents, LLMs, or APIs.
+a|Register MCP servers, agents, LLMs, or APIs. To create an MCP server, you also need the API Manager: Manage APIs Configuration permission on at least one environment.
 
 a|
 API Manager: API Creator
