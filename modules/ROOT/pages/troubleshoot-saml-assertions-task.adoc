@@ -44,3 +44,7 @@ image::iam-chromedevtools.png["A Chrome developer tools screenshot showing an AP
 
 In the *Network* tab (1), the `receive-id` line (2) indicates that you attempted to sign in to Anypoint Platform using single signon through your identity provider.
 Because the signin is successful, you can expand `receive-id` and access form data that contains your SAML response element (3). Unsuccessful signin attempts still generate SAML response elements.
+
+== See Also
+
+include::release-notes::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]

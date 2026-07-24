@@ -160,3 +160,7 @@ If you're not a member of the organization that owns an API that you want to use
 * xref:permissions-by-product.adoc[Permissions by Product]
 * xref:audit-logging.adoc#access-audit-logging[Access Audit Logs]
 * xref:connected-apps-overview.adoc#access-and-authorization[Connected Apps Access and Authorization]
+
+== See Also
+
+include::release-notes::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]

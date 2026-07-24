@@ -33,3 +33,7 @@ When a redirect to the OpenID Connect Provider occurs, you receive an `Invalid S
 Cause: This can happen if the `openid`, `profile`, and `email` scopes aren't supported by the auto-registered client.
 
 Solution: Add the `openid`, `profile`, and `email` scopes to the client manually.
+
+== See Also
+
+include::release-notes::partial$release-notes/rn-known-issues.adoc[tag=knownIssuesSeeAlsoLink]
