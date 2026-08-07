@@ -46,6 +46,18 @@ Root organization administrators are subject to IP enforcement unless explicitly
 . Select the user to exempt and then select *Settings*. 
 . Select *Exempt user from IP restrictions*, and then click *Save* to apply the exemption.
 
+[control-plane-ip-addresses]
+== Access Management Egress IP Addresses
+
+Access Management uses these IP addresses for outbound connections. For example, when Access Management calls a Client Registration URL configured for OpenID Connect (OIDC) dynamic client registration, the request comes from one of these IP addresses. If you restrict inbound access to that endpoint, add these IP addresses to your allowlist.
+
+* `52.6.166.106`
+* `52.7.186.107`
+* `34.236.135.39`
+* `50.17.243.127`
+* `52.0.137.105`
+* `174.129.64.184`
+
 [audit-logging]
 == Audit Logging
 
