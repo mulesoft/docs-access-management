@@ -39,12 +39,7 @@ API Manager: Edit APIs Configuration
 a|Edit instances for services.
 
 a|
-Any of these permissions:
-
-* Exchange: Exchange Administrator
-* Exchange: Exchange Contributor
-* API Manager: API Creator
-* API Manager: Manage Policies
+Exchange: Exchange Administrator
 |Create scanners
 a|Create scanners from *Providers* using *Add MCP Server*, *Add Agent*, or *Add API* if your organization enables matching scanner capabilities.
 
