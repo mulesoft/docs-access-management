@@ -117,7 +117,7 @@ Any of these permissions:
 a|Manage API alerts in API Manager and alerts in Runtime Manager.
 
 a|
-MuleSoft Omni Agent for Anypoint
+MuleSoft Agent AI User
 |Use MuleSoft Agent functionality
 a|Access MuleSoft Agent functionality in the enhanced experience.
 
