@@ -46,8 +46,15 @@ To make sure your client management integration remains stable and supported, av
 Modifying the application in Azure can interfere with operational flows managed by Anypoint Platform, such as client updates and secret resets. If you encounter issues, verify that no manual changes were made to the application in the Azure portal. 
 ====
 
-[[microsoft-identity-platform-support]]
-== Microsoft Identity Platform Support
+[[service-principals]]
+== Service Principals
+
+When you register a client application, Anypoint Platform also creates a https://learn.microsoft.com/en-us/entra/identity-platform/app-objects-and-service-principals[service principal] (enterprise application) for that application in Microsoft Entra ID. The service principal is the identity Microsoft Entra ID uses to represent the application in your tenant.
+
+Service principal creation is best-effort. If service principal creation fails, Anypoint Platform still creates and returns the client application, so client registration isn't blocked. The registration response includes a `service_principal_status` field that reports the outcome, which is one of `created`, `failed`, `skipped`, or `disabled`.
+
+[[supported-oauth2-features]]
+== Supported OAuth 2.0 Features
 
 Anypoint Platform provides support for Microsoft Identity Platform access tokens, Microsoft Entra ID v2.0 endpoints, grant types, and client secrets.
 
