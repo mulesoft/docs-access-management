@@ -5,7 +5,7 @@ Enable cross-platform features between your Anypoint Platform organization and a
 After you establish a tenant relationship between your Anypoint Platform organization and a Salesforce organization, users in your organization can:
 
 * Enable API Catalog to view and sync MuleSoft APIs and MCP servers available in the connected Salesforce organization.
-* Enable Agentforce capabilities in Anypoint Code Builder, Anypoint Exchange, and Intelligent Document Processing (IDP).
+* Enable generative AI capabilities in Anypoint Code Builder, Anypoint Exchange, and Intelligent Document Processing (IDP).
 * Enable MuleSoft Direct so Salesforce administrators can discover and deploy pre-built integrations directly from the connected Salesforce organization.
 * Enable Integration Intelligence to use AI-powered insights for monitoring, analysis, and troubleshooting of MuleSoft integrations.
 
@@ -29,7 +29,7 @@ Salesforce admins can:
 * Complete the connection process to the Anypoint Platform organization.
 * Disconnect or reconnect an Anypoint Platform and Salesforce organization.
 * Remove the connection between the Anypoint Platform organization and the Salesforce organization.
-* Enable the connected Anypoint Platform organization to use the Salesforce organization's Agentforce capability.
+* Enable the connected Anypoint Platform organization to use the Salesforce organization's Einstein generative AI capability.
  
 For more information about initiating and maintaining a relationship with a Salesforce organization, see https://help.salesforce.com/s/articleView?id=platform.mulesoft_manage_your_anypoint_platform_connection.htm&type=5[Manage Your MuleSoft Anypoint Platform Connections] in Salesforce Help.
 

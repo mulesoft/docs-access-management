@@ -2,7 +2,7 @@
 
 After connecting your Anypoint Platform organization to a trusted Salesforce organization, you can enable or disable capabilities associated with that connection. Enabling a capability activates the corresponding integration feature for your organization. 
 
-* xref:enabling-agentforce.adoc[]
+* xref:enabling-generative-ai.adoc[]
 * xref:enabling-api-catalog.adoc[]
 * xref:enabling-integration-intelligence.adoc[]
 * xref:enabling-mulesoft-direct.adoc[]

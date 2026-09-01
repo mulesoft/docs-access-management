@@ -14,7 +14,7 @@ Before enabling Integration Intelligence in your Anypoint Platform organization,
 ====
 The connected Salesforce organization must have Data 360 and Tableau Next enabled. For more information, see https://help.tableau.com/current/online/en-us/tableau_next_setup_guide.htm[Tableau Next Setup Guide].
 ====
-* Agentforce enabled in the connected Salesforce organization and your Anypoint Platform organization. For more information, see xref:access-management::enabling-agentforce.adoc[].
+* Einstein generative AI enabled in the connected Salesforce organization and your Anypoint Platform organization. For more information, see xref:access-management::enabling-generative-ai.adoc[].
 * To avoid installation failures while testing through your Salesforce sandbox organization, make sure that your Single source of truth (SSOT) package version is v1.120 or later. For more information, see https://help.salesforce.com/s/articleView?id=ind.cg_tpm_data_cloud_verify_ssot.htm&type=5[Verify the SSOT Package Version in Data Cloud].
 // end::prereqs[]
 
