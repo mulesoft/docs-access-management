@@ -44,7 +44,7 @@
  ** xref:managing-connected-salesforce-orgs.adoc[]
  ** xref:manage-capabilities.adoc[]
  *** xref:enabling-api-catalog.adoc[]
- *** xref:enabling-agentforce.adoc[]
+ *** xref:enabling-generative-ai.adoc[]
  *** xref:enabling-integration-intelligence.adoc[]
  *** xref:enabling-mulesoft-direct.adoc[]
 * xref:managing-security-settings.adoc[]

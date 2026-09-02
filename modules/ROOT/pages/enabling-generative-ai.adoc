@@ -1,0 +1,83 @@
+= Enabling or Disabling Generative AI for Anypoint Platform
+:page-aliases: access-management::enabling-einstein.adoc, access-management::enabling-agentforce.adoc
+
+Connect a trusted Salesforce organization and enable generative AI for your Anypoint Platform organization. After it's enabled, supported MuleSoft products can use it, and tracking and billing route through Salesforce. 
+
+As an organization administrator, you can assign permission to the users in your organization so they can use generative AI with Anypoint Platform products that support it, including:
+
+* Anypoint Code Builder
+* Anypoint Exchange
+* Intelligent Document Processing (IDP)
+
+== Before You Begin
+
+Before enabling generative AI in your Anypoint Platform organization, you must:
+ 
+* Have administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
+* Have the root Organization Administrator permission and role.
+* Have administrative access to a Salesforce organization that https://help.salesforce.com/s/articleView?id=ai.generative_ai_enable.htm&type=5[has Einstein Generative AI enabled]. 
+* xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization. 
+
+[[enable-einstein-salesforce]]
+== Enable Generative AI for Anypoint Platform in the Salesforce Organization
+
+When the Salesforce administrator enables generative AI for the connected Anypoint Platform organization, the connected Salesforce organization routes the requests. The connected Salesforce organization handles tracking and billing. 
+
+. Log in to your Salesforce organization.
+. In Salesforce Setup, enter `MuleSoft` in the *Quick Find* box, then select *MuleSoft > Anypoint Platform Setup*.
+. In *Your connected Anypoint Platform Organization*, select *Complete Connection*.
+. In *Connection to MuleSoft Anypoint Platform*, switch the setting that enables generative AI for Anypoint Platform to *Enabled*.
+. Click *Close*.
++
+After you enable it in the Salesforce organization, you see *Enabled in Salesforce* in Anypoint Platform for the connected Salesforce organization.
+
+[[enable-einstein-anypoint]]
+== Enable Generative AI for Your Anypoint Platform Organization
+
+When generative AI is enabled in Anypoint Platform through a connected Salesforce organization, every supported feature in that organization can use it.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Select *Salesforce*.
+. When prompted to enable generative AI for Anypoint Platform, select *Accept*.
+. Accept the terms and conditions.
++
+The *Salesforce Orgs* section shows the orgs with xref:connecting-salesforce-orgs.adoc[established tenant relationships] with your Anypoint Platform organization. 
++
+Each Salesforce organization shows the enabled and disabled Anypoint Platform capabilities.
+. Select the Salesforce organization to use by default in your Anypoint Platform organization:
+.. In *Capabilities managed in Salesforce*, select *Settings* for the capability that enhances the Anypoint Platform developer experience. 
+.. Select the Salesforce organization, then select *Save*.
+
+
+== Add the Required Permissions for Users
+
+When generative AI is enabled for your Anypoint Platform organization, organization administrators are granted the required permission automatically. 
+
+To grant other users access, assign the required permissions manually.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. xref:configure-teams.adoc[Create a team] for the users who need access to generative AI.
+. Select the *Permissions* tab.
+. In *Permissions*, select *Add permissions*.
+. Select the *Anypoint Code Builder > Mule Developer Generative AI User* permission and select *Next*.
+. Select the business groups to apply the permissions to. 
++
+Select which environments to apply the permission to if it's enabled for the permission. 
+. Select *Next*.
+. Review the permissions and the business groups and environments they apply to, and then select *Add Permissions*.
+
+[[disable-einstein]]
+== Disable Generative AI
+
+When you disable generative AI for your Anypoint Platform organization, none of the users in your organization can use it in any of the features where it's enabled.
+
+include::partial$include-nav-steps-org-admin.adoc[]
+
+. Select *Salesforce*.
+. In the *Capabilities managed in Salesforce* section, switch the capability that enhances the Anypoint Platform developer experience to *Disabled*.
+
+== See Also
+
+* xref:anypoint-code-builder::int-ai-developing-integrations.adoc[]

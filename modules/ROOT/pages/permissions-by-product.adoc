@@ -57,7 +57,7 @@ This permission appears only if the organization has the modern UI enabled in ac
 |Anypoint Code Builder Developer | Create and use cloud IDE instances of Anypoint Code Builder.  | This permission does not apply to Anypoint Code Builder for Desktop. 
 
 include::partial$include-root-org-permissions-note.adoc[]
-|Mule Developer Generative AI User | Use natural language prompts to develop and generate flows using Agentforce for Anypoint Code Builder Generative Flows. |include::partial$include-root-org-permissions-note.adoc[]
+|Mule Developer Generative AI User | Use natural language prompts to develop and generate flows using generative AI for MuleSoft Vibes. |include::partial$include-root-org-permissions-note.adoc[]
 |===
 
 
