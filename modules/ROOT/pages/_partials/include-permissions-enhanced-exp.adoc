@@ -48,6 +48,19 @@ To view the *Providers* section, you need these permissions or the required scan
 a|
 Any of these permissions:
 
+* Secrets Manager: View Vault Integrations
+* Secrets Manager: Manage Vault Integrations
+|View vaults
+a|List and view external vaults under *Platform* > *Providers*, including sync activity and health checks.
+
+a|
+Secrets Manager: Manage Vault Integrations
+|Manage vaults
+a|Register, edit, delete, test, and sync external vaults under *Platform* > *Providers*. This permission includes View Vault Integrations.
+
+a|
+Any of these permissions:
+
 * Anypoint Monitoring: Monitoring Viewer
 * Anypoint Monitoring: Monitoring Administrator
 |View monitoring
