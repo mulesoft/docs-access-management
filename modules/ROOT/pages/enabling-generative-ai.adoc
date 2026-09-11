@@ -11,12 +11,18 @@ As an organization administrator, you can assign permission to the users in your
 
 == Before You Begin
 
-Before enabling generative AI in your Anypoint Platform organization, you must:
- 
-* Have administrative access to an Anypoint Platform organization that isn't a trial organization and isn't expired.
-* Have the root Organization Administrator permission and role.
-* Have administrative access to a Salesforce organization that https://help.salesforce.com/s/articleView?id=ai.generative_ai_enable.htm&type=5[has Einstein Generative AI enabled]. 
-* xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and a trusted Salesforce organization. 
+Einstein Generative AI must be enabled in the connected Salesforce organization before you can enable generative AI in Anypoint Platform.
+
+Complete this checklist:
+
+. Have administrative access to a non-trial, non-expired Anypoint Platform organization, with the root Organization Administrator role.
+. Have administrative access to a Salesforce organization that https://help.salesforce.com/s/articleView?id=ai.generative_ai_enable.htm&type=5[has Einstein Generative AI enabled].
+. xref:access-management::trusted-salesforce-org.adoc[Establish a tenant relationship] between your Anypoint Platform organization and that trusted Salesforce organization.
+. Enable generative AI in Anypoint Platform: accept the terms and conditions and set a default Salesforce organization. See <<enable-einstein-anypoint>>.
+
+To make the setting that enables generative AI available in Anypoint Platform, complete items 2 and 3, then <<enable-einstein-salesforce,enable generative AI in the Salesforce organization>>.
+
+To use AI-assisted features such as MuleSoft Vibes, users also need the *Mule Developer Generative AI User* permission in Anypoint Platform. Organization administrators receive this permission automatically. To grant it to other users, see <<Add the Required Permissions for Users>>. 
 
 [[enable-einstein-salesforce]]
 == Enable Generative AI for Anypoint Platform in the Salesforce Organization
