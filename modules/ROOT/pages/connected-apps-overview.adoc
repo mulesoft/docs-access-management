@@ -52,8 +52,13 @@ a|
 
 When you register an external application with Anypoint Platform, it receives a unique client identity. You then specify exactly which APIs and data the app has permission to access. When the external app requests access, Anypoint Platform verifies its identity and issues a temporary OAuth 2.0 token. This token grants access only to the permitted resources for a limited time, without exposing user credentials.
 
+== IP Allowlisting for Connected Apps
+
+Organization administrators can restrict which IP addresses are allowed to request OAuth 2.0 tokens for connected apps. For configuration steps, deployment model guidance, and per-app exemption instructions, see xref:managing-ip-allowlists.adoc#configure-ip-allowlisting-connected-apps[Configure IP Allowlisting for Connected Apps].
+
 == See Also
 
 * xref:connected-apps-org-admin.adoc[]
 * xref:connected-apps-developers.adoc[]
 * xref:connected-apps-end-users.adoc[]
+* xref:managing-ip-allowlists.adoc[]
