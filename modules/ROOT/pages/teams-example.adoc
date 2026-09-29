@@ -1,47 +1,72 @@
-= Example Teams Structure
+= Example Teams Structure for Anypoint Platform Permissions
+:keywords: teams, permissions, anypoint access management, root team, child team, anypoint exchange, api manager, enhanced mulesoft experience
 
-Imagine that your organization, Acme, includes a team called Engineering that contains smaller teams that focus on building specific components. The Identity and DevOps teams are specialized teams within the larger Engineering team.
+Organization administrators use the Teams feature in Anypoint Access Management to group Anypoint Platform users and assign permissions. In this example, the sample organization Acme nests an Engineering team under the Everyone at Acme root team, then nests DevOps and Identity teams under Engineering. Use the example to see how child teams inherit permissions from a parent team and where you add permissions for a more specialized team.
 
-Using the Teams feature, you can structure your users and permissions in the following way:
+The enhanced MuleSoft experience uses these same Access Management permissions. A child team inherits the permissions of its parent team. You add permissions on a child team when its members need access that the parent team doesn't have.
 
-image::access-management-teams-hierarchy.png["A diagram of a permission structure using the Teams feature"]
+image::access-management-teams-hierarchy.png["Acme teams hierarchy: Acme is the parent of Engineering, and Engineering is the parent of DevOps and Identity"]
 
-The user teams shown in the diagram are:
+The Acme hierarchy works like this:
 
-* Acme 
-+
-This team represents your organization and is the root team. Every user in your organization is a member of the root team. By default, the team’s name is Everyone at Acme. You can set your permissions so that all Acme users can easily collaborate within your organization by creating new projects in Anypoint Design Center and viewing assets in Anypoint Exchange. To do this, you must configure the following permissions for the Everyone at Acme team:
+* Everyone at Acme is the root team. Every user in the organization is a member. The default name of the root team is Everyone at Acme.
+* Engineering is the first child team of Everyone at Acme. Engineering includes Acme's engineers and excludes other teams, such as Marketing and Partner. Engineering contains smaller teams that focus on building specific components.
+* DevOps and Identity are the child teams of Engineering. DevOps deploys API proxies to the production environment. Identity manages designated business groups, including Audit Log and Authorization Service.
 
-** Design Center Developer
-** Exchange Viewer
+[[everyone-at-acme-permissions]]
+== Permissions for the Everyone at Acme Root Team
 
-* Engineering 
-+
-This is the first child team of the Everyone at Acme root team. The Engineering team includes all of Acme’s engineers, but it excludes Acme’s other members, such as the Marketing and Partner teams. The Engineering team inherits permissions from the Everyone at Acme team, and you can give it additional permissions as needed. You can set permissions that allow the members of the Engineering team to deploy code to preproduction environments such as sandbox and design, but you can exclude permissions to deploy to production. To do this, you must configure the following permissions for the Engineering team:
+The Everyone at Acme team is the root team in this Anypoint Access Management example, and it represents the Acme organization. By default, the root team's name is Everyone at Acme. Every user in the organization is a member. Assign only permissions that you want every Acme user to have, because the Engineering, DevOps, and Identity teams inherit them.
 
-** Deploy API Proxies (applicable to sandbox and design environments)
-** Design Center Developer
-** Exchange Viewer
+Members of Everyone at Acme collaborate by viewing assets in Anypoint Exchange and creating new assets in the Exchange catalog.
 
-* DevOps 
-+
-This team is one of two child teams under the Engineering team. The DevOps team is a group of specialized engineers who manage production code across all engineering teams. Unlike with the parent Engineering team, you can give the DevOps team permission to manage code in the production environment, rather than only in the preproduction branches. To do this, you must configure the following permissions for the DevOps team:
+Exchange Viewer is the Anypoint Exchange permission for viewing and downloading assets in a business group. With Exchange Viewer, members can also view services in the enhanced MuleSoft experience portfolio.
 
-** Deploy API Proxies (applicable to sandbox, design, and production environments)
-** Design Center Developer
-** Exchange Viewer
+Exchange Creator is the Anypoint Exchange permission for creating new assets in a business group's catalog. A member with Exchange Creator can't modify assets that other users created.
 
-* Identity 
-+
-This team is one of two child teams under the Engineering team. The Identity team is responsible for managing projects, assets, and other materials in its designated business groups. As a child of the Engineering team, the Identity team can still deploy code to preproduction environments, but unlike members of DevOps, members of Identity don't need to deploy to production. You can't give this team permission to manage the entire organization, but you can give it permission to manage the Audit Log and Authentication service business groups by configuring the Administrator permission within the scope of the Audit Log and Authorization Service business groups. Combined with the inherited permissions from the Engineering team, the Identity team has these permissions:
+Those two permissions are the baseline that every child team in this example inherits. The root team doesn't include Deploy API Proxies or Administrator. Deploy API Proxies is an Anypoint API Manager permission added on Engineering. Administrator is added on the Identity team.
 
-** Administrator (applicable to Audit Log and Authorization Service business groups)
-** Deploy API Proxies (applicable to sandbox and design environments)
-** Design Center Developer
-** Exchange Viewer
+Configure these permissions for the Everyone at Acme team:
+
+* Exchange Creator
+* Exchange Viewer
+
+[[engineering-team-permissions]]
+== Permissions for the Engineering Team
+
+The Engineering team is the first child team of the Everyone at Acme root team in this Anypoint Access Management example. The team includes all of Acme's engineers and excludes other members, such as the Marketing and Partner teams. Engineering contains smaller teams that focus on building specific components. In this example, those teams are DevOps and Identity.
+
+The Engineering team inherits Exchange Creator and Exchange Viewer from Everyone at Acme. Members deploy API proxies only to the Anypoint Platform sandbox environment, which is the preproduction environment in this example. Add the Deploy API Proxies permission for the sandbox environment, and leave the production environment out of this team's scope. Deploy API Proxies is an Anypoint API Manager permission, and you apply it to a specific environment. DevOps and Identity inherit that sandbox permission from Engineering. The Engineering team has these permissions:
+
+* Deploy API Proxies (applicable to the sandbox environment)
+* Exchange Creator
+* Exchange Viewer
+
+[[devops-team-permissions]]
+== Permissions for the DevOps Team
+
+The DevOps team is a child team of the Engineering team in this Anypoint Access Management example. Identity is the other child team under Engineering. DevOps is a group of specialized engineers who deploy API proxies to the production environment for engineering teams.
+
+The parent Engineering team can deploy API proxies only to the sandbox environment. You can give the DevOps team permission to deploy API proxies to the production environment as well as to the sandbox environment. The team inherits Exchange Creator, Exchange Viewer, and Deploy API Proxies for the sandbox environment from Engineering. Include the production environment in Deploy API Proxies for DevOps. The DevOps team has these permissions:
+
+* Deploy API Proxies (applicable to the sandbox and production environments)
+* Exchange Creator
+* Exchange Viewer
+
+[[identity-team-permissions]]
+== Permissions for the Identity Team
+
+The Identity team is a child team of the Engineering team in this Anypoint Access Management example. DevOps is the other child team under Engineering. The Identity team manages designated business groups rather than production API proxies.
+
+As a child of Engineering, the Identity team inherits permission to deploy API proxies to the Anypoint Platform sandbox environment. Members of Identity deploy to that sandbox environment only. You can't give the Identity team permission to manage the entire Acme organization. You can give the team permission to manage the Audit Log and Authorization Service business groups by assigning the Administrator permission in that scope. Combined with the permissions inherited from the Engineering team, the Identity team has these permissions:
+
+* Administrator (applicable to Audit Log and Authorization Service business groups)
+* Deploy API Proxies (applicable to the sandbox environment)
+* Exchange Creator
+* Exchange Viewer
 
 == See Also
 
-* xref:permissions-by-product.adoc[Available Permissions by Product]
+* xref:permissions-by-product.adoc[]
 * xref:users.adoc#grant-user-permissions[Grant Permissions to Individual Users]
-* xref:teams.adoc[Teams]
+* xref:teams.adoc[]
