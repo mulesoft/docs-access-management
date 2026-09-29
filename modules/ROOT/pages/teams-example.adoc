@@ -1,7 +1,7 @@
 = Example Teams Structure for Anypoint Platform Permissions
-:keywords: teams, permissions, anypoint access management, root team, child team, anypoint exchange, api manager, enhanced mulesoft experience
+:keywords: teams, permissions, access management, root team, child team, anypoint exchange, api manager, enhanced mulesoft experience
 
-Organization administrators use the Teams feature in Anypoint Access Management to group Anypoint Platform users and assign permissions. In this example, the sample organization Acme nests an Engineering team under the Everyone at Acme root team, then nests DevOps and Identity teams under Engineering. Use the example to see how child teams inherit permissions from a parent team and where you add permissions for a more specialized team.
+Organization administrators use the Teams feature in Anypoint Platform Access Management to group Anypoint Platform users and assign permissions. In this example, the sample organization Acme nests an Engineering team under the Everyone at Acme root team, then nests DevOps and Identity teams under Engineering. Use the example to see how child teams inherit permissions from a parent team and where you add permissions for a more specialized team.
 
 The enhanced MuleSoft experience uses these same Access Management permissions. A child team inherits the permissions of its parent team. You add permissions on a child team when its members need access that the parent team doesn't have.
 
@@ -16,7 +16,7 @@ The Acme hierarchy works like this:
 [[everyone-at-acme-permissions]]
 == Permissions for the Everyone at Acme Root Team
 
-The Everyone at Acme team is the root team in this Anypoint Access Management example, and it represents the Acme organization. By default, the root team's name is Everyone at Acme. Every user in the organization is a member. Assign only permissions that you want every Acme user to have, because the Engineering, DevOps, and Identity teams inherit them.
+The Everyone at Acme team is the root team in this Anypoint Platform Access Management example, and it represents the Acme organization. By default, the root team's name is Everyone at Acme. Every user in the organization is a member. Assign only permissions that you want every Acme user to have, because the Engineering, DevOps, and Identity teams inherit them.
 
 Members of Everyone at Acme collaborate by viewing assets in Anypoint Exchange and creating new assets in the Exchange catalog.
 
@@ -34,7 +34,7 @@ Configure these permissions for the Everyone at Acme team:
 [[engineering-team-permissions]]
 == Permissions for the Engineering Team
 
-The Engineering team is the first child team of the Everyone at Acme root team in this Anypoint Access Management example. The team includes all of Acme's engineers and excludes other members, such as the Marketing and Partner teams. Engineering contains smaller teams that focus on building specific components. In this example, those teams are DevOps and Identity.
+The Engineering team is the first child team of the Everyone at Acme root team in this Anypoint Platform Access Management example. The team includes all of Acme's engineers and excludes other members, such as the Marketing and Partner teams. Engineering contains smaller teams that focus on building specific components. In this example, those teams are DevOps and Identity.
 
 The Engineering team inherits Exchange Creator and Exchange Viewer from Everyone at Acme. Members deploy API proxies only to the Anypoint Platform sandbox environment, which is the preproduction environment in this example. Add the Deploy API Proxies permission for the sandbox environment, and leave the production environment out of this team's scope. Deploy API Proxies is an Anypoint API Manager permission, and you apply it to a specific environment. DevOps and Identity inherit that sandbox permission from Engineering. The Engineering team has these permissions:
 
@@ -45,7 +45,7 @@ The Engineering team inherits Exchange Creator and Exchange Viewer from Everyone
 [[devops-team-permissions]]
 == Permissions for the DevOps Team
 
-The DevOps team is a child team of the Engineering team in this Anypoint Access Management example. Identity is the other child team under Engineering. DevOps is a group of specialized engineers who deploy API proxies to the production environment for engineering teams.
+The DevOps team is a child team of the Engineering team in this Anypoint Platform Access Management example. Identity is the other child team under Engineering. DevOps is a group of specialized engineers who deploy API proxies to the production environment for engineering teams.
 
 The parent Engineering team can deploy API proxies only to the sandbox environment. You can give the DevOps team permission to deploy API proxies to the production environment as well as to the sandbox environment. The team inherits Exchange Creator, Exchange Viewer, and Deploy API Proxies for the sandbox environment from Engineering. Include the production environment in Deploy API Proxies for DevOps. The DevOps team has these permissions:
 
@@ -56,7 +56,7 @@ The parent Engineering team can deploy API proxies only to the sandbox environme
 [[identity-team-permissions]]
 == Permissions for the Identity Team
 
-The Identity team is a child team of the Engineering team in this Anypoint Access Management example. DevOps is the other child team under Engineering. The Identity team manages designated business groups rather than production API proxies.
+The Identity team is a child team of the Engineering team in this Anypoint Platform Access Management example. DevOps is the other child team under Engineering. The Identity team manages designated business groups rather than production API proxies.
 
 As a child of Engineering, the Identity team inherits permission to deploy API proxies to the Anypoint Platform sandbox environment. Members of Identity deploy to that sandbox environment only. You can't give the Identity team permission to manage the entire Acme organization. You can give the team permission to manage the Audit Log and Authorization Service business groups by assigning the Administrator permission in that scope. Combined with the permissions inherited from the Engineering team, the Identity team has these permissions:
 
