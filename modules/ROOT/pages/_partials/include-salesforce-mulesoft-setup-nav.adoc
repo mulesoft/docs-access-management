@@ -3,3 +3,5 @@
 +
 image:salesforce-setup.png["Salesforce Setup menu with Setup selected"]
 . From *Setup*, in the Quick Find box, enter `MuleSoft`, and then select *MuleSoft > Anypoint Platform Setup*.
++
+NOTE: If you don't see *MuleSoft > Anypoint Platform Setup* in your Salesforce org, contact MuleSoft Support and provide your Salesforce org ID. Ask Support to turn on the *Enable Flow API Actions* permission. 
