@@ -28,18 +28,33 @@ include::partial$include-nav-users.adoc[]
 . Optionally, select a xref:teams.adoc[team] or xref:roles.adoc[role] to assign permissions to these users.
 . Click *Send Invitation*.
 
-The users you specify receive email invitations to join your organization. The email link expires in one week. When they click the link, they are presented with a sign-up form that already has the *Company* field completed with the name of your organization.
+The users you specify receive email invitations to join your organization. The invitation link expires after one week. When they click the link, they are presented with a sign-up form that already has the *Company* field completed with the name of your organization.
 
 Invited users have access to the same set of resources as you (although they may have different permissions that restrict what they can view or do).
 
 [[resend-or-cancel-invitation]]
 == Resend or Cancel a Sent Invitation
 
+If a user didn't receive an invitation or the invitation link expired, resend the invitation. The new invitation link expires after one week.
+
 include::partial$include-nav-users.adoc[]
 
-. Click *Pending Invites* to view all invitations that have not yet been accepted. 
-. Click the more actions menu (*...*) in the row for the invitation to manage. 
+. Click *Pending Invites* to view all invitations that have not yet been accepted.
+. Click the more actions menu (*...*) in the row for the invitation to manage.
 . Select *Re-send Invite* or *Cancel Invite*.
+
+[[invitation-welcome-license-emails]]
+== Invitation, Welcome, and License Key Emails
+
+Anypoint Platform users receive these types of emails:
+
+[%header,cols="1,2,2"]
+|===
+| Email | When it's sent | How to resend it
+| Invitation email | An organization administrator invites a user from the *Users* page. | An organization administrator resends it from *Pending Invites*. See <<resend-or-cancel-invitation>>.
+| Welcome email | MuleSoft provisions a new organization | You can't resend it from Anypoint Platform. Contact your MuleSoft Account Executive or provisioning team for help.
+| License key email | MuleSoft fulfills a Mule runtime license order | You can't resend it from Anypoint Platform. Contact your MuleSoft Account Executive or provisioning team for help.
+|===
 
 [[access-user-settings]]
 == Access the User's Settings Page
