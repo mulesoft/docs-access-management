@@ -19,6 +19,22 @@ If your organization uses an external identity management system, your signin UR
 
 If you click the link in your invitation and an error is returned, your invitation may have expired or been rescinded. Please contact your Organization Administrator for a new invitation. If your organization has no other active users who can resend the invitation, see xref:users.adoc#invitation-welcome-license-emails[Invitation, Welcome, and License Key Emails].
 
+=== Administrative Access Lost
+
+To avoid losing administrator access, assign the Organization Administrator permission to more than one user.
+
+If you do lose administrator access, for example, if all Anypoint Platform administrators have left the company, are unknown, or have deactivated or deleted accounts, you must contact MuleSoft Support to regain access.
+
+. Log in to the https://www.mulesoft.com/support-and-services[MuleSoft Support Portal] and request the organization reclamation process.
+
+. You must provide:
+
+* A signed letter on company letterhead from a C-level executive that requests the administrator change.
+* Your company details, such as your company name and Anypoint Platform organization name or ID.
+* Information about the previous administrators, such as their names and email addresses.
+* The name and email address of the new administrator.
+
+
 [[openid-connect-client-management]]
 == OpenID Connect Client Management
 
