@@ -2,6 +2,7 @@
 
 These tips provide information on what to do if you encounter issues.
 
+[[problems-accessing-anypoint-platform]]
 == Problems with Accessing Anypoint Platform
 
 === Signin Credentials are Not Recognized
@@ -16,8 +17,9 @@ If your organization uses an external identity management system, your signin UR
 
 === Access Management Invitation Link Returns an Error
 
-If you click the link in your invitation and an error is returned, your invitation may have expired or been rescinded. Please contact your Organization Administrator for a new invitation.
+If you click the link in your invitation and an error is returned, your invitation may have expired or been rescinded. Please contact your Organization Administrator for a new invitation. If your organization has no other active users who can resend the invitation, see xref:users.adoc#invitation-welcome-license-emails[Invitation, Welcome, and License Key Emails].
 
+[[openid-connect-client-management]]
 == OpenID Connect Client Management
 
 === Error received when you try to update a client application
