@@ -219,7 +219,7 @@ Your IdP signs SAML assertions with a certificate that has an expiration date. A
 [IMPORTANT]
 If the certificate expires, or if your IdP starts signing assertions with a certificate that Anypoint Platform doesn't have, SSO sign-in fails. Users who sign in only through SSO, including organization administrators, can be locked out of Anypoint Platform.
 
-To renew without interrupting sign-in, add the new certificate in the *Additional Public Key* field before your IdP starts using it. Anypoint Platform accepts assertions signed with the certificate in either field. [VERIFY]
+To renew without interrupting sign-in, add the new certificate in the *Additional Public Key* field before your IdP starts using it. Anypoint Platform accepts assertions signed with the certificate in either field.
 
 Before you begin, get the new signing certificate from your IdP in Base64-encoded X.509 format.
 
@@ -228,7 +228,7 @@ include::partial$include-nav-steps-org-admin.adoc[]
 include::partial$include-nav-identity-providers.adoc[]
 
 . Next to the SAML 2.0 IdP, click *Edit*.
-. In *Configuration*, paste the new certificate in *Public Key*.
+. In *Configuration*, paste the new certificate in *Public Key* or *Additional Public Key*.
 +
 Paste only the Base64-encoded certificate content. Don't include the `-----BEGIN CERTIFICATE-----` and `-----END CERTIFICATE-----` lines.
 . Click *Save Changes*.
