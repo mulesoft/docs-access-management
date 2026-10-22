@@ -35,7 +35,7 @@ Invited users have access to the same set of resources as you (although they may
 [[resend-or-cancel-invitation]]
 == Resend or Cancel a Sent Invitation
 
-If a user didn't receive an invitation or the invitation link expired, resend the invitation. Resending sends a new link that expires after one week.
+If a user didn't receive an invitation or the invitation link expired, resend the invitation. The new invitation link expires after one week.
 
 include::partial$include-nav-users.adoc[]
 
