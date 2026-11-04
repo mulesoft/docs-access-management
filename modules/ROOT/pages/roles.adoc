@@ -41,6 +41,21 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 +
 ** Visualize logs in the xref:audit-logging.adoc[Audit Logs] section.
 
+* **Bridget User**: Enables a user to access the Bridget run API surface in MuleSoft. This role has the following permission scopes:
++
+** Access to the Bridget run API surface (/run)
+
+* **Bridget Manager**: Enables a user to access the Bridget run and manage API surfaces in MuleSoft. Members of this role inherit the permissions from the Bridget User role. This role has the following permission scopes:
++
+** Access to the Bridget run API surface (/run)
+** Access to the Bridget manage API surface (/manage)
+
+* **Bridget Admin**: Enables a user to access all Bridget API surfaces in MuleSoft. Members of this role inherit the permissions from the Bridget Manager role. This role has the following permission scopes:
++
+** Access to the Bridget run API surface (/run)
+** Access to the Bridget manage API surface (/manage)
+** Access to the Bridget admin API surface (/admin)
+
 * **CloudHub Admin**: Provides access to all Runtime Manager functionality. This role has the following permission scopes:
 +
 ** Create Applications

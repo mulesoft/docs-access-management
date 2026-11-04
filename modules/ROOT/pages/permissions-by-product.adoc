@@ -61,12 +61,23 @@ include::partial$include-root-org-permissions-note.adoc[]
 |===
 
 
+== Bridget
+
+[%header,cols="30a,50a,20a"]
+|===
+|Required Permissions | Grants the Ability to | Notes
+|Bridget User| Access to the Bridget run API surface (/run) in MuleSoft.|
+|Bridget Manager| Bridget User access plus the Bridget manage API surface (/run, /manage) in MuleSoft.|
+|Bridget Admin| Bridget Manager access plus the Bridget admin API surface (/run, /manage, /admin) in MuleSoft.|
+|===
+
+
 == API Catalog
 
 [%header,cols="30a,50a,20a"]
 |===
 |Required Permissions | Grants the Ability to | Notes
-|API Catalog Contributor| Catalog assets and other resources using API Catalog.| 
+|API Catalog Contributor| Catalog assets and other resources using API Catalog.|
 |===
 
 
