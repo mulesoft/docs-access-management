@@ -49,7 +49,7 @@ Enables deletion of clients created with this integration.
 +
 To use this option, you must also select *Enable client deletion in Anypoint Platform*. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in the *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`.
 +
-For Okta client providers, this option also enables client secret resets that Okta generates. See Reset Client Secrets for Okta Client Providers.
+For Okta client providers, this option also enables client secret resets that Okta generates. See <<reset-okta-secrets>>.
 
 . In *Authentication Method*, complete the information for the type of authentication to use for this client provider:
 * *Authorization Header*
@@ -95,7 +95,10 @@ For Okta, the Okta admin must assign the dynamically generated clients to a user
 
 == Client Application Updates and Deletes
 
-Okta or another IdP might allow client modification and deletion independently, but this isn't supported on Anypoint Platform. Instead, Anypoint Platform provides and supports hooks so you can implement API calls that are particular to your IdP. 
+Okta or another IdP might allow client modification and deletion independently, but this isn't supported on Anypoint Platform. Instead, Anypoint Platform provides and supports hooks so you can implement API calls that are particular to your IdP.
+
+Secret resets for Okta client providers are an exception: Anypoint Platform calls the Okta Apps API directly. See <<reset-okta-secrets>>.
+
 
 These examples show PUT and DELETE requests that Anypoint Platform makes.
 
@@ -142,6 +145,8 @@ Neither the `PUT` nor the `DELETE` work if the call is used directly against an 
 You can use the Access Management API call `PUT /accounts/api/organizations/{orgId}/clientProviders/{clientProviderId}/clients/{clientId}` to update external clients. Use the optional `force` parameter to update Anypoint Platform internal client application records, regardless of whether the update to the external IdP is successful. Using this parameter ensures that the view Anypoint Platform has of the client application is current, even if there are issues communicating with the IdP.
 
 If you don't use the `force` parameter, when updating an external client application via the Anypoint Platform API, Anypoint Platform first attempts to update the Identity Provider (IdP) and then updates its internal records only if the IdP update is successful.
+
+Client application responses include `created_at` and `credentials_updated_at`. `credentials_updated_at` is the time the client secret was last set or reset. It is null for clients without a secret. Both fields are read-only, and Anypoint Platform ignores them in update requests.
 
 For more information, see the https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API] documentation.
 
