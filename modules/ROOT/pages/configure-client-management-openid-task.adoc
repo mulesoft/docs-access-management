@@ -186,7 +186,7 @@ When you reset the secret through Access Management API (`resetSecret=true`), do
 
 [%autowidth.spread]
 |===
-| Error Code | HTTP Status | Meaning | Action
+| Error Code | HTTP Status | Meaning | Action to Take
 
 | EXTERNAL_ROTATION_UNAUTHORIZED | 400 | Okta rejected the API token. | Check the token and its permissions.
 | EXTERNAL_ROTATION_APP_NOT_FOUND | 422 | Okta has no application with this client ID. | No action
