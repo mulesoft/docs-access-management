@@ -15,6 +15,7 @@ To maintain security, manually rotate the client secrets of all connected apps i
 
 You can also reset client secrets programmatically using the https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API]. 
 
+[[manage-owned-apps]]
 == Manage Owned Apps
 
 To maintain security, you can view and manage connected apps only if you have the Organization Administrator permission in the root organization or in the business group where the connected app resides.
@@ -62,6 +63,7 @@ When you revoke an app’s access, the app’s OAuth 2.0 access tokens and refre
 . Click the more actions menu (*...*) for the selected application and select *Remove*.
 . Click *Remove*. 
 
+[[configure-authorization-policies]]
 == Configure Authorization Policies
 
 You can configure one of these types of authorization policies for your users:
@@ -71,39 +73,63 @@ You can configure one of these types of authorization policies for your users:
 Organization members can authorize any connected app to act on their behalf.
 * Restricted
 +
-Only connected apps that are added to an allowlist by an administrator are authorized by organization members to act on their behalf.
+Organization members can authorize only connected apps that an administrator has added to the allowlist to act on their behalf.
 
-By default, the *Unrestricted* policy is enabled. If you change the policy to *Restricted*, the application allowlist is enabled, and all existing application authorizations are added automatically.
+By default, the *Unrestricted* policy is enabled. If you change the policy to *Restricted*, the application allowlist is enabled, and Anypoint Platform automatically adds all existing application authorizations.
 
 When using the *Restricted* policy, you can disable auto-approval of all internal apps, in which case you must add each internal app to the <<application-allowlist-admin,application allowlist>> like any other connected app.
 
 [[application-allowlist-admin]]
 === Application Allowlist
 
-When the allowlist is enabled, organization users can use only applications that are on the allowlist. If a user attempts to authorize an app that's not on the allowlist, they are prompted to contact their organization administrator.
+When the allowlist is enabled, organization users can use only applications that are on the allowlist. If a user attempts to authorize an app that's not on the allowlist, Anypoint Platform prompts them to contact their organization administrator.
 
 image::connected-apps-allowlist-blocked.png["The interface the user sees when an app is not on the allowlist", 50%,50%]
 
-Organization administrators can add the app to the allowlist by following the link given to them by the end user.
+Organization administrators can add the app to the allowlist by following the link from the end user.
 
 image::connected-apps-add-to-allowlist.png["The interface the administrator sees when they add an app to the allowlist", 40%,40%]
 
-Apps may request additional scopes when developers add new features that require access to more data in your organization.
-Previously allowed apps _must_ be added to the allowlist again with the new set of scopes before your users can grant those additional scopes to the app.
+When developers add features that require access to more of your organization's data, apps request additional scopes.
+Add previously allowed apps to the allowlist again with the new set of scopes so your users can grant them.
 
 image::connected-apps-add-to-allowlist-again.png["The interface the administrator sees when they re-add an app to the allowlist", 40%,40%]
 
-Existing authorizations continue to work if the app is not added to the allowlist again. New authorizations using the already-allowlisted set of scopes are also allowed.
-Apps that remove scopes do not need to be added to an allowlist again.
+Existing authorizations continue to work even if you don't add the app to the allowlist again. New authorizations using the already-allowlisted set of scopes are also allowed.
+You don't need to add apps that remove scopes to the allowlist again.
 
 [NOTE]
 --
 Applications created by users in the same organization are marked as *internal apps* and don't need to be allowlisted manually.
 --
 
+[[ip-allowlisting-connected-apps]]
+== IP Allowlisting for Connected Apps
+
+As a root organization administrator, you can restrict which IP addresses are allowed to request OAuth 2.0 tokens for connected apps in your organization. This control shares the same CIDR blocks as the user sign-in IP allowlist but is configured separately.
+
+When IP allowlisting for connected apps is enabled, Anypoint Platform blocks token requests from IP addresses outside the allowlist and logs them in the audit log. You can also exempt individual connected apps from enforcement.
+
+[IMPORTANT]
+====
+Before enabling this feature, identify the outbound IP address behavior for every connected app in your organization. Connected apps running on CloudHub without static IPs or on CloudHub 2.0 Shared Space use dynamic or shared IPs and must be exempted. Enabling enforcement without exempting these apps blocks token requests for those integrations.
+====
+
+To enable IP allowlisting for connected apps or to understand which deployment models require exemption, see xref:managing-ip-allowlists.adoc#configure-ip-allowlisting-connected-apps[Configure IP Allowlisting for Connected Apps].
+
+=== Exempt a Connected App from IP Enforcement
+
+Exempt a connected app when it runs on infrastructure where the outbound IP is dynamic, unknown, or shared with other tenants. You must exempt connected apps running on CloudHub without static IPs or CloudHub 2.0 Shared Space from IP enforcement.
+
+. Sign in to Anypoint Platform using an account that has the root Organization Administrator permission.
+. Select *Access Management* from the image:gear.svg["gear icon",20] menu.
+. In the Access Management navigation menu, select *Connected Apps*.
+. In the *Owned Apps* section, click the connected app to exempt.
+. Select *Exempt from IP restrictions*, and then click *Save*.
+
 == Root Organization and Business Groups
 
-By default, connected apps are configured at the root organization level, not at the business group (sub-organization) levels.
+By default, Anypoint Platform configures connected apps at the root organization level, not at the business group (sub-organization) levels.
 
 When you create a connected app to act on its own behalf using client credentials, you can choose which root organization or business groups to enable it in after you choose scopes.
 
@@ -113,3 +139,4 @@ A connected app that acts on behalf of a user receives its own access and permis
 
 * xref:connected-apps-developers.adoc[]
 * xref:creating-connected-apps-dev.adoc[]
+* xref:managing-ip-allowlists.adoc[]
