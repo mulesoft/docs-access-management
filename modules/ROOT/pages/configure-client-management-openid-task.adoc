@@ -47,7 +47,10 @@ Disables server certificate validation if your OpenID client management instance
 Enables deletion of clients created with this integration.
 * *Enable client deletion and updates in IdP*
 +
-To use this option, you must also select the *Enable client deletion in Anypoint Platform* option. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`. 
+To use this option, you must also select *Enable client deletion in Anypoint Platform*. This option enables you to update and delete external clients in the configured IdP through an outbound call made by Anypoint Platform to `{clientRegistrationUrl}/{clientID}`. The `clientRegistrationUrl` is the value you configured in the *Client Registration URL*. For example: `+https://identity.example.com/oauth2/connect/register/6779ef20e75817b79602+`.
++
+For Okta client providers, this option also enables client secret resets that Okta generates. See <<reset-okta-secrets>>.
+
 . In *Authentication Method*, complete the information for the type of authentication to use for this client provider:
 * *Authorization Header*
 +
@@ -92,7 +95,10 @@ For Okta, the Okta admin must assign the dynamically generated clients to a user
 
 == Client Application Updates and Deletes
 
-Okta or another IdP might allow client modification and deletion independently, but this isn't supported on Anypoint Platform. Instead, Anypoint Platform provides and supports hooks so you can implement API calls that are particular to your IdP. 
+Okta or another IdP might allow client modification and deletion independently, but this isn't supported on Anypoint Platform. Instead, Anypoint Platform provides and supports hooks so you can implement API calls that are particular to your IdP.
+
+Secret resets for Okta client providers are an exception: Anypoint Platform calls the Okta Apps API directly. See <<reset-okta-secrets>>.
+
 
 These examples show PUT and DELETE requests that Anypoint Platform makes.
 
@@ -140,7 +146,62 @@ You can use the Access Management API call `PUT /accounts/api/organizations/{org
 
 If you don't use the `force` parameter, when updating an external client application via the Anypoint Platform API, Anypoint Platform first attempts to update the Identity Provider (IdP) and then updates its internal records only if the IdP update is successful.
 
+Client application responses include `created_at` and `credentials_updated_at`. `credentials_updated_at` is the time the client secret was last set or reset. It is null for clients without a secret. Both fields are read-only, and Anypoint Platform ignores them in update requests.
+
 For more information, see the https://dev-portal.mulesoft.com/apis/access-management.html[Access Management API] documentation.
+
+[[reset-okta-secrets]]
+== Reset Client Secrets for Okta Client Providers
+
+When you reset the secret of a client application managed by an Okta client provider, Anypoint Platform doesn't generate the new secret. Instead, Okta generates it through its application credentials API. Anypoint Platform stores the new secret and returns it to you.
+
+=== Before You Begin
+
+To reset the secret, verify these requirements.
+
+* Select *Enable client deletion in Anypoint Platform* and *Enable client deletion and updates in IdP* in the client provider's *Advanced Settings*.
+* Check that the Okta API token in the *Authorization Header* has permission to manage application credentials.
+* Check that the Okta application is *Active* and uses a client secret.
+* Check that the Okta application has exactly one active client secret.
+
+=== What Happens During a Reset
+
+When you reset the secret:
+
+. Okta generates a new client secret.
+. Anypoint Platform stores the new secret and returns it.
+. Okta deactivates the previous secret. The previous secret stays inactive in Okta.
+
+After a reset, the Okta application has two secrets: the new secret, which is active, and the previous secret, which is inactive. 
+
+On the next reset, Anypoint Platform deletes the inactive secret and creates a new secret. Anypoint Platform never deletes active secrets or secrets that it didn't create.
+
+Applications that use the inactive secret stop working as soon as the reset completes. Update your applications with the new secret.
+
+=== Reset Requests Through the API
+
+When you reset the secret through Access Management API (`resetSecret=true`), don't include other client fields such as `client_name`, `redirect_uris`, or `grant_types`. Send those changes in a separate update. The `force` parameter doesn't affect a secret reset for an Okta client provider.
+
+=== Errors
+
+[%autowidth.spread]
+|===
+| Error Code | HTTP Status | Meaning | Action to Take
+
+| EXTERNAL_ROTATION_UNAUTHORIZED | 400 | Okta rejected the API token. | Check the token and its permissions.
+| EXTERNAL_ROTATION_APP_NOT_FOUND | 422 | Okta has no application with this client ID. | No action
+| EXTERNAL_ROTATION_UNSUPPORTED_CLIENT | 422 | The Okta application doesn't use a client secret, or you can't reset this client. | No action
+| EXTERNAL_ROTATION_APP_INACTIVE | 422 | The Okta application is inactive. The secret stays the same. | Reactivate it in Okta and retry.
+| EXTERNAL_ROTATION_CAPACITY | 409 | The Okta application has secrets that Anypoint Platform didn't create, such as a second active secret. | Remove the extra secret in Okta and retry.
+| EXTERNAL_ROTATION_IN_PROGRESS | 409 | Another reset of this client is running. | Wait and retry.
+| EXTERNAL_ROTATION_PERSIST_FAILED | 500 | Okta created a new secret, but Anypoint Platform couldn't store it. The previous secret still works. | Retry.
+| EXTERNAL_ROTATION_INCOMPLETE | 502 | Anypoint Platform stored the new secret but couldn't deactivate the previous secret. | Retry the reset.
+| EXTERNAL_ROTATION_OUTCOME_UNKNOWN | 502 | Anypoint Platform couldn't confirm the result. The previous secret still works. | Retry.
+| EXTERNAL_ROTATION_UPSTREAM_ERROR | 502 | Okta returned an error or didn't respond. | Retry later.
+|===
+
+
+Secret resets for other client providers, such as PingFederate, OpenAM, Microsoft Entra ID, and other DCR providers, keep their current reset behavior.
 
 == Supported Grant Types
 
