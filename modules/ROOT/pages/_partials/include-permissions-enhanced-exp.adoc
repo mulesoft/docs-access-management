@@ -21,7 +21,7 @@ One of these Exchange permissions:
 * Exchange: Exchange Administrator
 * Exchange: Exchange Creator
 |Create services
-a|Register MCP servers, agents, LLMs, or APIs. To create an MCP server, you also need the API Manager: Manage APIs Configuration permission on at least one environment.
+a|Register MCP servers, agents, LLMs, or APIs. To create an MCP server, you also need the API Manager: Manage APIs Configuration permission on at least one environment. To create an A2A bridge, you also need the API Manager: Manage APIs Configuration permission on the target environment.
 
 a|
 API Manager: API Creator
@@ -29,12 +29,45 @@ API Manager: API Creator
 a|Create or add instances.
 
 a|
+API Manager: API Creator
+|Create model proxies
+a|Create model proxies on Omni Gateway.
+
+a|
+One of these Exchange permissions:
+
+* Exchange: Exchange Contributor
+* Exchange: Exchange Administrator
+* Exchange: Exchange Creator
+|Configure semantic routing and semantic caching
+a|Configure the semantic routing service and the semantic caching service for model proxies.
+
+a|
+Any of these permissions:
+
+* API Manager: API Creator
+* API Manager: View APIs Configuration
+* API Manager: Manage APIs Configuration
+|Set model costs
+a|Set input and output token costs for each model so that cost reports show spend in dollars.
+
+a|
+These permissions:
+
+* API Manager: API Creator
+* API Manager: View APIs Configuration
+* API Manager: Manage APIs Configuration
+* API Manager: Manage Policies
+|Manage model wallets
+a|Create and edit model wallets and their budgets. The Manage Policies permission is required to apply, disable, reorder, and edit policies.
+
+a|
 API Manager: View APIs Configuration
 |View instances
 a|View instances for services and open the *Instances* tab.
 
 a|
-API Manager: Edit APIs Configuration
+API Manager: Manage APIs Configuration
 |Edit instances
 a|Edit instances for services.
 
@@ -46,6 +79,13 @@ a|Create scanners from *Providers* using *Add MCP Server*, *Add Agent*, or *Add 
 To view the *Providers* section, you need these permissions or the required scanner entitlements for API, MCP, or agent scanners.
 
 a|
+Exchange: Exchange Administrator
+|Set up Akamai risk correlation
+a|Create the Akamai API Security scanner in the target business group to correlate Akamai findings to services already in the portfolio.
+
+You also need access to apply the Akamai correlation policy in the environments you scan.
+
+a|
 Any of these permissions:
 
 * Secrets Manager: View Vault Integrations
@@ -54,9 +94,16 @@ Any of these permissions:
 a|List and view external vaults under *Platform* > *Providers*, including sync activity and health checks.
 
 a|
-Secrets Manager: Manage Vault Integrations
+These permissions:
+
+* Exchange: Exchange Administrator
+* Exchange: Exchange Contributor
+* API Manager: API Creator
+* API Manager: Manage Policies
+* Secrets Manager: View Vault Integrations
+* Secrets Manager: Manage Vault Integrations
 |Manage vaults
-a|Register, edit, delete, test, and sync external vaults under *Platform* > *Providers*. This permission includes View Vault Integrations.
+a|Register, edit, delete, test, and sync external vaults under *Platform* > *Providers*.
 
 a|
 Any of these permissions:
@@ -75,6 +122,19 @@ a|
 API Manager: Manage Policies
 |Apply policies
 a|Edit policy configurations and add policies.
+
+To apply, enable, disable, or remove policies on a third-party gateway, such as Azure API Management, Google Apigee, or Kong Gateway, the provider's scanner connection credentials also need the provider's write scope.
+
+a|
+These permissions:
+
+* API Manager: API Creator
+* API Manager: View APIs Configuration
+* API Manager: Manage APIs Configuration
+* API Manager: View API Alerts
+* API Manager: Manage API Alerts
+|Detect and contain rogue agents
+a|Apply the Rogue Agent Detection and Agent Kill Switch policies to model proxies, and review and quarantine flagged agents.
 
 a|
 These permissions:
@@ -128,6 +188,34 @@ Any of these permissions:
 * Runtime Manager: Manage Alerts
 |Manage alerts
 a|Manage API alerts in API Manager and alerts in Runtime Manager.
+
+a|
+These permissions:
+
+* Anypoint Monitoring: Monitoring Viewer
+* Exchange: Exchange Viewer
+* API Manager: View APIs Configuration
+* API Manager: View Policies
+|Use Agent Visualizer
+a|View monitoring data for agentic assets (Monitoring Viewer), view agentic assets (Exchange Viewer), view API nodes and relationships (View APIs Configuration), and view policies for assets (View Policies).
+
+a|
+These permissions:
+
+* Runtime Manager: Manage Servers
+* Runtime Manager: Create Applications
+* Runtime Manager: Read Servers
+* Anypoint Code Builder: Anypoint Code Builder Developer
+* Anypoint Code Builder: Mule Developer Generative AI User
+* Design Center: Design Center Developer
+* API Manager: Deploy API Proxies
+* API Manager: Manage Policies
+* Exchange: Exchange Contributor
+* Usage: Usage Viewer
+|Create and deploy agent networks
+a|Define brokers and agent networks in Anypoint Code Builder, publish agent network assets to Exchange, deploy them, and view usage.
+
+The Anypoint Code Builder Developer permission applies only to the cloud IDE. To deploy to CloudHub 2.0 or Runtime Fabric, you also need the xref:cloudhub-2::ps-assign-permissions.adoc[CloudHub 2.0 permissions] or the xref:runtime-fabric::limitations-self.adoc[Runtime Fabric permissions].
 
 a|
 MuleSoft Agent AI User

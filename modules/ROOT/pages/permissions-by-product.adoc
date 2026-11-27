@@ -622,8 +622,8 @@ In RPA Manager:
 | Manage Application Data | Create and delete application data in a specific environment.|
 | Manage Queues | Clear application queues in a specific environment.|
 | Read Runtime Fabric | Query Runtime Fabric instances in the organization.|
-| Manage Runtime Fabrics | read, create, update, and delete Runtime Fabric resources.|
-| Manage Runtime Fabric | Read, create, update, and delete Runtime Fabric resources. |
+| Manage Runtime Fabrics | Read, create, update, and delete Runtime Fabric resources in the organization.|
+| Manage Runtime Fabric (deprecated) | Read, create, update, and delete Runtime Fabric resources in a specific environment. | This permission is deprecated. Assign Manage Runtime Fabrics instead. 
 | Manage Schedules | Run and update application schedules in a specific environment.|
 | Manage Settings | Update application settings in a specific environment.|
 | Manage Tenants | Create, update, and delete application tenants in a specific environment.|
@@ -633,7 +633,7 @@ In RPA Manager:
 | Read Servers | View server and Omni Gateway resources.|
 | Manage Application Flows | Update flows.|
 | Create Applications | Create applications in a specific environment.|
-| Restart Applications | Restart applications deployed to Runtime Fabric in a specific environment.|
+| Restart Applications | Restart applications deployed to Runtime Fabric in a specific environment.| 
 |===
 
 == Secrets Manager
