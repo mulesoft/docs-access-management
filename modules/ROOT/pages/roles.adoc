@@ -45,7 +45,7 @@ For more information on permissions in Anypoint Platform, see xref:managing-perm
 +
 ** Access to the Bridget run API surface (/run)
 
-* **Bridget Manager**: Enables a user to access the Bridget run and manage API surfaces in MuleSoft. Members of this role inherit the permissions from the Bridget User role. This role has the following permission scopes:
+* **Bridget Manager**: Enables a user to access the Bridget run and manage API surfaces in MuleSoft. Members of this role inherit the permissions from the Bridget User role. This role has these permission scopes:
 +
 ** Access to the Bridget run API surface (/run)
 ** Access to the Bridget manage API surface (/manage)
